@@ -37,14 +37,12 @@ def main():
     parser.add_argument('--stage_report', required=True)
     parser.add_argument('--tool', required=True, metavar="<path>")
     parser.add_argument('--pass_limit', required=True, type=int)
-    parser.add_argument('--render_size', required=True, type=int)
-    parser.add_argument('--file_extension', required=True)
-    parser.add_argument('--package_name', required=True)
+    #parser.add_argument('--render_size', required=True, type=int)
+    #parser.add_argument('--file_extension', required=True)
+    parser.add_argument('--res_path', required=True)
     parser.add_argument('--render_mode', required=True)
     parser.add_argument('--template', required=True)
     parser.add_argument('--output', required=True)
-    parser.add_argument('--res_path', required=True)
-    parser.add_argument('--scene_list', required=True)
 
     args = parser.parse_args()
 
@@ -52,35 +50,27 @@ def main():
 
     template = args.template
     with open(os.path.join(os.path.dirname(sys.argv[0]), template)) as f:
-        max_script_template = f.read()
+        blender_script_template = f.read()
 
-    with open(os.path.join(os.path.dirname(sys.argv[0]), args.scene_list)) as f:
-        scene_list = f.read()
+
 
     global work_dir
 
     work_dir = args.output
-    work_dir = work_dir.replace("\\", "\\\\")
-    res_path = args.res_path
-    res_path = res_path.replace("\\", "\\\\")
 
-    maxScript = max_script_template.format(pass_limit=args.pass_limit, render_size=args.render_size,
-                                           file_extension=args.file_extension,
-                                           work_dir=work_dir,
-                                           package_name=args.package_name, ren_mode=args.render_mode,
-                                           render_mode=args.render_mode, res_path=res_path, scene_list=scene_list)
+    BlenderScript = blender_script_template.format(pass_limit=args.pass_limit, work_dir=work_dir)
 
     try:
         os.makedirs(work_dir)
     except BaseException:
         print("")
 
-    maxScriptPath = os.path.join(work_dir, 'script.ms')
-    with open(maxScriptPath, 'w') as f:
-        f.write(maxScript)
+    BlenderScriptPath = os.path.join(work_dir, 'script.py')
+    with open(BlenderScriptPath, 'w') as f:
+        f.write(BlenderScript)
 
-    cmdRun = '"{tool}" -U MAXScript "{job_script}" -silent' \
-        .format(tool=tool, job_script=maxScriptPath)
+    cmdRun = '"{tool}" -b "{scene}" -P "{job_script}"' \
+        .format(tool=tool,scene = args.res_path, job_script=BlenderScriptPath)
 
     cmdScriptPath = os.path.join(work_dir, 'script.bat')
     with open(cmdScriptPath, 'w') as f:

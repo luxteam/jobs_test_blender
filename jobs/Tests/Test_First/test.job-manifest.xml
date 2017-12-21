@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<job-manifest enable="False">
+
+    <outpath value="{OutputDir}"/>
+
+    <option name="CurrentScene">
+        <configuration name="Scene">
+            <Value>TestSceneMetalls.blend</Value>
+        </configuration>
+    </option>
+
+    <execute command='python "{ResourcesDir}\simpleRender.py"' stage="stage1">
+        <argument>--stage_report stage1.json</argument>
+        <argument>--tool "{Tool}"</argument>
+        <argument>--template "{ResourcesDir}\Templates\template.py"</argument>
+        <argument>--output "{OutputDir}"</argument>
+        <argument>--pass_limit 30</argument>
+        <argument>--render_mode "{RenderDevice}"</argument>
+        <argument>--res_path "{ScenesDir}\\{CurrentScene[Value]}"</argument>
+    </execute>
+
+    <execute command='python "{CommonDir}\scripts\checkExpected.py"' stage="stage2">
+        <argument>--stage_report stage2.json</argument>
+        <argument>--work_dir "{OutputDir}"</argument>
+        <argument>--report_name expected.json</argument>
+        <argument>--result_name not_rendered.json</argument>
+    </execute>
+
+    <execute command='python "{CommonDir}\scripts\ImageComparator\compareByJSON.py"' stage="stage3">
+        <argument>--stage_report stage3.json</argument>
+        <argument>--work_dir "{OutputDir}"</argument>
+        <argument>--base_dir "{BaselineDir}"</argument>
+        <argument>--report_name report.json</argument>
+        <argument>--result_name report_compare.json</argument>
+    </execute>
+
+    <execute command='python "{CommonDir}\scripts\HtmlTemplate\htmlBuilder.py"' stage="stage4">
+        <argument>--stage_report stage4.json</argument>
+        <argument>--work_dir "{OutputDir}"</argument>
+        <argument>--template_name template_max.html</argument>
+    </execute>
+
+</job-manifest>
