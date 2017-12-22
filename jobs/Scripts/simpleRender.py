@@ -41,15 +41,22 @@ def main():
     parser.add_argument('--render_mode', required=True)
     parser.add_argument('--template', required=True)
     parser.add_argument('--output', required=True)
+    parser.add_argument('--test_list', required=True)
 
     args = parser.parse_args()
 
     tool = args.tool
+    scenes = args.test_list
 
     template = args.template
     with open(os.path.join(os.path.dirname(sys.argv[0]), template)) as f:
         blender_script_template = f.read()
 
+    with open(os.path.join(os.path.dirname(sys.argv[0]), scenes)) as f:
+        blender_scenes = f.read()
+
+
+    scene_list = blender_scenes.split(",\n")
     work_dir = args.output
 
     BlenderScript = blender_script_template.format(pass_limit=args.pass_limit, work_dir=work_dir)
@@ -63,8 +70,10 @@ def main():
     with open(BlenderScriptPath, 'w') as f:
         f.write(BlenderScript)
 
-    cmdRun = '"{tool}" "{scene}"' \
-      .format(tool=tool,scene ="C:\TestResources\BlenderAssets\scenes\\NonRPR.blend")
+    cmdRun = ""
+    for each in scene_list :
+        cmdRun += '"{tool}" "{scene}" \n' \
+            .format(tool=tool,scene = args.res_path  + "\\" + each)
 
     cmdScriptPath = os.path.join(work_dir, 'script.bat')
     with open(cmdScriptPath, 'w') as f:
