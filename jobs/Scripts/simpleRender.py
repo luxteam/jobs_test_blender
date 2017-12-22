@@ -37,8 +37,6 @@ def main():
     parser.add_argument('--stage_report', required=True)
     parser.add_argument('--tool', required=True, metavar="<path>")
     parser.add_argument('--pass_limit', required=True, type=int)
-    #parser.add_argument('--render_size', required=True, type=int)
-    #parser.add_argument('--file_extension', required=True)
     parser.add_argument('--res_path', required=True)
     parser.add_argument('--render_mode', required=True)
     parser.add_argument('--template', required=True)
@@ -51,10 +49,6 @@ def main():
     template = args.template
     with open(os.path.join(os.path.dirname(sys.argv[0]), template)) as f:
         blender_script_template = f.read()
-
-
-
-    global work_dir
 
     work_dir = args.output
 
@@ -69,8 +63,8 @@ def main():
     with open(BlenderScriptPath, 'w') as f:
         f.write(BlenderScript)
 
-    cmdRun = '"{tool}" -b "{scene}" -P "{job_script}"' \
-        .format(tool=tool,scene = args.res_path, job_script=BlenderScriptPath)
+    cmdRun = '"{tool}" "{scene}"' \
+      .format(tool=tool,scene ="C:\TestResources\BlenderAssets\scenes\\NonRPR.blend")
 
     cmdScriptPath = os.path.join(work_dir, 'script.bat')
     with open(cmdScriptPath, 'w') as f:
@@ -78,7 +72,8 @@ def main():
 
     os.chdir(work_dir)
 
-    p = psutil.Popen(os.path.join(args.output, 'script.bat'), stdout=subprocess.PIPE)
+    p = subprocess.Popen(os.path.join(args.output, 'script.bat'))
+    #p = psutil.Popen(os.path.join(args.output, 'script.bat'), stdout=subprocess.PIPE)
     rc = -1
 
     while True:
