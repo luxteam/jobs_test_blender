@@ -1,2 +1,0 @@
-"C:\Program Files\Blender Foundation\Blender\blender.exe" -b "E:\jobs_test_blender\jobs_test_blender\jobs\Scripts\Template\TestSceneMetalls.blend" -P "E:\jobs_test_blender\jobs_test_blender\jobs\Scripts\Template\template.py"
-pause

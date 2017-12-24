@@ -36,7 +36,6 @@ def main():
 
     parser.add_argument('--stage_report', required=True)
     parser.add_argument('--tool', required=True, metavar="<path>")
-    parser.add_argument('--pass_limit', required=True, type=int)
     parser.add_argument('--res_path', required=True)
     parser.add_argument('--render_mode', required=True)
     parser.add_argument('--template', required=True)
@@ -57,9 +56,9 @@ def main():
 
 
     scene_list = blender_scenes.split(",\n")
-    work_dir = args.output
+    work_dir = args.output 
 
-    BlenderScript = blender_script_template.format(pass_limit=args.pass_limit, work_dir=work_dir)
+    BlenderScript = blender_script_template.format(work_dir=work_dir)
 
     try:
         os.makedirs(work_dir)
@@ -72,8 +71,8 @@ def main():
 
     cmdRun = ""
     for each in scene_list :
-        cmdRun += '"{tool}" "{scene}" \n' \
-            .format(tool=tool,scene = args.res_path  + "\\" + each)
+        cmdRun += '"{tool}" -b "{scene}" -P "{template}"\n' \
+            .format(tool=tool,scene = args.res_path  + "\\" + each, template = args.template)
 
     cmdScriptPath = os.path.join(work_dir, 'script.bat')
     with open(cmdScriptPath, 'w') as f:
@@ -81,13 +80,14 @@ def main():
 
     os.chdir(work_dir)
 
-    p = subprocess.Popen(os.path.join(args.output, 'script.bat'))
+    p = subprocess.Popen(os.path.join(args.output, 'script.bat'), shell=True, stdout = subprocess.PIPE)
+    stdout, stderr = p.communicate()
     #p = psutil.Popen(os.path.join(args.output, 'script.bat'), stdout=subprocess.PIPE)
     rc = -1
 
     while True:
         try:
-            rc = p.wait(timeout=5)
+            rc = p.wait(timeout=20)
         except psutil.TimeoutExpired as err:
             fatal_errors_titles = ['Radeon ProRender']
             if set(fatal_errors_titles).intersection(get_windows_titles()):

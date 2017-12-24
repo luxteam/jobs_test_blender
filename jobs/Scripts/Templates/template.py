@@ -6,11 +6,11 @@ Scenename = 'Scene'
 bpy.data.scenes[Scenename].render.engine = "RPR"
 
 # quality
-bpy.data.scenes[Scenename].render.resolution_x = 1920
-bpy.data.scenes[Scenename].render.resolution_y = 1920
-bpy.data.scenes[Scenename].render.resolution_percentage = 30
+#bpy.data.scenes[Scenename].render.resolution_x = 1920
+#bpy.data.scenes[Scenename].render.resolution_y = 1920
+#bpy.data.scenes[Scenename].render.resolution_percentage = 30
 
-bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = {pass_limit}
+bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = 30
 
 # frame range
 bpy.data.scenes[Scenename].frame_start = 1
@@ -25,7 +25,9 @@ bpy.data.scenes[Scenename].render.image_settings.color_mode = 'RGB'
 #bpy.data.scenes[Scenename].cycles.samples = 200
 
 # output
-bpy.data.scenes[Scenename].render.filepath = "{work_dir}"
+name_scene = bpy.path.basename(bpy.context.blend_data.filepath)
+output = "{work_dir}" + "\\" + name_scene
+bpy.data.scenes[Scenename].render.filepath = output
 bpy.data.scenes[Scenename].render.use_placeholder = True
 bpy.data.scenes[Scenename].render.use_file_extension = True
 bpy.data.scenes[Scenename].render.use_overwrite = True
