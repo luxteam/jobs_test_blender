@@ -26,7 +26,7 @@ bpy.data.scenes[Scenename].render.image_settings.color_mode = 'RGB'
 
 # output
 name_scene = bpy.path.basename(bpy.context.blend_data.filepath)
-output = "{work_dir}" + "\\" + name_scene
+output = "{0}" + "\\" + name_scene
 bpy.data.scenes[Scenename].render.filepath = output
 bpy.data.scenes[Scenename].render.use_placeholder = True
 bpy.data.scenes[Scenename].render.use_file_extension = True

@@ -58,7 +58,7 @@ def main():
     scene_list = blender_scenes.split(",\n")
     work_dir = args.output 
 
-    BlenderScript = blender_script_template.format(work_dir=work_dir)
+    BlenderScript = blender_script_template.format(work_dir)
 
     try:
         os.makedirs(work_dir)
@@ -72,7 +72,7 @@ def main():
     cmdRun = ""
     for each in scene_list :
         cmdRun += '"{tool}" -b "{scene}" -P "{template}"\n' \
-            .format(tool=tool,scene = args.res_path  + "\\" + each, template = args.template)
+            .format(tool=tool,scene = args.res_path  + "\\" + each, template = BlenderScriptPath)
 
     cmdScriptPath = os.path.join(work_dir, 'script.bat')
     with open(cmdScriptPath, 'w') as f:
