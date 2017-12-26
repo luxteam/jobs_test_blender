@@ -7,7 +7,7 @@
  4. Run `scripts/run.bat` with customised `--cmd_variables`. For example:  
  
      > --cmd_variables Tool "C:\Program Files\Blender Foundation\Blender\blender.exe" RenderDevice 'gpu' TestsFilter small  
-     * Tool define path to Maya  
+     * Tool define path to Blender
      * RenderDevice define what hardware will be used.  
          'gpu' - GPU 
          'cpu' - CPU
