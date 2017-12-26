@@ -39,6 +39,7 @@ def main():
     parser.add_argument('--res_path', required=True)
     parser.add_argument('--render_mode', required=True)
     parser.add_argument('--template', required=True)
+    parser.add_argument('--pass_limit', required=True)
     parser.add_argument('--output', required=True)
     parser.add_argument('--test_list', required=True)
 
@@ -55,10 +56,15 @@ def main():
         blender_scenes = f.read()
 
 
+    if (args.render_mode == '0') :
+        render_mode = 'cpu'
+    else :
+        render_mode = 'gpu'
+
     scene_list = blender_scenes.split(",\n")
     work_dir = args.output 
 
-    BlenderScript = blender_script_template.format(work_dir)
+    BlenderScript = blender_script_template.format(work_dir = work_dir, render_mode = render_mode, pass_limit = args.pass_limit)
 
     try:
         os.makedirs(work_dir)

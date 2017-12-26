@@ -7,7 +7,7 @@ Scenename = bpy.context.scene.name
 
 # RPR Settings
 bpy.data.scenes[Scenename].render.engine = "RPR"
-bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = 30
+bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = {pass_limit}
 
 # resolution
 #bpy.data.scenes[Scenename].render.resolution_x = 1920
@@ -15,10 +15,10 @@ bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = 30
 #bpy.data.scenes[Scenename].render.resolution_percentage = 30
 
 # Render device in RPR
-bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = 'gpu'
+bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type_plus_cpu = False
+bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = '{render_mode}'
 #bpy.context.user_preferences.addons["rprblender"].preferences.settings.gpu_count = 2
 #bpy.context.user_preferences.addons["rprblender"].preferences.settings.samples = 1
-#bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type_plus_cpu = True
 bpy.context.user_preferences.addons["rprblender"].preferences.settings.include_uncertified_devices = True
 
 # frame range
@@ -32,7 +32,7 @@ bpy.data.scenes[Scenename].render.image_settings.color_mode = 'RGB'
 
 # output
 name_scene = bpy.path.basename(bpy.context.blend_data.filepath)
-output = "{0}" + "\\" + name_scene + "_##"
+output = "{work_dir}" + "\\" + name_scene + "_##"
 bpy.data.scenes[Scenename].render.filepath = output
 bpy.data.scenes[Scenename].render.use_placeholder = True
 bpy.data.scenes[Scenename].render.use_file_extension = True
@@ -51,7 +51,7 @@ for mod_name in bpy.context.user_preferences.addons.keys():
         version = str(ver[0]) + "." + str(ver[1]) + "." + str(ver[2])
      
 # LOG
-log_name = "{0}" + "\\" + name_scene + ".txt"
+log_name = "{work_dir}" + "\\" + name_scene + ".txt"
 file = open(log_name,"w") 
 
 file.write("Version of Blender: " + bpy.app.version_string + "\r\n") 
