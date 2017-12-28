@@ -1,6 +1,8 @@
 import bpy
 import datetime
 import sys
+import json
+import os
 
 #get scene name
 Scenename = bpy.context.scene.name
@@ -51,21 +53,33 @@ for mod_name in bpy.context.user_preferences.addons.keys():
         version = str(ver[0]) + "." + str(ver[1]) + "." + str(ver[2])
      
 # LOG
-log_name = "{work_dir}" + "\\" + name_scene + ".txt"
-file = open(log_name,"w") 
+# log_name = "{work_dir}" + "\\" + name_scene + ".json"
 
-file.write("Version of Blender: " + bpy.app.version_string + "\r\n") 
-file.write("Version of rprblender addon: " + version + "\r\n") 
-file.write("Render device type: " + bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type  + "\r\n")  
-file.write("Pass limit: " + str(bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations) + "\r\n")  
-file.write("Render size: " + str(bpy.data.scenes[Scenename].render.resolution_x) + " x " + str(bpy.data.scenes[Scenename].render.resolution_y) + "\r\n")  
-file.write("File name: " + bpy.path.basename(bpy.context.blend_data.filepath) + "\r\n")  
-file.write("Scene name: " + bpy.context.scene.name + "\r\n")  
-file.write("Frame: " + str(bpy.context.scene.frame_current) + "\r\n")  
-file.write("Date time: " + datetime.datetime.now().strftime("%d-%m-%Y %H:%M") + "\r\n")  
-file.write("Render time: " + str(Render_time) + "\r\n")  
+log_name = os.path.join('{work_dir}', "report.json")
+report = {{}}
+report['render_version'] = version
+report['render_device'] = bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type
+report['tool'] = "Blender " + bpy.app.version_string
+report['file_name'] = bpy.path.basename(bpy.context.blend_data.filepath)
+report['scene_name'] = bpy.context.scene.name
+# TODO: change on int (seconds)
+report['render_time'] = str(Render_time)
+report['render_color_path'] = bpy.path.basename(bpy.context.blend_data.filepath)
 
-file.close() 
+with open(log_name, 'w') as file:
+	json.dump([report], file, indent=' ')
+
+# file.write("Version of rprblender addon: " + version + "\r\n") 
+# file.write("Render device type: " + bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type  + "\r\n")  
+# file.write("Pass limit: " + str(bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations) + "\r\n")  
+# file.write("Render size: " + str(bpy.data.scenes[Scenename].render.resolution_x) + " x " + str(bpy.data.scenes[Scenename].render.resolution_y) + "\r\n")  
+# file.write("File name: " + bpy.path.basename(bpy.context.blend_data.filepath) + "\r\n")  
+# file.write("Scene name: " + bpy.context.scene.name + "\r\n")  
+# file.write("Frame: " + str(bpy.context.scene.frame_current) + "\r\n")  
+# file.write("Date time: " + datetime.datetime.now().strftime("%d-%m-%Y %H:%M") + "\r\n")  
+# file.write("Render time: " + str(Render_time) + "\r\n")  
+
+# file.close() 
 
 
 

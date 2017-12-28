@@ -86,8 +86,12 @@ def main():
 
     os.chdir(work_dir)
 
-    p = subprocess.Popen(os.path.join(args.output, 'script.bat'), shell=True, stdout = subprocess.PIPE)
+    p = subprocess.Popen(os.path.join(args.output, 'script.bat'), stdout = subprocess.PIPE)
     stdout, stderr = p.communicate()
+
+    #with open(os.path.join(args.output, "blender.txt"), 'w') as file:
+     #   file.write(stdout)
+
     #p = psutil.Popen(os.path.join(args.output, 'script.bat'), stdout=subprocess.PIPE)
     rc = -1
 
