@@ -1,4 +1,5 @@
 import bpy
+import addon_utils
 import datetime
 import sys
 import json
@@ -8,6 +9,7 @@ import os
 Scenename = bpy.context.scene.name
 
 # RPR Settings
+addon_utils.enable("rprblender", default_set=True, persistent=False, handle_error=None)
 bpy.data.scenes[Scenename].render.engine = "RPR"
 bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = {pass_limit}
 
