@@ -36,8 +36,8 @@ bpy.data.scenes[Scenename].render.image_settings.color_mode = 'RGB'
 
 # output
 name_scene = bpy.path.basename(bpy.context.blend_data.filepath)
-output = "{work_dir}" + "\\" + name_scene + "_##"
-bpy.data.scenes[Scenename].render.filepath = output
+output = "{work_dir}" + "\\images\\" + name_scene + "_##"
+bpy.data.scenes[Scenename].render.filepath = output 
 bpy.data.scenes[Scenename].render.use_placeholder = True
 bpy.data.scenes[Scenename].render.use_file_extension = True
 bpy.data.scenes[Scenename].render.use_overwrite = True
@@ -55,9 +55,7 @@ for mod_name in bpy.context.user_preferences.addons.keys():
         version = str(ver[0]) + "." + str(ver[1]) + "." + str(ver[2])
      
 # LOG
-# log_name = "{work_dir}" + "\\" + name_scene + ".json"
-
-log_name = os.path.join('{work_dir}', "report.json")
+log_name = os.path.join('{work_dir}', name_scene + ".json")
 report = {{}}
 report['render_version'] = version
 report['render_device'] = bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type

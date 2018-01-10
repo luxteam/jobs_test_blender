@@ -90,10 +90,12 @@ def main():
     stdout, stderr = p.communicate()
 
     with open(os.path.join(args.output, "log"), 'w') as file:
-        file.write(str(stdout))
+        stdout = stdout.decode("utf-8")
+        file.write(stdout)
 
     with open(os.path.join(args.output, "error"), 'w') as file:
-        file.write(str(stderr))
+        stderr = stderr.decode("utf-8")
+        file.write(stderr)
 
     #p = psutil.Popen(os.path.join(args.output, 'script.bat'), stdout=subprocess.PIPE)
     rc = -1

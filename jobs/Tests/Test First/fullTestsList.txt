@@ -1,8 +1,8 @@
-"TestSceneMetalls.blend",
-"TestBall.blend",
-"TestBalls.blend",
-"TestBallsCoat.blend",
-"TestBallsEmissive.blend",
-"TestBallsReflect.blend",
-"TestBallsRefract.blend",
-"TestSceneMetalls.blend"
+TestSceneMetalls.blend,
+TestBall.blend,
+TestBalls.blend,
+TestBallsCoat.blend,
+TestBallsEmissive.blend,
+TestBallsReflect.blend,
+TestBallsRefract.blend,
+TestSceneMetalls.blend
