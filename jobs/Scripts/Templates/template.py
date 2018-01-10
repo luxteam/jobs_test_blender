@@ -67,6 +67,7 @@ report['render_time'] = str(Render_time)
 report['render_color_path'] = "{work_dir}" + "\\images\\" + name_scene + "_01.jpg"
 report['date_time'] = datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
 report['render_device'] = bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type
+report['difference_color'] = "not compared yet"
 
 
 with open(log_name, 'w') as file:
