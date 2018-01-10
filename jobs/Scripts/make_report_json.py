@@ -1,20 +1,22 @@
 import argparse
 import os
-
+import json
 
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--work_dir', required=True)
+parser.add_argument('--stage_report', required=True)
 
 args = parser.parse_args()
 directory = args.work_dir
-
+stage_report = [{'status': 'INIT'}, {'log': ['make_report_json.py start']}]
 
 files = os.listdir(directory)
 json_files = list(filter(lambda x: x.endswith('.blend.json'), files))
 result_json = ""
 
 for file in range(len(json_files)):
+    stage_report[1]['log'].append('processing {}'.format(json_files[file]))
 
     if (file == 0):
         f = open(directory + "\\" + json_files[file], 'r')
@@ -40,7 +42,11 @@ for file in range(len(json_files)):
         text = text + "," + "\r\n"
         result_json += text
 
-json = os.path.join(directory, "report.json")
-with open(json, 'w') as file:
+with open(os.path.join(directory, "report.json"), 'w') as file:
     file.write(result_json)
 
+stage_report[0]['status'] = 'OK'
+stage_report[1]['log'].append('report.json saved')
+
+with open(os.path.join(directory, args.stage_report), 'w') as file:
+    json.dump(stage_report, file, indent=' ')
