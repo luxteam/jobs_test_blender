@@ -1,0 +1,4 @@
+TestBallsCoatPBR.blend,
+TestBallsEmissivePBR.blend,
+TestSceneMetallsPBR.blend,
+ComplexTestPBR.blend
