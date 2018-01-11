@@ -15,8 +15,8 @@ bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = {pass_limit}
 
 # resolution
 #bpy.data.scenes[Scenename].render.resolution_x = 1920
-#bpy.data.scenes[Scenename].render.resolution_y = 1080
-#bpy.data.scenes[Scenename].render.resolution_percentage = 30
+#bpy.data.scenes[Scenename].render.resolution_y = 500
+#bpy.data.scenes[Scenename].render.resolution_percentage = 100
 
 # Render device in RPR
 bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type_plus_cpu = False
@@ -36,7 +36,7 @@ bpy.data.scenes[Scenename].render.image_settings.color_mode = 'RGB'
 
 # output
 name_scene = bpy.path.basename(bpy.context.blend_data.filepath)
-output = "{work_dir}" + "\\images\\" + name_scene + "_##"
+output = r"{work_dir}" + "\\images\\" + name_scene + "_##"
 bpy.data.scenes[Scenename].render.filepath = output 
 bpy.data.scenes[Scenename].render.use_placeholder = True
 bpy.data.scenes[Scenename].render.use_file_extension = True
@@ -55,7 +55,7 @@ for mod_name in bpy.context.user_preferences.addons.keys():
         version = str(ver[0]) + "." + str(ver[1]) + "." + str(ver[2])
      
 # LOG
-log_name = os.path.join('{work_dir}', name_scene + ".json")
+log_name = os.path.join(r'{work_dir}', name_scene + ".json")
 report = {{}}
 report['render_version'] = version
 report['render_device'] = bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type
@@ -65,7 +65,7 @@ report['scene_name'] = bpy.context.scene.name
 # TODO: change on int (seconds)
 # report['render_time'] = str(Render_time)
 report['render_time'] = Render_time.total_seconds()
-report['render_color_path'] = "{work_dir}" + "\\images\\" + name_scene + "_01.jpg"
+report['render_color_path'] = r"{work_dir}" + "\\images\\" + name_scene + "_01.jpg"
 report['date_time'] = datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
 report['render_device'] = bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type
 report['difference_color'] = "not compared yet"
