@@ -19,14 +19,14 @@ for file in range(len(json_files)):
     stage_report[1]['log'].append('processing {}'.format(json_files[file]))
 
     if (len(json_files) == 1):
-        f = open(directory + "\\" + json_files[file], 'r')
+        f = open(os.path.join(directory, json_files[file]), 'r')
         text = f.read()
         f.close()
         result_json += text
         break
 
     if (file == 0):
-        f = open(directory + "\\" + json_files[file], 'r')
+        f = open(os.path.join(directory, json_files[file]), 'r')
         text = f.read()
         f.close()
         text = text[:-2]
@@ -34,14 +34,14 @@ for file in range(len(json_files)):
         result_json += text
 
     elif (file == (len(json_files))-1):
-        f = open(directory + "\\" + json_files[file], 'r')
+        f = open(os.path.join(directory, json_files[file]), 'r')
         text = f.read()
         f.close()
         text = text[2:]
         result_json += text
 
     else:
-        f = open(directory + "\\" + json_files[file], 'r')
+        f = open(os.path.join(directory, json_files[file]), 'r')    
         text = f.read()
         f.close()
         text = text[2:]

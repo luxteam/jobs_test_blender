@@ -6,29 +6,7 @@ import psutil
 import json
 import ctypes
 import pyscreenshot
-
-
-def get_windows_titles():
-    EnumWindows = ctypes.windll.user32.EnumWindows
-    EnumWindowsProc = ctypes.WINFUNCTYPE(ctypes.c_bool, ctypes.POINTER(ctypes.c_int), ctypes.POINTER(ctypes.c_int))
-    GetWindowText = ctypes.windll.user32.GetWindowTextW
-    GetWindowTextLength = ctypes.windll.user32.GetWindowTextLengthW
-    IsWindowVisible = ctypes.windll.user32.IsWindowVisible
-
-    titles = []
-
-    def foreach_window(hwnd, lParam):
-        if IsWindowVisible(hwnd):
-            length = GetWindowTextLength(hwnd)
-            buff = ctypes.create_unicode_buffer(length + 1)
-            GetWindowText(hwnd, buff, length + 1)
-            titles.append(buff.value)
-        return True
-
-    EnumWindows(EnumWindowsProc(foreach_window), 0)
-
-    return titles
-
+import platform
 
 def main():
     stage_report = [{'status': 'INIT'}, {'log': ['simpleRender.py start']}]
@@ -78,15 +56,24 @@ def main():
     cmdRun = ""
     for each in scene_list :
         cmdRun += '"{tool}" -b "{scene}" -P "{template}"\n' \
-            .format(tool=tool,scene = args.res_path  + "\\" + each, template = BlenderScriptPath)
+            .format(tool=tool,scene = os.path.join(args.res_path, each), template = BlenderScriptPath)
 
-    cmdScriptPath = os.path.join(work_dir, 'script.bat')
-    with open(cmdScriptPath, 'w') as f:
-        f.write(cmdRun)
+
+    system_pl = platform.system()
+    if (system_pl == 'Linux'):
+        cmdScriptPath = os.path.join(work_dir, 'script.sh')
+        with open(cmdScriptPath, 'w') as f:
+            f.write(cmdRun)
+
+        os.system('chmod +x {}'.format(cmdScriptPath))
+    elif (system_pl == "Windows" ):
+        cmdScriptPath = os.path.join(work_dir, 'script.bat')
+        with open(cmdScriptPath, 'w') as f:
+            f.write(cmdRun)
 
     os.chdir(work_dir)
 
-    p = subprocess.Popen(os.path.join(args.output, 'script.bat'), stdout = subprocess.PIPE, stderr = subprocess.PIPE)
+    p = subprocess.Popen(cmdScriptPath, shell = True   , stdout = subprocess.PIPE, stderr = subprocess.PIPE)
     stdout, stderr = p.communicate()
 
     with open(os.path.join(args.output, "log"), 'w') as file:
@@ -100,21 +87,16 @@ def main():
     #p = psutil.Popen(os.path.join(args.output, 'script.bat'), stdout=subprocess.PIPE)
     rc = -1
 
-    while True:
-        try:
-            rc = p.wait(timeout=20)
-        except psutil.TimeoutExpired as err:
-            fatal_errors_titles = ['Radeon ProRender']
-            if set(fatal_errors_titles).intersection(get_windows_titles()):
-                rc = -1
-                error_screen = pyscreenshot.grab()
-                error_screen.save(os.path.join(args.output, 'error_screenshot.jpg'))
-                for child in reversed(p.children(recursive=True)):
-                    child.terminate()
-                p.terminate()
-                break
-        else:
-            break
+    
+    try:
+        rc = p.wait(timeout=100)
+    except psutil.TimeoutExpired as err:
+        rc = -1
+        error_screen = pyscreenshot.grab()
+        error_screen.save(os.path.join(args.output, 'error_screenshot.jpg'))
+        for child in reversed(p.children(recursive=True)):
+            child.terminate()
+        p.terminate()
 
     if rc == 0:
         print('passed')

@@ -2,9 +2,9 @@
 <package-manifest name="Blender">
 
     <variable name="Root" value="{CWD}"/>
-    <variable name="ResourcesDir" value = "{CWD}\Scripts"/>
-    <variable name="ScenesDir" value="C:\TestResources\BlenderAssets\scenes"/>
-    <variable name="CommonDir" value="{CWD}\..\jobs_launcher\common"/>
-    <variable name="BaselineDir" value="{CWD}\..\..\Baseline"/>
+    <variable name="ResourcesDir" value = "{CWD}/Scripts"/>
+    <variable name="ScenesDir" value="{ResPath}"/>
+    <variable name="CommonDir" value="{CWD}/../jobs_launcher/common"/>
+    <variable name="BaselineDir" value="{CWD}/../../Baseline"/>
     
 </package-manifest>
