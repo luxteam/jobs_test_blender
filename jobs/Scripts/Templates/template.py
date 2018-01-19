@@ -37,7 +37,7 @@ bpy.data.scenes[Scenename].render.image_settings.color_mode = 'RGB'
 
 # output
 name_scene = bpy.path.basename(bpy.context.blend_data.filepath)
-output = r"{work_dir}" + "\\Color\\" + name_scene + "_##"
+output = r"{work_dir}" + "/Color/" + name_scene + "_##"
 bpy.data.scenes[Scenename].render.filepath = output 
 bpy.data.scenes[Scenename].render.use_placeholder = True
 bpy.data.scenes[Scenename].render.use_file_extension = True
@@ -66,7 +66,7 @@ report['scene_name'] = bpy.context.scene.name
 # TODO: change on int (seconds)
 # report['render_time'] = str(Render_time)
 report['render_time'] = Render_time.total_seconds()
-report['render_color_path'] = r"{work_dir}" + "\\Color\\" + name_scene + "_01.jpg"
+report['render_color_path'] = r"{work_dir}" + "/Color/" + name_scene + "_01.jpg"
 report['date_time'] = datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
 report['render_device'] = bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type
 report['difference_color'] = "not compared yet"
