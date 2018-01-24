@@ -70,7 +70,7 @@ def main(device_type, dual):
 	report['render_version'] = version
 	report['render_device'] = bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type
 	report['tool'] = "Blender " + bpy.app.version_string
-	report['file_name'] = bpy.path.basename(bpy.context.blend_data.filepath) + "_01.jpg"
+	report['file_name'] = bpy.path.basename(bpy.context.blend_data.filepath) + "_" + mode + "_01.jpg"
 	report['scene_name'] = bpy.context.scene.name
 	report['render_time'] = Render_time.total_seconds()
 	report['render_color_path'] = r"{work_dir}" + "/Color/" + name_scene + "_01.jpg"
