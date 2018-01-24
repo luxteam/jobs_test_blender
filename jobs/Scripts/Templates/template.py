@@ -56,7 +56,8 @@ for mod_name in bpy.context.user_preferences.addons.keys():
         version = str(ver[0]) + "." + str(ver[1]) + "." + str(ver[2])
      
 # LOG
-log_name = os.path.join(r'{work_dir}', name_scene + ".json")
+name_scene_for_json = bpy.path.basename(bpy.context.blend_data.filepath) + "BL"
+log_name = os.path.join(r'{work_dir}', name_scene_for_json + ".json")
 report = {{}}
 report['render_version'] = version
 report['render_device'] = bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type
