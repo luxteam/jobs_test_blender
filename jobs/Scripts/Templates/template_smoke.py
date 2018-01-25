@@ -11,9 +11,6 @@ def make_presets(test_name, passes):
 	#get scene name
 	Scenename = bpy.context.scene.name
 
-	if((addon_utils.check("rprblender"))[0] == False) : 
-		addon_utils.enable("rprblender", default_set=True, persistent=False, handle_error=None)
-	bpy.data.scenes[Scenename].render.engine = "RPR"
 	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = passes
 
 	# Render device in RPR
@@ -87,6 +84,9 @@ def test_Sun():
 	lamp_object.data.type = 'SUN'
 
 def create_Uber2():
+
+	if((addon_utils.check("rprblender"))[0] == False) : 
+		addon_utils.enable("rprblender", default_set=True, persistent=False, handle_error=None)
 
 	bpy.context.scene.render.engine = 'RPR'
 	bpy.context.scene.world.rpr_data.environment.enable = False
