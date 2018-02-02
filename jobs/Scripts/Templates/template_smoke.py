@@ -72,54 +72,89 @@ def test_IES():
 
 	bpy.data.lamps["Lamp"].rpr_lamp.ies_file_name = r"C:\\TestResources\\BlenderAssets\\scenes\\Candle.fbm\\PD6R12ED010- PDM6835-694SNB.ies"
 
-def test_IBL():
+def base_light():
+
+	bpy.context.scene.world.rpr_data.environment.enable = False
+
+def test_IBL_on():
 
 	bpy.context.scene.world.rpr_data.environment.enable = True
 	bpy.context.scene.world.rpr_data.environment.type = 'IBL'
 	bpy.context.scene.world.rpr_data.environment.ibl.use_ibl_map = False
 
+def test_IBL_off():
+
+	bpy.context.scene.world.rpr_data.environment.enable = False
+
 def test_Sun():
 
+	bpy.context.scene.world.rpr_data.environment.enable = False
 	lamp_object = bpy.context.scene.objects['Lamp']
 	lamp_object.data.type = 'SUN'
+
+def test_Full():
+
+	bpy.context.scene.world.rpr_data.environment.enable = False
+	lamp_object = bpy.context.scene.objects['Lamp']
+	lamp_object.data.type = 'POINT'
+
+def import_test():
+
+	bpy.context.scene.render.engine = 'RPR'
+	bpy.context.scene.world.rpr_data.environment.enable = True
+
+	bpy.context.scene.objects['Cube'].hide_render = True
+	bpy.context.scene.objects['Cube'].hide = True
+
+	file_loc = r"C:\\TestResources\\BlenderAssets\\scenes\\example.obj"
+	imported_object = bpy.ops.import_scene.obj(filepath=file_loc)
+	obj_object = bpy.context.selected_objects[0] 
+	bpy.data.objects["shader_ball"].dimensions = (3, 3, 3)
+	bpy.data.objects["shader_ball"].location = (0, 0, 0)
+
 
 def create_Uber2():
 
 	if((addon_utils.check("rprblender"))[0] == False) : 
 		addon_utils.enable("rprblender", default_set=True, persistent=False, handle_error=None)
 
-	bpy.context.scene.render.engine = 'RPR'
-	bpy.context.scene.world.rpr_data.environment.enable = False
 	bpy.context.object.select = False
-	bpy.context.scene.objects['Cube'].select = True
+	bpy.context.scene.objects['shader_ball'].select = True
 
-	# setup material graph
-	mesh = bpy.context.object.data  # type: bpy.types.Mesh
-	material = mesh.materials[0]
+	material = bpy.data.materials.new('Shader_mat')
+	mesh = bpy.context.object.data
+	
 
 	# create material nodetree and retrieve it
 	override = bpy.context.copy()
 	override['material'] = material
 	bpy.ops.rpr.op_material_add_nodetree(override)
 	tree = material.node_tree
-	
+
 	output = node_editor.find_node_in_nodetree(tree, node_editor.shader_node_output_name)
 	uber2 = tree.nodes.new(type='rpr_shader_node_uber2')
 	tree.links.new(uber2.outputs[uber2.shader_out], output.inputs[output.shader_in])
 
 	uber2.diffuse = True
-	uber2.inputs[uber2.diffuse_color].default_value = (0.12, 0.63, 0.07, 1.0)
+	uber2.inputs[uber2.diffuse_color].default_value = (0.5, 0, 0, 1.0)
 	uber2.inputs[uber2.diffuse_weight].default_value = 1
+
+	bpy.data.objects['shader_ball'].material_slots[0].material = bpy.data.materials['Shader_mat']
 
 
 if __name__ == '__main__':
+	import_test()
+	make_presets("Import", 30)
 	create_Uber2()
 	make_presets("Uber2", 30)
+	base_light()
+	make_presets("Base_Light", 30)
 	test_IES()
-	make_presets("Lights", 30)
-	test_IBL()
-	make_presets("IBL", 30)
+	make_presets("IES Light", 30)
+	test_IBL_on()
+	make_presets("IBL_on", 30)
 	test_Sun()
 	make_presets("Sun", 30)
+	test_Full()
 	make_presets("Full_100", 100)
 	make_presets("Full_500", 500)
