@@ -94,7 +94,7 @@ def test_Sun():
 
 def test_Full():
 
-	bpy.context.scene.world.rpr_data.environment.enable = False
+	bpy.context.scene.world.rpr_data.environment.enable = True
 	lamp_object = bpy.context.scene.objects['Lamp']
 	lamp_object.data.type = 'POINT'
 
