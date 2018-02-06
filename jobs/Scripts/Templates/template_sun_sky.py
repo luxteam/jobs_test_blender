@@ -5,7 +5,7 @@ import sys
 import json
 import os
 
-def main(render_mode):
+def main(type_sun_sky, quality, param1, param2):
 
 	#get scene name
 	Scenename = bpy.context.scene.name
@@ -16,11 +16,22 @@ def main(render_mode):
 	bpy.data.scenes[Scenename].render.engine = "RPR"
 	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = {pass_limit}
 
-	# resolution
-	#bpy.data.scenes[Scenename].render.resolution_x = 1920
-	#bpy.data.scenes[Scenename].render.resolution_y = 500
-	#bpy.data.scenes[Scenename].render.resolution_percentage = 100
-	bpy.context.scene.rpr.render.render_mode = render_mode
+
+	bpy.context.scene.world.rpr_data.environment.type = 'SUN_SKY'
+	bpy.context.scene.world.rpr_data.environment.sun_sky.type = type_sun_sky
+	bpy.context.scene.world.rpr_data.environment.sun_sky.ground_color = (0.4, 0.00703741, 0.00508468)
+	bpy.context.scene.world.rpr_data.environment.sun_sky.texture_resolution = quality
+
+	if type_sun_sky == 'analytical_sky':
+		bpy.context.scene.world.rpr_data.environment.sun_sky.azimuth = param1
+		bpy.context.scene.world.rpr_data.environment.sun_sky.altitude = param2
+	else:
+		bpy.ops.rpr.op_get_time_now()
+		bpy.context.scene.world.rpr_data.environment.sun_sky.time_zone = 3
+		bpy.context.scene.world.rpr_data.environment.sun_sky.latitude = 0.973583
+		bpy.context.scene.world.rpr_data.environment.sun_sky.longitude = 0.656516
+		bpy.context.scene.world.rpr_data.environment.sun_sky.time_hours = param1
+		bpy.context.scene.world.rpr_data.environment.sun_sky.time_minutes = param2
 
 	# Render device in RPR
 	if '{render_mode}' == 'dual':
@@ -43,7 +54,7 @@ def main(render_mode):
 	bpy.data.scenes[Scenename].render.image_settings.color_mode = 'RGB'
 
 	# output
-	name_scene = bpy.path.basename(bpy.context.blend_data.filepath) + "_" + render_mode
+	name_scene = bpy.path.basename(bpy.context.blend_data.filepath) + "_" + type_sun_sky + "_" + quality + "_" + str(param1) + "_" + str(param2)
 	output = r"{work_dir}" + "/Color/" + name_scene + "_##"
 	bpy.data.scenes[Scenename].render.filepath = output 
 	bpy.data.scenes[Scenename].render.use_placeholder = True
@@ -63,16 +74,16 @@ def main(render_mode):
 	        version = str(ver[0]) + "." + str(ver[1]) + "." + str(ver[2])
 	     
 	# LOG
-	name_scene_for_json = bpy.path.basename(bpy.context.blend_data.filepath) + "_" + render_mode + "BL"
+	name_scene_for_json = bpy.path.basename(bpy.context.blend_data.filepath) + "_" + type_sun_sky + "_" + quality + "_" + str(param1) + "_" + str(param2) + "BL"
 	log_name = os.path.join(r'{work_dir}', name_scene_for_json + ".json")
 	report = {{}}
 	report['render_version'] = version
 	report['render_device'] = bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type
 	report['tool'] = "Blender " + bpy.app.version_string
-	report['file_name'] = bpy.path.basename(bpy.context.blend_data.filepath) + "_" + render_mode + "_01.jpg"
+	report['file_name'] = bpy.path.basename(bpy.context.blend_data.filepath) + "_" + type_sun_sky + "_" + quality + "_" + str(param1) + "_" + str(param2) + "_01.jpg"
 	report['scene_name'] = bpy.context.scene.name
 	report['render_time'] = Render_time.total_seconds()
-	report['render_color_path'] = r"{work_dir}" + "/Color/" + name_scene +  "_01.jpg"
+	report['render_color_path'] = r"{work_dir}" + "/Color/" + name_scene + "_01.jpg"
 	report['date_time'] = datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
 	report['render_device'] = bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type
 	report['difference_color'] = "not compared yet"
@@ -82,15 +93,31 @@ def main(render_mode):
 		json.dump([report], file, indent=' ')
 
 if __name__ == "__main__":
-	main('WIREFRAME')
-	main('TEXCOORD')
-	main('POSITION')
-	main('NORMAL')
-	main('MATERIAL_INDEX')
-	main('GLOBAL_ILLUMINATION')
-	main('DIRECT_ILLUMINATION_NO_SHADOW')
-	main('DIRECT_ILLUMINATION')
-	main('DIFFUSE')
-	main('AMBIENT_OCCLUSION')
+	main('analytical_sky', 'small', 0, 0.523599)
+	main('analytical_sky', 'normal', 0, 0.523599)
+	main('analytical_sky', 'high', 0, 0.523599)
+	main('date_time_location', 'small', 12, 0)	
+	main('date_time_location', 'normal', 12, 0)	
+	main('date_time_location', 'high', 12, 0)
+	main('date_time_location', 'normal', 0, 0)	
+	main('date_time_location', 'normal', 6, 0)	
+	main('date_time_location', 'normal', 18, 0)	
+	main('date_time_location', 'normal', 23, 59)	
+	main('analytical_sky', 'normal', 0, 0)
+	main('analytical_sky', 'normal', 0, 0.785398)
+	main('analytical_sky', 'normal', 0, 1.5708)
+	main('analytical_sky', 'normal', 1.5708, 0)
+	main('analytical_sky', 'normal', 1.5708, 0.785398)
+	main('analytical_sky', 'normal', 1.5708, 1.5708)
+	main('analytical_sky', 'normal', 3.14159, 0)
+	main('analytical_sky', 'normal', 3.14159, 0.785398)
+	main('analytical_sky', 'normal', 3.14159, 1.5708)
+	main('analytical_sky', 'normal', 4.71239, 0)
+	main('analytical_sky', 'normal', 4.71239, 0.785398)
+	main('analytical_sky', 'normal', 4.71239, 1.5708)
+	main('analytical_sky', 'normal', 6.28319, 0)
+	main('analytical_sky', 'normal', 6.28319, 0.785398)
+	main('analytical_sky', 'normal', 6.28319, 1.5708)
+
 
 

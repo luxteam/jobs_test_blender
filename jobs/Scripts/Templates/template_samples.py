@@ -71,7 +71,7 @@ def main(iterations):
 	report['file_name'] = bpy.path.basename(bpy.context.blend_data.filepath)  + "_" + str(iterations) + "_01.jpg"
 	report['scene_name'] = bpy.context.scene.name
 	report['render_time'] = Render_time.total_seconds()
-	report['render_color_path'] = r"{work_dir}" + "/Color/" + name_scene + "_" + str(iterations) + "_01.jpg"
+	report['render_color_path'] = r"{work_dir}" + "/Color/" + name_scene + "_01.jpg"
 	report['date_time'] = datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
 	report['render_device'] = bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type
 	report['difference_color'] = "not compared yet"
