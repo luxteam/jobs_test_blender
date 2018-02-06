@@ -95,7 +95,8 @@ def test_Sun():
 
 	bpy.context.scene.world.rpr_data.environment.enable = True
 	bpy.context.scene.world.rpr_data.environment.type = 'SUN_SKY'
-	bpy.context.scene.world.rpr_data.environment.sun_sky.altitude = 90
+	bpy.context.scene.world.rpr_data.environment.sun_sky.altitude = 1.5708
+
 
 def import_test():
 
