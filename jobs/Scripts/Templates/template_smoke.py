@@ -14,8 +14,13 @@ def make_presets(test_name, passes):
 	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = passes
 
 	# Render device in RPR
-	bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type_plus_cpu = False
-	bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = '{render_mode}'
+	
+	if '{render_mode}' == 'dual':
+		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type_plus_cpu = True
+		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = 'gpu'
+	else:
+		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = '{render_mode}'
+		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type_plus_cpu = False
 	#bpy.context.user_preferences.addons["rprblender"].preferences.settings.gpu_count = 2
 	#bpy.context.user_preferences.addons["rprblender"].preferences.settings.samples = 1
 	bpy.context.user_preferences.addons["rprblender"].preferences.settings.include_uncertified_devices = True
@@ -57,7 +62,7 @@ def make_presets(test_name, passes):
 	report['render_device'] = bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type
 	report['tool'] = "Blender " + bpy.app.version_string
 	report['file_name'] = bpy.path.basename(bpy.context.blend_data.filepath) + "_" + test_name + "_01.jpg"
-	report['scene_name'] = bpy.context.scene.name
+	report['scene_name'] = bpy.path.basename(bpy.context.blend_data.filepath)
 	report['render_time'] = Render_time.total_seconds()
 	report['render_color_path'] = r"{work_dir}" + "/Color/" + name_scene + "_01.jpg"
 	report['date_time'] = datetime.datetime.now().strftime("%d-%m-%Y %H:%M")

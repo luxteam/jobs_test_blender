@@ -5,7 +5,7 @@ import sys
 import json
 import os
 
-def main(stamp, stamp_value, device_type):
+def main(stamp, stamp_value):
 
 	#get scene name
 	Scenename = bpy.context.scene.name
@@ -21,14 +21,12 @@ def main(stamp, stamp_value, device_type):
 	bpy.data.scenes[Scenename].rpr.use_render_stamp = True
 	bpy.data.scenes[Scenename].rpr.render_stamp = stamp_value
 
-	# Render device in RPR
-	if (device_type == 'dual'):
+	if '{render_mode}' == 'dual':
 		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type_plus_cpu = True
 		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = 'gpu'
 	else:
+		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = '{render_mode}'
 		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type_plus_cpu = False
-		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = device_type
-
 	#bpy.context.user_preferences.addons["rprblender"].preferences.settings.gpu_count = 2
 	#bpy.context.user_preferences.addons["rprblender"].preferences.settings.samples = 1
 	bpy.context.user_preferences.addons["rprblender"].preferences.settings.include_uncertified_devices = True
@@ -85,8 +83,6 @@ if __name__ == "__main__":
 	
 	main("default_stamp", "Radeon ProRender for Blender %b | %h | Time: %pt | Passes: %pp | Objects: %so | Lights: %sl", "gpu")
 	main("gpu_stamp", "Radeon ProRender for Blender %b | CPU %c | GPU %g | Render mode %r | Render device %h", "gpu")
-	main("cpu_stamp", "Radeon ProRender for Blender %b | CPU %c | GPU %g | Render mode  %r | Render device %h", "cpu")
-	main("dual_stamp", "Radeon ProRender for Blender %b | CPU %c | GPU %g | Render mode  %r | Render device %h", "dual")
 	main("additional_info", "Radeon ProRender for Blender %b | Computer name %i | Current date %d", "gpu")
 
 

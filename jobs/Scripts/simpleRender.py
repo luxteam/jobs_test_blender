@@ -34,15 +34,10 @@ def main():
         blender_scenes = f.read()
 
 
-    if (args.render_mode == '0') :
-        render_mode = 'cpu'
-    else :
-        render_mode = 'gpu'
-
     scene_list = blender_scenes.split(",\n")
     work_dir = args.output 
 
-    BlenderScript = blender_script_template.format(work_dir = work_dir, render_mode = render_mode, pass_limit = args.pass_limit)
+    BlenderScript = blender_script_template.format(work_dir = work_dir, render_mode = args.render_mode, pass_limit = args.pass_limit)
 
     try:
         os.makedirs(work_dir)

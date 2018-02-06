@@ -23,8 +23,12 @@ def main(render_mode):
 	bpy.context.scene.rpr.render.render_mode = render_mode
 
 	# Render device in RPR
-	bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type_plus_cpu = False
-	bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = '{render_mode}'
+	if '{render_mode}' == 'dual':
+		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type_plus_cpu = True
+		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = 'gpu'
+	else:
+		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = '{render_mode}'
+		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type_plus_cpu = False
 	#bpy.context.user_preferences.addons["rprblender"].preferences.settings.gpu_count = 2
 	#bpy.context.user_preferences.addons["rprblender"].preferences.settings.samples = 1
 	bpy.context.user_preferences.addons["rprblender"].preferences.settings.include_uncertified_devices = True

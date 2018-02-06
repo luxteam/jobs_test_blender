@@ -26,8 +26,12 @@ def main(type_IBL, value, IBL_map):
 		bpy.context.scene.world.rpr_data.environment.ibl.ibl_image = bpy.data.images.load(r"C:\TestResources\BlenderAssets\scenes\ibl_test.exr", True)
 
 	# Render device in RPR
-	bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type_plus_cpu = False
-	bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = '{render_mode}'
+	if '{render_mode}' == 'dual':
+		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type_plus_cpu = True
+		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = 'gpu'
+	else:
+		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = '{render_mode}'
+		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type_plus_cpu = False
 	#bpy.context.user_preferences.addons["rprblender"].preferences.settings.gpu_count = 2
 	#bpy.context.user_preferences.addons["rprblender"].preferences.settings.samples = 1
 	bpy.context.user_preferences.addons["rprblender"].preferences.settings.include_uncertified_devices = True
