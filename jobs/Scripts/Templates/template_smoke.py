@@ -88,15 +88,9 @@ def test_IBL_off():
 
 def test_Sun():
 
-	bpy.context.scene.world.rpr_data.environment.enable = False
-	lamp_object = bpy.context.scene.objects['Lamp']
-	lamp_object.data.type = 'SUN'
-
-def test_Full():
-
 	bpy.context.scene.world.rpr_data.environment.enable = True
-	lamp_object = bpy.context.scene.objects['Lamp']
-	lamp_object.data.type = 'POINT'
+	bpy.context.scene.world.rpr_data.environment.type = 'SUN_SKY'
+	bpy.context.scene.world.rpr_data.environment.sun_sky.altitude = 90
 
 def import_test():
 
@@ -136,7 +130,7 @@ def create_Uber2():
 	tree.links.new(uber2.outputs[uber2.shader_out], output.inputs[output.shader_in])
 
 	uber2.diffuse = True
-	uber2.inputs[uber2.diffuse_color].default_value = (0.5, 0, 0, 1.0)
+	uber2.inputs[uber2.diffuse_color].default_value = (0.65, 0.2, 0.2, 1.0)
 	uber2.inputs[uber2.diffuse_weight].default_value = 1
 
 	bpy.data.objects['shader_ball'].material_slots[0].material = bpy.data.materials['Shader_mat']
@@ -155,6 +149,6 @@ if __name__ == '__main__':
 	make_presets("IBL_on", 30)
 	test_Sun()
 	make_presets("Sun", 30)
-	test_Full()
+
 	make_presets("Full_100", 100)
 	make_presets("Full_500", 500)
