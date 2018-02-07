@@ -1,7 +1,6 @@
 
 def main(test_combination):
 
-	#get scene name
 	Scenename = bpy.context.scene.name
 
 	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = {pass_limit}
@@ -22,7 +21,7 @@ if __name__ == "__main__":
 	values = [0, 1, 2, 3, 5, 7, 10]
 	IBL_types = ['COLOR', 'IBL']
 
-	test_combinations = [ (ibl_type, value) for ibl_type in IBL_types for value in values]
+	test_combinations = [(ibl_type, value) for ibl_type in IBL_types for value in values]
 	for each in test_combinations:
 		main(each)
 

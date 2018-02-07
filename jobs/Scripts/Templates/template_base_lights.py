@@ -1,6 +1,3 @@
-import bpy
-import addon_utils
-import datetime
 
 def main(type_light, intensity, use_map):
 
