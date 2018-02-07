@@ -103,8 +103,17 @@ def import_test():
 	bpy.context.scene.render.engine = 'RPR'
 	bpy.context.scene.world.rpr_data.environment.enable = True
 
-	bpy.context.scene.objects['Cube'].hide_render = True
-	bpy.context.scene.objects['Cube'].hide = True
+	#bpy.context.scene.objects['Cube'].hide_render = True
+	#bpy.context.scene.objects['Cube'].hide = True
+
+	# deselect all
+	bpy.ops.object.select_all(action='DESELECT')
+
+	# selection
+	bpy.data.objects['Cube'].select = True
+
+	# remove it
+	bpy.ops.object.delete() 
 
 	file_loc = r"C:\\TestResources\\BlenderAssets\\scenes\\example.obj"
 	imported_object = bpy.ops.import_scene.obj(filepath=file_loc)
@@ -118,7 +127,8 @@ def create_Uber2():
 	if((addon_utils.check("rprblender"))[0] == False) : 
 		addon_utils.enable("rprblender", default_set=True, persistent=False, handle_error=None)
 
-	bpy.context.object.select = False
+	bpy.ops.object.select_all(action='DESELECT')
+	bpy.context.scene.objects.active = bpy.data.objects['shader_ball']
 	bpy.context.scene.objects['shader_ball'].select = True
 
 	material = bpy.data.materials.new('Shader_mat')

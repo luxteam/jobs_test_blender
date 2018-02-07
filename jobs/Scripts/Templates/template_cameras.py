@@ -5,7 +5,7 @@ import sys
 import json
 import os
 
-def main(type_light, intensity, map):
+def main(type_, rpr_type):
 
 	#get scene name
 	Scenename = bpy.context.scene.name
@@ -16,10 +16,16 @@ def main(type_light, intensity, map):
 	bpy.data.scenes[Scenename].render.engine = "RPR"
 	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = {pass_limit}
 
-	# resolution
-	#bpy.data.scenes[Scenename].render.resolution_x = 1920
-	#bpy.data.scenes[Scenename].render.resolution_y = 500
-	#bpy.data.scenes[Scenename].render.resolution_percentage = 100
+	bpy.context.scene.objects.active = bpy.data.objects['Camera']
+	bpy.context.object.select = False
+	bpy.context.scene.objects['Camera'].select = True
+
+	bpy.context.object.data.type = type_
+	if (rpr_type != 'no_rpr_camera'):
+		bpy.context.scene.rpr.render.camera.override_camera_settings = True
+		bpy.context.scene.rpr.render.camera.panorama_type = rpr_type
+	else:
+		bpy.context.scene.rpr.render.camera.override_camera_settings = False
 
 	# Render device in RPR
 	if '{render_mode}' == 'dual':
@@ -41,16 +47,8 @@ def main(type_light, intensity, map):
 	bpy.data.scenes[Scenename].render.image_settings.quality = 80
 	bpy.data.scenes[Scenename].render.image_settings.color_mode = 'RGB'
 
-	bpy.context.scene.objects.active = bpy.data.objects['Lamp']
-	bpy.context.object.data.type = type_light
-	bpy.data.lamps["Lamp"].rpr_lamp.intensity = intensity
-	if map:
-		bpy.data.lamps["Lamp"].rpr_lamp.ies_file_name = r"C:\\TestResources\\BlenderAssets\\scenes\\Candle.fbm\\PD6R12ED010- PDM6835-694SNB.ies"
-	else:
-		bpy.data.lamps["Lamp"].rpr_lamp.ies_file_name = r""
-
 	# output
-	name_scene = bpy.path.basename(bpy.context.blend_data.filepath) + "_" + type_light + "_" + str(intensity) + "_" + str(map)
+	name_scene = bpy.path.basename(bpy.context.blend_data.filepath) + "_" + type_ + "_" + rpr_type
 	output = r"{work_dir}" + "/Color/" + name_scene + "_##"
 	bpy.data.scenes[Scenename].render.filepath = output 
 	bpy.data.scenes[Scenename].render.use_placeholder = True
@@ -70,13 +68,13 @@ def main(type_light, intensity, map):
 	        version = str(ver[0]) + "." + str(ver[1]) + "." + str(ver[2])
 	     
 	# LOG
-	name_scene_for_json = bpy.path.basename(bpy.context.blend_data.filepath) + "_" + type_light + "_" + str(intensity) + "_" + str(map) + "BL"
+	name_scene_for_json = bpy.path.basename(bpy.context.blend_data.filepath) + "_" + type_ + "_" + rpr_type + "BL"
 	log_name = os.path.join(r'{work_dir}', name_scene_for_json + ".json")
 	report = {{}}
 	report['render_version'] = version
 	report['render_device'] = bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type
 	report['tool'] = "Blender " + bpy.app.version_string
-	report['file_name'] = bpy.path.basename(bpy.context.blend_data.filepath) + "_" + type_light + "_" + str(intensity) + "_" + str(map) + "_01.jpg"
+	report['file_name'] = bpy.path.basename(bpy.context.blend_data.filepath)+ "_" + type_ + "_" + rpr_type + "_01.jpg"
 	report['scene_name'] = bpy.context.scene.name
 	report['render_time'] = Render_time.total_seconds()
 	report['render_color_path'] = r"{work_dir}" + "/Color/" + name_scene + "_01.jpg"
@@ -89,12 +87,11 @@ def main(type_light, intensity, map):
 		json.dump([report], file, indent=' ')
 
 if __name__ == "__main__":
-	main('POINT', 1000, False)
-	main('POINT', 1000, True)
-	main('HEMI', 50, False)
-	main('SUN', 50, False)
-	main('SPOT', 2000, False)
-	main('AREA', 100, False)
-	main('AREA', 100, True)
+
+	main('PERSP', 'no_rpr_camera')
+	main('PANO', 'no_rpr_camera')
+	main('ORTHO', 'no_rpr_camera')
+	main('PERSP', 'CUBEMAP')
+	main('PERSP', 'SPHERICAL_PANORAMA')
 
 
