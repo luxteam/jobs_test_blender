@@ -1,1 +1,19 @@
-python ../jobs_launcher/executeTests.py --tests_root ../jobs --work_root ../Work/Results --work_dir Blender --cmd_variables Tool "/home/user/Desktop/blender-2.79-linux-glibc219-x86_64/blender" RenderDevice 2 TestsFilter small ResPath "/home/user/Downloads/BlenderAssets/scenes"
+RENDER_DEVICE="$1"
+TESTS_FILTER="$2"
+TEST_PACKAGE="$3"
+if [ "$RENDER_DEVICE" == "" ]
+then
+    RENDER_DEVICE=2
+fi
+
+if [ "$TESTS_FILTER" == "" ]
+then
+    TESTS_FILTER=full
+fi
+
+#if [ "$TEST_PACKAGE" == "" ]
+#then
+#    TEST_PACKAGE = null
+#fi
+
+python ../jobs_launcher/executeTests.py --test_package "$TEST_PACKAGE" --tests_root ../jobs --work_root ../Work/Results --work_dir Blender --cmd_variables Tool "/home/user/Desktop/blender-2.79-linux-glibc219-x86_64/blender" RenderDevice "$RENDER_DEVICE" TestsFilter "$TESTS_FILTER" ResPath "/home/user/Downloads/BlenderAssets/scenes"
