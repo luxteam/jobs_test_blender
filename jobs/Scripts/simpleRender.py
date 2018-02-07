@@ -27,12 +27,17 @@ def main():
     scenes = args.test_list
 
     template = args.template
+
+    with open(os.path.join(os.path.dirname(sys.argv[0]), "Templates", "base_function.py")) as f:
+        base = f.read()
+
     with open(os.path.join(os.path.dirname(sys.argv[0]), template)) as f:
         blender_script_template = f.read()
 
     with open(os.path.join(os.path.dirname(sys.argv[0]), scenes)) as f:
         blender_scenes = f.read()
 
+    blender_script_template = base + blender_script_template
 
     scene_list = blender_scenes.split(",\n")
     work_dir = args.output 
