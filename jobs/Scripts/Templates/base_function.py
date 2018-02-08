@@ -4,6 +4,7 @@ import datetime
 import sys
 import json
 import os
+from rprblender import node_editor
 
 def render(*argv):
 

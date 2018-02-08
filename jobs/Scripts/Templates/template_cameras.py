@@ -17,7 +17,7 @@ def main(type_camera, rpr_camera_type):
 	else:
 		bpy.context.scene.rpr.render.camera.override_camera_settings = False
 
-	render(type_, rpr_camera_type)
+	render(type_camera, rpr_camera_type)
 
 
 if __name__ == "__main__":

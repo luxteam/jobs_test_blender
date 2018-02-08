@@ -42,8 +42,8 @@ if __name__ == "__main__":
 		main(type_sun_sky[1], qualities[1], time, 0)
 
 	analytical_combinations = [ (azimuth, altitude) for azimuth in azimuths for altitude in altitudes]
-	for each in test_combinations:
-		main(type_sun_sky[0], quality[1], each[0], each[1])
+	for each in analytical_combinations:
+		main(type_sun_sky[0], qualities[1], each[0], each[1])
 
 
 
