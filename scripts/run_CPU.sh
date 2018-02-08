@@ -1,1 +1,0 @@
-python ../jobs_launcher/executeTests.py --tests_root ../jobs --work_root ../Work/Results --work_dir Blender --cmd_variables Tool "/home/user/Desktop/blender-2.79-linux-glibc219-x86_64/blender" RenderDevice 0 TestsFilter small ResPath "/home/user/Downloads/BlenderAssets/scenes"
