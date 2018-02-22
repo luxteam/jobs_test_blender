@@ -8,7 +8,7 @@ def main(IES_file):
 
 	bpy.context.object.data.type = 'POINT'
 	bpy.data.lamps["Lamp"].rpr_lamp.intensity = 50
-	bpy.data.lamps["Lamp"].rpr_lamp.ies_file_name = os.path.join(r"C:\TestResources\BlenderAssets\scenes\ies", IES_file)
+	bpy.data.lamps["Lamp"].rpr_lamp.ies_file_name = os.path.join("{res_path}", "ies" , IES_file)
 
 	render(IES_file.split(".")[0])
 

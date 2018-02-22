@@ -42,7 +42,7 @@ def main():
     scene_list = blender_scenes.split(",\n")
     work_dir = args.output 
 
-    BlenderScript = blender_script_template.format(work_dir = work_dir, render_mode = args.render_mode, pass_limit = args.pass_limit)
+    BlenderScript = blender_script_template.format(work_dir = work_dir, render_mode = args.render_mode, pass_limit = args.pass_limit, res_path = args.res_path)
 
     try:
         os.makedirs(work_dir)

@@ -12,11 +12,13 @@ def main(test_combination):
 	bpy.context.scene.world.rpr_data.environment.ibl.intensity = test_combination[1]
 	if (test_combination[0] == 'IBL'):
 		bpy.context.scene.world.rpr_data.environment.ibl.use_ibl_map = True
-		bpy.context.scene.world.rpr_data.environment.ibl.ibl_image = bpy.data.images.load(r"C:\TestResources\BlenderAssets\scenes\Tropical_Beach_3k.hdr", True)
+		ibl_map = os.path.join("{res_path}", "Tropical_Beach_3k.hdr")
+		bpy.context.scene.world.rpr_data.environment.ibl.ibl_image = bpy.data.images.load(ibl_map, True)
 		render("Tropical_Beach_hdr", test_combination[1])
 
+		ibl_map = os.path.join("{res_path}", "ibl_test.exr")
 		bpy.context.scene.world.rpr_data.environment.ibl.use_ibl_map = True
-		bpy.context.scene.world.rpr_data.environment.ibl.ibl_image = bpy.data.images.load(r"C:\TestResources\BlenderAssets\scenes\ibl_test.exr", True)
+		bpy.context.scene.world.rpr_data.environment.ibl.ibl_image = bpy.data.images.load(ibl_map, True)
 		render("city_exr", test_combination[1])
 	else:
 		render(test_combination[0], test_combination[1])

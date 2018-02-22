@@ -16,7 +16,8 @@ def main(test_name, passes, size_r_x, size_r_y, size_a_x, size_a_y):
 
 def test_IES():
 
-	bpy.data.lamps["Lamp"].rpr_lamp.ies_file_name = r"C:\\TestResources\\BlenderAssets\\scenes\\Candle.fbm\\PD6R12ED010- PDM6835-694SNB.ies"
+	ies = os.path.join("{res_path}", "Candle.fbm\\PD6R12ED010- PDM6835-694SNB.ies")
+	bpy.data.lamps["Lamp"].rpr_lamp.ies_file_name = ies
 
 def test_base_light():
 
@@ -47,8 +48,8 @@ def import_test():
 	bpy.ops.object.select_all(action='DESELECT')
 	bpy.data.objects['Cube'].select = True
 	bpy.ops.object.delete() 
-
-	file_loc = r"C:\\TestResources\\BlenderAssets\\scenes\\example.obj"
+	
+	file_loc = os.path.join("{res_path}", "example.obj")
 	imported_object = bpy.ops.import_scene.obj(filepath=file_loc)
 	obj_object = bpy.context.selected_objects[0] 
 	bpy.data.objects["shader_ball"].dimensions = (3, 3, 3)
