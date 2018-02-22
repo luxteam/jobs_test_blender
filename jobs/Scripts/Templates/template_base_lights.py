@@ -12,7 +12,7 @@ def main(type_light, intensity, use_map):
 	bpy.context.object.data.type = type_light
 	bpy.data.lamps["Lamp"].rpr_lamp.intensity = intensity
 	if use_map:
-		ies = os.path.join("{res_path}", "Candle.fbm\\PD6R12ED010- PDM6835-694SNB.ies")
+		ies = os.path.join("{res_path}", "Candle.fbm", "PD6R12ED010- PDM6835-694SNB.ies")
 		bpy.data.lamps["Lamp"].rpr_lamp.ies_file_name = ies
 	else:
 		bpy.data.lamps["Lamp"].rpr_lamp.ies_file_name = r""
