@@ -1,3 +1,4 @@
+#!/bin/bash
 RENDER_DEVICE="$1"
 TESTS_FILTER="$2"
 TEST_PACKAGE="$3"
