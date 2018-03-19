@@ -11,7 +11,7 @@ def main(iteration):
 
 if __name__ == "__main__":
 
-	iterations = [100, 500, 1000, 5000, 10000] 
+	iterations = [1, 100, 500, 1000, 5000, 10000] 
 	for each in iterations:
 		main(each)
 

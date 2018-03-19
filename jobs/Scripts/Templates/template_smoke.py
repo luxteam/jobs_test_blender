@@ -27,7 +27,24 @@ def test_IBL_on():
 
 	bpy.context.scene.world.rpr_data.environment.enable = True
 	bpy.context.scene.world.rpr_data.environment.type = 'IBL'
+	bpy.context.scene.world.rpr_data.environment.ibl.type = 'COLOR'
 	bpy.context.scene.world.rpr_data.environment.ibl.use_ibl_map = False
+
+def test_IBL_exr():
+
+	bpy.context.scene.world.rpr_data.environment.type = 'IBL'
+	bpy.context.scene.world.rpr_data.environment.ibl.type = 'IBL'
+	bpy.context.scene.world.rpr_data.environment.ibl.use_ibl_map = True
+	ibl_map = os.path.join("{res_path}", "ibl_test.exr")
+	bpy.context.scene.world.rpr_data.environment.ibl.ibl_image = bpy.data.images.load(ibl_map, True)
+
+def test_IBL_hdr():
+
+	bpy.context.scene.world.rpr_data.environment.type = 'IBL'
+	bpy.context.scene.world.rpr_data.environment.ibl.type = 'IBL'
+	bpy.context.scene.world.rpr_data.environment.ibl.use_ibl_map = True
+	ibl_map = os.path.join("{res_path}", "Tropical_Beach_3k.hdr")
+	bpy.context.scene.world.rpr_data.environment.ibl.ibl_image = bpy.data.images.load(ibl_map, True)
 
 def test_IBL_off():
 
@@ -87,26 +104,33 @@ def create_Uber2():
 if __name__ == '__main__':
 
 	import_test()
-	main("Import_Test", 30, 1920, 1080, 1, 1)
+	main("Import_Test", 50, 1920, 1080, 1, 1)
 
 	create_Uber2()
-	main("Uber2_Test", 30, 1920, 1080, 1, 1)
+	main("Uber2_Test", 50, 1920, 1080, 1, 1)
 
 	test_base_light()
-	main("Base_Light_Test", 30, 1920, 1080, 1, 1)
+	main("Base_Light_Test", 50, 1920, 1080, 1, 1)
 
 	test_IES()
-	main("IES_Light_Test", 30, 1920, 1080, 1, 1)
+	main("IES_Light_Test", 50, 1920, 1080, 1, 1)
 
 	test_IBL_on()
-	main("IBL_Test", 30, 1920, 1080, 1, 1)
+	main("IBL_Test", 50, 1920, 1080, 1, 1)
+
+	test_IBL_hdr()
+	main("IBL_hdr", 50, 1920, 1080, 1, 1)
+
+	test_IBL_exr()
+	main("IBL_exr", 50, 1920, 1080, 1, 1)
 
 	test_Sun()
-	main("Sun_Sky_Test", 30, 1920, 1080, 1, 1)
+	main("Sun_Sky_Test", 50, 1920, 1080, 1, 1)
 
+	main("Full_Test", 1, 1920, 1080, 1, 1)
 	main("Full_Test", 100, 1920, 1080, 1, 1)
 	main("Full_Test", 500, 1920, 1080, 1, 1)
-	main("Full_Test", 2000, 1920, 1080, 1, 1)
+	main("Full_Test", 1000, 1920, 1080, 1, 1)
 
 	#image size
 	main("DVCPRO_HD_1080p", 30, 1280, 1080, 3, 2)
@@ -123,9 +147,9 @@ if __name__ == '__main__':
 	main("2K", 30, 2048, 1152, 3, 2)
 	main("4K", 30, 4096, 3204, 3, 2)
 	main("2000x2000", 30, 2000, 2000, 3, 2)
-	main("3000x3000", 30, 3000, 3000, 3, 2)
-	main("4000x4000", 30, 4000, 4000, 3, 2)
-	#main("5000x5000", 30, 5000, 5000, 3, 2)
+	main("3000x3000", 30, 3000, 3000, 3, 2) 
+	main("4000x4000", 30, 4000, 4000, 3, 2) 
+	#main("5000x5000", 30, 5000, 5000, 3, 2) 
 	#main("6000x6000", 30, 6000, 6000, 3, 2)
 	#main("7000x7000", 30, 7000, 7000, 3, 2)
 	#main("8000x8000", 30, 8000, 8000, 3, 2)

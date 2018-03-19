@@ -21,6 +21,12 @@ def main(type_light, intensity, use_map):
 
 if __name__ == "__main__":
 
+	main('POINT', 100, False)
+	main('HEMI', 100, False)
+	main('SUN', 100, False)
+	main('SPOT', 100, False)
+	main('AREA', 100, False)
+	
 	main('POINT', 1000, False)
 	main('POINT', 1000, True)
 	main('HEMI', 50, False)
