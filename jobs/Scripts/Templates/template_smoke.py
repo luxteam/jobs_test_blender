@@ -1,16 +1,9 @@
 
-def main(test_name, passes, size_r_x, size_r_y, size_a_x, size_a_y):
+def main(test_name, passes):
 
 	Scenename = bpy.context.scene.name
 	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = passes
 	bpy.data.scenes[Scenename].render.image_settings.file_format = 'JPEG'
-
-	# resolution
-	bpy.data.scenes[Scenename].render.resolution_x = size_r_x
-	bpy.data.scenes[Scenename].render.resolution_y = size_r_y
-	bpy.data.scenes[Scenename].render.pixel_aspect_x = size_a_x
-	bpy.data.scenes[Scenename].render.pixel_aspect_y = size_a_y
-	bpy.data.scenes[Scenename].render.resolution_percentage = 100
 
 	render(test_name, passes)
 
@@ -104,53 +97,33 @@ def create_Uber2():
 if __name__ == '__main__':
 
 	import_test()
-	main("Import_Test", 50, 1920, 1080, 1, 1)
+	main("Import_Test", 50)
 
 	create_Uber2()
-	main("Uber2_Test", 50, 1920, 1080, 1, 1)
+	main("Uber2_Test", 50)
 
 	test_base_light()
-	main("Base_Light_Test", 50, 1920, 1080, 1, 1)
+	main("Base_Light_Test", 50)
 
 	test_IES()
-	main("IES_Light_Test", 50, 1920, 1080, 1, 1)
+	main("IES_Light_Test", 50)
 
 	test_IBL_on()
-	main("IBL_Test", 50, 1920, 1080, 1, 1)
+	main("IBL_Test", 50)
 
 	test_IBL_hdr()
-	main("IBL_hdr", 50, 1920, 1080, 1, 1)
+	main("IBL_hdr", 50)
 
 	test_IBL_exr()
-	main("IBL_exr", 50, 1920, 1080, 1, 1)
+	main("IBL_exr", 50)
 
 	test_Sun()
-	main("Sun_Sky_Test", 50, 1920, 1080, 1, 1)
+	main("Sun_Sky_Test", 50)
 
-	main("Full_Test", 1, 1920, 1080, 1, 1)
-	main("Full_Test", 100, 1920, 1080, 1, 1)
-	main("Full_Test", 500, 1920, 1080, 1, 1)
-	main("Full_Test", 1000, 1920, 1080, 1, 1)
+	main("Full_Test", 1)
+	main("Full_Test", 100)
+	main("Full_Test", 500)
+	main("Full_Test", 1000)
 
-	#image size
-	main("DVCPRO_HD_1080p", 30, 1280, 1080, 3, 2)
-	main("DVCPRO_HD_720p", 30, 960, 720, 4, 3)
-	main("HDTV_1080p", 30, 1920, 1080, 1, 1)
-	main("HDTV_720p", 30, 1280, 720, 1, 1)
-	main("HDV_1080p", 30, 1440, 1080, 4, 3)
-	main("HDV_NTSC_1080p", 30, 1440, 1080, 4, 3)
-	main("HDV_PAL_1080p", 30, 1440, 1080, 4, 3)
-	main("TV_NTSC_16_9", 30, 720, 480, 40.1, 33)
-	main("TV_NTSC_4_3", 30, 720, 486, 10, 11)
-	main("TV_PAL_16_9", 30, 720, 576, 16, 11)
-	main("TV_PAL_4_3", 30, 720, 576, 12, 11)
-	main("2K", 30, 2048, 1152, 3, 2)
-	main("4K", 30, 4096, 3204, 3, 2)
-	main("2000x2000", 30, 2000, 2000, 3, 2)
-	main("3000x3000", 30, 3000, 3000, 3, 2) 
-	main("4000x4000", 30, 4000, 4000, 3, 2) 
-	#main("5000x5000", 30, 5000, 5000, 3, 2) 
-	#main("6000x6000", 30, 6000, 6000, 3, 2)
-	#main("7000x7000", 30, 7000, 7000, 3, 2)
-	#main("8000x8000", 30, 8000, 8000, 3, 2)
+
 
