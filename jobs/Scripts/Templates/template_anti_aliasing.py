@@ -14,7 +14,7 @@ def main(test_combination):
 
 if __name__ == "__main__":
 
-	values = [0, 1.5, 5, 10]
+	values = [0, 1, 5, 10]
 	filters = ['MITCHELL', 'LANCZOS','TRIANGLE', 'BOX', 'GAUSSIAN', 'BLACKMANHARRIS']
 
 	test_combinations = [ (aa_filter, value) for aa_filter in filters for value in values]

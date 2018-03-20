@@ -1,3 +1,14 @@
-Description:
-Summary:
+Description: Testing different IES files with 50 intensity
+Scene: IES.blend
+Summary: 10 tests
 Test cases:
+BL_L_IES_001
+BL_L_IES_002
+BL_L_IES_003
+BL_L_IES_004
+BL_L_IES_005
+BL_L_IES_006
+BL_L_IES_007
+BL_L_IES_008
+BL_L_IES_009
+BL_L_IES_010

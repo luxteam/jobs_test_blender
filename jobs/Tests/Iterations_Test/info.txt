@@ -1,3 +1,22 @@
-Description:
-Summary:
+Description: Testing render with different count of passes
+Scene: ComplexTestUber.blend & waiting new scenes
+Summary: 18 tests (now 6 tests, because we haven't normal & hard scene)
 Test cases:
+BL_RS_PS_001
+BL_RS_PS_002
+BL_RS_PS_003
+BL_RS_PS_004
+BL_RS_PS_005
+BL_RS_PS_006
+BL_RS_PS_007
+BL_RS_PS_008
+BL_RS_PS_009
+BL_RS_PS_010
+BL_RS_PS_011
+BL_RS_PS_012
+BL_RS_PS_013
+BL_RS_PS_014
+BL_RS_PS_015
+BL_RS_PS_016
+BL_RS_PS_017
+BL_RS_PS_018

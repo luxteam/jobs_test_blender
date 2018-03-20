@@ -1,5 +1,5 @@
 
-def main(type_sun_sky, quality, param1, param2):
+def main(type_sun_sky, quality, param1, param2, location):
 
 	Scenename = bpy.context.scene.name
 
@@ -17,13 +17,24 @@ def main(type_sun_sky, quality, param1, param2):
 		bpy.context.scene.world.rpr_data.environment.sun_sky.altitude = param2
 	else:
 		bpy.ops.rpr.op_get_time_now()
-		bpy.context.scene.world.rpr_data.environment.sun_sky.time_zone = 3
-		bpy.context.scene.world.rpr_data.environment.sun_sky.latitude = 0.973583
-		bpy.context.scene.world.rpr_data.environment.sun_sky.longitude = 0.656516
+		
+		if (location == "Moscow"):
+			bpy.context.scene.world.rpr_data.environment.sun_sky.time_zone = 3
+			bpy.context.scene.world.rpr_data.environment.sun_sky.latitude = 0.973583
+			bpy.context.scene.world.rpr_data.environment.sun_sky.longitude = 0.656516
+		elif (location == "Canberra"):
+			bpy.context.scene.world.rpr_data.environment.sun_sky.time_zone = 11
+			bpy.context.scene.world.rpr_data.environment.sun_sky.latitude = -0.615752
+			bpy.context.scene.world.rpr_data.environment.sun_sky.longitude = 2.60277
+		elif (location == "Miami_Beach"):
+			bpy.context.scene.world.rpr_data.environment.sun_sky.time_zone = -5
+			bpy.context.scene.world.rpr_data.environment.sun_sky.latitude = 0.450131
+			bpy.context.scene.world.rpr_data.environment.sun_sky.longitude = -1.39853
+
 		bpy.context.scene.world.rpr_data.environment.sun_sky.time_hours = param1
 		bpy.context.scene.world.rpr_data.environment.sun_sky.time_minutes = param2
 
-	render(type_sun_sky, quality, param1, param2)
+	render(type_sun_sky, quality, location, param1, param2)
 
 
 if __name__ == "__main__":
@@ -35,11 +46,13 @@ if __name__ == "__main__":
 	altitudes = [0, 0.785398, 1.5708] 
 
 	for quality in qualities:
-		main(type_sun_sky[0], quality, 0, 0.523599)
-		main(type_sun_sky[1], quality, 12, 0)
+		main(type_sun_sky[0], quality, 0, 0.523599, "none")
+		main(type_sun_sky[1], quality, 12, 0, "Moscow")
 
 	for time in times:
-		main(type_sun_sky[1], qualities[1], time, 0)
+		main(type_sun_sky[1], qualities[1], time, 1, "Moscow")
+		main(type_sun_sky[1], qualities[1], time, 1, "Miami_Beach")
+		main(type_sun_sky[1], qualities[1], time, 1, "Canberra")
 
 	analytical_combinations = [ (azimuth, altitude) for azimuth in azimuths for altitude in altitudes]
 	for each in analytical_combinations:

@@ -11,7 +11,7 @@
         <argument>--pass_limit 100</argument>
         <argument>--res_path "{ScenesDir}"</argument>
         <argument>--output "{OutputDir}"</argument>
-        <argument>--test_list "{Root}/Tests/Render_mode/{TestsFilter}TestsList.txt"</argument>
+        <argument>--test_list "{Root}/Tests/Render_Mode_Test/{TestsFilter}TestsList.txt"</argument>
     </execute>
 
     <execute command='python "{ResourcesDir}/make_report_json.py"' stage="stage2">

@@ -1,3 +1,12 @@
-Description:
-Summary:
+Description: Testing PBR material
+Scene: 
+	TestBallsCoatPBR.blend
+	TestBallsEmissivePBR.blend
+	TestSceneMetallsPBR.blend
+	ComplexTestPBR.blend
+Summary: 4 tests
 Test cases:
+BL_MAT_PBR_001
+BL_MAT_PBR_002
+BL_MAT_PBR_003
+BL_MAT_PBR_004

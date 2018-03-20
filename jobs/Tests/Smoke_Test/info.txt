@@ -1,3 +1,24 @@
-Description:
-Summary:
+Description: Smoke test
+Scene: default.blend - empty scene & rpr_default.blend - empty scene with RPR
+Summary: 20 tests (but count of images can be another)
 Test cases:
+BL_SM_001
+BL_SM_002
+BL_SM_003
+BL_SM_004
+BL_SM_005
+BL_SM_006
+BL_SM_007
+BL_SM_008
+BL_SM_009
+BL_SM_010
+BL_SM_011
+BL_SM_012
+BL_SM_013
+BL_SM_014
+BL_SM_015
+BL_SM_016
+BL_SM_017
+BL_SM_018
+BL_SM_019
+BL_SM_020

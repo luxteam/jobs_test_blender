@@ -1,3 +1,24 @@
-Description:
-Summary:
+Description: Testing blender & custom  image size
+Scene: base blender scene - ComplexTestUber.blend
+Summary: 20 tests
 Test cases:
+BL_RS_IS_001
+BL_RS_IS_002
+BL_RS_IS_003
+BL_RS_IS_004
+BL_RS_IS_005
+BL_RS_IS_006
+BL_RS_IS_007
+BL_RS_IS_008
+BL_RS_IS_009
+BL_RS_IS_010
+BL_RS_IS_011
+BL_RS_IS_012
+BL_RS_IS_013
+BL_RS_IS_014
+BL_RS_IS_015
+BL_RS_IS_016
+BL_RS_IS_017
+BL_RS_IS_018
+BL_RS_IS_019
+BL_RS_IS_020

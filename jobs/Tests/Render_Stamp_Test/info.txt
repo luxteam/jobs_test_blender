@@ -1,3 +1,5 @@
-Description:
-Summary:
+Description: Testing 3 different string in RPR render stamp
+Scene: blender standart scene - ComplexTestUber.blend
+Summary: 3 tests
 Test cases:
+NO TEST CASES!

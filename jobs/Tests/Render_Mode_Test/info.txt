@@ -1,0 +1,14 @@
+Description: Testing RPR render modes
+Scene: blender standart scene
+Summary: 10 tests
+Test cases:
+BL_RS_RM_001
+BL_RS_RM_002
+BL_RS_RM_003
+BL_RS_RM_004
+BL_RS_RM_005
+BL_RS_RM_006
+BL_RS_RM_007
+BL_RS_RM_008
+BL_RS_RM_009
+BL_RS_RM_010
