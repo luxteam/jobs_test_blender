@@ -9,7 +9,7 @@ def aov_denoiser(denoiser, aov):
 
 	bpy.context.scene.rpr.render.denoiser.filter_type = denoiser
 	bpy.context.scene.render.layers.active.rpr_data.passes_aov.passesStates[aov] = True
-	render(aov)
+	render(denoiser, aov)
 	bpy.context.scene.render.layers.active.rpr_data.passes_aov.passesStates[aov] = False
 
 def test_bilateral(radius, sigma):

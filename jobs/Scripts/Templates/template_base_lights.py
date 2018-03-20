@@ -32,7 +32,7 @@ if __name__ == "__main__":
 	main('HEMI', 50, False)
 	main('SUN', 50, False)
 	main('SPOT', 2000, False)
-	main('AREA', 100, False)
-	main('AREA', 100, True)
+	main('AREA', 300, False)
+	main('AREA', 300, True)
 
 
