@@ -7,6 +7,22 @@ def main(test_name, passes):
 
 	render(test_name, passes)
 
+def delete_hierarchy(obj):
+
+	names = set([obj.name])
+	def get_child_names(obj):
+		for child in obj.children:
+			names.add(child.name)
+			if child.children:
+				get_child_names(child)
+
+	get_child_names(obj)
+
+	print(names)
+	objects = bpy.data.objects
+	[setattr(objects[n], 'select', True) for n in names]
+	bpy.ops.object.delete()
+
 def test_IES():
 
 	ies = os.path.join("{res_path}", "Candle.fbm", "PD6R12ED010- PDM6835-694SNB.ies")
@@ -58,10 +74,10 @@ def import_fbx_test():
 	bpy.data.objects['Cube'].select = True
 	bpy.ops.object.delete() 
 
-	file_loc = os.path.join("C:\TestResources\BlenderAssets\scenes\park_bench1.fbx")
+	file_loc = os.path.join("{res_path}", "park_bench1.fbx")
 	imported_object = bpy.ops.import_scene.fbx(filepath=file_loc)
 	obj_object = bpy.context.selected_objects[0] 
-	bpy.data.objects["Default"].scale = (0.25, 0.25, 0.25)
+	bpy.data.objects["Default"].scale = (0.15, 0.15, 0.15)
 	bpy.data.objects["Default"].location = (0, 0, 0)
 
 def import_obj_test():
@@ -70,8 +86,9 @@ def import_obj_test():
 	bpy.context.scene.world.rpr_data.environment.enable = True
 
 	bpy.ops.object.select_all(action='DESELECT')
-	bpy.data.objects['Default'].select = True
-	bpy.ops.object.delete() 
+	bpy.data.objects["Default"].select = True
+	bpy.context.scene.objects.active = bpy.data.objects["Default"]
+	delete_hierarchy(bpy.context.active_object)
 
 	file_loc = os.path.join("{res_path}", "example.obj")
 	imported_object = bpy.ops.import_scene.obj(filepath=file_loc)
