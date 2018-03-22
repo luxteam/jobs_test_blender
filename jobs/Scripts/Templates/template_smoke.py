@@ -49,14 +49,28 @@ def test_Sun():
 	bpy.context.scene.world.rpr_data.environment.type = 'SUN_SKY'
 	bpy.context.scene.world.rpr_data.environment.sun_sky.altitude = 1.5708
 
-
-def import_test():
+def import_fbx_test():
 
 	bpy.context.scene.render.engine = 'RPR'
 	bpy.context.scene.world.rpr_data.environment.enable = True
 
 	bpy.ops.object.select_all(action='DESELECT')
 	bpy.data.objects['Cube'].select = True
+	bpy.ops.object.delete() 
+
+	file_loc = os.path.join("C:\TestResources\BlenderAssets\scenes\park_bench1.fbx")
+	imported_object = bpy.ops.import_scene.fbx(filepath=file_loc)
+	obj_object = bpy.context.selected_objects[0] 
+	bpy.data.objects["Default"].scale = (0.25, 0.25, 0.25)
+	bpy.data.objects["Default"].location = (0, 0, 0)
+
+def import_obj_test():
+
+	bpy.context.scene.render.engine = 'RPR'
+	bpy.context.scene.world.rpr_data.environment.enable = True
+
+	bpy.ops.object.select_all(action='DESELECT')
+	bpy.data.objects['Default'].select = True
 	bpy.ops.object.delete() 
 
 	file_loc = os.path.join("{res_path}", "example.obj")
@@ -66,7 +80,7 @@ def import_test():
 	bpy.data.objects["shader_ball"].location = (0, 0, 0)
 
 
-def create_Uber2():
+def test_Uber2():
 
 	if((addon_utils.check("rprblender"))[0] == False) : 
 		addon_utils.enable("rprblender", default_set=True, persistent=False, handle_error=None)
@@ -96,10 +110,13 @@ def create_Uber2():
 
 if __name__ == '__main__':
 
-	import_test()
-	main("Import_Test", 50)
+	import_fbx_test()
+	main("Import_FBX_Test", 50)
 
-	create_Uber2()
+	import_obj_test()
+	main("Import_OBJ_Test", 50)
+
+	test_Uber2()
 	main("Uber2_Test", 50)
 
 	test_base_light()
