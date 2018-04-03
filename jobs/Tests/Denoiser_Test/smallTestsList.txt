@@ -1,2 +1,1 @@
-Candle.blend,
-Candle_Bil_rad1.blend
+Candle.blend

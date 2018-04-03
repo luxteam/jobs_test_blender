@@ -8,7 +8,7 @@ TEST_PACKAGE="$3"
 #echo test_package:"$TEST_PACKAGE":end
 
 if [ "$RENDER_DEVICE" == "" ] || [ "$RENDER_DEVICE" == "null" ] ; then
-    RENDER_DEVICE=2
+    RENDER_DEVICE=gpu
 fi
 
 if [ "$TESTS_FILTER" == "" ] || [ "$TESTS_FILTER" == "null" ] ; then
@@ -24,4 +24,4 @@ fi
 #echo render_device:"$RENDER_DEVICE":end
 #echo test_package:"$TEST_PACKAGE":end
 
-python ../jobs_launcher/executeTests.py --test_package "$TEST_PACKAGE" --tests_root ../jobs --work_root ../Work/Results --work_dir Blender --cmd_variables Tool "/home/user/Desktop/blender-2.79-linux-glibc219-x86_64/blender" RenderDevice "$RENDER_DEVICE" TestsFilter "$TESTS_FILTER" ResPath "/home/user/Downloads/BlenderAssets/scenes"
+python ../jobs_launcher/executeTests.py --test_filter "$TEST_PACKAGE" --tests_root ../jobs --work_root ../Work/Results --work_dir Blender --cmd_variables Tool "/home/user/Desktop/blender-2.79-linux-glibc219-x86_64/blender" RenderDevice "$RENDER_DEVICE" TestsFilter "$TESTS_FILTER" ResPath "/home/user/Downloads/BlenderAssets/scenes"

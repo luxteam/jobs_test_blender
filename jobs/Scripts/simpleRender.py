@@ -27,22 +27,22 @@ def main():
     scenes = args.test_list
 
     template = args.template
+
+    with open(os.path.join(os.path.dirname(sys.argv[0]), "Templates", "base_function.py")) as f:
+        base = f.read()
+
     with open(os.path.join(os.path.dirname(sys.argv[0]), template)) as f:
         blender_script_template = f.read()
 
     with open(os.path.join(os.path.dirname(sys.argv[0]), scenes)) as f:
         blender_scenes = f.read()
 
-
-    if (args.render_mode == '0') :
-        render_mode = 'cpu'
-    else :
-        render_mode = 'gpu'
+    blender_script_template = base + blender_script_template
 
     scene_list = blender_scenes.split(",\n")
     work_dir = args.output 
 
-    BlenderScript = blender_script_template.format(work_dir = work_dir, render_mode = render_mode, pass_limit = args.pass_limit)
+    BlenderScript = blender_script_template.format(work_dir = work_dir, render_mode = args.render_mode, pass_limit = args.pass_limit, res_path = args.res_path)
 
     try:
         os.makedirs(work_dir)
