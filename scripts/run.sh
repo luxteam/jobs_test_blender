@@ -16,7 +16,7 @@ if [ "$TESTS_FILTER" == "" ] || [ "$TESTS_FILTER" == "null" ] ; then
 fi
 
 if [ "$TEST_PACKAGE" == "" ] || [ "$TEST_PACKAGE" == "null" ] ; then
-    TEST_PACKAGE=""
+    TEST_PACKAGE="Smoke_Test"
 fi
 
 #echo custom_params
