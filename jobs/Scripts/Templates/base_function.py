@@ -70,10 +70,10 @@ def render(*argv):
 	report['file_name'] = bpy.path.basename(bpy.context.blend_data.filepath).split('.')[0] + info + "_01.jpg"
 	report['scene_name'] = bpy.path.basename(bpy.context.blend_data.filepath).split('.')[0]
 	report['render_time'] = Render_time.total_seconds()
-	report['render_color_path'] = r"Color/" + name_scene + "_01.jpg"
+	report['render_path'] = r"Color/" + name_scene + "_01.jpg"
 	report['date_time'] = datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
 	report['render_device'] = bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type
-	report['difference_color'] = "not compared yet"
+	report['pix_difference'] = "not compared yet"
 
 
 	with open(log_name, 'w') as file:
