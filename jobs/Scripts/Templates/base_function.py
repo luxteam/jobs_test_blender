@@ -43,7 +43,7 @@ def render(*argv):
 
 	# output
 	name_scene = bpy.path.basename(bpy.context.blend_data.filepath).split('.')[0] + info
-	output = r"{work_dir}" + "/Color/" + name_scene + "_##"
+	output = r"{work_dir}" + "/Color/" + name_scene
 	bpy.data.scenes[Scenename].render.filepath = output 
 	bpy.data.scenes[Scenename].render.use_placeholder = True
 	bpy.data.scenes[Scenename].render.use_file_extension = True
@@ -51,7 +51,7 @@ def render(*argv):
 
 	# start render animation
 	TIMER = datetime.datetime.now()
-	bpy.ops.render.render(animation=True,scene=Scenename)
+	bpy.ops.render.render(write_still=True,scene=Scenename)
 	Render_time = datetime.datetime.now() - TIMER
 
 	# get version of rpr addon
@@ -60,7 +60,11 @@ def render(*argv):
 	        mod = sys.modules[mod_name]
 	        ver = mod.bl_info.get('version')
 	        version = str(ver[0]) + "." + str(ver[1]) + "." + str(ver[2])
-	     
+	    
+	image_format = (bpy.data.scenes[Scenename].render.image_settings.file_format).lower()
+	if (image_format == 'jpeg'):
+		image_format = 'jpg'
+
 	# LOG
 	name_scene_for_json = bpy.path.basename(bpy.context.blend_data.filepath).split('.')[0] + info + "_BL"
 	log_name = os.path.join(r'{work_dir}', name_scene_for_json + ".json")
@@ -68,10 +72,10 @@ def render(*argv):
 	report['render_version'] = version
 	report['render_device'] = bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type
 	report['tool'] = "Blender " + bpy.app.version_string
-	report['file_name'] = bpy.path.basename(bpy.context.blend_data.filepath).split('.')[0] + info + "_01.jpg"
+	report['file_name'] = bpy.path.basename(bpy.context.blend_data.filepath).split('.')[0] + info + "." + image_format
 	report['scene_name'] = bpy.path.basename(bpy.context.blend_data.filepath).split('.')[0]
 	report['render_time'] = Render_time.total_seconds()
-	report['render_color_path'] = r"Color/" + name_scene + "_01.jpg"
+	report['render_color_path'] = r"Color/" + name_scene + "." + image_format
 	report['date_time'] = datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
 	report['render_device'] = bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type
 	report['difference_color'] = "not compared yet"
