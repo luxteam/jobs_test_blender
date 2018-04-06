@@ -5,6 +5,7 @@ import sys
 import json
 import os
 from rprblender import node_editor
+from rprblender import material_browser
 
 def render(*argv):
 
@@ -67,7 +68,7 @@ def render(*argv):
 	report['render_version'] = version
 	report['render_device'] = bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type
 	report['tool'] = "Blender " + bpy.app.version_string
-	report['file_name'] = bpy.path.basename(bpy.context.blend_data.filepath).split('.')[0] + info + "_01" + bpy.data.scenes[Scenename].render.image_settings.file_format
+	report['file_name'] = bpy.path.basename(bpy.context.blend_data.filepath).split('.')[0] + info + "_01.jpg"
 	report['scene_name'] = bpy.path.basename(bpy.context.blend_data.filepath).split('.')[0]
 	report['render_time'] = Render_time.total_seconds()
 	report['render_color_path'] = r"Color/" + name_scene + "_01.jpg"
