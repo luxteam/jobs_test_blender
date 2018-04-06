@@ -15,6 +15,20 @@ files = os.listdir(directory)
 json_files = list(filter(lambda x: x.endswith('BL.json'), files))
 result_json = ""
 
+device_name = ""
+with open(os.path.join(directory, 'log'), 'r') as f:
+    log = f.read()
+    device_name = log[log.find("device")+8:log.find("' i")]
+
+for f in range(len(json_files)):
+
+    with open(os.path.join(directory, json_files[f]), 'r') as w:
+        json_report = w.read()
+    json_report = json.loads(json_report)
+    json_report[0]['render_device'] = device_name
+    with open(os.path.join(directory, json_files[f]), 'w') as file:
+        json.dump(json_report, file, indent=' ')
+
 for file in range(len(json_files)):
     stage_report[1]['log'].append('processing {}'.format(json_files[file]))
 
