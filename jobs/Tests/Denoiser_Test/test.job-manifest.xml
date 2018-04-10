@@ -8,7 +8,7 @@
         <argument>--tool "{Tool}"</argument>
         <argument>--template "{ResourcesDir}/Templates/template_denoiser.py"</argument>
         <argument>--render_mode "{RenderDevice}"</argument>
-        <argument>--pass_limit 100</argument>
+        <argument>--pass_limit 10</argument>
         <argument>--res_path "{ScenesDir}"</argument>
         <argument>--output "{OutputDir}"</argument>
         <argument>--test_list "{Root}/Tests/Denoiser_Test/{TestsFilter}TestsList.txt"</argument>

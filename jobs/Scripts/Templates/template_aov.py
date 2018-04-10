@@ -1,6 +1,5 @@
-def main(i):
+def main(i, test_case):
 
-	#get scene name
 	Scenename = bpy.context.scene.name
 
 	bpy.context.scene.rpr.use_render_stamp = False
@@ -8,7 +7,7 @@ def main(i):
 	bpy.data.scenes[Scenename].render.image_settings.file_format = 'JPEG'
 
 	bpy.context.scene.render.layers.active.rpr_data.passes_aov.passesStates[i] = True
-	render(i)
+	render(test_case)
 	bpy.context.scene.render.layers.active.rpr_data.passes_aov.passesStates[i] = False
 
 if __name__ == "__main__":
@@ -17,6 +16,8 @@ if __name__ == "__main__":
 	bpy.context.scene.render.layers.active.rpr_data.passes_aov.passesStates[1] = False
 
 	for i in range(23):
-		main(i)
-
+		if i<10:
+			main(i, "BL_RS_AOV_00" + str(i+1))
+		else:
+			main(i, "BL_RS_AOV_0" + str(i+1))
 

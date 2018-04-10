@@ -1,5 +1,5 @@
 
-def main(IES_file):
+def main(IES_file, test_case):
 
 	Scenename = bpy.context.scene.name
 
@@ -10,12 +10,15 @@ def main(IES_file):
 	bpy.data.lamps["Lamp"].rpr_lamp.intensity = 50
 	bpy.data.lamps["Lamp"].rpr_lamp.ies_file_name = os.path.join("{res_path}", "ies" , IES_file)
 
-	render(IES_file.split(".")[0])
+	render(test_case)
 
 if __name__ == "__main__":
 	
 	for each_ies in range(1,11):
-		main(str(each_ies) + ".ies")
+		if each_ies < 10:
+			main(str(each_ies) + ".ies", "BL_L_IES_00" + str(each_ies))
+		else:
+			main(str(each_ies) + ".ies", "BL_L_IES_0" + str(each_ies))
 
 
 

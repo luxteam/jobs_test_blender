@@ -1,5 +1,5 @@
 
-def main(type_sun_sky, quality, param1, param2, location):
+def main(type_sun_sky, quality, param1, param2, location, test_case):
 
 	Scenename = bpy.context.scene.name
 
@@ -34,29 +34,45 @@ def main(type_sun_sky, quality, param1, param2, location):
 		bpy.context.scene.world.rpr_data.environment.sun_sky.time_hours = param1
 		bpy.context.scene.world.rpr_data.environment.sun_sky.time_minutes = param2
 
-	render(type_sun_sky, quality, location, param1, param2)
+	render(test_case)
 
 
 if __name__ == "__main__":
 
-	type_sun_sky = ['analytical_sky', 'date_time_location']
-	qualities = ['small', 'normal', 'high']
-	times = [0, 6, 12, 24]
-	azimuths = [0, 1.5708, 3.14159, 4.71239, 6.28319]
-	altitudes = [0, 0.785398, 1.5708] 
+	main('analytical_sky', 'normal', 0, 0, "none", "BL_RS_SS_001") # 0 0
+	main('analytical_sky', 'normal', 0, 0.785398, "none", "BL_RS_SS_002") # 0 45
+	main('analytical_sky', 'normal', 0, 1.5708, "none", "BL_RS_SS_003") # 0 90
+	main('analytical_sky', 'normal', 1.5708, 0, "none", "BL_RS_SS_004") # 90 0
+	main('analytical_sky', 'normal', 1.5708, 0.785398, "none", "BL_RS_SS_005") # 90 45
+	main('analytical_sky', 'normal', 1.5708, 1.5708, "none", "BL_RS_SS_006") # 90 90
+	main('analytical_sky', 'normal', 3.14159, 0, "none", "BL_RS_SS_007") # 180 0
+	main('analytical_sky', 'normal', 3.14159, 0.785398, "none", "BL_RS_SS_008") # 180 45
+	main('analytical_sky', 'normal', 3.14159, 1.5708, "none", "BL_RS_SS_009") # 180 90
+	main('analytical_sky', 'normal', 4.71239, 0, "none", "BL_RS_SS_010") # 270 0
+	main('analytical_sky', 'normal', 4.71239, 0.785398, "none", "BL_RS_SS_011") # 270 45
+	main('analytical_sky', 'normal', 4.71239, 1.5708, "none", "BL_RS_SS_012") # 270 90
+	main('analytical_sky', 'normal', 6.28319, 0, "none", "BL_RS_SS_013") # 360 0
+	main('analytical_sky', 'normal', 6.28319, 0.785398, "none", "BL_RS_SS_014") # 360 45
+	main('analytical_sky', 'normal', 6.28319, 1.5708, "none", "BL_RS_SS_015") # 360 90
 
-	for quality in qualities:
-		main(type_sun_sky[0], quality, 0, 0.523599, "none")
-		main(type_sun_sky[1], quality, 12, 0, "Moscow")
+	main('date_time_location', 'normal', 0, 1, "Moscow", "BL_RS_SS_016")
+	main('date_time_location', 'normal', 6, 1, "Moscow", "BL_RS_SS_017")
+	main('date_time_location', 'normal', 12, 1, "Moscow", "BL_RS_SS_018")
+	main('date_time_location', 'normal', 18, 1, "Moscow", "BL_RS_SS_019")
+	main('date_time_location', 'normal', 24, 1, "Moscow", "BL_RS_SS_020")
 
-	for time in times:
-		main(type_sun_sky[1], qualities[1], time, 1, "Moscow")
-		main(type_sun_sky[1], qualities[1], time, 1, "Miami_Beach")
-		main(type_sun_sky[1], qualities[1], time, 1, "Canberra")
+	main('date_time_location', 'small', 12, 0, "Moscow", "BL_RS_SS_021")
+	main('date_time_location', 'normal', 12, 0, "Moscow", "BL_RS_SS_022")
+	main('date_time_location', 'high', 12, 0, "Moscow", "BL_RS_SS_023")
 
-	analytical_combinations = [ (azimuth, altitude) for azimuth in azimuths for altitude in altitudes]
-	for each in analytical_combinations:
-		main(type_sun_sky[0], qualities[1], each[0], each[1])
+	main('analytical_sky', 'small', 3.14159, 0.785398, "none", "BL_RS_SS_024") 
+	main('analytical_sky', 'normal', 3.14159, 0.785398, "none", "BL_RS_SS_025") 
+	main('analytical_sky', 'high', 3.14159, 0.785398, "none", "BL_RS_SS_026") 
 
+	main('date_time_location', 'normal', 0, 1, "Miami_Beach", "BL_RS_SS_027")
+	main('date_time_location', 'normal', 12, 1, "Miami_Beach", "BL_RS_SS_028")
+	main('date_time_location', 'normal', 24, 1, "Miami_Beach", "BL_RS_SS_029")
 
-
+	main('date_time_location', 'normal', 0, 1, "Canberra", "BL_RS_SS_030")
+	main('date_time_location', 'normal', 12, 1, "Canberra", "BL_RS_SS_031")
+	main('date_time_location', 'normal', 24, 1, "Canberra", "BL_RS_SS_032")

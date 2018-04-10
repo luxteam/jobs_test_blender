@@ -1,5 +1,5 @@
 
-def main(type_camera, rpr_camera_type, stereo_camera):
+def main(type_camera, rpr_camera_type, stereo_camera, test_case):
 
 	Scenename = bpy.context.scene.name
 
@@ -19,19 +19,19 @@ def main(type_camera, rpr_camera_type, stereo_camera):
 	else:
 		bpy.context.scene.rpr.render.camera.override_camera_settings = False
 
-	render(type_camera, rpr_camera_type, stereo_camera)
-
+	render(test_case)
 
 if __name__ == "__main__":
 
-	camera_type = ['PERSP', 'PANO','ORTHO']
-	rpr_camera_type = ['CUBEMAP', 'SPHERICAL_PANORAMA']
+	main('PERSP', 'no_rpr_camera', False, "BL_RS_CAM_001")
+	main('PANO', 'no_rpr_camera', False, "BL_RS_CAM_002")
+	main('ORTHO', 'no_rpr_camera', False, "BL_RS_CAM_003")
 
-	for each in camera_type:
-		main(each, 'no_rpr_camera', False)
-		
-	for each in rpr_camera_type:
-		main('PERSP', each, False)
-		main('PERSP', each, True)
+	main('PERSP', 'CUBEMAP', False, "BL_RS_CAM_004")
+	main('PERSP', 'SPHERICAL_PANORAMA', False, "BL_RS_CAM_005")
+	main('PERSP', 'CUBEMAP', True, "BL_RS_CAM_006")
+	main('PERSP', 'SPHERICAL_PANORAMA', True, "BL_RS_CAM_007")
+
+
 
 
