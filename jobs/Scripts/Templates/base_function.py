@@ -5,6 +5,15 @@ import sys
 import json
 import os
 from rprblender import node_editor
+from rprblender import material_browser
+from rprblender import helpers
+from pyrpr import API_VERSION
+
+def core_ver_str():
+    core_ver = API_VERSION
+    mj = (core_ver & 0xFFFF00000) >> 28
+    mn = (core_ver & 0xFFFFF) >> 8
+    return "%x.%x" % (mj, mn)
 
 def render(*argv):
 
@@ -16,15 +25,18 @@ def render(*argv):
 	    addon_utils.enable("rprblender", default_set=True, persistent=False, handle_error=None)
 	bpy.data.scenes[Scenename].render.engine = "RPR"
 
+	device_name = ""
 	# Render device in RPR
 	if '{render_mode}' == 'dual':
+		device_name = "CPU0" + " + " + helpers.render_resources_helper.get_used_devices()
 		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type_plus_cpu = True
 		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = 'gpu'
-	else:
+	elif '{render_mode}' == 'cpu':
+		device_name = "CPU0"
 		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = '{render_mode}'
 		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type_plus_cpu = False
-	#bpy.context.user_preferences.addons["rprblender"].preferences.settings.gpu_count = 2
-	#bpy.context.user_preferences.addons["rprblender"].preferences.settings.samples = 1
+	elif '{render_mode}' == 'gpu':
+		device_name = helpers.render_resources_helper.get_used_devices()
 	bpy.context.user_preferences.addons["rprblender"].preferences.settings.include_uncertified_devices = True
 
 	# frame range
@@ -35,14 +47,19 @@ def render(*argv):
 	bpy.data.scenes[Scenename].render.image_settings.quality = 100
 	bpy.data.scenes[Scenename].render.image_settings.color_mode = 'RGB'
 
-	info = ""
-	for arg in argv:
-		info += "_"
-		info += str(arg).lower()
+	name_scene = ""
+	if (len(argv) == 1):
+		name_scene = argv[0]
+		test_case = argv[0]
+	else:
+		name_scene = bpy.path.basename(bpy.context.blend_data.filepath).split('.')[0]
+		test_case = "None"
+		for arg in argv:
+			name_scene += "_"
+			name_scene += str(arg)
 
 	# output
-	name_scene = bpy.path.basename(bpy.context.blend_data.filepath).split('.')[0] + info
-	output = r"{work_dir}" + "/Color/" + name_scene + "_##"
+	output = r"{work_dir}" + "/Color/" + name_scene
 	bpy.data.scenes[Scenename].render.filepath = output 
 	bpy.data.scenes[Scenename].render.use_placeholder = True
 	bpy.data.scenes[Scenename].render.use_file_extension = True
@@ -50,7 +67,7 @@ def render(*argv):
 
 	# start render animation
 	TIMER = datetime.datetime.now()
-	bpy.ops.render.render(animation=True,scene=Scenename)
+	bpy.ops.render.render(write_still=True,scene=Scenename)
 	Render_time = datetime.datetime.now() - TIMER
 
 	# get version of rpr addon
@@ -59,21 +76,27 @@ def render(*argv):
 	        mod = sys.modules[mod_name]
 	        ver = mod.bl_info.get('version')
 	        version = str(ver[0]) + "." + str(ver[1]) + "." + str(ver[2])
-	     
+	    
+	image_format = (bpy.data.scenes[Scenename].render.image_settings.file_format).lower()
+	if (image_format == 'jpeg'):
+		image_format = 'jpg'
+
 	# LOG
-	name_scene_for_json = bpy.path.basename(bpy.context.blend_data.filepath).split('.')[0] + info + "_BL"
+	name_scene_for_json = name_scene + "_BL"
 	log_name = os.path.join(r'{work_dir}', name_scene_for_json + ".json")
 	report = {{}}
 	report['render_version'] = version
-	report['render_device'] = bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type
-	report['tool'] = "Blender " + bpy.app.version_string
-	report['file_name'] = bpy.path.basename(bpy.context.blend_data.filepath).split('.')[0] + info + "_01.jpg"
-	report['scene_name'] = bpy.path.basename(bpy.context.blend_data.filepath).split('.')[0]
+	report['render_mode'] = '{render_mode}'
+	report['core_version'] = core_ver_str()
+	report['render_device'] = device_name
+	report['tool'] = "Blender " + bpy.app.version_string.split(" (")[0]
+	report['file_name'] = name_scene + "." + image_format
+	report['scene_name'] = bpy.path.basename(bpy.context.blend_data.filepath)
 	report['render_time'] = Render_time.total_seconds()
-	report['render_path'] = r"Color/" + name_scene + "_01.jpg"
+	report['render_color_path'] = r"Color/" + name_scene + "." + image_format
 	report['date_time'] = datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
-	report['render_device'] = bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type
-	report['pix_difference'] = "not compared yet"
+	report['difference_color'] = "not compared yet"
+	report['test_case'] = test_case
 
 
 	with open(log_name, 'w') as file:

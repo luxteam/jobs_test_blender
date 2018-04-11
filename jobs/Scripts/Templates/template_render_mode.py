@@ -1,11 +1,5 @@
-import bpy
-import addon_utils
-import datetime
-import sys
-import json
-import os
 
-def main(render_mode):
+def main(render_mode, test_case):
 
 	Scenename = bpy.context.scene.name
 
@@ -14,12 +8,16 @@ def main(render_mode):
 
 	bpy.context.scene.rpr.render.render_mode = render_mode
 
-	render(render_mode)
+	render(test_case)
 
 if __name__ == "__main__":
 
-	render_modes = ['WIREFRAME', 'TEXCOORD', 'POSITION', 'NORMAL', 'MATERIAL_INDEX', 'GLOBAL_ILLUMINATION', 'DIRECT_ILLUMINATION_NO_SHADOW', 'DIRECT_ILLUMINATION', 'DIFFUSE', 'AMBIENT_OCCLUSION']
-	for mode in render_modes:
-		main(mode)
+	render_modes = ['WIREFRAME', 'TEXCOORD', 'POSITION', 'NORMAL', 'MATERIAL_INDEX', 'GLOBAL_ILLUMINATION', 'DIRECT_ILLUMINATION_NO_SHADOW', \
+	'DIRECT_ILLUMINATION', 'DIFFUSE', 'AMBIENT_OCCLUSION']
 
+	for mode in range(len(render_modes)):
+		if mode < 10:
+			main(render_modes[mode], "BL_RS_RM_00" + str(mode+1))
+		else:
+			main(render_modes[mode], "BL_RS_RM_0" + str(mode+1))
 

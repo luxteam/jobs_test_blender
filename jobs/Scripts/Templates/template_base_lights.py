@@ -1,5 +1,5 @@
 
-def main(type_light, intensity, use_map):
+def main(type_light, intensity, use_map, test_case):
 
 	#get scene name
 	Scenename = bpy.context.scene.name
@@ -17,22 +17,21 @@ def main(type_light, intensity, use_map):
 	else:
 		bpy.data.lamps["Lamp"].rpr_lamp.ies_file_name = r""
 
-	render(type_light, intensity, use_map)
+	render(test_case)
 
 if __name__ == "__main__":
 
-	main('POINT', 100, False)
-	main('HEMI', 100, False)
-	main('SUN', 100, False)
-	main('SPOT', 100, False)
-	main('AREA', 100, False)
+	main('POINT', 1000, False, "BL_L_BL_001")
+	main('POINT', 1000, True, "BL_L_BL_002")
+	main('SUN', 50, False, "BL_L_BL_003")
+	main('SPOT', 2000, False, "BL_L_BL_004")
+	main('HEMI', 50, False, "BL_L_BL_005")
+	main('AREA', 300, False, "BL_L_BL_006")
+	main('AREA', 300, True, "BL_L_BL_007")
+
+	main('POINT', 100, False, "BL_L_BL_008")
+	main('SUN', 100, False, "BL_L_BL_009")
+	main('SPOT', 100, False, "BL_L_BL_010")
+	main('HEMI', 100, False, "BL_L_BL_011")
+	main('AREA', 100, False, "BL_L_BL_012")
 	
-	main('POINT', 1000, False)
-	main('POINT', 1000, True)
-	main('HEMI', 50, False)
-	main('SUN', 50, False)
-	main('SPOT', 2000, False)
-	main('AREA', 300, False)
-	main('AREA', 300, True)
-
-

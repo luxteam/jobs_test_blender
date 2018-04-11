@@ -1,11 +1,11 @@
 
-def main(test_name, passes):
+def main(test_case, passes):
 
 	Scenename = bpy.context.scene.name
 	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = passes
 	bpy.data.scenes[Scenename].render.image_settings.file_format = 'JPEG'
 
-	render(test_name, passes)
+	render(test_case)
 
 def delete_hierarchy(obj):
 
@@ -127,37 +127,45 @@ def test_Uber2():
 
 if __name__ == '__main__':
 
-	import_fbx_test()
-	main("Import_FBX_Test", 50)
+	if bpy.path.basename(bpy.context.blend_data.filepath) == "default.blend":
+		main('BL_SM_003', 50) 
 
-	import_obj_test()
-	main("Import_OBJ_Test", 50)
+	elif bpy.path.basename(bpy.context.blend_data.filepath) == "rpr_default.blend":
 
-	test_Uber2()
-	main("Uber2_Test", 50)
+		main('BL_SM_005', 50)
 
-	test_base_light()
-	main("Base_Light_Test", 50)
+		import_fbx_test()
+		main("BL_SM_006", 50)
 
-	test_IES()
-	main("IES_Light_Test", 50)
+		import_obj_test()
+		main("BL_SM_007", 50)
 
-	test_IBL_on()
-	main("IBL_Test", 50)
+		test_Uber2()
+		main("BL_SM_010", 50)
 
-	test_IBL_hdr()
-	main("IBL_hdr", 50)
+		test_base_light()
+		main("BL_SM_011", 50)
 
-	test_IBL_exr()
-	main("IBL_exr", 50)
+		test_IES()
+		main("BL_SM_012", 50)
 
-	test_Sun()
-	main("Sun_Sky_Test", 50)
+		test_Sun()
+		main("BL_SM_013", 50)
 
-	main("Full_Test", 1)
-	main("Full_Test", 100)
-	main("Full_Test", 500)
-	main("Full_Test", 1000)
+		test_IBL_on()
+		main("BL_SM_014", 50)
+
+		test_IBL_hdr()
+		main("BL_SM_015", 50)
+
+		test_IBL_exr()
+		main("BL_SM_016", 50)
+
+		main("BL_SM_017", 1)
+		main("BL_SM_018", 30)
+		main("BL_SM_019", 100)
+		main("BL_SM_020", 500)
+		main("BL_SM_021", 1000)
 
 
 

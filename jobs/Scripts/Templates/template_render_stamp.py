@@ -1,5 +1,5 @@
 
-def main(stamp, stamp_value):
+def main(stamp_value, test_case):
 
 	Scenename = bpy.context.scene.name
 
@@ -10,12 +10,12 @@ def main(stamp, stamp_value):
 	bpy.data.scenes[Scenename].rpr.use_render_stamp = True
 	bpy.data.scenes[Scenename].rpr.render_stamp = stamp_value
 
-	render(stamp)
+	render(test_case)
 
 if __name__ == "__main__":
 	
-	main("default_stamp", "Radeon ProRender for Blender %b | %h | Time: %pt | Passes: %pp | Objects: %so | Lights: %sl")
-	main("gpu_stamp", "Radeon ProRender for Blender %b | CPU %c | GPU %g | Render mode %r | Render device %h")
-	main("additional_info", "Radeon ProRender for Blender %b | Computer name %i | Current date %d")
+	main("Radeon ProRender for Blender %b | %h | Time: %pt | Passes: %pp | Objects: %so | Lights: %sl", "BL_RS_RS_001")
+	main("Radeon ProRender for Blender %b | CPU %c | GPU %g | Render mode %r | Render device %h", "BL_RS_RS_002")
+	main("Radeon ProRender for Blender %b | Computer name %i | Current date %d", "BL_RS_RS_003")
 
 
