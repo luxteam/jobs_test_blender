@@ -12,7 +12,7 @@ directory = args.work_dir
 stage_report = [{'status': 'INIT'}, {'log': ['make_report_json.py start']}]
 
 files = os.listdir(directory)
-json_files = list(filter(lambda x: x.endswith('BL.json'), files))
+json_files = list(filter(lambda x: x.endswith('RPR.json'), files))
 result_json = ""
 
 cpu_name = cpuinfo.get_cpu_info()['brand']

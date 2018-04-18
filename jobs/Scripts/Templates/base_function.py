@@ -82,13 +82,14 @@ def render(*argv):
 		image_format = 'jpg'
 
 	# LOG
-	name_scene_for_json = name_scene + "_BL"
+	name_scene_for_json = name_scene + "_RPR"
 	log_name = os.path.join(r'{work_dir}', name_scene_for_json + ".json")
 	report = {{}}
 	report['render_version'] = version
 	report['render_mode'] = '{render_mode}'
 	report['core_version'] = core_ver_str()
 	report['render_device'] = device_name
+	report['test_group'] = "{package_name}"
 	report['tool'] = "Blender " + bpy.app.version_string.split(" (")[0]
 	report['file_name'] = name_scene + "." + image_format
 	report['scene_name'] = bpy.path.basename(bpy.context.blend_data.filepath)
