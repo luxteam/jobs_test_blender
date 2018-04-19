@@ -1,4 +1,4 @@
-def main(test_case):
+def main(test_case, script_info):
 
 	#get scene name
 	Scenename = bpy.context.scene.name
@@ -11,25 +11,25 @@ def main(test_case):
 		bpy.data.scenes[Scenename].render.resolution_y = {resolution_y}
 
 
-	render(test_case)
+	render(test_case, script_info)
 
 if __name__ == "__main__":
 		
 	if bpy.path.basename(bpy.context.blend_data.filepath) == "TestBallsCoat.blend":
-		main('BL_MAT_UBR_001')
+		main('BL_MAT_UBR_001', ["Testing coating in Uber material"])
 
 	elif bpy.path.basename(bpy.context.blend_data.filepath) == "TestBallsEmissive.blend":
-		main('BL_MAT_UBR_002')
+		main('BL_MAT_UBR_002', ["Testing emissive in Uber material"])
 
 	elif bpy.path.basename(bpy.context.blend_data.filepath) == "TestBallsReflect.blend":
-		main('BL_MAT_UBR_003')
+		main('BL_MAT_UBR_003', ["Testing reflection in Uber material"])
 
 	elif bpy.path.basename(bpy.context.blend_data.filepath) == "TestBallsRefract.blend":
-		main('BL_MAT_UBR_004')
+		main('BL_MAT_UBR_004', ["Testing refraction in Uber material"])
 
 	elif bpy.path.basename(bpy.context.blend_data.filepath) == "TestSceneMetalls.blend":
-		main('BL_MAT_UBR_005')
+		main('BL_MAT_UBR_005', ["Testing metalls in Uber material"])
 
 	elif bpy.path.basename(bpy.context.blend_data.filepath) == "ComplexTestUber.blend":
-		main('BL_MAT_UBR_006')
+		main('BL_MAT_UBR_006', ["Complex test of Uber material"])
 

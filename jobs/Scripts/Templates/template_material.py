@@ -1,4 +1,4 @@
-def main(material_name, test_case):
+def main(material_name, test_case, script_info):
 
 	#get scene name
 	Scenename = bpy.context.scene.name
@@ -15,7 +15,7 @@ def main(material_name, test_case):
 	material = bpy.data.materials['Material']
 	material_browser.import_xml_material(matlib_path, material)
 
-	render(test_case)
+	render(test_case, script_info)
 
 if __name__ == "__main__":
 
@@ -25,9 +25,9 @@ if __name__ == "__main__":
 
 	for m in range(len(materials)):
 		if m < 10:
-			main(materials[m], "BL_MAT_LIB_00" + str(m+1))
+			main(materials[m], "BL_MAT_LIB_00" + str(m+1), ["Material: " + materials[m]])
 		elif m < 100:
-			main(materials[m], "BL_MAT_LIB_0" + str(m+1))
+			main(materials[m], "BL_MAT_LIB_0" + str(m+1), ["Material: " + materials[m]])
 		else:
-			main(materials[m], "BL_MAT_LIB_" + str(m+1))
+			main(materials[m], "BL_MAT_LIB_" + str(m+1), ["Material: " + materials[m]])
 
