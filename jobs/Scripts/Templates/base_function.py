@@ -47,18 +47,6 @@ def render(*argv):
 	bpy.data.scenes[Scenename].render.image_settings.quality = 100
 	bpy.data.scenes[Scenename].render.image_settings.color_mode = 'RGB'
 
-	'''
-	name_scene = ""
-	if (len(argv) == 1):
-		name_scene = argv[0]
-		test_case = argv[0]
-	else:
-		name_scene = bpy.path.basename(bpy.context.blend_data.filepath).split('.')[0]
-		test_case = "None"
-		for arg in argv:
-			name_scene += "_"
-			name_scene += str(arg)
-	'''
 	name_scene = argv[0]
 	test_case = argv[0]
 	script_info = argv[1]
