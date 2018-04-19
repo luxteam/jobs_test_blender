@@ -4,6 +4,9 @@ def main(test_case, passes):
 	Scenename = bpy.context.scene.name
 	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = passes
 	bpy.data.scenes[Scenename].render.image_settings.file_format = 'JPEG'
+	if ({resolution_x} != 0 and {resolution_y} != 0):
+		bpy.data.scenes[Scenename].render.resolution_x = {resolution_x}
+		bpy.data.scenes[Scenename].render.resolution_y = {resolution_y}
 
 	render(test_case)
 

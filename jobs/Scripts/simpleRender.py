@@ -18,6 +18,9 @@ def main():
     parser.add_argument('--render_mode', required=True)
     parser.add_argument('--template', required=True)
     parser.add_argument('--pass_limit', required=True)
+    parser.add_argument('--resolution_x', required=True)
+    parser.add_argument('--resolution_y', required=True)
+    parser.add_argument('--package_name', required=True)
     parser.add_argument('--output', required=True)
     parser.add_argument('--test_list', required=True)
 
@@ -42,7 +45,8 @@ def main():
     scene_list = blender_scenes.split(",\n")
     work_dir = args.output 
 
-    BlenderScript = blender_script_template.format(work_dir = work_dir, render_mode = args.render_mode, pass_limit = args.pass_limit, res_path = args.res_path)
+    BlenderScript = blender_script_template.format(work_dir = work_dir, render_mode = args.render_mode, pass_limit = args.pass_limit, 
+        res_path = args.res_path, resolution_x = args.resolution_x, resolution_y = args.resolution_y, package_name = args.package_name)
 
     try:
         os.makedirs(work_dir)
