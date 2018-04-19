@@ -12,7 +12,7 @@ def main(filter_aa, value, test_case, script_info):
 	bpy.data.scenes[Scenename].rpr.render.aa.filter = filter_aa
 	bpy.data.scenes[Scenename].rpr.render.aa.radius = value
 
-	render(test_case)
+	render(test_case, script_info)
 
 if __name__ == "__main__":
 
