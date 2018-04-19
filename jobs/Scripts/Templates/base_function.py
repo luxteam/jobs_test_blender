@@ -47,6 +47,7 @@ def render(*argv):
 	bpy.data.scenes[Scenename].render.image_settings.quality = 100
 	bpy.data.scenes[Scenename].render.image_settings.color_mode = 'RGB'
 
+	'''
 	name_scene = ""
 	if (len(argv) == 1):
 		name_scene = argv[0]
@@ -57,6 +58,10 @@ def render(*argv):
 		for arg in argv:
 			name_scene += "_"
 			name_scene += str(arg)
+	'''
+	name_scene = argv[0]
+	test_case = argv[0]
+	script_info = argv[1]
 
 	# output
 	output = r"{work_dir}" + "/Color/" + name_scene
@@ -98,6 +103,7 @@ def render(*argv):
 	report['date_time'] = datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
 	report['difference_color'] = "not compared yet"
 	report['test_case'] = test_case
+	report['script_info'] = script_info
 
 
 	with open(log_name, 'w') as file:
