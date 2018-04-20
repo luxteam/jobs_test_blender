@@ -1,1 +1,3 @@
-ComplexTestUber.blend
+ComplexTestUber.blend,
+default.blend,
+rpr_default.blend
