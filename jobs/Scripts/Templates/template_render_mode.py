@@ -19,7 +19,7 @@ if __name__ == "__main__":
 	main('TEXCOORD', "BL_RS_RM_002", ["Render mode: Texcoord"])
 	main('POSITION', "BL_RS_RM_003", ["Render mode: Position"])
 	main('NORMAL', "BL_RS_RM_004", ["Render mode: Normal"])
-	main('MATERIAL_INDEX', "BL_RS_RM_005", ["Render mode: Material_index"])
+	main('MATERIAL_INDEX', "BL_RS_RM_005", ["Render mode: Material index"])
 	main('GLOBAL_ILLUMINATION', "BL_RS_RM_006", ["Render mode: Global illumination"])
 	main('DIRECT_ILLUMINATION_NO_SHADOW', "BL_RS_RM_007", ["Render mode: Direct illumination no shadow"])
 	main('DIRECT_ILLUMINATION', "BL_RS_RM_008", ["Render mode: Direct illumination"])
