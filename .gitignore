@@ -1,10 +1,9 @@
 /Results/*
 *.pyc
-tahoe.log
+*.log
 run_dev.bat
 Baseline/
-top-level.log
-Work
+Work/
 
 scripts/AOV_Test.bat
 scripts/Anti_Aliasing_Test.bat

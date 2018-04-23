@@ -31,12 +31,10 @@ if __name__ == "__main__":
 	main(2000, 2000, 3, 2, "BL_RS_IS_012", ["Resolution: 2000x2000"])
 	main(3000, 3000, 3, 2, "BL_RS_IS_013", ["Resolution: 3000x3000"])
 	main(4000, 4000, 3, 2, "BL_RS_IS_014", ["Resolution: 4000x4000"])
-	main(5000, 5000, 3, 2, "BL_RS_IS_015", ["Resolution: 5000x5000"])
-	main(6000, 6000, 3, 2, "BL_RS_IS_016", ["Resolution: 6000x6000"])
-	main(7000, 7000, 3, 2, "BL_RS_IS_017", ["Resolution: 7000x7000"])
-	main(8000, 8000, 3, 2, "BL_RS_IS_018", ["Resolution: 8000x8000"])
+	#main(5000, 5000, 3, 2, "BL_RS_IS_015", ["Resolution: 5000x5000"])
+	#main(6000, 6000, 3, 2, "BL_RS_IS_016", ["Resolution: 6000x6000"])
+	#main(7000, 7000, 3, 2, "BL_RS_IS_017", ["Resolution: 7000x7000"])
+	#main(8000, 8000, 3, 2, "BL_RS_IS_018", ["Resolution: 8000x8000"])
 	main(2048, 1152, 3, 2, "BL_RS_IS_019", ["Resolution: 2K"])
 	main(4096, 3204, 3, 2, "BL_RS_IS_020", ["Resolution: 4K"])
 	main(1500, 1125, 3, 2, "BL_RS_IS_021", ["Resolution: 1500x1125"])
-	
-
