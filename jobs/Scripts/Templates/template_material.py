@@ -19,7 +19,7 @@ def main(material_name, test_case, script_info):
 
 if __name__ == "__main__":
 
-	with open("{work_dir}" + "/../../../../jobs/Tests/Material_Library_Test/materials.txt") as mat:
+	with open("{work_dir}" + "/../../../../jobs/Tests/Material_Library/materials.txt") as mat:
 		materials = mat.read()
 	materials = materials.split(",\n")
 

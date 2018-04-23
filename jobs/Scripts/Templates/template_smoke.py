@@ -131,9 +131,16 @@ def test_Uber2():
 if __name__ == '__main__':
 
 	if bpy.path.basename(bpy.context.blend_data.filepath) == "default.blend":
+		main('BL_SM_001', 1, ["Install RPR"])
+		copyfile("{work_dir}" + "/../../../../jobs/Tests/pass.jpg", "{work_dir}/Color/BL_SM_001.jpg")
+		main('BL_SM_002', 1, ["Open empty scene"])
+		copyfile("{work_dir}" + "/../../../../jobs/Tests/pass.jpg", "{work_dir}/Color/BL_SM_002.jpg")
 		main('BL_SM_003', 50, ["Render empty scene", "Pass Limit: 50"]) 
 
 	elif bpy.path.basename(bpy.context.blend_data.filepath) == "rpr_default.blend":
+
+		main('BL_SM_004', 1, ["Open rpr empty scene"])
+		copyfile("{work_dir}" + "/../../../../jobs/Tests/pass.jpg", "{work_dir}/Color/BL_SM_004.jpg")
 
 		main('BL_SM_005', 50, ["Render empty scene with RPR parameters", "Pass Limit: 50"])
 
@@ -143,8 +150,14 @@ if __name__ == '__main__':
 		import_obj_test()
 		main("BL_SM_007", 50, ["Import OBJ", "Pass Limit: 50"])
 
+		main('BL_SM_008', 1, ["Open Mat edit"])
+		copyfile("{work_dir}" + "/../../../../jobs/Tests/pass.jpg", "{work_dir}/Color/BL_SM_008.jpg")
+
+		main('BL_SM_009', 1, ["Create an Uber material"])
+		copyfile("{work_dir}" + "/../../../../jobs/Tests/pass.jpg", "{work_dir}/Color/BL_SM_009.jpg")
+
 		test_Uber2()
-		main("BL_SM_010", 50, ["Testing Uber material", "Pass Limit: 50"])
+		main("BL_SM_010", 50, ["Assign Uber material", "Pass Limit: 50"])
 
 		test_base_light()
 		main("BL_SM_011", 50, ["Testing base light", "Pass Limit: 50"])
