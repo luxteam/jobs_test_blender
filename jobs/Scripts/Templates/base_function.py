@@ -72,7 +72,7 @@ def render(*argv):
 	        version = str(ver[0]) + "." + str(ver[1]) + "." + str(ver[2])
 	    
 	image_format = (bpy.data.scenes[Scenename].render.image_settings.file_format).lower()
-	if (image_format != 'jpeg'):
+	if (image_format == 'jpeg'):
 		image_format = 'jpg'
 
 	# LOG
