@@ -1,5 +1,5 @@
 
-def prerender(test_list size_r_x, size_r_y, size_a_x, size_a_y, test_case, script_info):
+def prerender(test_list):
 
 	Scenename = bpy.context.scene.name
 
