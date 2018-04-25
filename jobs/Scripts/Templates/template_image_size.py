@@ -34,8 +34,8 @@ if __name__ == "__main__":
 	["BL_RS_IS_014", ["Resolution: 4000x4000"], 4000, 4000, 3, 2], 
 	["BL_RS_IS_015", ["Resolution: 5000x5000"], 5000, 5000, 3, 2], 
 	["BL_RS_IS_016", ["Resolution: 6000x6000"], 6000, 6000, 3, 2],
-	["BL_RS_IS_017", ["Resolution: 7000x7000"], n, n, 3, 2], 
-	["BL_RS_IS_018", ["Resolution: 8000x8000"], n, n, 3, 2],
+	["BL_RS_IS_017", ["Resolution: 7000x7000"], 7000, 7000, 3, 2], 
+	["BL_RS_IS_018", ["Resolution: 8000x8000"], 8000, 8000, 3, 2],
 	["BL_RS_IS_019", ["Resolution: 2K"], 2048, 1152, 3, 2], 
 	["BL_RS_IS_020", ["Resolution: 4K"], 4096, 3204, 3, 2],
 	["BL_RS_IS_021", ["Resolution: 1500x1125"], 1500, 1125, 3, 2]
