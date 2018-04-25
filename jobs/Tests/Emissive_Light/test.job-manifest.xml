@@ -13,7 +13,7 @@
 	<argument>--resolution_y {ry}</argument>
         <argument>--res_path "{ScenesDir}"</argument>
         <argument>--output "{OutputDir}"</argument>
-	<argument>--package_name "Emissive Light"</argument>
+	<argument>--package_name "Emissive_Light"</argument>
         <argument>--test_list "{Root}/Tests/Emissive_Light/{TestsFilter}TestsList.txt"</argument>
     </execute>
 

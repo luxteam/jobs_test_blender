@@ -13,7 +13,7 @@
 	<argument>--resolution_y {ry}</argument>
         <argument>--res_path "{ScenesDir}"</argument>
         <argument>--output "{OutputDir}"</argument>
-	<argument>--package_name "Pass Limit"</argument>
+	<argument>--package_name "Pass_Limit"</argument>
         <argument>--test_list "{Root}/Tests/Pass_Limit/{TestsFilter}TestsList.txt"</argument>
     </execute>
 

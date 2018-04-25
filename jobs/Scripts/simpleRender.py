@@ -45,8 +45,11 @@ def main():
     scene_list = blender_scenes.split(",\n")
     work_dir = args.output 
 
-    BlenderScript = blender_script_template.format(work_dir = work_dir, render_mode = args.render_mode, pass_limit = args.pass_limit, 
+    RebootScript = blender_script_template.format(work_dir = work_dir, render_mode = args.render_mode, pass_limit = args.pass_limit, 
         res_path = args.res_path, resolution_x = args.resolution_x, resolution_y = args.resolution_y, package_name = args.package_name)
+
+    BlenderScript = blender_script_template.format(work_dir = work_dir, render_mode = args.render_mode, pass_limit = args.pass_limit, 
+        res_path = args.res_path, resolution_x = args.resolution_x, resolution_y = args.resolution_y, package_name = args.package_name, start = 0)
 
     try:
         os.makedirs(work_dir)
@@ -103,6 +106,12 @@ def main():
         p.terminate()
 
     if rc == 0:
+        files = os.listdir(work_dir)
+        json_files = list(filter(lambda x: x.endswith('RPR.json'), files))
+        with open(work_dir + "/../../../../jobs/Tests/" + args.package_name + "/expected.txt") as f:
+            expected_count = f.read()
+        if (len(json_files)) != int(expected_count):
+            main()
         print('passed')
         stage_report[0]['status'] = 'OK'
         stage_report[1]['log'].append('subprocess PASSED')

@@ -13,7 +13,7 @@
 	<argument>--resolution_y {ry}</argument>
         <argument>--res_path "{ScenesDir}"</argument>
         <argument>--output "{OutputDir}"</argument>
-	<argument>--package_name "Anti Aliasing"</argument>
+	<argument>--package_name "Anti_Aliasing"</argument>
         <argument>--test_list "{Root}/Tests/Anti_Aliasing/{TestsFilter}TestsList.txt"</argument>
     </execute>
 

@@ -13,7 +13,7 @@
 	<argument>--resolution_y {ry}</argument>
         <argument>--res_path "{ScenesDir}"</argument>
         <argument>--output "{OutputDir}"</argument>
-	<argument>--package_name "Image Size"</argument>
+	<argument>--package_name "Image_Size"</argument>
         <argument>--test_list "{Root}/Tests/Image_Size/{TestsFilter}TestsList.txt"</argument>
     </execute>
 

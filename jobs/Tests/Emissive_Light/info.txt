@@ -1,5 +1,0 @@
-Description: Testing emissive material as light. Render scene.
-Scene: EmissiveLight.blend
-Summary: 1 test
-Test cases:
-BL_L_EMIS_001

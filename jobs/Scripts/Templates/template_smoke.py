@@ -1,14 +1,26 @@
 
-def main(test_case, passes, script_info):
+def prerender(test_list):
 
 	Scenename = bpy.context.scene.name
-	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = passes
+
+	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = test_list[4]
 	bpy.data.scenes[Scenename].render.image_settings.file_format = 'JPEG'
+
 	if ({resolution_x} and {resolution_y}):
 		bpy.data.scenes[Scenename].render.resolution_x = {resolution_x}
 		bpy.data.scenes[Scenename].render.resolution_y = {resolution_y}
 
-	render(test_case, script_info)
+	if (bpy.path.basename(bpy.context.blend_data.filepath) == test_list[3]):
+
+		if (test_list[2] != "pass"):
+			test_list[2]()
+	
+		render(test_list[0], test_list[1])
+
+		if (test_list[2] == "pass"):
+			if not os.path.exists("{work_dir}" + "/Color"):
+   				os.makedirs("{work_dir}" + "/Color")
+			copyfile("{work_dir}" + "/../../../../jobs/Tests/pass.jpg", "{work_dir}/Color/" + test_list[0] + ".jpg")	
 
 def delete_hierarchy(obj):
 
@@ -26,6 +38,9 @@ def delete_hierarchy(obj):
 	[setattr(objects[n], 'select', True) for n in names]
 	bpy.ops.object.delete()
 
+def empty():
+	pass
+
 def test_IES():
 
 	ies = os.path.join("{res_path}", "Candle.fbm", "PD6R12ED010- PDM6835-694SNB.ies")
@@ -39,7 +54,7 @@ def test_IBL_on():
 
 	bpy.context.scene.world.rpr_data.environment.enable = True
 	bpy.context.scene.world.rpr_data.environment.type = 'IBL'
-	bpy.context.scene.world.rpr_data.environment.ibl.type = 'COLOR'
+	bpy.context.scene.world.rpr_data.environment.ibl.type = 'FOLOR'
 	bpy.context.scene.world.rpr_data.environment.ibl.use_ibl_map = False
 
 def test_IBL_exr():
@@ -127,61 +142,31 @@ def test_Uber2():
 
 	bpy.data.objects['shader_ball'].material_slots[0].material = bpy.data.materials['Shader_mat']
 
-
 if __name__ == '__main__':
 
-	if bpy.path.basename(bpy.context.blend_data.filepath) == "default.blend":
-		main('BL_SM_001', 1, ["Install RPR"])
-		copyfile("{work_dir}" + "/../../../../jobs/Tests/pass.jpg", "{work_dir}/Color/BL_SM_001.jpg")
-		main('BL_SM_002', 1, ["Open empty scene"])
-		copyfile("{work_dir}" + "/../../../../jobs/Tests/pass.jpg", "{work_dir}/Color/BL_SM_002.jpg")
-		main('BL_SM_003', 50, ["Render empty scene", "Pass Limit: 50"]) 
+	list_tests = [
+	['BL_SM_001', ["Install RPR"], "pass", "default.blend", 1],
+	['BL_SM_002', ["Open empty scene"], "pass", "default.blend", 1],
+	['BL_SM_003', ["Render empty scene", "Pass Limit: 50"], empty, "default.blend", 50],
+	['BL_SM_004', ["Open rpr empty scene"], "pass", "rpr_default.blend", 1],
+	['BL_SM_005', ["Render empty scene with RPR parameters", "Pass Limit: 50"], empty, "rpr_default.blend", 50],
+	["BL_SM_006", ["Import FBX", "Pass Limit: 50"], import_fbx_test, "rpr_default.blend", 50],
+	["BL_SM_007", ["Import OBJ", "Pass Limit: 50"], import_obj_test, "rpr_default.blend", 50],
+	['BL_SM_008', ["Open Mat edit"], "pass", "rpr_default.blend", 1],
+	['BL_SM_009', ["Create an Uber material"], "pass", "rpr_default.blend", 1],
+	["BL_SM_010", ["Assign Uber material", "Pass Limit: 50"], test_Uber2, "rpr_default.blend", 50],
+	["BL_SM_011", ["Testing base light", "Pass Limit: 50"], test_base_light, "rpr_default.blend", 50],
+	["BL_SM_012", ["Testing IES light", "Pass Limit: 50"], test_IES, "rpr_default.blend", 50],
+	["BL_SM_013", ["Testing Sun and Sky System", "Pass Limit: 50"], test_Sun, "rpr_default.blend", 50],
+	["BL_SM_014", ["Testing IBL", "Pass Limit: 50"], test_IBL_on, "rpr_default.blend", 50],
+	["BL_SM_015", ["Testing IBL with hdr", "Pass Limit: 50"], test_IBL_hdr, "rpr_default.blend", 50],
+	["BL_SM_016", ["Testing IBL with exr", "Pass Limit: 50"], test_IBL_exr, "rpr_default.blend", 50],
+	["BL_SM_017", ["Pass Limit test", "Pass Limit: 1"], empty, "rpr_default.blend", 1],
+	["BL_SM_018", ["Pass Limit test", "Pass Limit: 30"], empty, "rpr_default.blend", 30],
+	["BL_SM_019", ["Pass Limit test", "Pass Limit: 100"], empty, "rpr_default.blend", 100],
+	["BL_SM_020", ["Pass Limit test", "Pass Limit: 500"], empty, "rpr_default.blend", 500],
+	["BL_SM_021", ["Pass Limit test", "Pass Limit: 1000"], empty, "rpr_default.blend", 1000]
+	]
 
-	elif bpy.path.basename(bpy.context.blend_data.filepath) == "rpr_default.blend":
-
-		main('BL_SM_004', 1, ["Open rpr empty scene"])
-		copyfile("{work_dir}" + "/../../../../jobs/Tests/pass.jpg", "{work_dir}/Color/BL_SM_004.jpg")
-
-		main('BL_SM_005', 50, ["Render empty scene with RPR parameters", "Pass Limit: 50"])
-
-		import_fbx_test()
-		main("BL_SM_006", 50, ["Import FBX", "Pass Limit: 50"])
-
-		import_obj_test()
-		main("BL_SM_007", 50, ["Import OBJ", "Pass Limit: 50"])
-
-		main('BL_SM_008', 1, ["Open Mat edit"])
-		copyfile("{work_dir}" + "/../../../../jobs/Tests/pass.jpg", "{work_dir}/Color/BL_SM_008.jpg")
-
-		main('BL_SM_009', 1, ["Create an Uber material"])
-		copyfile("{work_dir}" + "/../../../../jobs/Tests/pass.jpg", "{work_dir}/Color/BL_SM_009.jpg")
-
-		test_Uber2()
-		main("BL_SM_010", 50, ["Assign Uber material", "Pass Limit: 50"])
-
-		test_base_light()
-		main("BL_SM_011", 50, ["Testing base light", "Pass Limit: 50"])
-
-		test_IES()
-		main("BL_SM_012", 50, ["Testing IES light", "Pass Limit: 50"])
-
-		test_Sun()
-		main("BL_SM_013", 50, ["Testing Sun and Sky System", "Pass Limit: 50"])
-
-		test_IBL_on()
-		main("BL_SM_014", 50, ["Testing IBL", "Pass Limit: 50"])
-
-		test_IBL_hdr()
-		main("BL_SM_015", 50, ["Testing IBL with hdr", "Pass Limit: 50"])
-
-		test_IBL_exr()
-		main("BL_SM_016", 50, ["Testing IBL with exr", "Pass Limit: 50"])
-
-		main("BL_SM_017", 1, ["Iteration test", "Pass Limit: 50"])
-		main("BL_SM_018", 30, ["Iteration test", "Pass Limit: 50"])
-		main("BL_SM_019", 100, ["Iteration test", "Pass Limit: 50"])
-		main("BL_SM_020", 500, ["Iteration test", "Pass Limit: 50"])
-		main("BL_SM_021", 1000, ["Iteration test", "Pass Limit: 50"])
-
-
+	launch_tests()
 
