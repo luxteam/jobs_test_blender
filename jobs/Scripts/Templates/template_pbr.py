@@ -9,14 +9,19 @@ def prerender(test_list):
 		bpy.data.scenes[Scenename].render.resolution_x = {resolution_x}
 		bpy.data.scenes[Scenename].render.resolution_y = {resolution_y}
 
-	if (test_list[2] == "TestBallsCoatPBR.blend"):
+	if (bpy.path.basename(bpy.context.blend_data.filepath) == "TestBallsCoatPBR.blend"):
 		render(test_list[0], test_list[1])
-	elif (test_list[2] == "TestBallsEmissivePBR.blend"):
+		return 2
+	elif (bpy.path.basename(bpy.context.blend_data.filepath) == "TestBallsEmissivePBR.blend"):
 		render(test_list[0], test_list[1])
-	elif (test_list[2] == "TestSceneMetallsPBR.blend"):
+		return 2
+	elif (bpy.path.basename(bpy.context.blend_data.filepath) == "TestSceneMetallsPBR.blend"):
 		render(test_list[0], test_list[1])
-	elif (test_list[2] == "ComplexTestPBR.blend"):
+		return 2
+	elif (bpy.path.basename(bpy.context.blend_data.filepath) == "ComplexTestPBR.blend"):
 		render(test_list[0], test_list[1])
+		return 2
+
 
 if __name__ == "__main__":
 	

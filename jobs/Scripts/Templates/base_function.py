@@ -100,7 +100,6 @@ def render(*argv):
 
 def create_failed_report(*argv):
 
-	#get scene name
 	Scenename = bpy.context.scene.name
 
 	device_name = ""
@@ -165,6 +164,8 @@ def launch_tests():
 		rc = -1
 		try:
 			rc = prerender(list_tests[i])
+			if (rc == 2):
+				exit()
 			status = 0
 		except Exception:
 			pass
@@ -175,8 +176,8 @@ def launch_tests():
 				files = os.listdir(r"{work_dir}")
 				json_files = list(filter(lambda x: x.endswith('RPR.json'), files))
 				for i in range(len(json_files), len(list_tests)):
-					create_failed_report(list_tests[i][0], list_tests[i][1], "failed")
+					create_failed_report(list_tests[i][0], list_tests[i][1], "skipped")
 				exit()
-		with open(os.path.join("{work_dir}", "status.txt"), 'a') as f:
+		with open(os.path.join(r"{work_dir}", "status.txt"), 'a') as f:
 			f.write(str(rc) + ":" + str(i) + ":" + str(status) + "\n\t")
 

@@ -21,6 +21,9 @@ def prerender(test_list):
 		render(test_list[0], test_list[1])
 	elif (test_list[2] == "ComplexTestUber.blend"):
 		render(test_list[0], test_list[1])
+		
+	return 1
+
 
 if __name__ == "__main__":
 	
