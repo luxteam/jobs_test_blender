@@ -12,13 +12,22 @@ def prerender(test_list):
 
 	if (bpy.path.basename(bpy.context.blend_data.filepath) == "ComplexTestUber.blend"):
 		render(test_list[0], test_list[1])
-		return 2
+		if (test_list[0] == "BL_RS_PS_006"):
+			return 2
+		else: 
+			return 1
 	elif (bpy.path.basename(bpy.context.blend_data.filepath) == "default.blend"):
 		render(test_list[0], test_list[1])
-		return 2
+		if (test_list[0] == "BL_RS_PS_012"):
+			return 2
+		else: 
+			return 1
 	elif (bpy.path.basename(bpy.context.blend_data.filepath) == "rpr_default.blend"):
 		render(test_list[0], test_list[1])
-		return 2
+		if (test_list[0] == "BL_RS_PS_018"):
+			return 2
+		else: 
+			return 1
 
 if __name__ == "__main__":
 
