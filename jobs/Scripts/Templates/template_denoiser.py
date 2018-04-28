@@ -50,6 +50,7 @@ def test_aov_denoiser(test_case, script_info, denoiser, aov):
 	bpy.context.scene.render.layers.active.rpr_data.passes_aov.passesStates[aov] = True
 	render(test_case, script_info)
 	bpy.context.scene.render.layers.active.rpr_data.passes_aov.passesStates[aov] = False
+	return 1
 
 def test_bilateral(test_case, script_info, radius, sigma):
 
@@ -62,6 +63,7 @@ def test_bilateral(test_case, script_info, radius, sigma):
 	bpy.context.scene.rpr.render.denoiser.radius = radius
 
 	render(test_case, script_info)
+	return 1
 
 def test_eaw(test_case, script_info, sigma):
 
@@ -73,6 +75,7 @@ def test_eaw(test_case, script_info, sigma):
 	bpy.context.scene.rpr.render.denoiser.trans_sigma = sigma
 
 	render(test_case, script_info)
+	return 1
 
 def test_lwr(test_case, script_info, param1, param2):
 
@@ -83,6 +86,7 @@ def test_lwr(test_case, script_info, param1, param2):
 	bpy.context.scene.rpr.render.denoiser.bandwidth = param2
 
 	render(test_case, script_info)
+	return 1
 
 if __name__ == "__main__":
 

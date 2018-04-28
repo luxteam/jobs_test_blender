@@ -22,7 +22,6 @@ def prerender(test_list):
 		render(test_list[0], test_list[1])
 		return 2
 
-
 if __name__ == "__main__":
 	
 	list_tests = [

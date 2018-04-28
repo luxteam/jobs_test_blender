@@ -13,6 +13,7 @@ def prerender(test_list):
 	bpy.context.scene.rpr.render.render_mode = test_list[2]
 
 	render(test_list[0], test_list[1])
+	return 1
 
 if __name__ == "__main__":
 

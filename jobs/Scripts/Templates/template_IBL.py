@@ -21,6 +21,7 @@ def prerender(test_list):
 		bpy.context.scene.world.rpr_data.environment.ibl.ibl_image = bpy.data.images.load(ibl_map, True)
 
 	render(test_list[0], test_list[1])
+	return 1
 
 if __name__ == "__main__":
 

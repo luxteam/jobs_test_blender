@@ -14,6 +14,7 @@ def prerender(test_list):
 	bpy.data.scenes[Scenename].rpr.render.aa.radius = test_list[3]
 
 	render(test_list[0], test_list[1])
+	return 1
 
 if __name__ == "__main__":
 

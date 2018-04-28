@@ -9,21 +9,24 @@ def prerender(test_list):
 		bpy.data.scenes[Scenename].render.resolution_x = {resolution_x}
 		bpy.data.scenes[Scenename].render.resolution_y = {resolution_y}
 
-	if (test_list[2] == "TestBallsCoat.blend"):
+	if (bpy.path.basename(bpy.context.blend_data.filepath) == "TestBallsCoat.blend"):
 		render(test_list[0], test_list[1])
-	elif (test_list[2] == "TestBallsEmissive.blend"):
+		return 2
+	elif (bpy.path.basename(bpy.context.blend_data.filepath) == "TestBallsEmissive.blend"):
 		render(test_list[0], test_list[1])
-	elif (test_list[2] == "TestBallsReflect.blend"):
+		return 2
+	elif (bpy.path.basename(bpy.context.blend_data.filepath) == "TestBallsReflect.blend"):
 		render(test_list[0], test_list[1])
-	elif (test_list[2] == "TestBallsRefract.blend"):
+		return 2
+	elif (bpy.path.basename(bpy.context.blend_data.filepath) == "TestBallsRefract.blend"):
 		render(test_list[0], test_list[1])
-	elif (test_list[2] == "TestSceneMetalls.blend"):
+		return 2
+	elif (bpy.path.basename(bpy.context.blend_data.filepath) == "TestSceneMetalls.blend"):
 		render(test_list[0], test_list[1])
-	elif (test_list[2] == "ComplexTestUber.blend"):
+		return 2
+	elif (bpy.path.basename(bpy.context.blend_data.filepath) == "ComplexTestUber.blend"):
 		render(test_list[0], test_list[1])
-		
-	return 1
-
+		return 2
 
 if __name__ == "__main__":
 	

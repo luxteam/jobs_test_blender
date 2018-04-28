@@ -17,7 +17,8 @@ def prerender(test_list):
 	bpy.context.scene.render.layers.active.rpr_data.passes_aov.passesStates[test_list[2]] = True
 	render(test_list[0], test_list[1])
 	bpy.context.scene.render.layers.active.rpr_data.passes_aov.passesStates[test_list[2]] = False
-
+	return 1
+	
 if __name__ == "__main__":
 
 	list_tests = [

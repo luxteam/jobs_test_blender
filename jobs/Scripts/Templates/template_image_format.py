@@ -18,18 +18,18 @@ def prerender(test_list):
 if __name__ == "__main__":
 
 	list_tests = [
-	["BL_RS_IF_001", ["Image format: jpeg"], "1JPEG"], 
+	["BL_RS_IF_001", ["Image format: jpeg"], "JPEG"], 
 	["BL_RS_IF_002", ["Image format: bmp"], "BMP"], 
-	["BL_RS_IF_003", ["Image format: png"], "1PNG"], 
-	["BL_RS_IF_004", ["Image format: iris"], "1IRIS"], 
+	["BL_RS_IF_003", ["Image format: png"], "PNG"], 
+	["BL_RS_IF_004", ["Image format: iris"], "IRIS"], 
 	["BL_RS_IF_005", ["Image format: jpeg2000"], "JPEG2000"], 
 	["BL_RS_IF_006", ["Image format: targa"], "TARGA"], 
 	["BL_RS_IF_007", ["Image format: targa_raw"], "TARGA_RAW"], 
-	["BL_RS_IF_008", ["Image format: dpx"], "1DPX"],
+	["BL_RS_IF_008", ["Image format: dpx"], "DPX"],
 	["BL_RS_IF_009", ["Image format: open_exr_multilayer"], "OPEN_EXR_MULTILAYER"], 
-	["BL_RS_IF_010", ["Image format: open_exr"], "1OPEN_EXR"],
-	["BL_RS_IF_011", ["Image format: cineon"], "1CINEON"], 
-	["BL_RS_IF_012", ["Image format: hdr"], "1HDR"], 
+	["BL_RS_IF_010", ["Image format: open_exr"], "OPEN_EXR"],
+	["BL_RS_IF_011", ["Image format: cineon"], "CINEON"], 
+	["BL_RS_IF_012", ["Image format: hdr"], "HDR"], 
 	["BL_RS_IF_013", ["Image format: tiff"], "TIFF"]
 	]
  

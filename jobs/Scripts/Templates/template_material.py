@@ -16,7 +16,8 @@ def main(material_name, test_case, script_info):
 	material_browser.import_xml_material(matlib_path, material)
 
 	render(test_case, script_info)
-
+	return 1
+	
 if __name__ == "__main__":
 
 	with open("{work_dir}" + "/../../../../jobs/Tests/Material_Library/materials.txt") as mat:

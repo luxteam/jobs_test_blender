@@ -38,6 +38,7 @@ def prerender(test_list):
 		bpy.context.scene.world.rpr_data.environment.sun_sky.time_minutes = test_list[5]
 
 	render(test_list[0], test_list[1])
+	return 1
 
 
 if __name__ == "__main__":

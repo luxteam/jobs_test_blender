@@ -20,7 +20,10 @@ def prerender(test_list):
 		if (test_list[2] == "pass"):
 			if not os.path.exists("{work_dir}" + "/Color"):
    				os.makedirs("{work_dir}" + "/Color")
-			copyfile("{work_dir}" + "/../../../../jobs/Tests/pass.jpg", "{work_dir}/Color/" + test_list[0] + ".jpg")	
+			copyfile("{work_dir}" + "/../../../../jobs/Tests/pass.jpg", "{work_dir}/Color/" + test_list[0] + ".jpg")
+			return 1
+
+		return 1
 
 def delete_hierarchy(obj):
 

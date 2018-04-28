@@ -24,6 +24,7 @@ def prerender(test_list):
 		bpy.context.scene.rpr.render.camera.override_camera_settings = False
 
 	render(test_list[0], test_list[1])
+	return 1
 
 if __name__ == "__main__":
 

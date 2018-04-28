@@ -21,6 +21,7 @@ def prerender(test_list):
 		bpy.data.lamps["Lamp"].rpr_lamp.ies_file_name = ""
 
 	render(test_list[0], test_list[1])
+	return 1
 
 if __name__ == "__main__":
 

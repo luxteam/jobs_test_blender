@@ -9,8 +9,9 @@ def prerender(test_list):
 		bpy.data.scenes[Scenename].render.resolution_x = {resolution_x}
 		bpy.data.scenes[Scenename].render.resolution_y = {resolution_y}
 
-	if (test_list[2] == "EmissiveLight.blend"):
+	if (bpy.path.basename(bpy.context.blend_data.filepath) == "EmissiveLight.blend"):
 		render(test_list[0], test_list[1])
+		return 2
 
 if __name__ == "__main__":
 		

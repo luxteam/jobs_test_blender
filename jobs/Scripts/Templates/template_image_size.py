@@ -6,7 +6,6 @@ def prerender(test_list):
 	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = {pass_limit}
 	bpy.data.scenes[Scenename].render.image_settings.file_format = 'JPEG'
 
-	# resolution
 	bpy.data.scenes[Scenename].render.resolution_x = test_list[2]
 	bpy.data.scenes[Scenename].render.resolution_y = test_list[3]
 	bpy.data.scenes[Scenename].render.pixel_aspect_x = test_list[4]
@@ -14,6 +13,8 @@ def prerender(test_list):
 	bpy.data.scenes[Scenename].render.resolution_percentage = 100
 
 	render(test_list[0], test_list[1])
+
+	return 1
 
 if __name__ == "__main__":
 	
