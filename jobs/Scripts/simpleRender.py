@@ -8,6 +8,7 @@ import ctypes
 import pyscreenshot
 import platform
 
+
 def main():
     stage_report = [{'status': 'INIT'}, {'log': ['simpleRender.py start']}]
     parser = argparse.ArgumentParser()
@@ -43,13 +44,18 @@ def main():
     blender_script_template = base + blender_script_template
 
     scene_list = blender_scenes.split(",\n")
-    work_dir = args.output 
+    work_dir = args.output
 
-    RebootScript = blender_script_template.format(work_dir = work_dir, render_mode = args.render_mode, pass_limit = args.pass_limit, 
-        res_path = args.res_path, resolution_x = args.resolution_x, resolution_y = args.resolution_y, package_name = args.package_name)
+    RebootScript = blender_script_template.format(work_dir=work_dir, render_mode=args.render_mode,
+                                                  pass_limit=args.pass_limit,
+                                                  res_path=args.res_path, resolution_x=args.resolution_x,
+                                                  resolution_y=args.resolution_y, package_name=args.package_name)
 
-    BlenderScript = blender_script_template.format(work_dir = work_dir, render_mode = args.render_mode, pass_limit = args.pass_limit, 
-        res_path = args.res_path, resolution_x = args.resolution_x, resolution_y = args.resolution_y, package_name = args.package_name, start = 0)
+    BlenderScript = blender_script_template.format(work_dir=work_dir, render_mode=args.render_mode,
+                                                   pass_limit=args.pass_limit,
+                                                   res_path=args.res_path, resolution_x=args.resolution_x,
+                                                   resolution_y=args.resolution_y, package_name=args.package_name,
+                                                   start=0)
 
     try:
         os.makedirs(work_dir)
@@ -61,10 +67,9 @@ def main():
         f.write(BlenderScript)
 
     cmdRun = ""
-    for each in scene_list :
+    for each in scene_list:
         cmdRun += '"{tool}" -b "{scene}" -P "{template}"\n' \
-            .format(tool=tool,scene = os.path.join(args.res_path, each), template = BlenderScriptPath)
-
+            .format(tool=tool, scene=os.path.join(args.res_path, each), template=BlenderScriptPath)
 
     system_pl = platform.system()
     if (system_pl == 'Linux'):
@@ -73,14 +78,14 @@ def main():
             f.write(cmdRun)
 
         os.system('chmod +x {}'.format(cmdScriptPath))
-    elif (system_pl == "Windows" ):
+    elif (system_pl == "Windows"):
         cmdScriptPath = os.path.join(work_dir, 'script.bat')
         with open(cmdScriptPath, 'w') as f:
             f.write(cmdRun)
 
     os.chdir(work_dir)
 
-    p = subprocess.Popen(cmdScriptPath, shell = True   , stdout = subprocess.PIPE, stderr = subprocess.PIPE)
+    p = subprocess.Popen(cmdScriptPath, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     stdout, stderr = p.communicate()
 
     with open(os.path.join(args.output, "log"), 'w') as file:
@@ -91,10 +96,9 @@ def main():
         stderr = stderr.decode("utf-8")
         file.write(stderr)
 
-    #p = psutil.Popen(os.path.join(args.output, 'script.bat'), stdout=subprocess.PIPE)
+    # p = psutil.Popen(os.path.join(args.output, 'script.bat'), stdout=subprocess.PIPE)
     rc = -1
 
-    
     try:
         rc = p.wait(timeout=100)
     except psutil.TimeoutExpired as err:
@@ -106,12 +110,6 @@ def main():
         p.terminate()
 
     if rc == 0:
-        #files = os.listdir(work_dir)
-        #json_files = list(filter(lambda x: x.endswith('RPR.json'), files))
-        #with open(work_dir + "/../../../../jobs/Tests/" + args.package_name + "/expected.txt") as f:
-        #    expected_count = f.read()
-        #if (len(json_files)) != int(expected_count):
-        #    main()
         print('passed')
         stage_report[0]['status'] = 'OK'
         stage_report[1]['log'].append('subprocess PASSED')

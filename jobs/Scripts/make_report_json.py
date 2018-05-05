@@ -18,7 +18,6 @@ result_json = ""
 cpu_name = cpuinfo.get_cpu_info()['brand']
 
 for f in range(len(json_files)):
-
     with open(os.path.join(directory, json_files[f]), 'r') as w:
         json_report = w.read()
     json_report = json_report.replace("CPU0", cpu_name)
@@ -44,7 +43,7 @@ for file in range(len(json_files)):
         text = text + "," + "\r\n"
         result_json += text
 
-    elif (file == (len(json_files))-1):
+    elif (file == (len(json_files)) - 1):
         f = open(os.path.join(directory, json_files[file]), 'r')
         text = f.read()
         f.close()
@@ -52,7 +51,7 @@ for file in range(len(json_files)):
         result_json += text
 
     else:
-        f = open(os.path.join(directory, json_files[file]), 'r')    
+        f = open(os.path.join(directory, json_files[file]), 'r')
         text = f.read()
         f.close()
         text = text[2:]
