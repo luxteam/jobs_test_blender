@@ -10,9 +10,8 @@ def prerender(test_list):
 		bpy.data.scenes[Scenename].render.resolution_y = {resolution_y}
 
 	render(test_list[0], test_list[1])
-
 	copyfile("{work_dir}" + "/../../../../jobs/Tests/pass.jpg", "{work_dir}/Color/" + test_list[0] + ".jpg")
-
+	
 	return 1
 
 if __name__ == "__main__":
