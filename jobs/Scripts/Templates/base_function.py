@@ -50,7 +50,6 @@ def render(*argv):
 	bpy.data.scenes[Scenename].render.image_settings.color_mode = 'RGB'
 
 	name_scene = argv[0]
-	test_case = argv[0]
 	script_info = argv[1]
 
 	# output
@@ -95,7 +94,7 @@ def render(*argv):
 	report['render_color_path'] = r"Color/" + name_scene + "." + image_format
 	report['date_time'] = datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
 	report['difference_color'] = "not compared yet"
-	report['test_case'] = test_case
+	report['test_case'] = name_scene
 	report['script_info'] = script_info
 
 	with open(log_name, 'w') as file:

@@ -11,12 +11,19 @@ def prerender(test_list):
 		bpy.data.scenes[Scenename].render.resolution_x = {resolution_x}
 		bpy.data.scenes[Scenename].render.resolution_y = {resolution_y}
 
+	bpy.context.scene.use_nodes = True
+	nodes = bpy.data.scenes[0].node_tree.nodes
+	file_output = nodes["File Output"]
+	file_output.base_path = r"{work_dir}" + "/Color"
+
 	bpy.context.scene.render.layers.active.rpr_data.passes_aov.enable = True
-	bpy.context.scene.render.layers.active.rpr_data.passes_aov.passesStates[1] = False
 
 	bpy.context.scene.render.layers.active.rpr_data.passes_aov.passesStates[test_list[2]] = True
+
 	render(test_list[0], test_list[1])
 	bpy.context.scene.render.layers.active.rpr_data.passes_aov.passesStates[test_list[2]] = False
+	bpy.context.scene.render.layers.active.rpr_data.passes_aov.passesStates[0] = True
+
 	return 1
 	
 if __name__ == "__main__":
