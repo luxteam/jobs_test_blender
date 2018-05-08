@@ -57,7 +57,7 @@ def test_IBL_on():
 
 	bpy.context.scene.world.rpr_data.environment.enable = True
 	bpy.context.scene.world.rpr_data.environment.type = 'IBL'
-	bpy.context.scene.world.rpr_data.environment.ibl.type = '1COLOR'
+	bpy.context.scene.world.rpr_data.environment.ibl.type = 'COLOR'
 	bpy.context.scene.world.rpr_data.environment.ibl.use_ibl_map = False
 
 def test_IBL_exr():

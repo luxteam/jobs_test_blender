@@ -12,7 +12,7 @@ if [ "$TESTS_FILTER" == "" ] || [ "$TESTS_FILTER" == "null" ] ; then
 fi
 
 if [ "$TEST_PACKAGE" == "" ] || [ "$TEST_PACKAGE" == "null" ] ; then
-    TEST_PACKAGE=""
+    TEST_PACKAGE=smoke
 fi
 
-python ../jobs_launcher/executeTests.py --file_filter "$TEST_PACKAGE" --tests_root ../jobs --work_root ../Work/Results --work_dir Blender --cmd_variables Tool "/home/user/Desktop/blender-2.79-linux-glibc219-x86_64/blender" RenderDevice "$RENDER_DEVICE" TestsFilter "$TESTS_FILTER" ResPath "/home/user/Downloads/BlenderAssets/scenes" PassLimit 1 rx 0 ry 0
+python ../jobs_launcher/executeTests.py --file_filter "$TEST_PACKAGE" --tests_root ../jobs --work_root ../Work/Results --work_dir Blender --cmd_variables Tool "/home/user/Desktop/blender-2.79-linux-glibc219-x86_64/blender" RenderDevice "$RENDER_DEVICE" TestsFilter "$TESTS_FILTER" ResPath "/home/user/Downloads/BlenderAssets/scenes" PassLimit 100 rx 0 ry 0
