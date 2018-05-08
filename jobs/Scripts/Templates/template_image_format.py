@@ -19,9 +19,9 @@ if __name__ == "__main__":
 	list_tests = [
 	["BL_RS_IF_001", ["Image format: jpeg"], "JPEG"], 
 	["BL_RS_IF_002", ["Image format: bmp"], "BMP"], 
-	["BL_RS_IF_003", ["Image format: png"], "PNG"], 
-	["BL_RS_IF_004", ["Image format: iris"], "IRIS"], 
-	["BL_RS_IF_005", ["Image format: jpeg2000"], "JPEG2000"], 
+	["BL_RS_IF_003", ["Image format: png"], "1PNG"], 
+	["BL_RS_IF_004", ["Image format: iris"], "1IRIS"], 
+	["BL_RS_IF_005", ["Image format: jpeg2000"], "1JPEG2000"], 
 	["BL_RS_IF_006", ["Image format: targa"], "TARGA"], 
 	["BL_RS_IF_007", ["Image format: targa_raw"], "TARGA_RAW"], 
 	["BL_RS_IF_008", ["Image format: dpx"], "DPX"],

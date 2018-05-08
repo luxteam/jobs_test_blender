@@ -96,6 +96,7 @@ def render(*argv):
 	report['difference_color'] = "not compared yet"
 	report['test_case'] = name_scene
 	report['script_info'] = script_info
+	report['test_status'] = "undefined"
 
 	with open(log_name, 'w') as file:
 		json.dump([report], file, indent=' ')
@@ -152,10 +153,18 @@ def create_failed_report(*argv):
 	report['difference_color'] = "not compared yet"
 	report['test_case'] = test_case
 	report['script_info'] = script_info
+	report['test_status'] = "undefined"
 
 	with open(log_name, 'w') as file:
 		json.dump([report], file, indent=' ')
 
+def write_status(directory, status):
+	with open(directory, 'r') as w:
+		json_report = w.read()
+	json_report = json_report.replace("undefined", status)
+	json_report = json.loads(json_report)
+	with open(directory, 'w') as file:
+		json.dump(json_report, file, indent=' ')
 
 def launch_tests():
 	files = os.listdir(r"{work_dir}")
@@ -168,6 +177,10 @@ def launch_tests():
 		rc = -1
 		try:
 			rc = prerender(list_tests[i])
+
+			if rc:
+				write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'pass')
+				
 			if (rc == 2):
 				exit()
 			status = 0
@@ -175,12 +188,14 @@ def launch_tests():
 			pass
 		if (rc == -1):
 			create_failed_report(list_tests[i][0], list_tests[i][1], "failed")
+			write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'failed')
 			status -= 1
 			if (status == -3):
 				files = os.listdir(r"{work_dir}")
 				json_files = list(filter(lambda x: x.endswith('RPR.json'), files))
 				for i in range(len(json_files), len(list_tests)):
 					create_failed_report(list_tests[i][0], list_tests[i][1], "skipped")
+					write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'skipped')
 				exit()
 		with open(os.path.join(r"{work_dir}", "status.txt"), 'a') as f:
 			f.write(str(rc) + ":" + str(i) + ":" + str(status) + "\n\t")
