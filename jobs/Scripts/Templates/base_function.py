@@ -179,7 +179,7 @@ def launch_tests():
 			rc = prerender(list_tests[i])
 
 			if rc:
-				write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'pass')
+				write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'passed')
 				
 			if (rc == 2):
 				exit()
