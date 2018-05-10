@@ -57,7 +57,7 @@ if __name__ == "__main__":
 	["BL_RS_AOV_018", ["AOV: Direct Reflection"], 'Direct Reflection', 17], 
 	["BL_RS_AOV_019", ["AOV: Indirect Diffuse"], 'Indirect Diffuse', 18], 
 	["BL_RS_AOV_020", ["AOV: Indirect Reflection"], 'Indirect Reflection', 19], 
-	["BL_RS_AOV_021", ["AOV: Refration"], 'Refration', 20],
+	["BL_RS_AOV_021", ["AOV: Refraction"], 'Refraction', 20],
 	["BL_RS_AOV_022", ["AOV: Volume"], 'Volume', 21], 
 	["BL_RS_AOV_023", ["AOV: Opacity"], 'Opacity', 22]
 	]
