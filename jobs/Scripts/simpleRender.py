@@ -82,6 +82,13 @@ def main():
         cmdScriptPath = os.path.join(work_dir, 'script.bat')
         with open(cmdScriptPath, 'w') as f:
             f.write(cmdRun)
+    elif system_pl == 'Darwin':
+        cmdScriptPath = os.path.join(work_dir, 'script.sh')
+        with open(cmdScriptPath, 'w') as f:
+           f.write(cmdRun)
+        os.system('chmod +x {}'.format(cmdScriptPath))
+    
+    print(system_pl)
 
     os.chdir(work_dir)
 
