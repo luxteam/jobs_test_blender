@@ -88,11 +88,12 @@ def main():
     p = subprocess.Popen(cmdScriptPath, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     stdout, stderr = p.communicate()
 
-    with open(os.path.join(args.output, "log"), 'w') as file:
+    with open(os.path.join(args.output, "renderTool.log"), 'w') as file:
         stdout = stdout.decode("utf-8")
         file.write(stdout)
 
-    with open(os.path.join(args.output, "error"), 'w') as file:
+    with open(os.path.join(args.output, "renderTool.log"), 'a') as file:
+        file.write("\n ----STEDERR---- \n")
         stderr = stderr.decode("utf-8")
         file.write(stderr)
 
