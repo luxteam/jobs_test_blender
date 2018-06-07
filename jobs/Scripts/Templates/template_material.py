@@ -11,7 +11,7 @@ def main(material_name, test_case, script_info):
 		bpy.data.scenes[Scenename].render.resolution_y = {resolution_y}
 
 	matlib = material_browser.RPRMaterialLibrary()
-	matlib_path = matlib.get_library_path() + material_name + "\\" + material_name + ".xml"
+	matlib_path = matlib.get_library_path() + material_name + "/" + material_name + ".xml"
 	material = bpy.data.materials['Material']
 	material_browser.import_xml_material(matlib_path, material)
 
