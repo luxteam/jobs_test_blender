@@ -10,10 +10,9 @@ import platform
 
 
 def main():
-    stage_report = [{'status': 'INIT'}, {'log': ['simpleRender.py start']}]
+
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--stage_report', required=True)
     parser.add_argument('--tool', required=True, metavar="<path>")
     parser.add_argument('--res_path', required=True)
     parser.add_argument('--render_mode', required=True)
@@ -116,18 +115,6 @@ def main():
         for child in reversed(p.children(recursive=True)):
             child.terminate()
         p.terminate()
-
-    if rc == 0:
-        print('passed')
-        stage_report[0]['status'] = 'OK'
-        stage_report[1]['log'].append('subprocess PASSED')
-    else:
-        print('failed')
-        stage_report[0]['status'] = 'TERMINATED'
-        stage_report[1]['log'].append('subprocess FAILED and was TERMINATED')
-
-    with open(os.path.join(args.output, args.stage_report), 'w') as file:
-        json.dump(stage_report, file, indent=' ')
 
     return rc
 

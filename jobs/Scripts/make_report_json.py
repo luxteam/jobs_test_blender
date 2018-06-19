@@ -5,11 +5,9 @@ import cpuinfo
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--work_dir', required=True)
-parser.add_argument('--stage_report', required=True)
 
 args = parser.parse_args()
 directory = args.work_dir
-stage_report = [{'status': 'INIT'}, {'log': ['make_report_json.py start']}]
 
 files = os.listdir(directory)
 json_files = list(filter(lambda x: x.endswith('RPR.json'), files))
@@ -26,7 +24,6 @@ for f in range(len(json_files)):
         json.dump(json_report, file, indent=' ')
 
 for file in range(len(json_files)):
-    stage_report[1]['log'].append('processing {}'.format(json_files[file]))
 
     if (len(json_files) == 1):
         f = open(os.path.join(directory, json_files[file]), 'r')
@@ -62,8 +59,3 @@ for file in range(len(json_files)):
 with open(os.path.join(directory, "report.json"), 'w') as file:
     file.write(result_json)
 
-stage_report[0]['status'] = 'OK'
-stage_report[1]['log'].append('report.json saved')
-
-with open(os.path.join(directory, args.stage_report), 'w') as file:
-    json.dump(stage_report, file, indent=' ')

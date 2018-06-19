@@ -35,7 +35,15 @@ if __name__ == "__main__":
 	["BL_RS_CAM_004", ["RPR Camera Type: Cubemap"], 'PERSP', 'CUBEMAP', False],
 	["BL_RS_CAM_005", ["RPR Camera Type: Spherical panorama"], 'PERSP', 'SPHERICAL_PANORAMA', False],
 	["BL_RS_CAM_006", ["RPR Camera Type: Stereo cubemap"], 'PERSP', 'CUBEMAP', True],
-	["BL_RS_CAM_007", ["RPR Camera Type: Stereo spherical panorama"], 'PERSP', 'SPHERICAL_PANORAMA', True]
+	["BL_RS_CAM_007", ["RPR Camera Type: Stereo spherical panorama"], 'PERSP', 'SPHERICAL_PANORAMA', True],
+	["BL_RS_CAM_008", ["RPR Camera Type: Cubemap"], 'PANO', 'CUBEMAP', False],
+	["BL_RS_CAM_009", ["RPR Camera Type: Spherical panorama"], 'PANO', 'SPHERICAL_PANORAMA', False],
+	["BL_RS_CAM_010", ["RPR Camera Type: Stereo cubemap"], 'PANO', 'CUBEMAP', True],
+	["BL_RS_CAM_011", ["RPR Camera Type: Stereo spherical panorama"], 'PANO', 'SPHERICAL_PANORAMA', True],
+	["BL_RS_CAM_012", ["RPR Camera Type: Cubemap"], 'ORTHO', 'CUBEMAP', False],
+	["BL_RS_CAM_013", ["RPR Camera Type: Spherical panorama"], 'ORTHO', 'SPHERICAL_PANORAMA', False],
+	["BL_RS_CAM_014", ["RPR Camera Type: Stereo cubemap"], 'ORTHO', 'CUBEMAP', True],
+	["BL_RS_CAM_015", ["RPR Camera Type: Stereo spherical panorama"], 'ORTHO', 'SPHERICAL_PANORAMA', True]
 	]
 	
 	launch_tests()
