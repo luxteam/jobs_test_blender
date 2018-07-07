@@ -3,11 +3,11 @@ RENDER_DEVICE=$1
 FILE_FILTER=$2
 TESTS_FILTER=$3
 
-if [ "$RENDER_DEVICE" == "" ] || [ "$RENDER_DEVICE" == "null" ] ; then
+if [ $RENDER_DEVICE == "" ] || [ $RENDER_DEVICE == "null" ] ; then
     RENDER_DEVICE=gpu
 fi
 
-if [ "$FILE_FILTER" == "" ] || [ "$FILE_FILTER" == "null" ] ; then
+if [ $FILE_FILTER == "" ] || [ $FILE_FILTER == "null" ] ; then
     FILE_FILTER=smoke
 fi
 
