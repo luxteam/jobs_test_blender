@@ -11,4 +11,4 @@ fi
 #    FILE_FILTER=smoke
 #fi
 
-python ../jobs_launcher/executeTests.py --test_filter $TESTS_FILTER --file_filter $FILE_FILTER --tests_root ../jobs --work_root ../Work/Results --work_dir Blender --cmd_variables Tool "blender" RenderDevice $RENDER_DEVICE ResPath "$CIS_TOOLS/../TestResources/BlenderAssets/scenes" PassLimit 5 rx 0 ry 0
+python ../jobs_launcher/executeTests.py --test_filter $TESTS_FILTER --file_filter "$FILE_FILTER" --tests_root ../jobs --work_root ../Work/Results --work_dir Blender --cmd_variables Tool "blender" RenderDevice $RENDER_DEVICE ResPath "$CIS_TOOLS/../TestResources/BlenderAssets/scenes" PassLimit 5 rx 0 ry 0
