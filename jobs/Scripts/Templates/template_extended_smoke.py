@@ -4,7 +4,8 @@ def prerender(test_list):
 	Scenename = bpy.context.scene.name
 
 	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = test_list[5]
-
+	bpy.data.scenes['Scene'].render.image_settings.file_format = 'JPEG'
+	
 	if (bpy.path.basename(bpy.context.blend_data.filepath) == test_list[4]):
 
 		if (test_list[2] != "pass"):
@@ -48,9 +49,6 @@ def check_rpr_load():
 
 
 def import_fbx():
-	
-	activate_jpg_format()
-
 	bpy.context.scene.render.engine = 'RPR'
 	bpy.context.scene.world.rpr_data.environment.enable = True
 
@@ -110,9 +108,10 @@ def update_IBL_exr():
 	bpy.context.scene.world.rpr_data.environment.ibl.ibl_image = bpy.data.images.load(ibl_map, True)
 
 
-def delete_IBL():
-	bpy.context.scene.world.rpr_data.environment.enable = False
-
+def delete_map_IBL():
+	bpy.context.scene.world.rpr_data.environment.type = 'IBL'
+	bpy.context.scene.world.rpr_data.environment.ibl.type = 'COLOR'
+	bpy.context.scene.world.rpr_data.environment.ibl.use_ibl_map = False
 
 def create_sun_sky():
 	bpy.context.scene.world.rpr_data.environment.enable = True
@@ -250,7 +249,7 @@ def create_and_assign_uber():
 	check_rpr_load()
 
 	bpy.ops.object.select_all(action='DESELECT')
-	bpy.context.scene.objects.active = bpy.data.objects['Cube']
+	bpy.context.scene.objects.active = bpy.data.objects['shader_ball']
 	bpy.context.scene.objects['shader_ball'].select = True
 
 	material = bpy.data.materials.new('Uber2')
@@ -277,7 +276,7 @@ def create_and_assign_pbr():
 	check_rpr_load()
 
 	bpy.ops.object.select_all(action='DESELECT')
-	bpy.context.scene.objects.active = bpy.data.objects['Cube']
+	bpy.context.scene.objects.active = bpy.data.objects['shader_ball']
 	bpy.context.scene.objects['shader_ball'].select = True
 
 	material = bpy.data.materials.new('PBR')
@@ -298,18 +297,18 @@ def create_and_assign_pbr():
 if __name__ == '__main__':
 
 	list_tests = [
-	['BL_SM_001', ["Install RPR"], "pass", "pass", "default.blend", 1],
-	['BL_SM_002', ["Select RPR"], "pass", "pass", "default.blend", 1],
+	['BL_SM_001', ["Install RPR"], "pass", "pass", "rpr_default.blend", 1],
+	['BL_SM_002', ["Select RPR"], "pass", "pass", "rpr_default.blend", 1],
 	['BL_SM_003', ["Open RPR scene"], "pass", "pass", "rpr_default.blend", 1],
 	['BL_SM_004', ["Render empty scene", "Pass Limit: 50"], empty, empty, "rpr_default.blend", 50],
-	['BL_SM_005', ["IES", "Pass Limit: 50"], create_ies_light, delete_ies_light, "ies.blend", 50],
+	['BL_SM_005', ["IES", "Pass Limit: 50"], create_ies_light, delete_ies_light, "IES.blend", 50],
 	['BL_SM_006', ["Import FBX", "Pass Limit: 50"], import_fbx, delete_fbx, "default.blend", 50],
 	["BL_SM_007", ["Import OBJ", "Pass Limit: 50"], import_obj, empty, "default.blend", 50],
 	["BL_SM_008", ["Uber2 material", "Pass Limit: 50"], create_and_assign_uber, empty, "default.blend", 50],
 	['BL_SM_009', ["Sun_Sky", "Pass Limit: 50"], create_sun_sky, delete_sun_sky, "default.blend", 50],
 	['BL_SM_010', ["IBL", "Pass Limit: 50"], create_IBL, empty, "default.blend", 50],
 	["BL_SM_011", ["IBL with HDR", "Pass Limit: 50"], update_IBL_hdr, empty, "default.blend", 50],
-	["BL_SM_012", ["IBL with EXR", "Pass Limit: 50"], update_IBL_exr, delete_IBL, "default.blend", 50],
+	["BL_SM_012", ["IBL with EXR", "Pass Limit: 50"], update_IBL_exr, delete_map_IBL, "default.blend", 50],
 	["BL_SM_013", ["Render 1 pass"], empty, empty, "default.blend", 1],
 	["BL_SM_014", ["Render 100 pass"], empty, empty, "default.blend", 100],
 	["BL_SM_015", ["Render 500 pass"], empty, empty, "default.blend", 500],
@@ -320,7 +319,7 @@ if __name__ == '__main__':
 	["BL_SM_020", ["Image size 720HD", "Pass Limit: 50"], change_image_size_hd720, empty, "default.blend", 50],
 	["BL_SM_021", ["Image size 1500 1125", "Pass Limit: 50"], change_image_size_custom, change_image_size_default, "default.blend", 50],
 	["BL_SM_022", ["PNG format", "Pass Limit: 50"], activate_png_format, "pass", "default.blend", 50],	
-	["BL_SM_023", ["PNG format", "Pass Limit: 50"], activate_jpg_format, empty, "default.blend", 50],
+	["BL_SM_023", ["JPG format", "Pass Limit: 50"], activate_jpg_format, empty, "default.blend", 50],
 	["BL_SM_024", ["Denoiser EAW", "Pass Limit: 50"], activate_denoiser_eaw, deactivate_denoiser, "default.blend", 50],
 	["BL_SM_025", ["Denoiser LWR", "Pass Limit: 50"], activate_denoiser_lwr, deactivate_denoiser, "default.blend", 50],
 	["BL_SM_026", ["Denoiser Bilateral", "Pass Limit: 50"], activate_denoiser_bilateral, deactivate_denoiser, "default.blend", 50],

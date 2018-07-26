@@ -1,5 +1,5 @@
 rpr_default.blend,
-ies.blend,
+IES.blend,
 default.blend,
 Instances.blend,
 5_lights.blend,
