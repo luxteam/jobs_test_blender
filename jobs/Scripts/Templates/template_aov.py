@@ -49,7 +49,7 @@ if __name__ == "__main__":
 	["BL_RS_AOV_010", ["AOV: Shadow Catcher"], 'Shadow Catcher', 9], 
 	["BL_RS_AOV_011", ["AOV: Background"], 'Background', 10], 
 	["BL_RS_AOV_012", ["AOV: Emission"], 'Emission', 11],
-	["BL_RS_AOV_013", ["AOV: Velocity"], 'Velocity', 12], 
+	# ["BL_RS_AOV_013", ["AOV: Velocity"], 'Velocity', 12], 
 	["BL_RS_AOV_014", ["AOV: Direct Illumination"], 'Direct Illumination', 13], 
 	["BL_RS_AOV_015", ["AOV: Indirect Illumination"], 'Indirect Illumination', 14],
 	["BL_RS_AOV_016", ["AOV: Ambient Occlusion"], 'Ambient Occlusion', 15], 
