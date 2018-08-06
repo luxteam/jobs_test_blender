@@ -4,6 +4,7 @@
 run_dev.bat
 Baseline/
 Work/
+.idea
 
 scripts/AOV_Test.bat
 scripts/Anti_Aliasing_Test.bat

@@ -14,16 +14,16 @@ def prerender(test_list):
 	bpy.context.scene.rpr.render.denoiser.enable = True
 
 	if (test_list[2] == "bilateral" and test_list[3] == -1):
-		test_bilateral(test_list[0], test_list[1], test_list[4], test_list[5])
+		return test_bilateral(test_list[0], test_list[1], test_list[4], test_list[5])
 
 	elif (test_list[2] == "lwr" and test_list[3] == -1):    
-		test_lwr(test_list[0], test_list[1], test_list[4], test_list[5])
+		return test_lwr(test_list[0], test_list[1], test_list[4], test_list[5])
 
 	elif (test_list[2] == "eaw" and test_list[3] == -1):
-		test_eaw(test_list[0], test_list[1], test_list[4])
+		return test_eaw(test_list[0], test_list[1], test_list[4])
 
 	elif (test_list[3] != -1):
-		test_aov_denoiser(test_list[0], test_list[1], test_list[2], test_list[3])
+		return test_aov_denoiser(test_list[0], test_list[1], test_list[2], test_list[3])
 
 def test_aov_denoiser(test_case, script_info, denoiser, aov):
 	
