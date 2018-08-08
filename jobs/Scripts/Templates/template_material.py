@@ -15,7 +15,7 @@ def prerender(test):
         bpy.data.scenes[Scenename].render.resolution_y = {resolution_y}
 
     matlib = material_browser.RPRMaterialLibrary()
-    matlib_path = matlib.get_library_path() + material_name + "/" + material_name + ".xml"
+    matlib_path = matlib.get_library_path() + "/" + material_name + "/" + material_name + ".xml"
     material = bpy.data.materials['Material']
     material_browser.import_xml_material(matlib_path, material)
 
@@ -31,6 +31,6 @@ if __name__ == "__main__":
 
     list_tests = []
     for i in range(0, len(materials)):
-        list_tests.append(["BL_MAT_LIB_00" + str(i + 1), ["Material: " + materials[i]], materials[i]])
+        list_tests.append(["BL_MAT_LIB_" + str(i + 1).zfill(3), ["Material: " + materials[i]], materials[i]])
 
     launch_tests()
