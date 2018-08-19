@@ -4,6 +4,7 @@ Base_Lights
 Camera
 Denoiser
 Emissive_Light
+Extended_Smoke
 IBL
 IES
 IES_Intensity
@@ -13,6 +14,5 @@ PBR
 Pass_Limit
 Render_Mode
 Render_Stamp
-Smoke
 Sun_Sky
 Uber
