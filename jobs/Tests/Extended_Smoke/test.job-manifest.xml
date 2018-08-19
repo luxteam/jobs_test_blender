@@ -12,8 +12,8 @@
         <argument>--resolution_y {ry}</argument>
         <argument>--res_path "{ScenesDir}"</argument>
         <argument>--output "{OutputDir}"</argument>
-	    <argument>--package_name "Extended_smoke"</argument>
-        <argument>--test_list "{Root}/Tests/Extended_smoke/{TestsFilter}TestsList.txt"</argument>
+	    <argument>--package_name "Extended_Smoke"</argument>
+        <argument>--test_list "{Root}/Tests/Extended_Smoke/{TestsFilter}TestsList.txt"</argument>
     </execute>
 
     <execute command='python "{ResourcesDir}/make_report_json.py"' stage="stage2">
