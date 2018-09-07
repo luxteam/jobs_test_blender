@@ -4,7 +4,6 @@ IBL
 IES
 IES_Intensity
 Material_Library
-PBR
 Pass_Limit
 Smoke
-Uber
+
