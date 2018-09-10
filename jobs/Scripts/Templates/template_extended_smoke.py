@@ -133,22 +133,6 @@ def delete_ies_light():
 	bpy.context.object.data.rpr_lamp.ies_file_name = ""
 
 
-def activate_tone_mapping():
-	bpy.context.scene.rpr.render.tone_mapping.enable = True
-
-
-def deactivate_tone_mapping():
-	bpy.context.scene.rpr.render.tone_mapping.enable = False
-
-
-def activate_white_balance():
-	bpy.context.scene.rpr.render.white_balance.enable = True
-
-
-def deactivate_white_balance():
-	bpy.context.scene.rpr.render.white_balance.enable = False
-
-
 def activate_render_stamp():
 	bpy.data.scenes['Scene'].rpr.use_render_stamp = True
 
@@ -312,8 +296,6 @@ if __name__ == '__main__':
 	["BL_SM_013", ["Render 1 pass"], empty, empty, "default.blend", 1],
 	["BL_SM_014", ["Render 100 pass"], empty, empty, "default.blend", 100],
 	["BL_SM_015", ["Render 500 pass"], empty, empty, "default.blend", 500],
-	["BL_SM_016", ["Tone Mapping", "Pass Limit: 50"], activate_tone_mapping, deactivate_tone_mapping, "default.blend", 50],
-	["BL_SM_017", ["White balance", "Pass Limit: 50"], activate_white_balance, deactivate_white_balance, "default.blend", 50],
 	["BL_SM_018", ["Render Stamp", "Pass Limit: 50"], activate_render_stamp, deactivate_render_stamp, "default.blend", 50],
 	["BL_SM_019", ["Render mode wireframe", "Pass Limit: 50"], activate_wireframe_mode, deactivate_wireframe_mode, "default.blend", 50],
 	["BL_SM_020", ["Image size 720HD", "Pass Limit: 50"], change_image_size_hd720, empty, "default.blend", 50],
