@@ -24,34 +24,7 @@ def prerender(test_list):
 
 	elif (test_list[3] != -1):
 		return test_aov_denoiser(test_list[0], test_list[1], test_list[2], test_list[3])
-
-def test_aov_denoiser(test_case, script_info, denoiser, aov):
-	
-	bpy.context.scene.render.layers.active.rpr_data.passes_aov.enable = True
-	bpy.context.scene.render.layers.active.rpr_data.passes_aov.passesStates[1] = False
-	
-	bpy.context.scene.rpr.render.denoiser.filter_type = denoiser
-
-	if (denoiser == "bilateral"):
-		bpy.context.scene.rpr.render.denoiser.color_sigma = 0.1
-		bpy.context.scene.rpr.render.denoiser.normal_sigma = 0.1
-		bpy.context.scene.rpr.render.denoiser.p_sigma = 0.1
-		bpy.context.scene.rpr.render.denoiser.trans_sigma = 0.1
-		bpy.context.scene.rpr.render.denoiser.radius = 5
-	elif (denoiser == "lwr"):
-		bpy.context.scene.rpr.render.denoiser.samples = 4
-		bpy.context.scene.rpr.render.denoiser.half_window = 4
-		bpy.context.scene.rpr.render.denoiser.bandwidth = 0.1
-	elif (denoiser == "eaw"):
-		bpy.context.scene.rpr.render.denoiser.color_sigma = 0.1
-		bpy.context.scene.rpr.render.denoiser.normal_sigma = 0.1
-		bpy.context.scene.rpr.render.denoiser.depth_sigma = 0.1
-		bpy.context.scene.rpr.render.denoiser.trans_sigma = 0.1
-	
-	bpy.context.scene.render.layers.active.rpr_data.passes_aov.passesStates[aov] = True
-	render(test_case, script_info)
-	bpy.context.scene.render.layers.active.rpr_data.passes_aov.passesStates[aov] = False
-	return 1
+		
 
 def test_bilateral(test_case, script_info, radius, sigma):
 
