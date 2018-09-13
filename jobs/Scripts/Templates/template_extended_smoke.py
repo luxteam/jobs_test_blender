@@ -222,6 +222,8 @@ def delete_area_light():
 def activate_medium_quality():
 	bpy.context.scene.rpr.render.global_illumination.max_ray_depth = 15
 	bpy.context.scene.rpr.render.global_illumination.max_refraction_depth = 10
+	bpy.context.scene.rpr.render.global_illumination.use_clamp_irradiance = True
+	bpy.context.scene.rpr.render.global_illumination.clamp_irradiance = 1.0
 
 
 def deactivate_medium_quality():
