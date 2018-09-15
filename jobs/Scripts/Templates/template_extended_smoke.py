@@ -313,7 +313,7 @@ if __name__ == '__main__':
 	["BL_SM_031", ["Instances", "Pass Limit: 50"], empty, empty, "Instances.blend", 50],
 	["BL_SM_032", ["5 lights", "Pass Limit: 50"], empty, empty, "5_lights.blend", 50],
 	["BL_SM_033", ["AOV SC", "Pass Limit: 50"], empty, empty, "AOV_SC.blend", 50],
-	["BL_SM_034", ["SSS", "Pass Limit: 50"], empty, empty, "SSS_test.blend", 50],
+	["BL_SM_034", ["SSS", "Pass Limit: 50"], empty, empty, "SSS_Test.blend", 50],
 	["BL_SM_035", ["Displacement", "Pass Limit: 50"], empty, empty, "Displacement.blend", 50],
 	["BL_SM_036", ["Quality", "Pass Limit: 50"], activate_medium_quality, deactivate_medium_quality, "WaterInsideGlass.blend", 50],
 	]
