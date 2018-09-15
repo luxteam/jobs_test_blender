@@ -195,7 +195,7 @@ def import_rpr_matlib():
 	check_rpr_load()
 	material_name='Gold'
 	matlib = material_browser.RPRMaterialLibrary()
-	matlib_path = matlib.get_library_path() + material_name + "\\" + material_name + ".xml"
+	matlib_path = matlib.get_library_path() + material_name + "/" + material_name + ".xml"
 	material = bpy.data.materials['Material']
 	material_browser.import_xml_material(matlib_path, material)
 
