@@ -193,9 +193,8 @@ def deactivate_denoiser():
 
 def import_rpr_matlib():
 	check_rpr_load()
-	material_name='Gold'
-	matlib = material_browser.RPRMaterialLibrary()
-	matlib_path = matlib.get_library_path() + material_name + "/" + material_name + ".xml"
+	material_name= 'Gold.xml'
+	matlib_path = os.path.join(material_browser.RPRMaterialLibrary().get_library_path(), material_name.split('.')[0], material_name)
 	material = bpy.data.materials['Material']
 	material_browser.import_xml_material(matlib_path, material)
 
