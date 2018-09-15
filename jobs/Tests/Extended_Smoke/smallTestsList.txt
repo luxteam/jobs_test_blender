@@ -4,6 +4,6 @@ default.blend,
 Instances.blend,
 5_lights.blend,
 AOV_SC.blend,
-SSS_test.blend,
+SSS_Test.blend,
 Displacement.blend,
 WaterInsideGlass.blend
