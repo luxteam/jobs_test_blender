@@ -309,7 +309,6 @@ if __name__ == '__main__':
 	["BL_SM_026", ["Denoiser Bilateral", "Pass Limit: 50"], activate_denoiser_bilateral, deactivate_denoiser, "default.blend", 50],
 	["BL_SM_027", ["PBR", "Pass Limit: 50"], create_and_assign_pbr, empty, "default.blend", 50],
 	["BL_SM_028", ["Mat lib", "Pass Limit: 50"], import_rpr_matlib, empty, "default.blend", 50],
-	["BL_SM_028", ["Mat lib", "Pass Limit: 50"], import_rpr_matlib, empty, "default.blend", 50],
 	["BL_SM_029", ["AOV Geometric Normal", "Pass Limit: 50"], activate_aov, deactivate_aov, "default.blend", 50],
 	["BL_SM_030", ["Area light", "Pass Limit: 50"], create_area_light, delete_area_light, "default.blend", 50],
 	["BL_SM_031", ["Instances", "Pass Limit: 50"], empty, empty, "Instances.blend", 50],
