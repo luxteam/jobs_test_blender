@@ -10,7 +10,6 @@ def prerender(test_list):
 		bpy.data.scenes[Scenename].render.resolution_x = {resolution_x}
 		bpy.data.scenes[Scenename].render.resolution_y = {resolution_y}
 
-	bpy.data.lamps["Lamp"].rpr_lamp.ies_file_name = os.path.join("{res_path}", "Candle.fbm" , "PD6R12ED010- PDM6835-694SNB.ies")
 	bpy.context.scene.rpr.render.denoiser.enable = True
 
 	if (test_list[2] == "bilateral" and test_list[3] == -1):
