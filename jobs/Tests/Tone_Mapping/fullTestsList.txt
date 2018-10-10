@@ -1,4 +1,0 @@
-ComplexTestUber.blend,
-TestBallsCoat.blend,
-TestBallsEmissive.blend,
-TestBallsReflect.blend

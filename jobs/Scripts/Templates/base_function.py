@@ -104,7 +104,7 @@ def render(*argv):
 		json.dump([report], file, indent=' ')
 
 
-def create_failed_report(*argv):
+def create_report(*argv):
 	Scenename = bpy.context.scene.name
 
 	device_name = ""
@@ -130,11 +130,7 @@ def create_failed_report(*argv):
 			mod = sys.modules[mod_name]
 			ver = mod.bl_info.get('version')
 			version = str(ver[0]) + "." + str(ver[1]) + "." + str(ver[2])
-	'''
-	image_format = (bpy.data.scenes[Scenename].render.image_settings.file_format).lower()
-	if (image_format == 'jpeg'):
-		image_format = 'jpg'
-		'''
+			
 	image_format = 'jpg'
 
 	# LOG
@@ -189,14 +185,14 @@ def launch_tests():
 		except Exception:
 			pass
 		if (rc == -1):
-			create_failed_report(list_tests[i][0], list_tests[i][1], "failed")
+			create_report(list_tests[i][0], list_tests[i][1], "failed")
 			write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'failed')
 			status -= 1
 			if (status == -3):
 				files = os.listdir(r"{work_dir}")
 				json_files = list(filter(lambda x: x.endswith('RPR.json'), files))
 				for i in range(len(json_files), len(list_tests)):
-					create_failed_report(list_tests[i][0], list_tests[i][1], "skipped")
+					create_report(list_tests[i][0], list_tests[i][1], "skipped")
 					write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'skipped')
 				exit()
 		with open(os.path.join(r"{work_dir}", "status.txt"), 'a') as f:

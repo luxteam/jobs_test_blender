@@ -1,6 +1,0 @@
-TestBallsCoat.blend,
-TestBallsEmissive.blend,
-TestBallsReflect.blend,
-TestBallsRefract.blend,
-TestSceneMetalls.blend,
-ComplexTestUber.blend
