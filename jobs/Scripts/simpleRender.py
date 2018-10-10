@@ -23,9 +23,7 @@ def createArgsParser():
 
     return parser
 
-def main():
-
-    args = createArgsParser().parse_args()
+def main(args):
 
     work_dir = args.output
 
@@ -41,11 +39,6 @@ def main():
                                                    pass_limit=args.pass_limit,
                                                    res_path=args.res_path, resolution_x=args.resolution_x,
                                                    resolution_y=args.resolution_y, package_name=args.package_name)
-
-    try:
-        os.makedirs(work_dir)
-    except BaseException:
-        pass
 
     BlenderScriptPath = os.path.join(work_dir, 'script.py')
     with open(BlenderScriptPath, 'w') as f:
@@ -88,5 +81,30 @@ def main():
 
 
 if __name__ == "__main__":
-    rc = main()
-    exit(rc)
+
+    args = createArgsParser().parse_args()
+
+    try:
+        os.makedirs(args.output)
+    except OSError as e:
+        pass
+
+    def getJsonCount():
+        return len(list(filter(lambda x: x.endswith('RPR.json'), os.listdir(args.output))))
+
+    def totalCount():
+        try:        
+            with open(os.path.join(os.path.dirname(__file__),  args.template)) as f:
+                script_template = f.read()
+            return len(script_template.split("[\"BL")) - 1 # -1 because first element is "" (split)
+        except OSError as e:
+            return -1
+
+    total_count = totalCount()
+    current_test = 0
+
+    while current_test < total_count:
+        rc = main(args) 
+        current_test = getJsonCount()
+    
+    exit(1)

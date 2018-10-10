@@ -29,7 +29,7 @@ def prerender(test_list):
 if __name__ == "__main__":
 	
 	list_tests = [
-	['BL_L_INTLT_001', ["Testing intensity with 8 IES"], "IESintensity.blend"]
+	["BL_L_INTLT_001", ["Testing intensity with 8 IES"], "IESintensity.blend"]
 	]
 
 	launch_tests()

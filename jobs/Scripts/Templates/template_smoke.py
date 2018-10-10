@@ -280,16 +280,16 @@ def create_and_assign_pbr():
 if __name__ == '__main__':
 
 	list_tests = [
-	['BL_SM_001', ["Install RPR"], "pass", "pass", "rpr_default.blend", 1],
-	['BL_SM_002', ["Select RPR"], "pass", "pass", "rpr_default.blend", 1],
-	['BL_SM_003', ["Open RPR scene"], "pass", "pass", "rpr_default.blend", 1],
-	['BL_SM_004', ["Render empty scene", "Pass Limit: 50"], empty, empty, "rpr_default.blend", 50],
-	['BL_SM_005', ["IES", "Pass Limit: 50"], create_ies_light, delete_ies_light, "IES.blend", 50],
-	['BL_SM_006', ["Import FBX", "Pass Limit: 50"], import_fbx, delete_fbx, "default.blend", 50],
+	["BL_SM_001", ["Install RPR"], "pass", "pass", "rpr_default.blend", 1],
+	["BL_SM_002", ["Select RPR"], "pass", "pass", "rpr_default.blend", 1],
+	["BL_SM_003", ["Open RPR scene"], "pass", "pass", "rpr_default.blend", 1],
+	["BL_SM_004", ["Render empty scene", "Pass Limit: 50"], empty, empty, "rpr_default.blend", 50],
+	["BL_SM_005", ["IES", "Pass Limit: 50"], create_ies_light, delete_ies_light, "IES.blend", 50],
+	["BL_SM_006", ["Import FBX", "Pass Limit: 50"], import_fbx, delete_fbx, "default.blend", 50],
 	["BL_SM_007", ["Import OBJ", "Pass Limit: 50"], import_obj, empty, "default.blend", 50],
 	["BL_SM_008", ["Uber2 material", "Pass Limit: 50"], create_and_assign_uber, empty, "default.blend", 50],
-	['BL_SM_009', ["Sun_Sky", "Pass Limit: 50"], create_sun_sky, delete_sun_sky, "default.blend", 50],
-	['BL_SM_010', ["IBL", "Pass Limit: 50"], create_IBL, empty, "default.blend", 50],
+	["BL_SM_009", ["Sun_Sky", "Pass Limit: 50"], create_sun_sky, delete_sun_sky, "default.blend", 50],
+	["BL_SM_010", ["IBL", "Pass Limit: 50"], create_IBL, empty, "default.blend", 50],
 	["BL_SM_011", ["IBL with HDR", "Pass Limit: 50"], update_IBL_hdr, empty, "default.blend", 50],
 	["BL_SM_012", ["IBL with EXR", "Pass Limit: 50"], update_IBL_exr, delete_map_IBL, "default.blend", 50],
 	["BL_SM_013", ["Render 1 pass"], empty, empty, "default.blend", 1],
@@ -313,7 +313,7 @@ if __name__ == '__main__':
 	["BL_SM_033", ["AOV SC", "Pass Limit: 50"], empty, empty, "AOV_SC.blend", 50],
 	["BL_SM_034", ["SSS", "Pass Limit: 50"], empty, empty, "SSS_Test.blend", 50],
 	["BL_SM_035", ["Displacement", "Pass Limit: 50"], empty, empty, "Displacement.blend", 50],
-	["BL_SM_036", ["Quality", "Pass Limit: 50"], activate_medium_quality, deactivate_medium_quality, "WaterInsideGlass.blend", 50],
+	["BL_SM_036", ["Quality", "Pass Limit: 50"], activate_medium_quality, deactivate_medium_quality, "WaterInsideGlass.blend", 50]
 	]
 
 	launch_tests()

@@ -19,7 +19,7 @@ def prerender(test_list):
 if __name__ == "__main__":
 		
 	list_tests = [
-	['BL_L_EMIS_001', ["Scene with Emissive material as light"], "EmissiveLight.blend"],
+	["BL_L_EMIS_001", ["Scene with Emissive material as light"], "EmissiveLight.blend"],
 	]
 
 	launch_tests()
