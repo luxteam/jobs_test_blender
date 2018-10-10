@@ -1,15 +1,12 @@
 
 
-def prerender(test):
-
-    test_case = test[0]
-    script_info = test[1]
-    material_name = test[3]
+def prerender(test_list):
     
-    Scenename = bpy.context.scene.name
-
-    if Scenename != test_list[2]:
+    scene = bpy.path.basename(bpy.context.blend_data.filepath)
+    if scene != test_list[2]:
         bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{res_path}", test_list[2]))
+
+    Scenename = bpy.context.scene.name
 
     bpy.context.scene.rpr.use_render_stamp = False
     bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = {pass_limit}
@@ -20,11 +17,11 @@ def prerender(test):
         bpy.data.scenes[Scenename].render.resolution_y = {resolution_y}
 
     matlib = material_browser.RPRMaterialLibrary()
-    matlib_path = matlib.get_library_path() + "/" + material_name + "/" + material_name + ".xml"
+    matlib_path = matlib.get_library_path() + "/" + test_list[3] + "/" + test_list[3] + ".xml"
     material = bpy.data.materials['Material']
     material_browser.import_xml_material(matlib_path, material)
 
-    render(test_case, script_info)
+    render(test_list[0], test_list[1])
     return 1
 
 

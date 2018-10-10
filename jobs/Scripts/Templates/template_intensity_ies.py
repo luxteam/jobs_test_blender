@@ -1,9 +1,10 @@
 def prerender(test_list):
 
-	Scenename = bpy.context.scene.name
-
-	if Scenename != test_list[2]:
+	scene = bpy.path.basename(bpy.context.blend_data.filepath)
+	if scene != test_list[2]:
 		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{res_path}", test_list[2]))
+
+	Scenename = bpy.context.scene.name
 
 	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = {pass_limit}
 	bpy.data.scenes[Scenename].render.image_settings.file_format = 'JPEG'

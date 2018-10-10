@@ -1,10 +1,11 @@
 
 def prerender(test_list):
 
-	Scenename = bpy.context.scene.name
-
-	if Scenename != test_list[2]:
+	scene = bpy.path.basename(bpy.context.blend_data.filepath)
+	if scene != test_list[2]:
 		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{res_path}", test_list[2]))
+
+	Scenename = bpy.context.scene.name
 
 	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = {pass_limit}
 	bpy.data.scenes[Scenename].render.image_settings.file_format = 'JPEG'
@@ -20,8 +21,8 @@ def prerender(test_list):
 
 	if (test_list[4] != 'no_rpr_camera'):
 		bpy.context.scene.rpr.render.camera.override_camera_settings = True
-		bpy.context.scene.rpr.render.camera.panorama_type = test_list[4]
-		if (test_list[5]):
+		bpy.context.scene.rpr.render.camera.panorama_type = test_list[5]
+		if (test_list[6]):
 			bpy.context.scene.rpr.render.camera.stereo = True
 	else:
 		bpy.context.scene.rpr.render.camera.override_camera_settings = False

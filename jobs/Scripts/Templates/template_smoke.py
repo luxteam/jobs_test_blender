@@ -1,29 +1,24 @@
 
 def prerender(test_list):
 
-	Scenename = bpy.context.scene.name
-
-	if Scenename != test_list[4]:
+	scene = bpy.path.basename(bpy.context.blend_data.filepath)
+	if scene != test_list[4]:
 		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{res_path}", test_list[4]))
 
+	Scenename = bpy.context.scene.name
+
 	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = test_list[5]
-	bpy.data.scenes['Scene'].render.image_settings.file_format = 'JPEG'
+	bpy.data.scenes[Scenename].render.image_settings.file_format = 'JPEG'
 	
 	if (bpy.path.basename(bpy.context.blend_data.filepath) == test_list[4]):
 
 		if (test_list[2] != "pass"):
 			test_list[2]()
-	
-		render(test_list[0], test_list[1])
+			render(test_list[0], test_list[1])
+			test_list[3]()			
 
-		if (test_list[3] != "pass"):
-			test_list[3]()
-
-		if (test_list[2] == "pass" or test_list[3] == "pass"):
-			if not os.path.exists("{work_dir}" + "/Color"):
-   				os.makedirs("{work_dir}" + "/Color")
-			copyfile("{work_dir}" + "/../../../../jobs/Tests/pass.jpg", "{work_dir}/Color/" + test_list[0] + ".jpg")
-			return 1
+		else:
+			create_report(test_list[0], test_list[1], "pass")
 
 		return 1
 
@@ -304,7 +299,7 @@ if __name__ == '__main__':
 	["BL_SM_019", ["Render mode wireframe", "Pass Limit: 50"], activate_wireframe_mode, deactivate_wireframe_mode, "default.blend", 50],
 	["BL_SM_020", ["Image size 720HD", "Pass Limit: 50"], change_image_size_hd720, empty, "default.blend", 50],
 	["BL_SM_021", ["Image size 1500 1125", "Pass Limit: 50"], change_image_size_custom, change_image_size_default, "default.blend", 50],
-	["BL_SM_022", ["PNG format", "Pass Limit: 50"], activate_png_format, "pass", "default.blend", 50],	
+	["BL_SM_022", ["PNG format", "Pass Limit: 50"], activate_png_format, empty, "default.blend", 50],	
 	["BL_SM_023", ["JPG format", "Pass Limit: 50"], activate_jpg_format, empty, "default.blend", 50],
 	["BL_SM_024", ["Denoiser EAW", "Pass Limit: 50"], activate_denoiser_eaw, deactivate_denoiser, "default.blend", 50],
 	["BL_SM_025", ["Denoiser LWR", "Pass Limit: 50"], activate_denoiser_lwr, deactivate_denoiser, "default.blend", 50],

@@ -37,16 +37,10 @@ def main():
 
     blender_script_template = base + blender_script_template
 
-    RebootScript = blender_script_template.format(work_dir=work_dir, render_mode=args.render_mode,
-                                                  pass_limit=args.pass_limit,
-                                                  res_path=args.res_path, resolution_x=args.resolution_x,
-                                                  resolution_y=args.resolution_y, package_name=args.package_name)
-
     BlenderScript = blender_script_template.format(work_dir=work_dir, render_mode=args.render_mode,
                                                    pass_limit=args.pass_limit,
                                                    res_path=args.res_path, resolution_x=args.resolution_x,
-                                                   resolution_y=args.resolution_y, package_name=args.package_name,
-                                                   start=0)
+                                                   resolution_y=args.resolution_y, package_name=args.package_name)
 
     try:
         os.makedirs(work_dir)
