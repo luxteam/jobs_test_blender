@@ -21,8 +21,8 @@ def prerender(test_list):
 
 	if (test_list[4] != 'no_rpr_camera'):
 		bpy.context.scene.rpr.render.camera.override_camera_settings = True
-		bpy.context.scene.rpr.render.camera.panorama_type = test_list[5]
-		if (test_list[6]):
+		bpy.context.scene.rpr.render.camera.panorama_type = test_list[4]
+		if (test_list[5]):
 			bpy.context.scene.rpr.render.camera.stereo = True
 	else:
 		bpy.context.scene.rpr.render.camera.override_camera_settings = False

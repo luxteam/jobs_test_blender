@@ -96,7 +96,7 @@ if __name__ == "__main__":
         try:        
             with open(os.path.join(os.path.dirname(__file__),  args.template)) as f:
                 script_template = f.read()
-            return len(script_template.split("[\"BL")) - 1 # -1 because first element is "" (split)
+            return len(script_template.replace(" ", "").split(",\n[\"BL"))
         except OSError as e:
             return -1
 
