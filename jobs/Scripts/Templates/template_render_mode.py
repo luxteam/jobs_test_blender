@@ -26,7 +26,7 @@ if __name__ == "__main__":
 	["BL_RS_RM_006", ["Render mode: Global illumination"], 'GLOBAL_ILLUMINATION'],
 	["BL_RS_RM_007", ["Render mode: Direct illumination no shadow"], 'DIRECT_ILLUMINATION_NO_SHADOW'],
 	["BL_RS_RM_008", ["Render mode: Direct illumination"], 'DIRECT_ILLUMINATION'], 
-	["BL_RS_RM_009", ["Render mode: Diffuse"], 'DIFFUSE'],
+	# ["BL_RS_RM_009", ["Render mode: Diffuse"], 'DIFFUSE'],
 	["BL_RS_RM_010", ["Render mode: Ambient occlusion"], 'AMBIENT_OCCLUSION']
 	]
 	
