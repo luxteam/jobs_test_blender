@@ -124,7 +124,7 @@ def delete_sun_sky():
 
 
 def create_ies_light():
-	ies = os.path.join("{res_path}", "Candle.fbm", "PD6R12ED010- PDM6835-694SNB.ies")
+	ies = os.path.join("{res_path}", "ies", "1.ies")
 	bpy.data.lamps["Lamp"].rpr_lamp.ies_file_name = ies
 	bpy.context.object.data.rpr_lamp.intensity = 100
 
