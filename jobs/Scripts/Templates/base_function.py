@@ -72,8 +72,15 @@ def render(*argv):
 			ver = mod.bl_info.get('version')
 			version = str(ver[0]) + "." + str(ver[1]) + "." + str(ver[2])
 
-	image_format = 'jpg'
-	
+
+	image_format = 	bpy.data.scenes[Scenename].render.image_settings.file_format
+	if image_format == 'JPEG':
+		image_format = 'jpg'
+	elif image_format == 'PNG':
+		image_format = 'png'
+	else:
+		image_format = 'jpg'
+
 	# LOG
 	name_scene_for_json = name_scene + "_RPR"
 	log_name = os.path.join(r'{work_dir}', name_scene_for_json + ".json")
