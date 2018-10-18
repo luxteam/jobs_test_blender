@@ -18,9 +18,8 @@ def prerender(test_list):
 	if (test_list[2] == 'analytical_sky'):
 		bpy.context.scene.world.rpr_data.environment.sun_sky.azimuth = test_list[4]
 		bpy.context.scene.world.rpr_data.environment.sun_sky.altitude = test_list[5]
-	elif (test_list[2] == 'date_time_location'):
-		bpy.ops.rpr.op_get_time_now()
-
+	elif (test_list[2] == 'date_time_location'):S
+		
 		if (test_list[6] == "Moscow"):
 			bpy.context.scene.world.rpr_data.environment.sun_sky.time_zone = 3
 			bpy.context.scene.world.rpr_data.environment.sun_sky.latitude = 0.973583
