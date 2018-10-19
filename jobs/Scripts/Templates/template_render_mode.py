@@ -22,7 +22,7 @@ if __name__ == "__main__":
 	["BL_RS_RM_002", ["Render mode: Texcoord"], 'TEXCOORD'],
 	["BL_RS_RM_003", ["Render mode: Position"], 'POSITION'], 
 	["BL_RS_RM_004", ["Render mode: Normal"], 'NORMAL'], 
-	["BL_RS_RM_005", ["Render mode: Material index"], 'MATERIAL_INDEX'], 
+	# ["BL_RS_RM_005", ["Render mode: Material index"], 'MATERIAL_INDEX'], 
 	["BL_RS_RM_006", ["Render mode: Global illumination"], 'GLOBAL_ILLUMINATION'],
 	["BL_RS_RM_007", ["Render mode: Direct illumination no shadow"], 'DIRECT_ILLUMINATION_NO_SHADOW'],
 	["BL_RS_RM_008", ["Render mode: Direct illumination"], 'DIRECT_ILLUMINATION'], 
