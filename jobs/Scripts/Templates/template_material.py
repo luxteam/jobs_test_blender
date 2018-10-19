@@ -6,6 +6,10 @@ def prerender(test_list):
     if scene != test_list[2]:
         bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{res_path}", test_list[2]))
 
+    if ((addon_utils.check("rprblender"))[0] == False):
+        addon_utils.enable("rprblender", default_set=True, persistent=False, handle_error=None)
+    bpy.data.scenes[Scenename].render.engine = "RPR"
+
     Scenename = bpy.context.scene.name
 
     bpy.context.scene.rpr.use_render_stamp = False

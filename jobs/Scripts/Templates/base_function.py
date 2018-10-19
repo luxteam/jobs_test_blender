@@ -178,11 +178,9 @@ def launch_tests():
 
 		try:
 			rc = prerender(list_tests[i])
-
 			if rc:
 				write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'passed')
-				
-			status = 0
+				status = 0
 		except Exception:
 			rc = -1
 
@@ -194,8 +192,8 @@ def launch_tests():
 				files = os.listdir(r"{work_dir}")
 				json_files = list(filter(lambda x: x.endswith('RPR.json'), files))
 				for i in range(len(json_files), len(list_tests)):
-					create_report(list_tests[i][0], list_tests[i][1], "skipped")
-					write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'skipped')
+					create_report(list_tests[i][0], list_tests[i][1], "failed")
+					write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'failed')
 				exit()
 
 		with open(os.path.join(r"{work_dir}", "status.txt"), 'a') as f:

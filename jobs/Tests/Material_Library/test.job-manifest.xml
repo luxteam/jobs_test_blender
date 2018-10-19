@@ -3,7 +3,7 @@
 
     <outpath value="{OutputDir}"/>
 
-    <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="2500">
+    <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="3600">
         <argument>--tool "{Tool}"</argument>
         <argument>--template "{ResourcesDir}/Templates/template_material.py"</argument>
         <argument>--render_mode "{RenderDevice}"</argument>
