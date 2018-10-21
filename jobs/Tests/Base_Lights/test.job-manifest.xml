@@ -15,7 +15,7 @@
 	    <argument>--package_name "Base_Lights"</argument>
     </execute>
 
-    <execute command='python "{ResourcesDir}/make_report_json.py"'>
+    <execute command='python "{ResourcesDir}/makeReport.py"'>
         <argument>--work_dir "{OutputDir}"</argument>
     </execute>
 

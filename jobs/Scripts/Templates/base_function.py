@@ -22,7 +22,6 @@ def render(*argv):
 	# get scene name
 	Scenename = bpy.context.scene.name
 
-	# RPR Settings
 	if ((addon_utils.check("rprblender"))[0] == False):
 		addon_utils.enable("rprblender", default_set=True, persistent=False, handle_error=None)
 	bpy.data.scenes[Scenename].render.engine = "RPR"
@@ -195,6 +194,7 @@ def launch_tests():
 					create_report(list_tests[i][0], list_tests[i][1], "failed")
 					write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'failed')
 				exit()
-
-		with open(os.path.join(r"{work_dir}", "status.txt"), 'a') as f:
-			f.write(str(rc) + ":" + str(i) + ":" + str(status) + "\n")
+				
+		with open(os.path.join(r"{work_dir}", 'log_status.txt'), 'a') as f:
+			f.write("Current test: " + str(i) + " | fail count: " + \
+				str(status) + " | last_status: " + str(rc) + " | total count: " + str(len(list_tests)) + "\n")

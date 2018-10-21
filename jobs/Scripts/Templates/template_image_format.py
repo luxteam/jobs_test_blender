@@ -5,14 +5,16 @@ def prerender(test_list):
 	if scene != test_list[2]:
 		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{res_path}", test_list[2]))
 
+	Scenename = bpy.context.scene.name
+
 	if ((addon_utils.check("rprblender"))[0] == False):
 		addon_utils.enable("rprblender", default_set=True, persistent=False, handle_error=None)
 	bpy.data.scenes[Scenename].render.engine = "RPR"
 
-	Scenename = bpy.context.scene.name
-
+	bpy.context.scene.rpr.use_render_stamp = False
 	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = {pass_limit}
 	bpy.data.scenes[Scenename].render.image_settings.file_format = test_list[3]
+	
 	if ({resolution_x} and {resolution_y}):
 		bpy.data.scenes[Scenename].render.resolution_x = {resolution_x}
 		bpy.data.scenes[Scenename].render.resolution_y = {resolution_y}
