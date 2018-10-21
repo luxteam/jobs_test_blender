@@ -8,9 +8,7 @@ import ctypes
 import pyscreenshot
 import platform
 
-
-def main():
-
+def createArgsParser():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--tool', required=True, metavar="<path>")
@@ -22,75 +20,43 @@ def main():
     parser.add_argument('--resolution_y', required=True)
     parser.add_argument('--package_name', required=True)
     parser.add_argument('--output', required=True)
-    parser.add_argument('--test_list', required=True)
 
-    args = parser.parse_args()
+    return parser
 
-    tool = args.tool
-    scenes = args.test_list
+def main(args):
 
-    template = args.template
+    work_dir = args.output
 
     with open(os.path.join(os.path.dirname(sys.argv[0]), "Templates", "base_function.py")) as f:
         base = f.read()
 
-    with open(os.path.join(os.path.dirname(sys.argv[0]), template)) as f:
+    with open(os.path.join(os.path.dirname(sys.argv[0]), args.template)) as f:
         blender_script_template = f.read()
 
-    with open(os.path.join(os.path.dirname(sys.argv[0]), scenes)) as f:
-        blender_scenes = f.read()
-
     blender_script_template = base + blender_script_template
-
-    scene_list = blender_scenes.split(",\n")
-    work_dir = args.output
-
-    RebootScript = blender_script_template.format(work_dir=work_dir, render_mode=args.render_mode,
-                                                  pass_limit=args.pass_limit,
-                                                  res_path=args.res_path, resolution_x=args.resolution_x,
-                                                  resolution_y=args.resolution_y, package_name=args.package_name)
 
     BlenderScript = blender_script_template.format(work_dir=work_dir, render_mode=args.render_mode,
                                                    pass_limit=args.pass_limit,
                                                    res_path=args.res_path, resolution_x=args.resolution_x,
-                                                   resolution_y=args.resolution_y, package_name=args.package_name,
-                                                   start=0)
-
-    try:
-        os.makedirs(work_dir)
-    except BaseException:
-        print("")
+                                                   resolution_y=args.resolution_y, package_name=args.package_name)
 
     BlenderScriptPath = os.path.join(work_dir, 'script.py')
     with open(BlenderScriptPath, 'w') as f:
         f.write(BlenderScript)
 
-    cmdRun = ""
-    for each in scene_list:
-        cmdRun += '"{tool}" -b "{scene}" -P "{template}"\n' \
-            .format(tool=tool, scene=os.path.join(args.res_path, each), template=BlenderScriptPath)
+    cmdRun = '"{tool}" -b -P "{template}"\n'.format(tool=args.tool, template=BlenderScriptPath)
 
     system_pl = platform.system()
-    if (system_pl == 'Linux'):
-        cmdScriptPath = os.path.join(work_dir, 'script.sh')
-        with open(cmdScriptPath, 'w') as f:
-            f.write(cmdRun)
-
-        os.system('chmod +x {}'.format(cmdScriptPath))
-    elif (system_pl == "Windows"):
+    if (system_pl == "Windows"):
         cmdScriptPath = os.path.join(work_dir, 'script.bat')
         with open(cmdScriptPath, 'w') as f:
             f.write(cmdRun)
-    elif system_pl == 'Darwin':
+    else:
         cmdScriptPath = os.path.join(work_dir, 'script.sh')
         with open(cmdScriptPath, 'w') as f:
-           f.write(cmdRun)
+            f.write(cmdRun)
         os.system('chmod +x {}'.format(cmdScriptPath))
     
-    print(system_pl)
-
-    os.chdir(work_dir)
-
     p = subprocess.Popen(cmdScriptPath, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     stdout, stderr = p.communicate()
 
@@ -103,15 +69,10 @@ def main():
         stderr = stderr.decode("utf-8")
         file.write(stderr)
 
-    # p = psutil.Popen(os.path.join(args.output, 'script.bat'), stdout=subprocess.PIPE)
-    rc = -1
-
     try:
         rc = p.wait(timeout=100)
     except psutil.TimeoutExpired as err:
         rc = -1
-        error_screen = pyscreenshot.grab()
-        error_screen.save(os.path.join(args.output, 'error_screenshot.jpg'))
         for child in reversed(p.children(recursive=True)):
             child.terminate()
         p.terminate()
@@ -120,5 +81,30 @@ def main():
 
 
 if __name__ == "__main__":
-    rc = main()
-    exit(rc)
+
+    args = createArgsParser().parse_args()
+
+    try:
+        os.makedirs(args.output)
+    except OSError as e:
+        pass
+
+    def getJsonCount():
+        return len(list(filter(lambda x: x.endswith('RPR.json'), os.listdir(args.output))))
+
+    def totalCount():
+        try:        
+            with open(os.path.join(os.path.dirname(__file__),  args.template)) as f:
+                script_template = f.read()
+            return len(script_template.replace(" ", "").split(",\n[\"BL"))
+        except OSError as e:
+            return -1
+
+    total_count = totalCount()
+    current_test = 0
+
+    while current_test < total_count:
+        rc = main(args) 
+        current_test = getJsonCount()
+    
+    exit(1)

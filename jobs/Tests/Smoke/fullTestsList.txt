@@ -1,2 +1,0 @@
-default.blend,
-rpr_default.blend

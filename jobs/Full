@@ -4,7 +4,7 @@ Base_Lights
 Camera
 Denoiser
 Emissive_Light
-Extended_Smoke
+Smoke
 IBL
 IES
 IES_Intensity
