@@ -11,7 +11,7 @@ def prerender(test_list):
 	bpy.data.scenes[Scenename].render.engine = "RPR"
 
 	bpy.context.scene.rpr.use_render_stamp = False
-	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = {pass_limit}
+	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = 100
 	bpy.data.scenes[Scenename].render.image_settings.file_format = 'JPEG'
 
 	if ({resolution_x} and {resolution_y}):

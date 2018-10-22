@@ -31,7 +31,7 @@ if __name__ == "__main__":
 	["BL_RS_RM_002", ["Render mode: Texcoord"], "ComplexTestUber.blend", 'TEXCOORD'],
 	["BL_RS_RM_003", ["Render mode: Position"], "ComplexTestUber.blend", 'POSITION'], 
 	["BL_RS_RM_004", ["Render mode: Normal"], "ComplexTestUber.blend", 'NORMAL'], 
-	["BL_RS_RM_005", ["Render mode: Material index"], "ComplexTestUber.blend", 'MATERIAL_INDEX'], 
+	#["BL_RS_RM_005", ["Render mode: Material index"], "ComplexTestUber.blend", 'MATERIAL_INDEX'], 
 	["BL_RS_RM_006", ["Render mode: Global illumination"], "ComplexTestUber.blend", 'GLOBAL_ILLUMINATION'],
 	["BL_RS_RM_007", ["Render mode: Direct illumination no shadow"], "ComplexTestUber.blend", 'DIRECT_ILLUMINATION_NO_SHADOW'],
 	["BL_RS_RM_008", ["Render mode: Direct illumination"], "ComplexTestUber.blend", 'DIRECT_ILLUMINATION'], 
