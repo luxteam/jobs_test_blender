@@ -289,7 +289,7 @@ if __name__ == '__main__':
 	["BL_SM_002", ["Select RPR"], "pass", "pass", "rpr_default.blend", 1],
 	["BL_SM_003", ["Open RPR scene"], "pass", "pass", "rpr_default.blend", 1],
 	["BL_SM_004", ["Render empty scene", "Pass Limit: 50"], empty, empty, "rpr_default.blend", 50],
-	["BL_SM_005", ["IES", "Pass Limit: 50"], create_ies_light, delete_ies_light, "IES.blend", 50],
+	# ["BL_SM_005", ["IES", "Pass Limit: 50"], create_ies_light, delete_ies_light, "IES.blend", 50],
 	["BL_SM_006", ["Import FBX", "Pass Limit: 50"], import_fbx, delete_fbx, "default.blend", 50],
 	["BL_SM_007", ["Import OBJ", "Pass Limit: 50"], import_obj, empty, "default.blend", 50],
 	["BL_SM_008", ["Uber2 material", "Pass Limit: 50"], create_and_assign_uber, empty, "default.blend", 50],
