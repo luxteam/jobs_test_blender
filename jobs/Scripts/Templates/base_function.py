@@ -4,6 +4,7 @@ import datetime
 import sys
 import json
 import os
+import logging
 from rprblender import node_editor
 from rprblender import material_browser
 from rprblender import helpers
@@ -18,50 +19,53 @@ def core_ver_str():
 	return "%x.%x" % (mj, mn)
 
 
+def set_value(path, name, value):
+	if hasattr(path, name):
+		setattr(path, name, value)
+	else:
+		logging.warning("No attribute found ")
+
+
 def render(*argv):
+
 	# get scene name
-	Scenename = bpy.context.scene.name
+	scene_name, scene = helpers.get_current_scene()
 
 	if ((addon_utils.check("rprblender"))[0] == False):
 		addon_utils.enable("rprblender", default_set=True, persistent=False, handle_error=None)
-	bpy.data.scenes[Scenename].render.engine = "RPR"
+	set_value(scene.render, 'engine', "RPR")
 
 	# Render device in RPR
-	bpy.context.user_preferences.addons["rprblender"].preferences.settings.include_uncertified_devices = True
+	set_value(helpers.get_user_settings(), "include_uncertified_devices", True)
 	if '{render_mode}' == 'dual':
-		device_name = "CPU0" + " + " + helpers.render_resources_helper.get_used_devices()
-		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type_plus_cpu = True
-		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = 'gpu'
+		helpers.set_render_devices(use_cpu=True, use_gpu=True)
 	elif '{render_mode}' == 'cpu':
-		device_name = "CPU0"
-		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = '{render_mode}'
-		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type_plus_cpu = False
+		helpers.set_render_devices(use_cpu=True, use_gpu=False)
 	elif '{render_mode}' == 'gpu':
-		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = 'gpu'
-		device_name = helpers.render_resources_helper.get_used_devices()
+		helpers.set_render_devices(use_cpu=False, use_gpu=True)
 	
+	device_name = helpers.render_resources_helper.get_used_devices()
 
 	# frame range
-	bpy.data.scenes[Scenename].frame_start = 1
-	bpy.data.scenes[Scenename].frame_end = 1
+	set_value(scene, "frame_start", 1)
+	set_value(scene, "frame_end", 1)
 
 	# image format
-	bpy.data.scenes[Scenename].render.image_settings.quality = 100
-	bpy.data.scenes[Scenename].render.image_settings.color_mode = 'RGB'
+	set_value(scene.render.image_settings, 'quality', 100)
+	set_value(scene.render.image_settings, 'compression', 0)
+	set_value(scene.render.image_settings, 'color_mode', 'RGB')
 
 	name_scene = argv[0]
 	script_info = argv[1]
 
-	# output
-	output = r"{work_dir}" + "/Color/" + name_scene
-	bpy.data.scenes[Scenename].render.filepath = output
-	bpy.data.scenes[Scenename].render.use_placeholder = True
-	bpy.data.scenes[Scenename].render.use_file_extension = True
-	bpy.data.scenes[Scenename].render.use_overwrite = True
+	set_value(scene.render, 'filepath', r"{work_dir}" + "/Color/" + name_scene)
+	set_value(scene.render, 'use_placeholder', True)
+	set_value(scene.render, 'use_file_extension', True)
+	set_value(scene.render, 'use_overwrite', True)
 
 	# start render animation
 	TIMER = datetime.datetime.now()
-	bpy.ops.render.render(write_still=True, scene=Scenename)
+	bpy.ops.render.render(write_still=True, scene=scene_name)
 	Render_time = datetime.datetime.now() - TIMER
 
 	# get version of rpr addon
@@ -72,7 +76,7 @@ def render(*argv):
 			version = str(ver[0]) + "." + str(ver[1]) + "." + str(ver[2])
 
 
-	image_format = 	bpy.data.scenes[Scenename].render.image_settings.file_format
+	image_format = bpy.data.scenes[scene_name].render.image_settings.file_format
 	if image_format == 'JPEG':
 		image_format = 'jpg'
 	elif image_format == 'PNG':
@@ -105,16 +109,20 @@ def render(*argv):
 
 
 def create_report(*argv):
-	Scenename = bpy.context.scene.name
+	
+	# get scene name
+	scene_name, scene = helpers.get_current_scene()
 
-	device_name = ""
 	# Render device in RPR
+	set_value(helpers.get_user_settings(), "include_uncertified_devices", True)
 	if '{render_mode}' == 'dual':
-		device_name = "CPU0" + " + " + helpers.render_resources_helper.get_used_devices()
+		helpers.set_render_devices(use_cpu=True, use_gpu=True)
 	elif '{render_mode}' == 'cpu':
-		device_name = "CPU0"
+		helpers.set_render_devices(use_cpu=True, use_gpu=False)
 	elif '{render_mode}' == 'gpu':
-		device_name = helpers.render_resources_helper.get_used_devices()
+		helpers.set_render_devices(use_cpu=False, use_gpu=True)
+	
+	device_name = helpers.render_resources_helper.get_used_devices()
 
 	name_scene = argv[0]
 	test_case = argv[0]
