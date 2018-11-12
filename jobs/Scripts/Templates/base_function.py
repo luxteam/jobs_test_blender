@@ -94,7 +94,7 @@ def render(*argv):
 	report['scene_name'] = bpy.path.basename(bpy.context.blend_data.filepath)
 	report['render_time'] = Render_time.total_seconds()
 	report['render_color_path'] = r"Color/" + name_scene + "." + image_format
-	report['date_time'] = datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
+	report['date_time'] = datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S")
 	report['difference_color'] = "not compared yet"
 	report['test_case'] = name_scene
 	report['script_info'] = script_info
@@ -147,7 +147,7 @@ def create_report(*argv):
 	report['scene_name'] = bpy.path.basename(bpy.context.blend_data.filepath)
 	report['render_time'] = 0
 	report['render_color_path'] = r"Color/" + name_scene + "." + image_format
-	report['date_time'] = datetime.datetime.now().strftime("%d-%m-%Y %H:%M")
+	report['date_time'] = datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S")
 	report['difference_color'] = "not compared yet"
 	report['test_case'] = test_case
 	report['script_info'] = script_info

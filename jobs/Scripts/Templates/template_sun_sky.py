@@ -24,11 +24,13 @@ def prerender(test_list):
 	bpy.context.scene.world.rpr_data.environment.sun_sky.ground_color = (0.4, 0.00703741, 0.00508468)
 	bpy.context.scene.world.rpr_data.environment.sun_sky.texture_resolution = test_list[4]
 
-	if (test_list[2] == 'analytical_sky'):
-		bpy.context.scene.world.rpr_data.environment.sun_sky.azimuth = test_list[4]
-		bpy.context.scene.world.rpr_data.environment.sun_sky.altitude = test_list[5]
-	elif (test_list[2] == 'date_time_location'):
-		if (test_list[6] == "Moscow"):
+	if (test_list[3] == 'analytical_sky'):
+		bpy.context.scene.world.rpr_data.environment.sun_sky.azimuth = test_list[5]
+		bpy.context.scene.world.rpr_data.environment.sun_sky.altitude = test_list[6]
+	elif (test_list[3] == 'date_time_location'):
+		bpy.ops.rpr.op_get_time_now()
+
+		if (test_list[7] == "Moscow"):
 			bpy.context.scene.world.rpr_data.environment.sun_sky.time_zone = 3
 			bpy.context.scene.world.rpr_data.environment.sun_sky.latitude = 0.973583
 			bpy.context.scene.world.rpr_data.environment.sun_sky.longitude = 0.656516
