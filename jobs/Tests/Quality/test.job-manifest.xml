@@ -3,16 +3,16 @@
 
     <outpath value="{OutputDir}"/>
 
-    <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="160">
+    <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="3600">
         <argument>--tool "{Tool}"</argument>
-        <argument>--template "{ResourcesDir}/Templates/template_base_lights.py"</argument>
+        <argument>--template "{ResourcesDir}/Templates/template_quality.py"</argument>
         <argument>--render_mode "{RenderDevice}"</argument>
         <argument>--pass_limit {PassLimit}</argument>
     	<argument>--resolution_x {rx}</argument>
     	<argument>--resolution_y {ry}</argument>
         <argument>--res_path "{ScenesDir}"</argument>
         <argument>--output "{OutputDir}"</argument>
-	    <argument>--package_name "Base_Lights"</argument>
+	    <argument>--package_name "Quality"</argument>
     </execute>
 
     <execute command='python "{ResourcesDir}/makeReport.py"'>

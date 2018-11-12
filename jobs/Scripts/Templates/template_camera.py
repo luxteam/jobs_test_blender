@@ -24,10 +24,10 @@ def prerender(test_list):
 	bpy.context.scene.objects['Camera'].select = True
 	bpy.context.object.data.type = test_list[3]
 
-	if (test_list[4] != 'no_rpr_camera'):
+	if test_list[4]:
 		bpy.context.scene.rpr.render.camera.override_camera_settings = True
 		bpy.context.scene.rpr.render.camera.panorama_type = test_list[4]
-		if (test_list[5]):
+		if test_list[5]:
 			bpy.context.scene.rpr.render.camera.stereo = True
 	else:
 		bpy.context.scene.rpr.render.camera.override_camera_settings = False
@@ -38,21 +38,21 @@ def prerender(test_list):
 if __name__ == "__main__":
 
 	list_tests = [
-	["BL_RS_CAM_001", ["Camera Type: Persp"], "ComplexTestUber.blend", 'PERSP', 'no_rpr_camera'], 
-	["BL_RS_CAM_002", ["Camera Type: Pano"], "ComplexTestUber.blend", 'PANO', 'no_rpr_camera'],
-	["BL_RS_CAM_003", ["Camera Type: Ortho"], "ComplexTestUber.blend", 'ORTHO', 'no_rpr_camera'],
-	["BL_RS_CAM_004", ["RPR Camera Type: Cubemap"], "ComplexTestUber.blend", 'PERSP', 'CUBEMAP', False],
-	["BL_RS_CAM_005", ["RPR Camera Type: Spherical panorama"], "ComplexTestUber.blend", 'PERSP', 'SPHERICAL_PANORAMA', False],
-	["BL_RS_CAM_006", ["RPR Camera Type: Stereo cubemap"], "ComplexTestUber.blend", 'PERSP', 'CUBEMAP', True],
-	["BL_RS_CAM_007", ["RPR Camera Type: Stereo spherical panorama"], "ComplexTestUber.blend", 'PERSP', 'SPHERICAL_PANORAMA', True],
-	["BL_RS_CAM_008", ["RPR Camera Type: Cubemap"], "ComplexTestUber.blend", 'PANO', 'CUBEMAP', False],
-	["BL_RS_CAM_009", ["RPR Camera Type: Spherical panorama"], "ComplexTestUber.blend", 'PANO', 'SPHERICAL_PANORAMA', False],
-	["BL_RS_CAM_010", ["RPR Camera Type: Stereo cubemap"], "ComplexTestUber.blend", 'PANO', 'CUBEMAP', True],
-	["BL_RS_CAM_011", ["RPR Camera Type: Stereo spherical panorama"], "ComplexTestUber.blend", 'PANO', 'SPHERICAL_PANORAMA', True],
-	["BL_RS_CAM_012", ["RPR Camera Type: Cubemap"], "ComplexTestUber.blend", 'ORTHO', 'CUBEMAP', False],
-	["BL_RS_CAM_013", ["RPR Camera Type: Spherical panorama"], "ComplexTestUber.blend", 'ORTHO', 'SPHERICAL_PANORAMA', False],
-	["BL_RS_CAM_014", ["RPR Camera Type: Stereo cubemap"], "ComplexTestUber.blend", 'ORTHO', 'CUBEMAP', True],
-	["BL_RS_CAM_015", ["RPR Camera Type: Stereo spherical panorama"], "ComplexTestUber.blend", 'ORTHO', 'SPHERICAL_PANORAMA', True]
+	["BL_RS_CAM_001", ["Camera Type: Persp"], "Camera.blend", 'PERSP', ""], 
+	["BL_RS_CAM_002", ["Camera Type: Pano"], "Camera.blend", 'ORTHO', ""],
+	["BL_RS_CAM_003", ["Camera Type: Ortho"], "Camera.blend", 'PANO', ""],
+	["BL_RS_CAM_004", ["RPR Camera Type: Cubemap"], "Camera.blend", 'PERSP', 'CUBEMAP', False],
+	["BL_RS_CAM_005", ["RPR Camera Type: Spherical panorama"], "Camera.blend", 'PERSP', 'CUBEMAP', True],
+	["BL_RS_CAM_006", ["RPR Camera Type: Stereo cubemap"], "Camera.blend", 'PERSP', 'SPHERICAL_PANORAMA', False],
+	["BL_RS_CAM_007", ["RPR Camera Type: Stereo spherical panorama"], "Camera.blend", 'PERSP', 'SPHERICAL_PANORAMA', True],
+	["BL_RS_CAM_008", ["RPR Camera Type: Cubemap"], "Camera.blend", 'PANO', 'CUBEMAP', False],
+	["BL_RS_CAM_009", ["RPR Camera Type: Spherical panorama"], "Camera.blend", 'PANO', 'CUBEMAP', True],
+	["BL_RS_CAM_010", ["RPR Camera Type: Stereo cubemap"], "Camera.blend", 'PANO', 'SPHERICAL_PANORAMA', False],
+	["BL_RS_CAM_011", ["RPR Camera Type: Stereo spherical panorama"], "Camera.blend", 'PANO', 'SPHERICAL_PANORAMA', True],
+	["BL_RS_CAM_012", ["RPR Camera Type: Cubemap"], "Camera.blend", 'ORTHO', 'CUBEMAP', False],
+	["BL_RS_CAM_013", ["RPR Camera Type: Spherical panorama"], "Camera.blend", 'ORTHO', 'CUBEMAP', True],
+	["BL_RS_CAM_014", ["RPR Camera Type: Stereo cubemap"], "Camera.blend", 'ORTHO', 'SPHERICAL_PANORAMA', False],
+	["BL_RS_CAM_015", ["RPR Camera Type: Stereo spherical panorama"], "Camera.blend", 'ORTHO', 'SPHERICAL_PANORAMA', True]
 	]
 	
 	launch_tests()
