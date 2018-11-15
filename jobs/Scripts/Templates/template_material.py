@@ -315,7 +315,7 @@ if __name__ == "__main__":
     ["BL_MAT_LIB_281", ["Material: Plastic Transparent Solid ClearBlue"], "Test_Scene.blend", "Plastic_Transparent_Solid_ClearBlue"],
     ["BL_MAT_LIB_282", ["Material: Plastic Transparent Thin ClearBlue"], "Test_Scene.blend", "Plastic_Transparent_Thin_ClearBlue"],
     ["BL_MAT_LIB_283", ["Material: Colored Glass"], "Test_Scene.blend", "Colored_Glass"],
-    ["BL_MAT_LIB_284", ["Material: Jade"], "Test_Scene.blend", "Jade"],
+    ["BL_MAT_LIB_284", ["Material: Jade"], "Test_Scene.blend", "jade"],
     ["BL_MAT_LIB_285", ["Material: Milk"], "Test_Scene.blend", "Milk"],
     ["BL_MAT_LIB_286", ["Material: Wax"], "Test_Scene.blend", "Wax"],
     ["BL_MAT_LIB_287", ["Material: Wood Bark"], "Test_Scene.blend", "Wood_Bark"],
