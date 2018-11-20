@@ -40,11 +40,6 @@ def render(*argv):
 		bpy.context.user_preferences.addons["rprblender"].preferences.settings.device_type = 'gpu'
 		device_name = helpers.render_resources_helper.get_used_devices()
 	
-
-	# frame range
-	bpy.data.scenes[Scenename].frame_start = 1
-	bpy.data.scenes[Scenename].frame_end = 1
-
 	# image format
 	bpy.data.scenes[Scenename].render.image_settings.quality = 100
 	bpy.data.scenes[Scenename].render.image_settings.color_mode = 'RGB'
