@@ -166,7 +166,7 @@ if __name__ == "__main__":
 	["BL_L_PL_027", ["Type: AREA", "Intensity: 1000"], "Physical_Lights.blend", 'AREA', 1000, "default", "default", 0, "default"],
 	["BL_L_PL_028", ["Type: AREA", "Intensity: 0, Expected Black Picture"], "Physical_Lights.blend", 'AREA', 0, "default", "default", 0, "default"],
 	["BL_L_PL_029", ["Type: AREA", "Intensity: 5000"], "Physical_Lights.blend", 'AREA', 5000, "default", "default", 0, "default"],
-	["BL_L_PL_030", ["Type: AREA", "Intensity: 1000", "Width, Height: 0"], "Physical_Lights.blend", 'AREA', 1000, "default", 0, 0, "default"],
+	["BL_L_PL_030", ["Type: AREA", "Intensity: 1000, Expected Black Picture", "Width, Height: 0"], "Physical_Lights.blend", 'AREA', 1000, "default", 0, 0, "default"],
 	["BL_L_PL_031", ["Type: AREA", "Intensity: 1000", "Width, Height: 100"], "Physical_Lights.blend", 'AREA', 1000, "default", 100, 0, "default"],
 	["BL_L_PL_032", ["Type: AREA", "Intensity: 1000", "Width, Height: 100", "Visible: active"], "Physical_Lights.blend", 'AREA', 1000, "default", 100, 1, "default"],
 	["BL_L_PL_033", ["Type: AREA", "Intensity: 1000", "Mesh type: Cylinder"], "Physical_Lights.blend", 'AREA', 1000, "default", "default", 0, "CYLINDER"],
