@@ -169,33 +169,45 @@ def pbr_018():
 	create_imagemap("normal", "normal.tga")
 
 def pbr_019():
+	pbr_material, node_pbr = get_material_and_node()
+	node_pbr.inputs[node_pbr.base_color].default_value = (1, 1, 1, 1.0)
 	create_imagemap("glass_weight", "glass.png")
 
 def pbr_020():
+	pbr_material, node_pbr = get_material_and_node()
+	node_pbr.inputs[node_pbr.base_color].default_value = (1, 1, 1, 1.0)
 	create_imagemap("glass_weight", "glass.tga")
 
 def pbr_021():
 	pbr_material, node_pbr = get_material_and_node()
+	node_pbr.inputs[node_pbr.base_color].default_value = (1, 1, 1, 1.0)
 	node_pbr.inputs[node_pbr.glass_weight].default_value = 0.5
 
 def pbr_022():
 	pbr_material, node_pbr = get_material_and_node()
+	node_pbr.inputs[node_pbr.base_color].default_value = (1, 1, 1, 1.0)
 	node_pbr.inputs[node_pbr.glass_weight].default_value = 0.5
 	node_pbr.inputs[node_pbr.glass_ior].default_value = 0
 
 def pbr_023():
+	pbr_material, node_pbr = get_material_and_node()
+	node_pbr.inputs[node_pbr.base_color].default_value = (1, 1, 1, 1.0)
 	create_imagemap("glass_ior", "glassIOR.png")
 
 def pbr_024():
+	pbr_material, node_pbr = get_material_and_node()
+	node_pbr.inputs[node_pbr.base_color].default_value = (1, 1, 1, 1.0)
 	create_imagemap("glass_ior", "glassIOR.tga")
 
 def pbr_025():
 	pbr_material, node_pbr = get_material_and_node()
+	node_pbr.inputs[node_pbr.base_color].default_value = (1, 1, 1, 1.0)
 	node_pbr.inputs[node_pbr.glass_weight].default_value = 1
 	node_pbr.inputs[node_pbr.glass_ior].default_value = 0
 
 def pbr_026():
 	pbr_material, node_pbr = get_material_and_node()
+	node_pbr.inputs[node_pbr.base_color].default_value = (1, 1, 1, 1.0)
 	node_pbr.inputs[node_pbr.glass_weight].default_value = 1
 	node_pbr.inputs[node_pbr.glass_ior].default_value = 3
 
