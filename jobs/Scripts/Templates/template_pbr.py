@@ -186,7 +186,7 @@ def pbr_021():
 def pbr_022():
 	pbr_material, node_pbr = get_material_and_node()
 	node_pbr.inputs[node_pbr.base_color].default_value = (1, 1, 1, 1.0)
-	node_pbr.inputs[node_pbr.glass_weight].default_value = 0.5
+	node_pbr.inputs[node_pbr.glass_weight].default_value = 1
 	node_pbr.inputs[node_pbr.glass_ior].default_value = 0
 
 def pbr_023():
