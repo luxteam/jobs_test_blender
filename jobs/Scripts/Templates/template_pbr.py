@@ -7,7 +7,7 @@ def prerender(test_list):
 		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{res_path}", test_list[4]))
 
 	# check rpr addon
-	if ((addon_utils.check("rprblender"))[0] == False):
+	if not addon_utils.check("rprblender")[0]:
 		addon_utils.enable("rprblender", default_set=True, persistent=False, handle_error=None)
 	bpy.context.scene.render.engine = "RPR"
 
@@ -15,7 +15,7 @@ def prerender(test_list):
 	bpy.context.scene.rpr.render.rendering_limits.iterations = 100
 	bpy.context.scene.render.image_settings.file_format = 'JPEG'
 
-	if ({resolution_x} and {resolution_y}):
+	if {resolution_x} and {resolution_y}:
 		bpy.context.scene.render.resolution_x = {resolution_x}
 		bpy.context.scene.render.resolution_y = {resolution_y}
 	
@@ -78,7 +78,7 @@ def delete_imagemap():
 
 def default_settings():
 	pbr_material, node_pbr = get_material_and_node()
-	node_pbr.inputs[node_pbr.base_color].default_value = (1, 1, 1, 1.0)
+	node_pbr.inputs[node_pbr.base_color].default_value = (0.5, 0.5, 0.5, 1.0)
 	node_pbr.inputs[node_pbr.roughness].default_value = 0.25
 	node_pbr.inputs[node_pbr.metalness].default_value = 0
 	node_pbr.inputs[node_pbr.specular].default_value = 1
