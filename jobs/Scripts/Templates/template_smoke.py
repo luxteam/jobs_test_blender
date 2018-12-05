@@ -5,15 +5,13 @@ def prerender(test_list):
 	if scene != test_list[4]:
 		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{res_path}", test_list[4]))
 
-	Scenename = bpy.context.scene.name
-
 	if ((addon_utils.check("rprblender"))[0] == False):
 		addon_utils.enable("rprblender", default_set=True, persistent=False, handle_error=None)
-	bpy.data.scenes[Scenename].render.engine = "RPR"
+	bpy.context.scene.render.engine = "RPR"
 
 	bpy.context.scene.rpr.use_render_stamp = False
-	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = test_list[5]
-	bpy.data.scenes[Scenename].render.image_settings.file_format = 'JPEG'
+	bpy.context.scene.rpr.render.rendering_limits.iterations = test_list[5]
+	bpy.context.scene.render.image_settings.file_format = 'JPEG'
 	
 	if (test_list[2] != "pass"):
 		test_list[2]()
@@ -130,11 +128,11 @@ def delete_ies_light():
 
 
 def activate_render_stamp():
-	bpy.data.scenes['Scene'].rpr.use_render_stamp = True
+	bpy.context.scene.rpr.use_render_stamp = True
 
 
 def deactivate_render_stamp():
-	bpy.data.scenes['Scene'].rpr.use_render_stamp = False
+	bpy.context.scene.rpr.use_render_stamp = False
 
 
 def activate_wireframe_mode():
@@ -146,26 +144,26 @@ def deactivate_wireframe_mode():
 
 
 def change_image_size_hd720():
-	bpy.data.scenes['Scene'].render.resolution_x = 1280
-	bpy.data.scenes['Scene'].render.resolution_y = 720
+	bpy.context.scene.render.resolution_x = 1280
+	bpy.context.scene.render.resolution_y = 720
 
 
 def change_image_size_custom():
-	bpy.data.scenes['Scene'].render.resolution_x = 1500
-	bpy.data.scenes['Scene'].render.resolution_y = 1125
+	bpy.context.scene.render.resolution_x = 1500
+	bpy.context.scene.render.resolution_y = 1125
 
 
 def change_image_size_default():
-	bpy.data.scenes['Scene'].render.resolution_x = 1920
-	bpy.data.scenes['Scene'].render.resolution_y = 1080
+	bpy.context.scene.render.resolution_x = 1920
+	bpy.context.scene.render.resolution_y = 1080
 
 
 def activate_jpg_format():
-	bpy.data.scenes['Scene'].render.image_settings.file_format = 'JPEG'
+	bpy.context.scene.render.image_settings.file_format = 'JPEG'
 
 
 def activate_png_format():
-	bpy.data.scenes['Scene'].render.image_settings.file_format = 'PNG'
+	bpy.context.scene.render.image_settings.file_format = 'PNG'
 
 
 def activate_denoiser_bilateral():
