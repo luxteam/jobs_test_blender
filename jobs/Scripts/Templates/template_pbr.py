@@ -78,7 +78,7 @@ def delete_imagemap():
 
 def default_settings():
 	pbr_material, node_pbr = get_material_and_node()
-	node_pbr.inputs[node_pbr.base_color].default_value = (0.137, 0.5, 0.474, 1.0)
+	node_pbr.inputs[node_pbr.base_color].default_value = (1, 1, 1, 1.0)
 	node_pbr.inputs[node_pbr.roughness].default_value = 0.25
 	node_pbr.inputs[node_pbr.metalness].default_value = 0
 	node_pbr.inputs[node_pbr.specular].default_value = 1
