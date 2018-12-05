@@ -15,17 +15,15 @@ def prerender(test_list):
 	bpy.data.scenes[Scenename].rpr.render.rendering_limits.iterations = test_list[5]
 	bpy.data.scenes[Scenename].render.image_settings.file_format = 'JPEG'
 	
-	if (bpy.path.basename(bpy.context.blend_data.filepath) == test_list[4]):
+	if (test_list[2] != "pass"):
+		test_list[2]()
+		render(test_list[0], test_list[1])
+		test_list[3]()			
 
-		if (test_list[2] != "pass"):
-			test_list[2]()
-			render(test_list[0], test_list[1])
-			test_list[3]()			
+	else:
+		create_report(test_list[0], test_list[1], "pass")
 
-		else:
-			create_report(test_list[0], test_list[1], "pass")
-
-		return 1
+	return 1
 
 
 def delete_hierarchy(obj):
@@ -44,11 +42,6 @@ def delete_hierarchy(obj):
 
 def empty():
 	pass
-
-
-def check_rpr_load():
-	if((addon_utils.check("rprblender"))[0] == False) : 
-		addon_utils.enable("rprblender", default_set=True, persistent=False, handle_error=None)
 
 
 def import_fbx():
@@ -195,7 +188,6 @@ def deactivate_denoiser():
 
 
 def import_rpr_matlib():
-	check_rpr_load()
 	material_name= 'Gold.xml'
 	matlib_path = os.path.join(material_browser.RPRMaterialLibrary().get_library_path(), material_name.split('.')[0], material_name)
 	material = bpy.data.materials['Material']
@@ -234,7 +226,6 @@ def deactivate_medium_quality():
 
 
 def create_and_assign_uber():
-	check_rpr_load()
 
 	bpy.ops.object.select_all(action='DESELECT')
 	bpy.context.scene.objects.active = bpy.data.objects['shader_ball']
@@ -261,7 +252,6 @@ def create_and_assign_uber():
 
 
 def create_and_assign_pbr():
-	check_rpr_load()
 
 	bpy.ops.object.select_all(action='DESELECT')
 	bpy.context.scene.objects.active = bpy.data.objects['shader_ball']
