@@ -12,7 +12,7 @@
     	<argument>--resolution_y {ry}</argument>
         <argument>--res_path "{ScenesDir}"</argument>
         <argument>--output "{OutputDir}"</argument>
-	<argument>--package_name "Physical_Lights"</argument>
+	    <argument>--package_name "Physical_Lights"</argument>
     </execute>
 
     <execute command='python "{ResourcesDir}/makeReport.py"'>
