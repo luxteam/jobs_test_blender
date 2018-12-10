@@ -177,6 +177,8 @@ def launch_tests():
 
 	status = 0
 
+	define_expected_result()
+
 	for i in range(len(json_files), len(list_tests)):
 
 		try:
@@ -202,3 +204,13 @@ def launch_tests():
 		with open(os.path.join(r"{work_dir}", 'log_status.txt'), 'a') as f:
 			f.write("Current test: " + str(i) + " | fail count: " + \
 				str(status) + " | last_status: " + str(rc) + " | total count: " + str(len(list_tests)) + "\n")
+
+
+def define_expected_result():
+	expected_tests = []
+
+	for test in list_tests:
+		expected_tests.append(test[0])
+
+	with open(os.path.join(r"{work_dir}", "expected.json"), 'w') as file:
+		json.dump(expected_tests, file, indent=4)

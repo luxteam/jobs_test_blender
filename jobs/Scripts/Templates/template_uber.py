@@ -55,7 +55,7 @@ def create_imagemap(attr, image_name):
 		tree.links.new(node_imagemap.outputs[node_imagemap.value_out], node_uber.inputs[node_uber.reflection_weight])
 	elif attr == "refraction_color":
 		tree.links.new(node_imagemap.outputs[node_imagemap.value_out], node_uber.inputs[node_uber.refraction_color])
-	elif attr == "reflraction_weight":
+	elif attr == "refraction_weight":
 		tree.links.new(node_imagemap.outputs[node_imagemap.value_out], node_uber.inputs[node_uber.refraction_weight])
 	elif attr == "emissive_color":
 		tree.links.new(node_imagemap.outputs[node_imagemap.value_out], node_uber.inputs[node_uber.emissive_color])
@@ -124,7 +124,7 @@ def default_settings():
 	node_uber.emissive = False
 	node_uber.inputs[node_uber.emissive_color].default_value =  (1, 1, 1, 1.0)
 	node_uber.inputs[node_uber.emissive_weight].default_value = 1
-	node_uber.inputs[node_uber.emissive_intensity].default_value = 1
+	node_uber.emissive_intensity = 1
 	node_uber.emissive_double_sided = False
 
 	node_uber.subsurface = False
@@ -441,7 +441,7 @@ def uber_052():
 	node_uber.inputs[node_uber.sheen_color].default_value = (1, 1, 1, 1.0)
 	node_uber.inputs[node_uber.sheen_weight].default_value = 0
 
-def uber_053):
+def uber_053():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs[node_uber.diffuse_color].default_value = (0, 0.4, 0, 1.0)
 	node_uber.sheen = True
@@ -500,19 +500,19 @@ def uber_062():
 	node_uber.inputs[node_uber.emissive_color].default_value = (0, 1, 0.1, 1.0)
 	node_uber.inputs[node_uber.emissive_weight].default_value = 0.5
 
-def uber_063):
+def uber_063():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs[node_uber.diffuse_color].default_value = (0, 0.4, 0, 1.0)
 	node_uber.emissive = True
 	node_uber.inputs[node_uber.emissive_color].default_value = (0, 1, 0.1, 1.0)
-	node_uber.inputs[node_uber.emissive_intensity].default_value = 0
+	node_uber.emissive_intensity = 0
 
 def uber_064():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs[node_uber.diffuse_color].default_value = (0, 0.4, 0, 1.0)
 	node_uber.emissive = True
 	node_uber.inputs[node_uber.emissive_color].default_value = (0, 1, 0.1, 1.0)
-	node_uber.inputs[node_uber.emissive_intensity].default_value = 100
+	node_uber.emissive_intensity = 100
 
 def uber_065():
 	uber_material, node_uber = get_material_and_node()
@@ -520,7 +520,7 @@ def uber_065():
 	node_uber.emissive = True
 	node_uber.emissive_double_sided = True
 	node_uber.inputs[node_uber.emissive_color].default_value = (0, 1, 0.1, 1.0)
-	node_uber.inputs[node_uber.emissive_intensity].default_value = 3
+	node_uber.emissive_intensity = 3
 
 def uber_066():
 	uber_material, node_uber = get_material_and_node()
@@ -547,7 +547,7 @@ def uber_070():
 	node_uber.subsurface = True
 	node_uber.subsurface_use_diffuse_color = True
 
-def uber_071):
+def uber_071():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.subsurface = True
 	node_uber.subsurface_multiple_scattering = True
@@ -567,7 +567,7 @@ def uber_074():
 	node_uber.subsurface = True
 	node_uber.inputs[node_uber.subsurface_weight].default_value = 0.5
 
-def uber_075):
+def uber_075():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.subsurface = True
 	node_uber.inputs[node_uber.subsurface_scatter_direction].default_value = -1
@@ -654,7 +654,7 @@ if __name__ == '__main__':
 	["BL_MAT_UBR_018", ["diffuse color green", "coating ior 3"], uber_018, default_settings, "UBER.blend"],
 	["BL_MAT_UBR_019", ["diffuse color green", "coating thickness 1"], uber_019, default_settings, "UBER.blend"],
 	["BL_MAT_UBR_020", ["diffuse color green", "coating thickness 3"], uber_020, default_settings, "UBER.blend"],
-	["BL_MAT_UBR_021", ["diffuse color green", "coating transmission сolor green"], uber_021, default_settings, "UBER.blend"],
+	["BL_MAT_UBR_021", ["diffuse color green", "coating transmission ?lor green"], uber_021, default_settings, "UBER.blend"],
 	["BL_MAT_UBR_022", ["reflection color png"], uber_022, delete_imagemap, "UBER.blend"],
 	["BL_MAT_UBR_023", ["reflection color tga"], uber_023, delete_imagemap, "UBER.blend"],
 	["BL_MAT_UBR_024", ["reflection weight png"], uber_024, delete_imagemap, "UBER.blend"],
@@ -663,7 +663,7 @@ if __name__ == '__main__':
 	["BL_MAT_UBR_027", ["diffuse color green", "reflection anisotropy 1"], uber_027, default_settings, "UBER.blend"],
 	["BL_MAT_UBR_028", ["diffuse color green", "reflection anisotropy 1"], uber_028, default_settings, "UBER.blend"],
 	["BL_MAT_UBR_029", ["diffuse color green", "reflection anisotropy 1", "reflection anisotropy rotation 90"], uber_029, default_settings, "UBER.blend"],
-	["BL_MAT_UBR_030", ["diffuse color green", "reflection roughness 0"], uber_030, default_settings, "UBER.blend"],
+	["BL_MAT_UBR_030", ["diffuse color grefen", "reflection roughness 0"], uber_030, default_settings, "UBER.blend"],
 	["BL_MAT_UBR_031", ["diffuse color green", "reflection roughness 1"], uber_031, default_settings, "UBER.blend"],
 	["BL_MAT_UBR_032", ["diffuse color green", "reflection ior 1"], uber_032, default_settings, "UBER.blend"],
 	["BL_MAT_UBR_033", ["diffuse color green", "reflection ior 3"], uber_033, default_settings, "UBER.blend"],

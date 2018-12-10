@@ -12,10 +12,14 @@
     	<argument>--resolution_y {ry}</argument>
         <argument>--res_path "{ScenesDir}"</argument>
         <argument>--output "{OutputDir}"</argument>
-	<argument>--package_name "Physical_Lights"</argument>
+	    <argument>--package_name "Physical_Lights"</argument>
     </execute>
 
     <execute command='python "{ResourcesDir}/makeReport.py"'>
+        <argument>--work_dir "{OutputDir}"</argument>
+    </execute>
+
+    <execute command='python {CommonDir}/scripts/checkExpected.py'>
         <argument>--work_dir "{OutputDir}"</argument>
     </execute>
 
