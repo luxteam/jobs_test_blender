@@ -148,6 +148,7 @@ def default_settings():
 
 
 def uber_001():
+	default_settings()
 	create_imagemap("diffuse_color", "diffuseColor.png")
 
 def uber_002():
@@ -319,7 +320,7 @@ def uber_032():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.reflection = True
 	node_uber.inputs[node_uber.diffuse_color].default_value = (0, 0.4, 0, 1.0)
-	node_uber.inputs[node_uber.reflection_ior].default_value = 1
+	node_uber.inputs[node_uber.reflection_ior].default_value = 0
 
 def uber_033():
 	uber_material, node_uber = get_material_and_node()
@@ -519,7 +520,7 @@ def uber_065():
 	node_uber.emissive = True
 	node_uber.emissive_double_sided = True
 	node_uber.inputs[node_uber.emissive_color].default_value = (0, 1, 0.1, 1.0)
-	node_uber.inputs[node_uber.emissive_intensity].default_value = 10
+	node_uber.inputs[node_uber.emissive_intensity].default_value = 3
 
 def uber_066():
 	uber_material, node_uber = get_material_and_node()
