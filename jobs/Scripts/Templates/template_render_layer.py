@@ -42,10 +42,10 @@ def prerender(test_list):
 if __name__ == "__main__":
 
 	list_tests = [
-	["BL_RS_RL_001", ["Render Layer: Decor"], "RenderLayer.blend", "Decor", 3], 
-	["BL_RS_RL_002", ["Render Layer: Chairs"], "RenderLayer.blend", "Chairs", 2],
-	["BL_RS_RL_003", ["Render Layer: Table"], "RenderLayer.blend", "Table", 1], 
-	["BL_RS_RL_004", ["Render Layer: Floor"], "RenderLayer.blend", "Floor", 0], 
+	# ["BL_RS_RL_001", ["Render Layer: Decor"], "RenderLayer.blend", "Decor", 3], 
+	# ["BL_RS_RL_002", ["Render Layer: Chairs"], "RenderLayer.blend", "Chairs", 2],
+	# ["BL_RS_RL_003", ["Render Layer: Table"], "RenderLayer.blend", "Table", 1], 
+	# ["BL_RS_RL_004", ["Render Layer: Floor"], "RenderLayer.blend", "Floor", 0], 
 	]
 	
 	launch_tests()
