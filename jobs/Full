@@ -1,6 +1,7 @@
 AOV
 Anti_Aliasing
-Base_Lights
+Quality
+Physical_Lights
 Camera
 Denoiser
 Emissive_Light
