@@ -323,15 +323,15 @@ if __name__ == '__main__':
 	["BL_MAT_PBR_031", ["emissive Weight.tga"], pbr_031, delete_imagemap, "PBR.blend"],
 	["BL_MAT_PBR_032", ["emissive Weight 0.5", "emissive color green"], pbr_032, default_settings, "PBR.blend"],
 	["BL_MAT_PBR_033", ["emissive Weight 1", "emissive color gree"], pbr_033, default_settings, "PBR.blend"],
-	["BL_MAT_PBR_034", ["sss Color.png"], pbr_034, delete_imagemap, "PBR.blend"],
-	["BL_MAT_PBR_035", ["sss Colort.tga"], pbr_035, delete_imagemap, "PBR.blend"],
+	# ["BL_MAT_PBR_034", ["sss Color.png"], pbr_034, delete_imagemap, "PBR.blend"],
+	# ["BL_MAT_PBR_035", ["sss Colort.tga"], pbr_035, delete_imagemap, "PBR.blend"],
 	["BL_MAT_PBR_036", ["sss Weight.png"], pbr_036, delete_imagemap, "PBR.blend"],
 	["BL_MAT_PBR_037", ["sss Weight.tga"], pbr_037, delete_imagemap, "PBR.blend"],
-	["BL_MAT_PBR_038", ["sss Weight 0.5"], pbr_038, default_settings, "PBR.blend"],
-	["BL_MAT_PBR_039", ["sss Radius.png"], pbr_039, delete_imagemap, "PBR.blend"],
-	["BL_MAT_PBR_040", ["sss Radius.tga"], pbr_040, delete_imagemap, "PBR.blend"],
-	["BL_MAT_PBR_041", ["sss Radius 0 0 0"], pbr_041, default_settings, "PBR.blend"],
-	["BL_MAT_PBR_042", ["sss Radius 5 5 5"], pbr_042, default_settings, "PBR.blend"],
+	# ["BL_MAT_PBR_038", ["sss Weight 0.5"], pbr_038, default_settings, "PBR.blend"],
+	# ["BL_MAT_PBR_039", ["sss Radius.png"], pbr_039, delete_imagemap, "PBR.blend"],
+	# ["BL_MAT_PBR_040", ["sss Radius.tga"], pbr_040, delete_imagemap, "PBR.blend"],
+	# ["BL_MAT_PBR_041", ["sss Radius 0 0 0"], pbr_041, default_settings, "PBR.blend"],
+	# ["BL_MAT_PBR_042", ["sss Radius 5 5 5"], pbr_042, default_settings, "PBR.blend"],
 	]
 
 	launch_tests()
