@@ -12,7 +12,7 @@ def createArgsParser():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--tool', required=True, metavar="<path>")
-    parser.add_argument('--res_path', required=True)
+    parser.add_argument('--resource_path', required=True)
     parser.add_argument('--render_mode', required=True)
     parser.add_argument('--template', required=True)
     parser.add_argument('--pass_limit', required=True)
@@ -35,10 +35,8 @@ def main(args):
 
     blender_script_template = base + blender_script_template
 
-    BlenderScript = blender_script_template.format(work_dir=work_dir, render_mode=args.render_mode,
-                                                   pass_limit=args.pass_limit,
-                                                   res_path=args.res_path, resolution_x=args.resolution_x,
-                                                   resolution_y=args.resolution_y, package_name=args.package_name)
+    BlenderScript = blender_script_template.format(work_dir=work_dir, render_mode=args.render_mode, pass_limit=args.pass_limit, resource_path=args.resource_path, \
+                                                                    resolution_x=args.resolution_x, resolution_y=args.resolution_y, package_name=args.package_name)
 
     BlenderScriptPath = os.path.join(work_dir, 'script.py')
     with open(BlenderScriptPath, 'w') as f:

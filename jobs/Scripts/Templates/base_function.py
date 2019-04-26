@@ -5,152 +5,118 @@ import sys
 import json
 import os
 import logging
-from rprblender import node_editor
-from rprblender import material_browser
-from rprblender import helpers
-from pyrpr import API_VERSION
+import traceback
 from shutil import copyfile
-
-
-def core_ver_str():
-	core_ver = API_VERSION
-	mj = (core_ver & 0xFFFF00000) >> 28
-	mn = (core_ver & 0xFFFFF) >> 8
-	return "%x.%x" % (mj, mn)
+import pyrpr
+from rprblender import material_library
 
 
 def set_value(path, name, value):
 	if hasattr(path, name):
 		setattr(path, name, value)
 	else:
-		logging.warning("No attribute found ")
+		logging.warning("No attribute found {{}}".format(name))
+
+
+def get_value(path, name):
+	if hasattr(path, name):
+		return getattr(path, name)
+	else:
+		logging.warning("No attribute found {{}}".format(name))
+
+
+def get_addon_version():
+	tuple_ver = sys.modules['rprblender'].bl_info['version']
+	version = str(tuple_ver[0]) + "." + str(tuple_ver[1]) + "." + str(tuple_ver[2])
+	return version
+
+
+def get_core_version():
+	from pyrprwrap import API_VERSION
+	mj = (API_VERSION & 0xFFFF00000) >> 28
+	mn = (API_VERSION & 0xFFFFF) >> 8
+	return "%x.%x" % (mj, mn)
+
+
+def get_blender_version():
+	return "Blender " + bpy.app.version_string.split(" (")[0]
+
+
+def enable_rpr_render(scene):
+	if not addon_utils.check('rprblender')[0]:
+		addon_utils.enable('rprblender', default_set=True, persistent=False, handle_error=None)
+	set_value(scene.render, 'engine', 'RPR')
+
+
+def set_render_device(scene, render_mode):
+	if render_mode == 'dual':
+		set_value(scene.rpr.devices, "cpu_state", True)
+		set_value(scene.rpr.devices, "gpu_states[0]", True)
+		device_name = pyrpr.Context.cpu_state['name'] + " & " + pyrpr.Context.gpu_devices[0]['name']
+	elif render_mode == 'cpu':
+		set_value(scene.rpr.devices, "cpu_state", True)
+		set_value(scene.rpr.devices, "gpu_states[0]", False)
+		device_name = pyrpr.Context.cpu_state['name']
+	elif render_mode == 'gpu':
+		set_value(scene.rpr.devices, "cpu_state", False)
+		set_value(scene.rpr.devices, "gpu_states[0]", True)
+		device_name = pyrpr.Context.gpu_devices[0]['name']
+
+	return device_name
 
 
 def render(*argv):
 
-	# get scene name
-	scene_name, scene = helpers.get_current_scene()
+	# get scene context
+	scene = bpy.context.scene
 
-	if ((addon_utils.check("rprblender"))[0] == False):
-		addon_utils.enable("rprblender", default_set=True, persistent=False, handle_error=None)
-	set_value(scene.render, 'engine', "RPR")
+	# enable rpr
+	enable_rpr_render(scene)
 
-	# Render device in RPR
-	set_value(helpers.get_user_settings(), "include_uncertified_devices", True)
-	if '{render_mode}' == 'dual':
-		helpers.set_render_devices(use_cpu=True, use_gpu=True)
-	elif '{render_mode}' == 'cpu':
-		helpers.set_render_devices(use_cpu=True, use_gpu=False)
-	elif '{render_mode}' == 'gpu':
-		helpers.set_render_devices(use_cpu=False, use_gpu=True)
-	
-	device_name = helpers.render_resources_helper.get_used_devices()
+	# set render device & get render device name
+	render_mode = '{render_mode}'
+	device_name = set_render_device(scene, render_mode)
 
-	# image format
+	# test case name and description
+	test_case = argv[0]
+	script_info = argv[1]
+
+	# image settings
 	set_value(scene.render.image_settings, 'quality', 100)
 	set_value(scene.render.image_settings, 'compression', 0)
 	set_value(scene.render.image_settings, 'color_mode', 'RGB')
 
-	name_scene = argv[0]
-	script_info = argv[1]
-
-	set_value(scene.render, 'filepath', r"{work_dir}" + "/Color/" + name_scene)
+	# output settings
+	set_value(scene.render, 'filepath', os.path.join("{work_dir}", "Color", test_case))
 	set_value(scene.render, 'use_placeholder', True)
 	set_value(scene.render, 'use_file_extension', True)
 	set_value(scene.render, 'use_overwrite', True)
 
-	# start render animation
-	TIMER = datetime.datetime.now()
-	bpy.ops.render.render(write_still=True, scene=scene_name)
-	Render_time = datetime.datetime.now() - TIMER
+	# start render
+	start_time = datetime.datetime.now()
+	bpy.ops.render.render(write_still=True)
+	render_time = (datetime.datetime.now() - start_time).total_seconds()
 
-	# get version of rpr addon
-	for mod_name in bpy.context.user_preferences.addons.keys():
-		if (mod_name == 'rprblender'):
-			mod = sys.modules[mod_name]
-			ver = mod.bl_info.get('version')
-			version = str(ver[0]) + "." + str(ver[1]) + "." + str(ver[2])
-
-
-	image_format = bpy.data.scenes[scene_name].render.image_settings.file_format
-	if image_format == 'JPEG':
-		image_format = 'jpg'
-	elif image_format == 'PNG':
-		image_format = 'png'
+	image_format = get_value(scene.render.image_settings, 'file_format')
+	if image_format == 'PNG':
+		image_format = image_format.lower()
 	else:
 		image_format = 'jpg'
 
 	# LOG
-	name_scene_for_json = name_scene + "_RPR"
-	log_name = os.path.join(r'{work_dir}', name_scene_for_json + ".json")
+	file_name = test_case + "." + image_format
+	log_name = os.path.join('{work_dir}', test_case + "_RPR.json")
 	report = {{}}
-	report['render_version'] = version
-	report['render_mode'] = '{render_mode}'
-	report['core_version'] = core_ver_str()
+	report['render_version'] = get_addon_version()
+	report['render_mode'] = render_mode
+	report['core_version'] = get_core_version()
 	report['render_device'] = device_name
-	report['test_group'] = "{package_name}"
-	report['tool'] = "Blender " + bpy.app.version_string.split(" (")[0]
-	report['file_name'] = name_scene + "." + image_format
+	report['test_group'] = '{package_name}'
+	report['tool'] = get_blender_version()
+	report['file_name'] = file_name
 	report['scene_name'] = bpy.path.basename(bpy.context.blend_data.filepath)
-	report['render_time'] = Render_time.total_seconds()
-	report['render_color_path'] = r"Color/" + name_scene + "." + image_format
-	report['date_time'] = datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S")
-	report['difference_color'] = "not compared yet"
-	report['test_case'] = name_scene
-	report['script_info'] = script_info
-	report['test_status'] = "undefined"
-
-	with open(log_name, 'w') as file:
-		json.dump([report], file, indent=' ')
-
-
-def create_report(*argv):
-	
-	# get scene name
-	scene_name, scene = helpers.get_current_scene()
-
-	# Render device in RPR
-	set_value(helpers.get_user_settings(), "include_uncertified_devices", True)
-	if '{render_mode}' == 'dual':
-		helpers.set_render_devices(use_cpu=True, use_gpu=True)
-	elif '{render_mode}' == 'cpu':
-		helpers.set_render_devices(use_cpu=True, use_gpu=False)
-	elif '{render_mode}' == 'gpu':
-		helpers.set_render_devices(use_cpu=False, use_gpu=True)
-	
-	device_name = helpers.render_resources_helper.get_used_devices()
-
-	name_scene = argv[0]
-	test_case = argv[0]
-	script_info = argv[1]
-	picture = argv[2]
-
-	# output
-	copyfile(r"{work_dir}" + "/../../../../jobs/Tests/" + picture + ".jpg", r"{work_dir}/Color/" + test_case + ".jpg")
-
-	# get version of rpr addon
-	for mod_name in bpy.context.user_preferences.addons.keys():
-		if (mod_name == 'rprblender'):
-			mod = sys.modules[mod_name]
-			ver = mod.bl_info.get('version')
-			version = str(ver[0]) + "." + str(ver[1]) + "." + str(ver[2])
-			
-	image_format = 'jpg'
-
-	# LOG
-	name_scene_for_json = name_scene + "_RPR"
-	log_name = os.path.join(r'{work_dir}', name_scene_for_json + ".json")
-	report = {{}}
-	report['render_version'] = version
-	report['render_mode'] = '{render_mode}'
-	report['core_version'] = core_ver_str()
-	report['render_device'] = device_name
-	report['test_group'] = "{package_name}"
-	report['tool'] = "Blender " + bpy.app.version_string.split(" (")[0]
-	report['file_name'] = name_scene + "." + image_format
-	report['scene_name'] = bpy.path.basename(bpy.context.blend_data.filepath)
-	report['render_time'] = 0
-	report['render_color_path'] = r"Color/" + name_scene + "." + image_format
+	report['render_time'] = render_time
+	report['render_color_path'] = os.path.join(r"Color", file_name)
 	report['date_time'] = datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S")
 	report['difference_color'] = "not compared yet"
 	report['test_case'] = test_case
@@ -160,6 +126,51 @@ def create_report(*argv):
 	with open(log_name, 'w') as file:
 		json.dump([report], file, indent=' ')
 
+
+def create_report(*argv):
+	
+	# get scene context
+	scene = bpy.context.scene
+
+	# enable rpr
+	enable_rpr_render(scene)
+
+	# set render device & get render device name
+	render_mode = '{render_mode}'
+	device_name = set_render_device(scene, render_mode)
+		
+	# test case name and description
+	test_case = argv[0]
+	script_info = argv[1]
+	picture = argv[2]
+
+	# output
+	copyfile(r"{work_dir}" + "/../../../../jobs/Tests/" + picture + ".jpg", r"{work_dir}/Color/" + test_case + ".jpg")
+
+	# LOG
+	file_name = test_case + ".jpg"
+	log_name = os.path.join(r'{work_dir}', test_case + "_RPR.json")
+	report = {{}}
+	report['render_version'] = get_addon_version()
+	report['render_mode'] = render_mode
+	report['core_version'] = get_core_version()
+	report['render_device'] = device_name
+	report['test_group'] = '{package_name}'
+	report['tool'] = get_blender_version()
+	report['file_name'] = file_name
+	report['scene_name'] = bpy.path.basename(bpy.context.blend_data.filepath)
+	report['render_time'] = 0
+	report['render_color_path'] = os.path.join(r"Color", file_name)
+	report['date_time'] = datetime.datetime.now().strftime("%m/%d/%Y %H:%M:%S")
+	report['difference_color'] = "not compared yet"
+	report['test_case'] = test_case
+	report['script_info'] = script_info
+	report['test_status'] = "undefined"
+
+	with open(log_name, 'w') as file:
+		json.dump([report], file, indent=' ')
+
+
 def write_status(directory, status):
 	with open(directory, 'r') as w:
 		json_report = w.read()
@@ -167,6 +178,7 @@ def write_status(directory, status):
 	json_report = json.loads(json_report)
 	with open(directory, 'w') as file:
 		json.dump(json_report, file, indent=' ')
+
 
 def launch_tests():
 
@@ -186,14 +198,15 @@ def launch_tests():
 			if rc:
 				write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'passed')
 				status = 0
-		except Exception:
+		except Exception as ex:
+			traceback.print_exc()
 			rc = -1
 
-		if (rc == -1):
+		if rc == -1:
 			create_report(list_tests[i][0], list_tests[i][1], "failed")
 			write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'failed')
 			status -= 1
-			if (status == -3):
+			if status == -3:
 				files = os.listdir(r"{work_dir}")
 				json_files = list(filter(lambda x: x.endswith('RPR.json'), files))
 				for i in range(len(json_files), len(list_tests)):
