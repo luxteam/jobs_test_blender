@@ -10,7 +10,7 @@
         <argument>--pass_limit {PassLimit}</argument>
     	<argument>--resolution_x {rx}</argument>
     	<argument>--resolution_y {ry}</argument>
-        <argument>--res_path "{ScenesDir}"</argument>
+        <argument>--resource_path "{ScenesDir}"</argument>
         <argument>--output "{OutputDir}"</argument>
 	    <argument>--package_name "AOV"</argument>
     </execute>

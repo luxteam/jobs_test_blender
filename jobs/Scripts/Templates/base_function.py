@@ -70,9 +70,6 @@ def render(*argv):
 	# get scene context
 	scene = bpy.context.scene
 
-	# enable rpr
-	enable_rpr_render(scene)
-
 	# set render device & get render device name
 	render_mode = '{render_mode}'
 	device_name = set_render_device(scene, render_mode)
@@ -131,9 +128,6 @@ def create_report(*argv):
 	
 	# get scene context
 	scene = bpy.context.scene
-
-	# enable rpr
-	enable_rpr_render(scene)
 
 	# set render device & get render device name
 	render_mode = '{render_mode}'

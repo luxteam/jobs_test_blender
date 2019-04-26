@@ -3,13 +3,10 @@ def prerender(test_list):
 
 	current_scene = bpy.path.basename(bpy.context.blend_data.filepath)
 	if current_scene != test_list[4]:
-		bpy.ops.wm.open_mainfile(filepath=os.path.join("{resource_path}", test_list[4]))
+		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[4]))
 
 	scene = bpy.context.scene
-
-	if not addon_utils.check("rprblender")[0]:
-		addon_utils.enable("rprblender", default_set=True, persistent=False, handle_error=None)
-	set_value(scene.render, 'engine', 'RPR')
+	enable_rpr_render(scene)
 
 	set_value(scene.rpr, 'use_render_stamp', False)
 	set_value(scene.rpr.limits, 'max_samples', test_list[5])

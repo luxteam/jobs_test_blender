@@ -1,26 +1,21 @@
 
 def prerender(test_list):
 
-	scene = bpy.path.basename(bpy.context.blend_data.filepath)
-	if scene != test_list[2]:
-		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{res_path}", test_list[2]))
+    current_scene = bpy.path.basename(bpy.context.blend_data.filepath)
+    if current_scene != test_list[2]:
+        bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
 
-	scene = bpy.context.scene
+    scene = bpy.context.scene
+    enable_rpr_render(scene)
 
-	if ((addon_utils.check("rprblender"))[0] == False):
-		addon_utils.enable("rprblender", default_set=True, persistent=False, handle_error=None)
-	scene.render.engine = "RPR"
+    set_value(scene.rpr.limits, 'max_samples', {pass_limit})
+    set_value(scene.render.image_settings, 'file_format', 'JPEG')
 
-	scene.rpr.use_render_stamp = False
-	scene.rpr.render.rendering_limits.iterations = {pass_limit}
-	scene.render.image_settings.file_format = 'JPEG'
-
-	if ({resolution_x} and {resolution_y}):
-		scene.render.resolution_x = {resolution_x}
-		scene.render.resolution_y = {resolution_y}
+    if {resolution_x} and {resolution_y}:
+        set_value(scene.render, 'resolution_x', {resolution_x})
+        set_value(scene.render, 'resolution_y', {resolution_y})
 
 	scene.frame_set(test_list[3])
-
 
 	render(test_list[0], test_list[1])
 	return 1
