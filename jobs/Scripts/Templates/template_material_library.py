@@ -16,11 +16,9 @@ def prerender(test_list):
         set_value(scene.render, 'resolution_x', {resolution_x})
         set_value(scene.render, 'resolution_y', {resolution_y})
 
-
-    matlib = material_browser.RPRMaterialLibrary()
-    matlib_path = matlib.get_library_path() + "/" + test_list[3] + "/" + test_list[3] + ".xml"
+    xml_path = os.path.join(material_library.path.get_library_path(), test_list[3], test_list[3] + ".xml")
     material = bpy.data.materials['Material']
-    material_browser.import_xml_material(matlib_path, material)
+    material_library.import_xml_material(material, test_list[3], xml_path, False)
 
     render(test_list[0], test_list[1])
     return 1

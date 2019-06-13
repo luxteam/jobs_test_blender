@@ -51,16 +51,16 @@ def enable_rpr_render(scene):
 def set_render_device(render_mode):
 	render_devices = bpy.context.preferences.addons['rprblender'].preferences.settings.final_devices
 	if render_mode == 'dual':
-		set_value(render_devices, "cpu_state", True)
-		set_value(render_devices, "gpu_states[0]", True)
+		set_value(bpy.context.preferences.addons['rprblender'].preferences.settings.final_devices, "gpu_states[0]", True)
+		set_value(bpy.context.preferences.addons['rprblender'].preferences.settings.final_devices, "cpu_state", True)
 		device_name = pyrpr.Context.cpu_state['name'] + " & " + pyrpr.Context.gpu_devices[0]['name']
 	elif render_mode == 'cpu':
-		set_value(render_devices, "cpu_state", True)
-		set_value(render_devices, "gpu_states[0]", False)
+		set_value(bpy.context.preferences.addons['rprblender'].preferences.settings.final_devices, "cpu_state", True)
+		set_value(bpy.context.preferences.addons['rprblender'].preferences.settings.final_devices, "gpu_states[0]", False)
 		device_name = pyrpr.Context.cpu_state['name']
 	elif render_mode == 'gpu':
-		set_value(render_devices, "cpu_state", False)
-		set_value(render_devices, "gpu_states[0]", True)
+		set_value(bpy.context.preferences.addons['rprblender'].preferences.settings.final_devices, "cpu_state", False)
+		set_value(bpy.context.preferences.addons['rprblender'].preferences.settings.final_devices, "gpu_states[0]", True)
 		device_name = pyrpr.Context.gpu_devices[0]['name']
 
 	return device_name

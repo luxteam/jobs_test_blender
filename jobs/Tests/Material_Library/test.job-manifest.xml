@@ -5,7 +5,7 @@
 
     <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="5500">
         <argument>--tool "{Tool}"</argument>
-        <argument>--template "{ResourcesDir}/Templates/template_material.py"</argument>
+        <argument>--template "{ResourcesDir}/Templates/template_material_library.py"</argument>
         <argument>--render_mode "{RenderDevice}"</argument>
         <argument>--pass_limit {PassLimit}</argument>
     	<argument>--resolution_x {rx}</argument>
