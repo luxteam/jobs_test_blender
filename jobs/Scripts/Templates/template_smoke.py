@@ -120,25 +120,29 @@ def deactivate_tile_rendering():
 def activate_color_srgb():
 	scene = bpy.context.scene
 	set_value(scene.display_settings, 'display_device', 'sRGB')
-	set_value(scene.view_settings, 'look', 'Filmic - Base Contrast')
+	set_value(scene.view_settings, 'view_transform', 'Filmic')
+	set_value(scene.view_settings, 'look', 'None')
 
 
 def deactivate_color_srgb():
 	scene = bpy.context.scene
 	set_value(scene.display_settings, 'display_device', 'sRGB')
-	set_value(scene.view_settings, 'look', 'Filmic - Base Contrast')
+	set_value(scene.view_settings, 'view_transform', 'Filmic')
+	set_value(scene.view_settings, 'look', 'None')
 
 
 def activate_color_look():
 	scene = bpy.context.scene
 	set_value(scene.display_settings, 'display_device', 'sRGB')
+	set_value(scene.view_settings, 'view_transform', 'Filmic')
 	set_value(scene.view_settings, 'look', 'Filmic - Very High Contrast')
 
 
 def deactivate_color_look():
 	scene = bpy.context.scene
 	set_value(scene.display_settings, 'display_device', 'sRGB')
-	set_value(scene.view_settings, 'look', 'Filmic - Base Contrast')
+	set_value(scene.view_settings, 'view_transform', 'Filmic')
+	set_value(scene.view_settings, 'look', 'None')
 
 
 def activate_render_stamp():
@@ -265,7 +269,7 @@ def import_rpr_matlib():
 	gold_material = bpy.data.materials.new('Gold')
 	gold_material.use_nodes = True
 	bpy.data.objects['shader_ball'].material_slots[0].material = gold_material
-	material_library.import_xml_material(gold_material, xml_path, False)
+	material_library.import_xml_material(gold_material, material_name, xml_path, False)
 
 
 def create_and_assign_uber():
