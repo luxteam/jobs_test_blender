@@ -47,7 +47,7 @@ if __name__ == "__main__":
 	["BL_RS_QL_014", ["Ray Cast Epsilon - 50"], "Quality.blend", 8, 3, 5, 5, 5, 5, 50, True, 1], 
 	["BL_RS_QL_015", ["Clamp Irradience - 100"], "Quality.blend", 8, 3, 5, 5, 5, 5, 0.02, True, 100], 
 	["BL_RS_QL_016", ["Turn off \"Use Clamp\""], "Quality.blend", 8, 3, 5, 5, 5, 5, 0.02, False, 1], 
-	["BL_RS_QL_017", ["Activate \"Downscale Textures in Production\" "], "Quality.blend", 8, 3, 5, 5, 5, 5, 0.02, True, 1], 
+	# ["BL_RS_QL_017", ["Activate \"Downscale Textures in Production\" "], "Quality.blend", 8, 3, 5, 5, 5, 5, 0.02, True, 1], 
 	["BL_RS_QL_018", ["Complex parameters"], "Quality.blend", 2, 2, 2, 1, 1, 1, 0, True, 1], 
 	["BL_RS_QL_019", ["Complex parameters"], "Quality.blend", 50, 50, 50, 50, 50, 50, 50, True, 100], 
 
