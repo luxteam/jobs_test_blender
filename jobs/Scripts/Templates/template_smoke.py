@@ -328,7 +328,7 @@ if __name__ == '__main__':
 
 	["BL28_SM_032", ["Area light", "Pass Limit: 50"], create_area_light, delete_area_light, "default.blend", 50],
 	["BL28_SM_033", ["Instances", "Pass Limit: 50"], copy_objects, empty, "instances.blend", 50],
-	["BL28_SM_034", ["5 lights", "Pass Limit: 50"], empty, empty, "5 lights.blend", 50],
+	["BL28_SM_034", ["5 lights", "Pass Limit: 50"], empty, empty, "5_lights.blend", 50],
 
 	["BL28_SM_035", ["AOV SC", "Pass Limit: 50"], empty, empty, "AOV_SC.blend", 50],
 	["BL28_SM_036", ["SSS", "Pass Limit: 50"], empty, empty, "SSS_Test.blend", 50],
