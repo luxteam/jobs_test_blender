@@ -53,39 +53,35 @@ def delete_obj():
 def create_IBL():
 	scene = bpy.context.scene
 	set_value(scene.world.rpr, 'enabled', True)
-	set_value(scene.world.rpr, 'light_type', 'IBL')
-	set_value(scene.world.rpr, 'ibl_type', 'COLOR')
+	set_value(scene.world.rpr, 'mode', 'IBL')
 
 
 def update_IBL_hdr():
 	scene = bpy.context.scene
 	set_value(scene.world.rpr, 'enabled', True)
-	set_value(scene.world.rpr, 'light_type', 'IBL')
-	set_value(scene.world.rpr, 'ibl_type', 'IBL')
+	set_value(scene.world.rpr, 'mode', 'IBL')
 	bpy.ops.image.open(filepath="//Maps//Tropical_Beach_3k.hdr", directory="{resource_path}//Maps//", files=[{{"name":"Tropical_Beach_3k.hdr"}}], relative_path=True, show_multiview=False)
-	set_value(scene.world.rpr, 'ibl_image', bpy.data.images['Tropical_Beach_3k.hdr'])
+	set_value(scene.world.rpr.ibl, 'image', bpy.data.images['Tropical_Beach_3k.hdr'])
 
 
 def update_IBL_exr():
 	scene = bpy.context.scene
 	set_value(scene.world.rpr, 'enabled', True)
-	set_value(scene.world.rpr, 'light_type', 'IBL')
-	set_value(scene.world.rpr, 'ibl_type', 'IBL')
+	set_value(scene.world.rpr, 'mode', 'IBL')
 	bpy.ops.image.open(filepath="//Maps//ibl_test.exr", directory="{resource_path}//Maps//", files=[{{"name":"ibl_test.exr"}}], relative_path=True, show_multiview=False)
-	set_value(scene.world.rpr, 'ibl_image', bpy.data.images['ibl_test.exr'])
+	set_value(scene.world.rpr.ibl, 'image', bpy.data.images['ibl_test.exr'])
 
 
 def delete_map_IBL():
 	scene = bpy.context.scene
 	set_value(scene.world.rpr, 'enabled', True)
-	set_value(scene.world.rpr, 'light_type', 'IBL')
-	set_value(scene.world.rpr, 'ibl_type', 'COLOR')
+	set_value(scene.world.rpr, 'mode', 'IBL')
 
 
 def create_sun_sky():
 	scene = bpy.context.scene
 	set_value(scene.world.rpr, 'enabled', True)
-	set_value(scene.world.rpr, 'light_type', 'SUN_SKY')
+	set_value(scene.world.rpr, 'mode', 'SUN_SKY')
 	
 
 def delete_sun_sky():
@@ -290,62 +286,62 @@ def assign_standart_material():
 if __name__ == '__main__':
 
 	list_tests = [
-	["BL_SM_001", ["Install RPR"], "pass", "pass", "rpr_default.blend", 1],
-	["BL_SM_002", ["Select RPR"], "pass", "pass", "rpr_default.blend", 1],
-	["BL_SM_003", ["Open RPR scene"], "pass", "pass", "rpr_default.blend", 1],
-	["BL_SM_004", ["Render empty scene", "Pass Limit: 50"], empty, empty, "rpr_default.blend", 50],
-	["BL_SM_005", ["IES", "Pass Limit: 50"], create_ies_light, delete_ies_light, "IES.blend", 50],
-	["BL_SM_006", ["Import FBX", "Pass Limit: 50"], import_fbx, empty, "rpr_default.blend", 50],
-	["BL_SM_007", ["Import OBJ", "Pass Limit: 50"], import_obj, delete_obj, "default.blend", 50],
-	["BL_SM_008", ["RPR Uber material", "Pass Limit: 50"], create_and_assign_uber, assign_standart_material, "default.blend", 50],
-	["BL_SM_009", ["Sun_Sky", "Pass Limit: 50"], create_sun_sky, delete_sun_sky, "default.blend", 50],
-	["BL_SM_010", ["IBL", "Pass Limit: 50"], create_IBL, empty, "default.blend", 50],
-	["BL_SM_011", ["IBL with HDR", "Pass Limit: 50"], update_IBL_hdr, empty, "default.blend", 50],
-	["BL_SM_012", ["IBL with EXR", "Pass Limit: 50"], update_IBL_exr, delete_map_IBL, "default.blend", 50],
-	["BL_SM_013", ["Render 1 pass"], empty, empty, "default.blend", 1],
-	["BL_SM_014", ["Render 100 pass"], empty, empty, "default.blend", 100],
-	["BL_SM_015", ["Render 500 pass"], empty, empty, "default.blend", 500],
-	["BL_SM_016", ["Tile Rendering"], activate_tile_rendering, deactivate_tile_rendering, "default.blend", 50],
-	["BL_SM_017", ["Color Management (sRGB)"], activate_color_srgb, deactivate_color_srgb, "default.blend", 50],
-	["BL_SM_018", ["Color Management (Look)"], activate_color_look, deactivate_color_look, "default.blend", 50],
-	["BL_SM_019", ["Render Stamp", "Pass Limit: 50"], activate_render_stamp, deactivate_render_stamp, "default.blend", 50],
+	["BL28_SM_001", ["Install RPR"], "pass", "pass", "rpr_default.blend", 1],
+	["BL28_SM_002", ["Select RPR"], "pass", "pass", "rpr_default.blend", 1],
+	["BL28_SM_003", ["Open RPR scene"], "pass", "pass", "rpr_default.blend", 1],
+	["BL28_SM_004", ["Render empty scene", "Pass Limit: 50"], empty, empty, "rpr_default.blend", 50],
+	["BL28_SM_005", ["IES", "Pass Limit: 50"], create_ies_light, delete_ies_light, "IES.blend", 50],
+	["BL28_SM_006", ["Import FBX", "Pass Limit: 50"], import_fbx, empty, "rpr_default.blend", 50],
+	["BL28_SM_007", ["Import OBJ", "Pass Limit: 50"], import_obj, delete_obj, "default.blend", 50],
+	["BL28_SM_008", ["RPR Uber material", "Pass Limit: 50"], create_and_assign_uber, assign_standart_material, "default.blend", 50],
+	["BL28_SM_009", ["Sun_Sky", "Pass Limit: 50"], create_sun_sky, delete_sun_sky, "default.blend", 50],
+	["BL28_SM_010", ["IBL", "Pass Limit: 50"], create_IBL, empty, "default.blend", 50],
+	["BL28_SM_011", ["IBL with HDR", "Pass Limit: 50"], update_IBL_hdr, empty, "default.blend", 50],
+	["BL28_SM_012", ["IBL with EXR", "Pass Limit: 50"], update_IBL_exr, delete_map_IBL, "default.blend", 50],
+	["BL28_SM_013", ["Render 1 pass"], empty, empty, "default.blend", 1],
+	["BL28_SM_014", ["Render 100 pass"], empty, empty, "default.blend", 100],
+	["BL28_SM_015", ["Render 500 pass"], empty, empty, "default.blend", 500],
+	["BL28_SM_016", ["Tile Rendering"], activate_tile_rendering, deactivate_tile_rendering, "default.blend", 50],
+	["BL28_SM_017", ["Color Management (sRGB)"], activate_color_srgb, deactivate_color_srgb, "default.blend", 50],
+	["BL28_SM_018", ["Color Management (Look)"], activate_color_look, deactivate_color_look, "default.blend", 50],
+	["BL28_SM_019", ["Render Stamp", "Pass Limit: 50"], activate_render_stamp, deactivate_render_stamp, "default.blend", 50],
 
 	# Not implemented in plugin
-	#["BL_SM_020", ["Render mode wireframe", "Pass Limit: 50"], activate_wireframe_mode, deactivate_wireframe_mode, "default.blend", 50],
+	#["BL28_SM_020", ["Render mode wireframe", "Pass Limit: 50"], activate_wireframe_mode, deactivate_wireframe_mode, "default.blend", 50],
 
-	["BL_SM_021", ["Image size 720HD", "Pass Limit: 50"], change_image_size_hd720, empty, "default.blend", 50],
-	["BL_SM_022", ["Image size 1500 1125", "Pass Limit: 50"], change_image_size_custom, change_image_size_default, "default.blend", 50],
-	["BL_SM_023", ["PNG format", "Pass Limit: 50"], activate_png_format, empty, "default.blend", 50],	
-	["BL_SM_024", ["JPG format", "Pass Limit: 50"], activate_jpg_format, empty, "default.blend", 50],
-	["BL_SM_025", ["Denoiser EAW", "Pass Limit: 50"], activate_denoiser_eaw, deactivate_denoiser, "default.blend", 50],
-	["BL_SM_026", ["Denoiser LWR", "Pass Limit: 50"], activate_denoiser_lwr, deactivate_denoiser, "default.blend", 50],
-	["BL_SM_027", ["Denoiser Bilateral", "Pass Limit: 50"], activate_denoiser_bilateral, deactivate_denoiser, "default.blend", 50],
-	["BL_SM_028", ["Denoiser ML", "Pass Limit: 50"], activate_denoiser_ml, deactivate_denoiser, "default.blend", 50],
+	["BL28_SM_021", ["Image size 720HD", "Pass Limit: 50"], change_image_size_hd720, empty, "default.blend", 50],
+	["BL28_SM_022", ["Image size 1500 1125", "Pass Limit: 50"], change_image_size_custom, change_image_size_default, "default.blend", 50],
+	["BL28_SM_023", ["PNG format", "Pass Limit: 50"], activate_png_format, empty, "default.blend", 50],	
+	["BL28_SM_024", ["JPG format", "Pass Limit: 50"], activate_jpg_format, empty, "default.blend", 50],
+	["BL28_SM_025", ["Denoiser EAW", "Pass Limit: 50"], activate_denoiser_eaw, deactivate_denoiser, "default.blend", 50],
+	["BL28_SM_026", ["Denoiser LWR", "Pass Limit: 50"], activate_denoiser_lwr, deactivate_denoiser, "default.blend", 50],
+	["BL28_SM_027", ["Denoiser Bilateral", "Pass Limit: 50"], activate_denoiser_bilateral, deactivate_denoiser, "default.blend", 50],
+	["BL28_SM_028", ["Denoiser ML", "Pass Limit: 50"], activate_denoiser_ml, deactivate_denoiser, "default.blend", 50],
 
 	# Not implemented in plugin
-	#["BL_SM_029", ["PBR", "Pass Limit: 50"], create_and_assign_pbr, empty, "default.blend", 50],
+	#["BL28_SM_029", ["PBR", "Pass Limit: 50"], create_and_assign_pbr, empty, "default.blend", 50],
 
-	["BL_SM_030", ["Mat lib", "Pass Limit: 50"], import_rpr_matlib, assign_standart_material, "default.blend", 50],
+	["BL28_SM_030", ["Mat lib", "Pass Limit: 50"], import_rpr_matlib, assign_standart_material, "default.blend", 50],
 
 	# Wait for ticket 847
-	#["BL_SM_031", ["AOV Geometric Normal", "Pass Limit: 50"], activate_aov, deactivate_aov, "default.blend", 50],
+	#["BL28_SM_031", ["AOV Geometric Normal", "Pass Limit: 50"], activate_aov, deactivate_aov, "default.blend", 50],
 
-	["BL_SM_032", ["Area light", "Pass Limit: 50"], create_area_light, delete_area_light, "default.blend", 50],
-	["BL_SM_033", ["Instances", "Pass Limit: 50"], copy_objects, empty, "instances.blend", 50],
-	["BL_SM_034", ["5 lights", "Pass Limit: 50"], empty, empty, "5 lights.blend", 50],
+	["BL28_SM_032", ["Area light", "Pass Limit: 50"], create_area_light, delete_area_light, "default.blend", 50],
+	["BL28_SM_033", ["Instances", "Pass Limit: 50"], copy_objects, empty, "instances.blend", 50],
+	["BL28_SM_034", ["5 lights", "Pass Limit: 50"], empty, empty, "5 lights.blend", 50],
 
-	["BL_SM_035", ["AOV SC", "Pass Limit: 50"], empty, empty, "AOV_SC.blend", 50],
-	["BL_SM_036", ["SSS", "Pass Limit: 50"], empty, empty, "SSS_Test.blend", 50],
+	["BL28_SM_035", ["AOV SC", "Pass Limit: 50"], empty, empty, "AOV_SC.blend", 50],
+	["BL28_SM_036", ["SSS", "Pass Limit: 50"], empty, empty, "SSS_Test.blend", 50],
 
 	# Not implemented in plugin
-	# ["BL_SM_037", ["Displacement", "Pass Limit: 50"], empty, empty, "Displacement.blend", 50],
+	# ["BL28_SM_037", ["Displacement", "Pass Limit: 50"], empty, empty, "Displacement.blend", 50],
 
-	["BL_SM_038", ["Quality", "Pass Limit: 50"], activate_medium_quality, deactivate_medium_quality, "WaterInsideGlass.blend", 50],
+	["BL28_SM_038", ["Quality", "Pass Limit: 50"], activate_medium_quality, deactivate_medium_quality, "WaterInsideGlass.blend", 50],
 
 	# Not-automated
-	##["BL_SM_039", ["IPR"], empty, empty, "default.blend", 50],
+	##["BL28_SM_039", ["IPR"], empty, empty, "default.blend", 50],
 
-	["BL_SM_040", ["Hair", "Pass Limit: 50"], activate_hair, empty, "default.blend", 50]
+	["BL28_SM_040", ["Hair", "Pass Limit: 50"], activate_hair, empty, "default.blend", 50]
 	]
 
 	launch_tests()
