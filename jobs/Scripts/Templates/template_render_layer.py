@@ -8,13 +8,6 @@ def prerender(test_list):
 	scene = bpy.context.scene
 	enable_rpr_render(scene)
 
-	set_value(scene.rpr.limits, 'max_samples', {pass_limit})
-	set_value(scene.render.image_settings, 'file_format', 'JPEG')
-
-	if {resolution_x} and {resolution_y}:
-		set_value(scene.render, 'resolution_x', {resolution_x})
-		set_value(scene.render, 'resolution_y', {resolution_y})
-
 	# Default disable
 	bpy.context.scene.render.layers["Floor"].layers[4] = True
 	bpy.context.scene.render.layers["Floor"].layers[0] = False

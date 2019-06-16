@@ -7,13 +7,6 @@ def prerender(test_list):
 	scene = bpy.context.scene
 	enable_rpr_render(scene)
 
-	set_value(scene.rpr.limits, 'max_samples', {pass_limit})
-	set_value(scene.render.image_settings, 'file_format', 'JPEG')
-
-	if {resolution_x} and {resolution_y}:
-		set_value(scene.render, 'resolution_x', {resolution_x})
-		set_value(scene.render, 'resolution_y', {resolution_y})
-
 	if test_list[2] == "non_linear":
 		bpy.context.scene.rpr.render.tone_mapping.nonlinear.burn = test_list[3]
 		bpy.context.scene.rpr.render.tone_mapping.nonlinear.prescale = test_list[4]

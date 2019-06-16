@@ -8,13 +8,6 @@ def prerender(test_list):
     scene = bpy.context.scene
     enable_rpr_render(scene)
 
-    set_value(scene.rpr.limits, 'max_samples', {pass_limit})
-    set_value(scene.render.image_settings, 'file_format', 'JPEG')
-
-    if {resolution_x} and {resolution_y}:
-        set_value(scene.render, 'resolution_x', {resolution_x})
-        set_value(scene.render, 'resolution_y', {resolution_y})
-
 	set_value(scene.world.rpr, 'enabled', True)
 	set_value(scene.world.rpr, 'mode', 'IBL')
 	set_value(scene.world.rpr, 'intensity', test_list[3])
@@ -31,13 +24,13 @@ def prerender(test_list):
 if __name__ == "__main__":
 
 	list_tests = [
-	["BL28_RS_IBL_001", ["Intensity: 0"], "ComplexTestUber.blend", 0, (0.5, 0.5, 0.5), None, None], 
-	["BL28_RS_IBL_002", ["Intensity: 1"], "ComplexTestUber.blend", 1, (0.5, 0.5, 0.5), None, None], 
-	["BL28_RS_IBL_003", ["Intensity: 2"], "ComplexTestUber.blend", 2, (0.5, 0.5, 0.5), None, None], 
-	["BL28_RS_IBL_004", ["Intensity: 3"], "ComplexTestUber.blend", 3, (0.5, 0.5, 0.5), None, None], 
-	["BL28_RS_IBL_005", ["Intensity: 5"], "ComplexTestUber.blend", 5, (0.5, 0.5, 0.5), None, None], 
-	["BL28_RS_IBL_006", ["Intensity: 7"], "ComplexTestUber.blend", 7, (0.5, 0.5, 0.5), None, None], 
-	["BL28_RS_IBL_007", ["Intensity: 10"], "ComplexTestUber.blend", 10, (0.5, 0.5, 0.5), None, None], 
+		["BL28_RS_IBL_001", ["Intensity: 0"], "ComplexTestUber.blend", 0, (0.5, 0.5, 0.5), None, None], 
+		["BL28_RS_IBL_002", ["Intensity: 1"], "ComplexTestUber.blend", 1, (0.5, 0.5, 0.5), None, None], 
+		["BL28_RS_IBL_003", ["Intensity: 2"], "ComplexTestUber.blend", 2, (0.5, 0.5, 0.5), None, None], 
+		["BL28_RS_IBL_004", ["Intensity: 3"], "ComplexTestUber.blend", 3, (0.5, 0.5, 0.5), None, None], 
+		["BL28_RS_IBL_005", ["Intensity: 5"], "ComplexTestUber.blend", 5, (0.5, 0.5, 0.5), None, None], 
+		["BL28_RS_IBL_006", ["Intensity: 7"], "ComplexTestUber.blend", 7, (0.5, 0.5, 0.5), None, None], 
+		["BL28_RS_IBL_007", ["Intensity: 10"], "ComplexTestUber.blend", 10, (0.5, 0.5, 0.5), None, None]
 	]
 
 	launch_tests()

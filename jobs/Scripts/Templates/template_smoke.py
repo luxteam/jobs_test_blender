@@ -8,9 +8,7 @@ def prerender(test_list):
 	scene = bpy.context.scene
 	enable_rpr_render(scene)
 
-	set_value(scene.rpr, 'use_render_stamp', False)
 	set_value(scene.rpr.limits, 'max_samples', test_list[5])
-	set_value(scene.render.image_settings, 'file_format', 'JPEG')
 
 	if test_list[2] != "pass":
 		test_list[2]()

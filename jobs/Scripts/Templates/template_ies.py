@@ -8,14 +8,6 @@ def prerender(test_list):
     scene = bpy.context.scene
     enable_rpr_render(scene)
 
-    set_value(scene.rpr.limits, 'max_samples', {pass_limit})
-    set_value(scene.render.image_settings, 'file_format', 'JPEG')
-
-    if {resolution_x} and {resolution_y}:
-        set_value(scene.render, 'resolution_x', {resolution_x})
-        set_value(scene.render, 'resolution_y', {resolution_y})
-
-
 	bpy.context.object.data.type = 'POINT'
 	bpy.data.lamps["Lamp"].rpr_lamp.intensity = 50
 	bpy.data.lamps["Lamp"].rpr_lamp.ies_file_name = os.path.join("{res_path}", "ies" , test_list[3])

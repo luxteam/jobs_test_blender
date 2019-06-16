@@ -8,9 +8,6 @@ def prerender(test_list):
 	scene = bpy.context.scene
 	enable_rpr_render(scene)
 
-	set_value(scene.rpr.limits, 'max_samples', {pass_limit})
-	set_value(scene.render.image_settings, 'file_format', 'JPEG')
-
 	set_value(scene.render, 'resolution_x', test_list[3])
 	set_value(scene.render, 'resolution_y', test_list[4])
 	set_value(scene.render, 'pixel_aspect_x', test_list[5])

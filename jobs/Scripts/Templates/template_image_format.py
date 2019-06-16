@@ -8,12 +8,7 @@ def prerender(test_list):
 	scene = bpy.context.scene
 	enable_rpr_render(scene)
 
-	set_value(scene.rpr.limits, 'max_samples', {pass_limit})
 	set_value(scene.render.image_settings, 'file_format', test_list[3])
-
-	if {resolution_x} and {resolution_y}:
-		set_value(scene.render, 'resolution_x', {resolution_x})
-		set_value(scene.render, 'resolution_y', {resolution_y})
 
 	render(test_list[0], test_list[1])
 	copyfile("{work_dir}" + "/../../../../jobs/Tests/pass.jpg", "{work_dir}/Color/" + test_list[0] + ".jpg")

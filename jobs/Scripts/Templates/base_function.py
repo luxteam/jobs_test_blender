@@ -79,6 +79,19 @@ def render(*argv):
 	test_case = argv[0]
 	script_info = argv[1]
 
+	# resolution
+	if not test_case.startswith("BL28_RS_IS"):
+		if {resolution_x} and {resolution_y}:
+			set_value(scene.render, 'resolution_x', {resolution_x})
+			set_value(scene.render, 'resolution_y', {resolution_y})
+
+	if not test_case.startswith("BL28_RS_IF"):
+		set_value(scene.render.image_settings, 'file_format', 'JPEG')
+
+	if not (test_case.startswith("BL28_RS_AS") or test_case.startswith("BL28_L_EMIS")):
+		set_value(scene.rpr.limits, 'min_samples', 16)
+		set_value(scene.rpr.limits, 'max_samples', 64)
+
 	# image settings
 	set_value(scene.render.image_settings, 'quality', 100)
 	set_value(scene.render.image_settings, 'compression', 0)
@@ -95,14 +108,8 @@ def render(*argv):
 	bpy.ops.render.render(write_still=True)
 	render_time = (datetime.datetime.now() - start_time).total_seconds()
 
-	image_format = get_value(scene.render.image_settings, 'file_format')
-	if image_format == 'PNG' and test_case != "BL_RS_IF_003":
-		image_format = image_format.lower()
-	else:
-		image_format = 'jpg'
-
 	# LOG
-	file_name = test_case + "." + image_format
+	file_name = test_case + ".jpg"
 	log_name = os.path.join('{work_dir}', test_case + "_RPR.json")
 	report = {{}}
 	report['render_version'] = get_addon_version()
