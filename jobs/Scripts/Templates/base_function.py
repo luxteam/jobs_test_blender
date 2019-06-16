@@ -96,7 +96,7 @@ def render(*argv):
 	render_time = (datetime.datetime.now() - start_time).total_seconds()
 
 	image_format = get_value(scene.render.image_settings, 'file_format')
-	if image_format == 'PNG':
+	if image_format == 'PNG' and test_case != "BL_RS_IF_003":
 		image_format = image_format.lower()
 	else:
 		image_format = 'jpg'

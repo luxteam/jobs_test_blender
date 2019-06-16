@@ -3,14 +3,14 @@
 
     <outpath value="{OutputDir}"/>
 
-    <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="1000">
+    <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="6000">
         <argument>--tool "{Tool}"</argument>
         <argument>--template "{ResourcesDir}/Templates/template_denoiser.py"</argument>
         <argument>--render_mode "{RenderDevice}"</argument>
         <argument>--pass_limit {PassLimit}</argument>
     	<argument>--resolution_x {rx}</argument>
     	<argument>--resolution_y {ry}</argument>
-        <argument>--resource_path "{ScenesDir}/Render Settings"</argument>
+        <argument>--resource_path "{ScenesDir}/Render_Settings"</argument>
         <argument>--output "{OutputDir}"</argument>
 	    <argument>--package_name "Denoiser"</argument>
     </execute>
