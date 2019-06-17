@@ -3,13 +3,13 @@
 
     <outpath value="{OutputDir}"/>
 
-    <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="400">
+    <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="6000">
         <argument>--tool "{Tool}"</argument>
         <argument>--template "{ResourcesDir}/Templates/template_ibl.py"</argument>
         <argument>--render_mode "{RenderDevice}"</argument>
     	<argument>--resolution_x {rx}</argument>
     	<argument>--resolution_y {ry}</argument>
-        <argument>--resource_path "{ScenesDir}"</argument>
+        <argument>--resource_path "{ScenesDir}/Render_Settings"</argument>
         <argument>--output "{OutputDir}"</argument>
 	    <argument>--package_name "IBL"</argument>
     </execute>

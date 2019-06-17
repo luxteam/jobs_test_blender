@@ -70,7 +70,7 @@ if __name__ == "__main__":
 		["BL28_RS_DEN_009", ["Bilateral", "Radius 5", "All sigma's 1"], "Candle.blend", "bilateral", 5, 1, 1, 1, 1],
 		# LWR
 		["BL28_RS_DEN_010", ["LWR default"], "Candle.blend", "lwr", 4, 4, 0.1],
-		["BL28_RS_DEN_011", ["LWR", "Samples 1"], "Candle.blend", "lwr", 1, 4, 0.1],
+		["BL28_RS_DEN_011", ["LWR", "Samples 2"], "Candle.blend", "lwr", 2, 4, 0.1],
 		["BL28_RS_DEN_012", ["LWR", "Samples 5"], "Candle.blend", "lwr", 5, 4, 0.1],
 		["BL28_RS_DEN_013", ["LWR", "Samples 10"], "Candle.blend", "lwr", 10, 4, 0.1],
 		["BL28_RS_DEN_014", ["LWR", "Samples 5", "Filter radius 1"], "Candle.blend", "lwr", 5, 1, 0.1],
@@ -78,7 +78,7 @@ if __name__ == "__main__":
 		["BL28_RS_DEN_016", ["LWR", "Samples 5", "Filter radius 10"], "Candle.blend", "lwr", 5, 10, 0.1],
 		["BL28_RS_DEN_017", ["LWR", "Samples 5", "Bandwidth 0.5"], "Candle.blend", "lwr", 5, 4, 0.5],
 		["BL28_RS_DEN_018", ["LWR", "Samples 5", "Bandwidth 1"], "Candle.blend", "lwr", 5, 4, 1],
-		["BL28_RS_DEN_019", ["LWR", "Samples 1", "Filter radius 1", "Bandwidth 0"], "Candle.blend", "lwr", 1, 1, 0],
+		["BL28_RS_DEN_019", ["LWR", "Samples 2", "Filter radius 1", "Bandwidth 0"], "Candle.blend", "lwr", 2, 1, 0],
 		["BL28_RS_DEN_020", ["LWR", "Samples 5", "Filter radius 5", "Bandwidth 0.5"], "Candle.blend", "lwr", 5, 5, 0.5],
 		["BL28_RS_DEN_021", ["LWR", "Samples 10", "Filter radius 10", "Bandwidth 1"], "Candle.blend", "lwr", 10, 10, 1],
 		# EAW

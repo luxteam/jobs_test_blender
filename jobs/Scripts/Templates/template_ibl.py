@@ -2,11 +2,11 @@
 def prerender(test_list):
 
 	current_scene = bpy.path.basename(bpy.context.blend_data.filepath)
-    if current_scene != test_list[2]:
-        bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
+	if current_scene != test_list[2]:
+		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
 
-    scene = bpy.context.scene
-    enable_rpr_render(scene)
+	scene = bpy.context.scene
+	enable_rpr_render(scene)
 
 	set_value(scene.world.rpr, 'enabled', True)
 	set_value(scene.world.rpr, 'mode', 'IBL')
