@@ -92,6 +92,9 @@ def render(*argv):
 		set_value(scene.rpr.limits, 'min_samples', 16)
 		set_value(scene.rpr.limits, 'max_samples', 64)
 
+	if not test_case.startswith("BL28_RS_RS"):
+		set_value(scene.rpr, 'use_render_stamp', False)
+
 	# image settings
 	set_value(scene.render.image_settings, 'quality', 100)
 	set_value(scene.render.image_settings, 'compression', 0)

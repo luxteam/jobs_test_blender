@@ -17,9 +17,9 @@ def prerender(test_list):
 if __name__ == "__main__":
 	
 	list_tests = [
-	["BL28_RS_RS_001", ["Base stamp"], "ComplexTestUber.blend", "Radeon ProRender for Blender %b | %h | Time: %pt | Passes: %pp | Objects: %so | Lights: %sl"],
-	["BL28_RS_RS_002", ["CPU&GPU stamp"], "ComplexTestUber.blend", "Radeon ProRender for Blender %b | CPU %c | GPU %g | Render mode %r | Render device %h"],
-	["BL28_RS_RS_003", ["Computer name stamp"], "ComplexTestUber.blend", "Radeon ProRender for Blender %b | Computer name %i | Current date %d"]
+		["BL28_RS_RS_001", ["Base stamp"], "ComplexTestUber.blend", "Radeon ProRender for Blender %b | %h | Time: %pt | Passes: %pp | Objects: %so | Lights: %sl"],
+		["BL28_RS_RS_002", ["CPU&GPU stamp"], "ComplexTestUber.blend", "Radeon ProRender for Blender %b | CPU %c | GPU %g | Render mode %r | Render device %h"],
+		["BL28_RS_RS_003", ["Computer name stamp"], "ComplexTestUber.blend", "Radeon ProRender for Blender %b | Computer name %i | Current date %d"]
 	]
 	
 	launch_tests()
