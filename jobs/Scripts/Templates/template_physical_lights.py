@@ -8,22 +8,19 @@ def prerender(test_list):
 	scene = bpy.context.scene
 	enable_rpr_render(scene)
 
-	bpy.context.scene.objects.active = bpy.data.objects['Point']
-
-	if (test_list[3] == "POINT"):
+	if test_list[3] == "POINT":
 		return point_light(test_list[0], test_list[1], test_list[4], test_list[5], test_list[6])
-
-	elif (test_list[3] == "SUN"):    
+	elif test_list[3] == "SUN":    
 		return sun_light(test_list[0], test_list[1], test_list[4], test_list[5])
-
-	elif (test_list[3] == "SPOT"):
+	elif test_list[3] == "SPOT":
 		return spot_light(test_list[0], test_list[1], test_list[4], test_list[5], test_list[6], test_list[7])
-
-	elif (test_list[3] == "AREA"):
+	elif test_list[3] == "AREA":
 		return area_light(test_list[0], test_list[1], test_list[4], test_list[5], test_list[6], test_list[7], test_list[8])
 
 
 def point_light(test_case, script_info, intensity, temperature, ies):
+
+	lamp_data = bpy.data.lights['Lamp']
 
 	bpy.context.object.data.type = 'POINT'
 

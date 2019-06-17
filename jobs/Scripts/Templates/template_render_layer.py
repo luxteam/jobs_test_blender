@@ -8,17 +8,9 @@ def prerender(test_list):
 	scene = bpy.context.scene
 	enable_rpr_render(scene)
 
-	# Default disable
-	#bpy.context.scene.render.layers["Floor"].layers[4] = True
-	#bpy.context.scene.render.layers["Floor"].layers[0] = False
-	#bpy.context.scene.render.layers["Floor"].layers[1] = False
-	#bpy.context.scene.render.layers["Floor"].layers[2] = False
-	#bpy.context.scene.render.layers["Floor"].layers[3] = False
-	#
-	## enable layer
-	#bpy.context.scene.render.layers["Floor"].layers[test_list[3]] = True
-	#bpy.context.scene.render.layers["Floor"].layers[4] = False
-
+	set_value(scene.render, 'use_single_layer', True)
+	set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers["{{}}".format(test_list[3])])
+	
 	render(test_list[0], test_list[1])
 
 	return 1
@@ -26,10 +18,10 @@ def prerender(test_list):
 if __name__ == "__main__":
 
 	list_tests = [
-		["BL_RS_RL_001", ["Render Layer: Decor"], "RenderLayer.blend", 3], 
-		#["BL_RS_RL_002", ["Render Layer: Chairs"], "RenderLayer.blend", 2],
-		#["BL_RS_RL_003", ["Render Layer: Table"], "RenderLayer.blend", 1], 
-		#["BL_RS_RL_004", ["Render Layer: Floor"], "RenderLayer.blend", 0], 
+		["BL28_RS_RL_001", ["Render Layer: Decor"], "RenderLayer.blend", "Decor"], 
+		["BL28_RS_RL_002", ["Render Layer: Chairs"], "RenderLayer.blend", "Chairs"],
+		["BL28_RS_RL_003", ["Render Layer: Table"], "RenderLayer.blend", "Table"], 
+		["BL28_RS_RL_004", ["Render Layer: Floor"], "RenderLayer.blend", "Floor"]
 	]
 	
 	launch_tests()

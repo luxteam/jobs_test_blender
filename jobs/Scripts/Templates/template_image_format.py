@@ -18,19 +18,19 @@ def prerender(test_list):
 if __name__ == "__main__":
 
 	list_tests = [
-	["BL_RS_IF_001", ["Image format: jpeg"], "ComplexTestUber.blend", "JPEG"], 
-	["BL_RS_IF_002", ["Image format: bmp"], "ComplexTestUber.blend", "BMP"], 
-	["BL_RS_IF_003", ["Image format: png"], "ComplexTestUber.blend", "PNG"], 
-	["BL_RS_IF_004", ["Image format: iris"], "ComplexTestUber.blend", "IRIS"], 
-	["BL_RS_IF_005", ["Image format: jpeg2000"], "ComplexTestUber.blend", "JPEG2000"], 
-	["BL_RS_IF_006", ["Image format: targa"], "ComplexTestUber.blend", "TARGA"], 
-	["BL_RS_IF_007", ["Image format: targa_raw"], "ComplexTestUber.blend", "TARGA_RAW"], 
-	["BL_RS_IF_008", ["Image format: dpx"], "ComplexTestUber.blend", "DPX"],
-	["BL_RS_IF_009", ["Image format: open_exr_multilayer"], "ComplexTestUber.blend", "OPEN_EXR_MULTILAYER"], 
-	["BL_RS_IF_010", ["Image format: open_exr"], "ComplexTestUber.blend", "OPEN_EXR"],
-	["BL_RS_IF_011", ["Image format: cineon"], "ComplexTestUber.blend", "CINEON"], 
-	["BL_RS_IF_012", ["Image format: hdr"], "ComplexTestUber.blend", "HDR"], 
-	["BL_RS_IF_013", ["Image format: tiff"], "ComplexTestUber.blend", "TIFF"]
+	["BL28_RS_IF_001", ["Image format: jpeg"], "ComplexTestUber.blend", "JPEG"], 
+	["BL28_RS_IF_002", ["Image format: bmp"], "ComplexTestUber.blend", "BMP"], 
+	["BL28_RS_IF_003", ["Image format: png"], "ComplexTestUber.blend", "PNG"], 
+	["BL28_RS_IF_004", ["Image format: iris"], "ComplexTestUber.blend", "IRIS"], 
+	["BL28_RS_IF_005", ["Image format: jpeg2000"], "ComplexTestUber.blend", "JPEG2000"], 
+	["BL28_RS_IF_006", ["Image format: targa"], "ComplexTestUber.blend", "TARGA"], 
+	["BL28_RS_IF_007", ["Image format: targa_raw"], "ComplexTestUber.blend", "TARGA_RAW"], 
+	["BL28_RS_IF_008", ["Image format: dpx"], "ComplexTestUber.blend", "DPX"],
+	["BL28_RS_IF_009", ["Image format: open_exr_multilayer"], "ComplexTestUber.blend", "OPEN_EXR_MULTILAYER"], 
+	["BL28_RS_IF_010", ["Image format: open_exr"], "ComplexTestUber.blend", "OPEN_EXR"],
+	["BL28_RS_IF_011", ["Image format: cineon"], "ComplexTestUber.blend", "CINEON"], 
+	["BL28_RS_IF_012", ["Image format: hdr"], "ComplexTestUber.blend", "HDR"], 
+	["BL28_RS_IF_013", ["Image format: tiff"], "ComplexTestUber.blend", "TIFF"]
 	]
  
 	launch_tests()
