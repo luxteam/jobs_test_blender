@@ -88,7 +88,7 @@ def render(*argv):
 	if not test_case.startswith("BL28_RS_IF"):
 		set_value(scene.render.image_settings, 'file_format', 'JPEG')
 
-	if not (test_case.startswith("BL28_RS_AS") or test_case.startswith("BL28_L_EMIS")):
+	if not (test_case.startswith("BL28_RS_AS") or test_case.startswith("BL28_L_EMIS") or test_case.startswith("BL28_L_INTLT")):
 		set_value(scene.rpr.limits, 'min_samples', 16)
 		set_value(scene.rpr.limits, 'max_samples', 64)
 
