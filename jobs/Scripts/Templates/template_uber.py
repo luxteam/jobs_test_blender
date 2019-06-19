@@ -543,27 +543,27 @@ def uber_060():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)
 	set_value(node_uber, "enable_emission", True)
-	create_imagemap("Emission Color", "emissionColor.png")
+	create_imagemap("Emission Color", "emissiveColor.png")
 
 
 def uber_061():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)
 	set_value(node_uber, "enable_emission", True)
-	create_imagemap("Emission Color", "emissionColor.tga")
+	create_imagemap("Emission Color", "emissiveColor.tga")
 
 
 def uber_062():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)
 	set_value(node_uber, "enable_emission", True)
-	create_imagemap("Emission Weight", "emissionWeight.png")
+	create_imagemap("Emission Weight", "emissiveWeight.png")
 
 def uber_063():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)
 	set_value(node_uber, "enable_emission", True)
-	create_imagemap("Emission Weight", "emissionWeight.tga")
+	create_imagemap("Emission Weight", "emissiveWeight.tga")
 
 
 def uber_064():
