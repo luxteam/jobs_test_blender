@@ -101,7 +101,7 @@ def render(*argv):
 	set_value(scene.render.image_settings, 'color_mode', 'RGB')
 
 	# output settings
-	set_value(scene.render, 'filepath', os.path.join("{work_dir}", "Color", test_case))
+	set_value(scene.render, 'filepath', os.path.join(r"{work_dir}", "Color", test_case))
 	set_value(scene.render, 'use_placeholder', True)
 	set_value(scene.render, 'use_file_extension', True)
 	set_value(scene.render, 'use_overwrite', True)
@@ -113,7 +113,7 @@ def render(*argv):
 
 	# LOG
 	file_name = test_case + ".jpg"
-	log_name = os.path.join('{work_dir}', test_case + "_RPR.json")
+	log_name = os.path.join(r'{work_dir}', test_case + "_RPR.json")
 	report = {{}}
 	report['render_version'] = get_addon_version()
 	report['render_mode'] = render_mode
