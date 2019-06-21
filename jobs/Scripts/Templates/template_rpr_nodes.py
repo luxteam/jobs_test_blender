@@ -9,481 +9,527 @@ def prerender(test_list):
 	scene = bpy.context.scene
 	enable_rpr_render(scene)
 	
+	set_value(scene.render, 'use_single_layer', True)
+	set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers["{{}}".format(test_list[3])])
+
 	# make changes
-	test_list[2]()
+	test_list[4]()
 	# render
 	render(test_list[0], test_list[1])
 	# undo changes
-	test_list[3]()			
+	test_list[5]()			
 
 	return 1
 
 
-def already_default():
+def empty():
 	pass
-
-
-def set_layer(number):
-
-	bpy.context.scene.render.layers["RenderLayer"].layers[19] = True
-	bpy.context.scene.layers[19] = True
-	for i in range(19):
-		bpy.context.scene.render.layers["RenderLayer"].layers[i] = False
-		bpy.context.scene.layers[i] = False
-	
-	bpy.context.scene.render.layers["RenderLayer"].layers[number] = True
-	bpy.context.scene.layers[number] = True
-
-	bpy.context.scene.render.layers["RenderLayer"].layers[19] = False
-	bpy.context.scene.layers[19] = False
 
 
 def get_material_and_node(material_name, node_name):
 	material = [e for e in bpy.data.materials if e.name == material_name][0]
-	node = [n for n in material.node_tree.nodes if n.name==node_name][0]
+	node = [n for n in material.node_tree.nodes if n.name == node_name][0]
 	return material, node
 
 
-def node_001():
-	set_layer(0)
-
 # create connection from weight map to RPR Blend mat. For cases 1-3.
 def cancel_002_004():
-	material, node = get_material_and_node("RPRBlend", "RPR Shader Blend")
+	material, node = get_material_and_node("Mix Shader", "Mix Shader")
 	tree = material.node_tree
-	node_imagemap = [n for n in material.node_tree.nodes if n.name=="RPR Image Map"][0]
-	tree.links.new(node_imagemap.outputs[node_imagemap.value_out], node.inputs[node.weight_in])
+	node_imagemap = [n for n in material.node_tree.nodes if n.name=="Image Texture"][0]
+	tree.links.new(node_imagemap.outputs['Color'], node.inputs['Fac'])
+
 
 def node_002():
-	set_layer(0)
-	material, node = get_material_and_node("RPRBlend", "RPR Shader Blend")
-	node_imagemap = [n for n in material.node_tree.nodes if n.name=="RPR Image Map"][0]
-	material.node_tree.links.remove(material.node_tree.links.items()[3][1])
+	material, node = get_material_and_node("Mix Shader", "Mix Shader")
+	node_imagemap = [n for n in material.node_tree.nodes if n.name=="Image Texture"][0]
+	material.node_tree.links.remove(material.node_tree.links.items()[11][1])
+
 
 def node_003():
-	set_layer(0)
-	material, node = get_material_and_node("RPRBlend", "RPR Shader Blend")
-	node_imagemap = [n for n in material.node_tree.nodes if n.name=="RPR Image Map"][0]
-	material.node_tree.links.remove(material.node_tree.links.items()[3][1])
-	node.inputs[node.weight_in].default_value = 0
+	material, node = get_material_and_node("Mix Shader", "Mix Shader")
+	node_imagemap = [n for n in material.node_tree.nodes if n.name=="Image Texture"][0]
+	material.node_tree.links.remove(material.node_tree.links.items()[11][1])
+	set_value(node.inputs['Fac'], "default_value", 0)
+
 
 def node_004():
-	set_layer(0)
-	material, node = get_material_and_node("RPRBlend", "RPR Shader Blend")
-	node_imagemap = [n for n in material.node_tree.nodes if n.name=="RPR Image Map"][0]
-	material.node_tree.links.remove(material.node_tree.links.items()[3][1])
-	node.inputs[node.weight_in].default_value = 1
+	material, node = get_material_and_node("Mix Shader", "Mix Shader")
+	node_imagemap = [n for n in material.node_tree.nodes if n.name=="Image Texture"][0]
+	material.node_tree.links.remove(material.node_tree.links.items()[11][1])
+	set_value(node.inputs['Fac'], "default_value", 1)
 
-def node_005():
-	set_layer(1)
 
-def cancel_006():
-	set_layer(1)
-	material, node = get_material_and_node("RPRDot", "RPR Texture Mapping")
-	node.inputs[node.scale_in].default_value = (3, 3)
+def cancel_006_008():
+	material, node = get_material_and_node("Checker Texture", "Checker Texture")
+	set_value(node.inputs['Scale'], "default_value", 5)
+
 
 def node_006():
-	set_layer(1)
-	material, node = get_material_and_node("RPRDot", "RPR Texture Mapping")
-	node.inputs[node.scale_in].default_value = (1, 1)
+	material, node = get_material_and_node("Checker Texture", "Checker Texture")
+	set_value(node.inputs['Scale'], "default_value", 1)
+
 
 def node_007():
-	set_layer(2)
+	material, node = get_material_and_node("Checker Texture", "Checker Texture")
+	set_value(node.inputs['Scale'], "default_value", 5)
 
-def cancel_008_009():
-	set_layer(2)
-	material, node = get_material_and_node("RPRGradient", "RPR Gradient")
-	node.inputs[node.color1_in].default_value = (0.03, 0.162, 1, 1)
-	node.inputs[node.color2_in].default_value = (1, 0, 0.497, 1)
 
 def node_008():
-	set_layer(2)
-	material, node = get_material_and_node("RPRGradient", "RPR Gradient")
-	node.inputs[node.color1_in].default_value = (0, 0, 0, 1)
-	node.inputs[node.color2_in].default_value = (1, 1, 1, 1)
+	material, node = get_material_and_node("Checker Texture", "Checker Texture")
+	set_value(node.inputs['Scale'], "default_value", 10)
+
+
+def cancel_009_011():
+	material, node = get_material_and_node("Noise Texture", "Noise Texture")
+	set_value(node.inputs['Scale'], "default_value", 10)
+
 
 def node_009():
-	set_layer(2)
-	material, node = get_material_and_node("RPRGradient", "RPR Gradient")
-	node.inputs[node.color1_in].default_value = (0, 0, 1, 1)
-	node.inputs[node.color2_in].default_value = (1, 0, 0, 1)
+	material, node = get_material_and_node("Noise Texture", "Noise Texture")
+	set_value(node.inputs['Scale'], "default_value", 1)
 
-def cancel_010_012():
-	set_layer(2)
-	material, node = get_material_and_node("RPRValueBlend", "RPR Value Blend")
-	node.type = 'color'
-	node.inputs[node.value1_in].default_value = (1, 0.007, 0.807, 1)
-	node.inputs[node.value2_in].default_value = (0.016, 0.268, 1, 1)
 
 def node_010():
-	set_layer(2)
-	material, node = get_material_and_node("RPRValueBlend", "RPR Value Blend")
-	node.type = 'color'
-	node.inputs[node.value1_in].default_value = (0, 0, 0, 1)
-	node.inputs[node.value2_in].default_value = (1, 1, 1, 1)
+	material, node = get_material_and_node("Noise Texture", "Noise Texture")
+	set_value(node.inputs['Scale'], "default_value", 5)
+
 
 def node_011():
-	set_layer(2)
-	material, node = get_material_and_node("RPRValueBlend", "RPR Value Blend")
-	node.type = 'float'
-	node.inputs[node.value1_in].value_float = 1
-	node.inputs[node.value2_in].value_float = 1
+	material, node = get_material_and_node("Noise Texture", "Noise Texture")
+	set_value(node.inputs['Scale'], "default_value", 10)
+
+
+def cancel_012_018():
+	material, node = get_material_and_node("Gradient Texture", "Gradient Texture")
+	set_value(node, "gradient_type", 'RADIAL')
+
 
 def node_012():
-	set_layer(2)
-	material, node = get_material_and_node("RPRValueBlend", "RPR Value Blend")
-	node.type = 'vector'
-	node.inputs[node.value1_in].default_value = (1, 1, 1, 1)
-	node.inputs[node.value2_in].default_value = (1, 1, 1, 1)
+	material, node = get_material_and_node("Gradient Texture", "Gradient Texture")
+	set_value(node, "gradient_type", 'QUADRATIC')
 
-def cancel_013_042():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'MUL'
-	node.type = 'color'
 
 def node_013():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'FLOOR'
+	material, node = get_material_and_node("Gradient Texture", "Gradient Texture")
+	set_value(node, "gradient_type", 'LINEAR')
+
 
 def node_014():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'DOT4'
+	material, node = get_material_and_node("Gradient Texture", "Gradient Texture")
+	set_value(node, "gradient_type", 'EASING')
+
 
 def node_015():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'DOT3'
+	material, node = get_material_and_node("Gradient Texture", "Gradient Texture")
+	set_value(node, "gradient_type", 'DIAGONAL')
+
 
 def node_016():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'DIV'
+	material, node = get_material_and_node("Gradient Texture", "Gradient Texture")
+	set_value(node, "gradient_type", 'SPHERICAL')
+
 
 def node_017():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'CROSS3'
+	material, node = get_material_and_node("Gradient Texture", "Gradient Texture")
+	set_value(node, "gradient_type", 'QUADRATIC_SPHERE')
+
 
 def node_018():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'COS'
+	material, node = get_material_and_node("Gradient Texture", "Gradient Texture")
+	set_value(node, "gradient_type", 'RADIAL')
 
-def node_019():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'COMBINE'
+
+def cancel_020_024():
+	material, node = get_material_and_node("Color Ramp", "ColorRamp")
+	set_value(node.color_ramp, "interpolation", 'CONSTANT')
+	
 
 def node_020():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'AVERAGE_XYZ'
+	material, node = get_material_and_node("Color Ramp", "ColorRamp")
+	set_value(node.color_ramp, "interpolation", 'LINEAR')
+
 
 def node_021():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'AVERAGE'
+	material, node = get_material_and_node("Color Ramp", "ColorRamp")
+	set_value(node.color_ramp, "interpolation", 'EASE')
+
 
 def node_022():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'ATAN'
+	material, node = get_material_and_node("Color Ramp", "ColorRamp")
+	set_value(node.color_ramp, "interpolation", 'CARDINAL')
+
 
 def node_023():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'ASIN'
+	material, node = get_material_and_node("Color Ramp", "ColorRamp")
+	set_value(node.color_ramp, "interpolation", 'B_SPLINE')
+
 
 def node_024():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'ACOS'
+	material, node = get_material_and_node("Color Ramp", "ColorRamp")
+	set_value(node.color_ramp, "interpolation", 'CONSTANT')
+
+
+def cancel_025():
+	material, node = get_material_and_node("Mix", "Mix")
+	set_value(node.inputs['Color1'], "default_value", (1.0, 0, 1.0, 1.0))
+	set_value(node.inputs['Color2'], "default_value", (0, 0.5, 1.0, 1.0))
+
 
 def node_025():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'ADD'
+	material, node = get_material_and_node("Mix", "Mix")
+	set_value(node.inputs['Color1'], "default_value", (0, 0, 0, 1.0))
+	set_value(node.inputs['Color2'], "default_value", (1.0, 1.0, 1.0, 1.0))
+
+
+def cancel_026_059():
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'MUL')
+
 
 def node_026():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'ABS'
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'ABS')
+
 
 def node_027():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'TAN'
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'ADD')
+
 
 def node_028():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'SUB'
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'ACOS')
+
 
 def node_029():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'SIN'
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'ASIN')
+
 
 def node_030():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'SELECT_Z'
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'ATAN')
+
 
 def node_031():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'SELECT_Y'
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'AVERAGE')
+
 
 def node_032():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'SELECT_X'
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'AVERAGE_XYZ')
+
 
 def node_033():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'SELECT_W'
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'COMBINE')
+
 
 def node_034():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'POW'
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'COS')
+
 
 def node_035():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'NORMALIZE3'
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'CROSS3')
+
 
 def node_036():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'MUL'
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'DIV')
+
 
 def node_037():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'MOD'
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'DOT3')
+
 
 def node_038():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'MIN'
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'DOT4')
+
 
 def node_039():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'MAX'
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'FLOOR')
+
 
 def node_040():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'LENGTH3'
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'LENGTH3')
+
 
 def node_041():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'ADD'
-	node.type = 'float'
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'LOG')
+
 
 def node_042():
-	set_layer(2)
-	material, node = get_material_and_node("RPRMath", "RPR Math")
-	node.op = 'ADD'
-	node.type = 'vector'
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'MAX')
+
 
 def node_043():
-	set_layer(3)
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'MIN')
+
 
 def node_044():
-	set_layer(4)
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'MOD')
 
-def cancel_045_048():
-	set_layer(4)
-	material, node = get_material_and_node("RPRLookup", "RPR Lookup")
-	node.type = "UV"
 
 def node_045():
-	set_layer(4)
-	material, node = get_material_and_node("RPRLookup", "RPR Lookup")
-	node.type = "OUTVEC"
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'MUL')
+
 
 def node_046():
-	set_layer(4)
-	material, node = get_material_and_node("RPRLookup", "RPR Lookup")
-	node.type = "INVEC"
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'NORMALIZE3')
+
 
 def node_047():
-	set_layer(4)
-	material, node = get_material_and_node("RPRLookup", "RPR Lookup")
-	node.type = "P"
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'POW')
+
 
 def node_048():
-	set_layer(4)
-	material, node = get_material_and_node("RPRLookup", "RPR Lookup")
-	node.type = "N"
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'SELECT_W')
+
 
 def node_049():
-	set_layer(10)
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'SELECT_X')
+
 
 def node_050():
-	set_layer(11)
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'SELECT_Y')
 
-def cancel_051_052():
-	set_layer(11)
-	material, node = get_material_and_node("RPRFresnelShlick", "RPR Fresnel Schlick")
-	node.inputs[node.reflectance_in].default_value = 0
 
 def node_051():
-	set_layer(11)
-	material, node = get_material_and_node("RPRFresnelShlick", "RPR Fresnel Schlick")
-	node.inputs[node.reflectance_in].default_value = 0.5
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'SELECT_Z')
+
 
 def node_052():
-	set_layer(11)
-	material, node = get_material_and_node("RPRFresnelShlick", "RPR Fresnel Schlick")
-	node.inputs[node.reflectance_in].default_value = 1
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'SIN')
 
-def cancel_053_055():
-	set_layer(11)
-	material, node = get_material_and_node("RPRFresnel", "RPR Fresnel")
-	node.inputs[node.ior_in].default_value = 1.2
 
 def node_053():
-	set_layer(11)
-	material, node = get_material_and_node("RPRFresnel", "RPR Fresnel")
-	node.inputs[node.ior_in].default_value = 0
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'SUB')
+
 
 def node_054():
-	set_layer(11)
-	material, node = get_material_and_node("RPRFresnel", "RPR Fresnel")
-	node.inputs[node.ior_in].default_value = 1
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'TAN')
+
 
 def node_055():
-	set_layer(11)
-	material, node = get_material_and_node("RPRFresnel", "RPR Fresnel")
-	node.inputs[node.ior_in].default_value = 3
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'SHUFFLE_WXYZ')
+
 
 def node_056():
-	set_layer(12)
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'SHUFFLE_YZWX')
 
-def cancel_057_060():
-	set_layer(12)
-	material, node = get_material_and_node("RPRDisplasement", "RPR Uber")
-	node.displacement = False
-	node.displacement_max = 0.07
-	bpy.context.object.rpr_object.subdivision_type = 'level'
-	bpy.context.object.rpr_object.subdivision = 2
 
 def node_057():
-	set_layer(12)
-	material, node = get_material_and_node("RPRDisplasement", "RPR Uber")
-	node.displacement = True
-	node.displacement_max = 0.04
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "operation", 'SHUFFLE_ZWXY')
+
 
 def node_058():
-	set_layer(12)
-	material, node = get_material_and_node("RPRDisplasement", "RPR Uber")
-	node.displacement = True
-	node.displacement_max = 0.04
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "display_type", 'FLOAT')
+
 
 def node_059():
-	set_layer(12)
-	material, node = get_material_and_node("RPRDisplasement", "RPR Uber")
-	node.displacement = True
-	node.displacement_max = 0.04
-	bpy.context.object.rpr_object.subdivision = 5
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "display_type", 'VECTOR')
 
-def node_060():
-	set_layer(12)
-	material, node = get_material_and_node("RPRDisplasement", "RPR Uber")
-	node.displacement = True
-	node.displacement_max = 0.04
-	bpy.context.object.rpr_object.subdivision_type = 'adaptive'
-	bpy.context.object.rpr_object.adaptive_subdivision = 5
 
-def node_061():
-	set_layer(13)
+def node_059():
+	material, node = get_material_and_node("RPRMath", "RPR Math.001")
+	set_value(node, "display_type", 'VECTOR')
 
-def cancel_062():
-	set_layer(12)
-	material, node = get_material_and_node("RPRTransparent", "RPR Transparent")
-	node.inputs[node.color_in].default_value = (0.024, 0.036, 1, 1)
+
+def cancel_062_067():
+	material, node = get_material_and_node("Texture Coordinate", "Mix")
+	tree = material.node_tree
+	material.node_tree.links.remove(material.node_tree.links.items()[3][1])
+	texture_coordinate = [n for n in material.node_tree.nodes if n.name=="Texture Coordinate"][0]
+	tree.links.new(texture_coordinate.outputs['Generated'], node.inputs['Fac'])
+
 
 def node_062():
-	set_layer(13)
-	material, node = get_material_and_node("RPRTransparent", "RPR Transparent")
-	node.inputs[node.color_in].default_value = (1, 0.5, 1, 1)
+	material, node = get_material_and_node("Texture Coordinate", "Mix")
+	tree = material.node_tree
+	material.node_tree.links.remove(material.node_tree.links.items()[3][1])
+	texture_coordinate = [n for n in material.node_tree.nodes if n.name=="Texture Coordinate"][0]
+	tree.links.new(texture_coordinate.outputs['Generated'], node.inputs['Fac'])
 
-	
+
+def node_063():
+	material, node = get_material_and_node("Texture Coordinate", "Mix")
+	tree = material.node_tree
+	material.node_tree.links.remove(material.node_tree.links.items()[3][1])
+	texture_coordinate = [n for n in material.node_tree.nodes if n.name=="Texture Coordinate"][0]
+	tree.links.new(texture_coordinate.outputs['Normal'], node.inputs['Fac'])
+
+
+def node_064():
+	material, node = get_material_and_node("Texture Coordinate", "Mix")
+	tree = material.node_tree
+	material.node_tree.links.remove(material.node_tree.links.items()[3][1])
+	texture_coordinate = [n for n in material.node_tree.nodes if n.name=="Texture Coordinate"][0]
+	tree.links.new(texture_coordinate.outputs['UV'], node.inputs['Fac'])
+
+
+def node_065():
+	material, node = get_material_and_node("Texture Coordinate", "Mix")
+	tree = material.node_tree
+	material.node_tree.links.remove(material.node_tree.links.items()[3][1])
+	texture_coordinate = [n for n in material.node_tree.nodes if n.name=="Texture Coordinate"][0]
+	tree.links.new(texture_coordinate.outputs['Object'], node.inputs['Fac'])
+
+
+def node_066():
+	material, node = get_material_and_node("Texture Coordinate", "Mix")
+	tree = material.node_tree
+	material.node_tree.links.remove(material.node_tree.links.items()[3][1])
+	texture_coordinate = [n for n in material.node_tree.nodes if n.name=="Texture Coordinate"][0]
+	tree.links.new(texture_coordinate.outputs['Window'], node.inputs['Fac'])
+
+
+def node_067():
+	material, node = get_material_and_node("Texture Coordinate", "Mix")
+	tree = material.node_tree
+	material.node_tree.links.remove(material.node_tree.links.items()[3][1])
+	texture_coordinate = [n for n in material.node_tree.nodes if n.name=="Texture Coordinate"][0]
+	tree.links.new(texture_coordinate.outputs['Generated'], node.inputs['Fac'])
+
+
+def cancel_068_070():
+	material, node = get_material_and_node("Fresnel", "Fresnel")
+	set_value(node.inputs['IOR'], "default_value", 1.65)
+
+
+def node_068():
+	material, node = get_material_and_node("Fresnel", "Fresnel")
+	set_value(node.inputs['IOR'], "default_value", 1)
+
+
+def node_069():
+	material, node = get_material_and_node("Fresnel", "Fresnel")
+	set_value(node.inputs['IOR'], "default_value", 1.5)
+
+
+def node_070():
+	material, node = get_material_and_node("Fresnel", "Fresnel")
+	set_value(node.inputs['IOR'], "default_value", 3)
+
+
 if __name__ == '__main__':
 
 	list_tests = [
-	["BL28_MAT_NODE_001", ["default"], "RPR_Nodes.blend", node_001, already_default],
-	["BL28_MAT_NODE_002", ["RPRBlend"], "RPR_Nodes.blend", node_002, cancel_002_004],
-	["BL28_MAT_NODE_003", ["RPRBlend"], "RPR_Nodes.blend", node_003, cancel_002_004],
-	["BL28_MAT_NODE_004", ["RPRBlend"], "RPR_Nodes.blend", node_004, cancel_002_004],
-	["BL28_MAT_NODE_005", ["RPRDot"], "RPR_Nodes.blend", node_005, already_default],
-	["BL28_MAT_NODE_006", ["RPRDot"], "RPR_Nodes.blend", node_006, cancel_006],
-	["BL28_MAT_NODE_007", ["RPRGradient"], "RPR_Nodes.blend", node_007, already_default],
-	["BL28_MAT_NODE_008", ["RPRGradient"], "RPR_Nodes.blend", node_008, cancel_008_009],
-	["BL28_MAT_NODE_009", ["RPRGradient"], "RPR_Nodes.blend", node_009, cancel_008_009],
-	["BL28_MAT_NODE_010", ["RPRValueBlend"], "RPR_Nodes.blend", node_010, cancel_010_012],
-	["BL28_MAT_NODE_011", ["RPRValueBlend"], "RPR_Nodes.blend", node_011, cancel_010_012],
-	["BL28_MAT_NODE_012", ["RPRValueBlend"], "RPR_Nodes.blend", node_012, cancel_010_012],
-	["BL28_MAT_NODE_013", ["RPRMath"], "RPR_Nodes.blend", node_013, cancel_013_042],
-	["BL28_MAT_NODE_014", ["RPRMath"], "RPR_Nodes.blend", node_014, cancel_013_042],
-	["BL28_MAT_NODE_015", ["RPRMath"], "RPR_Nodes.blend", node_015, cancel_013_042],
-	["BL28_MAT_NODE_016", ["RPRMath"], "RPR_Nodes.blend", node_016, cancel_013_042],
-	["BL28_MAT_NODE_017", ["RPRMath"], "RPR_Nodes.blend", node_017, cancel_013_042],
-	["BL28_MAT_NODE_018", ["RPRMath"], "RPR_Nodes.blend", node_018, cancel_013_042],
-	["BL28_MAT_NODE_019", ["RPRMath"], "RPR_Nodes.blend", node_019, cancel_013_042],
-	["BL28_MAT_NODE_020", ["RPRMath"], "RPR_Nodes.blend", node_020, cancel_013_042],
-	["BL28_MAT_NODE_021", ["RPRMath"], "RPR_Nodes.blend", node_021, cancel_013_042],
-	["BL28_MAT_NODE_022", ["RPRMath"], "RPR_Nodes.blend", node_022, cancel_013_042],
-	["BL28_MAT_NODE_023", ["RPRMath"], "RPR_Nodes.blend", node_023, cancel_013_042],
-	["BL28_MAT_NODE_024", ["RPRMath"], "RPR_Nodes.blend", node_024, cancel_013_042],
-	["BL28_MAT_NODE_025", ["RPRMath"], "RPR_Nodes.blend", node_025, cancel_013_042],
-	["BL28_MAT_NODE_026", ["RPRMath"], "RPR_Nodes.blend", node_026, cancel_013_042],
-	["BL28_MAT_NODE_027", ["RPRMath"], "RPR_Nodes.blend", node_027, cancel_013_042],
-	["BL28_MAT_NODE_028", ["RPRMath"], "RPR_Nodes.blend", node_028, cancel_013_042],
-	["BL28_MAT_NODE_029", ["RPRMath"], "RPR_Nodes.blend", node_029, cancel_013_042],
-	["BL28_MAT_NODE_030", ["RPRMath"], "RPR_Nodes.blend", node_030, cancel_013_042],
-	["BL28_MAT_NODE_031", ["RPRMath"], "RPR_Nodes.blend", node_031, cancel_013_042],
-	["BL28_MAT_NODE_032", ["RPRMath"], "RPR_Nodes.blend", node_032, cancel_013_042],
-	["BL28_MAT_NODE_033", ["RPRMath"], "RPR_Nodes.blend", node_033, cancel_013_042],
-	["BL28_MAT_NODE_034", ["RPRMath"], "RPR_Nodes.blend", node_034, cancel_013_042],
-	["BL28_MAT_NODE_035", ["RPRMath"], "RPR_Nodes.blend", node_035, cancel_013_042],
-	["BL28_MAT_NODE_036", ["RPRMath"], "RPR_Nodes.blend", node_036, cancel_013_042],
-	["BL28_MAT_NODE_037", ["RPRMath"], "RPR_Nodes.blend", node_037, cancel_013_042],
-	["BL28_MAT_NODE_038", ["RPRMath"], "RPR_Nodes.blend", node_038, cancel_013_042],
-	["BL28_MAT_NODE_039", ["RPRMath"], "RPR_Nodes.blend", node_039, cancel_013_042],
-	["BL28_MAT_NODE_040", ["RPRMath"], "RPR_Nodes.blend", node_040, cancel_013_042],
-	["BL28_MAT_NODE_041", ["RPRMath"], "RPR_Nodes.blend", node_041, cancel_013_042],
-	["BL28_MAT_NODE_042", ["RPRMath"], "RPR_Nodes.blend", node_042, cancel_013_042],
-	["BL28_MAT_NODE_043", ["RPRMath"], "RPR_Nodes.blend", node_043, already_default],
-	["BL28_MAT_NODE_044", ["RPRMath"], "RPR_Nodes.blend", node_044, already_default],
-	["BL28_MAT_NODE_045", ["RPRMath"], "RPR_Nodes.blend", node_045, cancel_045_048],
-	["BL28_MAT_NODE_046", ["RPRMath"], "RPR_Nodes.blend", node_046, cancel_045_048],
-	["BL28_MAT_NODE_047", ["RPRMath"], "RPR_Nodes.blend", node_047, cancel_045_048],
-	["BL28_MAT_NODE_048", ["RPRMath"], "RPR_Nodes.blend", node_048, cancel_045_048],
-	["BL28_MAT_NODE_049", ["RPRMath"], "RPR_Nodes.blend", node_049, already_default],
-	["BL28_MAT_NODE_050", ["RPRMath"], "RPR_Nodes.blend", node_050, already_default],
-	["BL28_MAT_NODE_051", ["RPRMath"], "RPR_Nodes.blend", node_051, cancel_051_052],
-	["BL28_MAT_NODE_052", ["RPRMath"], "RPR_Nodes.blend", node_052, cancel_051_052],
-	["BL28_MAT_NODE_053", ["RPRMath"], "RPR_Nodes.blend", node_053, cancel_053_055],
-	["BL28_MAT_NODE_054", ["RPRMath"], "RPR_Nodes.blend", node_054, cancel_053_055],
-	["BL28_MAT_NODE_055", ["RPRMath"], "RPR_Nodes.blend", node_055, cancel_053_055],
-	["BL28_MAT_NODE_056", ["RPRMath"], "RPR_Nodes.blend", node_056, already_default],
-	["BL28_MAT_NODE_057", ["RPRMath"], "RPR_Nodes.blend", node_057, cancel_057_060],
-	["BL28_MAT_NODE_058", ["RPRMath"], "RPR_Nodes.blend", node_058, cancel_057_060],
-	["BL28_MAT_NODE_059", ["RPRMath"], "RPR_Nodes.blend", node_059, cancel_057_060],
-	["BL28_MAT_NODE_060", ["RPRMath"], "RPR_Nodes.blend", node_060, cancel_057_060],
-	["BL28_MAT_NODE_061", ["RPRMath"], "RPR_Nodes.blend", node_061, already_default],
-	["BL28_MAT_NODE_062", ["RPRMath"], "RPR_Nodes.blend", node_062, cancel_062]
-
+		#["BL28_MAT_NODE_001", ["RPR Shader Blend weight map"], "RPR_Nodes.blend", "Collection1", empty, empty],
+		#["BL28_MAT_NODE_002", ["RPR Shader Blend without weight map"], "RPR_Nodes.blend", "Collection1", node_002, cancel_002_004],
+		#["BL28_MAT_NODE_003", ["RPR Shader Blend, weight - 0"], "RPR_Nodes.blend", "Collection1", node_003, cancel_002_004],
+		#["BL28_MAT_NODE_004", ["RPR Shader Blend, weight - 1"], "RPR_Nodes.blend", "Collection1", node_004, cancel_002_004],
+		#["BL28_MAT_NODE_005", ["Image Mapping default"], "RPR_Nodes.blend", "Collection2", empty, empty],
+		#["BL28_MAT_NODE_006", ["Checker Texture scale - 1"], "RPR_Nodes.blend", "Collection2", node_006, cancel_006_008],
+		#["BL28_MAT_NODE_007", ["Checker Texture scale - 5"], "RPR_Nodes.blend", "Collection2", node_007, cancel_006_008],
+		#["BL28_MAT_NODE_008", ["Checker Texture scale - 10"], "RPR_Nodes.blend", "Collection2", node_008, cancel_006_008],
+		#["BL28_MAT_NODE_009", ["Noise texture Scale - 1"], "RPR_Nodes.blend", "Collection2", node_009, cancel_009_011],
+		#["BL28_MAT_NODE_010", ["Noise texture Scale - 5"], "RPR_Nodes.blend", "Collection2", node_010, cancel_009_011],
+		#["BL28_MAT_NODE_011", ["Noise texture Scale - 10"], "RPR_Nodes.blend", "Collection2", node_011, cancel_009_011],
+		#["BL28_MAT_NODE_012", ["Gradient Texture Blendig - Quadrantic"], "RPR_Nodes.blend", "Collection2", node_012, cancel_012_018],
+		#["BL28_MAT_NODE_013", ["Gradient Texture Blendig - Linear "], "RPR_Nodes.blend", "Collection2", node_013, cancel_012_018],
+		#["BL28_MAT_NODE_014", ["Gradient Texture Blendig - Easing "], "RPR_Nodes.blend", "Collection2", node_014, cancel_012_018],
+		#["BL28_MAT_NODE_015", ["Gradient Texture Blendig - Diagonal "], "RPR_Nodes.blend", "Collection2", node_015, cancel_012_018],
+		#["BL28_MAT_NODE_016", ["Gradient Texture Blendig - Spherical "], "RPR_Nodes.blend", "Collection2", node_016, cancel_012_018],
+		#["BL28_MAT_NODE_017", ["Gradient Texture Blendig - Quadrantic sphere"], "RPR_Nodes.blend", "Collection2", node_017, cancel_012_018],
+		#["BL28_MAT_NODE_018", ["Gradient Texture Blendig - Radial"], "RPR_Nodes.blend", "Collection2", node_018, cancel_012_018],
+		#["BL28_MAT_NODE_019", ["Color Ramp Default"], "RPR_Nodes.blend", "Collection3", empty, empty],
+		#["BL28_MAT_NODE_020", ["Color Ramp \"Linear\" interpolation"], "RPR_Nodes.blend", "Collection3", node_020, cancel_020_024],
+		#["BL28_MAT_NODE_021", ["Color Ramp \"Ease\" interpolation"], "RPR_Nodes.blend", "Collection3", node_021, cancel_020_024],
+		#["BL28_MAT_NODE_022", ["Color Ramp \"Cardinal\" interpolation"], "RPR_Nodes.blend", "Collection3", node_022, cancel_020_024],
+		#["BL28_MAT_NODE_023", ["Color Ramp \"B-Spline\" interpolation"], "RPR_Nodes.blend", "Collection3", node_023, cancel_020_024],
+		#["BL28_MAT_NODE_024", ["Color Ramp \"Constant\" interpolation"], "RPR_Nodes.blend", "Collection3", node_024, cancel_020_024],
+		#["BL28_MAT_NODE_025", ["ColumnValueBlend, Value 1 - (0, 0, 0) (RGB), Value 2 - (1, 1, 1) (RGB)"], "RPR_Nodes.blend", "Collection3", node_025, cancel_025],
+		#["BL28_MAT_NODE_026", ["Operation - Abs"], "RPR_Nodes.blend", "Collection3", node_026, cancel_026_059],
+		#["BL28_MAT_NODE_027", ["Operation - Add"], "RPR_Nodes.blend", "Collection3", node_027, cancel_026_059],
+		#["BL28_MAT_NODE_028", ["Operation - Arccosine"], "RPR_Nodes.blend", "Collection3", node_028, cancel_026_059],
+		#["BL28_MAT_NODE_029", ["Operation - Arcsine"], "RPR_Nodes.blend", "Collection3", node_029, cancel_026_059],
+		#["BL28_MAT_NODE_030", ["Operation - Arctangent"], "RPR_Nodes.blend", "Collection3", node_030, cancel_026_059],
+		#["BL28_MAT_NODE_031", ["Operation - Average"], "RPR_Nodes.blend", "Collection3", node_031, cancel_026_059],
+		#["BL28_MAT_NODE_032", ["Operation - Average XYZ"], "RPR_Nodes.blend", "Collection3", node_032, cancel_026_059],
+		#["BL28_MAT_NODE_033", ["Operation - Combine"], "RPR_Nodes.blend", "Collection3", node_033, cancel_026_059],
+		#["BL28_MAT_NODE_034", ["Operation - Cosine"], "RPR_Nodes.blend", "Collection3", node_034, cancel_026_059],
+		#["BL28_MAT_NODE_035", ["Operation - Cross Product"], "RPR_Nodes.blend", "Collection3", node_035, cancel_026_059],
+		#["BL28_MAT_NODE_036", ["Operation - Divide"], "RPR_Nodes.blend", "Collection3", node_036, cancel_026_059],
+		#["BL28_MAT_NODE_037", ["Operation - Dot3 Product"], "RPR_Nodes.blend", "Collection3", node_037, cancel_026_059],
+		#["BL28_MAT_NODE_038", ["Operation - Dot4 Product"], "RPR_Nodes.blend", "Collection3", node_038, cancel_026_059],
+		#["BL28_MAT_NODE_039", ["Operation - Floor"], "RPR_Nodes.blend", "Collection3", node_039, cancel_026_059],
+		#["BL28_MAT_NODE_040", ["Operation - Length3"], "RPR_Nodes.blend", "Collection3", node_040, cancel_026_059],
+		#["BL28_MAT_NODE_041", ["Operation - Log"], "RPR_Nodes.blend", "Collection3", node_041, cancel_026_059],
+		#["BL28_MAT_NODE_042", ["Operation - Max"], "RPR_Nodes.blend", "Collection3", node_042, cancel_026_059],
+		#["BL28_MAT_NODE_043", ["Operation - Min"], "RPR_Nodes.blend", "Collection3", node_043, cancel_026_059],
+		#["BL28_MAT_NODE_044", ["Operation - Mod"], "RPR_Nodes.blend", "Collection3", node_044, cancel_026_059],
+		#["BL28_MAT_NODE_045", ["Operation - Multiply"], "RPR_Nodes.blend", "Collection3", node_045, cancel_026_059],
+		#["BL28_MAT_NODE_046", ["Operation - Normalize"], "RPR_Nodes.blend", "Collection3", node_046, cancel_026_059],
+		#["BL28_MAT_NODE_047", ["Operation - Pow"], "RPR_Nodes.blend", "Collection3", node_047, cancel_026_059],
+		#["BL28_MAT_NODE_048", ["Operation - Select W"], "RPR_Nodes.blend", "Collection3", node_048, cancel_026_059],
+		#["BL28_MAT_NODE_049", ["Operation - Select X"], "RPR_Nodes.blend", "Collection3", node_049, cancel_026_059],
+		#["BL28_MAT_NODE_050", ["Operation - Select Y"], "RPR_Nodes.blend", "Collection3", node_050, cancel_026_059],
+		#["BL28_MAT_NODE_051", ["Operation - Select Z"], "RPR_Nodes.blend", "Collection3", node_051, cancel_026_059],
+		#["BL28_MAT_NODE_052", ["Operation - Sine"], "RPR_Nodes.blend", "Collection3", node_052, cancel_026_059],
+		#["BL28_MAT_NODE_053", ["Operation - Subtract"], "RPR_Nodes.blend", "Collection3", node_053, cancel_026_059],
+		#["BL28_MAT_NODE_054", ["Operation - Tangent"], "RPR_Nodes.blend", "Collection3", node_054, cancel_026_059],
+		#["BL28_MAT_NODE_055", ["Operation - XYZW->WXYZ"], "RPR_Nodes.blend", "Collection3", node_055, cancel_026_059],
+		#["BL28_MAT_NODE_056", ["Operation - XYZW->YZWX"], "RPR_Nodes.blend", "Collection3", node_056, cancel_026_059],
+		#["BL28_MAT_NODE_057", ["Operation - XYZW->ZWXY"], "RPR_Nodes.blend", "Collection3", node_057, cancel_026_059],
+		#["BL28_MAT_NODE_058", ["Type - Float"], "RPR_Nodes.blend", "Collection3", node_058, cancel_026_059],
+		#["BL28_MAT_NODE_059", ["Type - Vector"], "RPR_Nodes.blend", "Collection3", node_059, cancel_026_059],
+		#["BL28_MAT_NODE_060", ["Normal and Bump"], "RPR_Nodes.blend", "Collection4", empty, empty],
+		#["BL28_MAT_NODE_061", ["Texture Coordinates"], "RPR_Nodes.blend", "Collection5", empty, empty],
+		["BL28_MAT_NODE_062", ["Generetad Texture Coordinates"], "RPR_Nodes.blend", "Collection5", node_062, cancel_062_067],
+		["BL28_MAT_NODE_063", ["Normal Texture Coordinates"], "RPR_Nodes.blend", "Collection5", node_063, cancel_062_067],
+		["BL28_MAT_NODE_064", ["UV Texture Coordinates"], "RPR_Nodes.blend", "Collection5", node_064, cancel_062_067],
+		["BL28_MAT_NODE_065", ["Object Texture Coordinates"], "RPR_Nodes.blend", "Collection5", node_065, cancel_062_067],
+		["BL28_MAT_NODE_066", ["Camera Texture Coordinates"], "RPR_Nodes.blend", "Collection5", node_066, cancel_062_067],
+		["BL28_MAT_NODE_067", ["Window Texture Coordinates"], "RPR_Nodes.blend", "Collection5", node_067, cancel_062_067],
+		["BL28_MAT_NODE_068", ["Fresnel - 1"], "RPR_Nodes.blend", "Collection5", node_068, cancel_068_070],
+		["BL28_MAT_NODE_069", ["Fresnel - 1.5"], "RPR_Nodes.blend", "Collection5", node_069, cancel_068_070],
+		["BL28_MAT_NODE_070", ["Fresnel - 3"], "RPR_Nodes.blend", "Collection5", node_070, cancel_068_070],
+		# ["BL28_MAT_NODE_071", ["RPR Lookup node, Type - OutVec"], "RPR_Nodes.blend", "Collection5", node_071, cancel_062],
+		# ["BL28_MAT_NODE_072", ["RPR Lookup node, Type - InVec"], "RPR_Nodes.blend", "Collection5", node_072, cancel_062],
+		# ["BL28_MAT_NODE_073", ["RPR Lookup node, Type - Position"], "RPR_Nodes.blend", "Collection5", node_073, cancel_062],
+		# ["BL28_MAT_NODE_074", ["RPR Lookup node, Type - Normal"], "RPR_Nodes.blend", "Collection5", node_074, cancel_062],
+		["BL28_MAT_NODE_075", ["Shadow Catcher"], "RPR_Nodes.blend", "Collection6", empty, empty],
+		# ["BL28_MAT_NODE_076", ["RPR Fresnel Schlick, RPR Fresnel"], "RPR_Nodes.blend", "Collection7", node_076, cancel_062],
+		# ["BL28_MAT_NODE_077", ["RPR Fresnel Schlick node, Reflectance - 0.5"], "RPR_Nodes.blend", "Collection7", node_077, cancel_062],
+		# ["BL28_MAT_NODE_078", ["RPR Fresnel Schlick node, Reflectance - 1"], "RPR_Nodes.blend", "Collection7", node_078, cancel_062],
+		# ["BL28_MAT_NODE_079", ["RPR Fresnel node, IOR - 0"], "RPR_Nodes.blend", "Collection7", node_079, cancel_062],
+		# ["BL28_MAT_NODE_080", ["RPR Fresnel node, IOR - 1"], "RPR_Nodes.blend", "Collection7", node_080, cancel_062],
+		# ["BL28_MAT_NODE_081", ["RPR Fresnel node, IOR - 3"], "RPR_Nodes.blend", "Collection7", node_081, cancel_062],
+		# ["BL28_MAT_NODE_082", ["Displacement"], "RPR_Nodes.blend", "Collection8", node_082, cancel_062],
+		# ["BL28_MAT_NODE_083", ["Displacement , Max - 0.04"], "RPR_Nodes.blend", "Collection8", node_083, cancel_062],
+		# ["BL28_MAT_NODE_084", ["Displacement , Subdivision type - Level, Max - 0.04"], "RPR_Nodes.blend", "Collection8", node_084, cancel_062],
+		# ["BL28_MAT_NODE_085", ["Displacement , Subdivision type - Level, Max - 0.04,  Subdivision - 5"], "RPR_Nodes.blend", "Collection8", node_085, cancel_062],
+		# ["BL28_MAT_NODE_086", ["Displacement , Subdivision type - Adaptive, Max - 0.1 , Adaptive Subdiv Level - 5"], "RPR_Nodes.blend", "Collection8", node_086, cancel_062],
+		# ["BL28_MAT_NODE_087", ["RPR Transparent default"], "RPR_Nodes.blend", "Collection9", node_087, cancel_062],
+		# ["BL28_MAT_NODE_088", ["RPR Transparent node, Diffuse Color - (1, 0.5, 0)"], "RPR_Nodes.blend", "Collection9", node_088, cancel_062],
+		["BL28_MAT_NODE_089", ["Blender Nodes"], "RPR_Nodes.blend", "Collection10", empty, empty]
 	]
 
 	launch_tests()
