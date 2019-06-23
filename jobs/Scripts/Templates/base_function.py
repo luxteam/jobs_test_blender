@@ -35,8 +35,8 @@ def get_core_version():
 	import pyrprwrap
 	if hasattr(pyrprwrap, 'VERSION_MAJOR_MINOR_REVISION'):
 		return "{}.{}.{}".format(pyrprwrap.VERSION_MAJOR,
-								 pyrprwrap.VERSION_MINOR,
-								 pyrprwrap.VERSION_REVISION)
+								pyrprwrap.VERSION_MINOR,
+								pyrprwrap.VERSION_REVISION)
 	else:
 		mj = (pyrprwrap.API_VERSION & 0xFFFF00000) >> 28
 		mn = (pyrprwrap.API_VERSION & 0xFFFFF) >> 8
