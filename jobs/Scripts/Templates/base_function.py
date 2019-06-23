@@ -34,7 +34,7 @@ def get_addon_version():
 def get_core_version():
 	import pyrprwrap
 	if hasattr(pyrprwrap, 'VERSION_MAJOR_MINOR_REVISION'):
-		return "{}.{}.{}".format(pyrprwrap.VERSION_MAJOR,
+		return "{{}}.{{}}.{{}}".format(pyrprwrap.VERSION_MAJOR,
 								pyrprwrap.VERSION_MINOR,
 								pyrprwrap.VERSION_REVISION)
 	else:
