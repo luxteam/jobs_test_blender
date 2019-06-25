@@ -32,10 +32,15 @@ def get_addon_version():
 
 
 def get_core_version():
-	from pyrprwrap import API_VERSION
-	mj = (API_VERSION & 0xFFFF00000) >> 28
-	mn = (API_VERSION & 0xFFFFF) >> 8
-	return "%x.%x" % (mj, mn)
+	import pyrprwrap
+	if hasattr(pyrprwrap, 'VERSION_MAJOR_MINOR_REVISION'):
+		return "{{}}.{{}}.{{}}".format(pyrprwrap.VERSION_MAJOR,
+								pyrprwrap.VERSION_MINOR,
+								pyrprwrap.VERSION_REVISION)
+	else:
+		mj = (pyrprwrap.API_VERSION & 0xFFFF00000) >> 28
+		mn = (pyrprwrap.API_VERSION & 0xFFFFF) >> 8
+		return "%x.%x" % (mj, mn)
 
 
 def get_blender_version():
