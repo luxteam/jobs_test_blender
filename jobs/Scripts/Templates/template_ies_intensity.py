@@ -1,13 +1,13 @@
 def prerender(test_list):
 
 	current_scene = bpy.path.basename(bpy.context.blend_data.filepath)
-    if current_scene != test_list[2]:
-        bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
+	if current_scene != test_list[2]:
+		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
 
-    scene = bpy.context.scene
-    enable_rpr_render(scene)
+	scene = bpy.context.scene
+	enable_rpr_render(scene)
 
-    set_value(scene.rpr.limits, 'max_samples', 100)
+	set_value(scene.rpr.limits, 'max_samples', 100)
 
 	lamp_data = bpy.data.lights['Point.001']
 	set_value(lamp_data.rpr, 'intensity', 1000)
