@@ -294,24 +294,28 @@ def uber_023():
 def uber_024():
 	uber_material, node_uber = get_material_and_node()
 	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	create_imagemap("Reflection Color", "reflectionColor.png")
 
 
 def uber_025():
 	uber_material, node_uber = get_material_and_node()
 	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	create_imagemap("Reflection Color", "reflectionColor.tga")
 
 
 def uber_026():
 	uber_material, node_uber = get_material_and_node()
 	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	create_imagemap("Reflection Weight", "reflectionWeight.png")
 
 
 def uber_027():
 	uber_material, node_uber = get_material_and_node()
 	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	create_imagemap("Reflection Weight", "reflectionWeight.tga")
 
 
@@ -319,6 +323,7 @@ def uber_028():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)
 	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	node_uber.inputs['Reflection Weight']['default_value'] = 0
 
 
@@ -326,6 +331,7 @@ def uber_029():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)
 	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	node_uber.inputs['Reflection Anisotropy']['default_value'] = -1
 
 
@@ -333,6 +339,7 @@ def uber_030():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)
 	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	node_uber.inputs['Reflection Anisotropy']['default_value'] = 1
 
 
@@ -340,6 +347,7 @@ def uber_031():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)
 	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	node_uber.inputs['Reflection Anisotropy']['default_value'] = 1
 	node_uber.inputs['Reflection Anisotropy Rotation']['default_value'] = 1.5708
 
@@ -348,6 +356,7 @@ def uber_032():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)
 	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	node_uber.inputs['Reflection Roughness']['default_value'] = 0
 
 
@@ -355,6 +364,7 @@ def uber_033():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)
 	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	node_uber.inputs['Reflection Roughness']['default_value'] = 1
 
 
@@ -362,6 +372,7 @@ def uber_034():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)
 	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	node_uber.inputs['Reflection IOR']['default_value'] = 0
 
 
@@ -369,12 +380,14 @@ def uber_035():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)
 	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	node_uber.inputs['Reflection IOR']['default_value'] = 3
 
 
 def uber_036():
 	uber_material, node_uber = get_material_and_node()
 	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	set_value(node_uber, "reflection_use_shader_normal", False)
 	create_normal_map("Reflection Normal", "normal.png")
 
@@ -422,24 +435,32 @@ def uber_042():
 
 def uber_043():
 	uber_material, node_uber = get_material_and_node()
+	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	set_value(node_uber, "enable_refraction", True)
 	create_imagemap("Refraction Color", "refractionColor.png")
 
 
 def uber_044():
 	uber_material, node_uber = get_material_and_node()
+	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	set_value(node_uber, "enable_refraction", True)
 	create_imagemap("Refraction Color", "refractionColor.tga")
 
 
 def uber_045():
 	uber_material, node_uber = get_material_and_node()
+	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	set_value(node_uber, "enable_refraction", True)
 	create_imagemap("Refraction Weight", "refractionWeight.png")
 
 
 def uber_046():
 	uber_material, node_uber = get_material_and_node()
+	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	set_value(node_uber, "enable_refraction", True)
 	create_imagemap("Refraction Weight", "refractionWeight.tga")
 
@@ -447,6 +468,8 @@ def uber_046():
 def uber_047():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)
+	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	set_value(node_uber, "enable_refraction", True)
 	set_value(node_uber, "refraction_thin_surface", True)
 
@@ -454,6 +477,8 @@ def uber_047():
 def uber_048():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)
+	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	set_value(node_uber, "enable_refraction", True)
 	node_uber.inputs['Refraction Weight']['default_value'] = 0
 
@@ -461,6 +486,8 @@ def uber_048():
 def uber_049():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)
+	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	set_value(node_uber, "enable_refraction", True)
 	node_uber.inputs['Refraction Weight']['default_value'] = 0.5
 
@@ -468,6 +495,8 @@ def uber_049():
 def uber_050():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)
+	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	set_value(node_uber, "enable_refraction", True)
 	node_uber.inputs['Refraction Roughness']['default_value'] = 0.5
 
@@ -475,6 +504,8 @@ def uber_050():
 def uber_051():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)
+	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	set_value(node_uber, "enable_refraction", True)
 	node_uber.inputs['Refraction Roughness']['default_value'] = 1
 
@@ -482,6 +513,8 @@ def uber_051():
 def uber_052():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)
+	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	set_value(node_uber, "enable_refraction", True)
 	set_value(node_uber, "refraction_caustics", True)
 	node_uber.inputs['Refraction IOR']['default_value'] = 1
@@ -490,6 +523,8 @@ def uber_052():
 def uber_053():
 	uber_material, node_uber = get_material_and_node()
 	node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)
+	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	set_value(node_uber, "enable_refraction", True)
 	set_value(node_uber, "refraction_caustics", True)
 	node_uber.inputs['Refraction IOR']['default_value'] = 3
@@ -497,6 +532,8 @@ def uber_053():
 
 def uber_054():
 	uber_material, node_uber = get_material_and_node()
+	set_value(node_uber, "enable_reflection", True)
+	set_value(node_uber, "reflection_mode", 'PBR')
 	set_value(node_uber, "enable_refraction", True)
 	set_value(node_uber, "refraction_use_shader_normal", False)
 	create_normal_map("Refraction Normal", "normal.png")
