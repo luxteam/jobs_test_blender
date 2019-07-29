@@ -35,27 +35,23 @@ def get_material_and_node(material_name, node_name):
 # create connection from weight map to RPR Blend mat. For cases 1-3.
 def cancel_002_004():
 	material, node = get_material_and_node("Mix Shader", "Mix Shader")
-	tree = material.node_tree
 	node_imagemap = [n for n in material.node_tree.nodes if n.name=="Image Texture"][0]
-	tree.links.new(node_imagemap.outputs['Color'], node.inputs['Fac'])
+	material.node_tree.links.new(node_imagemap.outputs['Color'], node.inputs['Fac'])
 
 
 def node_002():
 	material, node = get_material_and_node("Mix Shader", "Mix Shader")
-	node_imagemap = [n for n in material.node_tree.nodes if n.name=="Image Texture"][0]
 	material.node_tree.links.remove(material.node_tree.links.items()[11][1])
 
 
 def node_003():
 	material, node = get_material_and_node("Mix Shader", "Mix Shader")
-	node_imagemap = [n for n in material.node_tree.nodes if n.name=="Image Texture"][0]
 	material.node_tree.links.remove(material.node_tree.links.items()[11][1])
 	set_value(node.inputs['Fac'], "default_value", 0)
 
 
 def node_004():
 	material, node = get_material_and_node("Mix Shader", "Mix Shader")
-	node_imagemap = [n for n in material.node_tree.nodes if n.name=="Image Texture"][0]
 	material.node_tree.links.remove(material.node_tree.links.items()[11][1])
 	set_value(node.inputs['Fac'], "default_value", 1)
 
@@ -438,70 +434,134 @@ def node_070():
 	set_value(node.inputs['IOR'], "default_value", 3)
 
 
+def cancel_083_087():
+	material, node = get_material_and_node("RPRDisplasement", "Displacement")
+	set_value(node.inputs['Midlevel'], "default_value", 0.5)
+	set_value(node.inputs['Scale'], "default_value", 1)
+
+
+def node_083():
+	material, node = get_material_and_node("RPRDisplasement", "Displacement")
+	set_value(node.inputs['Midlevel'], "default_value", 0)
+
+
+def node_084():
+	material, node = get_material_and_node("RPRDisplasement", "Displacement")
+	set_value(node.inputs['Midlevel'], "default_value", 1)
+
+
+def node_085():
+	material, node = get_material_and_node("RPRDisplasement", "Displacement")
+	set_value(node.inputs['Midlevel'], "default_value", 0.5)
+	set_value(node.inputs['Scale'], "default_value", 0)
+
+
+def node_086():
+	material, node = get_material_and_node("RPRDisplasement", "Displacement")
+	set_value(node.inputs['Midlevel'], "default_value", 0.5)
+	set_value(node.inputs['Scale'], "default_value", 1)
+
+
+def node_087():
+	material, node = get_material_and_node("RPRDisplasement", "Displacement")
+	set_value(node.inputs['Midlevel'], "default_value", 0.5)
+	set_value(node.inputs['Scale'], "default_value", 2)
+
+
+def cancel_088():
+	material, node = get_material_and_node("RPRDisplasement", "Displacement")
+	set_value(node.inputs['Midlevel'], "default_value", 0.5)
+	set_value(node.inputs['Scale'], "default_value", 1)
+	node_imagemap = [n for n in material.node_tree.nodes if n.name== "Image Texture"][0]
+	material.node_tree.links.new(node_imagemap.outputs['Color'], node.inputs['Height'])
+
+
+def node_088():
+	material, node = get_material_and_node("RPRDisplasement", "Displacement")
+	set_value(node.inputs['Midlevel'], "default_value", 0.5)
+	set_value(node.inputs['Scale'], "default_value", 1)
+	material.node_tree.links.remove(node.inputs['Height'].links[0])
+
+
+def cancel_089():
+	material, node = get_material_and_node("RPRDisplasement", "Displacement")
+	set_value(node.inputs['Midlevel'], "default_value", 0.5)
+	set_value(node.inputs['Scale'], "default_value", 1)
+	set_value(node, "space", "OBJECT")
+
+
+def node_089():
+	material, node = get_material_and_node("RPRDisplasement", "Displacement")
+	set_value(node.inputs['Midlevel'], "default_value", 0.5)
+	set_value(node.inputs['Scale'], "default_value", 1)
+	set_value(node, "space", "WORLD")
+
+
+
 if __name__ == '__main__':
 
 	list_tests = [
-		#["BL28_MAT_NODE_001", ["RPR Shader Blend weight map"], "RPR_Nodes.blend", "Collection1", empty, empty],
-		#["BL28_MAT_NODE_002", ["RPR Shader Blend without weight map"], "RPR_Nodes.blend", "Collection1", node_002, cancel_002_004],
-		#["BL28_MAT_NODE_003", ["RPR Shader Blend, weight - 0"], "RPR_Nodes.blend", "Collection1", node_003, cancel_002_004],
-		#["BL28_MAT_NODE_004", ["RPR Shader Blend, weight - 1"], "RPR_Nodes.blend", "Collection1", node_004, cancel_002_004],
-		#["BL28_MAT_NODE_005", ["Image Mapping default"], "RPR_Nodes.blend", "Collection2", empty, empty],
-		#["BL28_MAT_NODE_006", ["Checker Texture scale - 1"], "RPR_Nodes.blend", "Collection2", node_006, cancel_006_008],
-		#["BL28_MAT_NODE_007", ["Checker Texture scale - 5"], "RPR_Nodes.blend", "Collection2", node_007, cancel_006_008],
-		#["BL28_MAT_NODE_008", ["Checker Texture scale - 10"], "RPR_Nodes.blend", "Collection2", node_008, cancel_006_008],
-		#["BL28_MAT_NODE_009", ["Noise texture Scale - 1"], "RPR_Nodes.blend", "Collection2", node_009, cancel_009_011],
-		#["BL28_MAT_NODE_010", ["Noise texture Scale - 5"], "RPR_Nodes.blend", "Collection2", node_010, cancel_009_011],
-		#["BL28_MAT_NODE_011", ["Noise texture Scale - 10"], "RPR_Nodes.blend", "Collection2", node_011, cancel_009_011],
-		#["BL28_MAT_NODE_012", ["Gradient Texture Blendig - Quadrantic"], "RPR_Nodes.blend", "Collection2", node_012, cancel_012_018],
-		#["BL28_MAT_NODE_013", ["Gradient Texture Blendig - Linear "], "RPR_Nodes.blend", "Collection2", node_013, cancel_012_018],
-		#["BL28_MAT_NODE_014", ["Gradient Texture Blendig - Easing "], "RPR_Nodes.blend", "Collection2", node_014, cancel_012_018],
-		#["BL28_MAT_NODE_015", ["Gradient Texture Blendig - Diagonal "], "RPR_Nodes.blend", "Collection2", node_015, cancel_012_018],
-		#["BL28_MAT_NODE_016", ["Gradient Texture Blendig - Spherical "], "RPR_Nodes.blend", "Collection2", node_016, cancel_012_018],
-		#["BL28_MAT_NODE_017", ["Gradient Texture Blendig - Quadrantic sphere"], "RPR_Nodes.blend", "Collection2", node_017, cancel_012_018],
-		#["BL28_MAT_NODE_018", ["Gradient Texture Blendig - Radial"], "RPR_Nodes.blend", "Collection2", node_018, cancel_012_018],
-		#["BL28_MAT_NODE_019", ["Color Ramp Default"], "RPR_Nodes.blend", "Collection3", empty, empty],
-		#["BL28_MAT_NODE_020", ["Color Ramp \"Linear\" interpolation"], "RPR_Nodes.blend", "Collection3", node_020, cancel_020_024],
-		#["BL28_MAT_NODE_021", ["Color Ramp \"Ease\" interpolation"], "RPR_Nodes.blend", "Collection3", node_021, cancel_020_024],
-		#["BL28_MAT_NODE_022", ["Color Ramp \"Cardinal\" interpolation"], "RPR_Nodes.blend", "Collection3", node_022, cancel_020_024],
-		#["BL28_MAT_NODE_023", ["Color Ramp \"B-Spline\" interpolation"], "RPR_Nodes.blend", "Collection3", node_023, cancel_020_024],
-		#["BL28_MAT_NODE_024", ["Color Ramp \"Constant\" interpolation"], "RPR_Nodes.blend", "Collection3", node_024, cancel_020_024],
-		#["BL28_MAT_NODE_025", ["ColumnValueBlend, Value 1 - (0, 0, 0) (RGB), Value 2 - (1, 1, 1) (RGB)"], "RPR_Nodes.blend", "Collection3", node_025, cancel_025],
-		#["BL28_MAT_NODE_026", ["Operation - Abs"], "RPR_Nodes.blend", "Collection3", node_026, cancel_026_059],
-		#["BL28_MAT_NODE_027", ["Operation - Add"], "RPR_Nodes.blend", "Collection3", node_027, cancel_026_059],
-		#["BL28_MAT_NODE_028", ["Operation - Arccosine"], "RPR_Nodes.blend", "Collection3", node_028, cancel_026_059],
-		#["BL28_MAT_NODE_029", ["Operation - Arcsine"], "RPR_Nodes.blend", "Collection3", node_029, cancel_026_059],
-		#["BL28_MAT_NODE_030", ["Operation - Arctangent"], "RPR_Nodes.blend", "Collection3", node_030, cancel_026_059],
-		#["BL28_MAT_NODE_031", ["Operation - Average"], "RPR_Nodes.blend", "Collection3", node_031, cancel_026_059],
-		#["BL28_MAT_NODE_032", ["Operation - Average XYZ"], "RPR_Nodes.blend", "Collection3", node_032, cancel_026_059],
-		#["BL28_MAT_NODE_033", ["Operation - Combine"], "RPR_Nodes.blend", "Collection3", node_033, cancel_026_059],
-		#["BL28_MAT_NODE_034", ["Operation - Cosine"], "RPR_Nodes.blend", "Collection3", node_034, cancel_026_059],
-		#["BL28_MAT_NODE_035", ["Operation - Cross Product"], "RPR_Nodes.blend", "Collection3", node_035, cancel_026_059],
-		#["BL28_MAT_NODE_036", ["Operation - Divide"], "RPR_Nodes.blend", "Collection3", node_036, cancel_026_059],
-		#["BL28_MAT_NODE_037", ["Operation - Dot3 Product"], "RPR_Nodes.blend", "Collection3", node_037, cancel_026_059],
-		#["BL28_MAT_NODE_038", ["Operation - Dot4 Product"], "RPR_Nodes.blend", "Collection3", node_038, cancel_026_059],
-		#["BL28_MAT_NODE_039", ["Operation - Floor"], "RPR_Nodes.blend", "Collection3", node_039, cancel_026_059],
-		#["BL28_MAT_NODE_040", ["Operation - Length3"], "RPR_Nodes.blend", "Collection3", node_040, cancel_026_059],
-		#["BL28_MAT_NODE_041", ["Operation - Log"], "RPR_Nodes.blend", "Collection3", node_041, cancel_026_059],
-		#["BL28_MAT_NODE_042", ["Operation - Max"], "RPR_Nodes.blend", "Collection3", node_042, cancel_026_059],
-		#["BL28_MAT_NODE_043", ["Operation - Min"], "RPR_Nodes.blend", "Collection3", node_043, cancel_026_059],
-		#["BL28_MAT_NODE_044", ["Operation - Mod"], "RPR_Nodes.blend", "Collection3", node_044, cancel_026_059],
-		#["BL28_MAT_NODE_045", ["Operation - Multiply"], "RPR_Nodes.blend", "Collection3", node_045, cancel_026_059],
-		#["BL28_MAT_NODE_046", ["Operation - Normalize"], "RPR_Nodes.blend", "Collection3", node_046, cancel_026_059],
-		#["BL28_MAT_NODE_047", ["Operation - Pow"], "RPR_Nodes.blend", "Collection3", node_047, cancel_026_059],
-		#["BL28_MAT_NODE_048", ["Operation - Select W"], "RPR_Nodes.blend", "Collection3", node_048, cancel_026_059],
-		#["BL28_MAT_NODE_049", ["Operation - Select X"], "RPR_Nodes.blend", "Collection3", node_049, cancel_026_059],
-		#["BL28_MAT_NODE_050", ["Operation - Select Y"], "RPR_Nodes.blend", "Collection3", node_050, cancel_026_059],
-		#["BL28_MAT_NODE_051", ["Operation - Select Z"], "RPR_Nodes.blend", "Collection3", node_051, cancel_026_059],
-		#["BL28_MAT_NODE_052", ["Operation - Sine"], "RPR_Nodes.blend", "Collection3", node_052, cancel_026_059],
-		#["BL28_MAT_NODE_053", ["Operation - Subtract"], "RPR_Nodes.blend", "Collection3", node_053, cancel_026_059],
-		#["BL28_MAT_NODE_054", ["Operation - Tangent"], "RPR_Nodes.blend", "Collection3", node_054, cancel_026_059],
-		#["BL28_MAT_NODE_055", ["Operation - XYZW->WXYZ"], "RPR_Nodes.blend", "Collection3", node_055, cancel_026_059],
-		#["BL28_MAT_NODE_056", ["Operation - XYZW->YZWX"], "RPR_Nodes.blend", "Collection3", node_056, cancel_026_059],
-		#["BL28_MAT_NODE_057", ["Operation - XYZW->ZWXY"], "RPR_Nodes.blend", "Collection3", node_057, cancel_026_059],
-		#["BL28_MAT_NODE_058", ["Type - Float"], "RPR_Nodes.blend", "Collection3", node_058, cancel_026_059],
-		#["BL28_MAT_NODE_059", ["Type - Vector"], "RPR_Nodes.blend", "Collection3", node_059, cancel_026_059],
-		#["BL28_MAT_NODE_060", ["Normal and Bump"], "RPR_Nodes.blend", "Collection4", empty, empty],
-		#["BL28_MAT_NODE_061", ["Texture Coordinates"], "RPR_Nodes.blend", "Collection5", empty, empty],
+		["BL28_MAT_NODE_001", ["RPR Shader Blend weight map"], "RPR_Nodes.blend", "Collection1", empty, empty],
+		["BL28_MAT_NODE_002", ["RPR Shader Blend without weight map"], "RPR_Nodes.blend", "Collection1", node_002, cancel_002_004],
+		["BL28_MAT_NODE_003", ["RPR Shader Blend, weight - 0"], "RPR_Nodes.blend", "Collection1", node_003, cancel_002_004],
+		["BL28_MAT_NODE_004", ["RPR Shader Blend, weight - 1"], "RPR_Nodes.blend", "Collection1", node_004, cancel_002_004],
+		["BL28_MAT_NODE_005", ["Image Mapping default"], "RPR_Nodes.blend", "Collection2", empty, empty],
+		["BL28_MAT_NODE_006", ["Checker Texture scale - 1"], "RPR_Nodes.blend", "Collection2", node_006, cancel_006_008],
+		["BL28_MAT_NODE_007", ["Checker Texture scale - 5"], "RPR_Nodes.blend", "Collection2", node_007, cancel_006_008],
+		["BL28_MAT_NODE_008", ["Checker Texture scale - 10"], "RPR_Nodes.blend", "Collection2", node_008, cancel_006_008],
+		["BL28_MAT_NODE_009", ["Noise texture Scale - 1"], "RPR_Nodes.blend", "Collection2", node_009, cancel_009_011],
+		["BL28_MAT_NODE_010", ["Noise texture Scale - 5"], "RPR_Nodes.blend", "Collection2", node_010, cancel_009_011],
+		["BL28_MAT_NODE_011", ["Noise texture Scale - 10"], "RPR_Nodes.blend", "Collection2", node_011, cancel_009_011],
+		["BL28_MAT_NODE_012", ["Gradient Texture Blendig - Quadrantic"], "RPR_Nodes.blend", "Collection2", node_012, cancel_012_018],
+		["BL28_MAT_NODE_013", ["Gradient Texture Blendig - Linear "], "RPR_Nodes.blend", "Collection2", node_013, cancel_012_018],
+		["BL28_MAT_NODE_014", ["Gradient Texture Blendig - Easing "], "RPR_Nodes.blend", "Collection2", node_014, cancel_012_018],
+		["BL28_MAT_NODE_015", ["Gradient Texture Blendig - Diagonal "], "RPR_Nodes.blend", "Collection2", node_015, cancel_012_018],
+		["BL28_MAT_NODE_016", ["Gradient Texture Blendig - Spherical "], "RPR_Nodes.blend", "Collection2", node_016, cancel_012_018],
+		["BL28_MAT_NODE_017", ["Gradient Texture Blendig - Quadrantic sphere"], "RPR_Nodes.blend", "Collection2", node_017, cancel_012_018],
+		["BL28_MAT_NODE_018", ["Gradient Texture Blendig - Radial"], "RPR_Nodes.blend", "Collection2", node_018, cancel_012_018],
+		["BL28_MAT_NODE_019", ["Color Ramp Default"], "RPR_Nodes.blend", "Collection3", empty, empty],
+		["BL28_MAT_NODE_020", ["Color Ramp \"Linear\" interpolation"], "RPR_Nodes.blend", "Collection3", node_020, cancel_020_024],
+		["BL28_MAT_NODE_021", ["Color Ramp \"Ease\" interpolation"], "RPR_Nodes.blend", "Collection3", node_021, cancel_020_024],
+		["BL28_MAT_NODE_022", ["Color Ramp \"Cardinal\" interpolation"], "RPR_Nodes.blend", "Collection3", node_022, cancel_020_024],
+		["BL28_MAT_NODE_023", ["Color Ramp \"B-Spline\" interpolation"], "RPR_Nodes.blend", "Collection3", node_023, cancel_020_024],
+		["BL28_MAT_NODE_024", ["Color Ramp \"Constant\" interpolation"], "RPR_Nodes.blend", "Collection3", node_024, cancel_020_024],
+		["BL28_MAT_NODE_025", ["ColumnValueBlend, Value 1 - (0, 0, 0) (RGB), Value 2 - (1, 1, 1) (RGB)"], "RPR_Nodes.blend", "Collection3", node_025, cancel_025],
+		["BL28_MAT_NODE_026", ["Operation - Abs"], "RPR_Nodes.blend", "Collection3", node_026, cancel_026_059],
+		["BL28_MAT_NODE_027", ["Operation - Add"], "RPR_Nodes.blend", "Collection3", node_027, cancel_026_059],
+		["BL28_MAT_NODE_028", ["Operation - Arccosine"], "RPR_Nodes.blend", "Collection3", node_028, cancel_026_059],
+		["BL28_MAT_NODE_029", ["Operation - Arcsine"], "RPR_Nodes.blend", "Collection3", node_029, cancel_026_059],
+		["BL28_MAT_NODE_030", ["Operation - Arctangent"], "RPR_Nodes.blend", "Collection3", node_030, cancel_026_059],
+		["BL28_MAT_NODE_031", ["Operation - Average"], "RPR_Nodes.blend", "Collection3", node_031, cancel_026_059],
+		["BL28_MAT_NODE_032", ["Operation - Average XYZ"], "RPR_Nodes.blend", "Collection3", node_032, cancel_026_059],
+		["BL28_MAT_NODE_033", ["Operation - Combine"], "RPR_Nodes.blend", "Collection3", node_033, cancel_026_059],
+		["BL28_MAT_NODE_034", ["Operation - Cosine"], "RPR_Nodes.blend", "Collection3", node_034, cancel_026_059],
+		["BL28_MAT_NODE_035", ["Operation - Cross Product"], "RPR_Nodes.blend", "Collection3", node_035, cancel_026_059],
+		["BL28_MAT_NODE_036", ["Operation - Divide"], "RPR_Nodes.blend", "Collection3", node_036, cancel_026_059],
+		["BL28_MAT_NODE_037", ["Operation - Dot3 Product"], "RPR_Nodes.blend", "Collection3", node_037, cancel_026_059],
+		["BL28_MAT_NODE_038", ["Operation - Dot4 Product"], "RPR_Nodes.blend", "Collection3", node_038, cancel_026_059],
+		["BL28_MAT_NODE_039", ["Operation - Floor"], "RPR_Nodes.blend", "Collection3", node_039, cancel_026_059],
+		["BL28_MAT_NODE_040", ["Operation - Length3"], "RPR_Nodes.blend", "Collection3", node_040, cancel_026_059],
+		["BL28_MAT_NODE_041", ["Operation - Log"], "RPR_Nodes.blend", "Collection3", node_041, cancel_026_059],
+		["BL28_MAT_NODE_042", ["Operation - Max"], "RPR_Nodes.blend", "Collection3", node_042, cancel_026_059],
+		["BL28_MAT_NODE_043", ["Operation - Min"], "RPR_Nodes.blend", "Collection3", node_043, cancel_026_059],
+		["BL28_MAT_NODE_044", ["Operation - Mod"], "RPR_Nodes.blend", "Collection3", node_044, cancel_026_059],
+		["BL28_MAT_NODE_045", ["Operation - Multiply"], "RPR_Nodes.blend", "Collection3", node_045, cancel_026_059],
+		["BL28_MAT_NODE_046", ["Operation - Normalize"], "RPR_Nodes.blend", "Collection3", node_046, cancel_026_059],
+		["BL28_MAT_NODE_047", ["Operation - Pow"], "RPR_Nodes.blend", "Collection3", node_047, cancel_026_059],
+		["BL28_MAT_NODE_048", ["Operation - Select W"], "RPR_Nodes.blend", "Collection3", node_048, cancel_026_059],
+		["BL28_MAT_NODE_049", ["Operation - Select X"], "RPR_Nodes.blend", "Collection3", node_049, cancel_026_059],
+		["BL28_MAT_NODE_050", ["Operation - Select Y"], "RPR_Nodes.blend", "Collection3", node_050, cancel_026_059],
+		["BL28_MAT_NODE_051", ["Operation - Select Z"], "RPR_Nodes.blend", "Collection3", node_051, cancel_026_059],
+		["BL28_MAT_NODE_052", ["Operation - Sine"], "RPR_Nodes.blend", "Collection3", node_052, cancel_026_059],
+		["BL28_MAT_NODE_053", ["Operation - Subtract"], "RPR_Nodes.blend", "Collection3", node_053, cancel_026_059],
+		["BL28_MAT_NODE_054", ["Operation - Tangent"], "RPR_Nodes.blend", "Collection3", node_054, cancel_026_059],
+		["BL28_MAT_NODE_055", ["Operation - XYZW->WXYZ"], "RPR_Nodes.blend", "Collection3", node_055, cancel_026_059],
+		["BL28_MAT_NODE_056", ["Operation - XYZW->YZWX"], "RPR_Nodes.blend", "Collection3", node_056, cancel_026_059],
+		["BL28_MAT_NODE_057", ["Operation - XYZW->ZWXY"], "RPR_Nodes.blend", "Collection3", node_057, cancel_026_059],
+		["BL28_MAT_NODE_058", ["Type - Float"], "RPR_Nodes.blend", "Collection3", node_058, cancel_026_059],
+		["BL28_MAT_NODE_059", ["Type - Vector"], "RPR_Nodes.blend", "Collection3", node_059, cancel_026_059],
+		["BL28_MAT_NODE_060", ["Normal and Bump"], "RPR_Nodes.blend", "Collection4", empty, empty],
+		["BL28_MAT_NODE_061", ["Texture Coordinates"], "RPR_Nodes.blend", "Collection5", empty, empty],
 		["BL28_MAT_NODE_062", ["Generetad Texture Coordinates"], "RPR_Nodes.blend", "Collection5", node_062, cancel_062_067],
 		["BL28_MAT_NODE_063", ["Normal Texture Coordinates"], "RPR_Nodes.blend", "Collection5", node_063, cancel_062_067],
 		["BL28_MAT_NODE_064", ["UV Texture Coordinates"], "RPR_Nodes.blend", "Collection5", node_064, cancel_062_067],
@@ -522,14 +582,17 @@ if __name__ == '__main__':
 		# ["BL28_MAT_NODE_079", ["RPR Fresnel node, IOR - 0"], "RPR_Nodes.blend", "Collection7", node_079, cancel_062],
 		# ["BL28_MAT_NODE_080", ["RPR Fresnel node, IOR - 1"], "RPR_Nodes.blend", "Collection7", node_080, cancel_062],
 		# ["BL28_MAT_NODE_081", ["RPR Fresnel node, IOR - 3"], "RPR_Nodes.blend", "Collection7", node_081, cancel_062],
-		# ["BL28_MAT_NODE_082", ["Displacement"], "RPR_Nodes.blend", "Collection8", node_082, cancel_062],
-		# ["BL28_MAT_NODE_083", ["Displacement , Max - 0.04"], "RPR_Nodes.blend", "Collection8", node_083, cancel_062],
-		# ["BL28_MAT_NODE_084", ["Displacement , Subdivision type - Level, Max - 0.04"], "RPR_Nodes.blend", "Collection8", node_084, cancel_062],
-		# ["BL28_MAT_NODE_085", ["Displacement , Subdivision type - Level, Max - 0.04,  Subdivision - 5"], "RPR_Nodes.blend", "Collection8", node_085, cancel_062],
-		# ["BL28_MAT_NODE_086", ["Displacement , Subdivision type - Adaptive, Max - 0.1 , Adaptive Subdiv Level - 5"], "RPR_Nodes.blend", "Collection8", node_086, cancel_062],
-		# ["BL28_MAT_NODE_087", ["RPR Transparent default"], "RPR_Nodes.blend", "Collection9", node_087, cancel_062],
-		# ["BL28_MAT_NODE_088", ["RPR Transparent node, Diffuse Color - (1, 0.5, 0)"], "RPR_Nodes.blend", "Collection9", node_088, cancel_062],
-		["BL28_MAT_NODE_089", ["Blender Nodes"], "RPR_Nodes.blend", "Collection10", empty, empty]
+		["BL28_MAT_NODE_082", ["Displacement"], "RPR_Nodes.blend", "Collection8", empty, empty],
+		["BL28_MAT_NODE_083", ["Displacement , Midlevel: - 0"], "RPR_Nodes.blend", "Collection8", node_083, cancel_083_087],
+		["BL28_MAT_NODE_084", ["Displacement , Midlevel: - 1"], "RPR_Nodes.blend", "Collection8", node_084, cancel_083_087],
+		["BL28_MAT_NODE_085", ["Displacement , Scale: - 0"], "RPR_Nodes.blend", "Collection8", node_085, cancel_083_087],
+		["BL28_MAT_NODE_086", ["Displacement , Scale: - 1"], "RPR_Nodes.blend", "Collection8", node_086, cancel_083_087],
+		["BL28_MAT_NODE_087", ["Displacement , Scale: - 2"], "RPR_Nodes.blend", "Collection8", node_087, cancel_083_087],
+		["BL28_MAT_NODE_088", ["Displacement , Normal"], "RPR_Nodes.blend", "Collection8", node_088, cancel_088],
+		["BL28_MAT_NODE_089", ["Displacement , World Space"], "RPR_Nodes.blend", "Collection8", node_089, cancel_089],
+		# ["BL28_MAT_NODE_090", ["RPR Transparent default"], "RPR_Nodes.blend", "Collection9", node_087, cancel_062],
+		# ["BL28_MAT_NODE_091", ["RPR Transparent node, Diffuse Color - (1, 0.5, 0)"], "RPR_Nodes.blend", "Collection9", node_088, cancel_062],
+		["BL28_MAT_NODE_092", ["Blender Nodes"], "RPR_Nodes.blend", "Collection10", empty, empty]
 	]
 
 	launch_tests()
