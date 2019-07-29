@@ -93,7 +93,9 @@ def create_ies_light():
 	light = bpy.data.lights['Lamp']
 	set_value(light, 'type', 'POINT')
 	set_value(light.rpr, 'intensity', 100)
-	set_value(light.rpr, 'ies_file_name', os.path.join("{resource_path}", "Maps", "1.ies"))
+	bpy.ops.image.open(filepath="//Maps//1.ies", directory="{resource_path}//Maps//", files=[{{"name":"1.ies"}}], \
+																														relative_path=True, show_multiview=False)
+	set_value(light.rpr, 'ies_file', bpy.data.images["1.ies"])
 	
 
 def delete_ies_light():
@@ -329,9 +331,7 @@ if __name__ == '__main__':
 		["BL28_SM_034", ["5 lights", "Pass Limit: 50"], empty, empty, "5_lights.blend", 50],
 		["BL28_SM_035", ["AOV SC", "Pass Limit: 50"], empty, empty, "AOV_SC.blend", 50],
 		["BL28_SM_036", ["SSS", "Pass Limit: 50"], empty, empty, "SSS_Test.blend", 50],
-
-		# Not implemented in plugin
-		# ["BL28_SM_037", ["Displacement", "Pass Limit: 50"], empty, empty, "Displacement.blend", 50],
+		["BL28_SM_037", ["Displacement", "Pass Limit: 50"], empty, empty, "Displacement.blend", 50],
 
 		["BL28_SM_038", ["Quality", "Pass Limit: 50"], activate_medium_quality, deactivate_medium_quality, "WaterInsideGlass.blend", 50],
 
