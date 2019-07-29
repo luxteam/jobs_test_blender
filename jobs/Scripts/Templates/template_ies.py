@@ -10,7 +10,9 @@ def prerender(test_list):
 
 	lamp_data = bpy.data.lights['Lamp']
 	set_value(lamp_data.rpr, 'intensity', 50)
-	set_value(lamp_data.rpr, 'ies_file_name', os.path.join(r"{resource_path}", "ies", test_list[3]))
+	bpy.ops.image.open(filepath="//ies//{{}}".format(test_list[3]), directory="{resource_path}//ies//", files=[{{"name":"{{}}".format(test_list[3])}}], \
+																														relative_path=True, show_multiview=False)
+	set_value(lamp_data.rpr, 'ies_file', bpy.data.images[test_list[3]])
 
 	render(test_list[0], test_list[1])
 	return 1
