@@ -31,6 +31,9 @@ def prerender(test_list):
 
 	render(test_list[0], test_list[1])
 
+	if type(test_list[6]) != tuple:
+		set_value(scene.world.rpr.ibl, 'image', None)
+
 	if test_list[5]:
 		set_value(scene.world.rpr, '{{}}_override'.format(test_list[5]), False)
 
