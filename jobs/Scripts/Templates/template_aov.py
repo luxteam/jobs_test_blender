@@ -19,17 +19,18 @@ def prerender(test_list):
 	render_layer = nodes["Render Layers"]
 
 	view_layer = bpy.context.view_layer
-	set_value(view_layer.rpr, 'enable_aovs[{{}}]'.format(test_list[4]), True)
+	view_layer.rpr.enable_aovs[test_list[4]] = True
+	print(view_layer.rpr.enable_aovs[3])
 
 	link = scene.node_tree.links.new(render_layer.outputs[test_list[3]], file_output.inputs[test_list[4]])
 
 	render(test_list[0], test_list[1])
 
 	scene.node_tree.links.remove(link)
-	set_value(view_layer.rpr, 'enable_aovs[{{}}]'.format(test_list[4]), False)
+	view_layer.rpr.enable_aovs[test_list[4]] = False
 
 	os.remove(r"{work_dir}" + "/Color/" + test_list[0] + '.jpg')
-	os.rename(r"{work_dir}" + "/Color/" + test_list[0] + '0001.jpg', \
+	os.rename(r"{work_dir}" + "/Color/" + test_list[0] + '0040.jpg', \
 		r"{work_dir}" + "/Color/" + test_list[0] + '.jpg')
 
 	return 1
