@@ -1,4 +1,9 @@
 
+def deactivate_all_aovs(view_layer):
+	for number in range(1, 28):
+		view_layer.rpr.enable_aovs[number] = False
+
+
 def prerender(test_list):
 
 	current_scene = bpy.path.basename(bpy.context.blend_data.filepath)
@@ -7,6 +12,11 @@ def prerender(test_list):
 
 	scene = bpy.context.scene
 	enable_rpr_render(scene)
+
+	scene.frame_set(40)
+
+	view_layer = bpy.context.view_layer
+	deactivate_all_aovs(view_layer)
 
 	set_value(scene.view_layers["RenderLayer"], 'use', True)
 	set_value(scene.render, 'use_single_layer', False)
@@ -18,9 +28,7 @@ def prerender(test_list):
 
 	render_layer = nodes["Render Layers"]
 
-	view_layer = bpy.context.view_layer
 	view_layer.rpr.enable_aovs[test_list[4]] = True
-	print(view_layer.rpr.enable_aovs[3])
 
 	link = scene.node_tree.links.new(render_layer.outputs[test_list[3]], file_output.inputs[test_list[4]])
 
@@ -50,7 +58,7 @@ if __name__ == "__main__":
 		["BL28_RS_AOV_010", ["AOV: Shadow Catcher"], "AOV_test.blend", 'Shadow Catcher', 9], 
 		["BL28_RS_AOV_011", ["AOV: Background"], "AOV_test.blend", 'Background', 10], 
 		["BL28_RS_AOV_012", ["AOV: Emission"], "AOV_test.blend", 'Emission', 11],
-		["BL28_RS_AOV_013", ["AOV: Velocity"], "AOV_test.blend", 'Velocity', 12], 
+		["BL28_RS_AOV_013", ["AOV: Velocity"], "AOV_test_velocity.blend", 'Velocity', 12], 
 		["BL28_RS_AOV_014", ["AOV: Direct Illumination"], "AOV_test.blend", 'Direct Illumination', 13], 
 		["BL28_RS_AOV_015", ["AOV: Indirect Illumination"], "AOV_test.blend", 'Indirect Illumination', 14],
 		["BL28_RS_AOV_016", ["AOV: Ambient Occlusion"], "AOV_test.blend", 'Ambient Occlusion', 15], 
