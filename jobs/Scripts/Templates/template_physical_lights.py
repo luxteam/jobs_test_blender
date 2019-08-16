@@ -57,7 +57,7 @@ def sun_light(test_case, script_info, intensity, use_temperature, temperature, c
 	return 1
 
 
-def spot_light(test_case, script_info, intensity, use_temperature, temperature, angle, fallof, color, intensity_units_point, luminous_efficacy):
+def spot_light(test_case, script_info, intensity, use_temperature, temperature, spot_size, spot_blend, color, intensity_units_point, luminous_efficacy):
 
 	lamp_data = bpy.data.lights['Point']
 	set_value(lamp_data, 'type', 'SPOT')
@@ -65,8 +65,8 @@ def spot_light(test_case, script_info, intensity, use_temperature, temperature, 
 	set_value(lamp_data.rpr, 'intensity', intensity)
 	set_value(lamp_data.rpr, 'use_temperature', use_temperature)
 	set_value(lamp_data.rpr, 'temperature', temperature)
-	set_value(lamp_data.rpr, 'spot_size', angle)
-	set_value(lamp_data.rpr, 'spot_blend', fallof)
+	set_value(lamp_data, 'spot_size', spot_size)
+	set_value(lamp_data, 'spot_blend', spot_blend)
 	set_value(lamp_data, 'color', color)
 	set_value(lamp_data.rpr, 'intensity_units_point', intensity_units_point)
 	if intensity_units_point == "WATTS":
@@ -131,9 +131,9 @@ if __name__ == "__main__":
 		["BL28_L_PL_020", ["Type: Point", "Intensity: 100", "Color: 0 0 0.5"], "Physical_Lights.blend", 'POINT', 100, False, 6500, None, (0, 0, 0.5), 'DEFAULT', 100],
 		["BL28_L_PL_021", ["Type: Point", "Intensity: 100", "Units: Watts", "Luminious Efficacy 17"], "Physical_Lights.blend", 'POINT', 100, False, 6500, None, (1.0, 1.0, 1.0), 'WATTS', 17], 
 		["BL28_L_PL_022", ["Type: Point", "Intensity: 100", "Units: Watts", "Luminious Efficacy 100"], "Physical_Lights.blend", 'POINT', 100, False, 6500, None, (1.0, 1.0, 1.0), 'WATTS', 100], 
-		["BL28_L_PL_023", ["Type: Point", "Intensity: 100", "Expected Black Picture"], "Physical_Lights.blend", 'POINT', 100, False, 6500, None, (1.0, 1.0, 1.0), 'LUMEN', 100], 
-		["BL28_L_PL_024", ["Type: Point", "Intensity: 1000", "Expected Black Picture"], "Physical_Lights.blend", 'POINT', 1000, False, 6500, None, (1.0, 1.0, 1.0), 'LUMEN', 100], 
-		["BL28_L_PL_025", ["Type: Point", "Intensity: 5000", "Expected Black Picture"], "Physical_Lights.blend", 'POINT', 5000, False, 6500, None, (1.0, 1.0, 1.0), 'LUMEN', 100], 
+		["BL28_L_PL_023", ["Type: Point", "Intensity: 100"], "Physical_Lights.blend", 'POINT', 100, False, 6500, None, (1.0, 1.0, 1.0), 'LUMEN', 100], 
+		["BL28_L_PL_024", ["Type: Point", "Intensity: 1000"], "Physical_Lights.blend", 'POINT', 1000, False, 6500, None, (1.0, 1.0, 1.0), 'LUMEN', 100], 
+		["BL28_L_PL_025", ["Type: Point", "Intensity: 5000"], "Physical_Lights.blend", 'POINT', 5000, False, 6500, None, (1.0, 1.0, 1.0), 'LUMEN', 100], 
 		# SUN LIGHT 
 		# test list args: 
 		# 4-intensity, 5-use temperature, 6-temperature, 7-color, 8-units type, 9-luminous efficacy, 10-shadow softness
@@ -177,14 +177,14 @@ if __name__ == "__main__":
 		["BL28_L_PL_060", ["Type: Spot", "Intensity: 100", "Units type: Lumen"], "Physical_Lights.blend", 'SPOT', 100, False, 6500, 1.309, 0.511, (1.0, 1.0, 1.0), "LUMEN", 100],
 		["BL28_L_PL_061", ["Type: Spot", "Intensity: 1000", "Units type: Lumen"], "Physical_Lights.blend", 'SPOT', 1000, False, 6500, 1.309, 0.511, (1.0, 1.0, 1.0), "LUMEN", 100],
 		["BL28_L_PL_062", ["Type: Spot", "Intensity: 5000", "Units type: Lumen"], "Physical_Lights.blend", 'SPOT', 5000, False, 6500, 1.309, 0.511, (1.0, 1.0, 1.0), "LUMEN", 100],
-		["BL28_L_PL_063", ["Type: Spot", "Intensity: 100", "Spot Size: 1"], "Physical_Lights.blend", 'SPOT', 100, False, 6500, 0.0174533, 0.511, (1.0, 1.0, 1.0), "WATTS", 100],
-		["BL28_L_PL_064", ["Type: Spot", "Intensity: 100", "Spot Size: 45"], "Physical_Lights.blend", 'SPOT', 100, False, 6500, 0.785398, 0.511, (1.0, 1.0, 1.0), "WATTS", 100],
-		["BL28_L_PL_065", ["Type: Spot", "Intensity: 100", "Spot Size: 90"], "Physical_Lights.blend", 'SPOT', 100, False, 6500, 1.5708, 0.511, (1.0, 1.0, 1.0), "WATTS", 100],
-		["BL28_L_PL_066", ["Type: Spot", "Intensity: 100", "Spot Size: 180"], "Physical_Lights.blend", 'SPOT', 100, False, 6500, 3.14159, 0.511, (1.0, 1.0, 1.0), "WATTS", 100],
-		["BL28_L_PL_067", ["Type: Spot", "Intensity: 100", "Spot Size: 75", "Spot blend: 0"], "Physical_Lights.blend", 'SPOT', 100, False, 6500, 1.309, 0, (1.0, 1.0, 1.0), "WATTS", 100],
-		["BL28_L_PL_068", ["Type: Spot", "Intensity: 100", "Spot Size: 75", "Spot blend: 0.15"], "Physical_Lights.blend", 'SPOT', 100, False, 6500, 1.309, 0.15, (1.0, 1.0, 1.0), "WATTS", 100],
-		["BL28_L_PL_069", ["Type: Spot", "Intensity: 100", "Spot Size: 75", "Spot blend: 0.5"], "Physical_Lights.blend", 'SPOT', 100, False, 6500, 1.309, 0.5, (1.0, 1.0, 1.0), "WATTS", 100],
-		["BL28_L_PL_070", ["Type: Spot", "Intensity: 100", "Spot Size: 75", "Spot blend: 1.0"], "Physical_Lights.blend", 'SPOT', 100, False, 6500, 1.309, 1.0, (1.0, 1.0, 1.0), "WATTS", 100],
+		["BL28_L_PL_063", ["Type: Spot", "Intensity: 100", "Spot Size: 1", "Expected Black Picture"], "Physical_Lights.blend", 'SPOT', 100, False, 6500, 0.0174533, 0.511, (1.0, 1.0, 1.0), "DEFAULT", 100],
+		["BL28_L_PL_064", ["Type: Spot", "Intensity: 100", "Spot Size: 45"], "Physical_Lights.blend", 'SPOT', 100, False, 6500, 0.785398, 0.511, (1.0, 1.0, 1.0), "DEFAULT", 100],
+		["BL28_L_PL_065", ["Type: Spot", "Intensity: 100", "Spot Size: 90"], "Physical_Lights.blend", 'SPOT', 100, False, 6500, 1.5708, 0.511, (1.0, 1.0, 1.0), "DEFAULT", 100],
+		["BL28_L_PL_066", ["Type: Spot", "Intensity: 100", "Spot Size: 180"], "Physical_Lights.blend", 'SPOT', 100, False, 6500, 3.14159, 0.511, (1.0, 1.0, 1.0), "DEFAULT", 100],
+		["BL28_L_PL_067", ["Type: Spot", "Intensity: 100", "Spot Size: 75", "Spot blend: 0"], "Physical_Lights.blend", 'SPOT', 100, False, 6500, 1.309, 0, (1.0, 1.0, 1.0), "DEFAULT", 100],
+		["BL28_L_PL_068", ["Type: Spot", "Intensity: 100", "Spot Size: 75", "Spot blend: 0.15"], "Physical_Lights.blend", 'SPOT', 100, False, 6500, 1.309, 0.15, (1.0, 1.0, 1.0), "DEFAULT", 100],
+		["BL28_L_PL_069", ["Type: Spot", "Intensity: 100", "Spot Size: 75", "Spot blend: 0.5"], "Physical_Lights.blend", 'SPOT', 100, False, 6500, 1.309, 0.5, (1.0, 1.0, 1.0), "DEFAULT", 100],
+		["BL28_L_PL_070", ["Type: Spot", "Intensity: 100", "Spot Size: 75", "Spot blend: 1.0"], "Physical_Lights.blend", 'SPOT', 100, False, 6500, 1.309, 1.0, (1.0, 1.0, 1.0), "DEFAULT", 100],
 		# SPOT LIGHT 
 		# test list args: 
 		# 4-type, 5-intensity, 6-intensity normalization, 7-use temperature, 8-temperature, 9-color, 10-units type, 11-luminous efficacy, 12-size x, 13-size y, 14-visible, 15-cast shadows
@@ -213,7 +213,7 @@ if __name__ == "__main__":
 		["BL28_L_PL_093", ["Type: Area", "Intensity: 100", "Units: Luminance"], "Physical_Lights.blend", 'AREA', 'SQUARE', 100, True, False, 6500, (1.0, 1.0, 1.0), "LUMINANCE", 100, 1.0, 1.0, False, False],
 		["BL28_L_PL_094", ["Type: Area", "Intensity: 1000", "Units: Luminance"], "Physical_Lights.blend", 'AREA', 'SQUARE', 1000, True, False, 6500, (1.0, 1.0, 1.0), "LUMINANCE", 100, 1.0, 1.0, False, False],
 		["BL28_L_PL_095", ["Type: Area", "Intensity: 5000", "Units: Luminance"], "Physical_Lights.blend", 'AREA', 'SQUARE', 5000, True, False, 6500, (1.0, 1.0, 1.0), "LUMINANCE", 100, 1.0, 1.0, False, False],
-		["BL28_L_PL_096", ["Type: Area", "Intensity: 100", "Type: Rectangle", "Size X&Y: 0"], "Physical_Lights.blend", 'AREA', 'RECTANGLE', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 0, 0, False, False],
+		["BL28_L_PL_096", ["Type: Area", "Intensity: 100", "Type: Rectangle", "Size X&Y: 0", "Expected Black Picture"], "Physical_Lights.blend", 'AREA', 'RECTANGLE', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 0, 0, False, False],
 		["BL28_L_PL_097", ["Type: Area", "Intensity: 100", "Type: Rectangle", "Size X&Y: 1"], "Physical_Lights.blend", 'AREA', 'RECTANGLE', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 1.0, False, False],
 		["BL28_L_PL_098", ["Type: Area", "Intensity: 100", "Type: Rectangle", "Size X&Y: 1", "Visible: true"], "Physical_Lights.blend", 'AREA', 'RECTANGLE', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 1.0, True, False],
 		["BL28_L_PL_099", ["Type: Area", "Intensity: 100", "Type: Rectangle", "Size X&Y: 1", "Visible: true", "Cast shadows: true"], "Physical_Lights.blend", 'AREA', 'RECTANGLE', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 1.0, True, True],
@@ -226,7 +226,7 @@ if __name__ == "__main__":
 		["BL28_L_PL_106", ["Type: Area", "Intensity: 100", "Type: Rectangle", "Size X: 1", "Size Y: 3", "Intensity Normalization: false"], "Physical_Lights.blend", 'AREA', 'RECTANGLE', 100, False, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 3.0, False, False],
 		["BL28_L_PL_107", ["Type: Area", "Intensity: 1000", "Type: Rectangle", "Size X: 1", "Size Y: 3", "Intensity Normalization: false"], "Physical_Lights.blend", 'AREA', 'RECTANGLE', 1000, False, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 3.0, False, False],
 		["BL28_L_PL_108", ["Type: Area", "Intensity: 5000", "Type: Rectangle", "Size X: 1", "Size Y: 3", "Intensity Normalization: false"], "Physical_Lights.blend", 'AREA', 'RECTANGLE', 5000, False, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 3.0, False, False],
-		["BL28_L_PL_109", ["Type: Area", "Intensity: 100", "Type: Square", "Size: 0"], "Physical_Lights.blend", 'AREA', 'SQUARE', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 0, 1.0, False, False],
+		["BL28_L_PL_109", ["Type: Area", "Intensity: 100", "Type: Square", "Size: 0", "Expected Black Picture"], "Physical_Lights.blend", 'AREA', 'SQUARE', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 0, 1.0, False, False],
 		["BL28_L_PL_110", ["Type: Area", "Intensity: 100", "Type: Square", "Size: 1"], "Physical_Lights.blend", 'AREA', 'SQUARE', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 1.0, False, False],
 		["BL28_L_PL_111", ["Type: Area", "Intensity: 100", "Type: Square", "Size: 1", "Visible: true"], "Physical_Lights.blend", 'AREA', 'SQUARE', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 1.0, True, False],
 		["BL28_L_PL_112", ["Type: Area", "Intensity: 100", "Type: Square", "Size: 1", "Visible: true", "Cast shadows: true"], "Physical_Lights.blend", 'AREA', 'SQUARE', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 1.0, True, True],
@@ -239,7 +239,7 @@ if __name__ == "__main__":
 		["BL28_L_PL_119", ["Type: Area", "Intensity: 100", "Type: Square", "Size: 3", "Intensity Normalization: false"], "Physical_Lights.blend", 'AREA', 'SQUARE', 100, False, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 3.0, 1.0, False, False],
 		["BL28_L_PL_120", ["Type: Area", "Intensity: 1000", "Type: Square", "Size: 3", "Intensity Normalization: false"], "Physical_Lights.blend", 'AREA', 'SQUARE', 1000, False, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 3.0, 1.0, False, False],
 		["BL28_L_PL_121", ["Type: Area", "Intensity: 5000", "Type: Square", "Size: 3", "Intensity Normalization: false"], "Physical_Lights.blend", 'AREA', 'SQUARE', 5000, False, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 3.0, 1.0, False, False],
-		["BL28_L_PL_122", ["Type: Area", "Intensity: 100", "Type: Disk", "Size: 0"], "Physical_Lights.blend", 'AREA', 'DISK', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 0, 1.0, False, False],
+		["BL28_L_PL_122", ["Type: Area", "Intensity: 100", "Type: Disk", "Size: 0", "Expected Black Picture"], "Physical_Lights.blend", 'AREA', 'DISK', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 0, 1.0, False, False],
 		["BL28_L_PL_123", ["Type: Area", "Intensity: 100", "Type: Disk", "Size: 1"], "Physical_Lights.blend", 'AREA', 'DISK', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 1.0, False, False],
 		["BL28_L_PL_124", ["Type: Area", "Intensity: 100", "Type: Disk", "Size: 1", "Visible: true"], "Physical_Lights.blend", 'AREA', 'DISK', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 1.0, True, False],
 		["BL28_L_PL_125", ["Type: Area", "Intensity: 100", "Type: Disk", "Size: 1", "Visible: true", "Cast shadows: true"], "Physical_Lights.blend", 'AREA', 'DISK', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 1.0, True, True],
@@ -252,7 +252,7 @@ if __name__ == "__main__":
 		["BL28_L_PL_132", ["Type: Area", "Intensity: 100", "Type: Disk", "Size: 3", "Intensity Normalization: false"], "Physical_Lights.blend", 'AREA', 'DISK', 100, False, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 3.0, 1.0, False, False],
 		["BL28_L_PL_133", ["Type: Area", "Intensity: 1000", "Type: Disk", "Size: 3", "Intensity Normalization: false"], "Physical_Lights.blend", 'AREA', 'DISK', 1000, False, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 3.0, 1.0, False, False],
 		["BL28_L_PL_134", ["Type: Area", "Intensity: 5000", "Type: Disk", "Size: 3", "Intensity Normalization: false"], "Physical_Lights.blend", 'AREA', 'DISK', 5000, False, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 3.0, 1.0, False, False],
-		["BL28_L_PL_135", ["Type: Area", "Intensity: 100", "Type: Ellipse", "Size X&Y: 0"], "Physical_Lights.blend", 'AREA', 'ELLIPSE', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 0, 0, False, False],
+		["BL28_L_PL_135", ["Type: Area", "Intensity: 100", "Type: Ellipse", "Size X&Y: 0", "Expected Black Picture"], "Physical_Lights.blend", 'AREA', 'ELLIPSE', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 0, 0, False, False],
 		["BL28_L_PL_136", ["Type: Area", "Intensity: 100", "Type: Ellipse", "Size X&Y: 1"], "Physical_Lights.blend", 'AREA', 'ELLIPSE', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 1.0, False, False],
 		["BL28_L_PL_137", ["Type: Area", "Intensity: 100", "Type: Ellipse", "Size X&Y: 1", "Visible: true"], "Physical_Lights.blend", 'AREA', 'ELLIPSE', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 1.0, True, False],
 		["BL28_L_PL_138", ["Type: Area", "Intensity: 100", "Type: Ellipse", "Size X&Y: 1", "Visible: true", "Cast shadows: true"], "Physical_Lights.blend", 'AREA', 'ELLIPSE', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 1.0, True, True],
