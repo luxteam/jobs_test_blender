@@ -5,7 +5,7 @@ def prerender(test_list):
 
 	current_scene = bpy.path.basename(bpy.context.blend_data.filepath)
 	if current_scene != test_list[2]:
-		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}, Render_Settings", test_list[2]))
+		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", "Render_Settings", test_list[2]))
 
 	scene = bpy.context.scene
 	enable_rpr_render(scene)
