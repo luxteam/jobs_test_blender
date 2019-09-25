@@ -265,13 +265,7 @@ if __name__ == "__main__":
 		["BL28_L_PL_145", ["Type: Area", "Intensity: 100", "Type: Ellipse", "Size X: 1", "Size Y: 3", "Intensity Normalization: false"], "Physical_Lights.blend", 'AREA', 'ELLIPSE', 100, False, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 3.0, False, False],
 		["BL28_L_PL_146", ["Type: Area", "Intensity: 1000", "Type: Ellipse", "Size X: 1", "Size Y: 3", "Intensity Normalization: false"], "Physical_Lights.blend", 'AREA', 'ELLIPSE', 1000, False, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 3.0, False, False],
 		["BL28_L_PL_147", ["Type: Area", "Intensity: 5000", "Type: Ellipse", "Size X: 1", "Size Y: 3", "Intensity Normalization: false"], "Physical_Lights.blend", 'AREA', 'ELLIPSE', 5000, False, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 3.0, False, False],
-		["BL28_L_PL_148", ["Type: Area", "Intensity: 100", "Type: Mesh"], "Physical_Lights.blend", 'AREA', 'MESH', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 1.0, False, False],
-		["BL28_L_PL_149", ["Type: Area", "Intensity: 100", "Type: Mesh", "Visible: true"], "Physical_Lights.blend", 'AREA', 'MESH', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 1.0, True, False],
-		["BL28_L_PL_150", ["Type: Area", "Intensity: 100", "Type: Mesh", "Visible: true", "Cast shadows: true"], "Physical_Lights.blend", 'AREA', 'MESH', 100, True, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 1.0, True, True],
-		["BL28_L_PL_151", ["Type: Area", "Intensity: 100", "Type: Mesh", "Intensity Normalization: false"], "Physical_Lights.blend", 'AREA', 'MESH', 100, False, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 1.0, False, False],
-		["BL28_L_PL_152", ["Type: Area", "Intensity: 1000", "Type: Mesh", "Intensity Normalization: false"], "Physical_Lights.blend", 'AREA', 'MESH', 1000, False, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 1.0, False, False],
-		["BL28_L_PL_153", ["Type: Area", "Intensity: 5000", "Type: Mesh", "Intensity Normalization: false"], "Physical_Lights.blend", 'AREA', 'MESH', 5000, False, False, 6500, (1.0, 1.0, 1.0), "DEFAULT", 100, 1.0, 1.0, False, False],
-
+		
 	]
 
 	launch_tests()
