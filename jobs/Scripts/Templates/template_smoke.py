@@ -276,7 +276,16 @@ def create_and_assign_uber():
 	uber_node = tree.nodes.new(type='RPRShaderNodeUber')
 	output_node = tree.nodes['Material Output']
 	tree.links.new(uber_node.outputs[0], output_node.inputs[0])
-	uber_node.inputs['Diffuse Color'].default_value =(0.8, 0.0154239, 0.00939292, 1)
+	uber_node.inputs['Diffuse Color'].default_value = (0.8, 0.0154239, 0.00939292, 1)
+
+
+def create_and_assign_principled_bsdf():
+	principled_bsdf_material = bpy.data.materials.new('Principled BSDF')
+	principled_bsdf_material.use_nodes = True
+	bpy.data.objects['shader_ball'].material_slots[0].material = principled_bsdf_material
+	tree = principled_bsdf_material.node_tree
+	principled_bsdf_node = tree.nodes['Principled BSDF']
+	principled_bsdf_node.inputs['Base Color'].default_value = (0.00643981, 0.8, 0.0358057, 1)
 
 
 def assign_standart_material():
@@ -317,10 +326,7 @@ if __name__ == '__main__':
 		["BL28_SM_026", ["Denoiser LWR", "Pass Limit: 50"], activate_denoiser_lwr, deactivate_denoiser, "default.blend", 50],
 		["BL28_SM_027", ["Denoiser Bilateral", "Pass Limit: 50"], activate_denoiser_bilateral, deactivate_denoiser, "default.blend", 50],
 		["BL28_SM_028", ["Denoiser ML", "Pass Limit: 50"], activate_denoiser_ml, deactivate_denoiser, "default.blend", 50],
-
-		# Not implemented in plugin
-		#["BL28_SM_029", ["PBR", "Pass Limit: 50"], create_and_assign_pbr, empty, "default.blend", 50],
-
+		["BL28_SM_029", ["Principled BSDF", "Pass Limit: 50"], create_and_assign_principled_bsdf, assign_standart_material, "default.blend", 50],
 		["BL28_SM_030", ["Mat lib", "Pass Limit: 50"], import_rpr_matlib, assign_standart_material, "default.blend", 50],
 
 		# Wait for ticket 847
