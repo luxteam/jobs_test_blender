@@ -247,6 +247,7 @@ def deactivate_medium_quality():
 
 
 def activate_hair():
+	bpy.data.objects['shader_ball'].select_set(True)
 	bpy.ops.object.particle_system_add()
 	set_value(bpy.data.particles["ParticleSettings"], 'type', 'HAIR')
 
@@ -342,4 +343,3 @@ if __name__ == '__main__':
 	]
 
 	launch_tests()
-
