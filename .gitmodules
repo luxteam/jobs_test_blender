@@ -1,3 +1,4 @@
 [submodule "jobs_launcher"]
 	path = jobs_launcher
 	url = git://github.com/luxteam/jobs_launcher
+	branch = dev/rbs
