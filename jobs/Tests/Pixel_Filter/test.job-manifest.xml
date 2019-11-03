@@ -5,13 +5,13 @@
 
     <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="4600">
         <argument>--tool "{Tool}"</argument>
-        <argument>--template "{ResourcesDir}/Templates/template_anti_aliasing.py"</argument>
+        <argument>--template "{ResourcesDir}/Templates/template_pixel_filter.py"</argument>
         <argument>--render_mode "{RenderDevice}"</argument>
     	<argument>--resolution_x {rx}</argument>
     	<argument>--resolution_y {ry}</argument>
-        <argument>--resource_path "{ScenesDir}"</argument>
+        <argument>--resource_path "{ScenesDir}/Render_Settings"</argument>
         <argument>--output "{OutputDir}"</argument>
-	    <argument>--package_name "Anti_Aliasing"</argument>
+	    <argument>--package_name "Pixel_Filter"</argument>
     </execute>
 
     <execute command='python "{ResourcesDir}/makeReport.py"'>
