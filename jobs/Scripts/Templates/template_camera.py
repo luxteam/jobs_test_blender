@@ -443,6 +443,30 @@ def cam_089():
 	set_value(bpy.context.object.data, 'clip_end', 50)
 
 
+def cam_118():
+	set_value(bpy.context.object.data, 'type', 'PERSP')
+	set_value(bpy.context.object.data.dof, 'use_dof', True)
+	set_value(bpy.context.object.data.dof, 'focus_distance', 15)
+	set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)
+	set_value(bpy.context.object.data.dof, 'aperture_blades', 0)
+
+
+def cam_119():
+	set_value(bpy.context.object.data, 'type', 'PERSP')
+	set_value(bpy.context.object.data.dof, 'use_dof', True)
+	set_value(bpy.context.object.data.dof, 'focus_distance', 15)
+	set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)
+	set_value(bpy.context.object.data.dof, 'aperture_blades', 3)
+
+
+def cam_120():
+	set_value(bpy.context.object.data, 'type', 'PERSP')
+	set_value(bpy.context.object.data.dof, 'use_dof', True)
+	set_value(bpy.context.object.data.dof, 'focus_distance', 15)
+	set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)
+	set_value(bpy.context.object.data.dof, 'aperture_blades', 5)
+
+
 if __name__ == "__main__":
 
 	list_tests = [
