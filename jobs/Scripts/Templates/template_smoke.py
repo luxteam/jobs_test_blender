@@ -74,6 +74,7 @@ def delete_map_IBL():
 	scene = bpy.context.scene
 	set_value(scene.world.rpr, 'enabled', True)
 	set_value(scene.world.rpr, 'mode', 'IBL')
+	set_value(scene.world.rpr.ibl, 'image', None)
 
 
 def create_sun_sky():
@@ -274,14 +275,14 @@ def import_rpr_matlib():
 	xml_path = os.path.join(material_library.path.get_library_path(), material_name.split('.')[0], material_name)
 	gold_material = bpy.data.materials.new('Gold')
 	gold_material.use_nodes = True
-	bpy.data.objects['shader_ball'].material_slots[0].material = gold_material
+	bpy.data.objects['shader_ball'].active_material = gold_material
 	material_library.import_xml_material(gold_material, material_name, xml_path, False)
 
 
 def create_and_assign_uber():
 	uber_material = bpy.data.materials.new('Uber')
 	uber_material.use_nodes = True
-	bpy.data.objects['shader_ball'].material_slots[0].material = uber_material
+	bpy.data.objects['shader_ball'].active_material = uber_material
 	tree = uber_material.node_tree
 	uber_node = tree.nodes.new(type='RPRShaderNodeUber')
 	output_node = tree.nodes['Material Output']
@@ -292,14 +293,14 @@ def create_and_assign_uber():
 def create_and_assign_principled_bsdf():
 	principled_bsdf_material = bpy.data.materials.new('Principled BSDF')
 	principled_bsdf_material.use_nodes = True
-	bpy.data.objects['shader_ball'].material_slots[0].material = principled_bsdf_material
+	bpy.data.objects['shader_ball'].active_material = principled_bsdf_material
 	tree = principled_bsdf_material.node_tree
 	principled_bsdf_node = tree.nodes['Principled BSDF']
 	principled_bsdf_node.inputs['Base Color'].default_value = (0.00643981, 0.8, 0.0358057, 1)
 
 
 def assign_standart_material():
-	bpy.data.objects['shader_ball'].material_slots[0].material = bpy.data.materials['Default']
+	bpy.data.objects['shader_ball'].active_material = bpy.data.materials['Default']
 
 
 def activateIPR():
@@ -340,7 +341,7 @@ if __name__ == '__main__':
 		["BL28_SM_008", ["RPR Uber material", "Pass Limit: 50"], create_and_assign_uber, assign_standart_material, "default.blend", 50],
 		["BL28_SM_009", ["Sun_Sky", "Pass Limit: 50"], create_sun_sky, delete_sun_sky, "default.blend", 50],
 		["BL28_SM_010", ["IBL", "Pass Limit: 50"], create_IBL, empty, "default.blend", 50],
-		["BL28_SM_011", ["IBL with HDR", "Pass Limit: 50"], update_IBL_hdr, empty, "default.blend", 50],
+		["BL28_SM_011", ["IBL with HDR", "Pass Limit: 50"], update_IBL_hdr, delete_map_IBL, "default.blend", 50],
 		["BL28_SM_012", ["IBL with EXR", "Pass Limit: 50"], update_IBL_exr, delete_map_IBL, "default.blend", 50],
 		["BL28_SM_013", ["Render 1 pass"], empty, empty, "default.blend", 1],
 		["BL28_SM_014", ["Render 100 pass"], empty, empty, "default.blend", 100],
