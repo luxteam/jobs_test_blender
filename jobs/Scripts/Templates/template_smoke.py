@@ -342,7 +342,7 @@ if __name__ == '__main__':
 		["BL28_SM_009", ["Sun_Sky", "Pass Limit: 50"], create_sun_sky, delete_sun_sky, "default.blend", 50],
 		["BL28_SM_010", ["IBL", "Pass Limit: 50"], create_IBL, empty, "default.blend", 50],
 		["BL28_SM_011", ["IBL with HDR", "Pass Limit: 50"], update_IBL_hdr, delete_map_IBL, "default.blend", 50],
-		["BL28_SM_012", ["IBL with EXR", "Pass Limit: 50"], update_IBL_exr, delete_map_IBL, "default.blend", 50],
+		["BL28_SM_012", ["IBL with EXR", "Pass Limit: 50"], update_IBL_exr, empty, "default.blend", 50],
 		["BL28_SM_013", ["Render 1 pass"], empty, empty, "default.blend", 1],
 		["BL28_SM_014", ["Render 100 pass"], empty, empty, "default.blend", 100],
 		["BL28_SM_015", ["Render 500 pass"], empty, empty, "default.blend", 500],
