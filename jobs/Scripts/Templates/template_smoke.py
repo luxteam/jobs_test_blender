@@ -209,15 +209,22 @@ def deactivate_denoiser():
 
 
 def activate_aov():
-	scene = bpy.context.scene
-	set_value(scene, 'enable_aovs[1]', False)
-	set_value(scene, 'enable_aovs[6]', True)
+	view_layer = bpy.context.view_layer
+
+	view_layer.rpr.enable_aovs[1] = False
+	view_layer.rpr.enable_aovs[6] = True
+
+	'''
+	os.remove(r"{work_dir}" + "/Color/" + test_list[0] + '.jpg')
+	os.rename(r"{work_dir}" + "/Color/" + test_list[0] + '0040.jpg', \
+		r"{work_dir}" + "/Color/" + test_list[0] + '.jpg')
+	'''
 
 
 def deactivate_aov():
-	scene = bpy.context.scene
-	set_value(scene, 'enable_aovs[1]', True)
-	set_value(scene, 'enable_aovs[6]', False)
+	view_layer = bpy.context.view_layer
+	view_layer.rpr.enable_aovs[1] = True
+	view_layer.rpr.enable_aovs[6] = False
 
 
 def create_area_light():
@@ -295,6 +302,31 @@ def assign_standart_material():
 	bpy.data.objects['shader_ball'].material_slots[0].material = bpy.data.materials['Default']
 
 
+def activateIPR():
+	for area in bpy.context.workspace.screens[0].areas:
+		for space in area.spaces:
+			if space.type == 'VIEW_3D':
+				space.shading.type = 'RENDERED'
+
+
+def deactivateIPR():
+	for area in bpy.context.workspace.screens[0].areas:
+		for space in area.spaces:
+			if space.type == 'VIEW_3D':
+				space.shading.type = 'SOLID'
+
+
+def activate_transparent_background():
+	scene = bpy.context.scene
+	set_value(scene.render, 'film_transparent', True)
+
+
+def deactivate_transparent_background():
+	scene = bpy.context.scene
+	set_value(scene.render, 'film_transparent', False)
+
+
+
 if __name__ == '__main__':
 
 	list_tests = [
@@ -318,8 +350,8 @@ if __name__ == '__main__':
 		["BL28_SM_018", ["Color Management (Look)"], activate_color_look, deactivate_color_look, "default.blend", 50],
 		["BL28_SM_019", ["Render Stamp", "Pass Limit: 50"], activate_render_stamp, deactivate_render_stamp, "default.blend", 50],
 
-		# Not implemented in plugin
-		#["BL28_SM_020", ["Render mode wireframe", "Pass Limit: 50"], activate_wireframe_mode, deactivate_wireframe_mode, "default.blend", 50],
+		## Not implemented in plugin
+		##["BL28_SM_020", ["Render mode wireframe", "Pass Limit: 50"], activate_wireframe_mode, deactivate_wireframe_mode, "default.blend", 50],
 
 		["BL28_SM_021", ["Image size 720HD", "Pass Limit: 50"], change_image_size_hd720, empty, "default.blend", 50],
 		["BL28_SM_022", ["Image size 1500 1125", "Pass Limit: 50"], change_image_size_custom, change_image_size_default, "default.blend", 50],
@@ -341,13 +373,11 @@ if __name__ == '__main__':
 		["BL28_SM_035", ["AOV SC", "Pass Limit: 50"], empty, empty, "AOV_SC.blend", 50],
 		["BL28_SM_036", ["SSS", "Pass Limit: 50"], empty, empty, "SSS_Test.blend", 50],
 		["BL28_SM_037", ["Displacement", "Pass Limit: 50"], empty, empty, "Displacement.blend", 50],
-
 		["BL28_SM_038", ["Quality", "Pass Limit: 50"], activate_medium_quality, deactivate_medium_quality, "WaterInsideGlass.blend", 50],
-
-		# Not-automated
-		#["BL28_SM_039", ["IPR"], empty, empty, "default.blend", 50],
-
-		["BL28_SM_040", ["Hair", "Pass Limit: 50"], activate_hair, empty, "default.blend", 50]
+		["BL28_SM_039", ["IPR"], activateIPR, deactivateIPR, "default.blend", 50],
+		["BL28_SM_040", ["Hair", "Pass Limit: 50"], activate_hair, empty, "default.blend", 50],
+		["BL28_SM_041", ["Transparent Background", "Pass Limit: 50"], activate_transparent_background, deactivate_transparent_background, "AOV_SC.blend", 50],
+		["BL28_SM_042", ["Volumetric Light", "Pass Limit: 50"], empty, empty, "Volume.blend", 50]
 	]
 
 	launch_tests()
