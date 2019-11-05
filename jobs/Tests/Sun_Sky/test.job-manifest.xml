@@ -9,7 +9,7 @@
         <argument>--render_mode "{RenderDevice}"</argument>
     	<argument>--resolution_x {rx}</argument>
     	<argument>--resolution_y {ry}</argument>
-        <argument>--resource_path "{ScenesDir}"</argument>
+        <argument>--resource_path "{ScenesDir}/Render_Settings"</argument>
         <argument>--output "{OutputDir}"</argument>
 	    <argument>--package_name "Sun_Sky"</argument>
     </execute>
