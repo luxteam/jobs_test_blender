@@ -25,20 +25,20 @@ def get_material_and_node():
 
 
 def create_normal_map(attr, image_name):
-	uber_material, node_uber = get_material_and_node()
-	tree = uber_material.node_tree
+	prbsdf_material, prbsdf_node = get_material_and_node()
+	tree = prbsdf_material.node_tree
 
 	# create image map
 	imagemap_node = tree.nodes.new(type='ShaderNodeTexImage')
 	image = bpy.data.images.load(os.path.join(r"{resource_path}", "Maps", image_name))
-	node_imagemap.image = image
+	imagemap_node.image = image
 
 	# crete normal map
-	node_normalmap = tree.nodes.new(type='ShaderNodeNormalMap')
-	tree.links.new(node_imagemap.outputs['Color'], node_normalmap.inputs['Color'])
+	normalmap_node = tree.nodes.new(type='ShaderNodeNormalMap')
+	tree.links.new(imagemap_node.outputs['Color'], normalmap_node.inputs['Color'])
 
 	# connect normal with material
-	tree.links.new(node_normalmap.outputs['Normal'], node_uber.inputs[attr])
+	tree.links.new(normalmap_node.outputs['Normal'], prbsdf_node.inputs[attr])
 
 
 def create_imagemap(attr, image_name):
@@ -70,7 +70,25 @@ def resetSceneAttributes():
 	prbsdf_material, prbsdf_node = get_material_and_node()
 	delete_imagemaps(prbsdf_material, prbsdf_node)
 
-	prbsdf_node.inputs['Base Color'].default_value = (0.8, 0.8, 0.8, 1.0)
+	prbsdf_node.inputs['Base Color'].default_value = 
+	prbsdf_node.inputs['Subsurface'].default_value = 0
+	prbsdf_node.inputs['Subsurface Radius'].default_value = (1, 0.2, 0.1)
+	prbsdf_node.inputs['Subsurface Color'].default_value = (0.8, 0.8, 0.8, 1.0)
+	prbsdf_node.inputs['Metallic'].default_value = 0
+	prbsdf_node.inputs['Specular'].default_value = 0
+	prbsdf_node.inputs['Specular Tint'].default_value = 0
+	prbsdf_node.inputs['Roughness'].default_value = 0
+	prbsdf_node.inputs['Anisotropic'].default_value = 0
+	prbsdf_node.inputs['Anisotropic Rotation'].default_value = 0
+	prbsdf_node.inputs['Sheen'].default_value = 0
+	prbsdf_node.inputs['Sheen Tint'].default_value = 0
+	prbsdf_node.inputs['Clearcoat'].default_value = 0
+	prbsdf_node.inputs['Clearcoat Roughness'].default_value = 0
+	prbsdf_node.inputs['IOR'].default_value = 1.45
+	prbsdf_node.inputs['Transmission'].default_value = 0
+	prbsdf_node.inputs['Transmission Roughness'].default_value = 0
+	prbsdf_node.inputs['Emission'].default_value = (0.0, 0.0, 0.0, 1)
+	prbsdf_node.inputs['Alpha'].default_value = 1
 
 
 def prbsdf_001():
@@ -579,19 +597,19 @@ def prbsdf_081():
 def prbsdf_082():
 	prbsdf_material, prbsdf_node = get_material_and_node()
 	prbsdf_node.inputs['Base Color'].default_value = (0.0, 0.4, 0.0, 1.0)
-	prbsdf_node.inputs['Emission'].default_value = 0
+	prbsdf_node.inputs['Emission'].default_value = (0.4, 0.4, 0.4, 1.0)
 
 
 def prbsdf_083():
 	prbsdf_material, prbsdf_node = get_material_and_node()
 	prbsdf_node.inputs['Base Color'].default_value = (0.0, 0.4, 0.0, 1.0)
-	prbsdf_node.inputs['Emission'].default_value = 0.5
+	prbsdf_node.inputs['Emission'].default_value = (0.0907472, 0.0903746, 0.399753, 1)
 
 
 def prbsdf_084():
 	prbsdf_material, prbsdf_node = get_material_and_node()
 	prbsdf_node.inputs['Base Color'].default_value = (0.0, 0.4, 0.0, 1.0)
-	prbsdf_node.inputs['Emission'].default_value = 1
+	prbsdf_node.inputs['Emission'].default_value = (0.00010286, 0, 0.399753, 1)
 
 
 def prbsdf_085():
@@ -740,9 +758,9 @@ if __name__ == '__main__':
 
 		["BL28_MAT_PRBSDF_080", ["Emission map.png"], "Principled_BSDF.blend", prbsdf_080],
 		["BL28_MAT_PRBSDF_081", ["Emission map.tga"], "Principled_BSDF.blend", prbsdf_081],
-		["BL28_MAT_PRBSDF_082", ["Emission - 0"], "Principled_BSDF.blend", prbsdf_082],
-		["BL28_MAT_PRBSDF_083", ["Emission - 0.5"], "Principled_BSDF.blend", prbsdf_083],
-		["BL28_MAT_PRBSDF_084", ["Emission - 1"], "Principled_BSDF.blend", prbsdf_084],
+		["BL28_MAT_PRBSDF_082", ["Emission - HSV: 0.667 0 0.665"], "Principled_BSDF.blend", prbsdf_082],
+		["BL28_MAT_PRBSDF_083", ["Emission - HSV: 0.667 0.5 0.666"], "Principled_BSDF.blend", prbsdf_083],
+		["BL28_MAT_PRBSDF_084", ["Emission - HSV: 0.667 1 0.667"], "Principled_BSDF.blend", prbsdf_084],
 
 		["BL28_MAT_PRBSDF_085", ["Alpha map.png"], "Principled_BSDF.blend", prbsdf_085],
 		["BL28_MAT_PRBSDF_086", ["Alpha map.tga"], "Principled_BSDF.blend", prbsdf_086],
