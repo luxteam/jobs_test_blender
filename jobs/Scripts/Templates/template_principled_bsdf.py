@@ -586,11 +586,11 @@ def prbsdf_079():
 
 
 def prbsdf_080():
-	create_imagemap("Emission", "emissiveColor.png")
+	create_imagemap("Emission", "emissionColor.png")
 
 
 def prbsdf_081():
-	create_imagemap("Emission", "emissiveColor.tga")
+	create_imagemap("Emission", "emissionColor.tga")
 
 
 def prbsdf_082():
@@ -661,100 +661,100 @@ if __name__ == '__main__':
 
 	list_tests = [
 
-		["BL28_MAT_PRBSDF_001", ["Base Color map.png"], "Principled_BSDF.blend", prbsdf_001],
-		["BL28_MAT_PRBSDF_002", ["Base Color map.tga"], "Principled_BSDF.blend", prbsdf_002],
-		["BL28_MAT_PRBSDF_003", ["Base color, RGB color: 0:0.4:0"], "Principled_BSDF.blend", prbsdf_003],
-
-		["BL28_MAT_PRBSDF_004", ["Subsurface Color map.png"], "Principled_BSDF.blend", prbsdf_004],
-		["BL28_MAT_PRBSDF_005", ["Subsurface Color map.tga"], "Principled_BSDF.blend", prbsdf_005],
-		["BL28_MAT_PRBSDF_006", ["Subsurface Weight map.png"], "Principled_BSDF.blend", prbsdf_006],
-		["BL28_MAT_PRBSDF_007", ["Subsurface Weight.tga"], "Principled_BSDF.blend", prbsdf_007],
-		["BL28_MAT_PRBSDF_008", ["Subsurface Weight - 0"], "Principled_BSDF.blend", prbsdf_008],
-		["BL28_MAT_PRBSDF_009", ["Subsurface Weight - 0.5"], "Principled_BSDF.blend", prbsdf_009],
-		["BL28_MAT_PRBSDF_010", ["Subsurface Weight - 1"], "Principled_BSDF.blend", prbsdf_010],
-		["BL28_MAT_PRBSDF_011", ["Subsurface Radius map.png"], "Principled_BSDF.blend", prbsdf_011],
-		["BL28_MAT_PRBSDF_012", ["Subsurface Radius map.tga"], "Principled_BSDF.blend", prbsdf_012],
-		["BL28_MAT_PRBSDF_013", ["Subsurface Radius - 0, 0, 0"], "Principled_BSDF.blend", prbsdf_013],
-		["BL28_MAT_PRBSDF_014", ["Subsurface Radius - 5, 5, 5"], "Principled_BSDF.blend", prbsdf_014],
-
-		["BL28_MAT_PRBSDF_015", ["Metallic map.png"], "Principled_BSDF.blend", prbsdf_015],
-		["BL28_MAT_PRBSDF_016", ["Metallic map.tga"], "Principled_BSDF.blend", prbsdf_016],
-		["BL28_MAT_PRBSDF_017", ["Metallic -  0"], "Principled_BSDF.blend", prbsdf_017],
-		["BL28_MAT_PRBSDF_018", ["Metallic -  0.5"], "Principled_BSDF.blend", prbsdf_018],
-		["BL28_MAT_PRBSDF_019", ["Metallic -  1"], "Principled_BSDF.blend", prbsdf_019],
-
-		["BL28_MAT_PRBSDF_020", ["Specular map.png"], "Principled_BSDF.blend", prbsdf_020],
-		["BL28_MAT_PRBSDF_021", ["Specular map.tga"], "Principled_BSDF.blend", prbsdf_021],
-		["BL28_MAT_PRBSDF_022", ["Specular - 0"], "Principled_BSDF.blend", prbsdf_022],
-		["BL28_MAT_PRBSDF_023", ["Specular - 0.5"], "Principled_BSDF.blend", prbsdf_023],
-		["BL28_MAT_PRBSDF_024", ["Specular - 1"], "Principled_BSDF.blend", prbsdf_024],
-
-		["BL28_MAT_PRBSDF_025", ["Specular tint map.png"], "Principled_BSDF.blend", prbsdf_025],
-		["BL28_MAT_PRBSDF_026", ["Specular tint map.tga"], "Principled_BSDF.blend", prbsdf_026],
-		["BL28_MAT_PRBSDF_027", ["Specular tint - 0"], "Principled_BSDF.blend", prbsdf_027],
-		["BL28_MAT_PRBSDF_028", ["Specular tint - 0.5"], "Principled_BSDF.blend", prbsdf_028],
-		["BL28_MAT_PRBSDF_029", ["Specular tint - 1"], "Principled_BSDF.blend", prbsdf_029],
-
-		["BL28_MAT_PRBSDF_030", ["Roughness map.png"], "Principled_BSDF.blend", prbsdf_030],
-		["BL28_MAT_PRBSDF_031", ["Roughness map.tga"], "Principled_BSDF.blend", prbsdf_031],
-		["BL28_MAT_PRBSDF_032", ["Roughness - 0"], "Principled_BSDF.blend", prbsdf_032],
-		["BL28_MAT_PRBSDF_033", ["Roughness - 0.5"], "Principled_BSDF.blend", prbsdf_033],
-		["BL28_MAT_PRBSDF_034", ["Roughness - 1"], "Principled_BSDF.blend", prbsdf_034],
-
-		["BL28_MAT_PRBSDF_035", ["Anisotropic map.png"], "Principled_BSDF.blend", prbsdf_035],
-		["BL28_MAT_PRBSDF_036", ["Anisotropic map.tga"], "Principled_BSDF.blend", prbsdf_036],
-		["BL28_MAT_PRBSDF_037", ["Anisotropic - 0"], "Principled_BSDF.blend", prbsdf_037],
-		["BL28_MAT_PRBSDF_038", ["Anisotropic - 0.5"], "Principled_BSDF.blend", prbsdf_038],
-		["BL28_MAT_PRBSDF_039", ["Anisotropic - 1"], "Principled_BSDF.blend", prbsdf_039],
-
-		["BL28_MAT_PRBSDF_040", ["Anisotropic Rotation map.png"], "Principled_BSDF.blend", prbsdf_040],
-		["BL28_MAT_PRBSDF_041", ["Anisotropic Rotation map.tga"], "Principled_BSDF.blend", prbsdf_041],
-		["BL28_MAT_PRBSDF_042", ["Anisotropic Rotation - 0"], "Principled_BSDF.blend", prbsdf_042],
-		["BL28_MAT_PRBSDF_043", ["Anisotropic Rotation - 0.5"], "Principled_BSDF.blend", prbsdf_043],
-		["BL28_MAT_PRBSDF_044", ["Anisotropic Rotation - 1"], "Principled_BSDF.blend", prbsdf_044],
-
-		["BL28_MAT_PRBSDF_045", ["Sheen map.png"], "Principled_BSDF.blend", prbsdf_045],
-		["BL28_MAT_PRBSDF_046", ["Sheen map.tga"], "Principled_BSDF.blend", prbsdf_046],
-		["BL28_MAT_PRBSDF_047", ["Sheen - 0"], "Principled_BSDF.blend", prbsdf_047],
-		["BL28_MAT_PRBSDF_048", ["Sheen - 0.5"], "Principled_BSDF.blend", prbsdf_048],
-		["BL28_MAT_PRBSDF_049", ["Sheen - 1"], "Principled_BSDF.blend", prbsdf_049],
-
-		["BL28_MAT_PRBSDF_050", ["Sheen Tint map.png"], "Principled_BSDF.blend", prbsdf_050],
-		["BL28_MAT_PRBSDF_051", ["Sheen Tint map.tga"], "Principled_BSDF.blend", prbsdf_051],
-		["BL28_MAT_PRBSDF_052", ["Sheen Tint - 0"], "Principled_BSDF.blend", prbsdf_052],
-		["BL28_MAT_PRBSDF_053", ["Sheen Tint - 0.5"], "Principled_BSDF.blend", prbsdf_053],
-		["BL28_MAT_PRBSDF_054", ["Sheen Tint - 1"], "Principled_BSDF.blend", prbsdf_054],
-
-		["BL28_MAT_PRBSDF_055", ["Clearcoat map.png"], "Principled_BSDF.blend", prbsdf_055],
-		["BL28_MAT_PRBSDF_056", ["Clearcoat map.tga"], "Principled_BSDF.blend", prbsdf_056],
-		["BL28_MAT_PRBSDF_057", ["Clearcoat - 0"], "Principled_BSDF.blend", prbsdf_057],
-		["BL28_MAT_PRBSDF_058", ["Clearcoat - 0.5"], "Principled_BSDF.blend", prbsdf_058],
-		["BL28_MAT_PRBSDF_059", ["Clearcoat - 1"], "Principled_BSDF.blend", prbsdf_059],
-
-		["BL28_MAT_PRBSDF_060", ["Clearcoat Roughness map.png"], "Principled_BSDF.blend", prbsdf_060],
-		["BL28_MAT_PRBSDF_061", ["Clearcoat Roughness map.tga"], "Principled_BSDF.blend", prbsdf_061],
-		["BL28_MAT_PRBSDF_062", ["Clearcoat Roughness - 0"], "Principled_BSDF.blend", prbsdf_062],
-		["BL28_MAT_PRBSDF_063", ["Clearcoat Roughness - 0.5"], "Principled_BSDF.blend", prbsdf_063],
-		["BL28_MAT_PRBSDF_064", ["Clearcoat Roughness - 1"], "Principled_BSDF.blend", prbsdf_064],
-
-		["BL28_MAT_PRBSDF_065", ["IOR map.png"], "Principled_BSDF.blend", prbsdf_065],
-		["BL28_MAT_PRBSDF_066", ["IOR map.tga"], "Principled_BSDF.blend", prbsdf_066],
-		["BL28_MAT_PRBSDF_067", ["IOR - 1"], "Principled_BSDF.blend", prbsdf_067],
-		["BL28_MAT_PRBSDF_068", ["IOR - 1.5"], "Principled_BSDF.blend", prbsdf_068],
-		["BL28_MAT_PRBSDF_069", ["IOR - 2"], "Principled_BSDF.blend", prbsdf_069],
-
-		["BL28_MAT_PRBSDF_070", ["Transmission map.png"], "Principled_BSDF.blend", prbsdf_070],
-		["BL28_MAT_PRBSDF_071", ["Transmission map.tga"], "Principled_BSDF.blend", prbsdf_071],
-		["BL28_MAT_PRBSDF_072", ["Transmission - 0"], "Principled_BSDF.blend", prbsdf_072],
-		["BL28_MAT_PRBSDF_073", ["Transmission - 0.5"], "Principled_BSDF.blend", prbsdf_073],
-		["BL28_MAT_PRBSDF_074", ["Transmission - 1"], "Principled_BSDF.blend", prbsdf_074],
-
-		["BL28_MAT_PRBSDF_075", ["Transmission Roughness map.png"], "Principled_BSDF.blend", prbsdf_075],
-		["BL28_MAT_PRBSDF_076", ["Transmission Roughness map.tga"], "Principled_BSDF.blend", prbsdf_076],
-		["BL28_MAT_PRBSDF_077", ["Transmission Roughness - 0"], "Principled_BSDF.blend", prbsdf_077],
-		["BL28_MAT_PRBSDF_078", ["Transmission Roughness - 0.5"], "Principled_BSDF.blend", prbsdf_078],
-		["BL28_MAT_PRBSDF_079", ["Transmission Roughness - 1"], "Principled_BSDF.blend", prbsdf_079],
-
+		#["BL28_MAT_PRBSDF_001", ["Base Color map.png"], "Principled_BSDF.blend", prbsdf_001],
+		#["BL28_MAT_PRBSDF_002", ["Base Color map.tga"], "Principled_BSDF.blend", prbsdf_002],
+		#["BL28_MAT_PRBSDF_003", ["Base color, RGB color: 0:0.4:0"], "Principled_BSDF.blend", prbsdf_003],
+#
+		#["BL28_MAT_PRBSDF_004", ["Subsurface Color map.png"], "Principled_BSDF.blend", prbsdf_004],
+		#["BL28_MAT_PRBSDF_005", ["Subsurface Color map.tga"], "Principled_BSDF.blend", prbsdf_005],
+		#["BL28_MAT_PRBSDF_006", ["Subsurface Weight map.png"], "Principled_BSDF.blend", prbsdf_006],
+		#["BL28_MAT_PRBSDF_007", ["Subsurface Weight.tga"], "Principled_BSDF.blend", prbsdf_007],
+		#["BL28_MAT_PRBSDF_008", ["Subsurface Weight - 0"], "Principled_BSDF.blend", prbsdf_008],
+		#["BL28_MAT_PRBSDF_009", ["Subsurface Weight - 0.5"], "Principled_BSDF.blend", prbsdf_009],
+		#["BL28_MAT_PRBSDF_010", ["Subsurface Weight - 1"], "Principled_BSDF.blend", prbsdf_010],
+		#["BL28_MAT_PRBSDF_011", ["Subsurface Radius map.png"], "Principled_BSDF.blend", prbsdf_011],
+		#["BL28_MAT_PRBSDF_012", ["Subsurface Radius map.tga"], "Principled_BSDF.blend", prbsdf_012],
+		#["BL28_MAT_PRBSDF_013", ["Subsurface Radius - 0, 0, 0"], "Principled_BSDF.blend", prbsdf_013],
+		#["BL28_MAT_PRBSDF_014", ["Subsurface Radius - 5, 5, 5"], "Principled_BSDF.blend", prbsdf_014],
+#
+		#["BL28_MAT_PRBSDF_015", ["Metallic map.png"], "Principled_BSDF.blend", prbsdf_015],
+		#["BL28_MAT_PRBSDF_016", ["Metallic map.tga"], "Principled_BSDF.blend", prbsdf_016],
+		#["BL28_MAT_PRBSDF_017", ["Metallic -  0"], "Principled_BSDF.blend", prbsdf_017],
+		#["BL28_MAT_PRBSDF_018", ["Metallic -  0.5"], "Principled_BSDF.blend", prbsdf_018],
+		#["BL28_MAT_PRBSDF_019", ["Metallic -  1"], "Principled_BSDF.blend", prbsdf_019],
+#
+		#["BL28_MAT_PRBSDF_020", ["Specular map.png"], "Principled_BSDF.blend", prbsdf_020],
+		#["BL28_MAT_PRBSDF_021", ["Specular map.tga"], "Principled_BSDF.blend", prbsdf_021],
+		#["BL28_MAT_PRBSDF_022", ["Specular - 0"], "Principled_BSDF.blend", prbsdf_022],
+		#["BL28_MAT_PRBSDF_023", ["Specular - 0.5"], "Principled_BSDF.blend", prbsdf_023],
+		#["BL28_MAT_PRBSDF_024", ["Specular - 1"], "Principled_BSDF.blend", prbsdf_024],
+#
+		#["BL28_MAT_PRBSDF_025", ["Specular tint map.png"], "Principled_BSDF.blend", prbsdf_025],
+		#["BL28_MAT_PRBSDF_026", ["Specular tint map.tga"], "Principled_BSDF.blend", prbsdf_026],
+		#["BL28_MAT_PRBSDF_027", ["Specular tint - 0"], "Principled_BSDF.blend", prbsdf_027],
+		#["BL28_MAT_PRBSDF_028", ["Specular tint - 0.5"], "Principled_BSDF.blend", prbsdf_028],
+		#["BL28_MAT_PRBSDF_029", ["Specular tint - 1"], "Principled_BSDF.blend", prbsdf_029],
+#
+		#["BL28_MAT_PRBSDF_030", ["Roughness map.png"], "Principled_BSDF.blend", prbsdf_030],
+		#["BL28_MAT_PRBSDF_031", ["Roughness map.tga"], "Principled_BSDF.blend", prbsdf_031],
+		#["BL28_MAT_PRBSDF_032", ["Roughness - 0"], "Principled_BSDF.blend", prbsdf_032],
+		#["BL28_MAT_PRBSDF_033", ["Roughness - 0.5"], "Principled_BSDF.blend", prbsdf_033],
+		#["BL28_MAT_PRBSDF_034", ["Roughness - 1"], "Principled_BSDF.blend", prbsdf_034],
+#
+		#["BL28_MAT_PRBSDF_035", ["Anisotropic map.png"], "Principled_BSDF.blend", prbsdf_035],
+		#["BL28_MAT_PRBSDF_036", ["Anisotropic map.tga"], "Principled_BSDF.blend", prbsdf_036],
+		#["BL28_MAT_PRBSDF_037", ["Anisotropic - 0"], "Principled_BSDF.blend", prbsdf_037],
+		#["BL28_MAT_PRBSDF_038", ["Anisotropic - 0.5"], "Principled_BSDF.blend", prbsdf_038],
+		#["BL28_MAT_PRBSDF_039", ["Anisotropic - 1"], "Principled_BSDF.blend", prbsdf_039],
+#
+		#["BL28_MAT_PRBSDF_040", ["Anisotropic Rotation map.png"], "Principled_BSDF.blend", prbsdf_040],
+		#["BL28_MAT_PRBSDF_041", ["Anisotropic Rotation map.tga"], "Principled_BSDF.blend", prbsdf_041],
+		#["BL28_MAT_PRBSDF_042", ["Anisotropic Rotation - 0"], "Principled_BSDF.blend", prbsdf_042],
+		#["BL28_MAT_PRBSDF_043", ["Anisotropic Rotation - 0.5"], "Principled_BSDF.blend", prbsdf_043],
+		#["BL28_MAT_PRBSDF_044", ["Anisotropic Rotation - 1"], "Principled_BSDF.blend", prbsdf_044],
+#
+		#["BL28_MAT_PRBSDF_045", ["Sheen map.png"], "Principled_BSDF.blend", prbsdf_045],
+		#["BL28_MAT_PRBSDF_046", ["Sheen map.tga"], "Principled_BSDF.blend", prbsdf_046],
+		#["BL28_MAT_PRBSDF_047", ["Sheen - 0"], "Principled_BSDF.blend", prbsdf_047],
+		#["BL28_MAT_PRBSDF_048", ["Sheen - 0.5"], "Principled_BSDF.blend", prbsdf_048],
+		#["BL28_MAT_PRBSDF_049", ["Sheen - 1"], "Principled_BSDF.blend", prbsdf_049],
+#
+		#["BL28_MAT_PRBSDF_050", ["Sheen Tint map.png"], "Principled_BSDF.blend", prbsdf_050],
+		#["BL28_MAT_PRBSDF_051", ["Sheen Tint map.tga"], "Principled_BSDF.blend", prbsdf_051],
+		#["BL28_MAT_PRBSDF_052", ["Sheen Tint - 0"], "Principled_BSDF.blend", prbsdf_052],
+		#["BL28_MAT_PRBSDF_053", ["Sheen Tint - 0.5"], "Principled_BSDF.blend", prbsdf_053],
+		#["BL28_MAT_PRBSDF_054", ["Sheen Tint - 1"], "Principled_BSDF.blend", prbsdf_054],
+#
+		#["BL28_MAT_PRBSDF_055", ["Clearcoat map.png"], "Principled_BSDF.blend", prbsdf_055],
+		#["BL28_MAT_PRBSDF_056", ["Clearcoat map.tga"], "Principled_BSDF.blend", prbsdf_056],
+		#["BL28_MAT_PRBSDF_057", ["Clearcoat - 0"], "Principled_BSDF.blend", prbsdf_057],
+		#["BL28_MAT_PRBSDF_058", ["Clearcoat - 0.5"], "Principled_BSDF.blend", prbsdf_058],
+		#["BL28_MAT_PRBSDF_059", ["Clearcoat - 1"], "Principled_BSDF.blend", prbsdf_059],
+#
+		#["BL28_MAT_PRBSDF_060", ["Clearcoat Roughness map.png"], "Principled_BSDF.blend", prbsdf_060],
+		#["BL28_MAT_PRBSDF_061", ["Clearcoat Roughness map.tga"], "Principled_BSDF.blend", prbsdf_061],
+		#["BL28_MAT_PRBSDF_062", ["Clearcoat Roughness - 0"], "Principled_BSDF.blend", prbsdf_062],
+		#["BL28_MAT_PRBSDF_063", ["Clearcoat Roughness - 0.5"], "Principled_BSDF.blend", prbsdf_063],
+		#["BL28_MAT_PRBSDF_064", ["Clearcoat Roughness - 1"], "Principled_BSDF.blend", prbsdf_064],
+#
+		#["BL28_MAT_PRBSDF_065", ["IOR map.png"], "Principled_BSDF.blend", prbsdf_065],
+		#["BL28_MAT_PRBSDF_066", ["IOR map.tga"], "Principled_BSDF.blend", prbsdf_066],
+		#["BL28_MAT_PRBSDF_067", ["IOR - 1"], "Principled_BSDF.blend", prbsdf_067],
+		#["BL28_MAT_PRBSDF_068", ["IOR - 1.5"], "Principled_BSDF.blend", prbsdf_068],
+		#["BL28_MAT_PRBSDF_069", ["IOR - 2"], "Principled_BSDF.blend", prbsdf_069],
+#
+		#["BL28_MAT_PRBSDF_070", ["Transmission map.png"], "Principled_BSDF.blend", prbsdf_070],
+		#["BL28_MAT_PRBSDF_071", ["Transmission map.tga"], "Principled_BSDF.blend", prbsdf_071],
+		#["BL28_MAT_PRBSDF_072", ["Transmission - 0"], "Principled_BSDF.blend", prbsdf_072],
+		#["BL28_MAT_PRBSDF_073", ["Transmission - 0.5"], "Principled_BSDF.blend", prbsdf_073],
+		#["BL28_MAT_PRBSDF_074", ["Transmission - 1"], "Principled_BSDF.blend", prbsdf_074],
+#
+		#["BL28_MAT_PRBSDF_075", ["Transmission Roughness map.png"], "Principled_BSDF.blend", prbsdf_075],
+		#["BL28_MAT_PRBSDF_076", ["Transmission Roughness map.tga"], "Principled_BSDF.blend", prbsdf_076],
+		#["BL28_MAT_PRBSDF_077", ["Transmission Roughness - 0"], "Principled_BSDF.blend", prbsdf_077],
+		#["BL28_MAT_PRBSDF_078", ["Transmission Roughness - 0.5"], "Principled_BSDF.blend", prbsdf_078],
+		#["BL28_MAT_PRBSDF_079", ["Transmission Roughness - 1"], "Principled_BSDF.blend", prbsdf_079],
+#
 		["BL28_MAT_PRBSDF_080", ["Emission map.png"], "Principled_BSDF.blend", prbsdf_080],
 		["BL28_MAT_PRBSDF_081", ["Emission map.tga"], "Principled_BSDF.blend", prbsdf_081],
 		["BL28_MAT_PRBSDF_082", ["Emission - HSV: 0.667 0 0.665"], "Principled_BSDF.blend", prbsdf_082],
