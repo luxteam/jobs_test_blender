@@ -15,7 +15,6 @@ def prerender(test_list):
 	# undo changes
 	resetSceneAttributes()	
 
-	render(test_list[0], test_list[1])
 	return 1
 
 
