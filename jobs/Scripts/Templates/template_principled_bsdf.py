@@ -35,7 +35,7 @@ def create_normal_map(attr, image_name):
 
 	# crete normal map
 	normalmap_node = tree.nodes.new(type='ShaderNodeNormalMap')
-	tree.links.new(imagemap_node.outputs['Color'], normalmap_node.inputs['Color'])
+	tree.links.new(imagemap_node.outputs['Color'], normalmap_node.inputs['Normal'])
 
 	# connect normal with material
 	tree.links.new(normalmap_node.outputs['Normal'], prbsdf_node.inputs[attr])
@@ -45,18 +45,17 @@ def create_imagemap(attr, image_name):
 	prbsdf_material, prbsdf_node = get_material_and_node()
 	tree = prbsdf_material.node_tree
 
-	# create image map
-	node_imagemap = tree.nodes.new(type='ShaderNodeTexImage')
+	imagemap_node = tree.nodes.new(type='ShaderNodeTexImage')
 	image = bpy.data.images.load(os.path.join(r"{resource_path}", "Maps", image_name))
-	node_imagemap.image = image
+	imagemap_node.image = image
 	
-	if type(prbsdf_node.inputs[attr].default_value) == tuple:
-		tree.links.new(node_imagemap.outputs['Color'], prbsdf_node.inputs[attr])
-	elif type(prbsdf_node.inputs[attr].default_value) == float:
-		tree.links.new(node_imagemap.outputs['Alpha'], prbsdf_node.inputs[attr])
+	if type(prbsdf_node.inputs[attr].default_value) == float:
+		tree.links.new(imagemap_node.outputs['Alpha'], prbsdf_node.inputs[attr])
+	else:
+		tree.links.new(imagemap_node.outputs['Color'], prbsdf_node.inputs[attr])
 
 
-def delete_imagemaps(prbsdf_material, prbsdf_node):
+def delete_imagemaps(prbsdf_material):
 	normal_nodes = [n for n in prbsdf_material.node_tree.nodes if n.type=="NORMAL"]
 	for normal_node in normal_nodes:
 		prbsdf_material.node_tree.nodes.remove(normal_node)
@@ -68,9 +67,9 @@ def delete_imagemaps(prbsdf_material, prbsdf_node):
 
 def resetSceneAttributes():
 	prbsdf_material, prbsdf_node = get_material_and_node()
-	delete_imagemaps(prbsdf_material, prbsdf_node)
+	delete_imagemaps(prbsdf_material)
 
-	prbsdf_node.inputs['Base Color'].default_value = 
+	prbsdf_node.inputs['Base Color'].default_value = (0.8, 0.8, 0.8, 1.0)
 	prbsdf_node.inputs['Subsurface'].default_value = 0
 	prbsdf_node.inputs['Subsurface Radius'].default_value = (1, 0.2, 0.1)
 	prbsdf_node.inputs['Subsurface Color'].default_value = (0.8, 0.8, 0.8, 1.0)
