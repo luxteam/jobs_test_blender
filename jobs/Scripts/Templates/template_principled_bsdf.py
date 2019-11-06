@@ -35,7 +35,7 @@ def create_normal_map(attr, image_name):
 
 	# crete normal map
 	normalmap_node = tree.nodes.new(type='ShaderNodeNormalMap')
-	tree.links.new(imagemap_node.outputs['Color'], normalmap_node.inputs['Normal'])
+	tree.links.new(imagemap_node.outputs['Color'], normalmap_node.inputs['Color'])
 
 	# connect normal with material
 	tree.links.new(normalmap_node.outputs['Normal'], prbsdf_node.inputs[attr])
@@ -586,11 +586,11 @@ def prbsdf_079():
 
 
 def prbsdf_080():
-	create_imagemap("Emission", "emissionColor.png")
+	create_imagemap("Emission", "emissiveColor.png")
 
 
 def prbsdf_081():
-	create_imagemap("Emission", "emissionColor.tga")
+	create_imagemap("Emission", "emissiveColor.tga")
 
 
 def prbsdf_082():
