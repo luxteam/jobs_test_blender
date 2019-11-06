@@ -612,10 +612,13 @@ def node_090():
 
 def node_091():
 	set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers["Collection8"])
+	material, node = get_material_and_node("RPRDisplasement", "Displacement")
+	material.cycles['displacement_method'] = 1
 
 
 def cancel_092_096():
 	material, node = get_material_and_node("RPRDisplasement", "Displacement")
+	material.cycles['displacement_method'] = 1
 	set_value(node.inputs['Midlevel'], "default_value", 0.5)
 	set_value(node.inputs['Scale'], "default_value", 1)
 
@@ -623,18 +626,21 @@ def cancel_092_096():
 def node_092():
 	set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers["Collection8"])
 	material, node = get_material_and_node("RPRDisplasement", "Displacement")
+	material.cycles['displacement_method'] = 1
 	set_value(node.inputs['Midlevel'], "default_value", 0)
 
 
 def node_093():
 	set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers["Collection8"])
 	material, node = get_material_and_node("RPRDisplasement", "Displacement")
+	material.cycles['displacement_method'] = 1
 	set_value(node.inputs['Midlevel'], "default_value", 1)
 
 
 def node_094():
 	set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers["Collection8"])
 	material, node = get_material_and_node("RPRDisplasement", "Displacement")
+	material.cycles['displacement_method'] = 1
 	set_value(node.inputs['Midlevel'], "default_value", 0.5)
 	set_value(node.inputs['Scale'], "default_value", 0)
 
@@ -642,6 +648,7 @@ def node_094():
 def node_095():
 	set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers["Collection8"])
 	material, node = get_material_and_node("RPRDisplasement", "Displacement")
+	material.cycles['displacement_method'] = 1
 	set_value(node.inputs['Midlevel'], "default_value", 0.5)
 	set_value(node.inputs['Scale'], "default_value", 1)
 
@@ -649,6 +656,7 @@ def node_095():
 def node_096():
 	set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers["Collection8"])
 	material, node = get_material_and_node("RPRDisplasement", "Displacement")
+	material.cycles['displacement_method'] = 1
 	set_value(node.inputs['Midlevel'], "default_value", 0.5)
 	set_value(node.inputs['Scale'], "default_value", 2)
 
@@ -665,6 +673,7 @@ def cancel_097():
 def node_097():
 	set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers["Collection8"])
 	material, node = get_material_and_node("RPRDisplasement", "Displacement")
+	material.cycles['displacement_method'] = 1
 	set_value(node.inputs['Midlevel'], "default_value", 0.5)
 	set_value(node.inputs['Scale'], "default_value", 1)
 	material.node_tree.links.remove(node.inputs['Height'].links[0])
@@ -682,6 +691,7 @@ def cancel_098():
 def node_098():
 	set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers["Collection8"])
 	material, node = get_material_and_node("RPRDisplasement", "Displacement")
+	material.cycles['displacement_method'] = 1
 	set_value(node.inputs['Midlevel'], "default_value", 0.5)
 	set_value(node.inputs['Scale'], "default_value", 1)
 	set_value(node, "space", "WORLD")
