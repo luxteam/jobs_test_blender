@@ -117,32 +117,32 @@ def pl_011():
 	light_data = bpy.data.lights['Point']
 	set_value(light_data, 'type', 'POINT')
 	set_value(light_data.rpr, 'intensity', 100)
-	bpy.ops.image.open(filepath="//ies//UVGread2.png", directory="{resource_path}//ies//", files=[{{"name":"UVGread2.png"}}], relative_path=True, show_multiview=False)
-	set_value(light_data.rpr, 'ies_file', bpy.data.images["UVGread2.png"])
+	bpy.ops.image.open(filepath="//ies//UVgrid2.png", directory="{resource_path}//ies//", files=[{{"name":"UVgrid2.png"}}], relative_path=True, show_multiview=False)
+	set_value(light_data.rpr, 'ies_file', bpy.data.images["UVgrid2.png"])
 
 
 def pl_012():
 	light_data = bpy.data.lights['Point']
 	set_value(light_data, 'type', 'POINT')
 	set_value(light_data.rpr, 'intensity', 100)
-	bpy.ops.image.open(filepath="//ies//UVGread2.tif", directory="{resource_path}//ies//", files=[{{"name":"UVGread2.tif"}}], relative_path=True, show_multiview=False)
-	set_value(light_data.rpr, 'ies_file', bpy.data.images["UVGread2.tif"])
+	bpy.ops.image.open(filepath="//ies//UVgrid2.tif", directory="{resource_path}//ies//", files=[{{"name":"UVgrid2.tif"}}], relative_path=True, show_multiview=False)
+	set_value(light_data.rpr, 'ies_file', bpy.data.images["UVgrid2.tif"])
 
 
 def pl_013():
 	light_data = bpy.data.lights['Point']
 	set_value(light_data, 'type', 'POINT')
 	set_value(light_data.rpr, 'intensity', 100)
-	bpy.ops.image.open(filepath="//ies//UVGread2.jpg", directory="{resource_path}//ies//", files=[{{"name":"UVGread2.jpg"}}], relative_path=True, show_multiview=False)
-	set_value(light_data.rpr, 'ies_file', bpy.data.images["UVGread2.jpg"])
+	bpy.ops.image.open(filepath="//ies//UVgrid2.jpg", directory="{resource_path}//ies//", files=[{{"name":"UVgrid2.jpg"}}], relative_path=True, show_multiview=False)
+	set_value(light_data.rpr, 'ies_file', bpy.data.images["UVgrid2.jpg"])
 
 
 def pl_014():
 	light_data = bpy.data.lights['Point']
 	set_value(light_data, 'type', 'POINT')
 	set_value(light_data.rpr, 'intensity', 100)
-	bpy.ops.image.open(filepath="//ies//UVGread2GS.png", directory="{resource_path}//ies//", files=[{{"name":"UVGread2GS.png"}}], relative_path=True, show_multiview=False)
-	set_value(light_data.rpr, 'ies_file', bpy.data.images["UVGread2GS.png"])
+	bpy.ops.image.open(filepath="//ies//UVgrid2GS.png", directory="{resource_path}//ies//", files=[{{"name":"UVgrid2GS.png"}}], relative_path=True, show_multiview=False)
+	set_value(light_data.rpr, 'ies_file', bpy.data.images["UVgrid2GS.png"])
 
 
 def pl_015():
@@ -462,7 +462,7 @@ def pl_058():
 	light_data = bpy.data.lights['Point']
 	set_value(light_data, 'type', 'SUN')
 	set_value(light_data.rpr, 'intensity', 100)
-	set_value(light_data.rpr, 'intensity_units_dir', 'WATTS')
+	set_value(light_data.rpr, 'intensity_units_point', 'WATTS')
 	set_value(light_data.rpr, 'luminous_efficacy', 17)
 
 
@@ -470,7 +470,7 @@ def pl_059():
 	light_data = bpy.data.lights['Point']
 	set_value(light_data, 'type', 'SUN')
 	set_value(light_data.rpr, 'intensity', 100)
-	set_value(light_data.rpr, 'intensity_units_dir', 'WATTS')
+	set_value(light_data.rpr, 'intensity_units_point', 'WATTS')
 	set_value(light_data.rpr, 'luminous_efficacy', 100)
 
 
@@ -478,21 +478,21 @@ def pl_060():
 	light_data = bpy.data.lights['Point']
 	set_value(light_data, 'type', 'SUN')
 	set_value(light_data.rpr, 'intensity', 100)
-	set_value(light_data.rpr, 'intensity_units_dir', 'LUMEN')
+	set_value(light_data.rpr, 'intensity_units_point', 'LUMEN')
 
 
 def pl_061():
 	light_data = bpy.data.lights['Point']
 	set_value(light_data, 'type', 'SUN')
 	set_value(light_data.rpr, 'intensity', 1000)
-	set_value(light_data.rpr, 'intensity_units_dir', 'LUMEN')
+	set_value(light_data.rpr, 'intensity_units_point', 'LUMEN')
 
 
 def pl_062():
 	light_data = bpy.data.lights['Point']
 	set_value(light_data, 'type', 'SUN')
 	set_value(light_data.rpr, 'intensity', 5000)
-	set_value(light_data.rpr, 'intensity_units_dir', 'LUMEN')
+	set_value(light_data.rpr, 'intensity_units_point', 'LUMEN')
 
 
 def pl_063():
