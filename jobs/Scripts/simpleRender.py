@@ -49,7 +49,7 @@ def kill_process(deny=['maya.exe', 'blender.exe', '3dsmax.exe']):
 					p.kill()
 					time.sleep(10)
 					
-					status = maya_process.status()
+					status = p.status()
 					core_config.main_logger.error("Process {name} is alive (status: {status}".format(
 						name=p_info["name"],
 						status=status
