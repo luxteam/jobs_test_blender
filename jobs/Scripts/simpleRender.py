@@ -42,7 +42,18 @@ def kill_process(deny=['maya.exe', 'blender.exe', '3dsmax.exe']):
 			if p_info['name'] in deny:
 				try:
 					core_config.main_logger.info("Trying to kill process {name}".format(name=p_info['name']))
+					
+					p.terminate()
+					time.sleep(10)
+
 					p.kill()
+					time.sleep(10)
+					
+					status = maya_process.status()
+					core_config.main_logger.error("Process {name} is alive (status: {status}".format(
+						name=p_info["name"],
+						status=status
+					))
 				except psutil.NoSuchProcess:
 					core_config.main_logger.info("ATENTION: {name} is killed.".format(
 						name=p_info['name']
