@@ -7,6 +7,11 @@ import json
 import ctypes
 import pyscreenshot
 import platform
+import time
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir, os.path.pardir)))
+import jobs_launcher.core.config as core_config
+
 
 def createArgsParser():
 	parser = argparse.ArgumentParser()
@@ -21,6 +26,30 @@ def createArgsParser():
 	parser.add_argument('--output', required=True)
 
 	return parser
+
+
+def kill_process(deny=['maya.exe', 'blender.exe', '3dsmax.exe']):
+	for p in psutil.process_iter():
+		try:
+			p_info = p.as_dict(attrs=['pid', 'name', 'cpu_percent', 'username'])
+			core_config.main_logger.info("{name} \t (PID: {pid}) \t| Username: {username} | CPU Percent: {cpu_percent}".format(
+				name=p_info['name'],
+				pid=p_info['pid'],
+				username=p_info['username'],
+				cpu_percent=p_info['cpu_percent']
+			))
+			
+			if p_info['name'] in deny:
+				try:
+					core_config.main_logger.info("Trying to kill process {name}".format(name=p_info['name']))
+					p.kill()
+				except psutil.NoSuchProcess:
+					core_config.main_logger.info("ATENTION: {name} is killed.".format(
+						name=p_info['name']
+					))
+		except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+			core_config.main_logger.error("Can't killed process: {name}".format(name=p_info['name']))
+
 
 def main(args):
 
@@ -78,7 +107,7 @@ def main(args):
 
 
 if __name__ == "__main__":
-
+	kill_process()
 	args = createArgsParser().parse_args()
 
 	try:
@@ -104,4 +133,5 @@ if __name__ == "__main__":
 		rc = main(args) 
 		current_test = getJsonCount()
 	
+	kill_process()
 	exit(1)
