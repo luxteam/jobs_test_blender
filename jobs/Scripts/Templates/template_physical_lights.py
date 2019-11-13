@@ -463,7 +463,7 @@ def pl_057():
 
 def pl_058():
 	light_data = bpy.data.lights['Point']
-	set_value(light_data, 'type', 'SUN')
+	set_value(light_data, 'type', 'SPOT')
 	set_value(light_data.rpr, 'intensity', 100)
 	set_value(light_data.rpr, 'intensity_units_point', 'WATTS')
 	set_value(light_data.rpr, 'luminous_efficacy', 17)
@@ -471,7 +471,7 @@ def pl_058():
 
 def pl_059():
 	light_data = bpy.data.lights['Point']
-	set_value(light_data, 'type', 'SUN')
+	set_value(light_data, 'type', 'SPOT')
 	set_value(light_data.rpr, 'intensity', 100)
 	set_value(light_data.rpr, 'intensity_units_point', 'WATTS')
 	set_value(light_data.rpr, 'luminous_efficacy', 100)
@@ -479,77 +479,77 @@ def pl_059():
 
 def pl_060():
 	light_data = bpy.data.lights['Point']
-	set_value(light_data, 'type', 'SUN')
+	set_value(light_data, 'type', 'SPOT')
 	set_value(light_data.rpr, 'intensity', 100)
 	set_value(light_data.rpr, 'intensity_units_point', 'LUMEN')
 
 
 def pl_061():
 	light_data = bpy.data.lights['Point']
-	set_value(light_data, 'type', 'SUN')
+	set_value(light_data, 'type', 'SPOT')
 	set_value(light_data.rpr, 'intensity', 1000)
 	set_value(light_data.rpr, 'intensity_units_point', 'LUMEN')
 
 
 def pl_062():
 	light_data = bpy.data.lights['Point']
-	set_value(light_data, 'type', 'SUN')
+	set_value(light_data, 'type', 'SPOT')
 	set_value(light_data.rpr, 'intensity', 5000)
 	set_value(light_data.rpr, 'intensity_units_point', 'LUMEN')
 
 
 def pl_063():
 	light_data = bpy.data.lights['Point']
-	set_value(light_data, 'type', 'SUN')
+	set_value(light_data, 'type', 'SPOT')
 	set_value(light_data, 'energy', 100)
 	set_value(light_data.rpr, 'spot_size', 0.0174533)
 
 
 def pl_064():
 	light_data = bpy.data.lights['Point']
-	set_value(light_data, 'type', 'SUN')
+	set_value(light_data, 'type', 'SPOT')
 	set_value(light_data, 'energy', 100)
 	set_value(light_data, 'spot_size', 0.785398)
 
 
 def pl_065():
 	light_data = bpy.data.lights['Point']
-	set_value(light_data, 'type', 'SUN')
+	set_value(light_data, 'type', 'SPOT')
 	set_value(light_data, 'energy', 100)
 	set_value(light_data, 'spot_size', 1.5708)
 
 
 def pl_066():
 	light_data = bpy.data.lights['Point']
-	set_value(light_data, 'type', 'SUN')
+	set_value(light_data, 'type', 'SPOT')
 	set_value(light_data, 'energy', 100)
 	set_value(light_data, 'spot_size', 3.14159)
 
 
 def pl_067():
 	light_data = bpy.data.lights['Point']
-	set_value(light_data, 'type', 'SUN')
+	set_value(light_data, 'type', 'SPOT')
 	set_value(light_data, 'energy', 100)
 	set_value(light_data, 'spot_blend', 0)
 
 
 def pl_068():
 	light_data = bpy.data.lights['Point']
-	set_value(light_data, 'type', 'SUN')
+	set_value(light_data, 'type', 'SPOT')
 	set_value(light_data, 'energy', 100)
 	set_value(light_data, 'spot_blend', 0.15)
 
 
 def pl_069():
 	light_data = bpy.data.lights['Point']
-	set_value(light_data, 'type', 'SUN')
+	set_value(light_data, 'type', 'SPOT')
 	set_value(light_data, 'energy', 100)
 	set_value(light_data, 'spot_blend', 0.5)
 
 
 def pl_070():
 	light_data = bpy.data.lights['Point']
-	set_value(light_data, 'type', 'SUN')
+	set_value(light_data, 'type', 'SPOT')
 	set_value(light_data, 'energy', 100)
 	set_value(light_data, 'spot_blend', 1)
 
