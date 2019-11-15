@@ -1,16 +1,12 @@
 
 def prerender(test_list):
 
-	current_scene = bpy.path.basename(bpy.context.blend_data.filepath)
-	if current_scene != test_list[2]:
-		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
+	bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
 
 	scene = bpy.context.scene
 	enable_rpr_render(scene)
 
-	# make changes
 	test_list[3]()
-	# render
 	render(test_list[0], test_list[1])
 	
 	return 1
@@ -169,6 +165,7 @@ def pf_030():
 if __name__ == "__main__":
 
 	list_tests = [
+
 		["BL_RS_PF_001", ["Pixel filter: Mitchell", "Radius: 0"], "Ease_Pixel_Filters_Scene.blend", pf_001], 
 		["BL_RS_PF_002", ["Pixel filter: Mitchell", "Radius: 1"], "Ease_Pixel_Filters_Scene.blend", pf_002],
 		["BL_RS_PF_003", ["Pixel filter: Mitchell", "Radius: 1.5"], "Ease_Pixel_Filters_Scene.blend", pf_003], 

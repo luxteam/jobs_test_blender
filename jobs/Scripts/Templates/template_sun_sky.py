@@ -1,36 +1,15 @@
 
 def prerender(test_list):
 
-	current_scene = bpy.path.basename(bpy.context.blend_data.filepath)
-	if current_scene != test_list[2]:
-		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
+	bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
 
 	scene = bpy.context.scene
 	enable_rpr_render(scene)
 
-	# make changes
 	test_list[3]()
-	# render
 	render(test_list[0], test_list[1])
-	# undo changes
-	resetSceneAttributes()	
 
 	return 1
-
-
-def resetSceneAttributes():
-	set_value(bpy.context.scene.world.rpr, "intensity", 1)
-	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
-	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
-	set_value(bpy.context.scene.world.rpr.sun_sky, "resolution", '1024')
-	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
-	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_glow", 1)
-	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_disc", 0.5)
-	set_value(bpy.context.scene.world.rpr.sun_sky, "filter_color", (0, 0, 0))
-	set_value(bpy.context.scene.world.rpr.sun_sky, "ground_color", (0.4, 0.4, 0.4))
-	set_value(bpy.context.scene.world.rpr.sun_sky, "saturation", 0.5)
-	set_value(bpy.context.scene.world.rpr.sun_sky, "horizon_height", 0.001)
-	set_value(bpy.context.scene.world.rpr.sun_sky, "horizon_blur", 0.1)
 
 
 def ss_001():
@@ -328,7 +307,7 @@ def ss_042():
 if __name__ == "__main__":
 
 	list_tests = [
-	
+
 		["BL_RS_SS_001", ["Azimuth: 0", "Altitude: 0"], "TestSunSky.blend", ss_001],
 		["BL_RS_SS_002", ["Azimuth: 0", "Altitude: 45"], "TestSunSky.blend", ss_002],
 		["BL_RS_SS_003", ["Azimuth: 0", "Altitude: 90"], "TestSunSky.blend", ss_003],

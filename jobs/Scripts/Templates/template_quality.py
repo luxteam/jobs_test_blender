@@ -1,33 +1,15 @@
 
 def prerender(test_list):
 
-	current_scene = bpy.path.basename(bpy.context.blend_data.filepath)
-	if current_scene != test_list[2]:
-		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
+	bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
 
 	scene = bpy.context.scene
 	enable_rpr_render(scene)
 
-	# make changes
 	test_list[3]()
-	# render
 	render(test_list[0], test_list[1])
-	# undo changes
-	resetSceneAttributes()	
 
 	return 1
-
-
-def resetSceneAttributes():
-	set_value(bpy.context.scene.rpr, 'max_ray_depth', 8)
-	set_value(bpy.context.scene.rpr, 'diffuse_depth', 3)
-	set_value(bpy.context.scene.rpr, 'glossy_depth', 5)
-	set_value(bpy.context.scene.rpr, 'refraction_depth', 5)
-	set_value(bpy.context.scene.rpr, 'glossy_refraction_depth', 5)
-	set_value(bpy.context.scene.rpr, 'shadow_depth', 5)
-	set_value(bpy.context.scene.rpr, 'ray_cast_epsilon', 0.02)
-	set_value(bpy.context.scene.rpr, 'use_clamp_radiance', True)
-	set_value(bpy.context.scene.rpr, 'clamp_radiance', 1)
 
 
 def ql_001():
@@ -480,6 +462,7 @@ def ql_088():
 if __name__ == "__main__":
 
 	list_tests = [
+	
 		["BL28_RS_QL_001", ["Ray Depth - 0"], "Quality.blend", ql_001], 
 		["BL28_RS_QL_002", ["Ray Depth - 1"], "Quality.blend", ql_002], 
 		["BL28_RS_QL_003", ["Ray Depth - 2"], "Quality.blend", ql_003], 

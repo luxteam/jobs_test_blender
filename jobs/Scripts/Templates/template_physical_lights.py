@@ -1,47 +1,15 @@
 
 def prerender(test_list):
 
-	current_scene = bpy.path.basename(bpy.context.blend_data.filepath)
-	if current_scene != test_list[2]:
-		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
+	bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
 
 	scene = bpy.context.scene
 	enable_rpr_render(scene)
 
-	# make changes
 	test_list[3]()
-	# render
 	render(test_list[0], test_list[1])
-	# undo changes
-	resetSceneAttributes()	
 
 	return 1
-
-
-def resetSceneAttributes():
-	light_data = bpy.data.lights['Point']
-	set_value(light_data, 'type', 'POINT')
-	set_value(light_data, 'energy', 100)
-	set_value(light_data.rpr, 'intensity', 100)
-	set_value(light_data, 'color', (1, 1, 1))
-	set_value(light_data.rpr, 'use_temperature', False)
-	set_value(light_data.rpr, 'temperature', 10000)
-	set_value(light_data.rpr, 'ies_file', None)
-	set_value(light_data.rpr, 'intensity_units_point', "DEFAULT")
-	set_value(light_data.rpr, 'luminous_efficacy', 100)
-
-	set_value(light_data.rpr, 'shadow_softness', 0)
-	set_value(light_data.rpr, 'intensity_units_dir', 'DEFAULT')
-
-	set_value(light_data, 'spot_size', 1.309)
-	set_value(light_data, 'spot_blend', 0.511811)
-
-	set_value(light_data.rpr, 'shape', 'SQUARE')
-	set_value(light_data, 'size', 0)
-	set_value(light_data, 'size_y', 0)
-	set_value(light_data.rpr, 'visible', True)
-	set_value(light_data.rpr, 'cast_shadows', True)
-	set_value(light_data.rpr, 'intensity_normalization', True)
 
 
 def pl_001():

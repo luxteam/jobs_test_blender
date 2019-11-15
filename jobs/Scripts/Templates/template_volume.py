@@ -1,19 +1,13 @@
 
 def prerender(test_list):
 
-	current_scene = bpy.path.basename(bpy.context.blend_data.filepath)
-	if current_scene != test_list[2]:
-		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
+	bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
 
 	scene = bpy.context.scene
 	enable_rpr_render(scene)
 	
-	# make changes
 	test_list[3]()
-	# render
 	render(test_list[0], test_list[1])
-	# undo changes
-	resetSceneAttributes()			
 
 	return 1
 
@@ -47,27 +41,6 @@ def create_imagemap(attr, image_name):
 		tree.links.new(imagemap_node.outputs['Alpha'], volume_node.inputs[attr])
 	else:
 		tree.links.new(imagemap_node.outputs['Color'], volume_node.inputs[attr])
-
-
-def delete_imagemaps(volume_material):
-	checker_texture_nodes = [n for n in volume_material.node_tree.nodes if n.type=="TEX_CHECKER"]
-	for checker_texture_node in checker_texture_nodes:
-		volume_material.node_tree.nodes.remove(checker_texture_node)
-
-	normal_nodes = [n for n in volume_material.node_tree.nodes if n.type=="NORMAL"]
-	for normal_node in normal_nodes:
-		volume_material.node_tree.nodes.remove(normal_node)
-
-	imagemap_nodes = [n for n in volume_material.node_tree.nodes if n.type=="TEX_IMAGE"]
-	for imagemap_node in imagemap_nodes:
-		volume_material.node_tree.nodes.remove(imagemap_node)
-
-
-def resetSceneAttributes():
-	volume_material, volume_node = get_material_and_node()
-	delete_imagemaps(volume_material)
-
-	volume_node.inputs['Color'].default_value = (0.178862, 0.178862, 0.178862, 1)
 
 	
 def vm_001():

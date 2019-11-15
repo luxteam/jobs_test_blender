@@ -8,9 +8,7 @@ def prerender(test_list):
 	scene = bpy.context.scene
 	enable_rpr_render(scene)
 
-	# make changes
 	test_list[3]()
-	# render
 	render(test_list[0], test_list[1])
 
 	return 1
@@ -99,6 +97,7 @@ def impexp_010():
 if __name__ == "__main__":
 
 	list_tests = [
+
 		["BL28_MAT_IMPEXP_001", ["Material: barnfindorange solid"], "Import.blend", impexp_001],
 		["BL28_MAT_IMPEXP_002", ["Material: car paint solid"], "Import.blend", impexp_002],
 		["BL28_MAT_IMPEXP_003", ["Material: carbon fiber"], "Import.blend", impexp_003], 
@@ -109,6 +108,7 @@ if __name__ == "__main__":
 		["BL28_MAT_IMPEXP_008", ["Material: rubber bumpy"], "Import.blend", impexp_008],
 		["BL28_MAT_IMPEXP_009", ["Material: wood bark"], "Import.blend", impexp_009],
 		["BL28_MAT_IMPEXP_010", ["Material: wood planks oak glossy"], "Import.blend", impexp_010]
+		
 	]
 
 	launch_tests()

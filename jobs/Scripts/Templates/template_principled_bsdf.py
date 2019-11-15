@@ -1,19 +1,13 @@
 
 def prerender(test_list):
 
-	current_scene = bpy.path.basename(bpy.context.blend_data.filepath)
-	if current_scene != test_list[2]:
-		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
+	bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
 
 	scene = bpy.context.scene
 	enable_rpr_render(scene)
 	
-	# make changes
 	test_list[3]()
-	# render
 	render(test_list[0], test_list[1])
-	# undo changes
-	resetSceneAttributes()
 
 	return 1
 
@@ -63,31 +57,6 @@ def delete_imagemaps(prbsdf_material):
 	imagemap_nodes = [n for n in prbsdf_material.node_tree.nodes if n.type=="TEX_IMAGE"]
 	for imagemap_node in imagemap_nodes:
 		prbsdf_material.node_tree.nodes.remove(imagemap_node)
-
-
-def resetSceneAttributes():
-	prbsdf_material, prbsdf_node = get_material_and_node()
-	delete_imagemaps(prbsdf_material)
-
-	prbsdf_node.inputs['Base Color'].default_value = (0.8, 0.8, 0.8, 1.0)
-	prbsdf_node.inputs['Subsurface'].default_value = 0
-	prbsdf_node.inputs['Subsurface Radius'].default_value = (1, 0.2, 0.1)
-	prbsdf_node.inputs['Subsurface Color'].default_value = (0.8, 0.8, 0.8, 1.0)
-	prbsdf_node.inputs['Metallic'].default_value = 0
-	prbsdf_node.inputs['Specular'].default_value = 0
-	prbsdf_node.inputs['Specular Tint'].default_value = 0
-	prbsdf_node.inputs['Roughness'].default_value = 0
-	prbsdf_node.inputs['Anisotropic'].default_value = 0
-	prbsdf_node.inputs['Anisotropic Rotation'].default_value = 0
-	prbsdf_node.inputs['Sheen'].default_value = 0
-	prbsdf_node.inputs['Sheen Tint'].default_value = 0
-	prbsdf_node.inputs['Clearcoat'].default_value = 0
-	prbsdf_node.inputs['Clearcoat Roughness'].default_value = 0
-	prbsdf_node.inputs['IOR'].default_value = 1.45
-	prbsdf_node.inputs['Transmission'].default_value = 0
-	prbsdf_node.inputs['Transmission Roughness'].default_value = 0
-	prbsdf_node.inputs['Emission'].default_value = (0.0, 0.0, 0.0, 1)
-	prbsdf_node.inputs['Alpha'].default_value = 1
 
 
 def prbsdf_001():
