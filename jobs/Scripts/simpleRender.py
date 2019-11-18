@@ -119,7 +119,6 @@ def main(args):
 
 
 if __name__ == "__main__":
-	kill_process()
 	args = createArgsParser().parse_args()
 
 	try:
