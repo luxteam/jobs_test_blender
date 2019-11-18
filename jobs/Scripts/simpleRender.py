@@ -13,6 +13,11 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.
 import jobs_launcher.core.config as core_config
 from jobs_launcher.core.kill_process import kill_process
 
+# Windows 10: bledner.exe
+# Ubuntu 18: blender
+# MacOS: blender, Blender
+PROCESS = ['blender', 'blender.exe', 'Blender']
+
 
 def createArgsParser():
 	parser = argparse.ArgumentParser()
@@ -110,5 +115,5 @@ if __name__ == "__main__":
 		rc = main(args) 
 		current_test = getJsonCount()
 
-	kill_process(['blender', 'blender.exe', 'Blender'])
+	kill_process(PROCESS)
 	exit(1)
