@@ -1,15 +1,37 @@
 
 def prerender(test_list):
 
-	bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
+	current_scene = bpy.path.basename(bpy.context.blend_data.filepath)
+	if current_scene != test_list[2]:
+		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
 
 	scene = bpy.context.scene
 	enable_rpr_render(scene)
 
 	test_list[3]()
 	render(test_list[0], test_list[1])
+	resetSceneAttributes()
 
 	return 1
+
+
+def resetSceneAttributes():
+	set_value(bpy.context.object.data, 'type', 'PERSP')
+	set_value(bpy.context.object.data, 'lens', 53.93)
+	set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')
+
+	set_value(bpy.context.object.data, 'shift_x', 0)
+	set_value(bpy.context.object.data, 'shift_y', 0)
+	set_value(bpy.context.object.data, 'clip_start', 0.1)
+	set_value(bpy.context.object.data, 'clip_end', 100)
+
+	set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')
+	set_value(bpy.context.object.data, 'sensor_width', 32)
+
+	set_value(bpy.context.object.data.dof, 'use_dof', False)
+	set_value(bpy.context.object.data.dof, 'focus_distance', 0)
+	set_value(bpy.context.object.data.dof, 'aperture_fstop', 128)
+	set_value(bpy.context.object.data.dof, 'aperture_blades', 0)
 
 
 def cam_001():
