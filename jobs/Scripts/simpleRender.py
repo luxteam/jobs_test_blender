@@ -7,6 +7,17 @@ import json
 import ctypes
 import pyscreenshot
 import platform
+import time
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir, os.path.pardir)))
+import jobs_launcher.core.config as core_config
+from jobs_launcher.core.kill_process import kill_process
+
+# Windows 10: bledner.exe
+# Ubuntu 18: blender
+# MacOS: blender, Blender
+PROCESS = ['blender', 'blender.exe', 'Blender']
+
 
 def createArgsParser():
 	parser = argparse.ArgumentParser()
@@ -21,6 +32,7 @@ def createArgsParser():
 	parser.add_argument('--output', required=True)
 
 	return parser
+
 
 def main(args):
 
@@ -78,7 +90,6 @@ def main(args):
 
 
 if __name__ == "__main__":
-
 	args = createArgsParser().parse_args()
 
 	try:
@@ -103,5 +114,6 @@ if __name__ == "__main__":
 	while current_test < total_count:
 		rc = main(args) 
 		current_test = getJsonCount()
-	
+
+	kill_process(PROCESS)
 	exit(1)
