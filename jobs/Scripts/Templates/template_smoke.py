@@ -267,7 +267,7 @@ def deactivate_aov():
 def create_area_light():
 	scene = bpy.context.scene
 	set_value(scene.world.rpr, 'enabled', False)
-	light = bpy.data.lights['Light']
+	light = bpy.data.lights['Lamp']
 	set_value(light, 'type', 'AREA')
 
 

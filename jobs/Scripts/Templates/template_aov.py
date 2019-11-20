@@ -44,6 +44,9 @@ def prerender(test_list):
 
 	scene.node_tree.links.new(render_layer.outputs[test_list[3]], file_output.inputs[1])
 
+	if test_list[0] in ('BL28_RS_AOV_025', 'BL28_RS_AOV_026'):
+		bpy.context.object.data.rpr.group = 'KEY'
+
 	render(test_list[0], test_list[1])
 
 	test_case_image = os.path.join(r"{work_dir}", "Color", "{{}}.jpg".format(test_list[0]))
