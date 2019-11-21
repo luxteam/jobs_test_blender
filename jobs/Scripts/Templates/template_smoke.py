@@ -2,7 +2,7 @@
 def prerender(test_list):
 
 	current_scene = bpy.path.basename(bpy.context.blend_data.filepath)
-	if current_scene != test_list[4]:
+	if current_scene != test_list[4] or test_list[0] == 'BL28_SM_032':
 		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[4]))
 
 	scene = bpy.context.scene
