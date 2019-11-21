@@ -15,14 +15,14 @@ def set_value(path, name, value):
 	if hasattr(path, name):
 		setattr(path, name, value)
 	else:
-		logging.warning("No attribute found {{}}".format(name))
+		print("No attribute found {{}}".format(name))
 
 
 def get_value(path, name):
 	if hasattr(path, name):
 		return getattr(path, name)
 	else:
-		logging.warning("No attribute found {{}}".format(name))
+		print("No attribute found {{}}".format(name))
 
 
 def get_addon_version():

@@ -3,15 +3,15 @@
 
     <outpath value="{OutputDir}"/>
 
-    <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="3600">
+    <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="4600">
         <argument>--tool "{Tool}"</argument>
-        <argument>--template "{ResourcesDir}/Templates/template_volume.py"</argument>
+        <argument>--template "{ResourcesDir}/Templates/template_pixel_filter.py"</argument>
         <argument>--render_mode "{RenderDevice}"</argument>
     	<argument>--resolution_x {rx}</argument>
     	<argument>--resolution_y {ry}</argument>
-        <argument>--resource_path "{ScenesDir}/Materials"</argument>
+        <argument>--resource_path "{ScenesDir}/Render_Settings"</argument>
         <argument>--output "{OutputDir}"</argument>
-	    <argument>--package_name "Volume"</argument>
+	    <argument>--package_name "Pixel_Filter"</argument>
     </execute>
 
     <execute command='python "{ResourcesDir}/makeReport.py"'>

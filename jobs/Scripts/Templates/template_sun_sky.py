@@ -1,79 +1,383 @@
 
 def prerender(test_list):
 
-	current_scene = bpy.path.basename(bpy.context.blend_data.filepath)
-	if current_scene != test_list[2]:
-		bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
+	bpy.ops.wm.open_mainfile(filepath=os.path.join(r"{resource_path}", test_list[2]))
 
 	scene = bpy.context.scene
 	enable_rpr_render(scene)
 
-	bpy.context.scene.world.rpr_data.environment.type = 'SUN_SKY'
-	bpy.context.scene.world.rpr_data.environment.sun_sky.type = test_list[3]
-	bpy.context.scene.world.rpr_data.environment.sun_sky.ground_color = (0.4, 0.00703741, 0.00508468)
-	bpy.context.scene.world.rpr_data.environment.sun_sky.texture_resolution = test_list[4]
-
-	if (test_list[3] == 'analytical_sky'):
-		bpy.context.scene.world.rpr_data.environment.sun_sky.azimuth = test_list[5]
-		bpy.context.scene.world.rpr_data.environment.sun_sky.altitude = test_list[6]
-	elif (test_list[3] == 'date_time_location'):
-		bpy.ops.rpr.op_get_time_now()
-
-		if (test_list[7] == "Moscow"):
-			bpy.context.scene.world.rpr_data.environment.sun_sky.time_zone = 3
-			bpy.context.scene.world.rpr_data.environment.sun_sky.latitude = 0.973583
-			bpy.context.scene.world.rpr_data.environment.sun_sky.longitude = 0.656516
-		elif (test_list[7] == "Canberra"):
-			bpy.context.scene.world.rpr_data.environment.sun_sky.time_zone = 11
-			bpy.context.scene.world.rpr_data.environment.sun_sky.latitude = -0.615752
-			bpy.context.scene.world.rpr_data.environment.sun_sky.longitude = 2.60277
-		elif (test_list[7] == "Miami_Beach"):
-			bpy.context.scene.world.rpr_data.environment.sun_sky.time_zone = -5
-			bpy.context.scene.world.rpr_data.environment.sun_sky.latitude = 0.450131
-			bpy.context.scene.world.rpr_data.environment.sun_sky.longitude = -1.39853
-
-		bpy.context.scene.world.rpr_data.environment.sun_sky.time_hours = test_list[5]
-		bpy.context.scene.world.rpr_data.environment.sun_sky.time_minutes = test_list[6]
-
+	test_list[3]()
 	render(test_list[0], test_list[1])
+
 	return 1
+
+
+def ss_001():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0)
+
+
+def ss_002():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.785398)
+
+
+def ss_003():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 1.5708)
+
+
+def ss_004():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 1.5708)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0)
+
+
+def ss_005():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 1.5708)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.785398)
+
+
+def ss_006():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 1.5708)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 1.5708)
+
+
+def ss_007():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 3.14159)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0)
+
+
+def ss_008():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 3.14159)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.785398)
+
+
+def ss_009():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 3.14159)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 1.5708)
+
+
+def ss_010():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 4.71239)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0)
+
+
+def ss_011():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 4.71239)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.785398)
+
+
+def ss_012():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 4.71239)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 1.5708)
+
+
+def ss_013():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 6.28319)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0)
+
+
+def ss_014():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 6.28319)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.785398)
+
+
+def ss_015():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 6.28319)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 1.5708)
+
+
+def ss_016():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "resolution", '256')
+
+
+def ss_017():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "resolution", '1024')
+
+
+def ss_018():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "resolution", '4096')
+
+
+def ss_019():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+
+
+def ss_020():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 1)
+
+
+def ss_021():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 2)
+
+
+def ss_022():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 5)
+
+
+def ss_023():
+	set_value(bpy.context.scene.world.rpr, "intensity", 1)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+
+
+def ss_024():
+	set_value(bpy.context.scene.world.rpr, "intensity", 2)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+
+
+def ss_025():
+	set_value(bpy.context.scene.world.rpr, "intensity", 5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+
+
+def ss_026():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_glow", 1)
+
+
+def ss_027():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_glow", 2)
+
+
+def ss_028():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_glow", 5)
+
+
+def ss_029():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_glow", 1)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_disc", 0.5)
+
+
+def ss_030():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_glow", 1)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_disc", 1)
+
+
+def ss_031():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_glow", 1)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_disc", 2)
+
+
+def ss_032():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_glow", 1)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_disc", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "saturation", 0)
+
+
+def ss_033():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_glow", 1)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_disc", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "saturation", 0.5)
+
+
+def ss_034():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_glow", 1)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_disc", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "saturation", 1)
+
+
+def ss_035():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_glow", 1)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_disc", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "saturation", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "horizon_height", -0.5)
+
+
+def ss_036():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_glow", 1)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_disc", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "saturation", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "horizon_height", 0)
+
+
+def ss_037():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_glow", 1)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_disc", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "saturation", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "horizon_height", 0.5)
+
+
+def ss_038():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_glow", 1)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_disc", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "saturation", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "horizon_height", 0)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "horizon_blur", 0.1)
+
+
+def ss_039():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_glow", 1)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_disc", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "saturation", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "horizon_height", 0)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "horizon_blur", 0.5)
+
+
+def ss_040():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_glow", 1)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_disc", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "saturation", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "horizon_height", 0)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "horizon_blur", 1)
+
+
+def ss_041():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_glow", 1)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_disc", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "saturation", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "horizon_height", 0)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "horizon_blur", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "filter_color", (1, 0, 1))
+
+
+def ss_042():
+	set_value(bpy.context.scene.world.rpr.sun_sky, "azimuth", 0.318348)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "altitude", 0.0872665)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "turbidity", 0.2)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_glow", 1)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "sun_disc", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "saturation", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "horizon_height", 0)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "horizon_blur", 0.5)
+	set_value(bpy.context.scene.world.rpr.sun_sky, "filter_color", (1, 0, 1))
+	set_value(bpy.context.scene.world.rpr.sun_sky, "ground_color", (0, 1, 0))
 
 
 if __name__ == "__main__":
 
 	list_tests = [
-	["BL_RS_SS_001", ["Sun&Sky System: Analytical sky", "Azimuth: 0", "Altitude: 0", "Texture Resolution: normal, Expected Black Picture"], "TestSunSky.blend", 'analytical_sky', 'normal', 0, 0],
-	["BL_RS_SS_002", ["Sun&Sky System: Analytical sky", "Azimuth: 0", "Altitude: 45", "Texture Resolution: normal"], "TestSunSky.blend", 'analytical_sky', 'normal', 0, 0.785398],
-	["BL_RS_SS_003", ["Sun&Sky System: Analytical sky", "Azimuth: 0", "Altitude: 90", "Texture Resolution: normal"], "TestSunSky.blend", 'analytical_sky', 'normal', 0, 1.5708],
-	["BL_RS_SS_004", ["Sun&Sky System: Analytical sky", "Azimuth: 90", "Altitude: 0", "Texture Resolution: normal, Expected Black Picture"], "TestSunSky.blend", 'analytical_sky', 'normal', 1.5708, 0],
-	["BL_RS_SS_005", ["Sun&Sky System: Analytical sky", "Azimuth: 90", "Altitude: 45", "Texture Resolution: normal"], "TestSunSky.blend", 'analytical_sky', 'normal', 1.5708, 0.785398],
-	["BL_RS_SS_006", ["Sun&Sky System: Analytical sky", "Azimuth: 90", "Altitude: 90", "Texture Resolution: normal"], "TestSunSky.blend", 'analytical_sky', 'normal', 1.5708, 1.5708],
-	["BL_RS_SS_007", ["Sun&Sky System: Analytical sky", "Azimuth: 180", "Altitude: 0", "Texture Resolution: normal, Expected Black Picture"], "TestSunSky.blend", 'analytical_sky', 'normal', 3.14159, 0],
-	["BL_RS_SS_008", ["Sun&Sky System: Analytical sky", "Azimuth: 180", "Altitude: 45", "Texture Resolution: normal"], "TestSunSky.blend", 'analytical_sky', 'normal', 3.14159, 0.785398],
-	["BL_RS_SS_009", ["Sun&Sky System: Analytical sky", "Azimuth: 180", "Altitude: 90", "Texture Resolution: normal"], "TestSunSky.blend", 'analytical_sky', 'normal', 3.14159, 1.5708],
-	["BL_RS_SS_010", ["Sun&Sky System: Analytical sky", "Azimuth: 270", "Altitude: 0", "Texture Resolution: normal, Expected Black Picture"], "TestSunSky.blend", 'analytical_sky', 'normal', 4.71239, 0],
-	["BL_RS_SS_011", ["Sun&Sky System: Analytical sky", "Azimuth: 270", "Altitude: 45", "Texture Resolution: normal"], "TestSunSky.blend", 'analytical_sky', 'normal', 4.71239, 0.785398],
-	["BL_RS_SS_012", ["Sun&Sky System: Analytical sky", "Azimuth: 270", "Altitude: 90", "Texture Resolution: normal"], "TestSunSky.blend", 'analytical_sky', 'normal', 4.71239, 1.5708],
-	["BL_RS_SS_013", ["Sun&Sky System: Analytical sky", "Azimuth: 360", "Altitude: 0", "Texture Resolution: normal, Expected Black Picture"], "TestSunSky.blend", 'analytical_sky', 'normal', 6.28319, 0],
-	["BL_RS_SS_014", ["Sun&Sky System: Analytical sky", "Azimuth: 360", "Altitude: 45", "Texture Resolution: normal"], "TestSunSky.blend", 'analytical_sky', 'normal', 6.28319, 0.785398],
-	["BL_RS_SS_015", ["Sun&Sky System: Analytical sky", "Azimuth: 360", "Altitude: 90", "Texture Resolution: normal"], "TestSunSky.blend", 'analytical_sky', 'normal', 6.28319, 1.5708],
-	["BL_RS_SS_016", ["Sun&Sky System: Date, Time and Location", "Location: Moscow", "Hour: 0", "Texture Resolution: normal, Expected Black Picture"], "TestSunSky.blend", 'date_time_location', 'normal', 0, 1, "Moscow"],
-	["BL_RS_SS_017", ["Sun&Sky System: Date, Time and Location", "Location: Moscow", "Hour: 6", "Texture Resolution: normal, Expected Black Picture"], "TestSunSky.blend", 'date_time_location', 'normal', 6, 1, "Moscow"],
-	["BL_RS_SS_018", ["Sun&Sky System: Date, Time and Location", "Location: Moscow", "Hour: 12", "Texture Resolution: normal"], "TestSunSky.blend", 'date_time_location', 'normal', 12, 1, "Moscow"],
-	["BL_RS_SS_019", ["Sun&Sky System: Date, Time and Location", "Location: Moscow", "Hour: 18", "Texture Resolution: normal, Expected Black Picture"], "TestSunSky.blend", 'date_time_location', 'normal', 18, 1, "Moscow"],
-	["BL_RS_SS_020", ["Sun&Sky System: Date, Time and Location", "Location: Moscow", "Hour: 24", "Texture Resolution: normal, Expected Black Picture"], "TestSunSky.blend", 'date_time_location', 'normal', 24, 1, "Moscow"],
-	["BL_RS_SS_021", ["Sun&Sky System: Date, Time and Location", "Location: Moscow", "Hour: 12", "Texture Resolution: small"], "TestSunSky.blend", 'date_time_location', 'small', 12, 0, "Moscow"],
-	["BL_RS_SS_022", ["Sun&Sky System: Date, Time and Location", "Location: Moscow", "Hour: 12", "Texture Resolution: normal"], "TestSunSky.blend", 'date_time_location', 'normal', 12, 0, "Moscow"],
-	["BL_RS_SS_023", ["Sun&Sky System: Date, Time and Location", "Location: Moscow", "Hour: 12", "Texture Resolution: high"], "TestSunSky.blend", 'date_time_location', 'high', 12, 0, "Moscow"],
-	["BL_RS_SS_024", ["Sun&Sky System: Analytical sky", "Azimuth: 180", "Altitude: 45", "Texture Resolution: small"], "TestSunSky.blend", 'analytical_sky', 'small', 3.14159, 0.785398],
-	["BL_RS_SS_025", ["Sun&Sky System: Analytical sky", "Azimuth: 180", "Altitude: 45", "Texture Resolution: normal"], "TestSunSky.blend", 'analytical_sky', 'normal', 3.14159, 0.785398],
-	["BL_RS_SS_026", ["Sun&Sky System: Analytical sky", "Azimuth: 180", "Altitude: 45", "Texture Resolution: high"], "TestSunSky.blend", 'analytical_sky', 'high', 3.14159, 0.785398],
-	["BL_RS_SS_027", ["Sun&Sky System: Date, Time and Location", "Location: Miami Beach", "Hour: 0", "Texture Resolution: normal, Expected Black Picture"], "TestSunSky.blend", 'date_time_location', 'normal', 0, 1, "Miami_Beach"],
-	["BL_RS_SS_028", ["Sun&Sky System: Date, Time and Location", "Location: Miami Beach", "Hour: 12", "Texture Resolution: normal"], "TestSunSky.blend", 'date_time_location', 'normal', 12, 1, "Miami_Beach"],
-	["BL_RS_SS_029", ["Sun&Sky System: Date, Time and Location", "Location: Miami Beach", "Hour: 24", "Texture Resolution: normal, Expected Black Picture"], "TestSunSky.blend", 'date_time_location', 'normal', 24, 1, "Miami_Beach"],
-	["BL_RS_SS_030", ["Sun&Sky System: Date, Time and Location", "Location: Canberra", "Hour: 0", "Texture Resolution: normal, Expected Black Picture"], "TestSunSky.blend", 'date_time_location', 'normal', 0, 1, "Canberra"],
-	["BL_RS_SS_031", ["Sun&Sky System: Date, Time and Location", "Location: Canberra", "Hour: 12", "Texture Resolution: normal"], "TestSunSky.blend", 'date_time_location', 'normal', 12, 1, "Canberra"],
-	["BL_RS_SS_032", ["Sun&Sky System: Date, Time and Location", "Location: Canberra", "Hour: 24", "Texture Resolution: normal, Expected Black Picture"], "TestSunSky.blend", 'date_time_location', 'normal', 24, 1, "Canberra"]
+
+		["BL_RS_SS_001", ["Azimuth: 0", "Altitude: 0"], "TestSunSky.blend", ss_001],
+		["BL_RS_SS_002", ["Azimuth: 0", "Altitude: 45"], "TestSunSky.blend", ss_002],
+		["BL_RS_SS_003", ["Azimuth: 0", "Altitude: 90"], "TestSunSky.blend", ss_003],
+		["BL_RS_SS_004", ["Azimuth: 90", "Altitude: 0"], "TestSunSky.blend", ss_004],
+		["BL_RS_SS_005", ["Azimuth: 90", "Altitude: 45"], "TestSunSky.blend", ss_005],
+		["BL_RS_SS_006", ["Azimuth: 90", "Altitude: 90"], "TestSunSky.blend", ss_006],
+		["BL_RS_SS_007", ["Azimuth: 180", "Altitude: 0"], "TestSunSky.blend", ss_007],
+		["BL_RS_SS_008", ["Azimuth: 180", "Altitude: 45"], "TestSunSky.blend", ss_008],
+		["BL_RS_SS_009", ["Azimuth: 180", "Altitude: 90"], "TestSunSky.blend", ss_009],
+		["BL_RS_SS_010", ["Azimuth: 270", "Altitude: 0"], "TestSunSky.blend", ss_010],
+		["BL_RS_SS_011", ["Azimuth: 270", "Altitude: 45"], "TestSunSky.blend", ss_011],
+		["BL_RS_SS_012", ["Azimuth: 270", "Altitude: 90"], "TestSunSky.blend", ss_012],
+		["BL_RS_SS_013", ["Azimuth: 360", "Altitude: 0"], "TestSunSky.blend", ss_013],
+		["BL_RS_SS_014", ["Azimuth: 360", "Altitude: 45"], "TestSunSky.blend", ss_014],
+		["BL_RS_SS_015", ["Azimuth: 360", "Altitude: 90"], "TestSunSky.blend", ss_015],
+
+		["BL_RS_SS_016", ["Texture Resolution - Low"], "TestSunSky.blend", ss_016],
+		["BL_RS_SS_017", ["Texture Resolution - Normal"], "TestSunSky.blend", ss_017],
+		["BL_RS_SS_018", ["Texture Resolution - High"], "TestSunSky.blend", ss_018],
+
+		["BL_RS_SS_019", ["Turbidity - 0.2"], "TestSunSky.blend", ss_019],
+		["BL_RS_SS_020", ["Turbidity - 1"], "TestSunSky.blend", ss_020],
+		["BL_RS_SS_021", ["Turbidity - 2"], "TestSunSky.blend", ss_021],
+		["BL_RS_SS_022", ["Turbidity - 5"], "TestSunSky.blend", ss_022],
+
+		["BL_RS_SS_023", ["Intencity: 1"], "TestSunSky.blend", ss_023],
+		["BL_RS_SS_024", ["Intencity: 2"], "TestSunSky.blend", ss_024],
+		["BL_RS_SS_025", ["Intencity: 5"], "TestSunSky.blend", ss_025],
+
+		["BL_RS_SS_026", ["Sun Glow: 1"], "TestSunSky.blend", ss_026],
+		["BL_RS_SS_027", ["Sun Glow: 2"], "TestSunSky.blend", ss_027],
+		["BL_RS_SS_028", ["Sun Glow: 5"], "TestSunSky.blend", ss_028],
+
+		["BL_RS_SS_029", ["Sun Disc: 0.5"], "TestSunSky.blend", ss_029],
+		["BL_RS_SS_030", ["Sun Disc: 1"], "TestSunSky.blend", ss_030],
+		["BL_RS_SS_031", ["Sun Disc: 2"], "TestSunSky.blend", ss_031],
+
+		["BL_RS_SS_032", ["Saturation: 0"], "TestSunSky.blend", ss_032],
+		["BL_RS_SS_033", ["Saturation: 0.5"], "TestSunSky.blend", ss_033],
+		["BL_RS_SS_034", ["Saturation: 1"], "TestSunSky.blend", ss_034],
+
+		["BL_RS_SS_035", ["Horizon Heigh: -0.5"], "TestSunSky.blend", ss_035],
+		["BL_RS_SS_036", ["Horizon Heigh: 0"], "TestSunSky.blend", ss_036],
+		["BL_RS_SS_037", ["Horizon Heigh: 0.5"], "TestSunSky.blend", ss_037],
+
+		["BL_RS_SS_038", ["Horizon Blur: 0.1"], "TestSunSky.blend", ss_038],
+		["BL_RS_SS_039", ["Horizon Blur: 0.5"], "TestSunSky.blend", ss_039],
+		["BL_RS_SS_040", ["Horizon Blur: 1.0"], "TestSunSky.blend", ss_040],
+
+		["BL_RS_SS_041", ["Filter Color: RGB - 1 0 1"], "TestSunSky.blend", ss_041],
+		["BL_RS_SS_042", ["Ground Color: RGB - 0 1 0"], "TestSunSky.blend", ss_042],
+
+		#["BL_RS_SS_043", ["moscow loc + 0    56 38"], "TestSunSky.blend", ss_043],
+		#["BL_RS_SS_044", ["moscow loc + 6    56 38"], "TestSunSky.blend", ss_044],
+		#["BL_RS_SS_045", ["moscow loc + 12    56 38"], "TestSunSky.blend", ss_045],
+		#["BL_RS_SS_046", ["moscow loc + 18    56 38"], "TestSunSky.blend", ss_046],
+		#["BL_RS_SS_047", ["moscow loc + 24    56 38"], "TestSunSky.blend", ss_047],
+		#["BL_RS_SS_048", ["lownormalhigh & 0-30"], "TestSunSky.blend", ss_048],
+		#["BL_RS_SS_049", ["lownormalhigh & 0-30"], "TestSunSky.blend", ss_049],
+		#["BL_RS_SS_050", ["lownormalhigh & 0-30"], "TestSunSky.blend", ss_050],
+		#["BL_RS_SS_051", ["lownormalhigh & 0-30"], "TestSunSky.blend", ss_051],
+		#["BL_RS_SS_052", ["lownormalhigh & 0-30"], "TestSunSky.blend", ss_052],
+		#["BL_RS_SS_053", ["lownormalhigh & 0-30"], "TestSunSky.blend", ss_053],
+		#["BL_RS_SS_054", ["miami beach + 0     26   -80   -5"], "TestSunSky.blend", ss_054],
+		#["BL_RS_SS_055", ["miami beach + 12     26   -80   -5"], "TestSunSky.blend", ss_055],
+		#["BL_RS_SS_056", ["miami beach + 24     26   -80   -5"], "TestSunSky.blend", ss_056],
+		#["BL_RS_SS_057", ["canberra + 0     -35   149  11"], "TestSunSky.blend", ss_057],
+		#["BL_RS_SS_058", ["canberra + 12     -35   149  11"], "TestSunSky.blend", ss_058],
+		#["BL_RS_SS_059", ["canberra + 24     -35   149  11"], "TestSunSky.blend", ss_059]
+		
 	]
 
 	launch_tests()

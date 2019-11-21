@@ -74,6 +74,7 @@ def delete_map_IBL():
 	scene = bpy.context.scene
 	set_value(scene.world.rpr, 'enabled', True)
 	set_value(scene.world.rpr, 'mode', 'IBL')
+	set_value(scene.world.rpr.ibl, 'image', None)
 
 
 def create_sun_sky():
@@ -208,16 +209,59 @@ def deactivate_denoiser():
 	set_value(view_layer.rpr.denoiser, 'enable', False)
 
 
+def deactivate_all_aovs(view_layer):
+	for number in range(1, 29):
+		view_layer.rpr.enable_aovs[number] = False
+
+
+def deleteOldRenderLayerNodes(nodes):
+	for node in nodes:
+		if node.type in ("R_LAYERS", "COMPOSITE", "OUTPUT_FILE"):
+			nodes.remove(node)
+
+
 def activate_aov():
 	scene = bpy.context.scene
-	set_value(scene, 'enable_aovs[1]', False)
-	set_value(scene, 'enable_aovs[6]', True)
+	view_layer = bpy.context.view_layer
+	deactivate_all_aovs(view_layer)
+
+	set_value(scene.render.image_settings, 'file_format', 'JPEG')
+
+	set_value(view_layer, 'use', True)
+	set_value(scene.render, 'use_single_layer', False)
+	set_value(scene, 'use_nodes', True)
+
+	nodes = bpy.data.scenes[0].node_tree.nodes
+	deleteOldRenderLayerNodes(nodes)
+
+	render_layer = nodes.new("CompositorNodeRLayers")
+	composite = nodes.new("CompositorNodeComposite")
+	file_output = nodes.new("CompositorNodeOutputFile")
+
+	scene.node_tree.links.new(render_layer.outputs["Image"], composite.inputs["Image"])
+
+	file_output.base_path = os.path.join(r"{work_dir}", "Color")
+	file_output.file_slots.new("BL28_SM_031")
+
+	view_layer.rpr.enable_aovs[6] = True
+
+	scene.node_tree.links.new(render_layer.outputs["Geometric Normal"], file_output.inputs[1])
 
 
 def deactivate_aov():
-	scene = bpy.context.scene
-	set_value(scene, 'enable_aovs[1]', True)
-	set_value(scene, 'enable_aovs[6]', False)
+	test_case_image = os.path.join(r"{work_dir}", "Color", "{{}}.jpg".format("BL28_SM_031"))
+	aov_image = os.path.join(r"{work_dir}", "Color", "{{}}0001.jpg".format("BL28_SM_031"))
+	if os.path.exists(test_case_image):
+		os.remove(test_case_image)
+	if os.path.exists(aov_image):
+		os.rename(aov_image, test_case_image)
+
+	view_layer = bpy.context.view_layer
+	deactivate_all_aovs(view_layer)
+	view_layer.rpr.enable_aovs[0] = True
+
+	nodes = bpy.data.scenes[0].node_tree.nodes
+	deleteOldRenderLayerNodes(nodes)
 
 
 def create_area_light():
@@ -267,14 +311,14 @@ def import_rpr_matlib():
 	xml_path = os.path.join(material_library.path.get_library_path(), material_name.split('.')[0], material_name)
 	gold_material = bpy.data.materials.new('Gold')
 	gold_material.use_nodes = True
-	bpy.data.objects['shader_ball'].material_slots[0].material = gold_material
+	bpy.data.objects['shader_ball'].active_material = gold_material
 	material_library.import_xml_material(gold_material, material_name, xml_path, False)
 
 
 def create_and_assign_uber():
 	uber_material = bpy.data.materials.new('Uber')
 	uber_material.use_nodes = True
-	bpy.data.objects['shader_ball'].material_slots[0].material = uber_material
+	bpy.data.objects['shader_ball'].active_material = uber_material
 	tree = uber_material.node_tree
 	uber_node = tree.nodes.new(type='RPRShaderNodeUber')
 	output_node = tree.nodes['Material Output']
@@ -285,19 +329,45 @@ def create_and_assign_uber():
 def create_and_assign_principled_bsdf():
 	principled_bsdf_material = bpy.data.materials.new('Principled BSDF')
 	principled_bsdf_material.use_nodes = True
-	bpy.data.objects['shader_ball'].material_slots[0].material = principled_bsdf_material
+	bpy.data.objects['shader_ball'].active_material = principled_bsdf_material
 	tree = principled_bsdf_material.node_tree
 	principled_bsdf_node = tree.nodes['Principled BSDF']
 	principled_bsdf_node.inputs['Base Color'].default_value = (0.00643981, 0.8, 0.0358057, 1)
 
 
 def assign_standart_material():
-	bpy.data.objects['shader_ball'].material_slots[0].material = bpy.data.materials['Default']
+	bpy.data.objects['shader_ball'].active_material = bpy.data.materials['Default']
+
+
+def activateIPR():
+	for area in bpy.context.workspace.screens[0].areas:
+		for space in area.spaces:
+			if space.type == 'VIEW_3D':
+				space.shading.type = 'RENDERED'
+
+
+def deactivateIPR():
+	for area in bpy.context.workspace.screens[0].areas:
+		for space in area.spaces:
+			if space.type == 'VIEW_3D':
+				space.shading.type = 'SOLID'
+
+
+def activate_transparent_background():
+	scene = bpy.context.scene
+	set_value(scene.render, 'film_transparent', True)
+
+
+def deactivate_transparent_background():
+	scene = bpy.context.scene
+	set_value(scene.render, 'film_transparent', False)
+
 
 
 if __name__ == '__main__':
 
 	list_tests = [
+
 		["BL28_SM_001", ["Install RPR"], "pass", "pass", "rpr_default.blend", 1],
 		["BL28_SM_002", ["Select RPR"], "pass", "pass", "rpr_default.blend", 1],
 		["BL28_SM_003", ["Open RPR scene"], "pass", "pass", "rpr_default.blend", 1],
@@ -308,8 +378,8 @@ if __name__ == '__main__':
 		["BL28_SM_008", ["RPR Uber material", "Pass Limit: 50"], create_and_assign_uber, assign_standart_material, "default.blend", 50],
 		["BL28_SM_009", ["Sun_Sky", "Pass Limit: 50"], create_sun_sky, delete_sun_sky, "default.blend", 50],
 		["BL28_SM_010", ["IBL", "Pass Limit: 50"], create_IBL, empty, "default.blend", 50],
-		["BL28_SM_011", ["IBL with HDR", "Pass Limit: 50"], update_IBL_hdr, empty, "default.blend", 50],
-		["BL28_SM_012", ["IBL with EXR", "Pass Limit: 50"], update_IBL_exr, delete_map_IBL, "default.blend", 50],
+		["BL28_SM_011", ["IBL with HDR", "Pass Limit: 50"], update_IBL_hdr, delete_map_IBL, "default.blend", 50],
+		["BL28_SM_012", ["IBL with EXR", "Pass Limit: 50"], update_IBL_exr, empty, "default.blend", 50],
 		["BL28_SM_013", ["Render 1 pass"], empty, empty, "default.blend", 1],
 		["BL28_SM_014", ["Render 100 pass"], empty, empty, "default.blend", 100],
 		["BL28_SM_015", ["Render 500 pass"], empty, empty, "default.blend", 500],
@@ -331,23 +401,18 @@ if __name__ == '__main__':
 		["BL28_SM_028", ["Denoiser ML", "Pass Limit: 50"], activate_denoiser_ml, deactivate_denoiser, "default.blend", 50],
 		["BL28_SM_029", ["Principled BSDF", "Pass Limit: 50"], create_and_assign_principled_bsdf, assign_standart_material, "default.blend", 50],
 		["BL28_SM_030", ["Mat lib", "Pass Limit: 50"], import_rpr_matlib, assign_standart_material, "default.blend", 50],
-
-		# Wait for ticket 847
-		#["BL28_SM_031", ["AOV Geometric Normal", "Pass Limit: 50"], activate_aov, deactivate_aov, "default.blend", 50],
-
+		["BL28_SM_031", ["AOV Geometric Normal", "Pass Limit: 50"], activate_aov, deactivate_aov, "default.blend", 50],
 		["BL28_SM_032", ["Area light", "Pass Limit: 50"], create_area_light, delete_area_light, "default.blend", 50],
 		["BL28_SM_033", ["Instances", "Pass Limit: 50"], copy_objects, empty, "instances.blend", 50],
 		["BL28_SM_034", ["5 lights", "Pass Limit: 50"], empty, empty, "5_lights.blend", 50],
 		["BL28_SM_035", ["AOV SC", "Pass Limit: 50"], empty, empty, "AOV_SC.blend", 50],
 		["BL28_SM_036", ["SSS", "Pass Limit: 50"], empty, empty, "SSS_Test.blend", 50],
 		["BL28_SM_037", ["Displacement", "Pass Limit: 50"], empty, empty, "Displacement.blend", 50],
-
 		["BL28_SM_038", ["Quality", "Pass Limit: 50"], activate_medium_quality, deactivate_medium_quality, "WaterInsideGlass.blend", 50],
-
-		# Not-automated
-		#["BL28_SM_039", ["IPR"], empty, empty, "default.blend", 50],
-
-		["BL28_SM_040", ["Hair", "Pass Limit: 50"], activate_hair, empty, "default.blend", 50]
+		["BL28_SM_039", ["IPR"], activateIPR, deactivateIPR, "default.blend", 50],
+		["BL28_SM_040", ["Hair", "Pass Limit: 50"], activate_hair, empty, "default.blend", 50],
+		["BL28_SM_041", ["Transparent Background", "Pass Limit: 50"], activate_transparent_background, deactivate_transparent_background, "AOV_SC.blend", 50],
+		["BL28_SM_042", ["Volumetric Light", "Pass Limit: 50"], empty, empty, "Volume.blend", 50]
 	]
 
 	launch_tests()
