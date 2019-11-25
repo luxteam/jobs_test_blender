@@ -70,7 +70,7 @@ def main(args):
 	p = subprocess.Popen(cmdScriptPath, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 	stdout, stderr = p.communicate()
 
-	with open(os.path.join(args.output, "renderTool.log"), 'w', encoding='utf-8') as file:
+	with open(os.path.join(args.output, "renderTool.log"), 'a', encoding='utf-8') as file:
 		stdout = stdout.decode("utf-8")
 		file.write(stdout)
 

@@ -193,15 +193,18 @@ def write_status(directory, status):
 def launch_tests():
 
 	files = os.listdir(r"{work_dir}")
-	json_files = list(filter(lambda x: x.endswith('RPR.json'), files))
+	json_files = len(list(filter(lambda x: x.endswith('RPR.json'), files)))
 	if not os.path.exists(os.path.join(r"{work_dir}", "Color")):
 		os.makedirs(os.path.join(r"{work_dir}", "Color"))
 
 	status = 0
 
+	if json_files > 0:
+		json_files += 1
+
 	define_expected_result()
 
-	for i in range(len(json_files), len(list_tests)):
+	for i in range(json_files, len(list_tests)):
 
 		try:
 			rc = prerender(list_tests[i])
@@ -218,8 +221,8 @@ def launch_tests():
 			status -= 1
 			if status == -3:
 				files = os.listdir(r"{work_dir}")
-				json_files = list(filter(lambda x: x.endswith('RPR.json'), files))
-				for i in range(len(json_files), len(list_tests)):
+				json_files = len(list(filter(lambda x: x.endswith('RPR.json'), files)))
+				for i in range(json_files, len(list_tests)):
 					create_report(list_tests[i][0], list_tests[i][1], "failed")
 					write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'failed')
 				exit()
