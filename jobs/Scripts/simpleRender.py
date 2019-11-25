@@ -104,7 +104,7 @@ if __name__ == "__main__":
 		try:        
 			with open(os.path.join(os.path.dirname(__file__),  args.template)) as f:
 				script_template = f.read()
-			return len(script_template.replace(" ", "").split(",\n[\"BL"))
+			return len(script_template.replace(" ", "").split(",\n[\"BL28"))
 		except OSError as e:
 			return -1
 
@@ -112,8 +112,12 @@ if __name__ == "__main__":
 	current_test = 0
 
 	while current_test < total_count:
+		core_config.main_logger.info("Starting main func")
 		rc = main(args) 
 		current_test = getJsonCount()
+		core_config.main_logger.info("Current tests: {}".format(current_test))
+		core_config.main_logger.info("Total tests: {}".format(total_count))
+		core_config.main_logger.info("RC: {}".format(rc))
 
 	kill_process(PROCESS)
 	exit(1)
