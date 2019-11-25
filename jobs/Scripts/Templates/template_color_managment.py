@@ -22,33 +22,34 @@ def prerender(test_list):
 if __name__ == "__main__":
 	
 	list_tests = [
+	
 		["BL28_RS_CM_001", ["sRGB Display Device"], "ComplexTestUber.blend", "sRGB", "Standard", "None", 0, 1, "sRGB"],
-		# ["BL28_RS_CM_002", ["DCI-P3 Display Device"], "ComplexTestUber.blend", "DCI-P3", "Standard", "None", 0, 1, "sRGB"],
+		#["BL28_RS_CM_002", ["DCI-P3 Display Device"], "ComplexTestUber.blend", "DCI-P3", "Standard", "None", 0, 1, "sRGB"],
 		["BL28_RS_CM_003", ["None Display Device"], "ComplexTestUber.blend", "None", "Standard", "None", 0, 1, "sRGB"],
-		# ["BL28_RS_CM_004", ["Rec709 Display Device"], "ComplexTestUber.blend", "Rec709", "Standard", "None", 0, 1, "sRGB"],
+		#["BL28_RS_CM_004", ["Rec709 Display Device"], "ComplexTestUber.blend", "Rec709", "Standard", "None", 0, 1, "sRGB"],
 		["BL28_RS_CM_005", ["XYZ Display Device"], "ComplexTestUber.blend", "XYZ", "Standard", "None", 0, 1, "sRGB"],
 		["BL28_RS_CM_006", ["Defaut Display Space"], "ComplexTestUber.blend", "sRGB", "Standard", "None", 0, 1, "sRGB"],
 		["BL28_RS_CM_007", ["Filmic Display Space"], "ComplexTestUber.blend", "sRGB", "Filmic", "None", 0, 1, "sRGB"],
-		# ["BL28_RS_CM_008", ["RRT Display Space"], "ComplexTestUber.blend", "sRGB", "RRT", "None", 0, 1, "sRGB"],
-		# ["BL28_RS_CM_009", ["Film Display Space"], "ComplexTestUber.blend", "sRGB", "Film", "None", 0, 1, "sRGB"],
+		#["BL28_RS_CM_008", ["RRT Display Space"], "ComplexTestUber.blend", "sRGB", "RRT", "None", 0, 1, "sRGB"],
+		#["BL28_RS_CM_009", ["Film Display Space"], "ComplexTestUber.blend", "sRGB", "Film", "None", 0, 1, "sRGB"],
 		["BL28_RS_CM_010", ["Raw Display Space"], "ComplexTestUber.blend", "sRGB", "Raw", "None", 0, 1, "sRGB"],
 		["BL28_RS_CM_011", ["Filmic Log Display Space"], "ComplexTestUber.blend", "sRGB", "Filmic Log", "None", 0, 1, "sRGB"],
 		["BL28_RS_CM_012", ["False Color Display Space"], "ComplexTestUber.blend", "sRGB", "False Color", "None", 0, 1, "sRGB"],
 		["BL28_RS_CM_013", ["Base Contrast Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Base Contrast", 0, 1, "sRGB"],
-		# ["BL28_RS_CM_014", ["Agfa Agfacolor Optima II 200 Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Agfa Agfacolor Optima II 200 Contrast", 0, 1, "sRGB"],
-		# ["BL28_RS_CM_015", ["Agfa Agfacolor Optima II 100 Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Agfa Agfacolor Optima II 100 Contrast", 0, 1, "sRGB"],
-		# ["BL28_RS_CM_016", ["Agfa Agfacolor HDC 200 Plus Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Agfa Agfacolor HDC 200 Plus Contrast", 0, 1, "sRGB"],
-		# ["BL28_RS_CM_017", ["Agfa Agfacolor Futura II 200 Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Agfa Agfacolor Futura II 200 Contrast", 0, 1, "sRGB"],
-		# ["BL28_RS_CM_018", ["Agfa Agfacolor Futura 200 Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Agfa Agfacolor Futura 200 Contrast", 0, 1, "sRGB"],
+		#["BL28_RS_CM_014", ["Agfa Agfacolor Optima II 200 Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Agfa Agfacolor Optima II 200 Contrast", 0, 1, "sRGB"],
+		#["BL28_RS_CM_015", ["Agfa Agfacolor Optima II 100 Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Agfa Agfacolor Optima II 100 Contrast", 0, 1, "sRGB"],
+		#["BL28_RS_CM_016", ["Agfa Agfacolor HDC 200 Plus Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Agfa Agfacolor HDC 200 Plus Contrast", 0, 1, "sRGB"],
+		#["BL28_RS_CM_017", ["Agfa Agfacolor Futura II 200 Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Agfa Agfacolor Futura II 200 Contrast", 0, 1, "sRGB"],
+		#["BL28_RS_CM_018", ["Agfa Agfacolor Futura 200 Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Agfa Agfacolor Futura 200 Contrast", 0, 1, "sRGB"],
 		["BL28_RS_CM_019", ["Very Low Contrast Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Very Low Contrast", 0, 1, "sRGB"],
 		["BL28_RS_CM_020", ["Low Contrast Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Low Contrast", 0, 1, "sRGB"],
 		["BL28_RS_CM_021", ["Medium Low Contrast Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Medium Low Contrast", 0, 1, "sRGB"],
 		["BL28_RS_CM_022", ["Medium High Contrast Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Medium High Contrast", 0, 1, "sRGB"],
 		["BL28_RS_CM_023", ["High Contrast Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - High Contrast", 0, 1, "sRGB"],
 		["BL28_RS_CM_024", ["Very High Contrast Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Very High Contrast", 0, 1, "sRGB"],
-		# ["BL28_RS_CM_025", ["Kodak Portra 160 NC Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Kodak Portra 160 NC Contrast", 0, 1, "sRGB"],
-		# ["BL28_RS_CM_026", ["Kodak Max Zoom 800 Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Kodak Max Zoom 800 Contrast", 0, 1, "sRGB"],
-		# ["BL28_RS_CM_027", ["Kodak Gold 200 Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Kodak Gold 200 Contrast", 0, 1, "sRGB"],
+		#["BL28_RS_CM_025", ["Kodak Portra 160 NC Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Kodak Portra 160 NC Contrast", 0, 1, "sRGB"],
+		#["BL28_RS_CM_026", ["Kodak Max Zoom 800 Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Kodak Max Zoom 800 Contrast", 0, 1, "sRGB"],
+		#["BL28_RS_CM_027", ["Kodak Gold 200 Look"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Kodak Gold 200 Contrast", 0, 1, "sRGB"],
 		["BL28_RS_CM_028", ["Explosure -32"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Base Contrast", -32, 1, "sRGB"],
 		["BL28_RS_CM_029", ["Explosure -10"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Base Contrast", -10, 1, "sRGB"],
 		["BL28_RS_CM_030", ["Explosure -5"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Base Contrast", -5, 1, "sRGB"],
@@ -68,8 +69,9 @@ if __name__ == "__main__":
 		["BL28_RS_CM_044", ["Non-Color Color Space"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Base Contrast", 0, 1, "Non-Color"],
 		["BL28_RS_CM_045", ["Raw Color Space"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Base Contrast", 0, 1, "Raw"],
 		["BL28_RS_CM_046", ["sRGB Color Space"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Base Contrast", 0, 1, "sRGB"],
-		# ["BL28_RS_CM_047", ["VD16 Color Space"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Base Contrast", 0, 1, "VD16"],
+		#["BL28_RS_CM_047", ["VD16 Color Space"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Base Contrast", 0, 1, "VD16"],
 		["BL28_RS_CM_048", ["XYZ Color Space"], "ComplexTestUber.blend", "sRGB", "Standard", "Standard - Base Contrast", 0, 1, "XYZ"]
+	
 	]
 
 	launch_tests()

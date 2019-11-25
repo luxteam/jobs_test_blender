@@ -762,6 +762,7 @@ def uber_088():
 if __name__ == '__main__':
 
 	list_tests = [
+	
 		# Diffuse
 		["BL28_MAT_UBR_001", ["diffuseColor.png"], "UBER.blend", uber_001, delete_imagemap],
 		["BL28_MAT_UBR_002", ["diffuseColor.tga"], "UBER.blend", uber_002, delete_imagemap],
@@ -859,6 +860,7 @@ if __name__ == '__main__':
 		["BL28_MAT_UBR_086", ["transparency.tga"], "UBER.blend", uber_086, delete_imagemap],
 		["BL28_MAT_UBR_087", ["Transparency 0"], "UBER.blend", uber_087, default_settings],
 		["BL28_MAT_UBR_088", ["Transparency 0.5"], "UBER.blend", uber_088, default_settings]
+
 	]
 
 	launch_tests()

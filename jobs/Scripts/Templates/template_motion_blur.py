@@ -18,11 +18,13 @@ def prerender(test_list):
 if __name__ == "__main__":
 
 	list_tests = [
+
 		["BL28_RS_MB_001", ["Default"], "MotionBlur.blend", 1], 
 		["BL28_RS_MB_002", ["Exposure: 0"], "MotionBlur.blend", 0], 
 		["BL28_RS_MB_003", ["Exposure: 0.5"], "MotionBlur.blend", 0,5], 
 		["BL28_RS_MB_004", ["Exposure: 5"], "MotionBlur.blend", 5],
 		["BL28_RS_MB_005", ["Exposure: 10"], "MotionBlur.blend", 10]
+	
 	]
 
 	launch_tests()

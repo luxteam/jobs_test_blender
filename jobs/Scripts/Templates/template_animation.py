@@ -16,6 +16,7 @@ def prerender(test_list):
 if __name__ == "__main__":
 
 	list_tests = [
+
 		["BL28_RS_AN_001", ["Frame: 41"], "Keyed_Animation.blend", 41], 
 		["BL28_RS_AN_002", ["Frame: 42"], "Keyed_Animation.blend", 42],
 		["BL28_RS_AN_003", ["Frame: 43"], "Keyed_Animation.blend", 43],
@@ -76,6 +77,7 @@ if __name__ == "__main__":
 		["BL28_RS_AN_058", ["Frame: 127"], "NonKeyed_Animation.blend", 127],
 		["BL28_RS_AN_059", ["Frame: 128"], "NonKeyed_Animation.blend", 128],
 		["BL28_RS_AN_060", ["Frame: 129"], "NonKeyed_Animation.blend", 129]
+		
 	]
 
 	launch_tests()

@@ -413,6 +413,7 @@ if __name__ == '__main__':
 		["BL28_SM_040", ["Hair", "Pass Limit: 50"], activate_hair, empty, "default.blend", 50],
 		["BL28_SM_041", ["Transparent Background", "Pass Limit: 50"], activate_transparent_background, deactivate_transparent_background, "AOV_SC.blend", 50],
 		["BL28_SM_042", ["Volumetric Light", "Pass Limit: 50"], empty, empty, "Volume.blend", 50]
+	
 	]
 
 	launch_tests()

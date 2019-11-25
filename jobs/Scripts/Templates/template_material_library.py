@@ -20,6 +20,7 @@ def prerender(test_list):
 if __name__ == "__main__":
 
     list_tests = [
+
         ["BL28_MAT_LIB_001", ["Material: BarnFindOrange Solid"], "Test_Scene.blend", "BarnFindOrange_Solid"],
         ["BL28_MAT_LIB_002", ["Material: BasketCaseBlue Solid"], "Test_Scene.blend", "BasketCaseBlue_Solid"],
         ["BL28_MAT_LIB_003", ["Material: BeachBumAqua Metallic"], "Test_Scene.blend", "BeachBumAqua_Metallic"],
@@ -322,6 +323,7 @@ if __name__ == "__main__":
         ["BL28_MAT_LIB_300", ["Material: Wood Rustic Cherry"], "Test_Scene.blend", "Wood_Rustic_Cherry"],
         ["BL28_MAT_LIB_301", ["Material: Wood Wenge Glossy"], "Test_Scene.blend", "Wood_Wenge_Glossy"],
         ["BL28_MAT_LIB_302", ["Material: Wood Wenge Unfinished"], "Test_Scene.blend", "Wood_Wenge_Unfinished"]
+    
     ]
 
     launch_tests()

@@ -1,6 +1,7 @@
 import argparse
 import sys
 import os
+import re
 import subprocess
 import psutil
 import json
@@ -104,7 +105,7 @@ if __name__ == "__main__":
 		try:        
 			with open(os.path.join(os.path.dirname(__file__),  args.template)) as f:
 				script_template = f.read()
-			return len(script_template.replace(" ", "").split(",\n[\"BL28"))
+			return len(re.findall(r'[^#]\["BL28_\w+', script_template))
 		except OSError as e:
 			return -1
 

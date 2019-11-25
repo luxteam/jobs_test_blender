@@ -275,6 +275,7 @@ def vm_032():
 if __name__ == '__main__':
 
 	list_tests = [
+
 		["BL28_MAT_VM_001", ["Volume Color RGB - 0 0 0"], "Volume.blend", vm_001],
 		["BL28_MAT_VM_002", ["Volume Color RGB - 0.5 0.5 0.5"], "Volume.blend", vm_002],
 		["BL28_MAT_VM_003", ["Volume Color RGB - 1 1 1"], "Volume.blend", vm_003],
@@ -317,7 +318,6 @@ if __name__ == '__main__':
 		#["BL28_MAT_VM_036", ["Volume Blackbody Tint Checker texture"], "Volume.blend", vm_036],
 		#["BL28_MAT_VM_037", ["Volume Blackbody Tint .tga"], "Volume.blend", vm_037],
 		#["BL28_MAT_VM_038", ["Volume Blackbody Tint .png"], "Volume.blend", vm_038],
-
 
 	]
 

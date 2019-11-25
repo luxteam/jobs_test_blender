@@ -21,6 +21,7 @@ def prerender(test_list):
 if __name__ == "__main__":
 	
 	list_tests = [
+
 		["BL28_RS_IS_001", ["Preset: 4K DCI 2160p"], "ComplexTestUber.blend", 4096, 2160, 1, 1], 
 		["BL28_RS_IS_002", ["Preset: 4K UW 1600p"], "ComplexTestUber.blend", 3840, 1600, 1, 1],
 		["BL28_RS_IS_003", ["Preset: 4k UHDTV 2160p"], "ComplexTestUber.blend", 3840, 2160, 1, 1], 
@@ -38,13 +39,14 @@ if __name__ == "__main__":
 		["BL28_RS_IS_015", ["Resolution: 2000x2000"], "ComplexTestUber.blend", 2000, 2000, 1, 1], 
 		["BL28_RS_IS_016", ["Resolution: 3000x3000"], "ComplexTestUber.blend", 3000, 3000, 1, 1], 
 		["BL28_RS_IS_017", ["Resolution: 4000x4000"], "ComplexTestUber.blend", 4000, 4000, 1, 1], 
-		# ["BL28_RS_IS_018", ["Resolution: 5000x5000"], "ComplexTestUber.blend", 5000, 5000, 1, 1], 
-		# ["BL28_RS_IS_019", ["Resolution: 6000x6000"], "ComplexTestUber.blend", 6000, 6000, 1, 1],
-		# ["BL28_RS_IS_020", ["Resolution: 7000x7000"], "ComplexTestUber.blend", 7000, 7000, 1, 1], 
-		# ["BL28_RS_IS_021", ["Resolution: 8000x8000"], "ComplexTestUber.blend", 8000, 8000, 1, 1],
+		#["BL28_RS_IS_018", ["Resolution: 5000x5000"], "ComplexTestUber.blend", 5000, 5000, 1, 1], 
+		#["BL28_RS_IS_019", ["Resolution: 6000x6000"], "ComplexTestUber.blend", 6000, 6000, 1, 1],
+		#["BL28_RS_IS_020", ["Resolution: 7000x7000"], "ComplexTestUber.blend", 7000, 7000, 1, 1], 
+		#["BL28_RS_IS_021", ["Resolution: 8000x8000"], "ComplexTestUber.blend", 8000, 8000, 1, 1],
 		["BL28_RS_IS_022", ["Resolution: 2K"], "ComplexTestUber.blend", 2048, 1152, 1, 1], 
 		["BL28_RS_IS_023", ["Resolution: 4K"], "ComplexTestUber.blend", 4096, 3204, 1, 1],
 		["BL28_RS_IS_024", ["Resolution: 1500x1125"], "ComplexTestUber.blend", 1500, 1125, 1, 1]
+	
 	]
 	
 	launch_tests()

@@ -764,12 +764,12 @@ if __name__ == '__main__':
 
 		["BL28_MAT_NODE_078", ["Shadow Catcher"], "RPR_Nodes.blend", node_078],
 
-		# ["BL28_MAT_NODE_079", ["RPR Fresnel Schlick, RPR Fresnel"], "RPR_Nodes.blend", node_079],
-		# ["BL28_MAT_NODE_080", ["RPR Fresnel Schlick node, Reflectance - 0.5"], "RPR_Nodes.blend",node_080],
-		# ["BL28_MAT_NODE_081", ["RPR Fresnel Schlick node, Reflectance - 1"], "RPR_Nodes.blend", node_081],
-		# ["BL28_MAT_NODE_082", ["RPR Fresnel node, IOR - 0"], "RPR_Nodes.blend", "Collection7", node_082],
-		# ["BL28_MAT_NODE_083", ["RPR Fresnel node, IOR - 1"], "RPR_Nodes.blend", "Collection7", node_083],
-		# ["BL28_MAT_NODE_084", ["RPR Fresnel node, IOR - 3"], "RPR_Nodes.blend", "Collection7", node_084],
+		#["BL28_MAT_NODE_079", ["RPR Fresnel Schlick, RPR Fresnel"], "RPR_Nodes.blend", node_079],
+		#["BL28_MAT_NODE_080", ["RPR Fresnel Schlick node, Reflectance - 0.5"], "RPR_Nodes.blend",node_080],
+		#["BL28_MAT_NODE_081", ["RPR Fresnel Schlick node, Reflectance - 1"], "RPR_Nodes.blend", node_081],
+		#["BL28_MAT_NODE_082", ["RPR Fresnel node, IOR - 0"], "RPR_Nodes.blend", "Collection7", node_082],
+		#["BL28_MAT_NODE_083", ["RPR Fresnel node, IOR - 1"], "RPR_Nodes.blend", "Collection7", node_083],
+		#["BL28_MAT_NODE_084", ["RPR Fresnel node, IOR - 3"], "RPR_Nodes.blend", "Collection7", node_084],
 
 		["BL28_MAT_NODE_085", ["RPR Passthrough Node"], "RPR_Nodes.blend", node_085],
 		["BL28_MAT_NODE_086", ["RPR Procedural UV, Type - Plane"], "RPR_Nodes.blend", node_086],
