@@ -9,7 +9,7 @@
         <argument>--render_mode "{RenderDevice}"</argument>
     	<argument>--resolution_x {rx}</argument>
     	<argument>--resolution_y {ry}</argument>
-        <argument>--resource_path "{ScenesDir}/Render_Settings"</argument>
+        <argument>--resource_path "{ScenesDir}/Render_Settings/Denoiser"</argument>
         <argument>--output "{OutputDir}"</argument>
 	    <argument>--package_name "Denoiser"</argument>
     </execute>
