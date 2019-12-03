@@ -219,7 +219,7 @@ def launch_tests():
 			create_report(list_tests[i][0], list_tests[i][1], "failed")
 			write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'failed')
 			status -= 1
-			if status == -3:
+			if status == -10:
 				files = os.listdir(r"{work_dir}")
 				json_files = len(list(filter(lambda x: x.endswith('RPR.json'), files)))
 				for i in range(json_files, len(list_tests)):
