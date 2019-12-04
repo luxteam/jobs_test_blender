@@ -9,6 +9,7 @@ import traceback
 from shutil import copyfile
 import pyrpr
 from rprblender import material_library
+from rprblender.utils.user_settings import get_user_settings
 
 
 def set_value(path, name, value):
@@ -54,18 +55,18 @@ def enable_rpr_render(scene):
 
 
 def set_render_device(render_mode):
-	render_devices = bpy.context.preferences.addons['rprblender'].preferences.settings.final_devices
+	render_device_settings = get_user_settings().final_devices
 	if render_mode == 'dual':
-		set_value(bpy.context.preferences.addons['rprblender'].preferences.settings.final_devices, "gpu_states[0]", True)
-		set_value(bpy.context.preferences.addons['rprblender'].preferences.settings.final_devices, "cpu_state", True)
-		device_name = pyrpr.Context.cpu_state['name'] + " & " + pyrpr.Context.gpu_devices[0]['name']
+		set_value(render_device_settings, "gpu_states[0]", True)
+		set_value(render_device_settings, "cpu_state", True)
+		device_name = pyrpr.Context.cpu_device['name'] + " & " + pyrpr.Context.gpu_devices[0]['name']
 	elif render_mode == 'cpu':
-		set_value(bpy.context.preferences.addons['rprblender'].preferences.settings.final_devices, "cpu_state", True)
-		set_value(bpy.context.preferences.addons['rprblender'].preferences.settings.final_devices, "gpu_states[0]", False)
-		device_name = pyrpr.Context.cpu_state['name']
+		set_value(render_device_settings, "cpu_state", True)
+		set_value(render_device_settings, "gpu_states[0]", False)
+		device_name = pyrpr.Context.cpu_device['name']
 	elif render_mode == 'gpu':
-		set_value(bpy.context.preferences.addons['rprblender'].preferences.settings.final_devices, "cpu_state", False)
-		set_value(bpy.context.preferences.addons['rprblender'].preferences.settings.final_devices, "gpu_states[0]", True)
+		set_value(render_device_settings, "cpu_state", False)
+		set_value(render_device_settings, "gpu_states[0]", True)
 		device_name = pyrpr.Context.gpu_devices[0]['name']
 
 	return device_name
@@ -93,7 +94,7 @@ def render(*argv):
 	if not test_case.startswith("BL28_RS_IF"):
 		set_value(scene.render.image_settings, 'file_format', 'JPEG')
 
-	if not (test_case.startswith("BL28_RS_AS") or test_case.startswith("BL28_L_EMIS") or test_case.startswith("BL28_L_INTLT")):
+	if not test_case.startswith("BL28_RS_AS" or test_case.startswith("BL28_L_EMIS") or test_case.startswith("BL28_L_INTLT")):
 		set_value(scene.rpr.limits, 'min_samples', 16)
 		set_value(scene.rpr.limits, 'max_samples', 64)
 
@@ -142,9 +143,6 @@ def render(*argv):
 
 def create_report(*argv):
 	
-	# get scene context
-	scene = bpy.context.scene
-
 	# set render device & get render device name
 	render_mode = '{render_mode}'
 	device_name = set_render_device(render_mode)
@@ -190,6 +188,16 @@ def write_status(directory, status):
 		json.dump(json_report, file, indent=' ')
 
 
+def define_expected_result():
+	expected_tests = []
+
+	for test in list_tests:
+		expected_tests.append(test[0])
+
+	with open(os.path.join(r"{work_dir}", "expected.json"), 'w') as file:
+		json.dump(expected_tests, file, indent=4)
+
+
 def launch_tests():
 
 	files = os.listdir(r"{work_dir}")
@@ -199,10 +207,30 @@ def launch_tests():
 
 	status = 0
 
+	# generate fail report after blender crash
 	if json_files > 0:
-		json_files += 1
+		json_files = list(filter(lambda x: x.endswith('RPR.json'), files))
+		if json_files:
+			# delete .json & _RPR
+			last_test_case = json_files[-1].split('.')[0][:-4]
+			last_case_number = int(last_test_case[-3:])
+			fail_test_case = last_test_case[:-3] + str(last_case_number + 1).zfill(3)
+			for i in list_tests:
+				if i[0] == fail_test_case:
+					fail_script_info = i[1]
+			create_report(fail_test_case, fail_test_case, "failed")
+			write_status(os.path.join(r"{work_dir}", fail_test_case + "_RPR.json"), 'failed')
+		else:
+			create_report(list_tests[0][0], list_tests[0][1], "failed")
+			write_status(os.path.join(r"{work_dir}", list_tests[0][0] + "_RPR.json"), 'failed')
 
 	define_expected_result()
+
+	files = os.listdir(r"{work_dir}")
+	json_files = len(list(filter(lambda x: x.endswith('RPR.json'), files)))
+
+	if json_files > 0:
+		status = -1
 
 	for i in range(json_files, len(list_tests)):
 
@@ -232,11 +260,4 @@ def launch_tests():
 				str(status) + " | last_status: " + str(rc) + " | total count: " + str(len(list_tests)) + "\n")
 
 
-def define_expected_result():
-	expected_tests = []
 
-	for test in list_tests:
-		expected_tests.append(test[0])
-
-	with open(os.path.join(r"{work_dir}", "expected.json"), 'w') as file:
-		json.dump(expected_tests, file, indent=4)
