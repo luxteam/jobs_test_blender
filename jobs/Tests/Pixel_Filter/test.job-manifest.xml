@@ -11,6 +11,7 @@
     	<argument>--resolution_y {ry}</argument>
         <argument>--resource_path "{ScenesDir}/Render_Settings"</argument>
         <argument>--output "{OutputDir}"</argument>
+        <argument>--testCases "{TestCases}"</argument>
 	    <argument>--package_name "Pixel_Filter"</argument>
     </execute>
 
