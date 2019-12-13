@@ -29,6 +29,7 @@ def createArgsParser():
 	parser.add_argument('--template', required=True)
 	parser.add_argument('--resolution_x', required=True)
 	parser.add_argument('--resolution_y', required=True)
+	parser.add_argument('--testCases', required=True)
 	parser.add_argument('--package_name', required=True)
 	parser.add_argument('--output', required=True)
 
@@ -47,14 +48,14 @@ def main(args):
 
 	blender_script_template = base + blender_script_template
 
-	BlenderScript = blender_script_template.format(work_dir=work_dir, render_mode=args.render_mode, resource_path=args.resource_path, \
+	blenderScript = blender_script_template.format(work_dir=work_dir, render_mode=args.render_mode, resource_path=args.resource_path, testCases=args.testCases,\
 													resolution_x=args.resolution_x, resolution_y=args.resolution_y, package_name=args.package_name)
 
-	BlenderScriptPath = os.path.join(work_dir, 'script.py')
-	with open(BlenderScriptPath, 'w') as f:
-		f.write(BlenderScript)
+	blenderScriptPath = os.path.join(work_dir, 'script.py')
+	with open(blenderScriptPath, 'w') as f:
+		f.write(blenderScript)
 
-	cmdRun = '"{tool}" -b -P "{template}"\n'.format(tool=args.tool, template=BlenderScriptPath)
+	cmdRun = '"{tool}" -b -P "{template}"\n'.format(tool=args.tool, template=blenderScriptPath)
 
 	system_pl = platform.system()
 	if (system_pl == "Windows"):
@@ -98,6 +99,13 @@ if __name__ == "__main__":
 	except OSError as e:
 		pass
 
+	try:
+		with open(os.path.join(os.path.dirname(__file__), args.testCases)) as f:
+			tc = f.read()
+			args.testCases = json.loads(tc)[args.package_name]
+	except Exception as e:
+		args.testCases = "all"
+
 	def getJsonCount():
 		return len(list(filter(lambda x: x.endswith('RPR.json'), os.listdir(args.output))))
 
@@ -109,7 +117,11 @@ if __name__ == "__main__":
 		except OSError as e:
 			return -1
 
-	total_count = totalCount()
+	if args.testCases == "all":
+		total_count = totalCount()
+	else:
+		total_count = len(args.testCases.split(','))
+
 	current_test = 0
 
 	while current_test < total_count:
