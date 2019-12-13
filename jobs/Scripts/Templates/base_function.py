@@ -216,8 +216,9 @@ def launch_tests():
 		if json_files:
 			# delete .json & _RPR
 			last_test_case = json_files[-1].split('.')[0][:-4]
+			test_case_prefix = json_files[-1].split('.')[0][:-7]
 			last_case_number = int(last_test_case[-3:])
-			fail_test_case = str(last_case_number + 1).zfill(3)
+			fail_test_case = test_case_prefix + str(last_case_number + 1).zfill(3)
 			for i in list_tests:
 				if i[0] == fail_test_case:
 					fail_script_info = i[1]
