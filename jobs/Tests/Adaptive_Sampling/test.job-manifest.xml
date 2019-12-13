@@ -3,7 +3,7 @@
 
     <outpath value="{OutputDir}"/>
 
-    <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="8000">
+    <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="7200">
         <argument>--tool "{Tool}"</argument>
         <argument>--template "{ResourcesDir}/Templates/template_adaptive_sampling.py"</argument>
         <argument>--render_mode "{RenderDevice}"</argument>
