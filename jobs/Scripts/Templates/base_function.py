@@ -222,7 +222,7 @@ def launch_tests():
 			for i in list_tests:
 				if i[0] == fail_test_case:
 					fail_script_info = i[1]
-			create_report(fail_test_case, fail_test_case, "failed")
+			create_report(fail_test_case, fail_script_info, "failed")
 			write_status(os.path.join(r"{work_dir}", fail_test_case + "_RPR.json"), 'failed')
 		else:
 			create_report(list_tests[0][0], list_tests[0][1], "failed")
