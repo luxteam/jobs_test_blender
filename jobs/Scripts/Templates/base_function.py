@@ -203,7 +203,7 @@ def launch_tests():
 	TEST_CASES = "{testCases}"
 	tests = TEST_CASES.split(',')
 
-	list_tests = sorted(list_tests)
+	sorted_list_tests = sorted(list_tests)
 
 	files = os.listdir(r"{work_dir}")
 	json_files = len(list(filter(lambda x: x.endswith('RPR.json'), files)))
@@ -221,14 +221,14 @@ def launch_tests():
 			test_case_prefix = json_files[-1].split('.')[0][:-7]
 			last_case_number = int(last_test_case[-3:])
 			fail_test_case = test_case_prefix + str(last_case_number + 1).zfill(3)
-			for i in list_tests:
+			for i in sorted_list_tests:
 				if i[0] == fail_test_case:
 					fail_script_info = i[1]
 			create_report(fail_test_case, fail_script_info, "failed")
 			write_status(os.path.join(r"{work_dir}", fail_test_case + "_RPR.json"), 'failed')
 		else:
-			create_report(list_tests[0][0], list_tests[0][1], "failed")
-			write_status(os.path.join(r"{work_dir}", list_tests[0][0] + "_RPR.json"), 'failed')
+			create_report(sorted_list_tests[0][0], sorted_list_tests[0][1], "failed")
+			write_status(os.path.join(r"{work_dir}", sorted_list_tests[0][0] + "_RPR.json"), 'failed')
 
 	define_expected_result()
 
@@ -238,14 +238,14 @@ def launch_tests():
 	if json_files > 0:
 		status = -1
 
-	for i in range(json_files, len(list_tests)):
-		if list_tests[i][0] in tests or TEST_CASES == "all":
+	for i in range(json_files, len(sorted_list_tests)):
+		if sorted_list_tests[i][0] in tests or TEST_CASES == "all":
 			try:
-				print("Running: {{}}".format(list_tests[i][0]))
-				rc = prerender(list_tests[i])
+				print("Running: {{}}".format(sorted_list_tests[i][0]))
+				rc = prerender(sorted_list_tests[i])
 				print("RC: {{}}".format(rc))
 				if rc:
-					write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'passed')
+					write_status(os.path.join(r"{work_dir}", sorted_list_tests[i][0] + "_RPR.json"), 'passed')
 					status = 0
 			except Exception as ex:
 				print("ex: {{}}".format(ex))
@@ -254,20 +254,20 @@ def launch_tests():
 
 			if rc == -1:
 				print("RC=-1")
-				create_report(list_tests[i][0], list_tests[i][1], "failed")
-				write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'failed')
+				create_report(sorted_list_tests[i][0], sorted_list_tests[i][1], "failed")
+				write_status(os.path.join(r"{work_dir}", sorted_list_tests[i][0] + "_RPR.json"), 'failed')
 				status -= 1
 				if status == -10:
 					files = os.listdir(r"{work_dir}")
 					json_files = len(list(filter(lambda x: x.endswith('RPR.json'), files)))
-					for i in range(json_files, len(list_tests)):
-						create_report(list_tests[i][0], list_tests[i][1], "failed")
-						write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'failed')
+					for i in range(json_files, len(sorted_list_tests)):
+						create_report(sorted_list_tests[i][0], sorted_list_tests[i][1], "failed")
+						write_status(os.path.join(r"{work_dir}", sorted_list_tests[i][0] + "_RPR.json"), 'failed')
 					exit()
 					
 			with open(os.path.join(r"{work_dir}", 'log_status.txt'), 'a') as f:
 				f.write("Current test: " + str(i) + " | fail count: " + \
-					str(status) + " | last_status: " + str(rc) + " | total count: " + str(len(list_tests)) + "\n")
+					str(status) + " | last_status: " + str(rc) + " | total count: " + str(len(sorted_list_tests)) + "\n")
 
 
 

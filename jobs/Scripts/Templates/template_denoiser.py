@@ -44,7 +44,6 @@ def den_001():
 
 
 def den_002():
-	exit(111)
 	view_layer = bpy.context.view_layer
 	set_value(view_layer.rpr.denoiser, 'enable', True)
 	set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERAL')
