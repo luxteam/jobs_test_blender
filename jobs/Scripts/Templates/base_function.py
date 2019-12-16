@@ -239,6 +239,7 @@ def launch_tests():
 	for i in range(json_files, len(list_tests)):
 		if list_tests[i][0] in tests or TEST_CASES == "all":
 			try:
+				print("Running: {{}}".format(list_tests[i][0]))
 				rc = prerender(list_tests[i])
 				if rc:
 					write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'passed')
