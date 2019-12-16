@@ -241,14 +241,17 @@ def launch_tests():
 			try:
 				print("Running: {{}}".format(list_tests[i][0]))
 				rc = prerender(list_tests[i])
+				print("RC: {{}}".format(rc))
 				if rc:
 					write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'passed')
 					status = 0
 			except Exception as ex:
+				print("ex: {{}}".format(ex))
 				traceback.print_exc()
 				rc = -1
 
 			if rc == -1:
+				print("RC=-1")
 				create_report(list_tests[i][0], list_tests[i][1], "failed")
 				write_status(os.path.join(r"{work_dir}", list_tests[i][0] + "_RPR.json"), 'failed')
 				status -= 1
