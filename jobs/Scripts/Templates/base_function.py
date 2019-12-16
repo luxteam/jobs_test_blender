@@ -203,6 +203,8 @@ def launch_tests():
 	TEST_CASES = "{testCases}"
 	tests = TEST_CASES.split(',')
 
+	list_tests = sorted(list_tests)
+
 	files = os.listdir(r"{work_dir}")
 	json_files = len(list(filter(lambda x: x.endswith('RPR.json'), files)))
 	if not os.path.exists(os.path.join(r"{work_dir}", "Color")):
