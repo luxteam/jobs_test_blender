@@ -212,7 +212,7 @@ def launch_tests():
 
 	# generate fail report after blender crash
 	if json_files > 0:
-		json_files = list(filter(lambda x: x.endswith('RPR.json'), files))
+		json_files = sorted(list(filter(lambda x: x.endswith('RPR.json'), files)))
 		if json_files:
 			# delete .json & _RPR
 			last_test_case = json_files[-1].split('.')[0][:-4]
