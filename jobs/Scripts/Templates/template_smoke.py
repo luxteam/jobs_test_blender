@@ -399,7 +399,7 @@ if __name__ == '__main__':
 		["BL28_SM_026", ["Denoiser LWR", "Pass Limit: 50"], activate_denoiser_lwr, deactivate_denoiser, "default.blend", 50],
 		["BL28_SM_027", ["Denoiser Bilateral", "Pass Limit: 50"], activate_denoiser_bilateral, deactivate_denoiser, "default.blend", 50],
 		["BL28_SM_028", ["Denoiser ML", "Pass Limit: 50"], activate_denoiser_ml, deactivate_denoiser, "default.blend", 50],
-		["BL28_SM_029", ["Principled BSDF", "Pass Limit: 50"], create_and_assign_principled_bsdf, assign_standart_material, "default.blend", 50],
+		["BL28_SM_029", ["Principled BSDF", "Pass Limit: 50"], update_IBL_exr, create_and_assign_principled_bsdf, assign_standart_material, "default.blend", 50],
 		["BL28_SM_030", ["Mat lib", "Pass Limit: 50"], import_rpr_matlib, assign_standart_material, "default.blend", 50],
 		["BL28_SM_031", ["AOV Geometric Normal", "Pass Limit: 50"], activate_aov, deactivate_aov, "default.blend", 50],
 		["BL28_SM_032", ["Area light", "Pass Limit: 50"], create_area_light, delete_area_light, "default.blend", 50],
