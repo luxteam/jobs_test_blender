@@ -9,6 +9,8 @@
         <argument>--render_mode "{RenderDevice}"</argument>
     	<argument>--resolution_x {rx}</argument>
     	<argument>--resolution_y {ry}</argument>
+        <argument>--max_samples {MaxSamples}</argument>
+        <argument>--SPU {SPU}</argument>
         <argument>--resource_path "{ScenesDir}/Render_Settings"</argument>
         <argument>--output "{OutputDir}"</argument>
         <argument>--testCases "{TestCases}"</argument>

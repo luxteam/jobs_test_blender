@@ -29,6 +29,8 @@ def createArgsParser():
 	parser.add_argument('--template', required=True)
 	parser.add_argument('--resolution_x', required=True)
 	parser.add_argument('--resolution_y', required=True)
+	parser.add_argument('--max_samples', required=True)
+	parser.add_argument('--SPU', required=True)
 	parser.add_argument('--testCases', required=True)
 	parser.add_argument('--package_name', required=True)
 	parser.add_argument('--output', required=True)
@@ -49,7 +51,8 @@ def main(args):
 	blender_script_template = base + blender_script_template
 
 	blenderScript = blender_script_template.format(work_dir=work_dir, render_mode=args.render_mode, resource_path=args.resource_path, testCases=args.testCases,\
-													resolution_x=args.resolution_x, resolution_y=args.resolution_y, package_name=args.package_name)
+													resolution_x=args.resolution_x, resolution_y=args.resolution_y, max_samples=args.max_samples, \
+													SPU=args.SPU, package_name=args.package_name)
 
 	blenderScriptPath = os.path.join(work_dir, 'script.py')
 	with open(blenderScriptPath, 'w') as f:
