@@ -7,8 +7,8 @@
         <argument>--tool "{Tool}"</argument>
         <argument>--template "{ResourcesDir}/Templates/template_rpr_nodes.py"</argument>
         <argument>--render_mode "{RenderDevice}"</argument>
-    	<argument>--resolution_x {rx}</argument>
-    	<argument>--resolution_y {ry}</argument>
+    	<argument>--resolution_x 960</argument>
+    	<argument>--resolution_y 540</argument>
         <argument>--max_samples 30</argument>
         <argument>--SPU {SPU}</argument>
         <argument>--resource_path "{ScenesDir}/Materials"</argument>
