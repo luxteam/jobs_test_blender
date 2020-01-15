@@ -1131,7 +1131,7 @@ if __name__ == "__main__":
 		["BL28_L_PL_072", ["Area light, int = 100"], "Physical_Lights.blend", pl_072], 
 		["BL28_L_PL_073", ["Area light, int = 1000"], "Physical_Lights.blend", pl_073], 
 		["BL28_L_PL_074", ["Area light, int = 5000"], "Physical_Lights.blend", pl_074], 
-		["BL28_L_PL_075", ["Area light, int = 0, Deactivate Intencity Normalization"], "Physical_Lights.blend", pl_075], 
+		["BL28_L_PL_075", ["Area light, int = 0, Deactivate Intencity Normalization, Expected black picture"], "Physical_Lights.blend", pl_075], 
 		["BL28_L_PL_076", ["Area light, int = 100, Deactivate Intencity Normalization"], "Physical_Lights.blend", pl_076], 
 		["BL28_L_PL_077", ["Area light, int = 1000, Deactivate Intencity Normalization"], "Physical_Lights.blend", pl_077], 
 		["BL28_L_PL_078", ["Area light, int = 5000, Deactivate Intencity Normalization"], "Physical_Lights.blend", pl_078], 
