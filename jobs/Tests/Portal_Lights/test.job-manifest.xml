@@ -7,10 +7,10 @@
         <argument>--tool "{Tool}"</argument>
         <argument>--template "{ResourcesDir}/Templates/template_portal_lights.py"</argument>
         <argument>--render_mode "{RenderDevice}"</argument>
-    	<argument>--resolution_x {rx}</argument>
-    	<argument>--resolution_y {ry}</argument>
-        <argument>--max_samples {MaxSamples}</argument>
-        <argument>--SPU {SPU}</argument>
+    	<argument>--resolution_x 960</argument>
+    	<argument>--resolution_y 540</argument>
+        <argument>--max_samples 50</argument>
+        <argument>--SPU 25</argument>
         <argument>--resource_path "{ScenesDir}/Lights"</argument>
         <argument>--output "{OutputDir}"</argument>
         <argument>--testCases "{TestCases}"</argument>
