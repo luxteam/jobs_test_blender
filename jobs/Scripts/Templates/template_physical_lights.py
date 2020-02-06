@@ -298,19 +298,19 @@ def pl_043():
 def pl_044():
 	light_data = getLightWithType('SUN')
 	set_value(light_data, 'energy', 100)
-	set_value(light_data.rpr, 'shadow_softness', 0.1)
+	set_value(light_data.rpr, 'shadow_softness', 1)
 
 
 def pl_045():
 	light_data = getLightWithType('SUN')
 	set_value(light_data, 'energy', 100)
-	set_value(light_data.rpr, 'shadow_softness', 0.5)
+	set_value(light_data.rpr, 'shadow_softness', 20)
 
 
 def pl_046():
 	light_data = getLightWithType('SUN')
 	set_value(light_data, 'energy', 100)
-	set_value(light_data.rpr, 'shadow_softness', 1)
+	set_value(light_data.rpr, 'shadow_softness', 90)
 
 
 def pl_047():
