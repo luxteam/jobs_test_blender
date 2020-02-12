@@ -1,0 +1,2882 @@
+[
+    {
+        "case": "BL28_RS_CAM_001",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_002",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'ORTHO')",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Orthographic camera"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_003",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PANO')",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Panoramic camera"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_004",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
+            "set_value(bpy.context.object.data, 'lens', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Millimeters",
+            "Focal Length: 10"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_005",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
+            "set_value(bpy.context.object.data, 'lens', 25)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Millimeters",
+            "Focal Length: 25"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_006",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
+            "set_value(bpy.context.object.data, 'lens', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Millimeters",
+            "Focal Length: 50"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_007",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
+            "set_value(bpy.context.object.data, 'lens', 80)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Millimeters",
+            "Focal Length: 80"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_008",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
+            "set_value(bpy.context.object.data, 'lens', 120)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Millimeters",
+            "Focal Length: 120"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_009",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
+            "set_value(bpy.context.object.data, 'angle', 0.174533)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Field of View",
+            "Field of View: 10\u00b0"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_010",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
+            "set_value(bpy.context.object.data, 'angle', 0.436332)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Field of View",
+            "Field of View: 25\u00b0"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_011",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
+            "set_value(bpy.context.object.data, 'angle', 0.872665)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Field of View",
+            "Field of View: 50\u00b0"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_012",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
+            "set_value(bpy.context.object.data, 'angle', 1.39626)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Field of View",
+            "Field of View: 80\u00b0"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_013",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
+            "set_value(bpy.context.object.data, 'angle', 2.0944)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Field of View",
+            "Field of View: 120\u00b0"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_014",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'shift_x', 0.1)",
+            "set_value(bpy.context.object.data, 'shift_y', 0)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Shift X: 0.1"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_015",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'shift_x', -0.1)",
+            "set_value(bpy.context.object.data, 'shift_y', 0)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Shift X: -0.1"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_016",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'shift_x', 0)",
+            "set_value(bpy.context.object.data, 'shift_y', 0.1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Shift Y: 0.1"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_017",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'shift_x', 0)",
+            "set_value(bpy.context.object.data, 'shift_y', -0.1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Shift Y: -0.1"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_018",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 1)",
+            "set_value(bpy.context.object.data, 'clip_end', 0.7)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Clip start: 1",
+            "Clip end: 0.7"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_019",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 1)",
+            "set_value(bpy.context.object.data, 'clip_end', 1.2)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Clip start: 1",
+            "Clip end: 1.2"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_020",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 1)",
+            "set_value(bpy.context.object.data, 'clip_end', 5)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Clip start: 1",
+            "Clip end: 5"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_021",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 7.4)",
+            "set_value(bpy.context.object.data, 'clip_end', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Clip start: 7.4",
+            "Clip end: 50"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_022",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 8)",
+            "set_value(bpy.context.object.data, 'clip_end', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Clip start: 8",
+            "Clip end: 50"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_023",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 9.5)",
+            "set_value(bpy.context.object.data, 'clip_end', 50)",
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 9.5)",
+            "set_value(bpy.context.object.data, 'clip_end', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Clip start: 9.5",
+            "Clip end: 50"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_024",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 1)",
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Auto",
+            "Sensor size: 1"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_025",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 10)",
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Auto",
+            "Sensor size: 10"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_026",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 50)",
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Auto",
+            "Sensor size: 50"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_027",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 100)",
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 100)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Auto",
+            "Sensor size: 100"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_028",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
+            "set_value(bpy.context.object.data, 'sensor_width', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Horizontal",
+            "Sensor width: 1"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_029",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
+            "set_value(bpy.context.object.data, 'sensor_width', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Horizontal",
+            "Sensor width: 10"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_030",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
+            "set_value(bpy.context.object.data, 'sensor_width', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Horizontal",
+            "Sensor width: 50"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_031",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
+            "set_value(bpy.context.object.data, 'sensor_width', 100)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Horizontal",
+            "Sensor width: 100"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_032",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
+            "set_value(bpy.context.object.data, 'sensor_height', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Vertical",
+            "Sensor height: 1"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_033",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
+            "set_value(bpy.context.object.data, 'sensor_height', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Vertical",
+            "Sensor height: 10"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_034",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
+            "set_value(bpy.context.object.data, 'sensor_height', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Vertical",
+            "Sensor height: 50"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_035",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
+            "set_value(bpy.context.object.data, 'sensor_height', 100)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Vertical",
+            "Sensor height: 100"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_036",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 0.01)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 128)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 0.01",
+            "Aperture F-stop: 128"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_037",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 1)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 128)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 1",
+            "Aperture F-stop: 128"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_038",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 8)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 128)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 8",
+            "Aperture F-stop: 128"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_039",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 15)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 128)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 15",
+            "Aperture F-stop: 128"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_040",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 0.01)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 0.01",
+            "Aperture F-stop: 50"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_041",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 1)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 1",
+            "Aperture F-stop: 50"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_042",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 8)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 8",
+            "Aperture F-stop: 50"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_043",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 15)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 15",
+            "Aperture F-stop: 50"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_044",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 0.01)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 0.01",
+            "Aperture F-stop: 10"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_045",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 1)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 1",
+            "Aperture F-stop: 10"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_046",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 8)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 8",
+            "Aperture F-stop: 10"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_047",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 15)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 15",
+            "Aperture F-stop: 10"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_048",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 0.01)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 0.01",
+            "Aperture F-stop: 0.4"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_049",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 1)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 1",
+            "Aperture F-stop: 0.4"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_050",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 8)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 8",
+            "Aperture F-stop: 0.4"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_051",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 15)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 15",
+            "Aperture F-stop: 0.4"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_052",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 6)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "set_value(bpy.context.object.data.dof, 'aperture_blades', 0)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 6",
+            "Aperture F-stop: 0.4",
+            "Aperture Blades: 0"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_053",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 6)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "set_value(bpy.context.object.data.dof, 'aperture_blades', 3)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 6",
+            "Aperture F-stop: 0.4",
+            "Aperture Blades: 3"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_054",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 6)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "set_value(bpy.context.object.data.dof, 'aperture_blades', 5)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 6",
+            "Aperture F-stop: 0.4",
+            "Aperture Blades: 5"
+        ],
+        "scene": "Camera.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_067",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_068",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'ORTHO')",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Orthographic camera"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_069",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PANO')",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Panoramic camera"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_070",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
+            "set_value(bpy.context.object.data, 'lens', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Millimeters",
+            "Focal Length: 10"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_071",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
+            "set_value(bpy.context.object.data, 'lens', 25)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Millimeters",
+            "Focal Length: 25"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_072",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
+            "set_value(bpy.context.object.data, 'lens', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Millimeters",
+            "Focal Length: 50"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_073",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
+            "set_value(bpy.context.object.data, 'lens', 80)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Millimeters",
+            "Focal Length: 80"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_074",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
+            "set_value(bpy.context.object.data, 'lens', 120)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Millimeters",
+            "Focal Length: 120"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_075",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
+            "set_value(bpy.context.object.data, 'angle', 0.174533)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Field of View",
+            "Field of View: 10\u00b0"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_076",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
+            "set_value(bpy.context.object.data, 'angle', 0.436332)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Field of View",
+            "Field of View: 25\u00b0"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_077",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
+            "set_value(bpy.context.object.data, 'angle', 0.872665)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Field of View",
+            "Field of View: 50\u00b0"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_078",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
+            "set_value(bpy.context.object.data, 'angle', 1.39626)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Field of View",
+            "Field of View: 80\u00b0"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_079",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
+            "set_value(bpy.context.object.data, 'angle', 2.0944)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Field of View",
+            "Field of View: 120\u00b0"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_080",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'shift_x', 0.1)",
+            "set_value(bpy.context.object.data, 'shift_y', 0)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Shift X: 0.1"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_081",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'shift_x', -0.1)",
+            "set_value(bpy.context.object.data, 'shift_y', 0)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Shift X: -0.1"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_082",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'shift_x', 0)",
+            "set_value(bpy.context.object.data, 'shift_y', 0.1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Shift Y: 0.1"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_083",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'shift_x', 0)",
+            "set_value(bpy.context.object.data, 'shift_y', -0.1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Shift Y: -0.1"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_084",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 1)",
+            "set_value(bpy.context.object.data, 'clip_end', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Clip start: 1",
+            "Clip end: 10"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_085",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 1)",
+            "set_value(bpy.context.object.data, 'clip_end', 15)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Clip start: 1",
+            "Clip end: 15"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_086",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 1)",
+            "set_value(bpy.context.object.data, 'clip_end', 30)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Clip start: 1",
+            "Clip end: 30"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_087",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 10)",
+            "set_value(bpy.context.object.data, 'clip_end', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Clip start: 10",
+            "Clip end: 50"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_088",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 15)",
+            "set_value(bpy.context.object.data, 'clip_end', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Clip start: 15",
+            "Clip end: 50"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_089",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 21)",
+            "set_value(bpy.context.object.data, 'clip_end', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Clip start: 21",
+            "Clip end: 50"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_090",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 1)",
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Auto",
+            "Sensor size: 1"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_091",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 10)",
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Auto",
+            "Sensor size: 10"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_092",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 50)",
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Auto",
+            "Sensor size: 50"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_093",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 100)",
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 100)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Auto",
+            "Sensor size: 100"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_094",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
+            "set_value(bpy.context.object.data, 'sensor_width', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Horizontal",
+            "Sensor width: 1"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_095",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
+            "set_value(bpy.context.object.data, 'sensor_width', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Horizontal",
+            "Sensor width: 10"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_096",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
+            "set_value(bpy.context.object.data, 'sensor_width', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Horizontal",
+            "Sensor width: 50"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_097",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
+            "set_value(bpy.context.object.data, 'sensor_width', 100)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Horizontal",
+            "Sensor width: 100"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_098",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
+            "set_value(bpy.context.object.data, 'sensor_height', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Vertical",
+            "Sensor height: 1"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_099",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
+            "set_value(bpy.context.object.data, 'sensor_height', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Vertical",
+            "Sensor height: 10"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_100",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
+            "set_value(bpy.context.object.data, 'sensor_height', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Vertical",
+            "Sensor height: 50"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_101",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
+            "set_value(bpy.context.object.data, 'sensor_height', 100)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Vertical",
+            "Sensor height: 100"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_102",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 0.01)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 128)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 0.01",
+            "Aperture F-stop: 128"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_103",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 1)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 128)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 1",
+            "Aperture F-stop: 128"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_104",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 8)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 128)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 8",
+            "Aperture F-stop: 128"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_105",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 15)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 128)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 15",
+            "Aperture F-stop: 128"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_106",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 0.01)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 0.01",
+            "Aperture F-stop: 50"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_107",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 1)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 1",
+            "Aperture F-stop: 50"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_108",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 8)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 8",
+            "Aperture F-stop: 50"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_109",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 15)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 15",
+            "Aperture F-stop: 50"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_110",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 0.01)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 0.01",
+            "Aperture F-stop: 10"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_111",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 1)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 1",
+            "Aperture F-stop: 10"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_112",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 8)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 8",
+            "Aperture F-stop: 10"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_113",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 15)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 15",
+            "Aperture F-stop: 10"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_114",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 0.01)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 0.01",
+            "Aperture F-stop: 0.4"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_115",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 1)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 1",
+            "Aperture F-stop: 0.4"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_116",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 8)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 8",
+            "Aperture F-stop: 0.4"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_117",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 15)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 15",
+            "Aperture F-stop: 0.4"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_118",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 15)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "set_value(bpy.context.object.data.dof, 'aperture_blades', 0)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 15",
+            "Aperture F-stop: 0.4",
+            "Aperture Blades: 0"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_119",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 15)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "set_value(bpy.context.object.data.dof, 'aperture_blades', 3)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 15",
+            "Aperture F-stop: 0.4",
+            "Aperture Blades: 3"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_120",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 15)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "set_value(bpy.context.object.data.dof, 'aperture_blades', 5)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 15",
+            "Aperture F-stop: 0.4",
+            "Aperture Blades: 5"
+        ],
+        "scene": "medium.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_133",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_134",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'ORTHO')",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Orthographic camera"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_135",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PANO')",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Panoramic camera"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_136",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
+            "set_value(bpy.context.object.data, 'lens', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Millimeters",
+            "Focal Length: 10"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_137",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
+            "set_value(bpy.context.object.data, 'lens', 25)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Millimeters",
+            "Focal Length: 25"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_138",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
+            "set_value(bpy.context.object.data, 'lens', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Millimeters",
+            "Focal Length: 50"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_139",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
+            "set_value(bpy.context.object.data, 'lens', 80)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Millimeters",
+            "Focal Length: 80"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_140",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
+            "set_value(bpy.context.object.data, 'lens', 120)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Millimeters",
+            "Focal Length: 120"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_141",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
+            "set_value(bpy.context.object.data, 'angle', 0.174533)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Field of View",
+            "Field of View: 10\u00b0"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_142",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
+            "set_value(bpy.context.object.data, 'angle', 0.436332)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Field of View",
+            "Field of View: 25\u00b0"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_143",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
+            "set_value(bpy.context.object.data, 'angle', 0.872665)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Field of View",
+            "Field of View: 50\u00b0"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_144",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
+            "set_value(bpy.context.object.data, 'angle', 1.39626)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Field of View",
+            "Field of View: 80\u00b0"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_145",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
+            "set_value(bpy.context.object.data, 'angle', 2.0944)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Lens Unit: Field of View",
+            "Field of View: 120\u00b0"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_146",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'shift_x', 0.1)",
+            "set_value(bpy.context.object.data, 'shift_y', 0)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Shift X: 0.1"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_147",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'shift_x', -0.1)",
+            "set_value(bpy.context.object.data, 'shift_y', 0)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Shift X: -0.1"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_148",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'shift_x', 0)",
+            "set_value(bpy.context.object.data, 'shift_y', 0.1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Shift Y: 0.1"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_149",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'shift_x', 0)",
+            "set_value(bpy.context.object.data, 'shift_y', -0.1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Shift Y: -0.1"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_150",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 1)",
+            "set_value(bpy.context.object.data, 'clip_end', 0.7)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Clip start: 1",
+            "Clip end: 0.7"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_151",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 1)",
+            "set_value(bpy.context.object.data, 'clip_end', 1.2)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Clip start: 1",
+            "Clip end: 1.2"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_152",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 1)",
+            "set_value(bpy.context.object.data, 'clip_end', 5)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Clip start: 1",
+            "Clip end: 5"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_153",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 7.4)",
+            "set_value(bpy.context.object.data, 'clip_end', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Clip start: 7.4",
+            "Clip end: 50"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_154",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 8)",
+            "set_value(bpy.context.object.data, 'clip_end', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Clip start: 8",
+            "Clip end: 50"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_155",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 9.5)",
+            "set_value(bpy.context.object.data, 'clip_end', 50)",
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'clip_start', 9.5)",
+            "set_value(bpy.context.object.data, 'clip_end', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Clip start: 9.5",
+            "Clip end: 50"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_156",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 1)",
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Auto",
+            "Sensor size: 1"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_157",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 10)",
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Auto",
+            "Sensor size: 10"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_158",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 50)",
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Auto",
+            "Sensor size: 50"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_159",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 100)",
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
+            "set_value(bpy.context.object.data, 'sensor_width', 100)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Auto",
+            "Sensor size: 100"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_160",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
+            "set_value(bpy.context.object.data, 'sensor_width', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Horizontal",
+            "Sensor width: 1"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_161",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
+            "set_value(bpy.context.object.data, 'sensor_width', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Horizontal",
+            "Sensor width: 10"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_162",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
+            "set_value(bpy.context.object.data, 'sensor_width', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Horizontal",
+            "Sensor width: 50"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_163",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
+            "set_value(bpy.context.object.data, 'sensor_width', 100)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Horizontal",
+            "Sensor width: 100"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_164",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
+            "set_value(bpy.context.object.data, 'sensor_height', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Vertical",
+            "Sensor height: 1"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_165",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
+            "set_value(bpy.context.object.data, 'sensor_height', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Vertical",
+            "Sensor height: 10"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_166",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
+            "set_value(bpy.context.object.data, 'sensor_height', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Vertical",
+            "Sensor height: 50"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_167",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
+            "set_value(bpy.context.object.data, 'sensor_height', 100)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Sensor fit: Vertical",
+            "Sensor height: 100"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_168",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 0.01)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 128)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 0.01",
+            "Aperture F-stop: 128"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_169",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 1)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 128)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 1",
+            "Aperture F-stop: 128"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_170",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 8)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 128)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 8",
+            "Aperture F-stop: 128"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_171",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 15)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 128)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 15",
+            "Aperture F-stop: 128"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_172",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 0.01)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 0.01",
+            "Aperture F-stop: 50"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_173",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 1)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 1",
+            "Aperture F-stop: 50"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_174",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 8)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 8",
+            "Aperture F-stop: 50"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_175",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 15)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 50)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 15",
+            "Aperture F-stop: 50"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_176",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 0.01)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 0.01",
+            "Aperture F-stop: 10"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_177",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 1)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 1",
+            "Aperture F-stop: 10"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_178",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 8)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 8",
+            "Aperture F-stop: 10"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_179",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 15)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 15",
+            "Aperture F-stop: 10"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_180",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 0.01)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 0.01",
+            "Aperture F-stop: 0.4"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_181",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 1)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 1",
+            "Aperture F-stop: 0.4"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_182",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 8)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 8",
+            "Aperture F-stop: 0.4"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_183",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 15)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 15",
+            "Aperture F-stop: 0.4"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_184",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 6)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "set_value(bpy.context.object.data.dof, 'aperture_blades', 0)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 6",
+            "Aperture F-stop: 0.4",
+            "Aperture Blades: 0"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_185",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 6)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "set_value(bpy.context.object.data.dof, 'aperture_blades', 3)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 6",
+            "Aperture F-stop: 0.4",
+            "Aperture Blades: 3"
+        ],
+        "scene": "hard.blend"
+    },
+    {
+        "case": "BL28_RS_CAM_186",
+        "status": "active",
+        "functions": [
+            "set_value(bpy.context.object.data, 'type', 'PERSP')",
+            "set_value(bpy.context.object.data.dof, 'use_dof', True)",
+            "set_value(bpy.context.object.data.dof, 'focus_distance', 6)",
+            "set_value(bpy.context.object.data.dof, 'aperture_fstop', 0.4)",
+            "set_value(bpy.context.object.data.dof, 'aperture_blades', 5)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Perspective camera",
+            "Depth of Field: Activated",
+            "Distance: 6",
+            "Aperture F-stop: 0.4",
+            "Aperture Blades: 5"
+        ],
+        "scene": "hard.blend"
+    }
+]

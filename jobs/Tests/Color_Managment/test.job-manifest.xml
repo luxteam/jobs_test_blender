@@ -5,23 +5,18 @@
 
     <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="1150">
         <argument>--tool "{Tool}"</argument>
-        <argument>--template "{ResourcesDir}/Templates/template_color_managment.py"</argument>
-        <argument>--render_mode "{RenderDevice}"</argument>
+        <argument>--render_device "{RenderDevice}"</argument>
+        <argument>--output "{OutputDir}"</argument>
+        <argument>--testType Color_Managment</argument>
     	<argument>--resolution_x {rx}</argument>
     	<argument>--resolution_y {ry}</argument>
+    	<argument>--res_path "{ScenesDir}"/Render_Settings</argument>
+	    <argument>--testCases "{TestCases}"</argument>
         <argument>--max_samples {MaxSamples}</argument>
         <argument>--SPU {SPU}</argument>
-        <argument>--resource_path "{ScenesDir}/Render_Settings"</argument>
-        <argument>--output "{OutputDir}"</argument>
-        <argument>--testCases "{TestCases}"</argument>
-	    <argument>--package_name "Color_Managment"</argument>
     </execute>
 
     <execute command='python "{ResourcesDir}/makeReport.py"'>
-        <argument>--work_dir "{OutputDir}"</argument>
-    </execute>
-
-    <execute command='python {CommonDir}/scripts/checkExpected.py'>
         <argument>--work_dir "{OutputDir}"</argument>
     </execute>
 

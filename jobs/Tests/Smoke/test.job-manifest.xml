@@ -5,23 +5,18 @@
 
     <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="900">
         <argument>--tool "{Tool}"</argument>
-        <argument>--template "{ResourcesDir}/Templates/template_smoke.py"</argument>
-        <argument>--render_mode "{RenderDevice}"</argument>
+        <argument>--render_device "{RenderDevice}"</argument>
+        <argument>--output "{OutputDir}"</argument>
+        <argument>--testType Smoke</argument>
     	<argument>--resolution_x {rx}</argument>
     	<argument>--resolution_y {ry}</argument>
+    	<argument>--res_path "{ScenesDir}"/Smoke</argument>
+	    <argument>--testCases "{TestCases}"</argument>
         <argument>--max_samples {MaxSamples}</argument>
         <argument>--SPU {SPU}</argument>
-        <argument>--resource_path "{ScenesDir}/Smoke"</argument>
-        <argument>--output "{OutputDir}"</argument>
-        <argument>--testCases "{TestCases}"</argument>
-	    <argument>--package_name "Smoke"</argument>
     </execute>
 
     <execute command='python "{ResourcesDir}/makeReport.py"'>
-        <argument>--work_dir "{OutputDir}"</argument>
-    </execute>
-
-    <execute command='python {CommonDir}/scripts/checkExpected.py'>
         <argument>--work_dir "{OutputDir}"</argument>
     </execute>
 
