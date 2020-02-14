@@ -16,11 +16,11 @@ WORK_DIR = r'{work_dir}'
 TEST_TYPE = '{testType}'
 RENDER_DEVICE = '{render_device}'
 RES_PATH = r'{res_path}'
-PASS_LIMIT = 50
+PASS_LIMIT = {pass_limit}
 RESOLUTION_X = {resolution_x}
 RESOLUTION_Y = {resolution_y}
 SPU = {SPU}
-THRESHOLD = 0.05
+THRESHOLD = {threshold}
 LOGS_DIR = path.join(WORK_DIR, 'render_tool_logs')
 
 

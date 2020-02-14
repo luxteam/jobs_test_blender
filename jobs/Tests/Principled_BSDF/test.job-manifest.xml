@@ -8,12 +8,13 @@
         <argument>--render_device "{RenderDevice}"</argument>
         <argument>--output "{OutputDir}"</argument>
         <argument>--testType Principled_BSDF</argument>
-    	<argument>--resolution_x 960</argument>
-    	<argument>--resolution_y 540</argument>
-    	<argument>--res_path "{ScenesDir}/Materials"</argument>
-	    <argument>--testCases "{TestCases}"</argument>
-        <argument>--max_samples 50</argument>
+        <argument>--pass_limit {PassLimit}</argument>
+        <argument>--resolution_x 960</argument>
+        <argument>--resolution_y 540</argument>
+        <argument>--res_path "{ScenesDir}/Materials"</argument>
+        <argument>--testCases "{TestCases}"</argument>
         <argument>--SPU 25</argument>
+        <argument>--threshold {threshold}</argument>
     </execute>
 
     <execute command='python "{ResourcesDir}/makeReport.py"'>

@@ -33,10 +33,11 @@ def createArgsParser():
 	parser.add_argument('--res_path', required=True)
 	parser.add_argument('--resolution_x', required=True)
 	parser.add_argument('--resolution_y', required=True)
-	parser.add_argument('--max_samples', required=True)
+	parser.add_argument('--pass_limit', required=True)
 	parser.add_argument('--testCases', required=True)
 	parser.add_argument('--SPU', required=False, default=25)
 	parser.add_argument('--fail_count', required=False, default=0, type=int)
+	parser.add_argument('--threshold', required=False, default=0.05, type=float)
 
 	return parser
 
@@ -64,8 +65,8 @@ def main(args):
 		script = script[0] + extension_script + script[1]
 
 	work_dir = os.path.abspath(args.output)
-	script = script.format(work_dir=work_dir, testType=args.testType, render_device=args.render_device, res_path=args.res_path,
-							  resolution_x=args.resolution_x, resolution_y=args.resolution_y, SPU=args.SPU)
+	script = script.format(work_dir=work_dir, testType=args.testType, render_device=args.render_device, res_path=args.res_path, pass_limit=args.pass_limit,
+							  resolution_x=args.resolution_x, resolution_y=args.resolution_y, SPU=args.SPU, threshold=args.threshold)
 
 	with open(os.path.join(args.output, 'base_functions.py'), 'w') as file:
 		file.write(script)
@@ -99,7 +100,7 @@ def main(args):
 	render_platform = set([platform.system(), gpu])
 
 	for case in cases:
-		if sum([current_conf & set(skip_conf) == set(skip_conf) for skip_conf in case.get('skip_on', '')]):
+		if sum([render_platform & set(skip_conf) == set(skip_conf) for skip_conf in case.get('skip_on', '')]):
 			for i in case['skip_on']:
 				skip_on = set(i)
 				if render_platform.intersection(skip_on) == skip_on:

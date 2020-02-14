@@ -8,12 +8,13 @@
         <argument>--render_device "{RenderDevice}"</argument>
         <argument>--output "{OutputDir}"</argument>
         <argument>--testType Render_Stamp</argument>
-    	<argument>--resolution_x {rx}</argument>
-    	<argument>--resolution_y {ry}</argument>
-    	<argument>--res_path "{ScenesDir}/Render_Settings"</argument>
-	    <argument>--testCases "{TestCases}"</argument>
-        <argument>--max_samples {MaxSamples}</argument>
+        <argument>--pass_limit {PassLimit}</argument>
+        <argument>--resolution_x {rx}</argument>
+        <argument>--resolution_y {ry}</argument>
+        <argument>--res_path "{ScenesDir}/Render_Settings"</argument>
+        <argument>--testCases "{TestCases}"</argument>
         <argument>--SPU {SPU}</argument>
+        <argument>--threshold {threshold}</argument>
     </execute>
 
     <execute command='python "{ResourcesDir}/makeReport.py"'>
