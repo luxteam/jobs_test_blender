@@ -9,5 +9,5 @@ def deleteOldRenderLayerNodes(nodes):
 		if node.type in ("R_LAYERS", "COMPOSITE", "OUTPUT_FILE"):
 			try:
 				nodes.remove(node)
-			except Exception e:
+			except Exception as e:
 				print('Error while removing node: ' + str(e))
