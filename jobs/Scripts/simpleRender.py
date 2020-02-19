@@ -71,6 +71,8 @@ def main(args):
 	with open(os.path.join(args.output, 'base_functions.py'), 'w') as file:
 		file.write(script)
 
+	cases = []
+
 	try:
 		cases = json.load(open(os.path.realpath(
 			os.path.join(work_dir, 'test_cases.json'))))
@@ -95,9 +97,9 @@ def main(args):
                                        'common', 'img', 'error.jpg')), os.path.join(work_dir, 'Color', 'failed.jpg'))
 
 	gpu = get_gpu()
-	if gpu == False:
+	if not gpu:
 		core_config.main_logger.error("Can't get gpu name")
-	render_platform = set([platform.system(), gpu])
+	render_platform = {platform.system(), gpu}
 
 	for case in cases:
 		if sum([render_platform & set(skip_conf) == set(skip_conf) for skip_conf in case.get('skip_on', '')]):
