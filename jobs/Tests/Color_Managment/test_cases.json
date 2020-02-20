@@ -18,7 +18,7 @@
     },
     {
         "case": "BL28_RS_CM_002",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "set_value(bpy.context.scene.display_settings, 'display_device', 'DCI-P3')",
             "set_value(bpy.context.scene.view_settings, 'view_transform', 'Standard')",
@@ -52,7 +52,7 @@
     },
     {
         "case": "BL28_RS_CM_004",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "set_value(bpy.context.scene.display_settings, 'display_device', 'Rec709')",
             "set_value(bpy.context.scene.view_settings, 'view_transform', 'Standard')",
@@ -120,7 +120,7 @@
     },
     {
         "case": "BL28_RS_CM_008",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "set_value(bpy.context.scene.display_settings, 'display_device', 'sRGB')",
             "set_value(bpy.context.scene.view_settings, 'view_transform', 'RRT')",
@@ -137,7 +137,7 @@
     },
     {
         "case": "BL28_RS_CM_009",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "set_value(bpy.context.scene.display_settings, 'display_device', 'sRGB')",
             "set_value(bpy.context.scene.view_settings, 'view_transform', 'Film')",
@@ -222,7 +222,7 @@
     },
     {
         "case": "BL28_RS_CM_014",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "set_value(bpy.context.scene.display_settings, 'display_device', 'sRGB')",
             "set_value(bpy.context.scene.view_settings, 'view_transform', 'Standard')",
@@ -239,7 +239,7 @@
     },
     {
         "case": "BL28_RS_CM_015",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "set_value(bpy.context.scene.display_settings, 'display_device', 'sRGB')",
             "set_value(bpy.context.scene.view_settings, 'view_transform', 'Standard')",
@@ -256,7 +256,7 @@
     },
     {
         "case": "BL28_RS_CM_016",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "set_value(bpy.context.scene.display_settings, 'display_device', 'sRGB')",
             "set_value(bpy.context.scene.view_settings, 'view_transform', 'Standard')",
@@ -273,7 +273,7 @@
     },
     {
         "case": "BL28_RS_CM_017",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "set_value(bpy.context.scene.display_settings, 'display_device', 'sRGB')",
             "set_value(bpy.context.scene.view_settings, 'view_transform', 'Standard')",
@@ -290,7 +290,7 @@
     },
     {
         "case": "BL28_RS_CM_018",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "set_value(bpy.context.scene.display_settings, 'display_device', 'sRGB')",
             "set_value(bpy.context.scene.view_settings, 'view_transform', 'Standard')",
@@ -409,7 +409,7 @@
     },
     {
         "case": "BL28_RS_CM_027",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "set_value(bpy.context.scene.display_settings, 'display_device', 'sRGB')",
             "set_value(bpy.context.scene.view_settings, 'view_transform', 'Standard')",
@@ -749,7 +749,7 @@
     },
     {
         "case": "BL28_RS_CM_047",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "set_value(bpy.context.scene.display_settings, 'display_device', 'sRGB')",
             "set_value(bpy.context.scene.view_settings, 'view_transform', 'Standard')",
