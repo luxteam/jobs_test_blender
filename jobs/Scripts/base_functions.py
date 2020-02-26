@@ -127,8 +127,6 @@ def rpr_render(case):
 
 def prerender(case):
 	logging('Prerender')
-	test_case = case['case']  # for call in functions in case
-	script_info = case['script_info']  # for call in functions in case
 	scene = case.get('scene', '')
 	scene_name = bpy.path.basename(bpy.context.blend_data.filepath)
 	if scene_name != scene:
