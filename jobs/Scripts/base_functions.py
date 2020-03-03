@@ -24,10 +24,24 @@ THRESHOLD = {threshold}
 LOGS_DIR = path.join(WORK_DIR, 'render_tool_logs')
 
 
+def logging(message):
+	print(' >>> [RPR TEST] [' +
+		  datetime.datetime.now().strftime('%H:%M:%S') + '] ' + message)
+
+
 def reportToJSON(case, render_time=0):
 	path_to_file = path.join(WORK_DIR, case['case'] + '_RPR.json')
+
 	with open(path_to_file, 'r') as file:
 		report = json.loads(file.read())[0]
+
+	if case['status'] == 'inprogress':
+		report['test_status'] = 'passed'
+	else:
+		report['test_status'] = case['status']
+
+	logging('Create report json ({{}} {{}})'.format(
+		case['case'], report['test_status']))
 
 	report['file_name'] = case['case'] + '.jpg'
 	# TODO: render device may be incorrect (if it changes in case)
@@ -43,18 +57,14 @@ def reportToJSON(case, render_time=0):
 	report['difference_color'] = 0
 	report['script_info'] = case['script_info']
 	report['render_log'] = path.join('render_tool_logs', case['case'] + '.log')
-	if not get_scene_name():
-		report['scene_name'] = case.get('scene', '')
-	else:
-		report['scene_name'] = get_scene_name()
-
-	if case['status'] == 'inprogress':
-		report['test_status'] = 'passed'
-	else:
-		report['test_status'] = case['status']
+	report['scene_name'] = case.get('scene', '')
 
 	with open(path_to_file, 'w') as file:
 		file.write(json.dumps([report], indent=4))
+
+
+def render_tool_log_path(name):
+	return path.join(LOGS_DIR, name + '.log')
 
 # TODO: remove support for deprecated core
 def get_core_version():
@@ -65,7 +75,7 @@ def get_core_version():
 									   pyrprwrap.VERSION_REVISION)
 
 
-def enable_rpr_render():
+def enable_rpr():
 	if not addon_utils.check('rprblender')[0]:
 		addon_utils.enable('rprblender', default_set=True,
 						   persistent=False, handle_error=None)
@@ -83,40 +93,31 @@ def set_value(path, name, value):
 	if hasattr(path, name):
 		setattr(path, name, value)
 	else:
-		print('No attribute found ' + name)
+		logging('No attribute found ' + name)
 
 
 def set_render_device(render_mode):
 	render_device_settings = get_user_settings().final_devices
 	if render_mode == 'dual':
-		set_value(render_device_settings, 'gpu_states[0]', True)
+		render_device_settings.gpu_states[0] = True
 		set_value(render_device_settings, 'cpu_state', True)
 		device_name = pyrpr.Context.cpu_device['name'] + \
 			' & ' + pyrpr.Context.gpu_devices[0]['name']
 	elif render_mode == 'cpu':
 		set_value(render_device_settings, 'cpu_state', True)
-		set_value(render_device_settings, 'gpu_states[0]', False)
+		render_device_settings.gpu_states[0] = False
 		device_name = pyrpr.Context.cpu_device['name']
 	elif render_mode == 'gpu':
 		set_value(render_device_settings, 'cpu_state', False)
-		set_value(render_device_settings, 'gpu_states[0]', True)
+		render_device_settings.gpu_states[0] = True
 		device_name = pyrpr.Context.gpu_devices[0]['name']
 
 	return device_name
 
 
-def render_tool_log_path(name):
-	return path.join(LOGS_DIR, name + '.log')
-
-
-def get_scene_name():
-	scene_name = bpy.path.basename(bpy.context.blend_data.filepath)
-	if not scene_name:
-		print('Problem with scene')
-	return scene_name
-
-
 def rpr_render(case):
+	logging('Render image')
+
 	start_time = datetime.datetime.now()
 	bpy.ops.render.render(write_still=True)
 	render_time = (datetime.datetime.now() - start_time).total_seconds()
@@ -125,14 +126,20 @@ def rpr_render(case):
 
 
 def prerender(case):
+	logging('Prerender')
 	test_case = case['case']  # for call in functions in case
 	script_info = case['script_info']  # for call in functions in case
 	scene = case.get('scene', '')
-	current_scene = bpy.path.basename(bpy.context.blend_data.filepath)
-	if current_scene != scene:
-		bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, scene))
+	scene_name = bpy.path.basename(bpy.context.blend_data.filepath)
+	if scene_name != scene:
+		try:
+			bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, scene))
+		except:
+			logging("Can't load scene. Exit Blender")
+			bpy.ops.wm.quit_blender()
 
-	enable_rpr_render()
+
+	enable_rpr()
 
 	scene = bpy.context.scene
 	device_name = set_render_device(RENDER_DEVICE)
@@ -168,11 +175,15 @@ def prerender(case):
 			else:
 				eval(function)
 		except Exception as e:
-			print('Error "{{}}" with string "{{}}"'.format(e, function))
+			logging('Error "{{}}" with string "{{}}"'.format(e, function))
 
 
-def rpr_save(case):
-	#copyfile(path.join(WORK_DIR, 'Color'))
+def save_report(case):
+	logging('Save report without rendering for ' + case['case'])
+
+	if not os.path.exists(os.path.join(WORK_DIR, 'Color')):
+		os.makedirs(os.path.join(WORK_DIR, 'Color'))
+
 	work_dir = path.join(WORK_DIR, 'Color', case['case'] + '.jpg')
 	source_dir = path.join(WORK_DIR, '..', '..', '..',
 						   '..', 'jobs_launcher', 'common', 'img')
@@ -183,18 +194,18 @@ def rpr_save(case):
 		copyfile(
 			path.join(source_dir, case['status'] + '.jpg'), work_dir)
 
-	enable_rpr_render()
+	enable_rpr()
 
 	reportToJSON(case)
 
 
 def case_function(case):
 	functions = {{
-		'render': prerender,
-		'save_report': rpr_save
+		'prerender': prerender,
+		'save_report': save_report
 	}}
 
-	func = 'render'
+	func = 'prerender'
 
 	if case['functions'][0] == 'check_test_cases_success_save':
 		func = 'save_report'
@@ -217,7 +228,7 @@ def main():
 		cases = json.load(json_file)
 
 	for case in cases:
-		if case['status'] == 'active' or case['status'] == 'fail':
+		if case['status'] in ['active', 'fail']:
 			if case['status'] == 'active':
 				case['status'] = 'inprogress'
 
@@ -227,28 +238,22 @@ def main():
 			log_path = render_tool_log_path(case['case'])
 			if not path.exists(log_path):
 				with open(log_path, 'w'):
-					pass
+					logging('Create log file for ' + case['case'])
 			sys.stdout = open(render_tool_log_path(case['case']), 'w')
 
-			print(case['case'])
+			logging(case['case'] + ' in progress')
+
 			case_function(case)
 
 			if case['status'] == 'inprogress':
 				case['status'] = 'done'
+				logging(case['case'] + ' done')
 
 			with open(path.join(WORK_DIR, 'test_cases.json'), 'w') as file:
 				json.dump(cases, file, indent=4)
 
 		if case['status'] == 'skipped':
-			rpr_save(case)
-
-#   Possible case statuses:
-# - Active: Case will be executed.
-# - Inprogress: Case is in progress (if blender was crashed, case will be inprogress).
-# - Fail: Blender was crashed during case. Fail report will be created.
-# - Error: Blender was crashed during case. Fail report is already created.
-# - Done: Case was finished successfully.
-# - Skipped: Case will be skipped. Skip report will be created.
+			save_report(case)
 
 
 main()

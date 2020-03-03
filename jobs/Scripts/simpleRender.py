@@ -7,7 +7,7 @@ import ctypes
 import pyscreenshot
 import platform
 from datetime import datetime
-from shutil import copyfile, which
+from shutil import copyfile, move, which
 import sys
 import re
 import time
@@ -19,7 +19,8 @@ import jobs_launcher.core.config as core_config
 from jobs_launcher.core.system_info import get_gpu
 from jobs_launcher.core.kill_process import kill_process
 
-ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), os.path.pardir, os.path.pardir))
+ROOT_DIR = os.path.abspath(os.path.join(
+	os.path.dirname(__file__), os.path.pardir, os.path.pardir))
 PROCESS = ['blender', 'blender.exe', 'Blender']
 
 
@@ -37,7 +38,8 @@ def createArgsParser():
 	parser.add_argument('--testCases', required=True)
 	parser.add_argument('--SPU', required=False, default=25)
 	parser.add_argument('--fail_count', required=False, default=0, type=int)
-	parser.add_argument('--threshold', required=False, default=0.05, type=float)
+	parser.add_argument('--threshold', required=False,
+						default=0.05, type=float)
 
 	return parser
 
@@ -50,10 +52,16 @@ def main(args):
 	core_config.main_logger.info('Make "base_functions.py"')
 
 	try:
-		with open(os.path.join(os.path.dirname(__file__), "base_functions.py")) as f:
+		cases = json.load(open(os.path.realpath(
+			os.path.join(os.path.abspath(args.output).replace('\\', '/'), 'test_cases.json'))))
+	except Exception as e:
+		core_config.logging.error("Can't load test_cases.json")
+		core_config.main_logger.error(str(e))
+		exit(-1)
+
+	try:
+		with open(os.path.join(os.path.dirname(__file__), 'base_functions.py')) as f:
 			script = f.read()
-		with open(os.path.realpath(os.path.join(os.path.dirname(__file__),  '..', 'Tests', args.testType, 'test_cases.json'))) as f:
-			test_cases = f.read()
 	except OSError as e:
 		core_config.main_logger.error(str(e))
 		return 1
@@ -66,35 +74,25 @@ def main(args):
 
 	work_dir = os.path.abspath(args.output)
 	script = script.format(work_dir=work_dir, testType=args.testType, render_device=args.render_device, res_path=args.res_path, pass_limit=args.pass_limit,
-							  resolution_x=args.resolution_x, resolution_y=args.resolution_y, SPU=args.SPU, threshold=args.threshold)
+						   resolution_x=args.resolution_x, resolution_y=args.resolution_y, SPU=args.SPU, threshold=args.threshold)
 
 	with open(os.path.join(args.output, 'base_functions.py'), 'w') as file:
 		file.write(script)
 
-	cases = []
-
-	try:
-		cases = json.load(open(os.path.realpath(
-			os.path.join(work_dir, 'test_cases.json'))))
-	except:
-		try:
-			cases = json.load(open(os.path.realpath(os.path.join(os.path.dirname(__file__),  '..', 'Tests', args.testType, 'test_cases.json'))))
-		except:
-			core_config.logging.error("Can't load test_cases.json")
-
-	if (os.path.exists(os.path.join(os.path.dirname(__file__), args.testCases))):
-		with open(os.path.join(os.path.dirname(__file__), args.testCases)) as f:
+	if (os.path.exists(args.testCases) and '.json' in args.testCases):
+		with open(os.path.join(args.testCases)) as f:
 			tc = f.read()
 			test_cases = json.loads(tc)[args.testType]
-		necessary_cases = [item for item in cases if item['case'] in test_cases]
+		necessary_cases = [
+			item for item in cases if item['case'] in test_cases]
 		cases = necessary_cases
 
-	core_config.main_logger.info('Create empty report files')	
+	core_config.main_logger.info('Create empty report files')
 
 	if not os.path.exists(os.path.join(work_dir, 'Color')):
 		os.makedirs(os.path.join(work_dir, 'Color'))
 	copyfile(os.path.abspath(os.path.join(work_dir, '..', '..', '..', '..', 'jobs_launcher',
-                                       'common', 'img', 'error.jpg')), os.path.join(work_dir, 'Color', 'failed.jpg'))
+										  'common', 'img', 'error.jpg')), os.path.join(work_dir, 'Color', 'failed.jpg'))
 
 	gpu = get_gpu()
 	if not gpu:
@@ -121,15 +119,17 @@ def main(args):
 			template['file_name'] = 'failed.jpg'
 			template['render_color_path'] = os.path.join('Color', 'failed.jpg')
 			template['test_group'] = args.testType
-			template['date_time'] = datetime.now().strftime('%m/%d/%Y %H:%M:%S')
-				
+			template['date_time'] = datetime.now().strftime(
+				'%m/%d/%Y %H:%M:%S')
+
 			with open(os.path.join(work_dir, case['case'] + core_config.CASE_REPORT_SUFFIX), 'w') as f:
 				f.write(json.dumps([template], indent=4))
 
 	with open(os.path.join(work_dir, 'test_cases.json'), "w+") as f:
 		json.dump(cases, f, indent=4)
 
-	cmdRun = '"{tool}" -b -P "{template}"\n'.format(tool=args.tool, template=os.path.join(args.output, 'base_functions.py'))
+	cmdRun = '"{tool}" -b -P "{template}"\n'.format(
+		tool=args.tool, template=os.path.join(args.output, 'base_functions.py'))
 
 	system_pl = platform.system()
 	if system_pl == "Windows":
@@ -142,7 +142,8 @@ def main(args):
 			f.write(cmdRun)
 		os.system('chmod +x {}'.format(cmdScriptPath))
 
-	p = subprocess.Popen(cmdScriptPath, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+	p = subprocess.Popen(cmdScriptPath, shell=True,
+						 stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 	stdout, stderr = p.communicate()
 
 	with open(os.path.join(args.output, "renderTool.log"), 'a', encoding='utf-8') as file:
@@ -162,21 +163,19 @@ def main(args):
 			child.terminate()
 		p.terminate()
 
-	'''
-	TODO: check athena work in blender 
-	if args.testType in ['Athena']:
-		subprocess.call([sys.executable, os.path.realpath(os.path.join(os.path.dirname(__file__), 'extensions', args.testType + '.py')), args.output])
-	core_config.main_logger.info("Main func return : {}".format(rc))
-	'''
+	# TODO: check athena work in blender
 
 	return rc
 
 
 def group_failed(args):
 	try:
-		cases = json.load(open(os.path.realpath(os.path.join(os.path.abspath(args.output).replace('\\', '/'), 'test_cases.json'))))
-	except:
-		cases = json.load(open(os.path.realpath(os.path.join(os.path.dirname(__file__),  '..', 'Tests', args.testType, 'test_cases.json'))))
+		cases = json.load(open(os.path.realpath(
+			os.path.join(os.path.abspath(args.output).replace('\\', '/'), 'test_cases.json'))))
+	except Exception as e:
+		core_config.logging.error("Can't load test_cases.json")
+		core_config.main_logger.error(str(e))
+		exit(-1)
 
 	for case in cases:
 		if case['status'] == 'active':
@@ -187,7 +186,8 @@ def group_failed(args):
 
 	rc = main(args)
 	kill_process(PROCESS)
-	core_config.main_logger.info("Finish simpleRender with code: {}".format(rc))
+	core_config.main_logger.info(
+		"Finish simpleRender with code: {}".format(rc))
 	exit(rc)
 
 
@@ -203,36 +203,60 @@ if __name__ == "__main__":
 	except OSError as e:
 		pass
 
+	old_active_cases = 0  # number of active cases from last iteration
+	
+	try:
+		copyfile(os.path.realpath(os.path.join(os.path.dirname(
+					__file__), '..', 'Tests', args.testType, 'test_cases.json')),
+				os.path.realpath(os.path.join(os.path.abspath(
+					args.output).replace('\\', '/'), 'test_cases.json')))
+	except:
+		core_config.logging.error("Can't copy test_cases.json")
+		core_config.main_logger.error(str(e))
+		exit(-1)
+
 	while True:
 		iteration += 1
-		core_config.main_logger.info('Try to run script in blender (#' + str(iteration) + ')')
-		if iteration > 1:
-			copyfile(os.path.join(os.path.abspath(args.output), 'renderTool.log'), os.path.join(os.path.abspath(args.output), 'renderTool' + str(iteration-1) + '.log'))
+
+		core_config.main_logger.info(
+			'Try to run script in blender (#' + str(iteration) + ')')
 
 		rc = main(args)
 
 		try:
-			cases = json.load(open(os.path.realpath(os.path.join(os.path.abspath(args.output), 'test_cases.json'))))
+			move(os.path.join(os.path.abspath(args.output).replace('\\', '/'), 'renderTool.log'),
+				 os.path.join(os.path.abspath(args.output).replace('\\', '/'), 'renderTool' + str(iteration) + '.log'))
 		except:
-			cases = json.load(open(os.path.realpath(os.path.join(os.path.dirname(__file__),  '..', 'Tests', args.testType, 'test_cases.json'))))
+			core_config.main_logger.error('No renderTool.log')
+
+		try:
+			cases = json.load(open(os.path.realpath(
+				os.path.join(os.path.abspath(args.output).replace('\\', '/'), 'test_cases.json'))))
+		except Exception as e:
+			core_config.logging.error("Can't load test_cases.json")
+			core_config.main_logger.error(str(e))
+			exit(-1)
 
 		active_cases = 0
 		failed_count = 0
 
 		for case in cases:
-			if case['status'] not in ['skipped']:
-				if case['status'] in ['fail', 'error', 'inprogress']:
-					failed_count += 1
-					if args.fail_count == failed_count:
-						group_failed(args)
-				else:
-					failed_count = 0
+			if case['status'] in ['fail', 'error', 'inprogress']:
+				failed_count += 1
+				if args.fail_count == failed_count:
+					group_failed(args)
+			else:
+				failed_count = 0
 
-				if case['status'] in ['active', 'fail', 'inprogress']:
-					active_cases += 1
+			if case['status'] in ['active', 'fail', 'inprogress']:
+				active_cases += 1
 
-		if active_cases == 0:
+		if active_cases == 0 or old_active_cases == active_cases or iteration > len(cases):			
+			# exit script if base_functions don't change number of active cases
 			kill_process(PROCESS)
-			core_config.main_logger.info("Finish simpleRender with code: {}".format(rc))
+			core_config.main_logger.info(
+				"Finish simpleRender with code: {}".format(rc))
 			exit(rc)
+		
+		old_active_cases = active_cases
 

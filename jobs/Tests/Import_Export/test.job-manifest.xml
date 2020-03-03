@@ -2,7 +2,7 @@
 <job-manifest enable="False">
 
     <outpath value="{OutputDir}"/>
-  
+
     <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="500">
         <argument>--tool "{Tool}"</argument>
         <argument>--render_device "{RenderDevice}"</argument>
@@ -15,6 +15,10 @@
         <argument>--testCases "{TestCases}"</argument>
         <argument>--SPU {SPU}</argument>
         <argument>--threshold {threshold}</argument>
+    </execute>
+
+    <execute command='python "{CWD}/Scripts/refactor_logs.py"' timeout="60">
+        <argument>--output "{OutputDir}"</argument>
     </execute>
 
     <execute command='python "{ResourcesDir}/makeReport.py"'>
