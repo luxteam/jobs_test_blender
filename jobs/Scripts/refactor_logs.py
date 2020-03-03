@@ -31,6 +31,15 @@ def main(args):
 		logs += '\n\n\n----------LOGS FROM FILE ' + f + '----------\n\n\n'
 		with open(os.path.realpath(os.path.join(os.path.abspath(args.output).replace('\\', '/'), f))) as log:
 			logs += log.read()
+
+		log_path = ''
+		for line in logs.splitlines():
+			if [l for l in ['Save report', 'Create log'] if l in line]:
+				log_path = os.path.join(os.path.abspath(args.output), 'render_tool_logs', line[-11:] + '.log').replace('\\', '/')
+			if os.path.exists(log_path):
+				with open(log_path, 'a+') as log_file:
+					log_file.write(line + '\n')
+
 		os.remove(os.path.realpath(os.path.join(
 			os.path.abspath(args.output).replace('\\', '/'), f)))
 
