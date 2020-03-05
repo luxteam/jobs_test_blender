@@ -234,9 +234,6 @@ def main():
 				json.dump(cases, file, indent=4)
 
 			log_path = render_tool_log_path(case['case'])
-			if not path.exists(log_path):
-				with open(log_path, 'w'):
-					logging('Create log file for ' + case['case'])
 
 			logging('In progress: ' + case['case'])
 
