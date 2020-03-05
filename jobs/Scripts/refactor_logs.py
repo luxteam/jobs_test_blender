@@ -30,8 +30,10 @@ def main(args):
         logs += '\n\n\n----------LOGS FROM FILE ' + f + '----------\n\n\n'
         with open(os.path.realpath(os.path.join(os.path.abspath(args.output), f))) as log:
             logs += log.read()
+        os.remove(os.path.realpath(os.path.join(
+            os.path.abspath(args.output), f)))
 
-        log_path = ''
+    log_path = ''
     for line in logs.splitlines():
         if [l for l in ['Save report', 'In progress: '] if l in line]:
             log_path = os.path.join(os.path.abspath(
@@ -39,9 +41,6 @@ def main(args):
         if os.path.exists(log_path):  # throw exception while log_path == ''
             with open(log_path, 'a') as log_file:
                 log_file.write(line + '\n')
-
-        os.remove(os.path.realpath(os.path.join(
-            os.path.abspath(args.output), f)))
 
     with open(os.path.realpath(os.path.join(os.path.abspath(args.output), 'renderTool.log')), 'w') as f:
         for error in errors:
