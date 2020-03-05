@@ -35,7 +35,7 @@ def main(args):
 
     log_path = ''
     for line in logs.splitlines():
-        if [l for l in ['Save report', 'In progress: '] if l in line]:
+        if [l for l in ['Save report', 'Create log'] if l in line]:
             log_path = os.path.join(os.path.abspath(
                 args.output), 'render_tool_logs', line.split().pop() + '.log')
         if os.path.exists(log_path):  # throw exception while log_path == ''
