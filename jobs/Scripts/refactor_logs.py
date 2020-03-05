@@ -20,30 +20,29 @@ def createArgsParser():
 
 
 def main(args):
-	work_dir = os.path.abspath(args.output).replace('\\', '/')
+	work_dir = os.path.abspath(args.output)
 	files = [f for f in os.listdir(
-		work_dir) if os.path.isfile(os.path.join(work_dir, f))]
-	files = [f for f in files if 'renderTool' in f]
+		work_dir) if os.path.isfile(os.path.join(work_dir, f))if 'renderTool' in f]
 
 	logs = ''
 
 	for f in files:
 		logs += '\n\n\n----------LOGS FROM FILE ' + f + '----------\n\n\n'
-		with open(os.path.realpath(os.path.join(os.path.abspath(args.output).replace('\\', '/'), f))) as log:
+		with open(os.path.realpath(os.path.join(os.path.abspath(args.output), f))) as log:
 			logs += log.read()
 
 		log_path = ''
-		for line in logs.splitlines():
-			if [l for l in ['Save report', 'Create log'] if l in line]: # get start of logging for certain case
-				log_path = os.path.join(os.path.abspath(args.output), 'render_tool_logs', line.split().pop() + '.log').replace('\\', '/')
-			if os.path.exists(log_path): # if log_path is correct write logs of certain case to log_path
-				with open(log_path, 'a+') as log_file:
-					log_file.write(line + '\n')
+	for line in logs.splitlines():
+		if [l for l in ['Save report', 'Create log'] if l in line]:
+			log_path = os.path.join(os.path.abspath(args.output), 'render_tool_logs', line.split().pop() + '.log')
+		if os.path.exists(log_path): # throw exception while log_path == ''
+			with open(log_path, 'a') as log_file:
+				log_file.write(line + '\n')
 
 		os.remove(os.path.realpath(os.path.join(
-			os.path.abspath(args.output).replace('\\', '/'), f)))
+			os.path.abspath(args.output), f)))
 
-	with open(os.path.realpath(os.path.join(os.path.abspath(args.output).replace('\\', '/'), 'renderTool.log')), 'w') as f:
+	with open(os.path.realpath(os.path.join(os.path.abspath(args.output), 'renderTool.log')), 'w') as f:
 		for error in errors:
 			if error['error'] in logs:
 				f.write('[Error] {}\n'.format(error['message']))
@@ -51,7 +50,7 @@ def main(args):
 		f.write('\n\nCases statuses from test_cases.json\n\n')
 
 		cases = json.load(open(os.path.realpath(
-			os.path.join(os.path.abspath(args.output).replace('\\', '/'), 'test_cases.json'))))
+			os.path.join(os.path.abspath(args.output), 'test_cases.json'))))
 
 		f.write('Active cases: {}\n'.format(len([n for n in cases if n['status'] == 'active'])))
 		f.write('Inprogress cases: {}\n'.format(len([n for n in cases if n['status'] == 'inprogress'])))
