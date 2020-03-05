@@ -34,9 +34,9 @@ def main(args):
 
 		log_path = ''
 		for line in logs.splitlines():
-			if [l for l in ['Save report', 'Create log'] if l in line]:
+			if [l for l in ['Save report', 'Create log'] if l in line]: # get start of logging for certain case
 				log_path = os.path.join(os.path.abspath(args.output), 'render_tool_logs', line.split().pop() + '.log').replace('\\', '/')
-			if os.path.exists(log_path):
+			if os.path.exists(log_path): # if log_path is correct write logs of certain case to log_path
 				with open(log_path, 'a+') as log_file:
 					log_file.write(line + '\n')
 
