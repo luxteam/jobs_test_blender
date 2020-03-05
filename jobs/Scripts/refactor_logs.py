@@ -35,7 +35,7 @@ def main(args):
 		log_path = ''
 		for line in logs.splitlines():
 			if [l for l in ['Save report', 'Create log'] if l in line]:
-				log_path = os.path.join(os.path.abspath(args.output), 'render_tool_logs', line[-11:] + '.log').replace('\\', '/')
+				log_path = os.path.join(os.path.abspath(args.output), 'render_tool_logs', line.split().pop() + '.log').replace('\\', '/')
 			if os.path.exists(log_path):
 				with open(log_path, 'a+') as log_file:
 					log_file.write(line + '\n')
