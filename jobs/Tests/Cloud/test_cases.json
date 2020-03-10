@@ -23,7 +23,7 @@
     },
     {
         "case": "BL28_BCS_003",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "rpr_render(case)"
         ],
@@ -34,7 +34,7 @@
     },
     {
         "case": "BL28_BCS_004",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "rpr_render(case)"
         ],
@@ -45,7 +45,7 @@
     },
     {
         "case": "BL28_BCS_005",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "rpr_render(case)"
         ],
@@ -67,7 +67,7 @@
     },
     {
         "case": "BL28_BCS_007",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "rpr_render(case)"
         ],
@@ -100,7 +100,7 @@
     },
     {
         "case": "BL28_BCS_010",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "rpr_render(case)"
         ],
