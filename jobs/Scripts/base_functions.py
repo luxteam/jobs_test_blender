@@ -127,8 +127,6 @@ def rpr_render(case):
 
 def prerender(case):
 	logging('Prerender')
-	test_case = case['case']  # for call in functions in case
-	script_info = case['script_info']  # for call in functions in case
 	scene = case.get('scene', '')
 	scene_name = bpy.path.basename(bpy.context.blend_data.filepath)
 	if scene_name != scene:
@@ -163,7 +161,7 @@ def prerender(case):
 
 	# output settings
 	set_value(scene.render, 'filepath', os.path.join(
-		WORK_DIR, 'Color', test_case))
+		WORK_DIR, 'Color', case['case']))
 	set_value(scene.render, 'use_placeholder', True)
 	set_value(scene.render, 'use_file_extension', True)
 	set_value(scene.render, 'use_overwrite', True)
@@ -239,9 +237,8 @@ def main():
 			if not path.exists(log_path):
 				with open(log_path, 'w'):
 					logging('Create log file for ' + case['case'])
-			sys.stdout = open(render_tool_log_path(case['case']), 'w')
 
-			logging(case['case'] + ' in progress')
+			logging('In progress: ' + case['case'])
 
 			case_function(case)
 

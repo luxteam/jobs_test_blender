@@ -53,7 +53,7 @@ def main(args):
 
 	try:
 		cases = json.load(open(os.path.realpath(
-			os.path.join(os.path.abspath(args.output).replace('\\', '/'), 'test_cases.json'))))
+			os.path.join(os.path.abspath(args.output), 'test_cases.json'))))
 	except Exception as e:
 		core_config.logging.error("Can't load test_cases.json")
 		core_config.main_logger.error(str(e))
@@ -171,7 +171,7 @@ def main(args):
 def group_failed(args):
 	try:
 		cases = json.load(open(os.path.realpath(
-			os.path.join(os.path.abspath(args.output).replace('\\', '/'), 'test_cases.json'))))
+			os.path.join(os.path.abspath(args.output), 'test_cases.json'))))
 	except Exception as e:
 		core_config.logging.error("Can't load test_cases.json")
 		core_config.main_logger.error(str(e))
@@ -181,7 +181,7 @@ def group_failed(args):
 		if case['status'] == 'active':
 			case['status'] = 'skipped'
 
-	with open(os.path.join(os.path.abspath(args.output).replace('\\', '/'), 'test_cases.json'), "w+") as f:
+	with open(os.path.join(os.path.abspath(args.output), 'test_cases.json'), "w+") as f:
 		json.dump(cases, f, indent=4)
 
 	rc = main(args)
@@ -192,8 +192,8 @@ def group_failed(args):
 
 
 if __name__ == "__main__":
-
 	core_config.main_logger.info("simpleRender start working...")
+	
 	args = createArgsParser().parse_args()
 
 	iteration = 0
@@ -209,7 +209,7 @@ if __name__ == "__main__":
 		copyfile(os.path.realpath(os.path.join(os.path.dirname(
 					__file__), '..', 'Tests', args.testType, 'test_cases.json')),
 				os.path.realpath(os.path.join(os.path.abspath(
-					args.output).replace('\\', '/'), 'test_cases.json')))
+					args.output), 'test_cases.json')))
 	except:
 		core_config.logging.error("Can't copy test_cases.json")
 		core_config.main_logger.error(str(e))
@@ -224,14 +224,14 @@ if __name__ == "__main__":
 		rc = main(args)
 
 		try:
-			move(os.path.join(os.path.abspath(args.output).replace('\\', '/'), 'renderTool.log'),
-				 os.path.join(os.path.abspath(args.output).replace('\\', '/'), 'renderTool' + str(iteration) + '.log'))
+			move(os.path.join(os.path.abspath(args.output), 'renderTool.log'),
+				 os.path.join(os.path.abspath(args.output), 'renderTool' + str(iteration) + '.log'))
 		except:
 			core_config.main_logger.error('No renderTool.log')
 
 		try:
 			cases = json.load(open(os.path.realpath(
-				os.path.join(os.path.abspath(args.output).replace('\\', '/'), 'test_cases.json'))))
+				os.path.join(os.path.abspath(args.output), 'test_cases.json'))))
 		except Exception as e:
 			core_config.logging.error("Can't load test_cases.json")
 			core_config.main_logger.error(str(e))
