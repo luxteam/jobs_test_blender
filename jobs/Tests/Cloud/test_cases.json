@@ -1,0 +1,288 @@
+[
+    {
+        "case": "BL28_BCS_001",
+        "status": "skipped",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Blender_2_81_the_junk_Shop"
+        ],
+        "scene": "Blender_2_81_the_junk_Shop.blend"
+    },
+    {
+        "case": "BL28_BCS_002",
+        "status": "skipped",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Blender_2_80_Spring"
+        ],
+        "scene": "Blender_2_80_Spring.blend"
+    },
+    {
+        "case": "BL28_BCS_003",
+        "status": "skipped",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Blender_2_79_Agent_327"
+        ],
+        "scene": "Blender_2_79_Agent_327.blend"
+    },
+    {
+        "case": "BL28_BCS_004",
+        "status": "skipped",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Blender_2_78_Procedural"
+        ],
+        "scene": "Blender_2_78_Procedural.blend"
+    },
+    {
+        "case": "BL28_BCS_005",
+        "status": "skipped",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Blender_2_77_Racing_Car"
+        ],
+        "scene": "Blender_2_77_Racing_Car.blend"
+    },
+    {
+        "case": "BL28_BCS_006",
+        "status": "skipped",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Blender_2_74_Fishy_Cat"
+        ],
+        "scene": "Blender_2_74_Fishy_Cat.blend"
+    },
+    {
+        "case": "BL28_BCS_007",
+        "status": "skipped",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Race_Spaceship"
+        ],
+        "scene": "Race_Spaceship.blend"
+    },
+    {
+        "case": "BL28_BCS_008",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Tree_Creature"
+        ],
+        "scene": "Tree_Creature.blend"
+    },
+    {
+        "case": "BL28_BCS_009",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Temple"
+        ],
+        "scene": "Temple.blend"
+    },
+    {
+        "case": "BL28_BCS_010",
+        "status": "skipped",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Wanderer"
+        ],
+        "scene": "Wanderer.blend"
+    },
+    {
+        "case": "BL28_BCS_011",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Ember_Forest"
+        ],
+        "scene": "Ember_Forest.blend"
+    },
+    {
+        "case": "BL28_BCS_012",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Wasp_Bot"
+        ],
+        "scene": "Wasp_Bot.blend"
+    },
+    {
+        "case": "BL28_BCS_013",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Mr_Elephant"
+        ],
+        "scene": "Mr_Elephant.blend"
+    },
+    {
+        "case": "BL28_BCS_014",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Architectural_Visualization"
+        ],
+        "scene": "Architectural_Visualization.blend"
+    },
+    {
+        "case": "BL28_BCS_015",
+        "status": "skipped",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Agent_327_Barbershop"
+        ],
+        "scene": "Agent_327_Barbershop.blend"
+    },
+    {
+        "case": "BL28_BCS_016",
+        "status": "skipped",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Cosmos_Laudromat_Demo"
+        ],
+        "scene": "Cosmos_Laudromat_Demo.blend"
+    },
+    {
+        "case": "BL28_BCS_017",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Car_Demo"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_BCS_018",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "classroom"
+        ],
+        "scene": "classroom.blend"
+    },
+    {
+        "case": "BL28_BCS_019",
+        "status": "skipped",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Barcelona_Pavillion"
+        ],
+        "scene": "Barcelona_Pavillion.blend"
+    },
+    {
+        "case": "BL28_BCS_020",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Car_Viewport"
+        ],
+        "scene": "Car_Viewport.blend"
+    },
+    {
+        "case": "BL28_BCS_021",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "stylized_levi"
+        ],
+        "scene": "stylized_levi.blend"
+    },
+    {
+        "case": "BL28_BCS_022",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "bmps_27"
+        ],
+        "scene": "bmps_27.blend"
+    },
+    {
+        "case": "BL28_BCS_023",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Ring_27"
+        ],
+        "scene": "Ring_27.blend"
+    },
+    {
+        "case": "BL28_BCS_024",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "scene_Helicopter_27"
+        ],
+        "scene": "scene_Helicopter_27.blend"
+    },
+    {
+        "case": "BL28_BCS_025",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "TeeglasFX_27"
+        ],
+        "scene": "TeeglasFX_27.blend"
+    },
+    {
+        "case": "BL28_BCS_026",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "volume_emission_27"
+        ],
+        "scene": "volume_emission_27.blend"
+    }
+]
