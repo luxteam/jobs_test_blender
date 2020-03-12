@@ -8,8 +8,7 @@
         "scene": "ComplexTestUber.blend",
         "functions": [
             "set_value(scene.render.image_settings, 'file_format', 'JPEG')",
-            "rpr_render(case)",
-            "copyfile(path.join(WORK_DIR, '..', '..', '..', '..', 'jobs', 'Tests', 'pass.jpg'), path.join(WORK_DIR, 'Color', ('BL28_RS_IF_001' + '.jpg')))"
+            "rpr_render(case)"
         ]
     },
     {
@@ -21,9 +20,9 @@
         "scene": "ComplexTestUber.blend",
         "functions": [
             "set_value(scene.render.image_settings, 'file_format', 'BMP')",
-            "rpr_render(case)",
-            "copyfile(path.join(WORK_DIR, '..', '..', '..', '..', 'jobs', 'Tests', 'pass.jpg'), path.join(WORK_DIR, 'Color', ('BL28_RS_IF_002' + '.jpg')))"
-        ]
+            "rpr_render(case)"
+        ],
+        "extension": ".bmp"
     },
     {
         "case": "BL28_RS_IF_003",
@@ -34,9 +33,9 @@
         "scene": "ComplexTestUber.blend",
         "functions": [
             "set_value(scene.render.image_settings, 'file_format', 'PNG')",
-            "rpr_render(case)",
-            "copyfile(path.join(WORK_DIR, '..', '..', '..', '..', 'jobs', 'Tests', 'pass.jpg'), path.join(WORK_DIR, 'Color', ('BL28_RS_IF_003' + '.jpg')))"
-        ]
+            "rpr_render(case)"
+        ],
+        "extension": ".png"
     },
     {
         "case": "BL28_RS_IF_004",
@@ -48,7 +47,7 @@
         "functions": [
             "set_value(scene.render.image_settings, 'file_format', 'IRIS')",
             "rpr_render(case)",
-            "copyfile(path.join(WORK_DIR, '..', '..', '..', '..', 'jobs', 'Tests', 'pass.jpg'), path.join(WORK_DIR, 'Color', ('BL28_RS_IF_004' + '.jpg')))"
+            "setPass(case)"
         ]
     },
     {
@@ -61,7 +60,7 @@
         "functions": [
             "set_value(scene.render.image_settings, 'file_format', 'JPEG2000')",
             "rpr_render(case)",
-            "copyfile(path.join(WORK_DIR, '..', '..', '..', '..', 'jobs', 'Tests', 'pass.jpg'), path.join(WORK_DIR, 'Color', ('BL28_RS_IF_005' + '.jpg')))"
+            "setPass(case)"
         ]
     },
     {
@@ -74,7 +73,7 @@
         "functions": [
             "set_value(scene.render.image_settings, 'file_format', 'TARGA')",
             "rpr_render(case)",
-            "copyfile(path.join(WORK_DIR, '..', '..', '..', '..', 'jobs', 'Tests', 'pass.jpg'), path.join(WORK_DIR, 'Color', ('BL28_RS_IF_006' + '.jpg')))"
+            "setPass(case)"
         ]
     },
     {
@@ -87,7 +86,7 @@
         "functions": [
             "set_value(scene.render.image_settings, 'file_format', 'TARGA_RAW')",
             "rpr_render(case)",
-            "copyfile(path.join(WORK_DIR, '..', '..', '..', '..', 'jobs', 'Tests', 'pass.jpg'), path.join(WORK_DIR, 'Color', ('BL28_RS_IF_007' + '.jpg')))"
+            "setPass(case)"
         ]
     },
     {
@@ -100,7 +99,7 @@
         "functions": [
             "set_value(scene.render.image_settings, 'file_format', 'DPX')",
             "rpr_render(case)",
-            "copyfile(path.join(WORK_DIR, '..', '..', '..', '..', 'jobs', 'Tests', 'pass.jpg'), path.join(WORK_DIR, 'Color', ('BL28_RS_IF_008' + '.jpg')))"
+            "setPass(case)"
         ]
     },
     {
@@ -113,7 +112,7 @@
         "functions": [
             "set_value(scene.render.image_settings, 'file_format', 'OPEN_EXR_MULTILAYER')",
             "rpr_render(case)",
-            "copyfile(path.join(WORK_DIR, '..', '..', '..', '..', 'jobs', 'Tests', 'pass.jpg'), path.join(WORK_DIR, 'Color', ('BL28_RS_IF_009' + '.jpg')))"
+            "setPass(case)"
         ]
     },
     {
@@ -126,7 +125,7 @@
         "functions": [
             "set_value(scene.render.image_settings, 'file_format', 'OPEN_EXR')",
             "rpr_render(case)",
-            "copyfile(path.join(WORK_DIR, '..', '..', '..', '..', 'jobs', 'Tests', 'pass.jpg'), path.join(WORK_DIR, 'Color', ('BL28_RS_IF_010' + '.jpg')))"
+            "setPass(case)"
         ]
     },
     {
@@ -139,7 +138,7 @@
         "functions": [
             "set_value(scene.render.image_settings, 'file_format', 'CINEON')",
             "rpr_render(case)",
-            "copyfile(path.join(WORK_DIR, '..', '..', '..', '..', 'jobs', 'Tests', 'pass.jpg'), path.join(WORK_DIR, 'Color', ('BL28_RS_IF_011' + '.jpg')))"
+            "setPass(case)"
         ]
     },
     {
@@ -152,7 +151,7 @@
         "functions": [
             "set_value(scene.render.image_settings, 'file_format', 'HDR')",
             "rpr_render(case)",
-            "copyfile(path.join(WORK_DIR, '..', '..', '..', '..', 'jobs', 'Tests', 'pass.jpg'), path.join(WORK_DIR, 'Color', ('BL28_RS_IF_012' + '.jpg')))"
+            "setPass(case)"
         ]
     },
     {
@@ -165,7 +164,7 @@
         "functions": [
             "set_value(scene.render.image_settings, 'file_format', 'TIFF')",
             "rpr_render(case)",
-            "copyfile(path.join(WORK_DIR, '..', '..', '..', '..', 'jobs', 'Tests', 'pass.jpg'), path.join(WORK_DIR, 'Color', ('BL28_RS_IF_013' + '.jpg')))"
+            "setPass(case)"
         ]
     }
 ]

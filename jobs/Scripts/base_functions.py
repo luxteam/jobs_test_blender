@@ -43,7 +43,7 @@ def reportToJSON(case, render_time=0):
 	logging('Create report json ({{}} {{}})'.format(
 		case['case'], report['test_status']))
 
-	report['file_name'] = case['case'] + '.jpg'
+	report['file_name'] = case['case'] + case.get('extension', '.jpg')
 	# TODO: render device may be incorrect (if it changes in case)
 	report['render_device'] = set_render_device(RENDER_DEVICE)
 	report['tool'] = 'Blender ' + bpy.app.version_string.split(' (')[0]
