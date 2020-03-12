@@ -667,7 +667,7 @@
     },
     {
         "case": "BL28_L_PL_044",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Sun light, int = 100, Shadow Softness - 0.1"
         ],
@@ -682,7 +682,7 @@
     },
     {
         "case": "BL28_L_PL_045",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Sun light, int = 100, Shadow Softness - 0.5"
         ],
@@ -697,7 +697,7 @@
     },
     {
         "case": "BL28_L_PL_046",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Sun light, int = 100, Shadow Softness - 1"
         ],
