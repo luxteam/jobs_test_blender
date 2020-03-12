@@ -654,13 +654,13 @@
         "case": "BL28_L_PL_043",
         "status": "active",
         "script_info": [
-            "Sun light, int = 100, Shadow Softness - 0.00"
+            "Sun light, int = 1000, Shadow Softness Angle - 0.00"
         ],
         "scene": "Physical_Lights.blend",
         "functions": [
             "light_data = getLightWithType('SUN')",
-            "set_value(light_data, 'energy', 100)",
-            "set_value(light_data.rpr, 'shadow_softness', 0)",
+            "set_value(light_data, 'energy', 1000)",
+            "set_value(light_data.rpr, 'shadow_softness_angle', 0)",
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Physical_Lights.blend'))"
         ]
@@ -669,13 +669,13 @@
         "case": "BL28_L_PL_044",
         "status": "active",
         "script_info": [
-            "Sun light, int = 100, Shadow Softness - 0.1"
+            "Sun light, int = 1000, Shadow Softness Angle - 1"
         ],
         "scene": "Physical_Lights.blend",
         "functions": [
             "light_data = getLightWithType('SUN')",
-            "set_value(light_data, 'energy', 100)",
-            "set_value(light_data.rpr, 'shadow_softness', 1)",
+            "set_value(light_data, 'energy', 1000)",
+            "set_value(light_data.rpr, 'shadow_softness_angle', 1)",
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Physical_Lights.blend'))"
         ]
@@ -684,13 +684,13 @@
         "case": "BL28_L_PL_045",
         "status": "active",
         "script_info": [
-            "Sun light, int = 100, Shadow Softness - 0.5"
+            "Sun light, int = 1000, Shadow Softness Angle - 20"
         ],
         "scene": "Physical_Lights.blend",
         "functions": [
             "light_data = getLightWithType('SUN')",
-            "set_value(light_data, 'energy', 100)",
-            "set_value(light_data.rpr, 'shadow_softness', 20)",
+            "set_value(light_data, 'energy', 1000)",
+            "set_value(light_data.rpr, 'shadow_softness_angle', 20)",
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Physical_Lights.blend'))"
         ]
@@ -699,13 +699,13 @@
         "case": "BL28_L_PL_046",
         "status": "active",
         "script_info": [
-            "Sun light, int = 100, Shadow Softness - 1"
+            "Sun light, int = 1000, Shadow Softness Angle - 90"
         ],
         "scene": "Physical_Lights.blend",
         "functions": [
             "light_data = getLightWithType('SUN')",
-            "set_value(light_data, 'energy', 100)",
-            "set_value(light_data.rpr, 'shadow_softness', 90)",
+            "set_value(light_data, 'energy', 1000)",
+            "set_value(light_data.rpr, 'shadow_softness_angle', 90)",
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Physical_Lights.blend'))"
         ]
