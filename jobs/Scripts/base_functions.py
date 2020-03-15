@@ -136,9 +136,7 @@ def prerender(case):
 			logging("Can't load scene. Exit Blender")
 			bpy.ops.wm.quit_blender()
 
-
 	enable_rpr()
-
 	scene = bpy.context.scene
 	device_name = set_render_device(RENDER_DEVICE)
 
@@ -225,6 +223,8 @@ def main():
 	with open(path.join(WORK_DIR, 'test_cases.json'), 'r') as json_file:
 		cases = json.load(json_file)
 
+	total_time = 0
+
 	for case in cases:
 		if case['status'] in ['active', 'fail']:
 			if case['status'] == 'active':
@@ -240,7 +240,10 @@ def main():
 
 			logging('In progress: ' + case['case'])
 
+			start_time = datetime.datetime.now()
 			case_function(case)
+			stop_time = (datetime.datetime.now() - start_time).total_seconds()
+			case['time_taken'] = stop_time
 
 			if case['status'] == 'inprogress':
 				case['status'] = 'done'
@@ -251,6 +254,8 @@ def main():
 
 		if case['status'] == 'skipped':
 			save_report(case)
+
+	logging('Time taken: ' + str(total_time))
 
 
 main()
