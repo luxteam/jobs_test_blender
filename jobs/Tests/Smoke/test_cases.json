@@ -369,7 +369,8 @@
 			"PNG format",
 			"Pass Limit: 50"
 		],
-		"scene": "default.blend"
+		"scene": "default.blend",
+		"extension": ".png"
 	},
 	{
 		"case": "BL28_SM_024",

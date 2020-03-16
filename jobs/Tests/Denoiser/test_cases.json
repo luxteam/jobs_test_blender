@@ -565,7 +565,7 @@
     },
     {
         "case": "BL28_RS_DEN_033",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -1012,7 +1012,7 @@
     },
     {
         "case": "BL28_RS_DEN_056",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -1029,7 +1029,7 @@
     },
     {
         "case": "BL28_RS_DEN_057",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
