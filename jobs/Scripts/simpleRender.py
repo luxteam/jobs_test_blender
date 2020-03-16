@@ -108,7 +108,7 @@ def main(args):
 
 		if case['status'] != 'done':
 			if case["status"] == 'inprogress':
-				case['status'] = 'fail'
+				case['status'] = 'active'
 
 			template = core_config.RENDER_REPORT_BASE
 			template['test_case'] = case['case']

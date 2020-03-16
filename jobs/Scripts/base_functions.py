@@ -206,11 +206,11 @@ def case_function(case):
 	if case['functions'][0] == 'check_test_cases_success_save':
 		func = 'save_report'
 
-	if case['status'] == 'fail' or case.get('number_of_tries', 0) == 3:
+	if case['status'] == 'fail' or case.get('number_of_tries', 1) == 3:
 		case['status'] = 'error'
 		func = 'save_report'
 	else:
-		case['number_of_tries'] = case.get('number_of_tries', 0) + 1
+		case['number_of_tries'] = case.get('number_of_tries', 1) + 1
 
 	functions[func](case)
 
