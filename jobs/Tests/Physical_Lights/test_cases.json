@@ -675,7 +675,7 @@
         "functions": [
             "light_data = getLightWithType('SUN')",
             "set_value(light_data, 'energy', 1000)",
-            "set_value(light_data.rpr, 'shadow_softness_angle', 1)",
+            "set_value(light_data.rpr, 'shadow_softness_angle', 1/57.3)",
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Physical_Lights.blend'))"
         ]
@@ -690,7 +690,7 @@
         "functions": [
             "light_data = getLightWithType('SUN')",
             "set_value(light_data, 'energy', 1000)",
-            "set_value(light_data.rpr, 'shadow_softness_angle', 20)",
+            "set_value(light_data.rpr, 'shadow_softness_angle', 20/57.3)",
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Physical_Lights.blend'))"
         ]
@@ -705,7 +705,7 @@
         "functions": [
             "light_data = getLightWithType('SUN')",
             "set_value(light_data, 'energy', 1000)",
-            "set_value(light_data.rpr, 'shadow_softness_angle', 90)",
+            "set_value(light_data.rpr, 'shadow_softness_angle', 90/57.3)",
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Physical_Lights.blend'))"
         ]
