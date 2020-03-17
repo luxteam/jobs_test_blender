@@ -667,7 +667,7 @@
     },
     {
         "case": "BL28_L_PL_044",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
             "Sun light, int = 300, Shadow Softness Angle - 1"
         ],
@@ -682,7 +682,7 @@
     },
     {
         "case": "BL28_L_PL_045",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
             "Sun light, int = 300, Shadow Softness Angle - 20"
         ],
@@ -697,7 +697,7 @@
     },
     {
         "case": "BL28_L_PL_046",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
             "Sun light, int = 300, Shadow Softness Angle - 90"
         ],
