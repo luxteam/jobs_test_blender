@@ -108,7 +108,8 @@ def main(args):
 
 		if case['status'] != 'done':
 			if case["status"] == 'inprogress':
-				case['status'] = 'fail'
+				case['status'] = 'active'
+				case['number_of_tries'] = case.get('number_of_tries', 0) + 1
 
 			template = core_config.RENDER_REPORT_BASE
 			template['test_case'] = case['case']
@@ -202,8 +203,6 @@ if __name__ == "__main__":
 		os.makedirs(args.output)
 	except OSError as e:
 		pass
-
-	old_active_cases = 0  # number of active cases from last iteration
 	
 	try:
 		copyfile(os.path.realpath(os.path.join(os.path.dirname(
@@ -251,12 +250,10 @@ if __name__ == "__main__":
 			if case['status'] in ['active', 'fail', 'inprogress']:
 				active_cases += 1
 
-		if active_cases == 0 or old_active_cases == active_cases or iteration > len(cases):			
+		if active_cases == 0 or iteration > len(cases) * 3:	# 3- retries count		
 			# exit script if base_functions don't change number of active cases
 			kill_process(PROCESS)
 			core_config.main_logger.info(
 				"Finish simpleRender with code: {}".format(rc))
 			exit(rc)
-		
-		old_active_cases = active_cases
 
