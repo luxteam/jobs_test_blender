@@ -209,6 +209,8 @@ def case_function(case):
 	if case['status'] == 'fail' or case.get('number_of_tries', 1) == 3:	# 3- retries count
 		case['status'] = 'error'
 		func = 'save_report'
+	elif case['status'] == 'skipped':
+		func = 'save_report'
 	else:
 		case['number_of_tries'] = case.get('number_of_tries', 0) + 1
 
@@ -228,7 +230,7 @@ def main():
 	total_time = 0
 
 	for case in cases:
-		if case['status'] in ['active', 'fail']:
+		if case['status'] in ['active', 'fail', 'skipped']:
 			if case['status'] == 'active':
 				case['status'] = 'inprogress'
 
@@ -253,9 +255,6 @@ def main():
 
 			with open(path.join(WORK_DIR, 'test_cases.json'), 'w') as file:
 				json.dump(cases, file, indent=4)
-
-		if case['status'] == 'skipped':
-			save_report(case)
 
 	logging('Time taken: ' + str(total_time))
 
