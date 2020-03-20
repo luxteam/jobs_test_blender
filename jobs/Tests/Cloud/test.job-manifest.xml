@@ -8,12 +8,12 @@
         <argument>--render_device "{RenderDevice}"</argument>
         <argument>--output "{OutputDir}"</argument>
         <argument>--testType Cloud</argument>
-        <argument>--pass_limit 30</argument>
+        <argument>--pass_limit 50</argument>
         <argument>--resolution_x {rx}</argument>
         <argument>--resolution_y {ry}</argument>
         <argument>--res_path "{ScenesDir}/Cloud"</argument>
         <argument>--testCases "{TestCases}"</argument>
-        <argument>--SPU 15</argument>
+        <argument>--SPU 25</argument>
         <argument>--threshold {threshold}</argument>
     </execute>
 
