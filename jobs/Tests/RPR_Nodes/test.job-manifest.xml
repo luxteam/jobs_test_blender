@@ -8,7 +8,7 @@
         <argument>--render_device "{RenderDevice}"</argument>
         <argument>--output "{OutputDir}"</argument>
         <argument>--testType RPR_Nodes</argument>
-        <argument>--pass_limit {PassLimit}</argument>
+        <argument>--pass_limit 50</argument>
         <argument>--resolution_x 960</argument>
         <argument>--resolution_y 540</argument>
         <argument>--res_path "{ScenesDir}/Materials"</argument>
