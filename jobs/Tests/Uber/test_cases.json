@@ -36,9 +36,9 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
-            "node_uber.inputs['Diffuse Weight']['default_value'] = 0",
-            "node_uber.inputs['Diffuse Roughness']['default_value'] = 0",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Weight'].default_value = 0",
+            "node_uber.inputs['Diffuse Roughness'].default_value = 0",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -54,9 +54,9 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
-            "node_uber.inputs['Diffuse Weight']['default_value'] = 0.5",
-            "node_uber.inputs['Diffuse Roughness']['default_value'] = 0.5",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Weight'].default_value = 0.5",
+            "node_uber.inputs['Diffuse Roughness'].default_value = 0.5",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -72,7 +72,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -87,7 +87,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "rpr_render(case)",
             "delete_imagemap()"
         ]
@@ -102,7 +102,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "create_imagemap('Diffuse Weight', 'diffuseWeight.tga')",
             "rpr_render(case)",
             "delete_imagemap()"
@@ -132,7 +132,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Backscatter Weight']['default_value'] = 0.5",
+            "node_uber.inputs['Backscatter Weight'].default_value = 0.5",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -146,7 +146,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Backscatter Weight']['default_value'] = 1.0",
+            "node_uber.inputs['Backscatter Weight'].default_value = 1.0",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -191,7 +191,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_coating', True)",
             "rpr_render(case)",
             "default_settings()"
@@ -207,9 +207,9 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_coating', True)",
-            "node_uber.inputs['Coating Weight']['default_value'] = 0",
+            "node_uber.inputs['Coating Weight'].default_value = 0",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -224,9 +224,9 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_coating', True)",
-            "node_uber.inputs['Coating Weight']['default_value'] = 0.5",
+            "node_uber.inputs['Coating Weight'].default_value = 0.5",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -241,9 +241,9 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_coating', True)",
-            "ode_uber.inputs['Coating Roughness']['default_value'] = 0.5",
+            "ode_uber.inputs['Coating Roughness'].default_value = 0.5",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -258,9 +258,9 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_coating', True)",
-            "node_uber.inputs['Coating Roughness']['default_value'] = 1.0",
+            "node_uber.inputs['Coating Roughness'].default_value = 1.0",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -275,9 +275,9 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_coating', True)",
-            "node_uber.inputs['Coating IOR']['default_value'] = 1.0",
+            "node_uber.inputs['Coating IOR'].default_value = 1.0",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -292,9 +292,9 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_coating', True)",
-            "node_uber.inputs['Coating IOR']['default_value'] = 3.0",
+            "node_uber.inputs['Coating IOR'].default_value = 3.0",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -309,9 +309,9 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_coating', True)",
-            "node_uber.inputs['Coating Thickness']['default_value'] = 1.0",
+            "node_uber.inputs['Coating Thickness'].default_value = 1.0",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -326,9 +326,9 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_coating', True)",
-            "node_uber.inputs['Coating Thickness']['default_value'] = 3.0",
+            "node_uber.inputs['Coating Thickness'].default_value = 3.0",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -343,9 +343,9 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_coating', True)",
-            "node_uber.inputs['Coating Transmission Color']['default_value'] = (0, 0.8, 0, 1.0)",
+            "node_uber.inputs['Coating Transmission Color'].default_value = (0, 0.8, 0, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -440,10 +440,10 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_reflection', True)",
             "set_value(node_uber, 'reflection_mode', 'PBR')",
-            "node_uber.inputs['Reflection Weight']['default_value'] = 0",
+            "node_uber.inputs['Reflection Weight'].default_value = 0",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -458,7 +458,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -473,7 +473,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -489,7 +489,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -504,10 +504,10 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_reflection', True)",
             "set_value(node_uber, 'reflection_mode', 'PBR')",
-            "node_uber.inputs['Reflection Roughness']['default_value'] = 0",
+            "node_uber.inputs['Reflection Roughness'].default_value = 0",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -522,10 +522,10 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_reflection', True)",
             "set_value(node_uber, 'reflection_mode', 'PBR')",
-            "node_uber.inputs['Reflection Roughness']['default_value'] = 1",
+            "node_uber.inputs['Reflection Roughness'].default_value = 1",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -540,10 +540,10 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_reflection', True)",
             "set_value(node_uber, 'reflection_mode', 'PBR')",
-            "node_uber.inputs['Reflection IOR']['default_value'] = 0",
+            "node_uber.inputs['Reflection IOR'].default_value = 0",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -558,10 +558,10 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_reflection', True)",
             "set_value(node_uber, 'reflection_mode', 'PBR')",
-            "node_uber.inputs['Reflection IOR']['default_value'] = 3",
+            "node_uber.inputs['Reflection IOR'].default_value = 3",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -663,7 +663,7 @@
             "uber_material, node_uber = get_material_and_node()",
             "set_value(node_uber, 'enable_reflection', True)",
             "set_value(node_uber, 'reflection_mode', 'METALNESS')",
-            "node_uber.inputs['Reflection Metalness']['default_value'] = 0.5",
+            "node_uber.inputs['Reflection Metalness'].default_value = 0.5",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -680,7 +680,7 @@
             "uber_material, node_uber = get_material_and_node()",
             "set_value(node_uber, 'enable_reflection', True)",
             "set_value(node_uber, 'reflection_mode', 'METALNESS')",
-            "node_uber.inputs['Reflection Metalness']['default_value'] = 1",
+            "node_uber.inputs['Reflection Metalness'].default_value = 1",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -763,7 +763,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_reflection', True)",
             "set_value(node_uber, 'reflection_mode', 'PBR')",
             "set_value(node_uber, 'enable_refraction', True)",
@@ -782,11 +782,11 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_reflection', True)",
             "set_value(node_uber, 'reflection_mode', 'PBR')",
             "set_value(node_uber, 'enable_refraction', True)",
-            "node_uber.inputs['Refraction Weight']['default_value'] = 0",
+            "node_uber.inputs['Refraction Weight'].default_value = 0",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -801,11 +801,11 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_reflection', True)",
             "set_value(node_uber, 'reflection_mode', 'PBR')",
             "set_value(node_uber, 'enable_refraction', True)",
-            "node_uber.inputs['Refraction Weight']['default_value'] = 0.5",
+            "node_uber.inputs['Refraction Weight'].default_value = 0.5",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -820,11 +820,11 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_reflection', True)",
             "set_value(node_uber, 'reflection_mode', 'PBR')",
             "set_value(node_uber, 'enable_refraction', True)",
-            "node_uber.inputs['Refraction Roughness']['default_value'] = 0.5",
+            "node_uber.inputs['Refraction Roughness'].default_value = 0.5",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -839,11 +839,11 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_reflection', True)",
             "set_value(node_uber, 'reflection_mode', 'PBR')",
             "set_value(node_uber, 'enable_refraction', True)",
-            "node_uber.inputs['Refraction Roughness']['default_value'] = 1",
+            "node_uber.inputs['Refraction Roughness'].default_value = 1",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -859,12 +859,12 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_reflection', True)",
             "set_value(node_uber, 'reflection_mode', 'PBR')",
             "set_value(node_uber, 'enable_refraction', True)",
             "set_value(node_uber, 'refraction_caustics', True)",
-            "node_uber.inputs['Refraction IOR']['default_value'] = 1",
+            "node_uber.inputs['Refraction IOR'].default_value = 1",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -880,12 +880,12 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_reflection', True)",
             "set_value(node_uber, 'reflection_mode', 'PBR')",
             "set_value(node_uber, 'enable_refraction', True)",
             "set_value(node_uber, 'refraction_caustics', True)",
-            "node_uber.inputs['Refraction IOR']['default_value'] = 3",
+            "node_uber.inputs['Refraction IOR'].default_value = 3",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -918,7 +918,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -934,7 +934,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -950,7 +950,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -965,7 +965,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -980,7 +980,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -995,7 +995,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_emission', True)",
             "create_imagemap('Emission Color', 'emissiveColor.png')",
             "rpr_render(case)",
@@ -1012,7 +1012,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_emission', True)",
             "create_imagemap('Emission Color', 'emissiveColor.tga')",
             "rpr_render(case)",
@@ -1029,7 +1029,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_emission', True)",
             "create_imagemap('Emission Weight', 'emissiveWeight.png')",
             "rpr_render(case)",
@@ -1046,7 +1046,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_emission', True)",
             "create_imagemap('Emission Weight', 'emissiveWeight.tga')",
             "rpr_render(case)",
@@ -1063,9 +1063,9 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_emission', True)",
-            "node_uber.inputs['Emission Color']['default_value'] = (0, 0.1, 0, 1.0)",
+            "node_uber.inputs['Emission Color'].default_value = (0, 0.1, 0, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -1081,9 +1081,9 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_emission', True)",
-            "node_uber.inputs['Emission Weight']['default_value'] = 0",
+            "node_uber.inputs['Emission Weight'].default_value = 0",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -1099,9 +1099,9 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_emission', True)",
-            "node_uber.inputs['Emission Weight']['default_value'] = 0.5",
+            "node_uber.inputs['Emission Weight'].default_value = 0.5",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -1117,7 +1117,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_emission', True)",
             "set_value(node_uber, 'emission_intensity', 0)",
             "rpr_render(case)",
@@ -1135,7 +1135,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_emission', True)",
             "set_value(node_uber, 'emission_intensity', 100)",
             "rpr_render(case)",
@@ -1154,7 +1154,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_emission', True)",
             "set_value(node_uber, 'emission_doublesided', True)",
             "set_value(node_uber, 'emission_intensity', 3)",
@@ -1262,7 +1262,7 @@
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
             "set_value(node_uber, 'enable_sss', True)",
-            "node_uber.inputs['Subsurface Color']['default_value'] = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Subsurface Color'].default_value = (0, 0.4, 0, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -1277,7 +1277,7 @@
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
             "set_value(node_uber, 'enable_sss', True)",
-            "node_uber.inputs['Subsurface Weight']['default_value'] = 0",
+            "node_uber.inputs['Subsurface Weight'].default_value = 0",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -1292,7 +1292,7 @@
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
             "set_value(node_uber, 'enable_sss', True)",
-            "node_uber.inputs['Subsurface Weight']['default_value'] = 0.5",
+            "node_uber.inputs['Subsurface Weight'].default_value = 0.5",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -1307,7 +1307,7 @@
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
             "set_value(node_uber, 'enable_sss', True)",
-            "node_uber.inputs['Subsurface Direction']['default_value'] = -1",
+            "node_uber.inputs['Subsurface Direction'].default_value = -1",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -1322,7 +1322,7 @@
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
             "set_value(node_uber, 'enable_sss', True)",
-            "node_uber.inputs['Subsurface Direction']['default_value'] = 1",
+            "node_uber.inputs['Subsurface Direction'].default_value = 1",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -1337,7 +1337,7 @@
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
             "set_value(node_uber, 'enable_sss', True)",
-            "node_uber.inputs['Subsurface Radius']['default_value'] = (0, 0, 0)",
+            "node_uber.inputs['Subsurface Radius'].default_value = (0, 0, 0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -1352,7 +1352,7 @@
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
             "set_value(node_uber, 'enable_sss', True)",
-            "node_uber.inputs['Subsurface Radius']['default_value'] = (5, 5, 5)",
+            "node_uber.inputs['Subsurface Radius'].default_value = (5, 5, 5)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -1429,7 +1429,7 @@
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
             "set_value(node_uber, 'enable_transparency', True)",
-            "node_uber.inputs['Transparency']['default_value'] = 0",
+            "node_uber.inputs['Transparency'].default_value = 0",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -1444,7 +1444,7 @@
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
             "set_value(node_uber, 'enable_transparency', True)",
-            "node_uber.inputs['Transparency']['default_value'] = 0.5",
+            "node_uber.inputs['Transparency'].default_value = 0.5",
             "rpr_render(case)",
             "default_settings()"
         ]
