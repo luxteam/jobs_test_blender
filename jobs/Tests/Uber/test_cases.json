@@ -73,6 +73,8 @@
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
             "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Weight'].default_value = 1",
+            "node_uber.inputs['Diffuse Roughness'].default_value = 1",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -87,6 +89,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
+            "create_imagemap('Diffuse Weight', 'diffuseWeight.png')",
             "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "rpr_render(case)",
             "delete_imagemap()"
@@ -407,6 +410,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "set_value(node_uber, 'enable_reflection', True)",
             "set_value(node_uber, 'reflection_mode', 'PBR')",
             "create_imagemap('Reflection Weight', 'reflectionWeight.png')",
@@ -423,6 +427,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "set_value(node_uber, 'enable_reflection', True)",
             "set_value(node_uber, 'reflection_mode', 'PBR')",
             "create_imagemap('Reflection Weight', 'reflectionWeight.tga')",
@@ -440,7 +445,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "set_value(node_uber, 'enable_reflection', True)",
             "set_value(node_uber, 'reflection_mode', 'PBR')",
             "node_uber.inputs['Reflection Weight'].default_value = 0",
@@ -458,7 +463,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -473,7 +478,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -489,7 +494,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -504,7 +509,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "set_value(node_uber, 'enable_reflection', True)",
             "set_value(node_uber, 'reflection_mode', 'PBR')",
             "node_uber.inputs['Reflection Roughness'].default_value = 0",
@@ -522,7 +527,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "set_value(node_uber, 'enable_reflection', True)",
             "set_value(node_uber, 'reflection_mode', 'PBR')",
             "node_uber.inputs['Reflection Roughness'].default_value = 1",
@@ -694,8 +699,6 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "set_value(node_uber, 'enable_reflection', True)",
-            "set_value(node_uber, 'reflection_mode', 'PBR')",
             "set_value(node_uber, 'enable_refraction', True)",
             "create_imagemap('Refraction Color', 'refractionColor.png')",
             "rpr_render(case)",
@@ -711,8 +714,6 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "set_value(node_uber, 'enable_reflection', True)",
-            "set_value(node_uber, 'reflection_mode', 'PBR')",
             "set_value(node_uber, 'enable_refraction', True)",
             "create_imagemap('Refraction Color', 'refractionColor.tga')",
             "rpr_render(case)",
@@ -728,8 +729,6 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "set_value(node_uber, 'enable_reflection', True)",
-            "set_value(node_uber, 'reflection_mode', 'PBR')",
             "set_value(node_uber, 'enable_refraction', True)",
             "create_imagemap('Refraction Weight', 'refractionWeight.png')",
             "rpr_render(case)",
@@ -745,8 +744,6 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "set_value(node_uber, 'enable_reflection', True)",
-            "set_value(node_uber, 'reflection_mode', 'PBR')",
             "set_value(node_uber, 'enable_refraction', True)",
             "create_imagemap('Refraction Weight', 'refractionWeight.tga')",
             "rpr_render(case)",
@@ -757,15 +754,13 @@
         "case": "BL28_MAT_UBR_047",
         "status": "active",
         "script_info": [
-            "Diffuse Color green",
+            "Diffuse Color blue",
             "Refraction Thin Surface"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
-            "set_value(node_uber, 'enable_reflection', True)",
-            "set_value(node_uber, 'reflection_mode', 'PBR')",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "set_value(node_uber, 'enable_refraction', True)",
             "set_value(node_uber, 'refraction_thin_surface', True)",
             "rpr_render(case)",
@@ -776,15 +771,13 @@
         "case": "BL28_MAT_UBR_048",
         "status": "active",
         "script_info": [
-            "Diffuse Color green",
+            "Diffuse Color blue",
             "Refraction Weight 0"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
-            "set_value(node_uber, 'enable_reflection', True)",
-            "set_value(node_uber, 'reflection_mode', 'PBR')",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "set_value(node_uber, 'enable_refraction', True)",
             "node_uber.inputs['Refraction Weight'].default_value = 0",
             "rpr_render(case)",
@@ -795,15 +788,13 @@
         "case": "BL28_MAT_UBR_049",
         "status": "active",
         "script_info": [
-            "Diffuse Color green",
+            "Diffuse Color blue",
             "Refraction Weight 0.5"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
-            "set_value(node_uber, 'enable_reflection', True)",
-            "set_value(node_uber, 'reflection_mode', 'PBR')",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "set_value(node_uber, 'enable_refraction', True)",
             "node_uber.inputs['Refraction Weight'].default_value = 0.5",
             "rpr_render(case)",
@@ -814,15 +805,13 @@
         "case": "BL28_MAT_UBR_050",
         "status": "active",
         "script_info": [
-            "Diffuse Color green",
+            "Diffuse Color blue",
             "Refraction Roughness 0.5"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
-            "set_value(node_uber, 'enable_reflection', True)",
-            "set_value(node_uber, 'reflection_mode', 'PBR')",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "set_value(node_uber, 'enable_refraction', True)",
             "node_uber.inputs['Refraction Roughness'].default_value = 0.5",
             "rpr_render(case)",
@@ -833,15 +822,13 @@
         "case": "BL28_MAT_UBR_051",
         "status": "active",
         "script_info": [
-            "Diffuse Color green",
+            "Diffuse Color blue",
             "Refraction Roughness 1"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
-            "set_value(node_uber, 'enable_reflection', True)",
-            "set_value(node_uber, 'reflection_mode', 'PBR')",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "set_value(node_uber, 'enable_refraction', True)",
             "node_uber.inputs['Refraction Roughness'].default_value = 1",
             "rpr_render(case)",
@@ -859,9 +846,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
-            "set_value(node_uber, 'enable_reflection', True)",
-            "set_value(node_uber, 'reflection_mode', 'PBR')",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "set_value(node_uber, 'enable_refraction', True)",
             "set_value(node_uber, 'refraction_caustics', True)",
             "node_uber.inputs['Refraction IOR'].default_value = 1",
@@ -880,9 +865,7 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
-            "set_value(node_uber, 'enable_reflection', True)",
-            "set_value(node_uber, 'reflection_mode', 'PBR')",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "set_value(node_uber, 'enable_refraction', True)",
             "set_value(node_uber, 'refraction_caustics', True)",
             "node_uber.inputs['Refraction IOR'].default_value = 3",
@@ -899,8 +882,6 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "set_value(node_uber, 'enable_reflection', True)",
-            "set_value(node_uber, 'reflection_mode', 'PBR')",
             "set_value(node_uber, 'enable_refraction', True)",
             "set_value(node_uber, 'refraction_use_shader_normal', False)",
             "create_normal_map('Refraction Normal', 'normal.png')",
@@ -912,13 +893,13 @@
         "case": "BL28_MAT_UBR_055",
         "status": "active",
         "script_info": [
-            "Diffuse Color green",
+            "Diffuse Color blue",
             "Sheen Color white"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -927,14 +908,14 @@
         "case": "BL28_MAT_UBR_056",
         "status": "active",
         "script_info": [
-            "Diffuse Color green",
+            "Diffuse Color blue",
             "Sheen Color white",
             "Sheen weight 0"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -943,14 +924,14 @@
         "case": "BL28_MAT_UBR_057",
         "status": "active",
         "script_info": [
-            "Diffuse Color green",
+            "Diffuse Color blue",
             "Sheen Color white",
             "Sheen weight 0.5"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -959,13 +940,13 @@
         "case": "BL28_MAT_UBR_058",
         "status": "active",
         "script_info": [
-            "Diffuse Color green",
+            "Diffuse Color blue",
             "Sheen Tint 0"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -974,13 +955,13 @@
         "case": "BL28_MAT_UBR_059",
         "status": "active",
         "script_info": [
-            "Diffuse Color green",
+            "Diffuse Color blue",
             "Sheen Tint 1"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -989,13 +970,13 @@
         "case": "BL28_MAT_UBR_060",
         "status": "active",
         "script_info": [
-            "Diffuse Color green",
+            "Diffuse Color blue",
             "emissiveColor.png"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "set_value(node_uber, 'enable_emission', True)",
             "create_imagemap('Emission Color', 'emissiveColor.png')",
             "rpr_render(case)",
@@ -1006,13 +987,13 @@
         "case": "BL28_MAT_UBR_061",
         "status": "active",
         "script_info": [
-            "Diffuse Color green",
+            "Diffuse Color blue",
             "emissiveColor.tga"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "set_value(node_uber, 'enable_emission', True)",
             "create_imagemap('Emission Color', 'emissiveColor.tga')",
             "rpr_render(case)",
@@ -1023,13 +1004,13 @@
         "case": "BL28_MAT_UBR_062",
         "status": "active",
         "script_info": [
-            "Diffuse Color green",
+            "Diffuse Color blue",
             "emissiveWeight.png"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "set_value(node_uber, 'enable_emission', True)",
             "create_imagemap('Emission Weight', 'emissiveWeight.png')",
             "rpr_render(case)",
@@ -1040,13 +1021,13 @@
         "case": "BL28_MAT_UBR_063",
         "status": "active",
         "script_info": [
-            "Diffuse Color green",
+            "Diffuse Color blue",
             "emissiveWeight.tga"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
-            "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "set_value(node_uber, 'enable_emission', True)",
             "create_imagemap('Emission Weight', 'emissiveWeight.tga')",
             "rpr_render(case)",
@@ -1058,14 +1039,14 @@
         "status": "active",
         "script_info": [
             "Diffuse Color green",
-            "Emission Color green"
+            "Emission Color blue"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
             "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_emission', True)",
-            "node_uber.inputs['Emission Color'].default_value = (0, 0.1, 0, 1.0)",
+            "node_uber.inputs['Emission Color'].default_value = (0, 0.1, 1, 1.0)",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -1075,7 +1056,7 @@
         "status": "active",
         "script_info": [
             "Diffuse Color green",
-            "Emission Color green",
+            "Emission Color blue",
             "Emissive Weight 0"
         ],
         "scene": "UBER.blend",
@@ -1083,6 +1064,7 @@
             "uber_material, node_uber = get_material_and_node()",
             "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_emission', True)",
+            "node_uber.inputs['Emission Color'].default_value = (0, 0.1, 1, 1.0)",
             "node_uber.inputs['Emission Weight'].default_value = 0",
             "rpr_render(case)",
             "default_settings()"
@@ -1093,7 +1075,7 @@
         "status": "active",
         "script_info": [
             "Diffuse Color green",
-            "Emission Color green",
+            "Emission Color blue",
             "Emissive Weight 0.5"
         ],
         "scene": "UBER.blend",
@@ -1101,6 +1083,7 @@
             "uber_material, node_uber = get_material_and_node()",
             "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_emission', True)",
+            "node_uber.inputs['Emission Color'].default_value = (0, 0.1, 1, 1.0)",
             "node_uber.inputs['Emission Weight'].default_value = 0.5",
             "rpr_render(case)",
             "default_settings()"
@@ -1111,7 +1094,7 @@
         "status": "active",
         "script_info": [
             "Diffuse Color green",
-            "Emission Color green",
+            "Emission Color blue",
             "Emissive Intensity 0"
         ],
         "scene": "UBER.blend",
@@ -1119,6 +1102,7 @@
             "uber_material, node_uber = get_material_and_node()",
             "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_emission', True)",
+            "node_uber.inputs['Emission Color'].default_value = (0, 0.1, 1, 1.0)",
             "set_value(node_uber, 'emission_intensity', 0)",
             "rpr_render(case)",
             "default_settings()"
@@ -1129,7 +1113,7 @@
         "status": "active",
         "script_info": [
             "Diffuse Color green",
-            "Emission Color green",
+            "Emission Color blue",
             "Emissive Intensity 100"
         ],
         "scene": "UBER.blend",
@@ -1137,6 +1121,7 @@
             "uber_material, node_uber = get_material_and_node()",
             "node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
             "set_value(node_uber, 'enable_emission', True)",
+            "node_uber.inputs['Emission Color'].default_value = (0, 0.1, 1, 1.0)",
             "set_value(node_uber, 'emission_intensity', 100)",
             "rpr_render(case)",
             "default_settings()"
@@ -1361,12 +1346,13 @@
         "case": "BL28_MAT_UBR_083",
         "status": "active",
         "script_info": [
-            "Diffuse Color green",
+            "Diffuse Color blue",
             "Normal Map png"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "set_value(node_uber, 'enable_normal', True)",
             "create_normal_map('Normal', 'normal.png')",
             "rpr_render(case)",
@@ -1377,12 +1363,13 @@
         "case": "BL28_MAT_UBR_084",
         "status": "active",
         "script_info": [
-            "Diffuse Color green",
+            "Diffuse Color blue",
             "Normal Map tga"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
+            "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "set_value(node_uber, 'enable_normal', True)",
             "create_normal_map('Normal', 'normal.tga')",
             "rpr_render(case)",
