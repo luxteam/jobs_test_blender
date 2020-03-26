@@ -30,16 +30,16 @@ def create_imagemap(attr, image_name):
 
 def delete_normalmap():
 	uber_material, node_uber = get_material_and_node()
+	tree = uber_material.node_tree
 	node_normalmap = [n for n in uber_material.node_tree.nodes if n.name=="Normal Map"][0]
-	tree.links.remove(tree.links[1])
 	uber_material.node_tree.nodes.remove(node_normalmap)
 	delete_imagemap()
 
 
 def delete_imagemap():
 	uber_material, node_uber = get_material_and_node()
+	tree = uber_material.node_tree
 	node_imagemap = [n for n in uber_material.node_tree.nodes if n.name=="Image Texture"][0]
-	tree.links.remove(tree.links[1])
 	uber_material.node_tree.nodes.remove(node_imagemap)
 	default_settings()
 
@@ -50,7 +50,7 @@ def default_settings():
 	set_value(node_uber, "enable_diffuse", True)
 	set_value(node_uber, "diffuse_use_shader_normal", True)
 	set_value(node_uber, "separate_backscatter_color", False)
-	node_uber.inputs['Diffuse Color'].default_value = (0.033, 0.26, 0.5, 1.0)
+	node_uber.inputs['Diffuse Color'].default_value = (0.033, 0.258, 0.503, 1.0)
 	node_uber.inputs['Diffuse Weight'].default_value = 1.0
 	node_uber.inputs['Diffuse Roughness'].default_value = 0.5
 	node_uber.inputs['Backscatter Color'].default_value = (0.5, 0.5, 0.5, 1.0)
@@ -60,11 +60,11 @@ def default_settings():
 	set_value(node_uber, "reflection_mode", 'PBR')
 	set_value(node_uber, "reflection_use_shader_normal", True)
 	node_uber.inputs['Reflection Color'].default_value = (1.0, 1.0, 1.0, 1.0)
-	node_uber.inputs['Reflection IOR'].default_value = 2.4
+	node_uber.inputs['Reflection IOR'].default_value = 1.5
 	node_uber.inputs['Reflection Anisotropy'].default_value = 0.0
 	node_uber.inputs['Reflection Anisotropy Rotation'].default_value = 0.0
 	node_uber.inputs['Reflection Metalness'].default_value = 0.0
-	node_uber.inputs['Reflection Roughness'].default_value = 0.4
+	node_uber.inputs['Reflection Roughness'].default_value = 0.1
 	node_uber.inputs['Reflection Weight'].default_value = 1.0
 	
 	set_value(node_uber, "enable_coating", False)
