@@ -22,15 +22,12 @@ def create_normal_map(attr, image_name):
 def create_imagemap(attr, image_name):
 	uber_material, node_uber = get_material_and_node()
 	tree = uber_material.node_tree
-
+	print(os.path.join(RES_PATH, "Maps", image_name))
 	node_imagemap = tree.nodes.new(type='ShaderNodeTexImage')
 	image = bpy.data.images.load(os.path.join(RES_PATH, "Maps", image_name))
 	node_imagemap.image = image
-	
-	if type(node_uber.inputs[attr].default_value) == tuple:
-		tree.links.new(node_imagemap.outputs['Color'], node_uber.inputs[attr])
-	elif type(node_uber.inputs[attr].default_value) == float:
-		tree.links.new(node_imagemap.outputs['Alpha'], node_uber.inputs[attr])
+	print(type(node_uber.inputs[attr].default_value))
+	tree.links.new(node_imagemap.outputs['Color'], node_uber.inputs[attr])
 
 
 def delete_normalmap():
@@ -43,6 +40,8 @@ def delete_normalmap():
 def delete_imagemap():
 	uber_material, node_uber = get_material_and_node()
 	node_imagemap = [n for n in uber_material.node_tree.nodes if n.name=="Image Texture"][0]
+	print(node_imagemap)
+	tree.links.remove(tree.links[1])
 	uber_material.node_tree.nodes.remove(node_imagemap)
 	default_settings()
 
