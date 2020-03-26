@@ -899,6 +899,9 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
+            "set_value(node_uber, 'enable_sheen', True)",
+            "node_uber.inputs['Sheen Color'].default_value = (1, 1, 1, 1.0)",
+            "node_uber.inputs['Reflection Roughness'].default_value = 1",
             "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "rpr_render(case)",
             "default_settings()"
@@ -915,6 +918,10 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
+            "set_value(node_uber, 'enable_sheen', True)",
+            "node_uber.inputs['Sheen Color'].default_value = (1, 1, 1, 1.0)",
+            "node_uber.inputs['Sheen Weight'].default_value = 0",
+            "node_uber.inputs['Reflection Roughness'].default_value = 1",
             "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "rpr_render(case)",
             "default_settings()"
@@ -931,6 +938,10 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
+            "set_value(node_uber, 'enable_sheen', True)",
+            "node_uber.inputs['Sheen Color'].default_value = (1, 1, 1, 1.0)",
+            "node_uber.inputs['Sheen Weight'].default_value = 0.5",
+            "node_uber.inputs['Reflection Roughness'].default_value = 1",
             "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "rpr_render(case)",
             "default_settings()"
@@ -946,6 +957,10 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
+            "set_value(node_uber, 'enable_sheen', True)",
+            "node_uber.inputs['Sheen Color'].default_value = (1, 1, 1, 1.0)",
+            "node_uber.inputs['Sheen Tint'].default_value = 0",
+            "node_uber.inputs['Reflection Roughness'].default_value = 1",
             "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "rpr_render(case)",
             "default_settings()"
@@ -961,6 +976,10 @@
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
+            "set_value(node_uber, 'enable_sheen', True)",
+            "node_uber.inputs['Sheen Color'].default_value = (1, 1, 1, 1.0)",
+            "node_uber.inputs['Sheen Tint'].default_value = 1",
+            "node_uber.inputs['Reflection Roughness'].default_value = 1",
             "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
             "rpr_render(case)",
             "default_settings()"
