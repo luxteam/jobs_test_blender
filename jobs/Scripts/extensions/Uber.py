@@ -27,6 +27,14 @@ def create_imagemap(attr, image_name):
 	node_imagemap.image = image
 	tree.links.new(node_imagemap.outputs['Color'], node_uber.inputs[attr])
 
+def create_imagemapA(attr, image_name):
+	uber_material, node_uber = get_material_and_node()
+	tree = uber_material.node_tree
+	node_imagemap = tree.nodes.new(type='ShaderNodeTexImage')
+	image = bpy.data.images.load(os.path.join(RES_PATH, "Maps", image_name))
+	node_imagemap.image = image
+	tree.links.new(node_imagemap.outputs['Alpha'], node_uber.inputs[attr])
+
 
 def delete_normalmap():
 	uber_material, node_uber = get_material_and_node()
