@@ -97,7 +97,7 @@
 			"uber = [n for n in material.node_tree.nodes if n.name=='Material Output'][0]",
 			"tree = material.node_tree",
 			"node_uber = tree.nodes.new(type='RPRShaderNodeUber')",
-			"node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+			"node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
 			"tree.links.new(node_uber.outputs['Shader'], uber.inputs['Surface'])",
 			"set_value(scene.rpr, 'render_quality', 'LOW')",
 			"rpr_render(case)",
@@ -117,7 +117,7 @@
 			"tree = material.node_tree",
 			"node_uber = tree.nodes.new(type='RPRShaderNodeUber')",
 			"tree.links.new(node_uber.outputs['Shader'], uber.inputs['Surface'])",
-			"node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+			"node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
 			"set_value(scene.rpr, 'render_quality', 'MEDIUM')",
 			"rpr_render(case)",
 			"bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'default.blend'))"
@@ -136,7 +136,7 @@
 			"tree = material.node_tree",
 			"node_uber = tree.nodes.new(type='RPRShaderNodeUber')",
 			"tree.links.new(node_uber.outputs['Shader'], uber.inputs['Surface'])",
-			"node_uber.inputs['Diffuse Color']['default_value'] = (0, 0.4, 0, 1.0)",
+			"node_uber.inputs['Diffuse Color'].default_value = (0, 0.4, 0, 1.0)",
 			"set_value(scene.rpr, 'render_quality', 'HIGH')",
 			"rpr_render(case)",
 			"bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'default.blend'))"
@@ -448,7 +448,7 @@
 	},
 	{
 		"case": "BL28_HSM_031",
-		"status": "active",
+		"status": "skipped",
 		"functions": [
 			"set_value(scene.rpr, 'render_quality', 'LOW')",
 			"rpr_render(case)"
@@ -460,7 +460,7 @@
 	},
 	{
 		"case": "BL28_HSM_032",
-		"status": "active",
+		"status": "skipped",
 		"functions": [
 			"set_value(scene.rpr, 'render_quality', 'MEDIUM')",
 			"rpr_render(case)"
@@ -472,7 +472,7 @@
 	},
 	{
 		"case": "BL28_HSM_033",
-		"status": "active",
+		"status": "skipped",
 		"functions": [
 			"set_value(scene.rpr, 'render_quality', 'HIGH')",
 			"rpr_render(case)"
