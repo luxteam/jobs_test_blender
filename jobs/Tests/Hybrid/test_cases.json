@@ -448,7 +448,7 @@
 	},
 	{
 		"case": "BL28_HSM_031",
-		"status": "active",
+		"status": "skipped",
 		"functions": [
 			"set_value(scene.rpr, 'render_quality', 'LOW')",
 			"rpr_render(case)"
@@ -460,7 +460,7 @@
 	},
 	{
 		"case": "BL28_HSM_032",
-		"status": "active",
+		"status": "skipped",
 		"functions": [
 			"set_value(scene.rpr, 'render_quality', 'MEDIUM')",
 			"rpr_render(case)"
@@ -472,7 +472,7 @@
 	},
 	{
 		"case": "BL28_HSM_033",
-		"status": "active",
+		"status": "skipped",
 		"functions": [
 			"set_value(scene.rpr, 'render_quality', 'HIGH')",
 			"rpr_render(case)"
