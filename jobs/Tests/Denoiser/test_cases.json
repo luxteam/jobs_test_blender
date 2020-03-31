@@ -863,7 +863,7 @@
         ],
         "script_info": [
             "Denoiser type: Bilateral",
-            "PhysicalLight2 intensity: 3",
+            "PhysicalLight2 intensity: 0",
             "IES intensity: 3"
         ],
         "scene": "DenoiserLight.blend"

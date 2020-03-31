@@ -219,7 +219,8 @@
         "scene": "TestSunSky.blend",
         "functions": [
             "set_value(bpy.context.scene.world.rpr.sun_sky, 'resolution', '256')",
-            "rpr_render(case)"
+            "rpr_render(case)",
+            "set_value(bpy.context.scene.world.rpr.sun_sky, 'resolution', '1024')"
         ]
     },
     {
@@ -243,7 +244,8 @@
         "scene": "TestSunSky.blend",
         "functions": [
             "set_value(bpy.context.scene.world.rpr.sun_sky, 'resolution', '4096')",
-            "rpr_render(case)"
+            "rpr_render(case)",
+            "set_value(bpy.context.scene.world.rpr.sun_sky, 'resolution', '1024')"
         ]
     },
     {
