@@ -12,7 +12,7 @@
     },
     {
         "case": "BL28_BCS_002",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "rpr_render(case)"
         ],
@@ -23,7 +23,7 @@
     },
     {
         "case": "BL28_BCS_003",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "rpr_render(case)"
         ],
@@ -34,7 +34,7 @@
     },
     {
         "case": "BL28_BCS_004",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "rpr_render(case)"
         ],
@@ -45,7 +45,7 @@
     },
     {
         "case": "BL28_BCS_005",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "rpr_render(case)"
         ],
@@ -67,7 +67,7 @@
     },
     {
         "case": "BL28_BCS_007",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "rpr_render(case)"
         ],
@@ -100,7 +100,7 @@
     },
     {
         "case": "BL28_BCS_010",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "rpr_render(case)"
         ],
@@ -155,7 +155,7 @@
     },
     {
         "case": "BL28_BCS_015",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "rpr_render(case)"
         ],
@@ -166,7 +166,7 @@
     },
     {
         "case": "BL28_BCS_016",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "rpr_render(case)"
         ],
@@ -199,7 +199,7 @@
     },
     {
         "case": "BL28_BCS_019",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "rpr_render(case)"
         ],
