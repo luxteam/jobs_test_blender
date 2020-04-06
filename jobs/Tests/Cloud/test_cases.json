@@ -12,7 +12,7 @@
     },
     {
         "case": "BL28_BCS_002",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.scene.world.rpr, 'intensity', 0.05)",
             "set_value(bpy.context.scene.world.rpr, 'ibl.color[0]', 0.143)",
@@ -42,7 +42,7 @@
     },
     {
         "case": "BL28_BCS_004",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.scene.world.rpr, 'intensity', 1)",
             "set_value(bpy.context.scene.world.rpr.ibl, 'image', bpy.data.images['fin4_Ref.exr'])",
@@ -190,7 +190,7 @@
     },
     {
         "case": "BL28_BCS_015",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "rpr_render(case)"
         ],
