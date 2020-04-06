@@ -14,6 +14,10 @@
         "case": "BL28_BCS_002",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 0.05)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[0]', 0.143)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[1]', 0.22)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[2]', 0.305)",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -25,6 +29,10 @@
         "case": "BL28_BCS_003",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 0.26)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[0]', 0.122)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[1]', 0.238)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[2]', 0.432)",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -36,6 +44,8 @@
         "case": "BL28_BCS_004",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 1)",
+            "set_value(bpy.context.scene.world.rpr.ibl, 'image', bpy.data.images['fin4_Ref.exr'])",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -47,6 +57,9 @@
         "case": "BL28_BCS_005",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 0.3)",
+            "set_value(bpy.context.scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.scene, 'use_nodes', False)",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -69,6 +82,12 @@
         "case": "BL28_BCS_007",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 2)",
+            "set_value(bpy.context.scene.world.rpr.ibl, 'image', bpy.data.images['00-1.jpg'])",
+            "set_value(bpy.context.scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.scene, 'use_nodes', False)",
+            "set_value(bpy.context.scene.view_settings, 'gamma', 1)",
+            "set_value(bpy.context.scene.view_settings, 'exposure', 1)",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -80,6 +99,8 @@
         "case": "BL28_BCS_008",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 0.3)",
+            "set_value(bpy.context.scene.world.rpr.ibl, 'image', bpy.data.images['mossy_forest_4k.hdr'])",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -91,6 +112,8 @@
         "case": "BL28_BCS_009",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 0.5)",
+            "set_value(bpy.context.scene.world.rpr.ibl, 'image', bpy.data.images['img_47ac655412c2fc4f73d9bcac8ee12a87.jpg'])",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -102,6 +125,10 @@
         "case": "BL28_BCS_010",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 2.2)",
+            "set_value(bpy.context.scene.world.rpr.ibl, 'image', bpy.data.images['moon_v001.png.001'])",
+            "set_value(bpy.context.scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.scene, 'use_nodes', False)",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -113,6 +140,8 @@
         "case": "BL28_BCS_011",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 0.1)",
+            "set_value(bpy.context.scene.world.rpr.ibl, 'image', bpy.data.images['pond_bridge_night_4k.hdr'])",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -124,6 +153,10 @@
         "case": "BL28_BCS_012",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 0)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[0]', 0.061)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[1]', 0.061)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[2]', 0.061)",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -135,6 +168,8 @@
         "case": "BL28_BCS_013",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 0.1)",
+            "set_value(bpy.context.scene.world.rpr.ibl, 'image', bpy.data.images['fin4_Env.hdr'])",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -168,6 +203,8 @@
         "case": "BL28_BCS_016",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 2)",
+            "set_value(bpy.context.scene.world.rpr.ibl, 'image', bpy.data.images['env_island.exr'])",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -179,6 +216,10 @@
         "case": "BL28_BCS_017",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 1)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[0]', 0.369)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[1]', 0.438)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[2]', 0.5)",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -190,6 +231,10 @@
         "case": "BL28_BCS_018",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 0)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[0]', 0)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[1]', 0)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[2]', 0)",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -201,6 +246,11 @@
         "case": "BL28_BCS_019",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'mode', 'SUN_SKY')",
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 1)",
+            "set_value(bpy.context.scene.world.rpr, 'background_override', True)",
+            "set_value(bpy.context.scene.world.rpr, 'background_image_type', 'BACKPLATE')",
+            "set_value(bpy.context.scene.world.rpr, 'background_image', bpy.data.images['DSC_8129.JPG'])",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -234,6 +284,8 @@
         "case": "BL28_BCS_022",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'mode', 'SUN_SKY')",
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 0.1)",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -245,6 +297,8 @@
         "case": "BL28_BCS_023",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 1)",
+            "set_value(bpy.context.scene.world.rpr.ibl, 'image', bpy.data.images['coffee_panorama_550.jpg'])",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -256,6 +310,10 @@
         "case": "BL28_BCS_024",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 1)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[0]', 0)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[1]', 0)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[2]', 0)",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -267,6 +325,10 @@
         "case": "BL28_BCS_025",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 0.3)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[0]', 0.433)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[1]', 0.433)",
+            "set_value(bpy.context.scene.world.rpr, 'ibl.color[2]', 0.433)",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -278,6 +340,8 @@
         "case": "BL28_BCS_026",
         "status": "active",
         "functions": [
+            "set_value(bpy.context.scene.world.rpr, 'intensity', 0.6)",
+            "set_value(bpy.context.scene.world.rpr.ibl, 'image', bpy.data.images['coffee_panorama_550.jpg'])",
             "rpr_render(case)"
         ],
         "script_info": [
