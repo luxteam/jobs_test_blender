@@ -184,9 +184,9 @@
             "rpr_render(case)"
         ],
         "script_info": [
-            "Architectural_Visualization"
+            "Architectural_Visualization_RPR"
         ],
-        "scene": "Architectural_Visualization.blend"
+        "scene": "Architectural_Visualization_RPR.blend"
     },
     {
         "case": "BL28_BCS_015",
@@ -205,6 +205,7 @@
         "functions": [
             "set_value(bpy.context.scene.world.rpr, 'intensity', 2)",
             "set_value(bpy.context.scene.world.rpr.ibl, 'image', bpy.data.images['env_island.exr'])",
+            "set_value(bpy.data.objects['LGT_meshlight_01'], 'hide_render', True)",
             "rpr_render(case)"
         ],
         "script_info": [
