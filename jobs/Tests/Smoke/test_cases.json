@@ -713,5 +713,45 @@
 			"Pass Limit: 50"
 		],
 		"scene": "Volume.blend"
+	},
+	{
+		"case": "BL28_SM_043",
+		"status": "active",
+		"functions": [
+			"set_value(view_layer.rpr.denoiser, 'enable', True)",
+			"set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
+			"set_value(view_layer.rpr.denoiser, 'ml_color_only', True)",
+			"render_device_settings = get_user_settings().final_devices",
+			"set_value(render_device_settings, 'cpu_state', True)",
+			"render_device_settings.gpu_states[0] = False",
+			"rpr_render(case)",
+			"set_value(view_layer.rpr.denoiser, 'enable', False)",
+			"set_value(render_device_settings, 'cpu_state', False)",
+			"render_device_settings.gpu_states[0] = True"
+		],
+		"script_info": [
+			"ML in CPU mode"
+		],
+		"scene": "Volume.blend"
+	},
+	{
+		"case": "BL28_SM_044",
+		"status": "active",
+		"functions": [
+			"set_value(view_layer.rpr.denoiser, 'enable', True)",
+			"set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
+			"set_value(view_layer.rpr.denoiser, 'ml_color_only', True)",
+			"render_device_settings = get_user_settings().final_devices",
+			"render_device_settings.gpu_states[0] = True",
+			"set_value(render_device_settings, 'cpu_state', True)",
+			"rpr_render(case)",
+			"set_value(view_layer.rpr.denoiser, 'enable', False)",
+			"set_value(render_device_settings, 'cpu_state', False)",
+			"render_device_settings.gpu_states[0] = True"
+		],
+		"script_info": [
+			"ML in dual mode"
+		],
+		"scene": "Volume.blend"
 	}
 ]
