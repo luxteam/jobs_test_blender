@@ -732,7 +732,7 @@
 		"script_info": [
 			"ML in CPU mode"
 		],
-		"scene": "Volume.blend"
+		"scene": "default.blend"
 	},
 	{
 		"case": "BL28_SM_044",
@@ -752,6 +752,6 @@
 		"script_info": [
 			"ML in dual mode"
 		],
-		"scene": "Volume.blend"
+		"scene": "default.blend"
 	}
 ]
