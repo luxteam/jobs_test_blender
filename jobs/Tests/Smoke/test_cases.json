@@ -724,7 +724,10 @@
 			"render_device_settings = get_user_settings().final_devices",
 			"set_value(render_device_settings, 'cpu_state', True)",
 			"render_device_settings.gpu_states[0] = False",
-			"rpr_render(case)",
+			"set_value(scene.rpr, 'use_render_stamp', True)",
+            "set_value(scene.rpr, 'render_stamp', 'Rendering devices: %r')",
+            "rpr_render(case)",
+			"set_value(scene.rpr, 'use_render_stamp', False)",
 			"set_value(view_layer.rpr.denoiser, 'enable', False)",
 			"set_value(render_device_settings, 'cpu_state', False)",
 			"render_device_settings.gpu_states[0] = True"
@@ -744,7 +747,10 @@
 			"render_device_settings = get_user_settings().final_devices",
 			"render_device_settings.gpu_states[0] = True",
 			"set_value(render_device_settings, 'cpu_state', True)",
+			"set_value(scene.rpr, 'use_render_stamp', True)",
+            "set_value(scene.rpr, 'render_stamp', 'Rendering devices: %r')",
 			"rpr_render(case)",
+			"set_value(scene.rpr, 'use_render_stamp', False)",
 			"set_value(view_layer.rpr.denoiser, 'enable', False)",
 			"set_value(render_device_settings, 'cpu_state', False)",
 			"render_device_settings.gpu_states[0] = True"
