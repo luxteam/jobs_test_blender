@@ -242,7 +242,7 @@ if __name__ == "__main__":
 		for case in cases:
 			if case['status'] in ['fail', 'error', 'inprogress']:
 				current_error_count += 1
-				if args.error_count == failed_count:
+				if args.error_count == current_error_count:
 					group_failed(args)
 			else:
 				current_error_count = 0
