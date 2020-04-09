@@ -1,7 +1,7 @@
 [
     {
         "case": "BL28_RS_RS_001",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Base stamp"
         ],
@@ -14,7 +14,7 @@
     },
     {
         "case": "BL28_RS_RS_002",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "CPU&GPU stamp"
         ],
@@ -27,7 +27,7 @@
     },
     {
         "case": "BL28_RS_RS_003",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Computer name stamp"
         ],
