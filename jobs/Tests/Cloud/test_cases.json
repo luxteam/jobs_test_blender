@@ -65,7 +65,10 @@
         "script_info": [
             "Blender_2_77_Racing_Car"
         ],
-        "scene": "Blender_2_77_Racing_Car.blend"
+        "scene": "Blender_2_77_Racing_Car.blend",
+        "skip_on": [
+            ["GeForce GTX 1080 Ti"]
+        ]
     },
     {
         "case": "BL28_BCS_006",
