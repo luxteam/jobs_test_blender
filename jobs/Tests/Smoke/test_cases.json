@@ -719,6 +719,7 @@
 		"status": "active",
 		"functions": [
             "set_value(bpy.context.scene.rpr.limits, 'min_samples', 25)",
+            "set_value(bpy.context.scene.rpr.limits, 'max_samples', 16)",
 			"set_value(view_layer.rpr.denoiser, 'enable', True)",
 			"set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
 			"set_value(view_layer.rpr.denoiser, 'ml_color_only', True)",
@@ -740,6 +741,7 @@
 		"status": "active",
 		"functions": [
             "set_value(bpy.context.scene.rpr.limits, 'min_samples', 25)",
+            "set_value(bpy.context.scene.rpr.limits, 'max_samples', 16)",
 			"set_value(view_layer.rpr.denoiser, 'enable', True)",
 			"set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
 			"set_value(view_layer.rpr.denoiser, 'ml_color_only', True)",
@@ -761,6 +763,7 @@
 		"status": "active",
 		"functions": [
             "set_value(bpy.context.scene.rpr.limits, 'min_samples', 25)",
+            "set_value(bpy.context.scene.rpr.limits, 'max_samples', 16)",
 			"render_device_settings = get_user_settings().final_devices",
 			"set_value(render_device_settings, 'cpu_state', True)",
 			"render_device_settings.gpu_states[0] = False",
@@ -778,6 +781,7 @@
 		"status": "active",
 		"functions": [
             "set_value(bpy.context.scene.rpr.limits, 'min_samples', 25)",
+            "set_value(bpy.context.scene.rpr.limits, 'max_samples', 16)",
 			"render_device_settings = get_user_settings().final_devices",
 			"render_device_settings.gpu_states[0] = True",
 			"set_value(render_device_settings, 'cpu_state', True)",
