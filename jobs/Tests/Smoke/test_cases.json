@@ -728,9 +728,7 @@
 			"set_value(render_device_settings, 'cpu_state', True)",
 			"render_device_settings.gpu_states[0] = False",
             "rpr_render(case)",
-			"set_value(view_layer.rpr.denoiser, 'enable', False)",
-			"set_value(render_device_settings, 'cpu_state', False)",
-			"render_device_settings.gpu_states[0] = True"
+			"set_value(view_layer.rpr.denoiser, 'enable', False)"
 		],
 		"script_info": [
 			"ML in CPU mode"
@@ -751,9 +749,7 @@
 			"render_device_settings.gpu_states[0] = True",
 			"set_value(render_device_settings, 'cpu_state', True)",
 			"rpr_render(case)",
-			"set_value(view_layer.rpr.denoiser, 'enable', False)",
-			"set_value(render_device_settings, 'cpu_state', False)",
-			"render_device_settings.gpu_states[0] = True"
+			"set_value(view_layer.rpr.denoiser, 'enable', False)"
 		],
 		"script_info": [
 			"ML in dual mode"
@@ -769,9 +765,7 @@
 			"render_device_settings = get_user_settings().final_devices",
 			"set_value(render_device_settings, 'cpu_state', True)",
 			"render_device_settings.gpu_states[0] = False",
-            "rpr_render(case)",
-			"set_value(render_device_settings, 'cpu_state', False)",
-			"render_device_settings.gpu_states[0] = True"
+            "rpr_render(case)"
 		],
 		"script_info": [
 			"cpu mode"
@@ -787,9 +781,7 @@
 			"render_device_settings = get_user_settings().final_devices",
 			"render_device_settings.gpu_states[0] = True",
 			"set_value(render_device_settings, 'cpu_state', True)",
-			"rpr_render(case)",
-			"set_value(render_device_settings, 'cpu_state', False)",
-			"render_device_settings.gpu_states[0] = True"
+			"rpr_render(case)"
 		],
 		"script_info": [
 			"dual mode"
