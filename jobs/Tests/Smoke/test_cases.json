@@ -713,5 +713,79 @@
 			"Pass Limit: 50"
 		],
 		"scene": "Volume.blend"
+	},
+	{
+		"case": "BL28_SM_043",
+		"status": "active",
+		"functions": [
+			"view_layer = bpy.context.view_layer",
+            "set_value(bpy.context.scene.rpr.limits, 'min_samples', 25)",
+            "set_value(bpy.context.scene.rpr.limits, 'max_samples', 16)",
+			"set_value(view_layer.rpr.denoiser, 'enable', True)",
+			"set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
+			"set_value(view_layer.rpr.denoiser, 'ml_color_only', True)",
+			"render_device_settings = get_user_settings().final_devices",
+			"set_value(render_device_settings, 'cpu_state', True)",
+			"render_device_settings.gpu_states[0] = False",
+            "rpr_render(case)",
+			"set_value(view_layer.rpr.denoiser, 'enable', False)"
+		],
+		"script_info": [
+			"ML in CPU mode"
+		],
+		"scene": "DualCpu.blend"
+	},
+	{
+		"case": "BL28_SM_044",
+		"status": "active",
+		"functions": [
+			"view_layer = bpy.context.view_layer",
+            "set_value(bpy.context.scene.rpr.limits, 'min_samples', 25)",
+            "set_value(bpy.context.scene.rpr.limits, 'max_samples', 16)",
+			"set_value(view_layer.rpr.denoiser, 'enable', True)",
+			"set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
+			"set_value(view_layer.rpr.denoiser, 'ml_color_only', True)",
+			"render_device_settings = get_user_settings().final_devices",
+			"render_device_settings.gpu_states[0] = True",
+			"set_value(render_device_settings, 'cpu_state', True)",
+			"rpr_render(case)",
+			"set_value(view_layer.rpr.denoiser, 'enable', False)"
+		],
+		"script_info": [
+			"ML in dual mode"
+		],
+		"scene": "DualCpu.blend"
+	},
+	{
+		"case": "BL28_SM_045",
+		"status": "active",
+		"functions": [
+            "set_value(bpy.context.scene.rpr.limits, 'min_samples', 25)",
+            "set_value(bpy.context.scene.rpr.limits, 'max_samples', 16)",
+			"render_device_settings = get_user_settings().final_devices",
+			"set_value(render_device_settings, 'cpu_state', True)",
+			"render_device_settings.gpu_states[0] = False",
+            "rpr_render(case)"
+		],
+		"script_info": [
+			"cpu mode"
+		],
+		"scene": "DualCpu.blend"
+	},
+	{
+		"case": "BL28_SM_046",
+		"status": "active",
+		"functions": [
+            "set_value(bpy.context.scene.rpr.limits, 'min_samples', 25)",
+            "set_value(bpy.context.scene.rpr.limits, 'max_samples', 16)",
+			"render_device_settings = get_user_settings().final_devices",
+			"render_device_settings.gpu_states[0] = True",
+			"set_value(render_device_settings, 'cpu_state', True)",
+			"rpr_render(case)"
+		],
+		"script_info": [
+			"dual mode"
+		],
+		"scene": "DualCpu.blend"
 	}
 ]
