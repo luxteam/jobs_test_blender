@@ -718,6 +718,7 @@
 		"case": "BL28_SM_043",
 		"status": "active",
 		"functions": [
+			"view_layer = bpy.context.view_layer",
             "set_value(bpy.context.scene.rpr.limits, 'min_samples', 25)",
             "set_value(bpy.context.scene.rpr.limits, 'max_samples', 16)",
 			"set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -740,6 +741,7 @@
 		"case": "BL28_SM_044",
 		"status": "active",
 		"functions": [
+			"view_layer = bpy.context.view_layer",
             "set_value(bpy.context.scene.rpr.limits, 'min_samples', 25)",
             "set_value(bpy.context.scene.rpr.limits, 'max_samples', 16)",
 			"set_value(view_layer.rpr.denoiser, 'enable', True)",
