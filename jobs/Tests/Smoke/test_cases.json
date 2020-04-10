@@ -733,7 +733,7 @@
 		"script_info": [
 			"ML in CPU mode"
 		],
-		"scene": "DenoiserMetal.blend"
+		"scene": "DualCpu.blend"
 	},
 	{
 		"case": "BL28_SM_044",
@@ -754,7 +754,7 @@
 		"script_info": [
 			"ML in dual mode"
 		],
-		"scene": "DenoiserMetal.blend"
+		"scene": "DualCpu.blend"
 	},
 	{
 		"case": "BL28_SM_045",
@@ -771,7 +771,7 @@
 		"script_info": [
 			"cpu mode"
 		],
-		"scene": "DenoiserMetal.blend"
+		"scene": "DualCpu.blend"
 	},
 	{
 		"case": "BL28_SM_046",
@@ -788,6 +788,6 @@
 		"script_info": [
 			"dual mode"
 		],
-		"scene": "DenoiserMetal.blend"
+		"scene": "DualCpu.blend"
 	}
 ]
