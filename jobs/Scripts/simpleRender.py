@@ -143,6 +143,8 @@ def main(args):
 			f.write(cmdRun)
 		os.system('chmod +x {}'.format(cmdScriptPath))
 
+	core_config.main_logger.info('Launch script on Maya ({})'.format(cmdScriptPath))
+	
 	p = subprocess.Popen(cmdScriptPath, shell=True,
 						 stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 	stdout, stderr = p.communicate()
