@@ -572,7 +572,8 @@
             "volume_node.inputs['Density'].default_value = 1",
             "volume_node.inputs['Blackbody Intensity'].default_value = 1",
             "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
-            "rpr_render(case)"
+            "rpr_render(case)",
+            "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Volume.blend'))"
         ]
     },
     {
@@ -589,7 +590,8 @@
             "volume_node.inputs['Density'].default_value = 1",
             "volume_node.inputs['Blackbody Intensity'].default_value = 1",
             "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
-            "rpr_render(case)"
+            "rpr_render(case)",
+            "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Volume.blend'))"
         ]
     },
     {
@@ -606,7 +608,8 @@
             "volume_node.inputs['Density'].default_value = 1",
             "volume_node.inputs['Blackbody Intensity'].default_value = 1",
             "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
-            "rpr_render(case)"
+            "rpr_render(case)",
+            "delete_imagemap()"
         ]
     },
     {
@@ -623,7 +626,8 @@
             "volume_node.inputs['Density'].default_value = 1",
             "volume_node.inputs['Blackbody Intensity'].default_value = 1",
             "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
-            "rpr_render(case)"
+            "rpr_render(case)",
+            "delete_imagemap()"
         ]
     },
     {
