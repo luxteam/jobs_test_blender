@@ -16,12 +16,33 @@ sys.path.append(os.path.abspath(os.path.join(
 	os.path.dirname(__file__), os.path.pardir, os.path.pardir)))
 
 import jobs_launcher.core.config as core_config
-from jobs_launcher.core.system_info import get_gpu
+from jobs_launcher.core.system_info import get_gpu, get_machine_info
 from jobs_launcher.core.kill_process import kill_process
+from jobs_launcher.image_service_client import ISClient
+from jobs_launcher.rbs_client import RBS_Client
+
 
 ROOT_DIR = os.path.abspath(os.path.join(
 	os.path.dirname(__file__), os.path.pardir, os.path.pardir))
 PROCESS = ['blender', 'blender.exe', 'Blender']
+
+is_client = None
+try:
+	is_client = ISClient(os.getenv("IMAGE_SERVICE_URL"))
+except Exception as e:
+    rbs_logger.error(f"Image Service client creation error: {e}")
+
+rbs_client = None
+try:
+    rbs_client = RBS_Client(
+        self.job_id = os.getenv("RBS_JOB_ID")
+        self.url = os.getenv("RBS_URL")
+        self.build_id = os.getenv("RBS_BUILD_ID")
+        self.env_label = os.getenv("RBS_ENV_LABEL")
+        self.suite_id = None)
+    rbs_logger.info("Client created")
+except Exception as e:
+    rbs_logger.error(" RBS Client creation error: {}".format(str(e)))
 
 
 def createArgsParser():
@@ -45,6 +66,11 @@ def createArgsParser():
 
 
 def main(args):
+
+	# get test suite id from RBS api
+	if rbs_client:
+		rbs_client.get_suite_id_by_name(args.testType)
+
 	if which(args.tool) is None:
 		core_config.main_logger.error('Can\'t find tool ' + args.tool)
 		exit(-1)
@@ -253,6 +279,31 @@ if __name__ == "__main__":
 				active_cases += 1
 
 		if active_cases == 0 or iteration > len(cases) * 3:	# 3- retries count		
+			#sent info to RBS
+			res = []
+			try:
+				for case in cases:
+					case_info =  json.load(open(os.path.realpath(
+										os.path.join(os.path.abspath(args.output), '{}_RPR.json'.format(case['case'])))))
+					image_id = is_client.send_image(os.path.realpath(
+										os.path.join(os.path.abspath(args.output), case_info['render_color_path'])))
+					res.append({
+								'name': case['case'],
+								'status': case['status'],
+								'metrics': {
+									'render_time': case_info[0]['render_time']
+								},
+								"artefacts": {
+							        "rendered_image": {
+								        "id": image_id
+							        }
+							    }
+							})
+				rbs_client.send_test_suite(res=res, env={"gpu": get_gpu(), **get_machine_info()})
+
+			except Exception as e:
+				rbs_logger.error("Test case result creation error: {}".format(str(e)))
+
 			# exit script if base_functions don't change number of active cases
 			kill_process(PROCESS)
 			core_config.main_logger.info(
