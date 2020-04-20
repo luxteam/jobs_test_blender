@@ -30,16 +30,16 @@ is_client = None
 try:
 	is_client = ISClient(os.getenv("IMAGE_SERVICE_URL"))
 except Exception as e:
-    rbs_logger.error(f"Image Service client creation error: {e}")
+    rbs_logger.error("Image Service client creation error: {}".format(e))
 
 rbs_client = None
 try:
     rbs_client = RBS_Client(
-        self.job_id = os.getenv("RBS_JOB_ID")
-        self.url = os.getenv("RBS_URL")
-        self.build_id = os.getenv("RBS_BUILD_ID")
-        self.env_label = os.getenv("RBS_ENV_LABEL")
-        self.suite_id = None)
+        job_id = os.getenv("RBS_JOB_ID"),
+        url = os.getenv("RBS_URL"),
+        build_id = os.getenv("RBS_BUILD_ID"),
+        env_label = os.getenv("RBS_ENV_LABEL"),
+        suite_id = None)
     rbs_logger.info("Client created")
 except Exception as e:
     rbs_logger.error(" RBS Client creation error: {}".format(str(e)))
