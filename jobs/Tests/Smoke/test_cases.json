@@ -400,7 +400,7 @@
 			"Denoiser EAW",
 			"Pass Limit: 50"
 		],
-		"scene": "default.blend"
+		"scene": "DualCpu.blend"
 	},
 	{
 		"case": "BL28_SM_026",
@@ -418,7 +418,7 @@
 			"Denoiser LWR",
 			"Pass Limit: 50"
 		],
-		"scene": "default.blend"
+		"scene": "DualCpu.blend"
 	},
 	{
 		"case": "BL28_SM_027",
@@ -436,7 +436,7 @@
 			"Denoiser Bilateral",
 			"Pass Limit: 50"
 		],
-		"scene": "default.blend"
+		"scene": "DualCpu.blend"
 	},
 	{
 		"case": "BL28_SM_028",
@@ -454,7 +454,7 @@
 			"Denoiser ML",
 			"Pass Limit: 50"
 		],
-		"scene": "default.blend"
+		"scene": "DualCpu.blend"
 	},
 	{
 		"case": "BL28_SM_029",
