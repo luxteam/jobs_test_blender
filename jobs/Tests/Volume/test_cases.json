@@ -299,7 +299,7 @@
     },
     {
         "case": "BL28_MAT_VM_022",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Volume Anisotropy Color Checker texture"
         ],
@@ -316,7 +316,7 @@
     },
     {
         "case": "BL28_MAT_VM_023",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Volume Anisotropy Color .tga"
         ],
@@ -333,7 +333,7 @@
     },
     {
         "case": "BL28_MAT_VM_024",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Volume Anisotropy Color .png"
         ],
