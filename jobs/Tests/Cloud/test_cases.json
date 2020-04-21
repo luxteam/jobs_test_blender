@@ -8,7 +8,10 @@
         "script_info": [
             "Blender_2_81_the_junk_Shop"
         ],
-        "scene": "Blender_2_81_the_junk_Shop.blend"
+        "scene": "Blender_2_81_the_junk_Shop.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_002",
@@ -23,7 +26,10 @@
         "script_info": [
             "Blender_2_80_Spring"
         ],
-        "scene": "Blender_2_80_Spring.blend"
+        "scene": "Blender_2_80_Spring.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_003",
@@ -38,7 +44,10 @@
         "script_info": [
             "Blender_2_79_Agent_327"
         ],
-        "scene": "Blender_2_79_Agent_327.blend"
+        "scene": "Blender_2_79_Agent_327.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_004",
@@ -51,7 +60,10 @@
         "script_info": [
             "Blender_2_78_Procedural"
         ],
-        "scene": "Blender_2_78_Procedural.blend"
+        "scene": "Blender_2_78_Procedural.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_005",
@@ -79,7 +91,10 @@
         "script_info": [
             "Blender_2_74_Fishy_Cat"
         ],
-        "scene": "Blender_2_74_Fishy_Cat.blend"
+        "scene": "Blender_2_74_Fishy_Cat.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_007",
@@ -96,7 +111,10 @@
         "script_info": [
             "Race_Spaceship"
         ],
-        "scene": "Race_Spaceship.blend"
+        "scene": "Race_Spaceship.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_008",
@@ -109,7 +127,10 @@
         "script_info": [
             "Tree_Creature"
         ],
-        "scene": "Tree_Creature.blend"
+        "scene": "Tree_Creature.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_009",
@@ -122,7 +143,10 @@
         "script_info": [
             "Temple"
         ],
-        "scene": "Temple.blend"
+        "scene": "Temple.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_010",
@@ -137,7 +161,10 @@
         "script_info": [
             "Wanderer"
         ],
-        "scene": "Wanderer.blend"
+        "scene": "Wanderer.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_011",
@@ -150,7 +177,10 @@
         "script_info": [
             "Ember_Forest"
         ],
-        "scene": "Ember_Forest.blend"
+        "scene": "Ember_Forest.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_012",
@@ -165,7 +195,10 @@
         "script_info": [
             "Wasp_Bot"
         ],
-        "scene": "Wasp_Bot.blend"
+        "scene": "Wasp_Bot.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_013",
@@ -178,7 +211,10 @@
         "script_info": [
             "Mr_Elephant"
         ],
-        "scene": "Mr_Elephant.blend"
+        "scene": "Mr_Elephant.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_014",
@@ -189,7 +225,10 @@
         "script_info": [
             "Architectural_Visualization_RPR"
         ],
-        "scene": "Architectural_Visualization_RPR.blend"
+        "scene": "Architectural_Visualization_RPR.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_015",
@@ -200,7 +239,10 @@
         "script_info": [
             "Agent_327_Barbershop"
         ],
-        "scene": "Agent_327_Barbershop.blend"
+        "scene": "Agent_327_Barbershop.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_016",
@@ -214,7 +256,10 @@
         "script_info": [
             "Cosmos_Laudromat_Demo"
         ],
-        "scene": "Cosmos_Laudromat_Demo.blend"
+        "scene": "Cosmos_Laudromat_Demo.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_017",
@@ -229,7 +274,10 @@
         "script_info": [
             "Car_Demo"
         ],
-        "scene": "Car_Demo.blend"
+        "scene": "Car_Demo.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_018",
@@ -244,7 +292,10 @@
         "script_info": [
             "classroom"
         ],
-        "scene": "classroom.blend"
+        "scene": "classroom.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_019",
@@ -260,7 +311,10 @@
         "script_info": [
             "Barcelona_Pavillion"
         ],
-        "scene": "Barcelona_Pavillion.blend"
+        "scene": "Barcelona_Pavillion.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_020",
@@ -271,7 +325,10 @@
         "script_info": [
             "Car_Viewport"
         ],
-        "scene": "Car_Viewport.blend"
+        "scene": "Car_Viewport.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_021",
@@ -282,7 +339,10 @@
         "script_info": [
             "stylized_levi"
         ],
-        "scene": "stylized_levi.blend"
+        "scene": "stylized_levi.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_022",
@@ -295,7 +355,10 @@
         "script_info": [
             "bmps_27"
         ],
-        "scene": "bmps_27.blend"
+        "scene": "bmps_27.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_023",
@@ -308,7 +371,10 @@
         "script_info": [
             "Ring_27"
         ],
-        "scene": "Ring_27.blend"
+        "scene": "Ring_27.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_024",
@@ -323,7 +389,10 @@
         "script_info": [
             "scene_Helicopter_27"
         ],
-        "scene": "scene_Helicopter_27.blend"
+        "scene": "scene_Helicopter_27.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_025",
@@ -338,7 +407,10 @@
         "script_info": [
             "TeeglasFX_27"
         ],
-        "scene": "TeeglasFX_27.blend"
+        "scene": "TeeglasFX_27.blend",
+        "skip_on": [
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_BCS_026",

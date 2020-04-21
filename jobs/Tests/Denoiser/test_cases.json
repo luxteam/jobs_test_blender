@@ -478,7 +478,7 @@
     },
     {
         "case": "BL28_RS_DEN_028",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -496,7 +496,7 @@
     },
     {
         "case": "BL28_RS_DEN_029",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -565,7 +565,7 @@
     },
     {
         "case": "BL28_RS_DEN_033",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -1042,7 +1042,10 @@
             "Denoiser type: ML",
             "Use Color AOV: False"
         ],
-        "scene": "DenoiserIBL.blend"
+        "scene": "DenoiserIBL.blend",
+        "skip_on": [
+            ["GeForce GTX 1080 Ti"]
+        ]
     },
     {
         "case": "BL28_RS_DEN_058",
@@ -1057,7 +1060,10 @@
         "script_info": [
             "Denoiser type: EAW"
         ],
-        "scene": "DenoiserIBL.blend"
+        "scene": "DenoiserIBL.blend",
+        "skip_on": [
+            ["GeForce GTX 1080 Ti"]
+        ]
     },
     {
         "case": "BL28_RS_DEN_059",
