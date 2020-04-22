@@ -79,7 +79,7 @@
         ],
         "scene": "Blender_2_77_Racing_Car.blend",
         "skip_on": [
-            [["GeForce GTX 1080 Ti"], ["AMD Radeon VII"]]
+            ["GeForce GTX 1080 Ti"], ["AMD Radeon VII"]
         ]
     },
     {
