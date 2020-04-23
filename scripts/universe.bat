@@ -1,0 +1,5 @@
+set RBS_BUILD_ID=%1
+set RBS_JOB_ID=%2
+set RBS_URL=%3
+set RBS_ENV_LABEL=%4
+set IMAGE_SERVICE_URL=%5
