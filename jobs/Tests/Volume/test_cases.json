@@ -299,7 +299,7 @@
     },
     {
         "case": "BL28_MAT_VM_022",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Volume Anisotropy Color Checker texture"
         ],
@@ -316,7 +316,7 @@
     },
     {
         "case": "BL28_MAT_VM_023",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Volume Anisotropy Color .tga"
         ],
@@ -333,7 +333,7 @@
     },
     {
         "case": "BL28_MAT_VM_024",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Volume Anisotropy Color .png"
         ],
@@ -496,67 +496,191 @@
     },
     {
         "case": "BL28_MAT_VM_033",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
             "Volume Blackbody Intencity - 0.5"
         ],
         "scene": "Volume.blend",
         "functions": [
+            "volume_material, volume_node = get_material_and_node()",
+            "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
+            "volume_node.inputs['Density'].default_value = 1",
+            "volume_node.inputs['Blackbody Intensity'].default_value = 0.5",
+            "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
             "rpr_render(case)"
         ]
     },
     {
         "case": "BL28_MAT_VM_034",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
-            "Volume Blackbody Intencity- 0.6"
+            "Volume Blackbody Intencity- 1"
         ],
         "scene": "Volume.blend",
         "functions": [
+            "volume_material, volume_node = get_material_and_node()",
+            "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
+            "volume_node.inputs['Density'].default_value = 1",
+            "volume_node.inputs['Blackbody Intensity'].default_value = 1",
+            "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
             "rpr_render(case)"
         ]
     },
     {
         "case": "BL28_MAT_VM_035",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
-            "Volume Blackbody Intencity Checker texture"
+            "Volume Blackbody Intencity - 5"
         ],
         "scene": "Volume.blend",
         "functions": [
+            "volume_material, volume_node = get_material_and_node()",
+            "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
+            "volume_node.inputs['Density'].default_value = 1",
+            "volume_node.inputs['Blackbody Intensity'].default_value = 5",
+            "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
             "rpr_render(case)"
         ]
     },
     {
         "case": "BL28_MAT_VM_036",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
-            "Volume Blackbody Tint Checker texture"
+            "Volume Blackbody Intencity - 10"
         ],
         "scene": "Volume.blend",
         "functions": [
+            "volume_material, volume_node = get_material_and_node()",
+            "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
+            "volume_node.inputs['Density'].default_value = 1",
+            "volume_node.inputs['Blackbody Intensity'].default_value = 10",
+            "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
             "rpr_render(case)"
         ]
     },
     {
         "case": "BL28_MAT_VM_037",
-        "status": "skipped",
+        "status": "active",
+        "script_info": [
+            "Volume Blackbody Intencity Checker texture"
+        ],
+        "scene": "Volume.blend",
+        "functions": [
+            "volume_material, volume_node = get_material_and_node()",
+            "create_checker_texture('Blackbody Intencity')",
+            "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
+            "volume_node.inputs['Density'].default_value = 1",
+            "volume_node.inputs['Blackbody Intensity'].default_value = 1",
+            "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
+            "rpr_render(case)",
+            "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Volume.blend'))"
+        ]
+    },
+    {
+        "case": "BL28_MAT_VM_038",
+        "status": "active",
+        "script_info": [
+            "Volume Blackbody Tint Checker texture"
+        ],
+        "scene": "Volume.blend",
+        "functions": [
+            "volume_material, volume_node = get_material_and_node()",
+            "create_checker_texture('Blackbody Tint')",
+            "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
+            "volume_node.inputs['Density'].default_value = 1",
+            "volume_node.inputs['Blackbody Intensity'].default_value = 1",
+            "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
+            "rpr_render(case)",
+            "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Volume.blend'))"
+        ]
+    },
+    {
+        "case": "BL28_MAT_VM_039",
+        "status": "active",
         "script_info": [
             "Volume Blackbody Tint .tga"
         ],
         "scene": "Volume.blend",
         "functions": [
-            "rpr_render(case)"
+            "volume_material, volume_node = get_material_and_node()",
+            "create_imagemap('Blackbody Tint', 'transmissionColor.tga')",
+            "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
+            "volume_node.inputs['Density'].default_value = 1",
+            "volume_node.inputs['Blackbody Intensity'].default_value = 1",
+            "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
+            "rpr_render(case)",
+            "delete_imagemap()"
         ]
     },
     {
-        "case": "BL28_MAT_VM_038",
-        "status": "skipped",
+        "case": "BL28_MAT_VM_040",
+        "status": "active",
         "script_info": [
             "Volume Blackbody Tint .png"
         ],
         "scene": "Volume.blend",
         "functions": [
+            "volume_material, volume_node = get_material_and_node()",
+            "create_imagemap('Blackbody Tint', 'transmissionColor.png')",
+            "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
+            "volume_node.inputs['Density'].default_value = 1",
+            "volume_node.inputs['Blackbody Intensity'].default_value = 1",
+            "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
+            "rpr_render(case)",
+            "delete_imagemap()"
+        ]
+    },
+    {
+        "case": "BL28_MAT_VM_041",
+        "status": "active",
+        "script_info": [
+            "Volume Blackbody Temperature - 2400"
+        ],
+        "scene": "Volume.blend",
+        "functions": [
+            "volume_material, volume_node = get_material_and_node()",
+            "create_imagemap('Blackbody Tint', 'transmissionColor.tga')",
+            "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
+            "volume_node.inputs['Density'].default_value = 1",
+            "volume_node.inputs['Blackbody Intensity'].default_value = 1",
+            "volume_node.inputs['Blackbody Tint'].default_value = (1, 1, 1, 1)",
+            "volume_node.inputs['Temperature'].default_value = 2400",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_VM_042",
+        "status": "active",
+        "script_info": [
+            "Volume Blackbody Temperature - 3600"
+        ],
+        "scene": "Volume.blend",
+        "functions": [
+            "volume_material, volume_node = get_material_and_node()",
+            "create_imagemap('Blackbody Tint', 'transmissionColor.tga')",
+            "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
+            "volume_node.inputs['Density'].default_value = 1",
+            "volume_node.inputs['Blackbody Intensity'].default_value = 1",
+            "volume_node.inputs['Blackbody Tint'].default_value = (1, 1, 1, 1)",
+            "volume_node.inputs['Temperature'].default_value = 3600",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_VM_043",
+        "status": "active",
+        "script_info": [
+            "Volume Blackbody Temperature - 9200"
+        ],
+        "scene": "Volume.blend",
+        "functions": [
+            "volume_material, volume_node = get_material_and_node()",
+            "create_imagemap('Blackbody Tint', 'transmissionColor.tga')",
+            "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
+            "volume_node.inputs['Density'].default_value = 1",
+            "volume_node.inputs['Blackbody Intensity'].default_value = 1",
+            "volume_node.inputs['Blackbody Tint'].default_value = (1, 1, 1, 1)",
+            "volume_node.inputs['Temperature'].default_value = 9200",
             "rpr_render(case)"
         ]
     }

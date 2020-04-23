@@ -14,7 +14,7 @@
             "Denoiser type: Bilateral",
             "Radius: 1"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_002",
@@ -31,7 +31,7 @@
             "Denoiser type: Bilateral",
             "Radius: 5"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_003",
@@ -48,7 +48,7 @@
             "Denoiser type: Bilateral",
             "Radius: 10"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_004",
@@ -63,7 +63,7 @@
         "script_info": [
             "Denoiser type: LWR"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_005",
@@ -80,7 +80,7 @@
             "Denoiser type: LWR",
             "Samples: 5"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_006",
@@ -97,7 +97,7 @@
             "Denoiser type: LWR",
             "Samples: 10"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_007",
@@ -114,7 +114,7 @@
             "Denoiser type: LWR",
             "Filter radius: 5"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_008",
@@ -131,7 +131,7 @@
             "Denoiser type: LWR",
             "Filter radius: 10"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_009",
@@ -148,7 +148,7 @@
             "Denoiser type: LWR",
             "Bandwidth: 0.1"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_010",
@@ -165,7 +165,7 @@
             "Denoiser type: LWR",
             "Bandwidth: 0.5"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_011",
@@ -186,7 +186,7 @@
             "Filter radius: 1",
             "Bandwidth: 0.1"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_012",
@@ -207,7 +207,7 @@
             "Filter radius: 5",
             "Bandwidth: 0.5"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_013",
@@ -228,7 +228,7 @@
             "Filter radius: 10",
             "Bandwidth: 1"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_014",
@@ -243,7 +243,7 @@
         "script_info": [
             "Denoiser type: EAW"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_015",
@@ -260,7 +260,7 @@
             "Denoiser type: EAW",
             "Color: 0.1"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_016",
@@ -277,7 +277,7 @@
             "Denoiser type: EAW",
             "Color: 0.5"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_017",
@@ -294,7 +294,7 @@
             "Denoiser type: EAW",
             "Depth: 0.1"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_018",
@@ -311,7 +311,7 @@
             "Denoiser type: EAW",
             "Depth: 0.5"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_019",
@@ -328,7 +328,7 @@
             "Denoiser type: EAW",
             "Normal: 0.1"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_020",
@@ -345,7 +345,7 @@
             "Denoiser type: EAW",
             "Normal: 0.5"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_021",
@@ -362,7 +362,7 @@
             "Denoiser type: EAW",
             "Trans: 0.1"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_022",
@@ -379,7 +379,7 @@
             "Denoiser type: EAW",
             "Trans: 0.5"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_023",
@@ -402,7 +402,7 @@
             "Normal: 0.1",
             "Trans: 0.1"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_024",
@@ -425,7 +425,7 @@
             "Normal: 0.5",
             "Trans: 0.5"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_025",
@@ -440,7 +440,7 @@
         "script_info": [
             "Denoiser type: ML"
         ],
-        "scene": "Test_Scene.blend"
+        "scene": "DualCpu.blend"
     },
     {
         "case": "BL28_RS_DEN_026",
@@ -1012,7 +1012,7 @@
     },
     {
         "case": "BL28_RS_DEN_056",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -1029,7 +1029,7 @@
     },
     {
         "case": "BL28_RS_DEN_057",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -1042,7 +1042,10 @@
             "Denoiser type: ML",
             "Use Color AOV: False"
         ],
-        "scene": "DenoiserIBL.blend"
+        "scene": "DenoiserIBL.blend",
+        "skip_on": [
+            ["GeForce GTX 1080 Ti"]
+        ]
     },
     {
         "case": "BL28_RS_DEN_058",
@@ -1057,7 +1060,10 @@
         "script_info": [
             "Denoiser type: EAW"
         ],
-        "scene": "DenoiserIBL.blend"
+        "scene": "DenoiserIBL.blend",
+        "skip_on": [
+            ["GeForce GTX 1080 Ti"]
+        ]
     },
     {
         "case": "BL28_RS_DEN_059",
@@ -1243,6 +1249,382 @@
             "resetSceneAttributes()"
         ],
         "script_info": [
+            "Denoiser type: Bilateral"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_071",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
+            "set_value(view_layer.rpr.denoiser, 'ml_color_only', True)",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'shadowcatcher', True)",
+            "rpr_render(case)",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'shadowcatcher', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Shadow catcher",
+            "Denoiser type: ML",
+            "Use Color AOV: True"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_072",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
+            "set_value(view_layer.rpr.denoiser, 'ml_color_only', False)",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'shadowcatcher', True)",
+            "rpr_render(case)",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'shadowcatcher', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Shadow catcher",
+            "Denoiser type: ML",
+            "Use Color AOV: False"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_073",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'shadowcatcher', True)",
+            "rpr_render(case)",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'shadowcatcher', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Shadow catcher",
+            "Denoiser type: EAW"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_074",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'LWR')",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'shadowcatcher', True)",
+            "rpr_render(case)",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'shadowcatcher', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Shadow catcher",
+            "Denoiser type: LWR"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_075",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERAL')",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'shadowcatcher', True)",
+            "rpr_render(case)",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'shadowcatcher', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Shadow catcher",
+            "Denoiser type: Bilateral"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_076",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
+            "set_value(view_layer.rpr.denoiser, 'ml_color_only', True)",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'reflection_catcher', True)",
+            "rpr_render(case)",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'reflection_catcher', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Reflection catcher",
+            "Denoiser type: ML",
+            "Use Color AOV: True"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_077",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
+            "set_value(view_layer.rpr.denoiser, 'ml_color_only', False)",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'reflection_catcher', True)",
+            "rpr_render(case)",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'reflection_catcher', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Reflection catcher",
+            "Denoiser type: ML",
+            "Use Color AOV: False"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_078",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'reflection_catcher', True)",
+            "rpr_render(case)",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'reflection_catcher', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Reflection catcher",
+            "Denoiser type: EAW"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_079",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'LWR')",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'reflection_catcher', True)",
+            "rpr_render(case)",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'reflection_catcher', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Reflection catcher",
+            "Denoiser type: LWR"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_080",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERAL')",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'reflection_catcher', True)",
+            "rpr_render(case)",
+            "set_value(bpy.data.objects['Plane01'].rpr, 'reflection_catcher', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Reflection catcher",
+            "Denoiser type: Bilateral"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_081",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
+            "set_value(view_layer.rpr.denoiser, 'ml_color_only', True)",
+            "set_value(bpy.context.scene.render, 'film_transparent', True)",
+            "rpr_render(case)",
+            "set_value(bpy.context.scene.render, 'film_transparent', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Transparent background",
+            "Denoiser type: ML",
+            "Use Color AOV: True"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_082",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
+            "set_value(view_layer.rpr.denoiser, 'ml_color_only', False)",
+            "set_value(bpy.context.scene.render, 'film_transparent', True)",
+            "rpr_render(case)",
+            "set_value(bpy.context.scene.render, 'film_transparent', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Transparent background",
+            "Denoiser type: ML",
+            "Use Color AOV: False"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_083",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(bpy.context.scene.render, 'film_transparent', True)",
+            "rpr_render(case)",
+            "set_value(bpy.context.scene.render, 'film_transparent', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Transparent background",
+            "Denoiser type: EAW"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_084",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'LWR')",
+            "set_value(bpy.context.scene.render, 'film_transparent', True)",
+            "rpr_render(case)",
+            "set_value(bpy.context.scene.render, 'film_transparent', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Transparent background",
+            "Denoiser type: LWR"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_085",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERAL')",
+            "set_value(bpy.context.scene.render, 'film_transparent', True)",
+            "rpr_render(case)",
+            "set_value(bpy.context.scene.render, 'film_transparent', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Transparent background",
+            "Denoiser type: Bilateral"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_086",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
+            "set_value(view_layer.rpr.denoiser, 'ml_color_only', True)",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', True)",
+            "rpr_render(case)",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Tile rendering",
+            "Denoiser type: ML",
+            "Use Color AOV: True"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_087",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
+            "set_value(view_layer.rpr.denoiser, 'ml_color_only', False)",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', True)",
+            "rpr_render(case)",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Tile rendering",
+            "Denoiser type: ML",
+            "Use Color AOV: False"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_088",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', True)",
+            "rpr_render(case)",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Tile rendering",
+            "Denoiser type: EAW"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_089",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'LWR')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', True)",
+            "rpr_render(case)",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Tile rendering",
+            "Denoiser type: LWR"
+        ],
+        "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_090",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', True)",
+            "rpr_render(case)",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Tile rendering",
             "Denoiser type: Bilateral"
         ],
         "scene": "DenoiserMaterials.blend"
