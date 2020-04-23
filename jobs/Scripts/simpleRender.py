@@ -297,7 +297,7 @@ if __name__ == "__main__":
                                             os.path.join(os.path.abspath(args.output), case_info[0]['render_color_path'])))
                         res.append({
                                     'name': case['case'],
-                                    'status': case['status'],
+                                    'status': case_info[0]['test_status'],
                                     'metrics': {
                                         'render_time': case_info[0]['render_time']
                                     },
