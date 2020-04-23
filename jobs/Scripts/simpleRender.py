@@ -313,11 +313,8 @@ if __name__ == "__main__":
                     # send machine info to rbs
                     env = {"gpu": get_gpu(), **get_machine_info()}
                     env.pop('os')
-                    env.update({'hostname': env.pop('host'), 'cpu_count': int(env['cpu_count'])})
-                    core_config.main_logger.info({
-                        "test_cases_results": res,
-                        "environment": env,
-                        "env_label": rbs_client.env_label})
+                    env.update({'env_label': os.getenv("RBS_ENV_LABEL"), 'hostname': env.pop('host'), 'cpu_count': int(env['cpu_count'])})
+                    core_config.main_logger.info(env)
 
                     response = rbs_client.send_test_suite(res=res, env=env)
                     core_config.main_logger.info('Test suite results sent with code {}'.format(response.status_code))
