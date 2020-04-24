@@ -203,8 +203,6 @@ def group_failed(args):
 if __name__ == "__main__":
     core_config.main_logger.info("simpleRender start working...")
 
-    core_config.main_logger.info("simple render started")
-
     is_client = None
     rbs_client = None
     rbs_use = str2bool(os.getenv('RBS_USE'))
