@@ -22,6 +22,7 @@ set RBS_JOB_ID=%2
 set RBS_URL=%3
 set RBS_ENV_LABEL=%4
 set IMAGE_SERVICE_URL=%5
+set RBS_USE=%6
 
 
 if not defined RX set RX=0
