@@ -960,7 +960,7 @@
         ],
         "scene": "DenoiserDOF.blend",
         "skip_on": [
-            ["AMD Radeon VII"]
+            ["AMD Radeon VII"], ["AMD Radeon RX Vega 56 (Metal)"]
         ]
     },
     {
