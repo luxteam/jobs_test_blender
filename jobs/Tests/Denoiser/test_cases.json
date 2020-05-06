@@ -440,7 +440,10 @@
         "script_info": [
             "Denoiser type: ML"
         ],
-        "scene": "DualCpu.blend"
+        "scene": "DualCpu.blend",
+        "skip_on": [
+            ["AMD Radeon RX Vega 56 (Metal)"]
+        ]
     },
     {
         "case": "BL28_RS_DEN_026",
@@ -736,7 +739,7 @@
         ],
         "scene": "DenoiserLight.blend",
         "skip_on": [
-            ["AMD Radeon VII"]
+            ["AMD Radeon VII"], ["AMD Radeon RX Vega 56 (Metal)"]
         ]
     },
     {
