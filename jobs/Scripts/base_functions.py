@@ -21,6 +21,7 @@ RESOLUTION_X = {resolution_x}
 RESOLUTION_Y = {resolution_y}
 SPU = {SPU}
 THRESHOLD = {threshold}
+ENGINE = {engine}
 LOGS_DIR = path.join(WORK_DIR, 'render_tool_logs')
 
 
@@ -137,6 +138,9 @@ def prerender(case):
 			bpy.ops.wm.quit_blender()
 
 	enable_rpr()
+
+	set_value(scene.rpr, 'render_quality', 'FULL2')
+
 	scene = bpy.context.scene
 	device_name = set_render_device(RENDER_DEVICE)
 
