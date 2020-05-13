@@ -139,9 +139,10 @@ def prerender(case):
 
 	enable_rpr()
 
+	scene = bpy.context.scene
+
 	set_value(scene.rpr, 'render_quality', 'FULL2')
 
-	scene = bpy.context.scene
 	device_name = set_render_device(RENDER_DEVICE)
 
 	if RESOLUTION_X and RESOLUTION_Y:
