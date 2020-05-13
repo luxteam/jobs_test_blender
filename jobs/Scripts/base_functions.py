@@ -141,7 +141,7 @@ def prerender(case):
 
 	scene = bpy.context.scene
 
-	set_value(scene.rpr, 'render_quality', 'FULL2')
+	set_value(scene.rpr, 'render_quality', ENGINE)
 
 	device_name = set_render_device(RENDER_DEVICE)
 
