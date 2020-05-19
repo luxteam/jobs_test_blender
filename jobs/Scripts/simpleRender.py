@@ -37,6 +37,7 @@ def createArgsParser():
 	parser.add_argument('--pass_limit', required=True)
 	parser.add_argument('--testCases', required=True)
 	parser.add_argument('--SPU', required=False, default=25)
+	parser.add_argument('--engine', required=False, default='FULL')
 	parser.add_argument('--error_count', required=False, default=0, type=int)
 	parser.add_argument('--threshold', required=False,
 						default=0.05, type=float)
@@ -74,7 +75,7 @@ def main(args):
 
 	work_dir = os.path.abspath(args.output)
 	script = script.format(work_dir=work_dir, testType=args.testType, render_device=args.render_device, res_path=args.res_path, pass_limit=args.pass_limit,
-						   resolution_x=args.resolution_x, resolution_y=args.resolution_y, SPU=args.SPU, threshold=args.threshold)
+						   resolution_x=args.resolution_x, resolution_y=args.resolution_y, SPU=args.SPU, threshold=args.threshold, engine=args.engine)
 
 	with open(os.path.join(args.output, 'base_functions.py'), 'w') as file:
 		file.write(script)
