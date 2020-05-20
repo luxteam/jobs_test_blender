@@ -13,7 +13,7 @@ import re
 import time
 
 sys.path.append(os.path.abspath(os.path.join(
-	os.path.dirname(__file__), os.path.pardir, os.path.pardir)))
+    os.path.dirname(__file__), os.path.pardir, os.path.pardir)))
 
 import jobs_launcher.core.config as core_config
 from jobs_launcher.core.system_info import get_gpu, get_machine_info
@@ -42,7 +42,7 @@ def createArgsParser():
     parser.add_argument('--testCases', required=True)
     parser.add_argument('--SPU', required=False, default=25)
     parser.add_argument('--engine', required=False, default='FULL')
-	parser.add_argument('--error_count', required=False, default=0, type=int)
+    parser.add_argument('--error_count', required=False, default=0, type=int)
     parser.add_argument('--threshold', required=False,
                         default=0.05, type=float)
 
@@ -271,16 +271,16 @@ if __name__ == "__main__":
             core_config.main_logger.error(str(e))
             exit(-1)
 
-		active_cases = 0
-		current_error_count = 0
+        active_cases = 0
+        current_error_count = 0
 
-		for case in cases:
-			if case['status'] in ['fail', 'error', 'inprogress']:
-				current_error_count += 1
-				if args.error_count == current_error_count:
-					group_failed(args)
-			else:
-				current_error_count = 0
+        for case in cases:
+            if case['status'] in ['fail', 'error', 'inprogress']:
+                current_error_count += 1
+                if args.error_count == current_error_count:
+                    group_failed(args)
+            else:
+                current_error_count = 0
         for case in cases:
             if case['status'] in ['fail', 'error', 'inprogress']:
                 failed_count += 1
