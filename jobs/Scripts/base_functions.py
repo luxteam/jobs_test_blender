@@ -21,6 +21,7 @@ RESOLUTION_X = {resolution_x}
 RESOLUTION_Y = {resolution_y}
 SPU = {SPU}
 THRESHOLD = {threshold}
+ENGINE = r'{engine}'
 LOGS_DIR = path.join(WORK_DIR, 'render_tool_logs')
 
 
@@ -137,7 +138,11 @@ def prerender(case):
 			bpy.ops.wm.quit_blender()
 
 	enable_rpr()
+
 	scene = bpy.context.scene
+
+	set_value(scene.rpr, 'render_quality', ENGINE)
+
 	device_name = set_render_device(RENDER_DEVICE)
 
 	if RESOLUTION_X and RESOLUTION_Y:
@@ -206,7 +211,7 @@ def case_function(case):
 	if case['functions'][0] == 'check_test_cases_success_save':
 		func = 'save_report'
 
-	if case['status'] == 'fail' or case.get('number_of_tries', 1) == 3:	# 3- retries count
+	if case['status'] == 'fail' or case.get('number_of_tries', 1) == 2:	# 2- retries count
 		case['status'] = 'error'
 		func = 'save_report'
 	elif case['status'] == 'skipped':
