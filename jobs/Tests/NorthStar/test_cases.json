@@ -348,7 +348,7 @@
 	},
 	{
 		"case": "BL28_NRT_026",
-		"status": "active",
+		"status": "skipped",
 		"functions": [
 			"rpr_render(case)"
 		],
@@ -359,7 +359,7 @@
 	},
 	{
 		"case": "BL28_NRT_027",
-		"status": "active",
+		"status": "skipped",
 		"functions": [
 			"rpr_render(case)"
 		],
