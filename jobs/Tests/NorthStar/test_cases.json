@@ -196,7 +196,7 @@
 	},
 	{
 		"case": "BL28_NRT_015",
-		"status": "active",
+		"status": "skipped",
 		"functions": [
 			"shader_ball = bpy.data.objects['shader_ball']",
 			"shader_ball.select_set(True)",
