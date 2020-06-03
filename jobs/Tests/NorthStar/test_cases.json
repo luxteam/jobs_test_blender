@@ -11,9 +11,6 @@
 			"Render RPR scene"
 		],
 		"scene": "rpr_default_upd.blend"
-		,"skip_on": [
-            ["AMD Radeon RX 5700 XT"]
-        ]
 	},
 	{
 		"case": "BL28_NRT_002",
@@ -29,9 +26,6 @@
 			"IES"
 		],
 		"scene": "IES.blend"
-		,"skip_on": [
-            ["AMD Radeon RX 5700 XT"]
-        ]
 	},
 	{
 		"case": "BL28_NRT_003",
