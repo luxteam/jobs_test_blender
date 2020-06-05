@@ -486,9 +486,9 @@
             "rpr_render(case)"
         ],
         "script_info": [
-            "color_vertex"
+            "color_vortex"
         ],
-        "scene": "color_vertex.blend",
+        "scene": "color_vortex.blend",
         "skip_on": [
             ["AMD Radeon VII"]
         ]
@@ -500,9 +500,9 @@
             "rpr_render(case)"
         ],
         "script_info": [
-            "greacepencil_bike"
+            "greasepencil-bike"
         ],
-        "scene": "volume_emission_27.blend",
+        "scene": "greasepencil-bike.blend",
         "skip_on": [
             ["AMD Radeon VII"]
         ]

@@ -7,7 +7,7 @@
         ],
         "scene": "VDB.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=1",
+            "bpy.data.volumes['New_0001'].display.density = 1",
             "rpr_render(case)"
         ]
     },
@@ -19,7 +19,7 @@
         ],
         "scene": "VDB.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=10",
+            "bpy.data.volumes['New_0001'].display.density = 10",
             "rpr_render(case)"
         ]
     },
@@ -31,9 +31,10 @@
         ],
         "scene": "VDB.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=100",
+            "print(bpy.data.volumes['New_0001'])",
+            "bpy.data.volumes['New_0001'].display.density = 100",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -44,9 +45,9 @@
         ],
         "scene": "VDB.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=500",
+            "bpy.data.volumes['New_0001'].display.density = 500",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -57,9 +58,9 @@
         ],
         "scene": "VDB.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=1000",
+            "bpy.data.volumes['New_0001'].display.density = 1000",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -160,10 +161,10 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 0",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10",
+            "bpy.data.volumes['New_0001'].display.density = 10",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 1"
         ]
     },
@@ -175,10 +176,10 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 0.5",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10",
+            "bpy.data.volumes['New_0001'].display.density = 10",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 1"
         ]
     },
@@ -190,10 +191,10 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 1",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -204,10 +205,10 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 5",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10",
+            "bpy.data.volumes['New_0001'].display.density = 10",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 1"
         ]
     },
@@ -219,10 +220,10 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10",
+            "bpy.data.volumes['New_0001'].display.density = 10",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 1"
         ]
     },
@@ -234,10 +235,10 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "create_checker_texture('Density')",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10",
+            "bpy.data.volumes['New_0001'].display.density = 10",
             "delete_checker()"
         ]
     },
@@ -249,10 +250,10 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "create_imagemap('Density', 'reflectionColor.tga')",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10",
+            "bpy.data.volumes['New_0001'].display.density = 10",
             "delete_checker()"
         ]
     },
@@ -264,10 +265,10 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "create_imagemap('Density', 'reflectionColor.png')",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10",
+            "bpy.data.volumes['New_0001'].display.density = 10",
             "delete_checker()"
         ]
     },
@@ -279,10 +280,10 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Anisotropy'].default_value = -1",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10",
+            "bpy.data.volumes['New_0001'].display.density = 10",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Anisotropy'].default_value = 0"
         ]
     },
@@ -294,9 +295,9 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -307,10 +308,10 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Anisotropy'].default_value = 1",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10",
+            "bpy.data.volumes['New_0001'].display.density = 10",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Anisotropy'].default_value = 0"
         ]
     },
@@ -322,10 +323,10 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Absorption Color'].default_value = (0, 0.5, 0, 1)",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10",
+            "bpy.data.volumes['New_0001'].display.density = 10",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Absorption Color'].default_value = (0, 0, 0, 1)"
         ]
     },
@@ -337,10 +338,10 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Absorption Color'].default_value = (0, 0, 0.5, 1)",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10",
+            "bpy.data.volumes['New_0001'].display.density = 10",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Absorption Color'].default_value = (0, 0, 0, 1)"
         ]
     },
@@ -352,10 +353,10 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "create_checker_texture('Anisotropy')",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10",
+            "bpy.data.volumes['New_0001'].display.density = 10",
             "delete_checker()"
         ]
     },
@@ -367,11 +368,11 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "create_checker_texture('Absorption Color')",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Anisotropy'].default_value = 1",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10",
+            "bpy.data.volumes['New_0001'].display.density = 10",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Anisotropy'].default_value = 0",
             "delete_checker()"
         ]
@@ -384,11 +385,11 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "create_imagemap('Absorption Color', 'transmissionColor.tga')",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Anisotropy'].default_value = 1",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10",
+            "bpy.data.volumes['New_0001'].display.density = 10",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Anisotropy'].default_value = 0",
             "delete_imagemap()"
         ]
@@ -401,11 +402,11 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "create_imagemap('Absorption Color', 'transmissionColor.png')",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Anisotropy'].default_value = 1",
             "rpr_render(case)",
-            "bpy.data.volumes['New_0001'].display.density=10",
+            "bpy.data.volumes['New_0001'].display.density = 10",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Anisotropy'].default_value = 0",
             "delete_imagemap()"
         ]
@@ -418,11 +419,11 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Emission Strength'].default_value = 0.5",
             "rpr_render(case)",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Emission Strength'].default_value = 0",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -433,11 +434,11 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Emission Strength'].default_value = 1",
             "rpr_render(case)",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Emission Strength'].default_value = 0",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -448,11 +449,11 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Emission Strength'].default_value = 5",
             "rpr_render(case)",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Emission Strength'].default_value = 0",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -463,11 +464,11 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Emission Strength'].default_value = 10",
             "rpr_render(case)",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Emission Strength'].default_value = 0",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -478,11 +479,11 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "create_checker_texture('Emission Strength')",
             "rpr_render(case)",
             "delete_checker()",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -493,11 +494,11 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "create_checker_texture('Emission Color')",
             "rpr_render(case)",
             "delete_checker()",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -508,11 +509,11 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "create_imagemap('Emission Color', 'emissiveColor.tga')",
             "rpr_render(case)",
             "delete_imagemap()",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -523,11 +524,11 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "create_imagemap('Emission Color', 'emissiveColor.png')",
             "rpr_render(case)",
             "delete_imagemap()",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -538,13 +539,13 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 0.5",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Tint'].default_value = (0, 0.5, 0.5, 1)",
             "rpr_render(case)",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Tint'].default_value = (1, 1, 1, 1)",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 0",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -555,13 +556,13 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 1",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Tint'].default_value = (0, 0.5, 0.5, 1)",
             "rpr_render(case)",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Tint'].default_value = (1, 1, 1, 1)",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 0",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -572,13 +573,13 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 5",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Tint'].default_value = (0, 0.5, 0.5, 1)",
             "rpr_render(case)",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Tint'].default_value = (1, 1, 1, 1)",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 0",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -589,13 +590,13 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 10",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Tint'].default_value = (0, 0.5, 0.5, 1)",
             "rpr_render(case)",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Tint'].default_value = (1, 1, 1, 1)",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 0",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -606,13 +607,13 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 1",
             "create_checker_texture('Blackbody Intencity')",
             "rpr_render(case)",
             "delete_imagemap()",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 0",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -623,13 +624,13 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 1",
             "create_checker_texture('Blackbody Tint')",
             "rpr_render(case)",
             "delete_imagemap()",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 0",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -640,13 +641,13 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 1",
             "create_imagemap('Blackbody Tint', 'transmissionColor.tga')",
             "rpr_render(case)",
             "delete_imagemap()",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 0",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -657,13 +658,13 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 1",
             "create_imagemap('Blackbody Tint', 'transmissionColor.png')",
             "rpr_render(case)",
             "delete_imagemap()",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 0",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -674,11 +675,11 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Temperature'].default_value = 2400",
             "rpr_render(case)",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Temperature'].default_value = 1000",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -689,11 +690,11 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Temperature'].default_value = 3600",
             "rpr_render(case)",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Temperature'].default_value = 1000",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -704,11 +705,11 @@
         ],
         "scene": "VDB_Material.blend",
         "functions": [
-            "bpy.data.volumes['New_0001'].display.density=50",
+            "bpy.data.volumes['New_0001'].display.density = 50",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Temperature'].default_value = 9200",
             "rpr_render(case)",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Temperature'].default_value = 1000",
-            "bpy.data.volumes['New_0001'].display.density=10"
+            "bpy.data.volumes['New_0001'].display.density = 10"
         ]
     },
     {
@@ -732,7 +733,7 @@
         ],
         "scene": "VDB_Sequence.blend",
         "functions": [
-            "scene.frame_set(82)",
+            "scene.frame_set(84)",
             "rpr_render(case)"
         ]
     }
