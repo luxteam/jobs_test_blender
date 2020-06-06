@@ -8,10 +8,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -28,10 +28,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -48,10 +48,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -68,10 +68,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -88,10 +88,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -108,10 +108,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -128,10 +128,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -148,10 +148,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -168,10 +168,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -188,10 +188,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -208,10 +208,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -228,10 +228,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -248,10 +248,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.05)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -268,10 +268,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -288,10 +288,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -308,10 +308,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -328,10 +328,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 10)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -348,10 +348,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 50)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -368,10 +368,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 100)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -388,10 +388,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 500)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -408,10 +408,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -428,10 +428,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -448,10 +448,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -468,10 +468,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -488,10 +488,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -508,10 +508,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -528,10 +528,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -548,10 +548,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -568,10 +568,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -588,10 +588,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -608,10 +608,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -628,10 +628,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -648,10 +648,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.05)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -668,10 +668,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -688,10 +688,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -708,10 +708,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -728,10 +728,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 10)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -748,10 +748,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 50)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -768,10 +768,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 100)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -788,10 +788,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 500)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -808,10 +808,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -828,10 +828,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -848,10 +848,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -868,10 +868,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -888,10 +888,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -908,10 +908,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -928,10 +928,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -948,10 +948,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -968,10 +968,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -988,10 +988,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -1008,10 +1008,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -1028,10 +1028,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -1048,10 +1048,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.05)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -1068,10 +1068,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -1088,10 +1088,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -1108,10 +1108,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -1128,10 +1128,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 10)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -1148,10 +1148,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 50)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -1168,10 +1168,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 100)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -1188,10 +1188,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.5)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 500)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', False)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -1208,10 +1208,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.05)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', True)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 128)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 128)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', True)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 128)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 128)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -1228,10 +1228,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.05)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', True)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 256)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 256)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', True)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 256)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 256)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -1248,10 +1248,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.05)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', True)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', 'CENTER_SPIRAL')",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', True)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', 'CENTER_SPIRAL')",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -1268,10 +1268,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.05)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', True)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 128)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 128)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', VERTICAL)",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', True)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 128)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 128)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', VERTICAL)",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -1288,10 +1288,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.05)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', True)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 256)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 256)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', VERTICAL)",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', True)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 256)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 256)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', VERTICAL)",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -1308,10 +1308,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.05)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', True)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', VERTICAL)",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', True)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', VERTICAL)",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -1328,10 +1328,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.05)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', True)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 128)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 128)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', HORIZONTAL)",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', True)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 128)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 128)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', HORIZONTAL)",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -1348,10 +1348,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.05)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', True)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 256)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 256)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', HORIZONTAL)",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', True)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 256)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 256)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', HORIZONTAL)",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -1368,10 +1368,10 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.05)",
             "set_value(bpy.context.scene.rpr.limits, 'update_samples', 1)",
             "set_value(bpy.context.scene.rpr.limits, 'seconds', 0)",
-            "set_value(bpy.context.scene.rpr.limits, 'use_tile_render', True)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_x', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_y', 512)",
-            "set_value(bpy.context.scene.rpr.limits, 'tile_order', HORIZONTAL)",
+            "set_value(bpy.context.scene.rpr, 'use_tile_render', True)",
+            "set_value(bpy.context.scene.rpr, 'tile_x', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_y', 512)",
+            "set_value(bpy.context.scene.rpr, 'tile_order', HORIZONTAL)",
             "rpr_render(case)"
         ],
         "script_info": [
