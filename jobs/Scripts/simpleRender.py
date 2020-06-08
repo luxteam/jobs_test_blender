@@ -253,7 +253,7 @@ if __name__ == "__main__":
 			if case['status'] in ['active', 'fail', 'inprogress']:
 				active_cases += 1
 
-		if active_cases == 0 or iteration > len(cases) * 2:	# 2- retries count          
+		if active_cases == 0 or iteration > len(cases) * 2:	# 2- retries count        
 			# exit script if base_functions don't change number of active cases
 			kill_process(PROCESS)
 			core_config.main_logger.info(
