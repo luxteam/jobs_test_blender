@@ -19,4 +19,4 @@ def material_output():
 def remove_links():
     for i in bpy.data.materials["HairBSDF"].node_tree.links:
         if (firstBSDF() == i.from_node or secondBSDF() == i.from_node or first_ramp() == i.from_node or second_ramp() == i.from_node):
-            D.materials["HairBSDF"].node_tree.links.remove(i)
+            bpy.data.materials["HairBSDF"].node_tree.links.remove(i)
