@@ -198,7 +198,7 @@ def group_failed(args):
 if __name__ == "__main__":
 	core_config.main_logger.info("simpleRender start working...")
 	
-    args = createArgsParser().parse_args()
+	args = createArgsParser().parse_args()
 
 	iteration = 0
 
@@ -206,7 +206,7 @@ if __name__ == "__main__":
 		os.makedirs(args.output)
 	except OSError as e:
 		pass
-    
+	
 	try:
 		copyfile(os.path.realpath(os.path.join(os.path.dirname(
 					__file__), '..', 'Tests', args.testType, 'test_cases.json')),
@@ -253,7 +253,7 @@ if __name__ == "__main__":
 			if case['status'] in ['active', 'fail', 'inprogress']:
 				active_cases += 1
 
-		if active_cases == 0 or iteration > len(cases) * 2:	# 2- retries count            
+		if active_cases == 0 or iteration > len(cases) * 2:	# 2- retries count		
 			# exit script if base_functions don't change number of active cases
 			kill_process(PROCESS)
 			core_config.main_logger.info(
