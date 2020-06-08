@@ -132,7 +132,7 @@
     },
     {
         "case": "BL28_MAT_VM_011",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Volume Density - 5"
         ],
@@ -386,7 +386,7 @@
     },
     {
         "case": "BL28_MAT_VM_027",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Volume Emission - 5"
         ],
@@ -528,7 +528,7 @@
     },
     {
         "case": "BL28_MAT_VM_035",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Volume Blackbody Intencity - 5"
         ],

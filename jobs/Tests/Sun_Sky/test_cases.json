@@ -15,7 +15,7 @@
     },
     {
         "case": "BL28_RS_SS_002",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Azimuth: 0",
             "Altitude: 45"
@@ -29,7 +29,7 @@
     },
     {
         "case": "BL28_RS_SS_003",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Azimuth: 0",
             "Altitude: 90"
@@ -43,7 +43,7 @@
     },
     {
         "case": "BL28_RS_SS_004",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Azimuth: 90",
             "Altitude: 0"
@@ -85,7 +85,7 @@
     },
     {
         "case": "BL28_RS_SS_007",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Azimuth: 180",
             "Altitude: 0"
@@ -99,7 +99,7 @@
     },
     {
         "case": "BL28_RS_SS_008",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Azimuth: 180",
             "Altitude: 45"
@@ -127,7 +127,7 @@
     },
     {
         "case": "BL28_RS_SS_010",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Azimuth: 270",
             "Altitude: 0"
@@ -155,7 +155,7 @@
     },
     {
         "case": "BL28_RS_SS_012",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Azimuth: 270",
             "Altitude: 90"
@@ -169,7 +169,7 @@
     },
     {
         "case": "BL28_RS_SS_013",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Azimuth: 360",
             "Altitude: 0"
@@ -183,7 +183,7 @@
     },
     {
         "case": "BL28_RS_SS_014",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Azimuth: 360",
             "Altitude: 45"
@@ -197,7 +197,7 @@
     },
     {
         "case": "BL28_RS_SS_015",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Azimuth: 360",
             "Altitude: 90"
@@ -278,7 +278,7 @@
     },
     {
         "case": "BL28_RS_SS_021",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Turbidity - 2"
         ],
@@ -321,7 +321,7 @@
     },
     {
         "case": "BL28_RS_SS_024",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Intencity: 2"
         ],
@@ -367,7 +367,7 @@
     },
     {
         "case": "BL28_RS_SS_027",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Sun Glow: 2"
         ],

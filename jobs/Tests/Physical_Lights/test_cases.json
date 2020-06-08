@@ -30,7 +30,7 @@
     },
     {
         "case": "BL28_L_PL_003",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Point light, int = 1000"
         ],
@@ -58,7 +58,7 @@
     },
     {
         "case": "BL28_L_PL_005",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Point light, int = 100, Temperature - 6500"
         ],
@@ -90,7 +90,7 @@
     },
     {
         "case": "BL28_L_PL_007",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Point light, int = 100, Temperature - 3200"
         ],
@@ -218,7 +218,7 @@
     },
     {
         "case": "BL28_L_PL_015",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Point light with IES, int = 100, Temperature - 1000"
         ],
@@ -364,7 +364,7 @@
     },
     {
         "case": "BL28_L_PL_024",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Point light, Units Lumen, int = 1000"
         ],
@@ -424,7 +424,7 @@
     },
     {
         "case": "BL28_L_PL_028",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Sun light, int = 100"
         ],
@@ -452,7 +452,7 @@
     },
     {
         "case": "BL28_L_PL_030",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Sun light, int = 5000"
         ],
@@ -482,7 +482,7 @@
     },
     {
         "case": "BL28_L_PL_032",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Sun light, int = 100, Temperature - 1000"
         ],
@@ -514,7 +514,7 @@
     },
     {
         "case": "BL28_L_PL_034",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Sun light, int = 100, Temperature - 9600"
         ],
@@ -622,7 +622,7 @@
     },
     {
         "case": "BL28_L_PL_041",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Sun light, Units Luminance, int = 1000"
         ],
@@ -741,7 +741,7 @@
     },
     {
         "case": "BL28_L_PL_049",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Spot light, int = 1000"
         ],
@@ -785,7 +785,7 @@
     },
     {
         "case": "BL28_L_PL_052",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Spot light, int = 100, Temperature - 1000"
         ],
@@ -801,7 +801,7 @@
     },
     {
         "case": "BL28_L_PL_053",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Spot light, int = 100, Temperature - 3200"
         ],
@@ -940,7 +940,7 @@
     },
     {
         "case": "BL28_L_PL_062",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Spot light, Units Lumen, int = 5000"
         ],
@@ -970,7 +970,7 @@
     },
     {
         "case": "BL28_L_PL_064",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Spot light, int = 100, Spot Size - 45"
         ],
@@ -1030,7 +1030,7 @@
     },
     {
         "case": "BL28_L_PL_068",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Spot light, int = 100, Spot Blend - 0.15"
         ],
@@ -1118,7 +1118,7 @@
     },
     {
         "case": "BL28_L_PL_074",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Area light, int = 5000"
         ],
@@ -1177,7 +1177,7 @@
     },
     {
         "case": "BL28_L_PL_078",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Area light, int = 5000, Deactivate Intencity Normalization"
         ],
@@ -1192,7 +1192,7 @@
     },
     {
         "case": "BL28_L_PL_079",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Area light, int = 100, Temperature - 6500"
         ],
@@ -1208,7 +1208,7 @@
     },
     {
         "case": "BL28_L_PL_080",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Area light, int = 100, Temperature - 1000"
         ],
@@ -1333,7 +1333,7 @@
     },
     {
         "case": "BL28_L_PL_088",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Area light, Units Lumen, int = 100"
         ],
@@ -1425,7 +1425,7 @@
     },
     {
         "case": "BL28_L_PL_094",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Area light, Units Luminance, int = 1000"
         ],
