@@ -518,7 +518,7 @@
 			"scene.node_tree.links.new(render_layer.outputs['Image'], composite.inputs['Image'])",
 			"file_output.base_path = os.path.join(WORK_DIR, 'Color')",
 			"file_output.file_slots.new('BL28_SM_031')",
-			"view_layer.rpr.enable_aovs[6] = True",
+			"view_layer.rpr.enable_aovs[7] = True",
 			"scene.node_tree.links.new(render_layer.outputs['Geometric Normal'], file_output.inputs[1])",
 			"test_case_image = os.path.join(WORK_DIR, 'Color', 'BL28_SM_031' + '.jpg')",
 			"aov_image = os.path.join(WORK_DIR, 'Color', 'BL28_SM_031' + '0001.jpg')",

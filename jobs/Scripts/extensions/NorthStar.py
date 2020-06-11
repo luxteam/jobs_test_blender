@@ -44,7 +44,7 @@ def set_geometric_normal_aov(name):
 	bpy.context.scene.node_tree.links.new(render_layer.outputs['Image'], composite.inputs['Image'])
 	file_output.base_path = os.path.join(WORK_DIR, 'Color')
 	file_output.file_slots.new(name)
-	view_layer.rpr.enable_aovs[6] = True
+	view_layer.rpr.enable_aovs[7] = True
 	bpy.context.scene.node_tree.links.new(render_layer.outputs['Geometric Normal'], file_output.inputs[1])
 
 
