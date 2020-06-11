@@ -206,8 +206,7 @@
         "functions": [
             "set_value(bpy.context.scene.world.rpr.sun_sky, 'azimuth', 6.28319)",
             "set_value(bpy.context.scene.world.rpr.sun_sky, 'altitude', 1.5708)",
-            "rpr_render(case)",
-            "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'TestSunSky.blend'))"
+            "rpr_render(case)"
         ]
     },
     {
@@ -218,6 +217,7 @@
         ],
         "scene": "TestSunSky.blend",
         "functions": [
+            "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'TestSunSky.blend'))",
             "set_value(bpy.context.scene.world.rpr.sun_sky, 'resolution', '256')",
             "rpr_render(case)",
             "set_value(bpy.context.scene.world.rpr.sun_sky, 'resolution', '1024')"
