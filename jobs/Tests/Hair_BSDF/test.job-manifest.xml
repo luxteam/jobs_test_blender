@@ -3,19 +3,19 @@
 
     <outpath value="{OutputDir}"/>
 
-    <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="1200">
+    <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="1800">
         <argument>--tool "{Tool}"</argument>
         <argument>--render_device "{RenderDevice}"</argument>
         <argument>--output "{OutputDir}"</argument>
-        <argument>--testType NorthStar</argument>
+        <argument>--testType Hair_BSDF</argument>
         <argument>--pass_limit {PassLimit}</argument>
         <argument>--resolution_x {rx}</argument>
         <argument>--resolution_y {ry}</argument>
-        <argument>--res_path "{ScenesDir}/Smoke"</argument>
+        <argument>--res_path "{ScenesDir}/Materials"</argument>
         <argument>--testCases "{TestCases}"</argument>
         <argument>--SPU {SPU}</argument>
         <argument>--threshold {threshold}</argument>
-        <argument>--engine FULL2</argument>
+        <argument>--engine "{engine}"</argument>
     </execute>
 
     <execute command='python "{CWD}/Scripts/refactor_logs.py"' timeout="60">

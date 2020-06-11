@@ -454,7 +454,10 @@
 			"Denoiser ML",
 			"Pass Limit: 50"
 		],
-		"scene": "DualCpu.blend"
+		"scene": "DualCpu.blend",
+		"skip_on": [
+            ["AMD Radeon VII"]
+        ]
 	},
 	{
 		"case": "BL28_SM_029",
@@ -733,7 +736,10 @@
 		"script_info": [
 			"ML in CPU mode"
 		],
-		"scene": "DualCpu.blend"
+		"scene": "DualCpu.blend",
+		"skip_on": [
+            ["AMD Radeon VII"]
+        ]
 	},
 	{
 		"case": "BL28_SM_044",
@@ -754,7 +760,10 @@
 		"script_info": [
 			"ML in dual mode"
 		],
-		"scene": "DualCpu.blend"
+		"scene": "DualCpu.blend",
+		"skip_on": [
+            ["AMD Radeon VII"]
+        ]
 	},
 	{
 		"case": "BL28_SM_045",
