@@ -254,7 +254,7 @@
             "create_imagemap('Density', 'reflectionColor.tga')",
             "rpr_render(case)",
             "bpy.data.volumes['New_0001'].display.density = 10",
-            "delete_checker()"
+            "delete_imagemap()"
         ]
     },
     {
@@ -269,7 +269,7 @@
             "create_imagemap('Density', 'reflectionColor.png')",
             "rpr_render(case)",
             "bpy.data.volumes['New_0001'].display.density = 10",
-            "delete_checker()"
+            "delete_imagemap()"
         ]
     },
     {
@@ -611,7 +611,7 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 1",
             "create_checker_texture('Blackbody Intencity')",
             "rpr_render(case)",
-            "delete_imagemap()",
+            "delete_checker()",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 0",
             "bpy.data.volumes['New_0001'].display.density = 10"
         ]
@@ -628,7 +628,7 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 1",
             "create_checker_texture('Blackbody Tint')",
             "rpr_render(case)",
-            "delete_imagemap()",
+            "delete_checker()",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Blackbody Intencity'].default_value = 0",
             "bpy.data.volumes['New_0001'].display.density = 10"
         ]
