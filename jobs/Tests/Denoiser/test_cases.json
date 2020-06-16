@@ -18,7 +18,7 @@
     },
     {
         "case": "BL28_RS_DEN_002",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -52,7 +52,7 @@
     },
     {
         "case": "BL28_RS_DEN_004",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -67,7 +67,7 @@
     },
     {
         "case": "BL28_RS_DEN_005",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -84,7 +84,7 @@
     },
     {
         "case": "BL28_RS_DEN_006",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -101,7 +101,7 @@
     },
     {
         "case": "BL28_RS_DEN_007",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -118,7 +118,7 @@
     },
     {
         "case": "BL28_RS_DEN_008",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -135,7 +135,7 @@
     },
     {
         "case": "BL28_RS_DEN_009",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -152,7 +152,7 @@
     },
     {
         "case": "BL28_RS_DEN_010",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -232,7 +232,7 @@
     },
     {
         "case": "BL28_RS_DEN_014",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -247,7 +247,7 @@
     },
     {
         "case": "BL28_RS_DEN_015",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -264,7 +264,7 @@
     },
     {
         "case": "BL28_RS_DEN_016",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -281,7 +281,7 @@
     },
     {
         "case": "BL28_RS_DEN_017",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -298,7 +298,7 @@
     },
     {
         "case": "BL28_RS_DEN_018",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -315,7 +315,7 @@
     },
     {
         "case": "BL28_RS_DEN_019",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -332,7 +332,7 @@
     },
     {
         "case": "BL28_RS_DEN_020",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -349,7 +349,7 @@
     },
     {
         "case": "BL28_RS_DEN_021",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -366,7 +366,7 @@
     },
     {
         "case": "BL28_RS_DEN_022",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -517,7 +517,7 @@
     },
     {
         "case": "BL28_RS_DEN_030",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -534,7 +534,7 @@
     },
     {
         "case": "BL28_RS_DEN_031",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -551,7 +551,7 @@
     },
     {
         "case": "BL28_RS_DEN_032",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -587,7 +587,7 @@
     },
     {
         "case": "BL28_RS_DEN_034",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -604,7 +604,7 @@
     },
     {
         "case": "BL28_RS_DEN_035",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -621,7 +621,7 @@
     },
     {
         "case": "BL28_RS_DEN_036",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -638,7 +638,7 @@
     },
     {
         "case": "BL28_RS_DEN_037",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -655,7 +655,7 @@
     },
     {
         "case": "BL28_RS_DEN_038",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -1033,7 +1033,7 @@
     },
     {
         "case": "BL28_RS_DEN_056",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -1050,7 +1050,7 @@
     },
     {
         "case": "BL28_RS_DEN_057",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -1070,7 +1070,7 @@
     },
     {
         "case": "BL28_RS_DEN_058",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -1088,7 +1088,7 @@
     },
     {
         "case": "BL28_RS_DEN_059",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -1103,7 +1103,7 @@
     },
     {
         "case": "BL28_RS_DEN_060",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",

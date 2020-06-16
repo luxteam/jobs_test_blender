@@ -57,7 +57,7 @@
     },
     {
         "case": "BL28_RS_CAM_005",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
@@ -74,7 +74,7 @@
     },
     {
         "case": "BL28_RS_CAM_006",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
@@ -91,7 +91,7 @@
     },
     {
         "case": "BL28_RS_CAM_007",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
@@ -142,7 +142,7 @@
     },
     {
         "case": "BL28_RS_CAM_010",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
@@ -159,7 +159,7 @@
     },
     {
         "case": "BL28_RS_CAM_011",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
@@ -176,7 +176,7 @@
     },
     {
         "case": "BL28_RS_CAM_012",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
@@ -325,7 +325,7 @@
     },
     {
         "case": "BL28_RS_CAM_021",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'clip_start', 7.4)",
@@ -342,7 +342,7 @@
     },
     {
         "case": "BL28_RS_CAM_022",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'clip_start', 8)",
@@ -359,7 +359,7 @@
     },
     {
         "case": "BL28_RS_CAM_023",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'clip_start', 9.5)",
@@ -399,7 +399,7 @@
     },
     {
         "case": "BL28_RS_CAM_025",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
@@ -419,7 +419,7 @@
     },
     {
         "case": "BL28_RS_CAM_026",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
@@ -476,7 +476,7 @@
     },
     {
         "case": "BL28_RS_CAM_029",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
@@ -493,7 +493,7 @@
     },
     {
         "case": "BL28_RS_CAM_030",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
@@ -527,7 +527,7 @@
     },
     {
         "case": "BL28_RS_CAM_032",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
@@ -578,7 +578,7 @@
     },
     {
         "case": "BL28_RS_CAM_035",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
@@ -614,7 +614,7 @@
     },
     {
         "case": "BL28_RS_CAM_037",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -652,7 +652,7 @@
     },
     {
         "case": "BL28_RS_CAM_039",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -690,7 +690,7 @@
     },
     {
         "case": "BL28_RS_CAM_041",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -709,7 +709,7 @@
     },
     {
         "case": "BL28_RS_CAM_042",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -728,7 +728,7 @@
     },
     {
         "case": "BL28_RS_CAM_043",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -747,7 +747,7 @@
     },
     {
         "case": "BL28_RS_CAM_044",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -766,7 +766,7 @@
     },
     {
         "case": "BL28_RS_CAM_045",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -785,7 +785,7 @@
     },
     {
         "case": "BL28_RS_CAM_046",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -804,7 +804,7 @@
     },
     {
         "case": "BL28_RS_CAM_047",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -823,7 +823,7 @@
     },
     {
         "case": "BL28_RS_CAM_048",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -842,7 +842,7 @@
     },
     {
         "case": "BL28_RS_CAM_049",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -880,7 +880,7 @@
     },
     {
         "case": "BL28_RS_CAM_051",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -962,7 +962,7 @@
     },
     {
         "case": "BL28_RS_CAM_067",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "rpr_render(case)",
@@ -975,7 +975,7 @@
     },
     {
         "case": "BL28_RS_CAM_068",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'ORTHO')",
             "rpr_render(case)",
@@ -988,7 +988,7 @@
     },
     {
         "case": "BL28_RS_CAM_069",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PANO')",
             "rpr_render(case)",
@@ -1001,7 +1001,7 @@
     },
     {
         "case": "BL28_RS_CAM_070",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
@@ -1035,7 +1035,7 @@
     },
     {
         "case": "BL28_RS_CAM_072",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
@@ -1069,7 +1069,7 @@
     },
     {
         "case": "BL28_RS_CAM_074",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
@@ -1086,7 +1086,7 @@
     },
     {
         "case": "BL28_RS_CAM_075",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
@@ -1103,7 +1103,7 @@
     },
     {
         "case": "BL28_RS_CAM_076",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
@@ -1120,7 +1120,7 @@
     },
     {
         "case": "BL28_RS_CAM_077",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
@@ -1137,7 +1137,7 @@
     },
     {
         "case": "BL28_RS_CAM_078",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
@@ -1154,7 +1154,7 @@
     },
     {
         "case": "BL28_RS_CAM_079",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
@@ -1171,7 +1171,7 @@
     },
     {
         "case": "BL28_RS_CAM_080",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'shift_x', 0.1)",
@@ -1187,7 +1187,7 @@
     },
     {
         "case": "BL28_RS_CAM_081",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'shift_x', -0.1)",
@@ -1203,7 +1203,7 @@
     },
     {
         "case": "BL28_RS_CAM_082",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'shift_x', 0)",
@@ -1219,7 +1219,7 @@
     },
     {
         "case": "BL28_RS_CAM_083",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'shift_x', 0)",
@@ -1235,7 +1235,7 @@
     },
     {
         "case": "BL28_RS_CAM_084",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'clip_start', 1)",
@@ -1252,7 +1252,7 @@
     },
     {
         "case": "BL28_RS_CAM_085",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'clip_start', 1)",
@@ -1269,7 +1269,7 @@
     },
     {
         "case": "BL28_RS_CAM_086",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'clip_start', 1)",
@@ -1286,7 +1286,7 @@
     },
     {
         "case": "BL28_RS_CAM_087",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'clip_start', 10)",
@@ -1303,7 +1303,7 @@
     },
     {
         "case": "BL28_RS_CAM_088",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'clip_start', 15)",
@@ -1320,7 +1320,7 @@
     },
     {
         "case": "BL28_RS_CAM_089",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'clip_start', 21)",
@@ -1337,7 +1337,7 @@
     },
     {
         "case": "BL28_RS_CAM_090",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
@@ -1357,7 +1357,7 @@
     },
     {
         "case": "BL28_RS_CAM_091",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
@@ -1377,7 +1377,7 @@
     },
     {
         "case": "BL28_RS_CAM_092",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
@@ -1397,7 +1397,7 @@
     },
     {
         "case": "BL28_RS_CAM_093",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
@@ -1417,7 +1417,7 @@
     },
     {
         "case": "BL28_RS_CAM_094",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
@@ -1434,7 +1434,7 @@
     },
     {
         "case": "BL28_RS_CAM_095",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
@@ -1451,7 +1451,7 @@
     },
     {
         "case": "BL28_RS_CAM_096",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
@@ -1468,7 +1468,7 @@
     },
     {
         "case": "BL28_RS_CAM_097",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
@@ -1485,7 +1485,7 @@
     },
     {
         "case": "BL28_RS_CAM_098",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
@@ -1502,7 +1502,7 @@
     },
     {
         "case": "BL28_RS_CAM_099",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
@@ -1519,7 +1519,7 @@
     },
     {
         "case": "BL28_RS_CAM_100",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
@@ -1536,7 +1536,7 @@
     },
     {
         "case": "BL28_RS_CAM_101",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
@@ -1553,7 +1553,7 @@
     },
     {
         "case": "BL28_RS_CAM_102",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -1572,7 +1572,7 @@
     },
     {
         "case": "BL28_RS_CAM_103",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -1591,7 +1591,7 @@
     },
     {
         "case": "BL28_RS_CAM_104",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -1610,7 +1610,7 @@
     },
     {
         "case": "BL28_RS_CAM_105",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -1629,7 +1629,7 @@
     },
     {
         "case": "BL28_RS_CAM_106",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -1648,7 +1648,7 @@
     },
     {
         "case": "BL28_RS_CAM_107",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -1667,7 +1667,7 @@
     },
     {
         "case": "BL28_RS_CAM_108",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -1686,7 +1686,7 @@
     },
     {
         "case": "BL28_RS_CAM_109",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -1705,7 +1705,7 @@
     },
     {
         "case": "BL28_RS_CAM_110",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -1724,7 +1724,7 @@
     },
     {
         "case": "BL28_RS_CAM_111",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -1743,7 +1743,7 @@
     },
     {
         "case": "BL28_RS_CAM_112",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -1762,7 +1762,7 @@
     },
     {
         "case": "BL28_RS_CAM_113",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -1781,7 +1781,7 @@
     },
     {
         "case": "BL28_RS_CAM_114",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -1800,7 +1800,7 @@
     },
     {
         "case": "BL28_RS_CAM_115",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -1819,7 +1819,7 @@
     },
     {
         "case": "BL28_RS_CAM_116",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -1838,7 +1838,7 @@
     },
     {
         "case": "BL28_RS_CAM_117",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -1857,7 +1857,7 @@
     },
     {
         "case": "BL28_RS_CAM_118",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -1878,7 +1878,7 @@
     },
     {
         "case": "BL28_RS_CAM_119",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -1899,7 +1899,7 @@
     },
     {
         "case": "BL28_RS_CAM_120",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -1920,7 +1920,7 @@
     },
     {
         "case": "BL28_RS_CAM_133",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "rpr_render(case)",
@@ -1933,7 +1933,7 @@
     },
     {
         "case": "BL28_RS_CAM_134",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'ORTHO')",
             "rpr_render(case)",
@@ -1946,7 +1946,7 @@
     },
     {
         "case": "BL28_RS_CAM_135",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PANO')",
             "rpr_render(case)",
@@ -1959,7 +1959,7 @@
     },
     {
         "case": "BL28_RS_CAM_136",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
@@ -1976,7 +1976,7 @@
     },
     {
         "case": "BL28_RS_CAM_137",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
@@ -1993,7 +1993,7 @@
     },
     {
         "case": "BL28_RS_CAM_138",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
@@ -2010,7 +2010,7 @@
     },
     {
         "case": "BL28_RS_CAM_139",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
@@ -2027,7 +2027,7 @@
     },
     {
         "case": "BL28_RS_CAM_140",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'MILLIMETERS')",
@@ -2044,7 +2044,7 @@
     },
     {
         "case": "BL28_RS_CAM_141",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
@@ -2061,7 +2061,7 @@
     },
     {
         "case": "BL28_RS_CAM_142",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
@@ -2078,7 +2078,7 @@
     },
     {
         "case": "BL28_RS_CAM_143",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
@@ -2095,7 +2095,7 @@
     },
     {
         "case": "BL28_RS_CAM_144",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
@@ -2112,7 +2112,7 @@
     },
     {
         "case": "BL28_RS_CAM_145",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'lens_unit', 'FOV')",
@@ -2129,7 +2129,7 @@
     },
     {
         "case": "BL28_RS_CAM_146",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'shift_x', 0.1)",
@@ -2145,7 +2145,7 @@
     },
     {
         "case": "BL28_RS_CAM_147",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'shift_x', -0.1)",
@@ -2161,7 +2161,7 @@
     },
     {
         "case": "BL28_RS_CAM_148",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'shift_x', 0)",
@@ -2177,7 +2177,7 @@
     },
     {
         "case": "BL28_RS_CAM_149",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'shift_x', 0)",
@@ -2193,7 +2193,7 @@
     },
     {
         "case": "BL28_RS_CAM_150",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'clip_start', 1)",
@@ -2210,7 +2210,7 @@
     },
     {
         "case": "BL28_RS_CAM_151",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'clip_start', 1)",
@@ -2227,7 +2227,7 @@
     },
     {
         "case": "BL28_RS_CAM_152",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'clip_start', 1)",
@@ -2244,7 +2244,7 @@
     },
     {
         "case": "BL28_RS_CAM_153",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'clip_start', 7.4)",
@@ -2261,7 +2261,7 @@
     },
     {
         "case": "BL28_RS_CAM_154",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'clip_start', 8)",
@@ -2278,7 +2278,7 @@
     },
     {
         "case": "BL28_RS_CAM_155",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'clip_start', 9.5)",
@@ -2298,7 +2298,7 @@
     },
     {
         "case": "BL28_RS_CAM_156",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
@@ -2318,7 +2318,7 @@
     },
     {
         "case": "BL28_RS_CAM_157",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
@@ -2338,7 +2338,7 @@
     },
     {
         "case": "BL28_RS_CAM_158",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
@@ -2358,7 +2358,7 @@
     },
     {
         "case": "BL28_RS_CAM_159",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'AUTO')",
@@ -2378,7 +2378,7 @@
     },
     {
         "case": "BL28_RS_CAM_160",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
@@ -2395,7 +2395,7 @@
     },
     {
         "case": "BL28_RS_CAM_161",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
@@ -2412,7 +2412,7 @@
     },
     {
         "case": "BL28_RS_CAM_162",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
@@ -2429,7 +2429,7 @@
     },
     {
         "case": "BL28_RS_CAM_163",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'HORIZONTAL')",
@@ -2446,7 +2446,7 @@
     },
     {
         "case": "BL28_RS_CAM_164",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
@@ -2463,7 +2463,7 @@
     },
     {
         "case": "BL28_RS_CAM_165",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
@@ -2480,7 +2480,7 @@
     },
     {
         "case": "BL28_RS_CAM_166",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
@@ -2497,7 +2497,7 @@
     },
     {
         "case": "BL28_RS_CAM_167",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data, 'sensor_fit', 'VERTICAL')",
@@ -2514,7 +2514,7 @@
     },
     {
         "case": "BL28_RS_CAM_168",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -2533,7 +2533,7 @@
     },
     {
         "case": "BL28_RS_CAM_169",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -2552,7 +2552,7 @@
     },
     {
         "case": "BL28_RS_CAM_170",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -2571,7 +2571,7 @@
     },
     {
         "case": "BL28_RS_CAM_171",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -2590,7 +2590,7 @@
     },
     {
         "case": "BL28_RS_CAM_172",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -2609,7 +2609,7 @@
     },
     {
         "case": "BL28_RS_CAM_173",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -2628,7 +2628,7 @@
     },
     {
         "case": "BL28_RS_CAM_174",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -2647,7 +2647,7 @@
     },
     {
         "case": "BL28_RS_CAM_175",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -2666,7 +2666,7 @@
     },
     {
         "case": "BL28_RS_CAM_176",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -2685,7 +2685,7 @@
     },
     {
         "case": "BL28_RS_CAM_177",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -2704,7 +2704,7 @@
     },
     {
         "case": "BL28_RS_CAM_178",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -2723,7 +2723,7 @@
     },
     {
         "case": "BL28_RS_CAM_179",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -2742,7 +2742,7 @@
     },
     {
         "case": "BL28_RS_CAM_180",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -2761,7 +2761,7 @@
     },
     {
         "case": "BL28_RS_CAM_181",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -2780,7 +2780,7 @@
     },
     {
         "case": "BL28_RS_CAM_182",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -2799,7 +2799,7 @@
     },
     {
         "case": "BL28_RS_CAM_183",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -2818,7 +2818,7 @@
     },
     {
         "case": "BL28_RS_CAM_184",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -2839,7 +2839,7 @@
     },
     {
         "case": "BL28_RS_CAM_185",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
@@ -2860,7 +2860,7 @@
     },
     {
         "case": "BL28_RS_CAM_186",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.object.data, 'type', 'PERSP')",
             "set_value(bpy.context.object.data.dof, 'use_dof', True)",
