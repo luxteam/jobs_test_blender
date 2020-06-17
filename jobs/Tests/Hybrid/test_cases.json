@@ -984,6 +984,7 @@
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
 		,"skip_on": [
+            ["AMD Radeon VII"],
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1003,6 +1004,7 @@
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
 		,"skip_on": [
+            ["AMD Radeon VII"],
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1022,6 +1024,7 @@
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
 		,"skip_on": [
+            ["AMD Radeon VII"],
             ["AMD Radeon RX 5700 XT"]
         ]
 	},

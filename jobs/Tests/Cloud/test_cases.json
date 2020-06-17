@@ -137,6 +137,7 @@
         "scene": "Tree_Creature.blend",
         "skip_on": [
             ["AMD Radeon VII"],
+            ["Radeon RX Vega"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
