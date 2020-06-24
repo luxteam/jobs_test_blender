@@ -231,6 +231,7 @@
         ],
         "scene": "TestSunSky.blend",
         "functions": [
+            "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'TestSunSky.blend'))",
             "set_value(bpy.context.scene.world.rpr.sun_sky, 'resolution', '1024')",
             "rpr_render(case)"
         ]
