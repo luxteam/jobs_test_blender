@@ -25,7 +25,7 @@
     },
     {
         "case": "BL28_RS_QL_003",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 2"
         ],
@@ -37,7 +37,7 @@
     },
     {
         "case": "BL28_RS_QL_004",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 5"
         ],
@@ -49,7 +49,7 @@
     },
     {
         "case": "BL28_RS_QL_005",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 10"
         ],
@@ -61,7 +61,7 @@
     },
     {
         "case": "BL28_RS_QL_006",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 15"
         ],
@@ -85,7 +85,7 @@
     },
     {
         "case": "BL28_RS_QL_008",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 30"
         ],
@@ -97,7 +97,7 @@
     },
     {
         "case": "BL28_RS_QL_009",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 40"
         ],
@@ -149,7 +149,7 @@
     },
     {
         "case": "BL28_RS_QL_013",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Diffuse - 2"
@@ -163,7 +163,7 @@
     },
     {
         "case": "BL28_RS_QL_014",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Diffuse - 5"
@@ -177,7 +177,7 @@
     },
     {
         "case": "BL28_RS_QL_015",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Diffuse - 10"
@@ -191,7 +191,7 @@
     },
     {
         "case": "BL28_RS_QL_016",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Diffuse - 15"
@@ -205,7 +205,7 @@
     },
     {
         "case": "BL28_RS_QL_017",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Diffuse - 20"
@@ -219,7 +219,7 @@
     },
     {
         "case": "BL28_RS_QL_018",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Diffuse - 30"
@@ -247,7 +247,7 @@
     },
     {
         "case": "BL28_RS_QL_020",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Diffuse - 50"
@@ -275,7 +275,7 @@
     },
     {
         "case": "BL28_RS_QL_022",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Glossy - 1"
@@ -289,7 +289,7 @@
     },
     {
         "case": "BL28_RS_QL_023",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Glossy - 2"
@@ -317,7 +317,7 @@
     },
     {
         "case": "BL28_RS_QL_025",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Glossy - 10"
@@ -331,7 +331,7 @@
     },
     {
         "case": "BL28_RS_QL_026",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Glossy - 15"
@@ -359,7 +359,7 @@
     },
     {
         "case": "BL28_RS_QL_028",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Glossy - 30"
@@ -373,7 +373,7 @@
     },
     {
         "case": "BL28_RS_QL_029",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Glossy - 40"
@@ -387,7 +387,7 @@
     },
     {
         "case": "BL28_RS_QL_030",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Glossy - 50"
@@ -429,7 +429,7 @@
     },
     {
         "case": "BL28_RS_QL_033",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Refraction - 2"
@@ -443,7 +443,7 @@
     },
     {
         "case": "BL28_RS_QL_034",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Refraction - 5"
@@ -457,7 +457,7 @@
     },
     {
         "case": "BL28_RS_QL_035",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Refraction - 10"
@@ -485,7 +485,7 @@
     },
     {
         "case": "BL28_RS_QL_037",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Refraction - 20"
@@ -499,7 +499,7 @@
     },
     {
         "case": "BL28_RS_QL_038",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Refraction - 30"
@@ -513,7 +513,7 @@
     },
     {
         "case": "BL28_RS_QL_039",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Refraction - 40"
@@ -527,7 +527,7 @@
     },
     {
         "case": "BL28_RS_QL_040",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Refraction - 50"
@@ -577,7 +577,7 @@
     },
     {
         "case": "BL28_RS_QL_043",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Glossy - 50",
@@ -595,7 +595,7 @@
     },
     {
         "case": "BL28_RS_QL_044",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Glossy - 50",
@@ -613,7 +613,7 @@
     },
     {
         "case": "BL28_RS_QL_045",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Glossy - 50",
@@ -631,7 +631,7 @@
     },
     {
         "case": "BL28_RS_QL_046",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Glossy - 50",
@@ -649,7 +649,7 @@
     },
     {
         "case": "BL28_RS_QL_047",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Glossy - 50",
@@ -667,7 +667,7 @@
     },
     {
         "case": "BL28_RS_QL_048",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Glossy - 50",
@@ -685,7 +685,7 @@
     },
     {
         "case": "BL28_RS_QL_049",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Glossy - 50",
@@ -749,7 +749,7 @@
     },
     {
         "case": "BL28_RS_QL_053",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Shadow - 2"
@@ -763,7 +763,7 @@
     },
     {
         "case": "BL28_RS_QL_054",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Shadow - 5"
@@ -777,7 +777,7 @@
     },
     {
         "case": "BL28_RS_QL_055",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Shadow - 10"
@@ -791,7 +791,7 @@
     },
     {
         "case": "BL28_RS_QL_056",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Shadow - 15"
@@ -805,7 +805,7 @@
     },
     {
         "case": "BL28_RS_QL_057",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Shadow - 20"
@@ -819,7 +819,7 @@
     },
     {
         "case": "BL28_RS_QL_058",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Shadow - 30"
@@ -833,7 +833,7 @@
     },
     {
         "case": "BL28_RS_QL_059",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Shadow - 40"
@@ -873,7 +873,7 @@
     },
     {
         "case": "BL28_RS_QL_062",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Cast Epsilon - 0.001"
         ],
@@ -909,7 +909,7 @@
     },
     {
         "case": "BL28_RS_QL_065",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Cast Epsilon - 1"
         ],
@@ -921,7 +921,7 @@
     },
     {
         "case": "BL28_RS_QL_066",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Cast Epsilon - 2"
         ],
@@ -933,7 +933,7 @@
     },
     {
         "case": "BL28_RS_QL_067",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Cast Epsilon - 5"
         ],
@@ -945,7 +945,7 @@
     },
     {
         "case": "BL28_RS_QL_068",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Cast Epsilon - 10"
         ],
@@ -957,7 +957,7 @@
     },
     {
         "case": "BL28_RS_QL_069",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Cast Epsilon - 15"
         ],
@@ -969,7 +969,7 @@
     },
     {
         "case": "BL28_RS_QL_070",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Cast Epsilon - 20"
         ],
@@ -981,7 +981,7 @@
     },
     {
         "case": "BL28_RS_QL_071",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Cast Epsilon - 30"
         ],
@@ -1005,7 +1005,7 @@
     },
     {
         "case": "BL28_RS_QL_073",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Cast Epsilon - 50"
         ],
@@ -1045,7 +1045,7 @@
     },
     {
         "case": "BL28_RS_QL_076",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Clamp Radiance - 2"
@@ -1059,7 +1059,7 @@
     },
     {
         "case": "BL28_RS_QL_077",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Clamp Radiance - 5"
@@ -1073,7 +1073,7 @@
     },
     {
         "case": "BL28_RS_QL_078",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Clamp Radiance - 10"
@@ -1087,7 +1087,7 @@
     },
     {
         "case": "BL28_RS_QL_079",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Clamp Radiance - 15"
@@ -1101,7 +1101,7 @@
     },
     {
         "case": "BL28_RS_QL_080",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Clamp Radiance - 20"
@@ -1115,7 +1115,7 @@
     },
     {
         "case": "BL28_RS_QL_081",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Clamp Radiance - 30"
@@ -1129,7 +1129,7 @@
     },
     {
         "case": "BL28_RS_QL_082",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Clamp Radiance - 40"
@@ -1143,7 +1143,7 @@
     },
     {
         "case": "BL28_RS_QL_083",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Ray Depth - 50",
             "Clamp Radiance - 50"

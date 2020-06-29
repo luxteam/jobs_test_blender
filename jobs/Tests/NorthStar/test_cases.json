@@ -362,7 +362,7 @@
 	},
 	{
 		"case": "BL28_NRT_021",
-		"status": "skipped",
+		"status": "active",
 		"functions": [
 			"set_geometric_normal_aov(case['case'])",
 			"rpr_render(case)",
