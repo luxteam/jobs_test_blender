@@ -11,7 +11,6 @@
             "rpr_render(case)"
         ],
         "skip_on": [
-            ["AMD Radeon RX Vega 56 (Metal)"],
             ["AMD Radeon VII"]
         ]
     },
@@ -27,7 +26,6 @@
             "rpr_render(case)"
         ],
         "skip_on": [
-            ["AMD Radeon RX Vega 56 (Metal)"],
             ["AMD Radeon VII"]
         ]
     },
@@ -45,7 +43,6 @@
             "bpy.data.volumes['New_0001'].display.density = 10"
         ],
         "skip_on": [
-            ["AMD Radeon RX Vega 56 (Metal)"],
             ["AMD Radeon VII"]
         ]
     },
@@ -62,7 +59,6 @@
             "bpy.data.volumes['New_0001'].display.density = 10"
         ],
         "skip_on": [
-            ["AMD Radeon RX Vega 56 (Metal)"],
             ["AMD Radeon VII"]
         ]
     },
@@ -79,7 +75,6 @@
             "bpy.data.volumes['New_0001'].display.density = 10"
         ],
         "skip_on": [
-            ["AMD Radeon RX Vega 56 (Metal)"],
             ["AMD Radeon VII"]
         ]
     },
@@ -96,7 +91,6 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)"
         ],
         "skip_on": [
-            ["AMD Radeon RX Vega 56 (Metal)"],
             ["AMD Radeon VII"]
         ]
     },
@@ -112,7 +106,6 @@
             "rpr_render(case)"
         ],
         "skip_on": [
-            ["AMD Radeon RX Vega 56 (Metal)"],
             ["AMD Radeon VII"]
         ]
     },
