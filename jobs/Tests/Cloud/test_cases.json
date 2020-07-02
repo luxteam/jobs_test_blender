@@ -8,10 +8,7 @@
         "script_info": [
             "Blender_2_81_the_junk_Shop"
         ],
-        "scene": "Blender_2_81_the_junk_Shop.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "Blender_2_81_the_junk_Shop.blend"
     },
     {
         "case": "BL28_BCS_002",
@@ -26,14 +23,11 @@
         "script_info": [
             "Blender_2_80_Spring"
         ],
-        "scene": "Blender_2_80_Spring.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "Blender_2_80_Spring.blend"
     },
     {
         "case": "BL28_BCS_003",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.scene.world.rpr, 'intensity', 0.26)",
             "set_value(bpy.context.scene.world.rpr, 'ibl.color[0]', 0.122)",
@@ -44,10 +38,7 @@
         "script_info": [
             "Blender_2_79_Agent_327"
         ],
-        "scene": "Blender_2_79_Agent_327.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "Blender_2_79_Agent_327.blend"
     },
     {
         "case": "BL28_BCS_004",
@@ -60,14 +51,11 @@
         "script_info": [
             "Blender_2_78_Procedural"
         ],
-        "scene": "Blender_2_78_Procedural.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "Blender_2_78_Procedural.blend"
     },
     {
         "case": "BL28_BCS_005",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.scene.world.rpr, 'intensity', 0.3)",
             "set_value(bpy.context.scene.render, 'use_single_layer', True)",
@@ -111,10 +99,7 @@
         "script_info": [
             "Race_Spaceship"
         ],
-        "scene": "Race_Spaceship.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "Race_Spaceship.blend"
     },
     {
         "case": "BL28_BCS_008",
@@ -129,8 +114,7 @@
         ],
         "scene": "Tree_Creature.blend",
         "skip_on": [
-            ["Radeon RX Vega"],
-            ["GeForce GTX 1080 Ti"]
+            ["Radeon RX Vega"]
         ]
     },
     {
@@ -144,10 +128,7 @@
         "script_info": [
             "Temple"
         ],
-        "scene": "Temple.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "Temple.blend"
     },
     {
         "case": "BL28_BCS_010",
@@ -162,10 +143,7 @@
         "script_info": [
             "Wanderer"
         ],
-        "scene": "Wanderer.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "Wanderer.blend"
     },
     {
         "case": "BL28_BCS_011",
@@ -178,10 +156,7 @@
         "script_info": [
             "Ember_Forest"
         ],
-        "scene": "Ember_Forest.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "Ember_Forest.blend"
     },
     {
         "case": "BL28_BCS_012",
@@ -196,10 +171,7 @@
         "script_info": [
             "Wasp_Bot"
         ],
-        "scene": "Wasp_Bot.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "Wasp_Bot.blend"
     },
     {
         "case": "BL28_BCS_013",
@@ -212,10 +184,7 @@
         "script_info": [
             "Mr_Elephant"
         ],
-        "scene": "Mr_Elephant.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "Mr_Elephant.blend"
     },
     {
         "case": "BL28_BCS_014",
@@ -226,10 +195,7 @@
         "script_info": [
             "Architectural_Visualization_RPR"
         ],
-        "scene": "Architectural_Visualization_RPR.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "Architectural_Visualization_RPR.blend"
     },
     {
         "case": "BL28_BCS_015",
@@ -240,14 +206,11 @@
         "script_info": [
             "Agent_327_Barbershop"
         ],
-        "scene": "Agent_327_Barbershop.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "Agent_327_Barbershop.blend"
     },
     {
         "case": "BL28_BCS_016",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.scene.world.rpr, 'intensity', 2)",
             "set_value(bpy.context.scene.world.rpr.ibl, 'image', bpy.data.images['env_island.exr'])",
@@ -257,10 +220,7 @@
         "script_info": [
             "Cosmos_Laudromat_Demo"
         ],
-        "scene": "Cosmos_Laudromat_Demo.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "Cosmos_Laudromat_Demo.blend"
     },
     {
         "case": "BL28_BCS_017",
@@ -275,10 +235,7 @@
         "script_info": [
             "Car_Demo"
         ],
-        "scene": "Car_Demo.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "Car_Demo.blend"
     },
     {
         "case": "BL28_BCS_018",
@@ -293,10 +250,7 @@
         "script_info": [
             "classroom"
         ],
-        "scene": "classroom.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "classroom.blend"
     },
     {
         "case": "BL28_BCS_019",
@@ -312,10 +266,7 @@
         "script_info": [
             "Barcelona_Pavillion"
         ],
-        "scene": "Barcelona_Pavillion.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "Barcelona_Pavillion.blend"
     },
     {
         "case": "BL28_BCS_020",
@@ -326,10 +277,7 @@
         "script_info": [
             "Car_Viewport"
         ],
-        "scene": "Car_Viewport.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "Car_Viewport.blend"
     },
     {
         "case": "BL28_BCS_021",
@@ -340,10 +288,7 @@
         "script_info": [
             "stylized_levi"
         ],
-        "scene": "stylized_levi.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "stylized_levi.blend"
     },
     {
         "case": "BL28_BCS_022",
@@ -356,10 +301,7 @@
         "script_info": [
             "bmps_27"
         ],
-        "scene": "bmps_27.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "bmps_27.blend"
     },
     {
         "case": "BL28_BCS_023",
@@ -372,10 +314,7 @@
         "script_info": [
             "Ring_27"
         ],
-        "scene": "Ring_27.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "Ring_27.blend"
     },
     {
         "case": "BL28_BCS_024",
@@ -390,10 +329,7 @@
         "script_info": [
             "scene_Helicopter_27"
         ],
-        "scene": "scene_Helicopter_27.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "scene_Helicopter_27.blend"
     },
     {
         "case": "BL28_BCS_025",
@@ -408,10 +344,7 @@
         "script_info": [
             "TeeglasFX_27"
         ],
-        "scene": "TeeglasFX_27.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "TeeglasFX_27.blend"
     },
     {
         "case": "BL28_BCS_026",
@@ -424,10 +357,7 @@
         "script_info": [
             "volume_emission_27"
         ],
-        "scene": "volume_emission_27.blend",
-        "skip_on": [
-            ["AMD Radeon (TM) Pro WX 7100 Graphics"]
-        ]
+        "scene": "volume_emission_27.blend"
     },
     {
         "case": "BL28_BCS_027",
@@ -438,10 +368,7 @@
         "script_info": [
             "Tram_Station"
         ],
-        "scene": "Tram_Station.blend",
-        "skip_on": [
-            ["AMD Radeon (TM) Pro WX 7100 Graphics"]
-        ]
+        "scene": "Tram_Station.blend"
     },
     {
         "case": "BL28_BCS_028",
@@ -457,10 +384,7 @@
         "script_info": [
             "Blender_2_83"
         ],
-        "scene": "Blender_2_83.blend",
-        "skip_on": [
-            ["AMD Radeon (TM) Pro WX 7100 Graphics"]
-        ]
+        "scene": "Blender_2_83.blend"
     },
     {
         "case": "BL28_BCS_029",
@@ -474,10 +398,7 @@
         "script_info": [
             "ForYou_2014"
         ],
-        "scene": "ForYou_2014.blend",
-        "skip_on": [
-            ["AMD Radeon (TM) Pro WX 7100 Graphics"]
-        ]
+        "scene": "ForYou_2014.blend"
     },
     {
         "case": "BL28_BCS_030",
@@ -489,10 +410,7 @@
         "script_info": [
             "color_vortex"
         ],
-        "scene": "color_vortex.blend",
-        "skip_on": [
-            ["AMD Radeon (TM) Pro WX 7100 Graphics"]
-        ]
+        "scene": "color_vortex.blend"
     },
     {
         "case": "BL28_BCS_031",
@@ -503,10 +421,7 @@
         "script_info": [
             "greasepencil-bike"
         ],
-        "scene": "greasepencil-bike.blend",
-        "skip_on": [
-            ["AMD Radeon (TM) Pro WX 7100 Graphics"]
-        ]
+        "scene": "greasepencil-bike.blend"
     },
     {
         "case": "BL28_BCS_032",
@@ -521,10 +436,7 @@
         "script_info": [
             "cloth_inner_springs"
         ],
-        "scene": "cloth_inner_springs.blend",
-        "skip_on": [
-            ["AMD Radeon (TM) Pro WX 7100 Graphics"]
-        ]
+        "scene": "cloth_inner_springs.blend"
     },
     {
         "case": "BL28_BCS_033",
@@ -535,10 +447,7 @@
         "script_info": [
             "cloth_internal_air_pressure"
         ],
-        "scene": "cloth_internal_air_pressure.blend",
-        "skip_on": [
-            ["AMD Radeon (TM) Pro WX 7100 Graphics"]
-        ]
+        "scene": "cloth_internal_air_pressure.blend"
     },
     {
         "case": "BL28_BCS_034",
@@ -553,9 +462,6 @@
         "script_info": [
             "hair_comb"
         ],
-        "scene": "hair_comb.blend",
-        "skip_on": [
-            ["GeForce GTX 1080 Ti"]
-        ]
+        "scene": "hair_comb.blend"
     }
 ]
