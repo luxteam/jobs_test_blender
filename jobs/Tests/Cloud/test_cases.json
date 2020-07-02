@@ -10,7 +10,6 @@
         ],
         "scene": "Blender_2_81_the_junk_Shop.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -29,7 +28,6 @@
         ],
         "scene": "Blender_2_80_Spring.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -48,7 +46,6 @@
         ],
         "scene": "Blender_2_79_Agent_327.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -65,7 +62,6 @@
         ],
         "scene": "Blender_2_78_Procedural.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -83,7 +79,6 @@
         ],
         "scene": "Blender_2_77_Racing_Car.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -98,7 +93,6 @@
         ],
         "scene": "Blender_2_74_Fishy_Cat.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -119,7 +113,6 @@
         ],
         "scene": "Race_Spaceship.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -136,7 +129,6 @@
         ],
         "scene": "Tree_Creature.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["Radeon RX Vega"],
             ["GeForce GTX 1080 Ti"]
         ]
@@ -154,7 +146,6 @@
         ],
         "scene": "Temple.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -173,7 +164,6 @@
         ],
         "scene": "Wanderer.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -190,7 +180,6 @@
         ],
         "scene": "Ember_Forest.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -209,7 +198,6 @@
         ],
         "scene": "Wasp_Bot.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -226,7 +214,6 @@
         ],
         "scene": "Mr_Elephant.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -241,7 +228,6 @@
         ],
         "scene": "Architectural_Visualization_RPR.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -256,13 +242,12 @@
         ],
         "scene": "Agent_327_Barbershop.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
     {
         "case": "BL28_BCS_016",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "set_value(bpy.context.scene.world.rpr, 'intensity', 2)",
             "set_value(bpy.context.scene.world.rpr.ibl, 'image', bpy.data.images['env_island.exr'])",
@@ -274,7 +259,6 @@
         ],
         "scene": "Cosmos_Laudromat_Demo.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -293,7 +277,6 @@
         ],
         "scene": "Car_Demo.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -312,7 +295,6 @@
         ],
         "scene": "classroom.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -332,7 +314,6 @@
         ],
         "scene": "Barcelona_Pavillion.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -347,7 +328,6 @@
         ],
         "scene": "Car_Viewport.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -362,7 +342,6 @@
         ],
         "scene": "stylized_levi.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -379,7 +358,6 @@
         ],
         "scene": "bmps_27.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -396,7 +374,6 @@
         ],
         "scene": "Ring_27.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -415,7 +392,6 @@
         ],
         "scene": "scene_Helicopter_27.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -434,7 +410,6 @@
         ],
         "scene": "TeeglasFX_27.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -451,7 +426,6 @@
         ],
         "scene": "volume_emission_27.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["AMD Radeon (TM) Pro WX 7100 Graphics"]
         ]
     },
@@ -466,7 +440,6 @@
         ],
         "scene": "Tram_Station.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["AMD Radeon (TM) Pro WX 7100 Graphics"]
         ]
     },
@@ -486,7 +459,6 @@
         ],
         "scene": "Blender_2_83.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["AMD Radeon (TM) Pro WX 7100 Graphics"]
         ]
     },
@@ -504,7 +476,6 @@
         ],
         "scene": "ForYou_2014.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["AMD Radeon (TM) Pro WX 7100 Graphics"]
         ]
     },
@@ -520,7 +491,6 @@
         ],
         "scene": "color_vortex.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["AMD Radeon (TM) Pro WX 7100 Graphics"]
         ]
     },
@@ -535,7 +505,6 @@
         ],
         "scene": "greasepencil-bike.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["AMD Radeon (TM) Pro WX 7100 Graphics"]
         ]
     },
@@ -554,7 +523,6 @@
         ],
         "scene": "cloth_inner_springs.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["AMD Radeon (TM) Pro WX 7100 Graphics"]
         ]
     },
@@ -569,7 +537,6 @@
         ],
         "scene": "cloth_internal_air_pressure.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["AMD Radeon (TM) Pro WX 7100 Graphics"]
         ]
     },
@@ -588,7 +555,6 @@
         ],
         "scene": "hair_comb.blend",
         "skip_on": [
-            ["AMD Radeon VII"],
             ["GeForce GTX 1080 Ti"]
         ]
     }
