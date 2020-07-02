@@ -241,7 +241,7 @@
     },
     {
         "case": "BL28_RS_IS_016",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Resolution: 3000x3000"
         ],

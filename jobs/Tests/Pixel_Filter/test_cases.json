@@ -14,20 +14,6 @@
         ]
     },
     {
-        "case": "BL28_RS_PF_002",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Mitchell",
-            "Radius: 1"
-        ],
-        "scene": "Ease_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'MITCHELL')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1)",
-            "rpr_render(case)"
-        ]
-    },
-    {
         "case": "BL28_RS_PF_003",
         "status": "active",
         "script_info": [
@@ -38,20 +24,6 @@
         "functions": [
             "set_value(bpy.context.scene.rpr, 'pixel_filter', 'MITCHELL')",
             "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1.5)",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_PF_004",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Mitchell",
-            "Radius: 5"
-        ],
-        "scene": "Ease_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'MITCHELL')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 5)",
             "rpr_render(case)"
         ]
     },
@@ -98,20 +70,6 @@
         ]
     },
     {
-        "case": "BL28_RS_PF_008",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Triangle",
-            "Radius: 1.5"
-        ],
-        "scene": "Ease_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'TRIANGLE')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1.5)",
-            "rpr_render(case)"
-        ]
-    },
-    {
         "case": "BL28_RS_PF_009",
         "status": "active",
         "script_info": [
@@ -122,20 +80,6 @@
         "functions": [
             "set_value(bpy.context.scene.rpr, 'pixel_filter', 'TRIANGLE')",
             "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1.5)",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_PF_010",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Triangle",
-            "Radius: 10"
-        ],
-        "scene": "Ease_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'TRIANGLE')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 10)",
             "rpr_render(case)"
         ]
     },
@@ -168,34 +112,6 @@
         ]
     },
     {
-        "case": "BL28_RS_PF_013",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Lanczos",
-            "Radius: 1.5"
-        ],
-        "scene": "Ease_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'LANCZOS')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1.5)",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_PF_014",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Lanczos",
-            "Radius: 5"
-        ],
-        "scene": "Ease_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'LANCZOS')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 5)",
-            "rpr_render(case)"
-        ]
-    },
-    {
         "case": "BL28_RS_PF_015",
         "status": "active",
         "script_info": [
@@ -224,20 +140,6 @@
         ]
     },
     {
-        "case": "BL28_RS_PF_017",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Gaussian",
-            "Radius: 1"
-        ],
-        "scene": "Ease_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'GAUSSIAN')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1)",
-            "rpr_render(case)"
-        ]
-    },
-    {
         "case": "BL28_RS_PF_018",
         "status": "active",
         "script_info": [
@@ -248,20 +150,6 @@
         "functions": [
             "set_value(bpy.context.scene.rpr, 'pixel_filter', 'GAUSSIAN')",
             "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1.5)",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_PF_019",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Gaussian",
-            "Radius: 5"
-        ],
-        "scene": "Ease_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'GAUSSIAN')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 5)",
             "rpr_render(case)"
         ]
     },
@@ -294,20 +182,6 @@
         ]
     },
     {
-        "case": "BL28_RS_PF_022",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Box",
-            "Radius: 1"
-        ],
-        "scene": "Ease_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'BOX')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1)",
-            "rpr_render(case)"
-        ]
-    },
-    {
         "case": "BL28_RS_PF_023",
         "status": "active",
         "script_info": [
@@ -318,20 +192,6 @@
         "functions": [
             "set_value(bpy.context.scene.rpr, 'pixel_filter', 'BOX')",
             "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1.5)",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_PF_024",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Box",
-            "Radius: 5"
-        ],
-        "scene": "Ease_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'BOX')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 5)",
             "rpr_render(case)"
         ]
     },
@@ -364,20 +224,6 @@
         ]
     },
     {
-        "case": "BL28_RS_PF_027",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Blackmanharris",
-            "Radius: 1"
-        ],
-        "scene": "Ease_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'BLACKMANHARRIS')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1)",
-            "rpr_render(case)"
-        ]
-    },
-    {
         "case": "BL28_RS_PF_028",
         "status": "active",
         "script_info": [
@@ -388,20 +234,6 @@
         "functions": [
             "set_value(bpy.context.scene.rpr, 'pixel_filter', 'BLACKMANHARRIS')",
             "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1.5)",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_PF_029",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Blackmanharris",
-            "Radius: 5"
-        ],
-        "scene": "Ease_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'BLACKMANHARRIS')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 5)",
             "rpr_render(case)"
         ]
     },
@@ -434,20 +266,6 @@
         ]
     },
     {
-        "case": "BL28_RS_PF_032",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Mitchell",
-            "Radius: 1"
-        ],
-        "scene": "Hard_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'MITCHELL')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1)",
-            "rpr_render(case)"
-        ]
-    },
-    {
         "case": "BL28_RS_PF_033",
         "status": "active",
         "script_info": [
@@ -458,20 +276,6 @@
         "functions": [
             "set_value(bpy.context.scene.rpr, 'pixel_filter', 'MITCHELL')",
             "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1.5)",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_PF_034",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Mitchell",
-            "Radius: 5"
-        ],
-        "scene": "Hard_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'MITCHELL')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 5)",
             "rpr_render(case)"
         ]
     },
@@ -504,20 +308,6 @@
         ]
     },
     {
-        "case": "BL28_RS_PF_037",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Triangle",
-            "Radius: 1"
-        ],
-        "scene": "Hard_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'TRIANGLE')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1)",
-            "rpr_render(case)"
-        ]
-    },
-    {
         "case": "BL28_RS_PF_038",
         "status": "active",
         "script_info": [
@@ -528,20 +318,6 @@
         "functions": [
             "set_value(bpy.context.scene.rpr, 'pixel_filter', 'TRIANGLE')",
             "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1.5)",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_PF_039",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Triangle",
-            "Radius: 5"
-        ],
-        "scene": "Hard_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'TRIANGLE')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 5)",
             "rpr_render(case)"
         ]
     },
@@ -574,20 +350,6 @@
         ]
     },
     {
-        "case": "BL28_RS_PF_042",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Lanczos",
-            "Radius: 1"
-        ],
-        "scene": "Hard_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'LANCZOS')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1)",
-            "rpr_render(case)"
-        ]
-    },
-    {
         "case": "BL28_RS_PF_043",
         "status": "active",
         "script_info": [
@@ -598,20 +360,6 @@
         "functions": [
             "set_value(bpy.context.scene.rpr, 'pixel_filter', 'LANCZOS')",
             "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1.5)",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_PF_044",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Lanczos",
-            "Radius: 5"
-        ],
-        "scene": "Hard_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'LANCZOS')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 5)",
             "rpr_render(case)"
         ]
     },
@@ -644,20 +392,6 @@
         ]
     },
     {
-        "case": "BL28_RS_PF_047",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Gaussian",
-            "Radius: 1"
-        ],
-        "scene": "Hard_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'GAUSSIAN')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1)",
-            "rpr_render(case)"
-        ]
-    },
-    {
         "case": "BL28_RS_PF_048",
         "status": "active",
         "script_info": [
@@ -668,20 +402,6 @@
         "functions": [
             "set_value(bpy.context.scene.rpr, 'pixel_filter', 'GAUSSIAN')",
             "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1.5)",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_PF_049",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Gaussian",
-            "Radius: 5"
-        ],
-        "scene": "Hard_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'GAUSSIAN')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 5)",
             "rpr_render(case)"
         ]
     },
@@ -714,20 +434,6 @@
         ]
     },
     {
-        "case": "BL28_RS_PF_052",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Box",
-            "Radius: 1"
-        ],
-        "scene": "Hard_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'BOX')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1)",
-            "rpr_render(case)"
-        ]
-    },
-    {
         "case": "BL28_RS_PF_053",
         "status": "active",
         "script_info": [
@@ -738,20 +444,6 @@
         "functions": [
             "set_value(bpy.context.scene.rpr, 'pixel_filter', 'BOX')",
             "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1.5)",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_PF_054",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Box",
-            "Radius: 5"
-        ],
-        "scene": "Hard_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'BOX')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 5)",
             "rpr_render(case)"
         ]
     },
@@ -784,20 +476,6 @@
         ]
     },
     {
-        "case": "BL28_RS_PF_057",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Blackmanharris",
-            "Radius: 1"
-        ],
-        "scene": "Hard_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'BLACKMANHARRIS')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1)",
-            "rpr_render(case)"
-        ]
-    },
-    {
         "case": "BL28_RS_PF_058",
         "status": "active",
         "script_info": [
@@ -808,20 +486,6 @@
         "functions": [
             "set_value(bpy.context.scene.rpr, 'pixel_filter', 'BLACKMANHARRIS')",
             "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1.5)",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_PF_059",
-        "status": "active",
-        "script_info": [
-            "Pixel filter: Blackmanharris",
-            "Radius: 5"
-        ],
-        "scene": "Hard_Pixel_Filters_Scene.blend",
-        "functions": [
-            "set_value(bpy.context.scene.rpr, 'pixel_filter', 'BLACKMANHARRIS')",
-            "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 5)",
             "rpr_render(case)"
         ]
     },

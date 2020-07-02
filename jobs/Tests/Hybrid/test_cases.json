@@ -984,6 +984,7 @@
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
 		,"skip_on": [
+            ["AMD Radeon VII"],
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1003,6 +1004,7 @@
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
 		,"skip_on": [
+            ["AMD Radeon VII"],
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1022,6 +1024,7 @@
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
 		,"skip_on": [
+            ["AMD Radeon VII"],
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1234,7 +1237,7 @@
 	},
 	{
 		"case": "BL28_HSM_070",
-		"status": "active",
+		"status": "skipped",
 		"functions": [
 			"set_value(scene.rpr, 'render_quality', 'LOW')",
 			"rpr_render(case)"
@@ -1249,7 +1252,7 @@
 	},
 	{
 		"case": "BL28_HSM_071",
-		"status": "active",
+		"status": "skipped",
 		"functions": [
 			"set_value(scene.rpr, 'render_quality', 'MEDIUM')",
 			"rpr_render(case)"
@@ -1264,7 +1267,7 @@
 	},
 	{
 		"case": "BL28_HSM_072",
-		"status": "active",
+		"status": "skipped",
 		"functions": [
 			"set_value(scene.rpr, 'render_quality', 'HIGH')",
 			"rpr_render(case)"
