@@ -1,7 +1,7 @@
 [
     {
         "case": "BL28_BCS_001",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "rpr_render(case)"
         ],
@@ -37,7 +37,7 @@
     },
     {
         "case": "BL28_BCS_003",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.scene.world.rpr, 'intensity', 0.26)",
             "set_value(bpy.context.scene.world.rpr, 'ibl.color[0]', 0.122)",
@@ -75,7 +75,7 @@
     },
     {
         "case": "BL28_BCS_005",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.scene.world.rpr, 'intensity', 0.3)",
             "set_value(bpy.context.scene.render, 'use_single_layer', True)",
@@ -277,7 +277,7 @@
     },
     {
         "case": "BL28_BCS_016",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "set_value(bpy.context.scene.world.rpr, 'intensity', 2)",
             "set_value(bpy.context.scene.world.rpr.ibl, 'image', bpy.data.images['env_island.exr'])",
