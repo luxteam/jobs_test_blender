@@ -1,7 +1,7 @@
 [
     {
         "case": "BL28_BCS_001",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "rpr_render(case)"
         ],
@@ -71,7 +71,7 @@
     },
     {
         "case": "BL28_BCS_005",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "set_value(bpy.context.scene.world.rpr, 'intensity', 0.3)",
             "set_value(bpy.context.scene.render, 'use_single_layer', True)",
