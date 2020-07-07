@@ -1,0 +1,16 @@
+[
+    {
+        "case": "BL28_RS_ATH_001",
+        "status": "active",
+        "functions": [
+            "set_clean_false()",
+            "rpr_render(case)",
+            "validate_athena()",
+            "set_clean_true()"
+        ],
+        "script_info": [
+            "Athena Tahoe"
+        ],
+        "scene": "medium.blend"
+    }
+]
