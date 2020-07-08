@@ -14,15 +14,12 @@ elif (platform.system() == "Darwin"):
 
 def set_clean(value):
     with open(CONFIG_PATH, 'r') as file:
-        data = file.readlines()
+        data = file.read()
 
-    for i, s in enumerate(data):
-        if("clean_athena_files = " + str(not value) in s):
-            data[i] = "clean_athena_files = " + str(value) + "\n"
-            break
+    data.replace("clean_athena_files = " + str(not value), "clean_athena_files = " + str(value))
         
     with open(CONFIG_PATH, 'w') as file:
-        file.writelines(data)
+        file.write(data)
 
 def validate_athena(case):
     athena_files = os.listdir(ATHENA_DIR)
