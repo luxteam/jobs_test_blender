@@ -12,7 +12,10 @@
         "script_info": [
             "Athena Tahoe"
         ],
-        "scene": "medium.blend"
+        "scene": "medium.blend",
+        "skip_on":[
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_RS_ATH_002",
@@ -28,7 +31,10 @@
         "script_info": [
             "Athena NorthStar"
         ],
-        "scene": "medium.blend"
+        "scene": "medium.blend",
+        "skip_on":[
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_RS_ATH_003",
@@ -44,7 +50,10 @@
         "script_info": [
             "Athena Hybrid Low"
         ],
-        "scene": "medium.blend"
+        "scene": "medium.blend",
+        "skip_on":[
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_RS_ATH_004",
@@ -60,7 +69,10 @@
         "script_info": [
             "Athena Hybrid Medium"
         ],
-        "scene": "medium.blend"
+        "scene": "medium.blend",
+        "skip_on":[
+            ["AMD Radeon VII"]
+        ]
     },
     {
         "case": "BL28_RS_ATH_005",
@@ -76,6 +88,9 @@
         "script_info": [
             "Athena Hybrid High"
         ],
-        "scene": "medium.blend"
+        "scene": "medium.blend",
+        "skip_on":[
+            ["AMD Radeon VII"]
+        ]
     }
 ]

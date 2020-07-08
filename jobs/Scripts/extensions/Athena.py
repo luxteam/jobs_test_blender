@@ -1,7 +1,11 @@
 if (sys.platform == "win32"):
     CONFIG_PATH = 'C:/Users/user/AppData/Roaming/Blender Foundation/Blender/2.83/scripts/addons/rprblender/config.py'
     ATHENA_DIR = 'C:/Users/user/AppData/Local/Temp/rprblender/'
+elif (sys.platform == "darwin"):
+    CONFIG_PATH = '/Users/user/Library/Application Support/Blender/2.83/scripts/addons/rprblender/config.py'
+    ATHENA_DIR = os.environ['TMPDIR'] + 'rprblender/'
 else:
+    #not implemented Ubuntu
     CONFIG_PATH = '/Users/user/Library/Application Support/Blender/2.83/scripts/addons/rprblender/config.py'
     ATHENA_DIR = os.environ['TMPDIR'] + 'rprblender/'
 
