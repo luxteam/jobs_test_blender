@@ -3,11 +3,11 @@
         "case": "BL28_RS_ATH_001",
         "status": "active",
         "functions": [
-            "set_clean_false()",
+            "set_clean(False)",
             "set_value(scene.rpr, 'render_quality', 'FULL')",
             "rpr_render(case)",
             "validate_athena(case)",
-            "set_clean_true()"
+            "set_clean(True)"
         ],
         "script_info": [
             "Athena Tahoe"
@@ -21,12 +21,12 @@
         "case": "BL28_RS_ATH_002",
         "status": "active",
         "functions": [
-            "set_clean_false()",
+            "set_clean(False)",
             "set_value(scene.rpr, 'render_quality', 'FULL2')",
             "rpr_render(case)",
             "validate_athena(case)",
             "set_value(scene.rpr, 'render_quality', 'FULL')",
-            "set_clean_true()"
+            "set_clean(True)"
         ],
         "script_info": [
             "Athena NorthStar"
@@ -40,12 +40,12 @@
         "case": "BL28_RS_ATH_003",
         "status": "active",
         "functions": [
-            "set_clean_false()",
+            "set_clean(False)",
             "set_value(scene.rpr, 'render_quality', 'LOW')",
             "rpr_render(case)",
             "validate_athena(case)",
             "set_value(scene.rpr, 'render_quality', 'FULL')",
-            "set_clean_true()"
+            "set_clean(True)"
         ],
         "script_info": [
             "Athena Hybrid Low"
@@ -59,12 +59,12 @@
         "case": "BL28_RS_ATH_004",
         "status": "active",
         "functions": [
-            "set_clean_false()",
+            "set_clean(False)",
             "set_value(scene.rpr, 'render_quality', 'MEDIUM')",
             "rpr_render(case)",
             "validate_athena(case)",
             "set_value(scene.rpr, 'render_quality', 'FULL')",
-            "set_clean_true()"
+            "set_clean(True)"
         ],
         "script_info": [
             "Athena Hybrid Medium"
@@ -78,12 +78,12 @@
         "case": "BL28_RS_ATH_005",
         "status": "active",
         "functions": [
-            "set_clean_false()",
+            "set_clean(False)",
             "set_value(scene.rpr, 'render_quality', 'HIGH')",
             "rpr_render(case)",
             "validate_athena(case)",
             "set_value(scene.rpr, 'render_quality', 'FULL')",
-            "set_clean_true()"
+            "set_clean(True)"
         ],
         "script_info": [
             "Athena Hybrid High"

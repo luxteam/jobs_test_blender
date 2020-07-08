@@ -1,50 +1,39 @@
-if (sys.platform == "win32"):
-    CONFIG_PATH = 'C:/Users/user/AppData/Roaming/Blender Foundation/Blender/2.83/scripts/addons/rprblender/config.py'
-    ATHENA_DIR = 'C:/Users/user/AppData/Local/Temp/rprblender/'
-elif (sys.platform == "darwin"):
-    CONFIG_PATH = '/Users/user/Library/Application Support/Blender/2.83/scripts/addons/rprblender/config.py'
+import platform
+import getpass
+
+if (platform.system() == "Windows"):
+    CONFIG_PATH = 'C:/Users/' + getpass.getuser() + '/AppData/Roaming/Blender Foundation/Blender/2.83/scripts/addons/rprblender/config.py'
+    ATHENA_DIR = 'C:/Users/' + getpass.getuser() + '/AppData/Local/Temp/rprblender/'
+elif (platform.system() == "Darwin"):
+    CONFIG_PATH = '/Users/' + getpass.getuser() + '/Library/Application Support/Blender/2.83/scripts/addons/rprblender/config.py'
     ATHENA_DIR = os.environ['TMPDIR'] + 'rprblender/'
 # else:
-#     didn't implemented Ubuntu
-#     CONFIG_PATH = '/Users/user/Library/Application Support/Blender/2.83/scripts/addons/rprblender/config.py'
+#     didn't implement Ubuntu
+#     CONFIG_PATH = ''
 #     ATHENA_DIR = os.environ['TMPDIR'] + 'rprblender/'
 
-def set_clean_false():
+def set_clean(value):
     with open(CONFIG_PATH, 'r') as file:
         data = file.readlines()
-    i = 0
-    for s in data:
-        if("clean_athena_files = True" in s):
-            data[i] = "clean_athena_files = False\n"
+
+    for i, s in enumerate(data):
+        if("clean_athena_files = " + str(not value) in s):
+            data[i] = "clean_athena_files = " + str(value) + "\n"
             break
-        i += 1
-
-    with open(CONFIG_PATH, 'w') as file:
-        file.writelines(data)
-
-def set_clean_true():
-    with open(CONFIG_PATH, 'r') as file:
-        data = file.readlines()
-    i = 0
-    for s in data:
-        if("clean_athena_files = False" in s):
-            data[i] = "clean_athena_files = True\n"
-            break
-        i += 1
-
+        
     with open(CONFIG_PATH, 'w') as file:
         file.writelines(data)
 
 def validate_athena(case):
     athena_files = os.listdir(ATHENA_DIR)
-    if(not athena_files):
+    if(not athena_files or len(athena_files) > 1):
         copyfile(path.join(WORK_DIR, '..', '..', '..', '..', 'jobs_launcher', 'common', 'img', 'error.jpg'), path.join(WORK_DIR, 'Color', case['case'] + ".jpg"))
-    # this is separate from try except, because athena_file.read() causes exception
-    with open(ATHENA_DIR + athena_files[0], "r") as athena_file:
-        print("Athena file content:")
-        print(athena_file.read())
+    json_file = athena_files[0]
     try:
-        with open(ATHENA_DIR + athena_files[0], "r") as athena_file:
+        with open(ATHENA_DIR + json_file, "r") as athena_file:
+            print("Athena file content:")
+            print(athena_file.read())
+            athena_file.seek(0)
             data = json.load(athena_file)
             copyfile(path.join(WORK_DIR, '..', '..', '..', '..', 'jobs_launcher', 'common', 'img', 'passed.jpg'), path.join(WORK_DIR, 'Color', case['case'] + ".jpg"))
     except Exception as e:
