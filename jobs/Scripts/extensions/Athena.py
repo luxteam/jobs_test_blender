@@ -1,5 +1,9 @@
-CONFIG_PATH = 'C:/Users/user/AppData/Roaming/Blender Foundation/Blender/2.83/scripts/addons/rprblender/config.py'
-ATHENA_DIR = 'C:/Users/user/AppData/Local/Temp/rprblender/'
+if (sys.platform == "win32"):
+    CONFIG_PATH = 'C:/Users/user/AppData/Roaming/Blender Foundation/Blender/2.83/scripts/addons/rprblender/config.py'
+    ATHENA_DIR = 'C:/Users/user/AppData/Local/Temp/rprblender/'
+else:
+    CONFIG_PATH = '/Users/user/Library/Application Support/Blender/2.83/scripts/addons/rprblender/config.py'
+    ATHENA_DIR = '$TMPDIR/rprblender/'
 
 def set_clean_false():
     with open(CONFIG_PATH, 'r') as file:
