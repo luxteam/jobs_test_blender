@@ -25,7 +25,6 @@
             "set_value(scene.rpr, 'render_quality', 'FULL2')",
             "rpr_render(case)",
             "validate_athena(case)",
-            "set_value(scene.rpr, 'render_quality', 'FULL')",
             "set_clean(True)"
         ],
         "script_info": [
@@ -44,7 +43,6 @@
             "set_value(scene.rpr, 'render_quality', 'LOW')",
             "rpr_render(case)",
             "validate_athena(case)",
-            "set_value(scene.rpr, 'render_quality', 'FULL')",
             "set_clean(True)"
         ],
         "script_info": [
@@ -63,7 +61,6 @@
             "set_value(scene.rpr, 'render_quality', 'MEDIUM')",
             "rpr_render(case)",
             "validate_athena(case)",
-            "set_value(scene.rpr, 'render_quality', 'FULL')",
             "set_clean(True)"
         ],
         "script_info": [
@@ -82,7 +79,6 @@
             "set_value(scene.rpr, 'render_quality', 'HIGH')",
             "rpr_render(case)",
             "validate_athena(case)",
-            "set_value(scene.rpr, 'render_quality', 'FULL')",
             "set_clean(True)"
         ],
         "script_info": [
