@@ -2,7 +2,8 @@ import platform
 import getpass
 
 if (platform.system() == 'Windows'):
-    CONFIG_PATH = 'C:/Users/' + getpass.getuser() + '/AppData/Roaming/Blender Foundation/Blender/2.83/scripts/addons/rprblender/config.py'
+    CONFIG_PATH = os.path.expandvars('%appdata%/Blender Foundation/Blender/2.83/scripts/addons/rprblender/config.py')
+    #CONFIG_PATH = 'C:/Users/' + getpass.getuser() + '/AppData/Roaming/Blender Foundation/Blender/2.83/scripts/addons/rprblender/config.py'
     ATHENA_DIR = 'C:/Users/' + getpass.getuser() + '/AppData/Local/Temp/rprblender/'
 elif (platform.system() == 'Darwin'):
     CONFIG_PATH = '/Users/' + getpass.getuser() + '/Library/Application Support/Blender/2.83/scripts/addons/rprblender/config.py'
@@ -12,12 +13,12 @@ elif (platform.system() == 'Darwin'):
 #     CONFIG_PATH = ''
 #     ATHENA_DIR = os.environ['TMPDIR'] + 'rprblender/'
 
-def set_clean(value):
-    with open(CONFIG_PATH, 'r') as file:
-        config = file.read()
-    config.replace('clean_athena_files = ' + str(not value), 'clean_athena_files = ' + str(value))
-    with open(CONFIG_PATH, 'w') as file:
-        config.write(data)
+# def set_clean(value):
+#     with open(CONFIG_PATH, 'r') as file:
+#         config = file.read()
+#     config.replace('clean_athena_files = ' + str(not value), 'clean_athena_files = ' + str(value))
+#     with open(CONFIG_PATH, 'w') as file:
+#         file.write(config)
 
 def validate_athena(case):
     athena_files = os.listdir(ATHENA_DIR)
