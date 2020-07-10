@@ -12,7 +12,7 @@
         ],
         "scene": "medium.blend",
         "skip_on":[
-            ["Ubuntu"]
+            ["Linux"]
         ]
     },
     {
@@ -28,7 +28,7 @@
         ],
         "scene": "medium.blend",
         "skip_on":[
-            ["Ubuntu"]
+            ["Linux"]
         ]
     },
     {
@@ -44,7 +44,7 @@
         ],
         "scene": "medium.blend",
         "skip_on":[
-            ["Ubuntu"]
+            ["Linux"]
         ]
     },
     {
@@ -60,7 +60,7 @@
         ],
         "scene": "medium.blend",
         "skip_on":[
-            ["Ubuntu"]
+            ["Linux"]
         ]
     },
     {
@@ -76,7 +76,7 @@
         ],
         "scene": "medium.blend",
         "skip_on":[
-            ["Ubuntu"]
+            ["Linux"]
         ]
     }
 ]
