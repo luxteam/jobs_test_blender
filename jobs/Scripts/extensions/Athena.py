@@ -12,7 +12,7 @@ elif (platform.system() == 'Darwin'):
 def validate_athena(case):
     athena_files = os.listdir(ATHENA_DIR)
     if(not athena_files or len(athena_files) > 1):
-        logging('Athena files weren't found') if not athena_files else logging('More than one file found')
+        logging('Athena files weren\'t found') if not athena_files else logging('More than one file found')
         copyfile(path.join(WORK_DIR, '..', '..', '..', '..', 'jobs_launcher', 'common', 'img', 'error.jpg'), path.join(WORK_DIR, 'Color', case['case'] + '.jpg'))
     json_file = athena_files[0]
     try:
