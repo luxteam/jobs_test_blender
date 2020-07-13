@@ -90,7 +90,6 @@
 			"rpr_render(case)",
 			"bpy.data.objects['shader_ball.001'].hide_render = True",
 			"bpy.data.objects['shader_ball'].hide_render = False"
-			
 		],
 		"script_info": [
 			"Import OBJ",
@@ -112,7 +111,6 @@
 			"uber_node.inputs['Diffuse Color'].default_value = (0.8, 0.0154239, 0.00939292, 1)",
 			"rpr_render(case)",
 			"bpy.data.objects['shader_ball'].active_material = bpy.data.materials['Default']"
-			
 		],
 		"script_info": [
 			"RPR Uber material",
@@ -130,7 +128,6 @@
 			"rpr_render(case)",
 			"scene = bpy.context.scene",
 			"set_value(scene.world.rpr, 'enabled', False)"
-			
 		],
 		"script_info": [
 			"Sun_Sky",
@@ -167,7 +164,6 @@
 			"set_value(scene.world.rpr, 'enabled', True)",
 			"set_value(scene.world.rpr, 'mode', 'IBL')",
 			"set_value(scene.world.rpr.ibl, 'image', None)"
-			
 		],
 		"script_info": [
 			"IBL with HDR",
@@ -243,7 +239,6 @@
 			"rpr_render(case)",
 			"scene = bpy.context.scene",
 			"set_value(scene.rpr, 'use_tile_render', False)"
-			
 		],
 		"script_info": [
 			"Tile Rendering"
@@ -267,7 +262,6 @@
 			"set_value(scene.display_settings, 'display_device', 'sRGB')",
 			"set_value(scene.view_settings, 'view_transform', 'Filmic')",
 			"set_value(scene.view_settings, 'look', 'None')"
-			
 		],
 		"script_info": [
 			"Color Management (sRGB)"
@@ -287,7 +281,6 @@
 			"set_value(scene.display_settings, 'display_device', 'sRGB')",
 			"set_value(scene.view_settings, 'view_transform', 'Filmic')",
 			"set_value(scene.view_settings, 'look', 'None')"
-			
 		],
 		"script_info": [
 			"Color Management (Look)"
@@ -305,7 +298,6 @@
 			"rpr_render(case)",
 			"scene = bpy.context.scene",
 			"set_value(scene.rpr, 'use_render_stamp', False)"
-			
 		],
 		"script_info": [
 			"Render Stamp",
@@ -394,7 +386,6 @@
 			"rpr_render(case)",
 			"view_layer = bpy.context.view_layer",
 			"set_value(view_layer.rpr.denoiser, 'enable', False)"
-			
 		],
 		"script_info": [
 			"Denoiser EAW",
@@ -412,7 +403,6 @@
 			"rpr_render(case)",
 			"view_layer = bpy.context.view_layer",
 			"set_value(view_layer.rpr.denoiser, 'enable', False)"
-			
 		],
 		"script_info": [
 			"Denoiser LWR",
@@ -430,7 +420,6 @@
 			"rpr_render(case)",
 			"view_layer = bpy.context.view_layer",
 			"set_value(view_layer.rpr.denoiser, 'enable', False)"
-			
 		],
 		"script_info": [
 			"Denoiser Bilateral",
@@ -448,7 +437,6 @@
 			"rpr_render(case)",
 			"view_layer = bpy.context.view_layer",
 			"set_value(view_layer.rpr.denoiser, 'enable', False)"
-			
 		],
 		"script_info": [
 			"Denoiser ML",
@@ -471,7 +459,6 @@
 			"principled_bsdf_node.inputs['Base Color'].default_value = (0.00643981, 0.8, 0.0358057, 1)",
 			"rpr_render(case)",
 			"bpy.data.objects['shader_ball'].active_material = bpy.data.materials['Default']"
-			
 		],
 		"script_info": [
 			"Principled BSDF",
@@ -491,7 +478,6 @@
 			"material_library.import_xml_material(gold_material, material_name, xml_path, False)",
 			"rpr_render(case)",
 			"bpy.data.objects['shader_ball'].active_material = bpy.data.materials['Default']"
-			
 		],
 		"script_info": [
 			"Mat lib",
@@ -543,7 +529,6 @@
 			"view_layer.rpr.enable_aovs[0] = True",
 			"nodes = bpy.data.scenes[0].node_tree.nodes",
 			"deleteOldRenderLayerNodes(nodes)"
-			
 		],
 		"script_info": [
 			"AOV Geometric Normal",
@@ -564,7 +549,6 @@
 			"set_value(scene.world.rpr, 'enabled', True)",
 			"light = bpy.data.lights['Light']",
 			"set_value(light, 'type', 'POINT')"
-			
 		],
 		"script_info": [
 			"Area light",
@@ -665,7 +649,7 @@
 		"functions": [
 			"pre39()",
 			"rpr_render(case)",
-			"post39()"			
+			"post39()"
 		],
 		"script_info": [
 			"IPR"
