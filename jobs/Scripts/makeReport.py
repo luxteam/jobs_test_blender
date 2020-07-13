@@ -56,6 +56,7 @@ def generateReport(directory):
     with open(os.path.join(directory, "report.json"), 'w') as file:
         file.write(result_json)
 
+
 if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
