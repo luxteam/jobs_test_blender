@@ -1,6 +1,3 @@
-from jobs_launcher.core.kill_process import kill_process
-from jobs_launcher.core.system_info import get_gpu
-import jobs_launcher.core.config as core_config
 import argparse
 import os
 import subprocess
@@ -18,6 +15,9 @@ import time
 sys.path.append(os.path.abspath(os.path.join(
     os.path.dirname(__file__), os.path.pardir, os.path.pardir)))
 
+from jobs_launcher.core.kill_process import kill_process
+from jobs_launcher.core.system_info import get_gpu
+import jobs_launcher.core.config as core_config
 
 ROOT_DIR = os.path.abspath(os.path.join(
     os.path.dirname(__file__), os.path.pardir, os.path.pardir))
