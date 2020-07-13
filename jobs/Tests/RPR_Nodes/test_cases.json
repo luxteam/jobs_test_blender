@@ -35,14 +35,14 @@
         "case": "BL28_MAT_NODE_116",
         "status": "active",
         "script_info": [
-            "Operation - Substract, Value: 0;0.5;0"
+            "Operation - Subtract, Value: 0;0.5;0"
         ],
         "scene": "RPR_Nodes1.blend",
         "functions": [
             "set_value(scene.render, 'use_single_layer', True)",
             "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
             "material, node = get_material_and_node('Vector Math', 'Vector Math')",
-            "set_value(node, 'operation', 'SUBSTRACT')",
+            "set_value(node, 'operation', 'SUBTRACT')",
             "set_value(node.inputs[1], 'default_value', (0, 0.5, 0))",
             "rpr_render(case)"
         ]
@@ -51,14 +51,14 @@
         "case": "BL28_MAT_NODE_117",
         "status": "active",
         "script_info": [
-            "Operation - Substract, Value: 0.5;0.5;0"
+            "Operation - Subtract, Value: 0.5;0.5;0"
         ],
         "scene": "RPR_Nodes1.blend",
         "functions": [
             "set_value(scene.render, 'use_single_layer', True)",
             "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
             "material, node = get_material_and_node('Vector Math', 'Vector Math')",
-            "set_value(node, 'operation', 'SUBSTRACT')",
+            "set_value(node, 'operation', 'SUBTRACT')",
             "set_value(node.inputs[1], 'default_value', (0.5, 0.5, 0))",
             "rpr_render(case)"
         ]
@@ -304,7 +304,7 @@
     },
     {
         "case": "BL28_MAT_NODE_133",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Operation - Scale, Value: 0.5"
         ],
@@ -320,7 +320,7 @@
     },   
     {
         "case": "BL28_MAT_NODE_134",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Operation - Scale, Value: 1"
         ],
@@ -345,7 +345,7 @@
             "set_value(scene.render, 'use_single_layer', True)",
             "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
             "material, node = get_material_and_node('Vector Math', 'Vector Math')",
-            "set_value(node, 'operation', 'SCALE')",
+            "set_value(node, 'operation', 'NORMALIZE')",
             "rpr_render(case)"
         ]
     },   
@@ -455,7 +455,6 @@
             "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
             "material, node = get_material_and_node('Vector Math', 'Vector Math')",
             "set_value(node, 'operation', 'FRACTION')",
-            "set_value(node.inputs[1], 'default_value', (0, 0.5, 0))",
             "rpr_render(case)"
         ]
     },
@@ -471,7 +470,6 @@
             "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
             "material, node = get_material_and_node('Vector Math', 'Vector Math')",
             "set_value(node, 'operation', 'ABSOLUTE')",
-            "set_value(node.inputs[1], 'default_value', (0.5, 0.5, 0))",
             "rpr_render(case)"
         ]
     },   
@@ -541,7 +539,7 @@
     },   
     {
         "case": "BL28_MAT_NODE_148",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Operation - Sine"
         ],
@@ -551,13 +549,12 @@
             "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
             "material, node = get_material_and_node('Vector Math', 'Vector Math')",
             "set_value(node, 'operation', 'SINE')",
-            "set_value(node.inputs[1], 'default_value', (0, 0.5, 0))",
             "rpr_render(case)"
         ]
     },
     {
         "case": "BL28_MAT_NODE_149",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Operation - Cosine"
         ],
@@ -567,13 +564,12 @@
             "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
             "material, node = get_material_and_node('Vector Math', 'Vector Math')",
             "set_value(node, 'operation', 'COSINE')",
-            "set_value(node.inputs[1], 'default_value', (0.5, 0.5, 0))",
             "rpr_render(case)"
         ]
     },   
     {
         "case": "BL28_MAT_NODE_150",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Operation - Tangent"
         ],
@@ -583,13 +579,12 @@
             "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
             "material, node = get_material_and_node('Vector Math', 'Vector Math')",
             "set_value(node, 'operation', 'TANGENT')",
-            "set_value(node.inputs[1], 'default_value', (0, 0.5, 0))",
             "rpr_render(case)"
         ]
     },
     {
         "case": "BL28_MAT_NODE_151",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Operation - Wrap, Value 1: 0.5;0.5;0, Value 2: 0.5;0.5;0"
         ],
@@ -606,7 +601,7 @@
     },   
     {
         "case": "BL28_MAT_NODE_152",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Operation - Wrap, Value 1: 0.1;0.1;0, Value 2: 0.7;0.7;0"
         ],
@@ -623,7 +618,7 @@
     },
     {
         "case": "BL28_MAT_NODE_153",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Operation - Wrap, Value 1: 0.6;0.2;0, Value 2: 0.4;0.4;0"
         ],
