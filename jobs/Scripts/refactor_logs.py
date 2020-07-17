@@ -34,14 +34,6 @@ def render_log(work_dir):
             logs += log.read()
         os.remove(os.path.realpath(os.path.join(work_dir, f)))
 
-    log_path = ''
-    for line in logs.splitlines():
-        if [l for l in ['Save report', 'Create log'] if l in line]:
-            log_path = os.path.join(work_dir, 'render_tool_logs', line.split().pop() + '.log')
-        if os.path.exists(log_path):  # throw exception while log_path == ''
-            with open(log_path, 'a') as log_file:
-                log_file.write(line + '\n')
-
     with open(os.path.realpath(os.path.join(work_dir, 'renderTool.log')), 'w') as f:
         for error in errors:
             if error['error'] in logs:
@@ -96,9 +88,11 @@ def performance_count(work_dir):
 			if not event_case:
 				event_case = event.get('case', '')
 			if event_case:
-				time_diffs.append({'name': event['name'], 'time': time_diff.total_seconds(), 'case': event_case})
+				time_diffs.append(
+				    {'name': event['name'], 'time': time_diff.total_seconds(), 'case': event_case})
 			else:
-				time_diffs.append({'name': event['name'], 'time': time_diff.total_seconds()})
+				time_diffs.append(
+				    {'name': event['name'], 'time': time_diff.total_seconds()})
 		old_event = event.copy()
 	return time_diffs
 
