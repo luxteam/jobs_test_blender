@@ -8,6 +8,7 @@ import os.path as path
 import os
 import sys
 import pyrpr
+import glob
 from shutil import copyfile
 from rprblender import material_library
 from rprblender.utils.user_settings import get_user_settings
@@ -23,6 +24,11 @@ SPU = {SPU}
 THRESHOLD = {threshold}
 ENGINE = r'{engine}'
 LOGS_DIR = path.join(WORK_DIR, 'render_tool_logs')
+
+
+def event(name, start, case):
+	with open(path.join('events', str(glob.glob('events/*.json').__len__() + 1) + '.json'), 'w') as f:
+		f.write(json.dumps({{'name': name, 'time': datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S.%f'), 'start': start, 'case': case}}, indent=4))
 
 
 def logging(message):
@@ -78,11 +84,13 @@ def get_core_version():
                                        pyrprwrap.VERSION_REVISION)
 
 
-def enable_rpr():
+def enable_rpr(case):
+    event('Load rpr', True, case)
     if not addon_utils.check('rprblender')[0]:
         addon_utils.enable('rprblender', default_set=True,
                            persistent=False, handle_error=None)
     set_value(bpy.context.scene.render, 'engine', 'RPR')
+    event('Load rpr', False, case)
 
 
 def get_addon_version():
@@ -120,10 +128,13 @@ def set_render_device(render_mode):
 
 def rpr_render(case):
     logging('Render image')
+    event('Prerender', False, case['case'])
 
+    event('Postrender', True, case['case'])
     start_time = datetime.datetime.now()
     bpy.ops.render.render(write_still=True)
     render_time = (datetime.datetime.now() - start_time).total_seconds()
+    event('Postrender', True, case['case'])
 
     reportToJSON(case, render_time)
 
@@ -134,12 +145,15 @@ def prerender(case):
     scene_name = bpy.path.basename(bpy.context.blend_data.filepath)
     if scene_name != scene:
         try:
+            event('Open scene', True, case['case'])
             bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, scene))
+            event('Open scene', False, case['case'])
+            enable_rpr(case['case'])
         except:
             logging("Can't load scene. Exit Blender")
             bpy.ops.wm.quit_blender()
 
-    enable_rpr()
+    event('Prerender', True, case['case'])
 
     scene = bpy.context.scene
 
@@ -179,6 +193,7 @@ def prerender(case):
                 eval(function)
         except Exception as e:
             logging('Error "{{}}" with string "{{}}"'.format(e, function))
+    event('Postrender', False, case['case'])
 
 
 def save_report(case):
@@ -197,7 +212,7 @@ def save_report(case):
         copyfile(
             path.join(source_dir, case['status'] + '.jpg'), work_dir)
 
-    enable_rpr()
+    enable_rpr(case['case'])
 
     reportToJSON(case)
 
@@ -229,6 +244,8 @@ def case_function(case):
 
 
 def main():
+    event('Open tool', False, next(case['case'] for case in cases if case['status'] in ['active', 'fail', 'skipped']))
+
     if not os.path.exists(os.path.join(WORK_DIR, LOGS_DIR)):
         os.makedirs(os.path.join(WORK_DIR, LOGS_DIR))
 
@@ -265,6 +282,8 @@ def main():
                 json.dump(cases, file, indent=4)
 
     logging('Time taken: ' + str(total_time))
+
+    event('Close tool', True, cases[-1]['case'])
 
 
 main()

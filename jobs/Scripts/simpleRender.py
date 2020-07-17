@@ -18,6 +18,7 @@ sys.path.append(os.path.abspath(os.path.join(
 from jobs_launcher.core.kill_process import kill_process
 from jobs_launcher.core.system_info import get_gpu
 import jobs_launcher.core.config as core_config
+import jobs_launcher.core.performance_counter as perf_count
 
 ROOT_DIR = os.path.abspath(os.path.join(
     os.path.dirname(__file__), os.path.pardir, os.path.pardir))
@@ -46,6 +47,7 @@ def createArgsParser():
 
 
 def main(args):
+    perf_count.event_record(args.output, 'Prepare tests', True)
     if which(args.tool) is None:
         core_config.main_logger.error('Can\'t find tool ' + args.tool)
         exit(-1)
@@ -144,8 +146,11 @@ def main(args):
             f.write(cmdRun)
         os.system('chmod +x {}'.format(cmdScriptPath))
 
+    perf_count.event_record(args.output, 'Prepare tests', False)
+
     core_config.main_logger.info(
         'Launch script on Blender ({})'.format(cmdScriptPath))
+    perf_count.event_record(args.output, 'Open tool', True)
 
     p = subprocess.Popen(cmdScriptPath, shell=True,
                          stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -167,6 +172,8 @@ def main(args):
         for child in reversed(p.children(recursive=True)):
             child.terminate()
         p.terminate()
+
+    perf_count.event_record(args.output, 'Close tool', False)
 
     # TODO: check athena work in blender
 
@@ -194,6 +201,30 @@ def group_failed(args):
     core_config.main_logger.info(
         "Finish simpleRender with code: {}".format(rc))
     exit(rc)
+
+
+def sync_time(work_dir):
+	for rpr_json_path in os.listdir(work_dir):
+		if rpr_json_path.endswith('_RPR.json'):
+			with open(os.path.join(work_dir, rpr_json_path)) as rpr_json_file:
+				rpr_json = json.load(rpr_json_file)
+
+			with open(os.path.join(work_dir, rpr_json[0]['render_log'])) as logs_file:
+				logs = logs_file.read()
+
+			sync_minutes = re.findall('RPR scene synchronization time: (\d*)m', logs)
+			sync_seconds = re.findall('RPR scene synchronization time: .*?(\d*)s', logs)
+			sync_milisec = re.findall('RPR scene synchronization time: .*?(\d*)ms', logs)
+
+			sync_minutes = float(next(iter(sync_minutes or []), 0))
+			sync_seconds = float(next(iter(sync_seconds or []), 0))
+			sync_milisec = float(next(iter(sync_milisec or []), 0))
+
+			synchronization_time = sync_minutes * 60 + sync_seconds + sync_milisec / 1000
+			rpr_json[0]['sync_time'] = synchronization_time
+
+			with open(os.path.join(work_dir, rpr_json_path), 'w') as rpr_json_file:
+				rpr_json_file.write(json.dumps(rpr_json, indent=4))
 
 
 if __name__ == "__main__":
@@ -259,4 +290,5 @@ if __name__ == "__main__":
             kill_process(PROCESS)
             core_config.main_logger.info(
                 "Finish simpleRender with code: {}".format(rc))
+            sync_time(args.output)
             exit(rc)

@@ -2,6 +2,10 @@ import argparse
 import os
 import json
 import cpuinfo
+import sys
+sys.path.append(os.path.abspath(os.path.join(
+	os.path.dirname(__file__), os.path.pardir, os.path.pardir)))
+import jobs_launcher.core.performance_counter as perf_count
 
 
 def generateReport(directory):
@@ -63,4 +67,8 @@ if __name__ == "__main__":
     parser.add_argument('--work_dir', required=True)
     args = parser.parse_args()
 
+    perf_count.event_record(directory, 'Make report json', True)
+
     generateReport(args.work_dir)
+
+    perf_count.event_record(directory, 'Make report json', False)
