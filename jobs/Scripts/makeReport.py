@@ -9,6 +9,7 @@ import jobs_launcher.core.performance_counter as perf_count
 
 
 def generateReport(directory):
+    perf_count.event_record(directory, 'Make report json', True)
 
     files = os.listdir(directory)
     json_files = list(filter(lambda x: x.endswith('RPR.json'), files))
@@ -60,6 +61,8 @@ def generateReport(directory):
     with open(os.path.join(directory, "report.json"), 'w') as file:
         file.write(result_json)
 
+    perf_count.event_record(directory, 'Make report json', False)
+
 
 if __name__ == "__main__":
 
@@ -67,8 +70,4 @@ if __name__ == "__main__":
     parser.add_argument('--work_dir', required=True)
     args = parser.parse_args()
 
-    perf_count.event_record(directory, 'Make report json', True)
-
     generateReport(args.work_dir)
-
-    perf_count.event_record(directory, 'Make report json', False)

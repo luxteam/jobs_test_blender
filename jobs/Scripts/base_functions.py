@@ -27,8 +27,10 @@ LOGS_DIR = path.join(WORK_DIR, 'render_tool_logs')
 
 
 def event(name, start, case):
-	with open(path.join('events', str(glob.glob('events/*.json').__len__() + 1) + '.json'), 'w') as f:
-		f.write(json.dumps({{'name': name, 'time': datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S.%f'), 'start': start, 'case': case}}, indent=4))
+    pathEvents = path.join('..', 'Work', 'Results', 'Blender28', 'Smoke', 'events')
+    logging(pathEvents)
+    with open(path.join(pathEvents, str(glob.glob(pathEvents + '/*.json').__len__() + 1) + '.json'), 'w') as f:
+        f.write(json.dumps({{'name': name, 'time': datetime.datetime.now().strftime('%d/%m/%Y %H:%M:%S.%f'), 'start': start, 'case': case}}, indent=4))
 
 
 def logging(message):
@@ -244,13 +246,14 @@ def case_function(case):
 
 
 def main():
-    event('Open tool', False, next(case['case'] for case in cases if case['status'] in ['active', 'fail', 'skipped']))
 
     if not os.path.exists(os.path.join(WORK_DIR, LOGS_DIR)):
         os.makedirs(os.path.join(WORK_DIR, LOGS_DIR))
 
     with open(path.join(WORK_DIR, 'test_cases.json'), 'r') as json_file:
         cases = json.load(json_file)
+
+    event('Open tool', False, next(case['case'] for case in cases if case['status'] in ['active', 'fail', 'skipped']))
 
     total_time = 0
 
