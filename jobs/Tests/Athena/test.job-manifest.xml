@@ -3,15 +3,15 @@
 
     <outpath value="{OutputDir}"/>
 
-    <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="1800">
+    <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="300">
         <argument>--tool "{Tool}"</argument>
         <argument>--render_device "{RenderDevice}"</argument>
         <argument>--output "{OutputDir}"</argument>
-        <argument>--testType Volume</argument>
-        <argument>--pass_limit {PassLimit}</argument>
+        <argument>--testType Athena</argument>
+        <argument>--pass_limit 20</argument>
         <argument>--resolution_x {rx}</argument>
         <argument>--resolution_y {ry}</argument>
-        <argument>--res_path "{ScenesDir}/Materials"</argument>
+        <argument>--res_path "{ScenesDir}"/Render_Settings</argument>
         <argument>--testCases "{TestCases}"</argument>
         <argument>--SPU {SPU}</argument>
         <argument>--threshold {threshold}</argument>

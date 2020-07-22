@@ -2,9 +2,14 @@ import argparse
 import os
 import json
 import cpuinfo
+import sys
+sys.path.append(os.path.abspath(os.path.join(
+	os.path.dirname(__file__), os.path.pardir, os.path.pardir)))
+import jobs_launcher.core.performance_counter as perf_count
 
 
 def generateReport(directory):
+    perf_count.event_record(directory, 'Make report json', True)
 
     files = os.listdir(directory)
     json_files = list(filter(lambda x: x.endswith('RPR.json'), files))
@@ -55,6 +60,9 @@ def generateReport(directory):
 
     with open(os.path.join(directory, "report.json"), 'w') as file:
         file.write(result_json)
+
+    perf_count.event_record(directory, 'Make report json', False)
+
 
 if __name__ == "__main__":
 

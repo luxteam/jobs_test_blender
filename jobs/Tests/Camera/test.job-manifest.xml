@@ -2,7 +2,7 @@
 <job-manifest enable="False">
 
     <outpath value="{OutputDir}"/>
-  
+
     <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="1800">
         <argument>--tool "{Tool}"</argument>
         <argument>--render_device "{RenderDevice}"</argument>
@@ -18,10 +18,6 @@
         <argument>--engine "{engine}"</argument>
     </execute>
 
-    <execute command='python "{CWD}/Scripts/refactor_logs.py"' timeout="60">
-        <argument>--output "{OutputDir}"</argument>
-    </execute>
-
     <execute command='python "{ResourcesDir}/makeReport.py"'>
         <argument>--work_dir "{OutputDir}"</argument>
     </execute>
@@ -29,6 +25,10 @@
     <execute command='python "{CommonDir}/scripts/ImageComparator/compareByJSON.py"'>
         <argument>--work_dir "{OutputDir}"</argument>
         <argument>--base_dir "{BaselineDir}"</argument>
+    </execute>
+
+    <execute command='python "{CWD}/Scripts/refactor_logs.py"' timeout="60">
+        <argument>--output "{OutputDir}"</argument>
     </execute>
 
 </job-manifest>

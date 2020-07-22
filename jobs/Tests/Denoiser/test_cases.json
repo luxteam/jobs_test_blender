@@ -157,7 +157,8 @@
         ],
         "scene": "DualCpu.blend",
         "skip_on": [
-            ["AMD Radeon RX Vega 56 (Metal)"]
+            ["AMD Radeon RX Vega 56 (Metal)"],
+            ["Linux"]
         ]
     },
     {
@@ -175,7 +176,10 @@
             "Denoiser type: ML",
             "Use Color AOV: True"
         ],
-        "scene": "DenoiserMetal.blend"
+        "scene": "DenoiserMetal.blend",
+        "skip_on":[
+            ["Linux"]
+        ]
     },
     {
         "case": "BL28_RS_DEN_027",
@@ -192,7 +196,10 @@
             "Denoiser type: ML",
             "Use Color AOV: False"
         ],
-        "scene": "DenoiserMetal.blend"
+        "scene": "DenoiserMetal.blend",
+        "skip_on":[
+            ["Linux"]
+        ]
     },
     {
         "case": "BL28_RS_DEN_039",
@@ -570,7 +577,10 @@
             "Denoiser type: ML",
             "Use Color AOV: True"
         ],
-        "scene": "DenoiserComplexLighting.blend"
+        "scene": "DenoiserComplexLighting.blend",
+        "skip_on":[
+            ["Linux"]
+        ]
     },
     {
         "case": "BL28_RS_DEN_062",
@@ -587,7 +597,10 @@
             "Denoiser type: ML",
             "Use Color AOV: False"
         ],
-        "scene": "DenoiserComplexLighting.blend"
+        "scene": "DenoiserComplexLighting.blend",
+        "skip_on":[
+            ["Linux"]
+        ]
     },
     {
         "case": "BL28_RS_DEN_063",
