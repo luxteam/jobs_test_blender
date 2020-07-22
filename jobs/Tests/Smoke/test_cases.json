@@ -181,7 +181,8 @@
 			"bpy.ops.image.open(filepath='//Maps//ibl_test.exr', directory=RES_PATH + '//Maps//', files=[{'name':'ibl_test.exr'}], relative_path=True, show_multiview=False)",
 			"set_value(scene.world.rpr.ibl, 'image', bpy.data.images['ibl_test.exr'])",
 			"rpr_render(case)",
-			"bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'default.blend'))"
+			"bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'default.blend'))",
+			"enable_rpr()"
 		],
 		"script_info": [
 			"IBL with EXR",
