@@ -1,5 +1,841 @@
 [
     {
+        "case": "BL28_MAT_NODE_100",
+        "status": "skipped",
+        "script_info": [
+            "RPR Transparent node, Diffuse Color - (1, 0.5, 0)"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_101",
+        "status": "active",
+        "script_info": [
+            "Blender Nodes"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection10'])",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_102",
+        "status": "active",
+        "script_info": [
+            "Volume + Layered materials"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection9'])",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_103",
+        "status": "active",
+        "script_info": [
+            "Volume Color"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection9'])",
+            "material, node = get_material_and_node('RPRVolume', 'Principled Volume')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_104",
+        "status": "active",
+        "script_info": [
+            "Layer Shader Triplanar"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection9'])",
+            "material, node = get_material_and_node('RPRLayeredShader', 'RPR Procedural UV')",
+            "set_value(node, 'procedural_type', 'TRIPLANAR')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_105",
+        "status": "active",
+        "script_info": [
+            "Layer Shader Plane"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection9'])",
+            "material, node = get_material_and_node('RPRLayeredShader', 'RPR Procedural UV')",
+            "set_value(node, 'procedural_type', 'MATERIAL_NODE_UVTYPE_PLANAR')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_106",
+        "status": "active",
+        "script_info": [
+            "Layer Shader Cilinder"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection9'])",
+            "material, node = get_material_and_node('RPRLayeredShader', 'RPR Procedural UV')",
+            "set_value(node, 'procedural_type', 'MATERIAL_NODE_UVTYPE_CYLINDICAL')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_107",
+        "status": "active",
+        "script_info": [
+            "Layer Shader Sphere"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection9'])",
+            "material, node = get_material_and_node('RPRLayeredShader', 'RPR Procedural UV')",
+            "set_value(node, 'procedural_type', 'MATERIAL_NODE_UVTYPE_SPHERICAL')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_108",
+        "status": "active",
+        "script_info": [
+            "Layer Shader Camera"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection9'])",
+            "material, node = get_material_and_node('RPRLayeredShader', 'RPR Procedural UV')",
+            "set_value(node, 'procedural_type', 'MATERIAL_NODE_UVTYPE_PROJECT')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_109",
+        "status": "active",
+        "script_info": [
+            "Layer Shader Triplanar"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection9'])",
+            "material, node = get_material_and_node('RPRLayered Texture', 'RPR Procedural UV')",
+            "set_value(node, 'procedural_type', 'TRIPLANAR')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_110",
+        "status": "active",
+        "script_info": [
+            "Layer Shader Plane"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection9'])",
+            "material, node = get_material_and_node('RPRLayered Texture', 'RPR Procedural UV')",
+            "set_value(node, 'procedural_type', 'MATERIAL_NODE_UVTYPE_PLANAR')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_111",
+        "status": "active",
+        "script_info": [
+            "Layer Shader Cilinder"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection9'])",
+            "material, node = get_material_and_node('RPRLayered Texture', 'RPR Procedural UV')",
+            "set_value(node, 'procedural_type', 'MATERIAL_NODE_UVTYPE_CYLINDICAL')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_112",
+        "status": "active",
+        "script_info": [
+            "Layer Shader Sphere"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection9'])",
+            "material, node = get_material_and_node('RPRLayered Texture', 'RPR Procedural UV')",
+            "set_value(node, 'procedural_type', 'MATERIAL_NODE_UVTYPE_SPHERICAL')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_113",
+        "status": "active",
+        "script_info": [
+            "Layer Shader Camera"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection9'])",
+            "material, node = get_material_and_node('RPRLayeredShader', 'RPR Procedural UV')",
+            "set_value(node, 'procedural_type', 'MATERIAL_NODE_UVTYPE_PROJECT')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_114",
+        "status": "active",
+        "script_info": [
+            "Operation - Add, Value: 0;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'ADD')",
+            "set_value(node.inputs[1], 'default_value', (0, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_115",
+        "status": "active",
+        "script_info": [
+            "Operation - Add, Value: 0.5;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'ADD')",
+            "set_value(node.inputs[1], 'default_value', (0.5, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },   
+    {
+        "case": "BL28_MAT_NODE_116",
+        "status": "active",
+        "script_info": [
+            "Operation - Subtract, Value: 0;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'SUBTRACT')",
+            "set_value(node.inputs[1], 'default_value', (0, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_117",
+        "status": "active",
+        "script_info": [
+            "Operation - Subtract, Value: 0.5;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'SUBTRACT')",
+            "set_value(node.inputs[1], 'default_value', (0.5, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },   
+    {
+        "case": "BL28_MAT_NODE_118",
+        "status": "active",
+        "script_info": [
+            "Operation - Multiply, Value: 0;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'MULTIPLY')",
+            "set_value(node.inputs[1], 'default_value', (0, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_119",
+        "status": "active",
+        "script_info": [
+            "Operation - Multiply, Value: 0.5;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'MULTIPLY')",
+            "set_value(node.inputs[1], 'default_value', (0.5, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },   
+    {
+        "case": "BL28_MAT_NODE_120",
+        "status": "active",
+        "script_info": [
+            "Operation - Divide, Value: 0;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'DIVIDE')",
+            "set_value(node.inputs[1], 'default_value', (0, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_121",
+        "status": "active",
+        "script_info": [
+            "Operation - Divide, Value: 0.5;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'DIVIDE')",
+            "set_value(node.inputs[1], 'default_value', (0.5, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },   
+    {
+        "case": "BL28_MAT_NODE_122",
+        "status": "active",
+        "script_info": [
+            "Operation - Cross Production, Value: 0;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'CROSS_PRODUCT')",
+            "set_value(node.inputs[1], 'default_value', (0, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_123",
+        "status": "active",
+        "script_info": [
+            "Operation - Cross Production, Value: 0.5;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'CROSS_PRODUCT')",
+            "set_value(node.inputs[1], 'default_value', (0.5, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },   
+    {
+        "case": "BL28_MAT_NODE_124",
+        "status": "active",
+        "script_info": [
+            "Operation - Project, Value: 0;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'PROJECT')",
+            "set_value(node.inputs[1], 'default_value', (0, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_125",
+        "status": "active",
+        "script_info": [
+            "Operation - Project, Value: 0.5;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'PROJECT')",
+            "set_value(node.inputs[1], 'default_value', (0.5, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },   
+    {
+        "case": "BL28_MAT_NODE_126",
+        "status": "active",
+        "script_info": [
+            "Operation - Reflect, Value: 0;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'REFLECT')",
+            "set_value(node.inputs[1], 'default_value', (0, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_127",
+        "status": "active",
+        "script_info": [
+            "Operation - Reflect, Value: 0.5;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'REFLECT')",
+            "set_value(node.inputs[1], 'default_value', (0.5, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },   
+    {
+        "case": "BL28_MAT_NODE_128",
+        "status": "active",
+        "script_info": [
+            "Operation - Dot Production, Value: 0;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'DOT_PRODUCT')",
+            "set_value(node.inputs[1], 'default_value', (0, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_129",
+        "status": "active",
+        "script_info": [
+            "Operation - Dot Production, Value: 0.5;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'DOT_PRODUCT')",
+            "set_value(node.inputs[1], 'default_value', (0.5, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },   
+    {
+        "case": "BL28_MAT_NODE_130",
+        "status": "active",
+        "script_info": [
+            "Operation - Distance, Value: 0;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'DISTANCE')",
+            "set_value(node.inputs[1], 'default_value', (0, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_131",
+        "status": "active",
+        "script_info": [
+            "Operation - Distance, Value: 0.5;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'DISTANCE')",
+            "set_value(node.inputs[1], 'default_value', (0.5, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },   
+    {
+        "case": "BL28_MAT_NODE_132",
+        "status": "active",
+        "script_info": [
+            "Operation - Length"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'LENGTH')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_133",
+        "status": "skipped",
+        "script_info": [
+            "Operation - Scale, Value: 0.5"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'SCALE')",
+            "set_value(node.inputs['Scale'], 'default_value', 0.5)",
+            "rpr_render(case)"
+        ]
+    },   
+    {
+        "case": "BL28_MAT_NODE_134",
+        "status": "skipped",
+        "script_info": [
+            "Operation - Scale, Value: 1"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'SCALE')",
+            "set_value(node.inputs['Scale'], 'default_value', 1)",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_135",
+        "status": "active",
+        "script_info": [
+            "Operation - Normalize"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'NORMALIZE')",
+            "rpr_render(case)"
+        ]
+    },   
+    {
+        "case": "BL28_MAT_NODE_136",
+        "status": "active",
+        "script_info": [
+            "Operation - Snap, Value: 0;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'SNAP')",
+            "set_value(node.inputs[1], 'default_value', (0, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_137",
+        "status": "active",
+        "script_info": [
+            "Operation - Snap, Value: 0.5;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'SNAP')",
+            "set_value(node.inputs[1], 'default_value', (0.5, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },   
+    {
+        "case": "BL28_MAT_NODE_138",
+        "status": "active",
+        "script_info": [
+            "Operation - Floor"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'FLOOR')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_139",
+        "status": "active",
+        "script_info": [
+            "Operation - Ceil"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'CEIL')",
+            "rpr_render(case)"
+        ]
+    },   
+    {
+        "case": "BL28_MAT_NODE_140",
+        "status": "active",
+        "script_info": [
+            "Operation - Modulo, Value: 0;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'MODULO')",
+            "set_value(node.inputs[1], 'default_value', (0, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_141",
+        "status": "active",
+        "script_info": [
+            "Operation - Modulo, Value: 0.5;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'MODULO')",
+            "set_value(node.inputs[1], 'default_value', (0.5, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },   
+    {
+        "case": "BL28_MAT_NODE_142",
+        "status": "active",
+        "script_info": [
+            "Operation - Fraction"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'FRACTION')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_143",
+        "status": "active",
+        "script_info": [
+            "Operation - Absolute"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'ABSOLUTE')",
+            "rpr_render(case)"
+        ]
+    },   
+    {
+        "case": "BL28_MAT_NODE_144",
+        "status": "active",
+        "script_info": [
+            "Operation - Minimum, Value: 0;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'MINIMUM')",
+            "set_value(node.inputs[1], 'default_value', (0, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_145",
+        "status": "active",
+        "script_info": [
+            "Operation - Minimum, Value: 0.5;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'MINIMUM')",
+            "set_value(node.inputs[1], 'default_value', (0.5, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },   
+    {
+        "case": "BL28_MAT_NODE_146",
+        "status": "active",
+        "script_info": [
+            "Operation - Maximum, Value: 0;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'MAXIMUM')",
+            "set_value(node.inputs[1], 'default_value', (0, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_147",
+        "status": "active",
+        "script_info": [
+            "Operation - Maximum, Value: 0.5;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'MAXIMUM')",
+            "set_value(node.inputs[1], 'default_value', (0.5, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },   
+    {
+        "case": "BL28_MAT_NODE_148",
+        "status": "skipped",
+        "script_info": [
+            "Operation - Sine"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'SINE')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_149",
+        "status": "skipped",
+        "script_info": [
+            "Operation - Cosine"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'COSINE')",
+            "rpr_render(case)"
+        ]
+    },   
+    {
+        "case": "BL28_MAT_NODE_150",
+        "status": "skipped",
+        "script_info": [
+            "Operation - Tangent"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'TANGENT')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_151",
+        "status": "skipped",
+        "script_info": [
+            "Operation - Wrap, Value 1: 0.5;0.5;0, Value 2: 0.5;0.5;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'WRAP')",
+            "set_value(node.inputs[1], 'default_value', (0.5, 0.5, 0))",
+            "set_value(node.inputs[2], 'default_value', (0.5, 0.5, 0))",
+            "rpr_render(case)"
+        ]
+    },   
+    {
+        "case": "BL28_MAT_NODE_152",
+        "status": "skipped",
+        "script_info": [
+            "Operation - Wrap, Value 1: 0.1;0.1;0, Value 2: 0.7;0.7;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'WRAP')",
+            "set_value(node.inputs[1], 'default_value', (0.1, 0.1, 0))",
+            "set_value(node.inputs[2], 'default_value', (0.7, 0.7, 0))",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_153",
+        "status": "skipped",
+        "script_info": [
+            "Operation - Wrap, Value 1: 0.6;0.2;0, Value 2: 0.4;0.4;0"
+        ],
+        "scene": "RPR_Nodes1.blend",
+        "functions": [
+            "set_value(scene.render, 'use_single_layer', True)",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "material, node = get_material_and_node('Vector Math', 'Vector Math')",
+            "set_value(node, 'operation', 'WRAP')",
+            "set_value(node.inputs[1], 'default_value', (0.6, 0.2, 0))",
+            "set_value(node.inputs[2], 'default_value', (0.4, 0.4, 0))",
+            "rpr_render(case)"
+        ]
+    },
+    {
         "case": "BL28_MAT_NODE_154",
         "status": "active",
         "script_info": [
