@@ -1,0 +1,67 @@
+[
+    {
+        "case": "BL28_MAT_NODE_154",
+        "status": "active",
+        "script_info": [
+            "Object Info - Location"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "connectOutput('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Location')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_155",
+        "status": "active",
+        "script_info": [
+            "Object Info - Color"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "connectOutput('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Color')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_156",
+        "status": "active",
+        "script_info": [
+            "Object Info - Object Index"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "connectOutput('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Object Index')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_157",
+        "status": "active",
+        "script_info": [
+            "Object Info - Material Index"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "connectOutput('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Material Index')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_158",
+        "status": "active",
+        "script_info": [
+            "Object Info - Random"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "connectOutput('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Random')",
+            "rpr_render(case)"
+        ]
+    }
+]
