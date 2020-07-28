@@ -214,38 +214,33 @@ def sync_time(work_dir):
             logs += log.read()
 
     log_path = ''
+    case_report_name = ''
     for line in logs.splitlines():
         if [l for l in ['Save report', 'Create log'] if l in line]:
-            log_path = os.path.join(
-                work_dir, 'render_tool_logs', line.split().pop() + '.log')
-        if os.path.exists(log_path):  # throw exception while log_path == ''
-            with open(log_path, 'a') as log_file:
-                log_file.write(line + '\n')
+            test_case = line.split().pop()
+            case_report_name = test_case + core_config.CASE_REPORT_SUFFIX
+        if os.path.exists(case_report_name):
+            with open(case_report_name, 'r') as case_report:
+                case_json = json.load(case_report)
+            with open(case_json[0]['render_log']) as case_log:
+                case_log.write(line + '\n')
 
-        for rpr_json_path in os.listdir(work_dir):
-            if rpr_json_path.endswith('_RPR.json'):
-                with open(os.path.join(work_dir, rpr_json_path)) as rpr_json_file:
-                    rpr_json = json.load(rpr_json_file)
+            sync_minutes = re.findall(
+                'Scene synchronization time: (\d*)m', line)
+            sync_seconds = re.findall(
+                'Scene synchronization time: .*?(\d*)s', line)
+            sync_milisec = re.findall(
+                'Scene synchronization time: .*?(\d*)ms', line)
 
-                with open(os.path.join(work_dir, rpr_json[0]['render_log'])) as logs_file:
-                    logs = logs_file.read()
+            sync_minutes = float(next(iter(sync_minutes or []), 0))
+            sync_seconds = float(next(iter(sync_seconds or []), 0))
+            sync_milisec = float(next(iter(sync_milisec or []), 0))
 
-                sync_minutes = re.findall(
-                    'Scene synchronization time: (\d*)m', logs)
-                sync_seconds = re.findall(
-                    'Scene synchronization time: .*?(\d*)s', logs)
-                sync_milisec = re.findall(
-                    'Scene synchronization time: .*?(\d*)ms', logs)
+            synchronization_time = sync_minutes * 60 + sync_seconds + sync_milisec / 1000
+            case_json[0]['sync_time'] = synchronization_time
 
-                sync_minutes = float(next(iter(sync_minutes or []), 0))
-                sync_seconds = float(next(iter(sync_seconds or []), 0))
-                sync_milisec = float(next(iter(sync_milisec or []), 0))
-
-                synchronization_time = sync_minutes * 60 + sync_seconds + sync_milisec / 1000
-                rpr_json[0]['sync_time'] = synchronization_time
-
-                with open(os.path.join(work_dir, rpr_json_path), 'w') as rpr_json_file:
-                    rpr_json_file.write(json.dumps(rpr_json, indent=4))
+            with open(case_report_name, 'w') as case_report:
+                case_report.write(json.dumps(case_json, indent=4))
 
 
 if __name__ == "__main__":
@@ -311,5 +306,7 @@ if __name__ == "__main__":
             kill_process(PROCESS)
             core_config.main_logger.info(
                 "Finish simpleRender with code: {}".format(rc))
+            perf_count.event_record(args.output, 'Sync time count', True)
             sync_time(args.output)
+            perf_count.event_record(args.output, 'Sync time count', False)
             exit(rc)
