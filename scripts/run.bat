@@ -14,7 +14,7 @@ if not defined RY set RY=0
 if not defined SPU set SPU=25
 if not defined ITER set ITER=50
 if not defined THRESHOLD set THRESHOLD=0.05
-if not ENGINE == "FULL2" set ENGINE="FULL"
+if not defined ENGINE set ENGINE="FULL"
 
 python -m pip install -r ../jobs_launcher/install/requirements.txt
 

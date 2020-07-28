@@ -150,10 +150,11 @@ def prerender(case):
             event('Open scene', True, case['case'])
             bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, scene))
             event('Open scene', False, case['case'])
-            enable_rpr(case['case'])
         except:
             logging("Can't load scene. Exit Blender")
             bpy.ops.wm.quit_blender()
+
+    enable_rpr(case['case']) # some cases open scene inside case functions
 
     event('Prerender', True, case['case'])
 
