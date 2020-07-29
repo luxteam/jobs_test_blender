@@ -52,6 +52,7 @@ def reportToJSON(case, render_time=0):
     logging('Create report json ({{}} {{}})'.format(
             case['case'], report['test_status']))
 
+    render_engine_quality = "RPR 1.0" if ENGINE is "FULL" else "NorthStar"
     report['file_name'] = case['case'] + case.get('extension', '.jpg')
     # TODO: render device may be incorrect (if it changes in case)
     report['render_device'] = set_render_device(RENDER_DEVICE)
@@ -67,6 +68,7 @@ def reportToJSON(case, render_time=0):
     report['script_info'] = case['script_info']
     report['render_log'] = path.join('render_tool_logs', case['case'] + '.log')
     report['scene_name'] = case.get('scene', '')
+    report['render_engine'] = render_engine_quality
 
     with open(path_to_file, 'w') as file:
         file.write(json.dumps([report], indent=4))
