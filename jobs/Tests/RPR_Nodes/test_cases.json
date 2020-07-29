@@ -2315,7 +2315,7 @@
         "scene": "RPR_Nodes.blend",
         "functions": [
             "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
-            "connectOutput('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Location')",
+            "connect_output('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Location')",
             "rpr_render(case)"
         ]
     },
@@ -2328,7 +2328,7 @@
         "scene": "RPR_Nodes.blend",
         "functions": [
             "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
-            "connectOutput('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Color')",
+            "connect_output('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Color')",
             "rpr_render(case)"
         ]
     },
@@ -2341,7 +2341,7 @@
         "scene": "RPR_Nodes.blend",
         "functions": [
             "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
-            "connectOutput('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Object Index')",
+            "connect_output('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Object Index')",
             "rpr_render(case)"
         ]
     },
@@ -2354,7 +2354,7 @@
         "scene": "RPR_Nodes.blend",
         "functions": [
             "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
-            "connectOutput('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Material Index')",
+            "connect_output('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Material Index')",
             "rpr_render(case)"
         ]
     },
@@ -2367,7 +2367,7 @@
         "scene": "RPR_Nodes.blend",
         "functions": [
             "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
-            "connectOutput('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Random')",
+            "connect_output('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Random')",
             "rpr_render(case)"
         ]
     }
