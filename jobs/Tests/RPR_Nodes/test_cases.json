@@ -1451,7 +1451,7 @@
         "scene": "RPR_Nodes.blend",
         "functions": [
             "set_value(scene.render, 'use_single_layer', True)",
-            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection7'])",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection8'])",
             "material, node = get_material_and_node('RPRProceduralUV', 'RPR Procedural UV')",
             "set_value(node, 'procedural_type', 'MATERIAL_NODE_UVTYPE_PROJECT')",
             "set_value(node.inputs['Midlevel'], 'default_value', 0.5)",
