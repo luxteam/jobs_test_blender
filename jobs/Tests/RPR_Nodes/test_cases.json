@@ -1451,7 +1451,7 @@
         "scene": "RPR_Nodes.blend",
         "functions": [
             "set_value(scene.render, 'use_single_layer', True)",
-            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection7'])",
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection8'])",
             "material, node = get_material_and_node('RPRProceduralUV', 'RPR Procedural UV')",
             "set_value(node, 'procedural_type', 'MATERIAL_NODE_UVTYPE_PROJECT')",
             "set_value(node.inputs['Midlevel'], 'default_value', 0.5)",
@@ -2303,6 +2303,71 @@
             "set_value(node, 'operation', 'WRAP')",
             "set_value(node.inputs[1], 'default_value', (0.6, 0.2, 0))",
             "set_value(node.inputs[2], 'default_value', (0.4, 0.4, 0))",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_154",
+        "status": "active",
+        "script_info": [
+            "Object Info - Location"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "connect_output('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Location')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_155",
+        "status": "active",
+        "script_info": [
+            "Object Info - Color"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "connect_output('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Color')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_156",
+        "status": "active",
+        "script_info": [
+            "Object Info - Object Index"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "connect_output('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Object Index')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_157",
+        "status": "active",
+        "script_info": [
+            "Object Info - Material Index"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "connect_output('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Material Index')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_NODE_158",
+        "status": "active",
+        "script_info": [
+            "Object Info - Random"
+        ],
+        "scene": "RPR_Nodes.blend",
+        "functions": [
+            "set_value(bpy.context.window, 'view_layer', bpy.data.scenes['Scene'].view_layers['Collection11'])",
+            "connect_output('Object_Info_Node', 'ColorRamp', 'Object Info', 'Fac', 'Random')",
             "rpr_render(case)"
         ]
     }
