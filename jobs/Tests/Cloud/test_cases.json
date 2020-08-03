@@ -114,7 +114,8 @@
         ],
         "scene": "Tree_Creature.blend",
         "skip_on": [
-            ["Radeon RX Vega"]
+            ["Radeon RX Vega"],
+            ["AMD Radeon RX Vega 56 (Metal)"]
         ]
     },
     {
