@@ -7,7 +7,7 @@ set RY=%5
 set SPU=%6
 set ITER=%7
 set THRESHOLD=%8
-set ENGINE="%9"
+set ENGINE=%9
 shift
 set TOOL=%9
 
