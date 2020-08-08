@@ -1,16 +1,28 @@
 name: Automatic pull request review
 
 on:
-  pull_request:
+   pull_request:
     paths:
-      - jobs/**/*.json
+    - '!**'
+    - 'jobs/Tests/**/*.json'
 
 jobs:
   automate-pullrequest-review:
     runs-on: ubuntu-latest
-   
     steps:
+      - id: other_changes
+        uses: futuratrepadeira/changed-files@v3.2.1
+        with:
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'
+          pattern: '^.*\.json$'
+      - name: Syntax check
+        run: |
+          echo '${{ steps.other_changes.outputs.files_created }}'
+          echo '${{ steps.other_changes.outputs.files_updated }}'
+          echo '${{ steps.other_changes.outputs.files_deleted }}'
+          
       - name: Approve pull request
+        if: success()
         uses: andrewmusgrave/automatic-pull-request-review@0.0.2
         with:
           repo-token: '${{ secrets.GITHUB_TOKEN }}'
@@ -23,3 +35,8 @@ jobs:
     steps:
       - name: Assign unassigned to author
         uses: technote-space/assign-author@v1.3.1
+#     steps:
+#       - name: Assign unassigned to author
+#         uses: thomaseizinger/assign-pr-creator-action@v1.0.0
+#         with:
+#           repo-token: '${{ secrets.GITHUB_TOKEN }}'
