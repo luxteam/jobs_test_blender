@@ -731,15 +731,18 @@
             "file_output.base_path = os.path.join(WORK_DIR, 'Color')",
             "file_output.file_slots.new('BL28_RS_AOV_024')",
             "view_layer.rpr.enable_aovs[25] = True",
-            "bpy.context.scene.node_tree.links.new(render_layer.outputs['Environment Lighting'], file_output.inputs[1])",
+            "bpy.context.scene.node_tree.links.new(render_layer.outputs['Light Group 1'], file_output.inputs[1])",
+            "light_data = bpy.data.lights['Lamp']",
+            "set_value(light_data.rpr, 'group', '2')",
             "rpr_render(case)",
+            "set_value(light_data.rpr, 'group', '0')",
             "test_case_image = os.path.join(WORK_DIR, 'Color', 'BL28_RS_AOV_024.jpg')",
             "aov_image = os.path.join(WORK_DIR, 'Color', 'BL28_RS_AOV_0240040.jpg')",
             "if os.path.exists(test_case_image): os.remove(test_case_image)",
             "if os.path.exists(aov_image): os.rename(aov_image, test_case_image)"
         ],
         "script_info": [
-            "AOV: Environment Lighting"
+            "AOV: Light Group 1"
         ],
         "scene": "AOV_test.blend"
     },
@@ -762,17 +765,18 @@
             "file_output.base_path = os.path.join(WORK_DIR, 'Color')",
             "file_output.file_slots.new('BL28_RS_AOV_025')",
             "view_layer.rpr.enable_aovs[26] = True",
-            "bpy.context.scene.node_tree.links.new(render_layer.outputs['Key Lighting'], file_output.inputs[1])",
+            "bpy.context.scene.node_tree.links.new(render_layer.outputs['Light Group 2'], file_output.inputs[1])",
             "light_data = bpy.data.lights['Lamp']",
-            "set_value(light_data.rpr, 'group', 'KEY')",
+            "set_value(light_data.rpr, 'group', '2')",
             "rpr_render(case)",
+            "set_value(light_data.rpr, 'group', '0')",
             "test_case_image = os.path.join(WORK_DIR, 'Color', 'BL28_RS_AOV_025.jpg')",
             "aov_image = os.path.join(WORK_DIR, 'Color', 'BL28_RS_AOV_0250040.jpg')",
             "if os.path.exists(test_case_image): os.remove(test_case_image)",
             "if os.path.exists(aov_image): os.rename(aov_image, test_case_image)"
         ],
         "script_info": [
-            "AOV: Key Lighting"
+            "AOV: Light group 2"
         ],
         "scene": "AOV_test.blend"
     },
@@ -795,17 +799,18 @@
             "file_output.base_path = os.path.join(WORK_DIR, 'Color')",
             "file_output.file_slots.new('BL28_RS_AOV_026')",
             "view_layer.rpr.enable_aovs[27] = True",
-            "bpy.context.scene.node_tree.links.new(render_layer.outputs['Fill Lighting'], file_output.inputs[1])",
+            "bpy.context.scene.node_tree.links.new(render_layer.outputs['Light Group 3'], file_output.inputs[1])",
             "light_data = bpy.data.lights['Lamp']",
-            "set_value(light_data.rpr, 'group', 'KEY')",
+            "set_value(light_data.rpr, 'group', '2')",
             "rpr_render(case)",
+            "set_value(light_data.rpr, 'group', '0')",
             "test_case_image = os.path.join(WORK_DIR, 'Color', 'BL28_RS_AOV_026.jpg')",
             "aov_image = os.path.join(WORK_DIR, 'Color', 'BL28_RS_AOV_0260040.jpg')",
             "if os.path.exists(test_case_image): os.remove(test_case_image)",
             "if os.path.exists(aov_image): os.rename(aov_image, test_case_image)"
         ],
         "script_info": [
-            "AOV: Fill Lighting"
+            "AOV: Light group 3"
         ],
         "scene": "AOV_test.blend"
     },
@@ -828,15 +833,18 @@
             "file_output.base_path = os.path.join(WORK_DIR, 'Color')",
             "file_output.file_slots.new('BL28_RS_AOV_027')",
             "view_layer.rpr.enable_aovs[28] = True",
-            "bpy.context.scene.node_tree.links.new(render_layer.outputs['Emissive Lighting'], file_output.inputs[1])",
+            "bpy.context.scene.node_tree.links.new(render_layer.outputs['Light Group 4'], file_output.inputs[1])",
+            "light_data = bpy.data.lights['Lamp']",
+            "set_value(light_data.rpr, 'group', '2')",
             "rpr_render(case)",
+            "set_value(light_data.rpr, 'group', '0')",
             "test_case_image = os.path.join(WORK_DIR, 'Color', 'BL28_RS_AOV_027.jpg')",
             "aov_image = os.path.join(WORK_DIR, 'Color', 'BL28_RS_AOV_0270040.jpg')",
             "if os.path.exists(test_case_image): os.remove(test_case_image)",
             "if os.path.exists(aov_image): os.rename(aov_image, test_case_image)"
         ],
         "script_info": [
-            "AOV: Emissive Lighting"
+            "AOV: Light group 4"
         ],
         "scene": "AOV_test.blend"
     },
