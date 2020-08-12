@@ -458,12 +458,13 @@
         "status": "active",
         "script_info": [
             "Diffuse Color blue",
-            "Reflection Anisotropy -1"
+            "Reflection Anisotropy 0.5"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
             "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
+            "node_uber.inputs['Reflection Anisotropy'].default_value = 0",
             "rpr_render(case)",
             "default_settings()"
         ]
@@ -473,13 +474,17 @@
         "status": "active",
         "script_info": [
             "Diffuse Color blue",
-            "Reflection Anisotropy 1"
+            "Reflection Anisotropy 0.5",
+            "Anisotropy rotation 45"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
             "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
+            "node_uber.inputs['Reflection Anisotropy'].default_value = 0.5",
+            "node_uber.inputs['Reflection Anisotropy Rotation'].default_value = 45/57.3",
             "rpr_render(case)",
+            "node_uber.inputs['Reflection Anisotropy'].default_value = 0",
             "default_settings()"
         ]
     },
@@ -488,14 +493,15 @@
         "status": "active",
         "script_info": [
             "Diffuse Color blue",
-            "Reflection Anisotropy 1",
-            "Reflection Anisotropy Rotation 90"
+            "Reflection Anisotropy 1"
         ],
         "scene": "UBER.blend",
         "functions": [
             "uber_material, node_uber = get_material_and_node()",
             "node_uber.inputs['Diffuse Color'].default_value = (0, 0, 0.4, 1.0)",
+            "node_uber.inputs['Reflection Anisotropy'].default_value = 1",
             "rpr_render(case)",
+            "node_uber.inputs['Reflection Anisotropy'].default_value = 0",
             "default_settings()"
         ]
     },
