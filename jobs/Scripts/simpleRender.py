@@ -219,10 +219,12 @@ def sync_time(work_dir):
         if [l for l in ['Save report', 'Create log'] if l in line]:
             test_case = line.split().pop()
             case_report_name = test_case + core_config.CASE_REPORT_SUFFIX
-        if os.path.exists(case_report_name):
-            with open(case_report_name, 'r') as case_report:
+            case_report_path = os.path.join(work_dir, case_report_name)
+            log_path = os.path.join(work_dir, 'render_tool_logs', test_case + '.log')
+        if os.path.exists(log_path):
+            with open(case_report_path, 'r') as case_report:
                 case_json = json.load(case_report)
-            with open(case_json[0]['render_log']) as case_log:
+            with open(log_path, 'a') as case_log:
                 case_log.write(line + '\n')
 
             sync_minutes = re.findall(
@@ -239,7 +241,7 @@ def sync_time(work_dir):
             synchronization_time = sync_minutes * 60 + sync_seconds + sync_milisec / 1000
             case_json[0]['sync_time'] = synchronization_time
 
-            with open(case_report_name, 'w') as case_report:
+            with open(case_report_path, 'w') as case_report:
                 case_report.write(json.dumps(case_json, indent=4))
 
 
