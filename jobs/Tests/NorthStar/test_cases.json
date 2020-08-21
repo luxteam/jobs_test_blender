@@ -10,11 +10,7 @@
 		"script_info": [
 			"Render RPR scene"
 		],
-		"scene": "rpr_default_upd.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "rpr_default_upd.blend"
 	},
 	{
 		"case": "BL28_NRT_002",
@@ -29,11 +25,7 @@
 		"script_info": [
 			"IES"
 		],
-		"scene": "IES.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "IES.blend"
 	},
 	{
 		"case": "BL28_NRT_003",
@@ -51,11 +43,7 @@
 		"script_info": [
 			"Uber"
 		],
-		"scene": "default.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "default.blend"
 	},
 	{
 		"case": "BL28_NRT_004",
@@ -70,11 +58,7 @@
 		"script_info": [
 			"Assign Princpled BSDF to object"
 		],
-		"scene": "default.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "default.blend"
 	},
 	{
 		"case": "BL28_NRT_005",
@@ -87,11 +71,7 @@
 		"script_info": [
 			"Sun & Sky"
 		],
-		"scene": "default.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "default.blend"
 	},
 	{
 		"case": "BL28_NRT_006",
@@ -102,11 +82,7 @@
 		"script_info": [
 			"IBL default"
 		],
-		"scene": "rpr_hybrid_shaderball.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "rpr_hybrid_shaderball.blend"
 	},
 	{
 		"case": "BL28_NRT_007",
@@ -120,11 +96,7 @@
 		"script_info": [
 			"HDR"
 		],
-		"scene": "default.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "default.blend"
 	},
 	{
 		"case": "BL28_NRT_008",
@@ -138,11 +110,7 @@
 		"script_info": [
 			"EXR"
 		],
-		"scene": "default.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "default.blend"
 	},
 	{
 		"case": "BL28_NRT_009",
@@ -155,11 +123,7 @@
 		"script_info": [
 			"Render 16 pass"
 		],
-		"scene": "rpr_hybrid_shaderball.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "rpr_hybrid_shaderball.blend"
 	},
 	{
 		"case": "BL28_NRT_010",
@@ -172,11 +136,7 @@
 		"script_info": [
 			"Render 100 passes"
 		],
-		"scene": "rpr_hybrid_shaderball.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "rpr_hybrid_shaderball.blend"
 	},
 	{
 		"case": "BL28_NRT_011",
@@ -187,11 +147,7 @@
 		"script_info": [
 			"Multimaterials"
 		],
-		"scene": "Multimaterials.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "Multimaterials.blend"
 	},
 	{
 		"case": "BL28_NRT_012",
@@ -204,11 +160,7 @@
 		"script_info": [
 			"Tile rendering"
 		],
-		"scene": "rpr_hybrid_shaderball.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "rpr_hybrid_shaderball.blend"
 	},
 	{
 		"case": "BL28_NRT_013",
@@ -221,11 +173,7 @@
 		"script_info": [
 			"Render Stamp"
 		],
-		"scene": "rpr_hybrid_shaderball.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "rpr_hybrid_shaderball.blend"
 	},
 	{
 		"case": "BL28_NRT_014",
@@ -238,11 +186,7 @@
 		"script_info": [
 			"Change renderer in viewport render preview from default to RPR (IPR analog)"
 		],
-		"scene": "default.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "default.blend"
 	},
 	{
 		"case": "BL28_NRT_015",
@@ -259,11 +203,7 @@
 		"script_info": [
 			"Hair Render"
 		],
-		"scene": "default.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "default.blend"
 	},
 	{
 		"case": "BL28_NRT_016",
@@ -278,11 +218,7 @@
 		"script_info": [
 			"Denoiser EAW default"
 		],
-		"scene": "rpr_hybrid_shaderball.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "rpr_hybrid_shaderball.blend"
 	},
 	{
 		"case": "BL28_NRT_017",
@@ -297,11 +233,7 @@
 		"script_info": [
 			"Denoiser LWR default"
 		],
-		"scene": "rpr_hybrid_shaderball.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "rpr_hybrid_shaderball.blend"
 	},
 	{
 		"case": "BL28_NRT_018",
@@ -316,11 +248,7 @@
 		"script_info": [
 			"Denoiser Bilateral default"
 		],
-		"scene": "rpr_hybrid_shaderball.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "rpr_hybrid_shaderball.blend"
 	},
 	{
 		"case": "BL28_NRT_019",
@@ -335,11 +263,7 @@
 		"script_info": [
 			"Denoiser Machine Learning default"
 		],
-		"scene": "rpr_hybrid_shaderball.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "rpr_hybrid_shaderball.blend"
 	},
 	{
 		"case": "BL28_NRT_020",
@@ -354,11 +278,7 @@
 		"script_info": [
 			"Assign material from Mat. Library"
 		],
-		"scene": "default.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "default.blend"
 	},
 	{
 		"case": "BL28_NRT_021",
@@ -371,11 +291,7 @@
 		"script_info": [
 			"AOV - Geometric Normal"
 		],
-		"scene": "default.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "default.blend"
 	},
 	{
 		"case": "BL28_NRT_022",
@@ -388,11 +304,7 @@
 		"script_info": [
 			"Base Light = Area Light"
 		],
-		"scene": "rpr_hybrid_shaderball.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "rpr_hybrid_shaderball.blend"
 	},
 	{
 		"case": "BL28_NRT_023",
@@ -404,11 +316,7 @@
 		"script_info": [
 			"Instances"
 		],
-		"scene": "instances.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "instances.blend"
 	},
 	{
 		"case": "BL28_NRT_024",
@@ -419,11 +327,7 @@
 		"script_info": [
 			"4-5 lights in one scene"
 		],
-		"scene": "5_lights.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "5_lights.blend"
 	},
 	{
 		"case": "BL28_NRT_025",
@@ -434,11 +338,7 @@
 		"script_info": [
 			"AOV-SC"
 		],
-		"scene": "AOV_SC.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "AOV_SC.blend"
 	},
 	{
 		"case": "BL28_NRT_026",
@@ -449,11 +349,7 @@
 		"script_info": [
 			"SSS"
 		],
-		"scene": "SSS_Test.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "SSS_Test.blend"
 	},
 	{
 		"case": "BL28_NRT_027",
@@ -464,11 +360,7 @@
 		"script_info": [
 			"Displacement"
 		],
-		"scene": "Displacement.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "Displacement.blend"
 	},
 	{
 		"case": "BL28_NRT_028",
@@ -481,11 +373,7 @@
 		"script_info": [
 			"Rays Quality"
 		],
-		"scene": "WaterInsideGlass.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "WaterInsideGlass.blend"
 	},
 	{
 		"case": "BL28_NRT_029",
@@ -496,11 +384,7 @@
 		"script_info": [
 			"Complex 1"
 		],
-		"scene": "1_ComplexLighting.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "1_ComplexLighting.blend"
 	},
 	{
 		"case": "BL28_NRT_030",
@@ -511,11 +395,7 @@
 		"script_info": [
 			"Complex 2"
 		],
-		"scene": "2_chevrolet_corvette_stingray_c7RPR.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "2_chevrolet_corvette_stingray_c7RPR.blend"
 	},
 	{
 		"case": "BL28_NRT_031",
@@ -526,11 +406,7 @@
 		"script_info": [
 			"Complex 3"
 		],
-		"scene": "3_BridgeBooble.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "3_BridgeBooble.blend"
 	},
 	{
 		"case": "BL28_NRT_032",
@@ -541,11 +417,7 @@
 		"script_info": [
 			"Complex 4"
 		],
-		"scene": "4_fsr_modes.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "4_fsr_modes.blend"
 	},
 	{
 		"case": "BL28_NRT_033",
@@ -556,11 +428,7 @@
 		"script_info": [
 			"Complex 5"
 		],
-		"scene": "5_EnvyScene.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "5_EnvyScene.blend"
 	},
 	{
 		"case": "BL28_NRT_034",
@@ -571,11 +439,7 @@
 		"script_info": [
 			"Complex 6"
 		],
-		"scene": "6_IvyColumn.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "6_IvyColumn.blend"
 	},
 	{
 		"case": "BL28_NRT_035",
@@ -586,11 +450,7 @@
 		"script_info": [
 			"Complex 7"
 		],
-		"scene": "7_render_passes.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "7_render_passes.blend"
 	},
 	{
 		"case": "BL28_NRT_036",
@@ -601,11 +461,7 @@
 		"script_info": [
 			"Complex 8"
 		],
-		"scene": "8_.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "8_.blend"
 	},
 	{
 		"case": "BL28_NRT_037",
@@ -616,11 +472,7 @@
 		"script_info": [
 			"Complex 9"
 		],
-		"scene": "9_sun_light.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "9_sun_light.blend"
 	},
 	{
 		"case": "BL28_NRT_038",
@@ -631,10 +483,6 @@
 		"script_info": [
 			"Complex 10"
 		],
-		"scene": "10_Barcelona_Pavillion.blend",
-		"skip_on":[
-			["AMD Radeon RX Vega 56 (Metal)"],
-			["AMD Radeon VII"]
-		]
+		"scene": "10_Barcelona_Pavillion.blend"
 	}
 ]
