@@ -48,9 +48,6 @@ def createArgsParser():
 
 def main(args):
     perf_count.event_record(args.output, 'Prepare tests', True)
-    if which(args.tool) is None:
-        core_config.main_logger.error('Can\'t find tool ' + args.tool)
-        exit(-1)
 
     core_config.main_logger.info('Make "base_functions.py"')
 
@@ -145,6 +142,10 @@ def main(args):
         with open(cmdScriptPath, 'w') as f:
             f.write(cmdRun)
         os.system('chmod +x {}'.format(cmdScriptPath))
+
+    if which(args.tool) is None:
+        core_config.main_logger.error('Can\'t find tool ' + args.tool)
+        exit(-1)
 
     perf_count.event_record(args.output, 'Prepare tests', False)
 
