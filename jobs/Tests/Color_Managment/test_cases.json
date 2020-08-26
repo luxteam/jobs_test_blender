@@ -17,23 +17,6 @@
         "scene": "ComplexTestUber.blend"
     },
     {
-        "case": "BL28_RS_CM_002",
-        "status": "active",
-        "functions": [
-            "set_value(bpy.context.scene.display_settings, 'display_device', 'DCI-P3')",
-            "set_value(bpy.context.scene.view_settings, 'view_transform', 'Standard')",
-            "set_value(bpy.context.scene.view_settings, 'look', 'None')",
-            "set_value(bpy.context.scene.view_settings, 'exposure', 0)",
-            "set_value(bpy.context.scene.view_settings, 'gamma', 1)",
-            "set_value(bpy.context.scene.sequencer_colorspace_settings, 'name', 'sRGB')",
-            "rpr_render(case)"
-        ],
-        "script_info": [
-            "DCI-P3 Display Device"
-        ],
-        "scene": "ComplexTestUber.blend"
-    },
-    {
         "case": "BL28_RS_CM_003",
         "status": "active",
         "functions": [
@@ -47,23 +30,6 @@
         ],
         "script_info": [
             "None Display Device"
-        ],
-        "scene": "ComplexTestUber.blend"
-    },
-    {
-        "case": "BL28_RS_CM_004",
-        "status": "active",
-        "functions": [
-            "set_value(bpy.context.scene.display_settings, 'display_device', 'Rec709')",
-            "set_value(bpy.context.scene.view_settings, 'view_transform', 'Standard')",
-            "set_value(bpy.context.scene.view_settings, 'look', 'None')",
-            "set_value(bpy.context.scene.view_settings, 'exposure', 0)",
-            "set_value(bpy.context.scene.view_settings, 'gamma', 1)",
-            "set_value(bpy.context.scene.sequencer_colorspace_settings, 'name', 'sRGB')",
-            "rpr_render(case)"
-        ],
-        "script_info": [
-            "Rec709 Display Device"
         ],
         "scene": "ComplexTestUber.blend"
     },
@@ -115,40 +81,6 @@
         ],
         "script_info": [
             "Filmic Display Space"
-        ],
-        "scene": "ComplexTestUber.blend"
-    },
-    {
-        "case": "BL28_RS_CM_008",
-        "status": "active",
-        "functions": [
-            "set_value(bpy.context.scene.display_settings, 'display_device', 'sRGB')",
-            "set_value(bpy.context.scene.view_settings, 'view_transform', 'RRT')",
-            "set_value(bpy.context.scene.view_settings, 'look', 'None')",
-            "set_value(bpy.context.scene.view_settings, 'exposure', 0)",
-            "set_value(bpy.context.scene.view_settings, 'gamma', 1)",
-            "set_value(bpy.context.scene.sequencer_colorspace_settings, 'name', 'sRGB')",
-            "rpr_render(case)"
-        ],
-        "script_info": [
-            "RRT Display Space"
-        ],
-        "scene": "ComplexTestUber.blend"
-    },
-    {
-        "case": "BL28_RS_CM_009",
-        "status": "active",
-        "functions": [
-            "set_value(bpy.context.scene.display_settings, 'display_device', 'sRGB')",
-            "set_value(bpy.context.scene.view_settings, 'view_transform', 'Film')",
-            "set_value(bpy.context.scene.view_settings, 'look', 'None')",
-            "set_value(bpy.context.scene.view_settings, 'exposure', 0)",
-            "set_value(bpy.context.scene.view_settings, 'gamma', 1)",
-            "set_value(bpy.context.scene.sequencer_colorspace_settings, 'name', 'sRGB')",
-            "rpr_render(case)"
-        ],
-        "script_info": [
-            "Film Display Space"
         ],
         "scene": "ComplexTestUber.blend"
     },
@@ -217,74 +149,6 @@
         ],
         "script_info": [
             "Base Contrast Look"
-        ],
-        "scene": "ComplexTestUber.blend"
-    },
-    {
-        "case": "BL28_RS_CM_014",
-        "status": "active",
-        "functions": [
-            "set_value(bpy.context.scene.display_settings, 'display_device', 'sRGB')",
-            "set_value(bpy.context.scene.view_settings, 'view_transform', 'Standard')",
-            "set_value(bpy.context.scene.view_settings, 'look', 'Standard - Agfa Agfacolor Optima II 200 Contrast')",
-            "set_value(bpy.context.scene.view_settings, 'exposure', 0)",
-            "set_value(bpy.context.scene.view_settings, 'gamma', 1)",
-            "set_value(bpy.context.scene.sequencer_colorspace_settings, 'name', 'sRGB')",
-            "rpr_render(case)"
-        ],
-        "script_info": [
-            "Agfa Agfacolor Optima II 200 Look"
-        ],
-        "scene": "ComplexTestUber.blend"
-    },
-    {
-        "case": "BL28_RS_CM_015",
-        "status": "active",
-        "functions": [
-            "set_value(bpy.context.scene.display_settings, 'display_device', 'sRGB')",
-            "set_value(bpy.context.scene.view_settings, 'view_transform', 'Standard')",
-            "set_value(bpy.context.scene.view_settings, 'look', 'Standard - Agfa Agfacolor Optima II 100 Contrast')",
-            "set_value(bpy.context.scene.view_settings, 'exposure', 0)",
-            "set_value(bpy.context.scene.view_settings, 'gamma', 1)",
-            "set_value(bpy.context.scene.sequencer_colorspace_settings, 'name', 'sRGB')",
-            "rpr_render(case)"
-        ],
-        "script_info": [
-            "Agfa Agfacolor Optima II 100 Look"
-        ],
-        "scene": "ComplexTestUber.blend"
-    },
-    {
-        "case": "BL28_RS_CM_016",
-        "status": "active",
-        "functions": [
-            "set_value(bpy.context.scene.display_settings, 'display_device', 'sRGB')",
-            "set_value(bpy.context.scene.view_settings, 'view_transform', 'Standard')",
-            "set_value(bpy.context.scene.view_settings, 'look', 'Standard - Agfa Agfacolor HDC 200 Plus Contrast')",
-            "set_value(bpy.context.scene.view_settings, 'exposure', 0)",
-            "set_value(bpy.context.scene.view_settings, 'gamma', 1)",
-            "set_value(bpy.context.scene.sequencer_colorspace_settings, 'name', 'sRGB')",
-            "rpr_render(case)"
-        ],
-        "script_info": [
-            "Agfa Agfacolor HDC 200 Plus Look"
-        ],
-        "scene": "ComplexTestUber.blend"
-    },
-    {
-        "case": "BL28_RS_CM_017",
-        "status": "active",
-        "functions": [
-            "set_value(bpy.context.scene.display_settings, 'display_device', 'sRGB')",
-            "set_value(bpy.context.scene.view_settings, 'view_transform', 'Standard')",
-            "set_value(bpy.context.scene.view_settings, 'look', 'Standard - Agfa Agfacolor Futura II 200 Contrast')",
-            "set_value(bpy.context.scene.view_settings, 'exposure', 0)",
-            "set_value(bpy.context.scene.view_settings, 'gamma', 1)",
-            "set_value(bpy.context.scene.sequencer_colorspace_settings, 'name', 'sRGB')",
-            "rpr_render(case)"
-        ],
-        "script_info": [
-            "Agfa Agfacolor Futura II 200 Look"
         ],
         "scene": "ComplexTestUber.blend"
     },
@@ -404,23 +268,6 @@
         ],
         "script_info": [
             "Very High Contrast Look"
-        ],
-        "scene": "ComplexTestUber.blend"
-    },
-    {
-        "case": "BL28_RS_CM_027",
-        "status": "active",
-        "functions": [
-            "set_value(bpy.context.scene.display_settings, 'display_device', 'sRGB')",
-            "set_value(bpy.context.scene.view_settings, 'view_transform', 'Standard')",
-            "set_value(bpy.context.scene.view_settings, 'look', 'Standard - Kodak Gold 200 Contrast')",
-            "set_value(bpy.context.scene.view_settings, 'exposure', 0)",
-            "set_value(bpy.context.scene.view_settings, 'gamma', 1)",
-            "set_value(bpy.context.scene.sequencer_colorspace_settings, 'name', 'sRGB')",
-            "rpr_render(case)"
-        ],
-        "script_info": [
-            "Kodak Gold 200 Look"
         ],
         "scene": "ComplexTestUber.blend"
     },
@@ -744,23 +591,6 @@
         ],
         "script_info": [
             "sRGB Color Space"
-        ],
-        "scene": "ComplexTestUber.blend"
-    },
-    {
-        "case": "BL28_RS_CM_047",
-        "status": "active",
-        "functions": [
-            "set_value(bpy.context.scene.display_settings, 'display_device', 'sRGB')",
-            "set_value(bpy.context.scene.view_settings, 'view_transform', 'Standard')",
-            "set_value(bpy.context.scene.view_settings, 'look', 'Standard - Base Contrast')",
-            "set_value(bpy.context.scene.view_settings, 'exposure', 0)",
-            "set_value(bpy.context.scene.view_settings, 'gamma', 1)",
-            "set_value(bpy.context.scene.sequencer_colorspace_settings, 'name', 'VD16')",
-            "rpr_render(case)"
-        ],
-        "script_info": [
-            "VD16 Color Space"
         ],
         "scene": "ComplexTestUber.blend"
     },

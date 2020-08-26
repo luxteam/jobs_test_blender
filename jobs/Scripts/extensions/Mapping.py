@@ -23,3 +23,8 @@ def remove_output_links(material_name, node_name):
     for i in material_links:
         if (node == i.from_node):
             material_links.remove(i)
+
+def set_default():
+    set_vector('Material', 'Mapping', 'Location', (0, 0, 0))
+    set_vector('Material', 'Mapping', 'Rotation', (0, 0, 0))
+    set_vector('Material', 'Mapping', 'Scale', (1, 1, 1))
