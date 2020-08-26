@@ -122,6 +122,8 @@ def main(args):
             template['test_group'] = args.testType
             template['date_time'] = datetime.now().strftime(
                 '%m/%d/%Y %H:%M:%S')
+            if case['status'] != 'skipped':
+                template['group_timeout_exceeded'] = False
 
             with open(os.path.join(work_dir, case['case'] + core_config.CASE_REPORT_SUFFIX), 'w') as f:
                 f.write(json.dumps([template], indent=4))
@@ -305,6 +307,30 @@ if __name__ == "__main__":
                 active_cases += 1
 
         if active_cases == 0 or iteration > len(cases) * 2:  # 2- retries count
+            for case in cases:
+                error_message = ''
+                number_of_tries = case.get('number_of_tries', 0)
+                if case['status'] in ['fail', 'error']:
+                    error_message = "Testcase wasn't executed successfully (all attempts were used). Number of tries: {}".format(str(number_of_tries))
+                elif case['status'] in ['active', 'inprogress']:
+                    if number_of_tries:
+                        error_message = "Testcase wasn't finished. Number of tries: {}".format(str(number_of_tries))
+                    else:
+                        error_message = "Testcase wasn't run"
+
+                if error_message:
+                    core_config.main_logger.info("Testcase {} wasn't finished successfully: {}".format(case['case'], error_message))
+                    path_to_file = os.path.join(args.output, case['case'] + '_RPR.json')
+
+                    with open(path_to_file, 'r') as file:
+                        report = json.load(file)
+
+                    report[0]['group_timeout_exceeded'] = False
+                    report[0]['message'].append(error_message)
+
+                    with open(path_to_file, 'w') as file:
+                        json.dump(report, file, indent=4)
+
             # exit script if base_functions don't change number of active cases
             kill_process(PROCESS)
             core_config.main_logger.info(
