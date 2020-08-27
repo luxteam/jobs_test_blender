@@ -426,7 +426,7 @@
         "script_info": [
             "Motion Blur + ML (Color + AOV) + Color Managment"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "MotionBlur.blend"
     },
     {
         "case": "BL28_RS_CPU_029",
