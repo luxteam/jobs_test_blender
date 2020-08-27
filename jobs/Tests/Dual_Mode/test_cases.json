@@ -449,7 +449,7 @@
         "script_info": [
             "Motion Blur + ML (Color only) + Color Managment"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "MotionBlur.blend"
     },
     {
         "case": "BL28_RS_DUAL_030",
