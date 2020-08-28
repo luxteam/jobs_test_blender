@@ -104,7 +104,7 @@
             "enable_dual_mode()",
             "set_value(scene.render, 'use_motion_blur', True)",
             "camera = bpy.data.cameras['Camera']",
-            "set_value(camera.rpr, 'motion_blur_exposure', 0)",
+            "set_value(camera.rpr, 'motion_blur_exposure', 5)",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -426,7 +426,7 @@
         "script_info": [
             "Motion Blur + ML (Color + AOV) + Color Managment"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "MotionBlur.blend"
     },
     {
         "case": "BL28_RS_DUAL_029",
