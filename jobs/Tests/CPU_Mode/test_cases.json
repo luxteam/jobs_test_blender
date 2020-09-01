@@ -3,10 +3,8 @@
         "case": "BL28_RS_CPU_001",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "set_value(scene.rpr, 'render_quality', 'FULL')",
-            "rpr_render(case)",
-            "set_value(scene.rpr, 'render_quality', ENGINE)"
+            "rpr_render(case)"
         ],
         "script_info": [
             "Tahoe"
@@ -17,10 +15,8 @@
         "case": "BL28_RS_CPU_002",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "set_value(scene.rpr, 'render_quality', 'FULL2')",
-            "rpr_render(case)",
-            "set_value(scene.rpr, 'render_quality', ENGINE)"
+            "rpr_render(case)"
         ],
         "script_info": [
             "NorthStar"
@@ -34,10 +30,8 @@
         "case": "BL28_RS_CPU_003",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "set_value(scene.rpr, 'render_quality', 'LOW')",
-            "rpr_render(case)",
-            "set_value(scene.rpr, 'render_quality', ENGINE)"
+            "rpr_render(case)"
         ],
         "script_info": [
             "Hybrid Low"
@@ -48,10 +42,8 @@
         "case": "BL28_RS_CPU_004",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "set_value(scene.rpr, 'render_quality', 'MEDIUM')",
-            "rpr_render(case)",
-            "set_value(scene.rpr, 'render_quality', ENGINE)"
+            "rpr_render(case)"
         ],
         "script_info": [
             "Hybrid Medium"
@@ -62,10 +54,8 @@
         "case": "BL28_RS_CPU_005",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "set_value(scene.rpr, 'render_quality', 'HIGH')",
-            "rpr_render(case)",
-            "set_value(scene.rpr, 'render_quality', ENGINE)"
+            "rpr_render(case)"
         ],
         "script_info": [
             "Hybrid High"
@@ -76,7 +66,6 @@
         "case": "BL28_RS_CPU_006",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.1)",
             "rpr_render(case)",
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.05)"
@@ -90,7 +79,6 @@
         "case": "BL28_RS_CPU_007",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 1)",
             "rpr_render(case)",
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.05)"
@@ -104,7 +92,6 @@
         "case": "BL28_RS_CPU_008",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "set_value(scene.render, 'use_motion_blur', True)",
             "camera = bpy.data.cameras['Camera']",
             "set_value(camera.rpr, 'motion_blur_exposure', 0)",
@@ -119,7 +106,6 @@
         "case": "BL28_RS_CPU_009",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
 			"bpy.context.scene.rpr.use_tile_render = True",
             "rpr_render(case)",
 			"bpy.context.scene.rpr.use_tile_render = False"
@@ -133,7 +119,6 @@
         "case": "BL28_RS_CPU_010",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERAL')",
@@ -149,7 +134,6 @@
         "case": "BL28_RS_CPU_011",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'LWR')",
@@ -165,7 +149,6 @@
         "case": "BL28_RS_CPU_012",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
@@ -181,7 +164,6 @@
         "case": "BL28_RS_CPU_013",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
@@ -198,7 +180,6 @@
         "case": "BL28_RS_CPU_014",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERAL')",
@@ -216,7 +197,6 @@
         "case": "BL28_RS_CPU_015",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "set_value(bpy.context.scene.rpr, 'pixel_filter', 'LANCZOS')",
             "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 10)",
             "rpr_render(case)",
@@ -232,7 +212,6 @@
         "case": "BL28_RS_CPU_016",
         "status": "skipped",
         "functions": [
-            "enable_cpu_mode()",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -244,13 +223,13 @@
         "case": "BL28_RS_CPU_017",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "set_value(scene.rpr, 'use_render_stamp', True)",
             "set_value(scene.rpr, 'render_stamp', 'Radeon ProRender for Blender %b | %h | Time: %pt | Passes: %pp | Objects: %so | Lights: %sl')",
             "rpr_render(case)",
             "set_value(scene.rpr, 'use_render_stamp', False)"
         ],
         "script_info": [
+            "Do not compare",
             "Render Stamp"
         ],
         "scene": "ComplexTestUber.blend"
@@ -259,7 +238,6 @@
         "case": "BL28_RS_CPU_018",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "set_value(bpy.context.scene.display_settings, 'display_device', 'XYZ')",
             "set_value(bpy.context.scene.view_settings, 'gamma', 4)",
             "set_value(bpy.context.scene.view_settings, 'exposure', 0.2)",
@@ -277,7 +255,6 @@
         "case": "BL28_RS_CPU_019",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -289,7 +266,6 @@
         "case": "BL28_RS_CPU_020",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "set_value(scene.render, 'resolution_x', 4096)",
             "set_value(scene.render, 'resolution_y', 3204)",
             "rpr_render(case)",
@@ -305,7 +281,6 @@
         "case": "BL28_RS_CPU_021",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 5",
             "rpr_render(case)"
         ],
@@ -318,7 +293,6 @@
         "case": "BL28_RS_CPU_022",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -330,7 +304,6 @@
         "case": "BL28_RS_CPU_023",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -342,7 +315,6 @@
         "case": "BL28_RS_CPU_024",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -354,7 +326,6 @@
         "case": "BL28_RS_CPU_025",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
 			"bpy.context.scene.rpr.use_tile_render = True",
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -373,7 +344,6 @@
         "case": "BL28_RS_CPU_026",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
 			"bpy.context.scene.rpr.use_tile_render = True",
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -392,7 +362,6 @@
         "case": "BL28_RS_CPU_027",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
 			"bpy.context.scene.rpr.use_tile_render = True",
             "set_value(bpy.context.scene.rpr, 'pixel_filter', 'LANCZOS')",
             "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 10)",
@@ -412,7 +381,6 @@
         "case": "BL28_RS_CPU_028",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
@@ -435,7 +403,6 @@
         "case": "BL28_RS_CPU_029",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
@@ -458,7 +425,6 @@
         "case": "BL28_RS_CPU_030",
         "status": "active",
         "functions": [
-            "enable_cpu_mode()",
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
