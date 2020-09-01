@@ -25,7 +25,10 @@
         "script_info": [
             "NorthStar"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "ComplexTestUber.blend",
+        "skip_on":[
+            ["AMD Radeon RX Vega 56 (Metal)"]
+        ]
     },
     {
         "case": "BL28_RS_DUAL_003",
