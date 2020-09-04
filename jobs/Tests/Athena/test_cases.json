@@ -11,7 +11,7 @@
             "Athena Tahoe"
         ],
         "scene": "medium.blend",
-        "skip_on":[
+        "skip_config":[
             ["Linux"]
         ]
     },
@@ -27,7 +27,7 @@
             "Athena NorthStar"
         ],
         "scene": "medium.blend",
-        "skip_on":[
+        "skip_config":[
             ["Linux"]
         ]
     },
@@ -43,7 +43,7 @@
             "Athena Hybrid Low"
         ],
         "scene": "medium.blend",
-        "skip_on":[
+        "skip_config":[
             ["Linux"]
         ]
     },
@@ -59,7 +59,7 @@
             "Athena Hybrid Medium"
         ],
         "scene": "medium.blend",
-        "skip_on":[
+        "skip_config":[
             ["Linux"]
         ]
     },
@@ -75,7 +75,7 @@
             "Athena Hybrid High"
         ],
         "scene": "medium.blend",
-        "skip_on":[
+        "skip_config":[
             ["Linux"]
         ]
     }
