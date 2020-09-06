@@ -106,7 +106,7 @@ def main(args):
                 if render_platform.intersection(skip_config) == skip_config:
                     case['status'] = 'skipped'
 
-        if sum([engine for engine in case.get('skip_engine', []) if engine == args.engine]):
+        if sum([1 for engine in case.get('skip_engine', []) if engine == args.engine]):
             case['status'] = 'skipped'
 
         if case['status'] != 'done':
