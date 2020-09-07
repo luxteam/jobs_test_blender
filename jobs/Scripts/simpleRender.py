@@ -42,7 +42,7 @@ def createArgsParser():
     parser.add_argument('--error_count', required=False, default=0, type=int)
     parser.add_argument('--threshold', required=False,
                         default=0.05, type=float)
-    parser.add_argument('--retries', required=False, default=2)
+    parser.add_argument('--retries', required=False, default=2, type=int)
 
     return parser
 
