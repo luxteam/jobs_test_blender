@@ -16,6 +16,7 @@
         <argument>--SPU {SPU}</argument>
         <argument>--threshold {threshold}</argument>
         <argument>--engine "{engine}"</argument>
+        <argument>--retries {retries}</argument>
     </execute>
 
     <execute command='python "{ResourcesDir}/makeReport.py"'>
