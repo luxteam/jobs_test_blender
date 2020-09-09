@@ -111,7 +111,7 @@ def main(args):
                 case['status'] = 'active'
                 case['number_of_tries'] = case.get('number_of_tries', 0) + 1
 
-            template = core_config.RENDER_REPORT_BASE
+            template = core_config.RENDER_REPORT_BASE.copy()
             template['test_case'] = case['case']
             template['render_device'] = get_gpu()
             template['test_status'] = 'error'
