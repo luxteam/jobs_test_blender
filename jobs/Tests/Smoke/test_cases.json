@@ -63,7 +63,10 @@
 			"IES",
 			"Pass Limit: 50"
 		],
-		"scene": "IES.blend"
+		"scene": "IES.blend",
+		"skip_engine":[
+			"FULL2"
+		]
 	},
 	{
 		"case": "BL28_SM_006",
