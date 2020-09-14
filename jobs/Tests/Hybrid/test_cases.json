@@ -12,7 +12,7 @@
 			"Render RPR scene 'Low'"
 		],
 		"scene": "rpr_default_upd.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -29,7 +29,7 @@
 			"Render RPR scene 'Medium'"
 		],
 		"scene": "rpr_default_upd.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -46,7 +46,7 @@
 			"Render RPR scene 'High'"
 		],
 		"scene": "rpr_default_upd.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -65,7 +65,7 @@
 			"IES 'Low'"
 		],
 		"scene": "IES.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -84,7 +84,7 @@
 			"IES 'Medium'"
 		],
 		"scene": "IES.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -103,7 +103,7 @@
 			"IES 'High'"
 		],
 		"scene": "IES.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -125,7 +125,7 @@
 			"Uber 'Low'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -147,7 +147,7 @@
 			"Uber 'Medium'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -169,7 +169,7 @@
 			"Uber 'High'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -188,7 +188,7 @@
 			"Assign Princpled BSDF to object 'Low'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -207,7 +207,7 @@
 			"Assign Princpled BSDF to object 'Medium'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -226,7 +226,7 @@
 			"Assign Princpled BSDF to object 'High'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -243,7 +243,7 @@
 			"Sun & Sky 'Low'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -260,7 +260,7 @@
 			"Sun & Sky 'Medium'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -277,7 +277,7 @@
 			"Sun & Sky 'High'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -292,7 +292,7 @@
 			"IBL default 'Low'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -307,7 +307,7 @@
 			"IBL default 'Medium'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -322,7 +322,7 @@
 			"IBL default 'High'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -340,7 +340,7 @@
 			"HDR 'Low'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -358,7 +358,7 @@
 			"HDR 'Medium'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -376,7 +376,7 @@
 			"HDR 'High'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -394,7 +394,7 @@
 			"EXR 'Low'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -412,7 +412,7 @@
 			"EXR 'Medium'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -430,7 +430,7 @@
 			"EXR 'High'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -447,7 +447,7 @@
 			"Render 16 pass 'Low'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -464,7 +464,7 @@
 			"Render 16 pass 'Medium'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -481,7 +481,7 @@
 			"Render 16 pass 'High'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -498,7 +498,7 @@
 			"Render 100 passes 'Low'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -515,7 +515,7 @@
 			"Render 100 passes 'Medium'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -532,7 +532,7 @@
 			"Render 100 passes 'High'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -547,7 +547,7 @@
 			"Multimaterials 'Low'"
 		],
 		"scene": "Multimaterials.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -562,7 +562,7 @@
 			"Multimaterials 'Medium'"
 		],
 		"scene": "Multimaterials.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -577,7 +577,7 @@
 			"Multimaterials 'High'"
 		],
 		"scene": "Multimaterials.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -594,7 +594,7 @@
 			"Tile rendering 'Low'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -611,7 +611,7 @@
 			"Tile rendering 'Medium'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -628,7 +628,7 @@
 			"Tile rendering 'High'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -645,7 +645,7 @@
 			"Render Stamp 'Low'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -662,7 +662,7 @@
 			"Render Stamp 'Medium'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -679,7 +679,7 @@
 			"Render Stamp 'High'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -696,7 +696,7 @@
 			"Change renderer in viewport render preview from default to RPR (IPR analog) 'Low'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -713,7 +713,7 @@
 			"Change renderer in viewport render preview from default to RPR (IPR analog) 'Medium'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -730,7 +730,7 @@
 			"Change renderer in viewport render preview from default to RPR (IPR analog) 'High'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -751,7 +751,7 @@
 			"Hair Render 'Low'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -772,7 +772,7 @@
 			"Hair Render 'Medium'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -793,7 +793,7 @@
 			"Hair Render 'High'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -812,7 +812,7 @@
 			"Denoiser EAW default 'Low'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -831,7 +831,7 @@
 			"Denoiser EAW default 'Medium'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -850,7 +850,7 @@
 			"Denoiser EAW default 'High'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -869,7 +869,7 @@
 			"Denoiser LWR default 'Low'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -888,7 +888,7 @@
 			"Denoiser LWR default 'Medium'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -907,7 +907,7 @@
 			"Denoiser LWR default 'High'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -926,7 +926,7 @@
 			"Denoiser Bilateral default 'Low'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -945,7 +945,7 @@
 			"Denoiser Bilateral default 'Medium'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -964,7 +964,7 @@
 			"Denoiser Bilateral default 'High'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -983,7 +983,7 @@
 			"Denoiser Machine Learning default 'Low'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon VII"],
             ["AMD Radeon RX 5700 XT"]
         ]
@@ -1003,7 +1003,7 @@
 			"Denoiser Machine Learning default 'Medium'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon VII"],
             ["AMD Radeon RX 5700 XT"]
         ]
@@ -1023,7 +1023,7 @@
 			"Denoiser Machine Learning default 'High'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon VII"],
             ["AMD Radeon RX 5700 XT"]
         ]
@@ -1043,7 +1043,7 @@
 			"Assign material from Mat. Library 'Low'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1062,7 +1062,7 @@
 			"Assign material from Mat. Library 'Medium'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1081,7 +1081,7 @@
 			"Assign material from Mat. Library 'High'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1098,7 +1098,7 @@
 			"AOV - Geometric Normal 'Low'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1115,7 +1115,7 @@
 			"AOV - Geometric Normal 'Medium'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1132,7 +1132,7 @@
 			"AOV - Geometric Normal 'High'"
 		],
 		"scene": "default.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1149,7 +1149,7 @@
 			"Base Light = Area Light 'Low'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1166,7 +1166,7 @@
 			"Base Light = Area Light 'Medium'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1183,7 +1183,7 @@
 			"Base Light = Area Light 'High'"
 		],
 		"scene": "rpr_hybrid_shaderball.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1199,7 +1199,7 @@
 			"Instances 'Low'"
 		],
 		"scene": "instances.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1215,7 +1215,7 @@
 			"Instances 'Medium'"
 		],
 		"scene": "instances.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1231,7 +1231,7 @@
 			"Instances 'High'"
 		],
 		"scene": "instances.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1246,7 +1246,7 @@
 			"4-5 lights in one scene 'Low'"
 		],
 		"scene": "5_lights.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1261,7 +1261,7 @@
 			"4-5 lights in one scene 'Medium'"
 		],
 		"scene": "5_lights.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1276,7 +1276,7 @@
 			"4-5 lights in one scene 'High'"
 		],
 		"scene": "5_lights.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1291,7 +1291,7 @@
 			"AOV-SC 'Low'"
 		],
 		"scene": "AOV_SC.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1306,7 +1306,7 @@
 			"AOV-SC 'Medium'"
 		],
 		"scene": "AOV_SC.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1321,7 +1321,7 @@
 			"AOV-SC 'High'"
 		],
 		"scene": "AOV_SC.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1336,7 +1336,7 @@
 			"SSS 'Low'"
 		],
 		"scene": "SSS_Test.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1351,7 +1351,7 @@
 			"SSS 'Medium'"
 		],
 		"scene": "SSS_Test.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1366,7 +1366,7 @@
 			"SSS 'High'"
 		],
 		"scene": "SSS_Test.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1381,7 +1381,7 @@
 			"Displacement 'Low'"
 		],
 		"scene": "Displacement.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1396,7 +1396,7 @@
 			"Displacement 'Medium'"
 		],
 		"scene": "Displacement.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1411,7 +1411,7 @@
 			"Displacement 'High'"
 		],
 		"scene": "Displacement.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1428,7 +1428,7 @@
 			"Rays Quality 'Low'"
 		],
 		"scene": "WaterInsideGlass.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1445,7 +1445,7 @@
 			"Rays Quality 'Medium'"
 		],
 		"scene": "WaterInsideGlass.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	},
@@ -1462,7 +1462,7 @@
 			"Rays Quality 'High'"
 		],
 		"scene": "WaterInsideGlass.blend"
-		,"skip_on": [
+		,"skip_config": [
             ["AMD Radeon RX 5700 XT"]
         ]
 	}
