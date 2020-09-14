@@ -3,6 +3,7 @@
         "case": "BL28_RS_QL_001",
         "status": "active",
         "script_info": [
+            "Black image expected",
             "Ray Depth - 0"
         ],
         "scene": "Quality.blend",
@@ -93,6 +94,7 @@
         "case": "BL28_RS_QL_021",
         "status": "active",
         "script_info": [
+            "Black image expected",
             "Ray Depth - 50",
             "Glossy - 0"
         ],
