@@ -250,7 +250,6 @@ def sync_time(work_dir):
 
             synchronization_time = sync_minutes * 60 + sync_seconds + sync_milisec / 1000
             case_json[0]['sync_time'] += synchronization_time
-            case_json[0]['render_time'] -= synchronization_time
 
             with open(case_report_path, 'w') as case_report:
                 case_report.write(json.dumps(case_json, indent=4))
