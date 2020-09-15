@@ -1,3 +1,6 @@
 {
-    "Smoke":""
+    "canBeSplitted":true,
+    "groups":{
+        "Smoke":"",
+    }
 }

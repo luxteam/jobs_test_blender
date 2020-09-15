@@ -1,4 +1,7 @@
 {
-    "Smoke":"",
-    "IBL":""
+    "canBeSplitted":true,
+    "groups":{
+        "Smoke":"",
+        "IBL":""
+    }
 }
