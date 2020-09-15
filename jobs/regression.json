@@ -1,5 +1,5 @@
 {
-    "canBeSplitted":false,
+    "split":false,
     "groups":{
         "Adaptive_Sampling":"BL28_RS_AS_055,BL28_RS_AS_062,BL28_RS_AS_064,BL28_RS_AS_069",
         "Animation":"BL28_RS_AN_002, BL28_RS_AN_032",
