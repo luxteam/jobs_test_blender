@@ -57,6 +57,7 @@ def main(args):
     except Exception as e:
         core_config.logging.error("Can't load test_cases.json")
         core_config.main_logger.error(str(e))
+        group_failed(args)
         exit(-1)
 
     try:
@@ -220,17 +221,21 @@ def main(args):
 
 
 def group_failed(args):
+    core_config.main_logger.error('Group failed')
+    status = 'skipped'
     try:
         cases = json.load(open(os.path.realpath(
             os.path.join(os.path.abspath(args.output), 'test_cases.json'))))
     except Exception as e:
         core_config.logging.error("Can't load test_cases.json")
         core_config.main_logger.error(str(e))
-        exit(-1)
+        cases = json.load(open(os.path.realpath(os.path.join(os.path.dirname(
+            __file__), '..', 'Tests', args.testType, 'test_cases.json'))))
+        status = 'inprogress'
 
     for case in cases:
         if case['status'] == 'active':
-            case['status'] = 'skipped'
+            case['status'] = status
 
     with open(os.path.join(os.path.abspath(args.output), 'test_cases.json'), "w+") as f:
         json.dump(cases, f, indent=4)
