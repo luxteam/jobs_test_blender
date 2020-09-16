@@ -284,6 +284,7 @@
             "rpr_render(case)"
         ],
         "script_info": [
+            "Black image expected",
             "Explosure -32"
         ],
         "scene": "ComplexTestUber.blend"
@@ -301,6 +302,7 @@
             "rpr_render(case)"
         ],
         "script_info": [
+            "Black image expected",
             "Explosure -10"
         ],
         "scene": "ComplexTestUber.blend"

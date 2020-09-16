@@ -98,13 +98,35 @@ def main(args):
     if not gpu:
         core_config.main_logger.error("Can't get gpu name")
     render_platform = {platform.system(), gpu}
+    system_pl = platform.system()
+
+    baseline_dir = 'rpr_blender_autotests_baselines'
+    if args.engine == 'FULL2' and not 'NorthStar' in args.testType:
+        baseline_dir = baseline_dir + '-NorthStar'
+
+    if system_pl == "Windows":
+        baseline_path_tr = os.path.join(
+            'c:/TestResources', baseline_dir, args.testType)
+    else:
+        baseline_path_tr = os.path.expandvars(os.path.join(
+            '$CIS_TOOLS/../TestResources', baseline_dir, args.testType))
+
+    baseline_path = os.path.join(
+        work_dir, os.path.pardir, os.path.pardir, os.path.pardir, 'Baseline', args.testType)
+
+    if not os.path.exists(baseline_path):
+        os.makedirs(baseline_path)
+        os.makedirs(os.path.join(baseline_path, 'Color'))
 
     for case in cases:
-        if sum([render_platform & set(skip_conf) == set(skip_conf) for skip_conf in case.get('skip_on', '')]):
-            for i in case['skip_on']:
-                skip_on = set(i)
-                if render_platform.intersection(skip_on) == skip_on:
+        if sum([render_platform & set(skip_conf) == set(skip_conf) for skip_conf in case.get('skip_config', '')]):
+            for i in case['skip_config']:
+                skip_config = set(i)
+                if render_platform.intersection(skip_config) == skip_config:
                     case['status'] = 'skipped'
+
+        if sum([1 for engine in case.get('skip_engine', []) if engine == args.engine]):
+            case['status'] = 'skipped'
 
         if case['status'] != 'done':
             if case["status"] == 'inprogress':
@@ -128,13 +150,27 @@ def main(args):
             with open(os.path.join(work_dir, case['case'] + core_config.CASE_REPORT_SUFFIX), 'w') as f:
                 f.write(json.dumps([template], indent=4))
 
+        try:
+            copyfile(os.path.join(baseline_path_tr, case['case'] + core_config.CASE_REPORT_SUFFIX),
+                     os.path.join(baseline_path, case['case'] + core_config.CASE_REPORT_SUFFIX))
+
+            with open(os.path.join(baseline_path, case['case'] + core_config.CASE_REPORT_SUFFIX)) as baseline:
+                baseline_json = json.load(baseline)
+
+            for thumb in [''] + core_config.THUMBNAIL_PREFIXES:
+                if thumb + 'render_color_path' and os.path.exists(os.path.join(baseline_path_tr, baseline_json[thumb + 'render_color_path'])):
+                    copyfile(os.path.join(baseline_path_tr, baseline_json[thumb + 'render_color_path']),
+                             os.path.join(baseline_path, baseline_json[thumb + 'render_color_path']))
+        except:
+            core_config.main_logger.error('Failed to copy baseline ' +
+                                          os.path.join(baseline_path_tr, case['case'] + core_config.CASE_REPORT_SUFFIX))
+
     with open(os.path.join(work_dir, 'test_cases.json'), "w+") as f:
         json.dump(cases, f, indent=4)
 
     cmdRun = '"{tool}" -b -P "{template}"\n'.format(
         tool=args.tool, template=os.path.join(args.output, 'base_functions.py'))
 
-    system_pl = platform.system()
     if system_pl == "Windows":
         cmdScriptPath = os.path.join(work_dir, 'script.bat')
         with open(cmdScriptPath, 'w') as f:

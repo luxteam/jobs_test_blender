@@ -156,7 +156,7 @@
             "Denoiser type: ML"
         ],
         "scene": "DualCpu.blend",
-        "skip_on": [
+        "skip_config": [
             ["AMD Radeon RX Vega 56 (Metal)"],
             ["Linux"]
         ]
@@ -177,7 +177,7 @@
             "Use Color AOV: True"
         ],
         "scene": "DenoiserMetal.blend",
-        "skip_on":[
+        "skip_config":[
             ["Linux"]
         ]
     },
@@ -197,7 +197,7 @@
             "Use Color AOV: False"
         ],
         "scene": "DenoiserMetal.blend",
-        "skip_on":[
+        "skip_config":[
             ["Linux"]
         ]
     },
@@ -269,7 +269,7 @@
             "IES intensity: 3"
         ],
         "scene": "DenoiserLight.blend",
-        "skip_on": [
+        "skip_config": [
             ["AMD Radeon VII"], ["AMD Radeon RX Vega 56 (Metal)"]
         ]
     },
@@ -295,7 +295,7 @@
             "IES intensity: 3"
         ],
         "scene": "DenoiserLight.blend",
-        "skip_on": [
+        "skip_config": [
             ["AMD Radeon VII"]
         ]
     },
@@ -321,7 +321,7 @@
             "IES intensity: 3"
         ],
         "scene": "DenoiserLight.blend",
-        "skip_on": [
+        "skip_config": [
             ["AMD Radeon VII"], ["AMD Radeon RX Vega 56 (Metal)"]
         ]
     },
@@ -347,7 +347,7 @@
             "IES intensity: 3"
         ],
         "scene": "DenoiserLight.blend",
-        "skip_on": [
+        "skip_config": [
             ["AMD Radeon VII"]
         ]
     },
@@ -493,7 +493,7 @@
             "Use Color AOV: True"
         ],
         "scene": "DenoiserDOF.blend",
-        "skip_on": [
+        "skip_config": [
             ["AMD Radeon VII"], ["AMD Radeon RX Vega 56 (Metal)"]
         ]
     },
@@ -513,7 +513,7 @@
             "Use Color AOV: False"
         ],
         "scene": "DenoiserDOF.blend",
-        "skip_on": [
+        "skip_config": [
             ["AMD Radeon VII"]
         ]
     },
@@ -578,7 +578,7 @@
             "Use Color AOV: True"
         ],
         "scene": "DenoiserComplexLighting.blend",
-        "skip_on":[
+        "skip_config":[
             ["Linux"]
         ]
     },
@@ -598,7 +598,7 @@
             "Use Color AOV: False"
         ],
         "scene": "DenoiserComplexLighting.blend",
-        "skip_on":[
+        "skip_config":[
             ["Linux"]
         ]
     },
@@ -663,7 +663,7 @@
             "Use Color AOV: True"
         ],
         "scene": "DenoiserMaterials.blend",
-        "skip_on": [
+        "skip_config": [
             ["AMD Radeon VII"]
         ]
     },
@@ -683,7 +683,7 @@
             "Use Color AOV: False"
         ],
         "scene": "DenoiserMaterials.blend",
-        "skip_on": [
+        "skip_config": [
             ["AMD Radeon VII"]
         ]
     },
@@ -751,7 +751,7 @@
             "Use Color AOV: True"
         ],
         "scene": "DenoiserMaterials.blend",
-        "skip_on": [
+        "skip_config": [
             ["AMD Radeon VII"]
         ]
     },
@@ -774,7 +774,7 @@
             "Use Color AOV: False"
         ],
         "scene": "DenoiserMaterials.blend",
-        "skip_on": [
+        "skip_config": [
             ["AMD Radeon VII"]
         ]
     },
@@ -851,7 +851,7 @@
             "Use Color AOV: True"
         ],
         "scene": "DenoiserMaterials.blend",
-        "skip_on": [
+        "skip_config": [
             ["AMD Radeon VII"]
         ]
     },
@@ -874,7 +874,7 @@
             "Use Color AOV: False"
         ],
         "scene": "DenoiserMaterials.blend",
-        "skip_on": [
+        "skip_config": [
             ["AMD Radeon VII"]
         ]
     },
@@ -951,7 +951,7 @@
             "Use Color AOV: True"
         ],
         "scene": "DenoiserMaterials.blend",
-        "skip_on": [
+        "skip_config": [
             ["AMD Radeon VII"]
         ]
     },
@@ -974,7 +974,7 @@
             "Use Color AOV: False"
         ],
         "scene": "DenoiserMaterials.blend",
-        "skip_on": [
+        "skip_config": [
             ["AMD Radeon VII"]
         ]
     },
@@ -1051,7 +1051,7 @@
             "Use Color AOV: True"
         ],
         "scene": "DenoiserMaterials.blend",
-        "skip_on": [
+        "skip_config": [
             ["AMD Radeon VII"], ["AMD Radeon RX Vega 56 (Metal)"]
         ]
     },
@@ -1074,7 +1074,7 @@
             "Use Color AOV: False"
         ],
         "scene": "DenoiserMaterials.blend",
-        "skip_on": [
+        "skip_config": [
             ["AMD Radeon VII"]
         ]
     },
