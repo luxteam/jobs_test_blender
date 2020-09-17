@@ -11,7 +11,12 @@
             "rpr_render(case)"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -26,7 +31,12 @@
             "rpr_render(case)"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -43,7 +53,12 @@
             "bpy.data.volumes['New_0001'].display.density = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -59,7 +74,12 @@
             "bpy.data.volumes['New_0001'].display.density = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -75,7 +95,12 @@
             "bpy.data.volumes['New_0001'].display.density = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -91,7 +116,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -106,7 +136,12 @@
             "rpr_render(case)"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -122,7 +157,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -138,7 +178,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -154,7 +199,12 @@
             "delete_checker()"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -170,7 +220,12 @@
             "delete_imagemap()"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -186,7 +241,12 @@
             "delete_imagemap()"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -204,7 +264,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 1"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -222,7 +287,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 1"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -239,7 +309,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -257,7 +332,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 1"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -275,7 +355,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 1"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -293,7 +378,12 @@
             "delete_checker()"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -311,7 +401,12 @@
             "delete_imagemap()"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -329,7 +424,12 @@
             "delete_imagemap()"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -347,7 +447,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Anisotropy'].default_value = 0"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -363,7 +468,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -381,7 +491,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Anisotropy'].default_value = 0"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -399,7 +514,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Absorption Color'].default_value = (0, 0, 0, 1)"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -417,7 +537,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Absorption Color'].default_value = (0, 0, 0, 1)"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -435,7 +560,12 @@
             "delete_checker()"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -455,7 +585,12 @@
             "delete_checker()"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -475,7 +610,12 @@
             "delete_imagemap()"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -495,7 +635,12 @@
             "delete_imagemap()"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -513,7 +658,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -531,7 +681,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -549,7 +704,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -567,7 +727,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -585,7 +750,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -603,7 +773,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -621,7 +796,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -639,7 +819,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -659,7 +844,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -679,7 +869,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -699,7 +894,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -719,7 +919,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -739,7 +944,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -759,7 +969,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -779,7 +994,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -799,7 +1019,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -817,7 +1042,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -835,7 +1065,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -853,7 +1088,12 @@
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 10"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -869,7 +1109,12 @@
             "rpr_render(case)"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -884,7 +1129,12 @@
             "rpr_render(case)"
         ],
         "skip_config": [
-            ["AMD Radeon VII"]
+            [
+                "AMD Radeon VII"
+            ]
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     }
 ]
