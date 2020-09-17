@@ -23,6 +23,7 @@ RESOLUTION_Y = {resolution_y}
 SPU = {SPU}
 THRESHOLD = {threshold}
 ENGINE = r'{engine}'
+RETRIES = {retries}
 LOGS_DIR = path.join(WORK_DIR, 'render_tool_logs')
 
 
@@ -232,8 +233,7 @@ def case_function(case):
     if case['functions'][0] == 'check_test_cases_success_save':
         func = 'save_report'
 
-    # 2- retries count
-    if case['status'] == 'fail' or case.get('number_of_tries', 1) == 2:
+    if case['status'] == 'fail' or case.get('number_of_tries', 1) == RETRIES:
         case['status'] = 'error'
         func = 'save_report'
     elif case['status'] == 'skipped':
