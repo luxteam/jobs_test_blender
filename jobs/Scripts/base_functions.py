@@ -190,6 +190,8 @@ def prerender(case):
     set_value(scene.render, 'use_file_extension', True)
     set_value(scene.render, 'use_overwrite', True)
 
+    set_value(scene.rpr, 'log_min_level', 'DEBUG')
+
     for function in case['functions']:
         try:
             if re.match('((^\S+|^\S+ \S+) = |^print|^if|^for|^with)', function):
