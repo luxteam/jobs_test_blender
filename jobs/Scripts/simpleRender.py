@@ -68,14 +68,16 @@ def athena_disable(disable):
     with open(CONFIG_PATH, 'w') as config_file:
         config_file.write(config_file_new)
 
+    return ATHENA_DIR
+
 
 def main(args):
     perf_count.event_record(args.output, 'Prepare tests', True)
 
     if args.testType in ['Athena']:
-        athena_disable(False)
+        ATHENA_DIR = athena_disable(False)
     else:
-        athena_disable(True)
+        ATHENA_DIR = athena_disable(True)
 
     core_config.main_logger.info('Make "base_functions.py"')
 
@@ -99,7 +101,7 @@ def main(args):
         with open(os.path.join(os.path.dirname(__file__), 'extensions', args.testType + '.py')) as f:
             extension_script = f.read()
         script = script.split('# place for extension functions')
-        script = script[0] + extension_script + script[1]
+        script = script[0] + "ATHENA_DIR=\"{}\"\n".format(ATHENA_DIR.replace('\\', '\\\\')) + extension_script + script[1]
 
     work_dir = os.path.abspath(args.output)
     script = script.format(work_dir=work_dir, testType=args.testType, render_device=args.render_device, res_path=args.res_path, pass_limit=args.pass_limit,
