@@ -443,7 +443,7 @@
 			"Pass Limit: 50"
 		],
 		"scene": "DualCpu.blend",
-		"skip_config": [
+		"skip_on": [
             ["AMD Radeon VII"]
         ]
 	},
@@ -721,7 +721,7 @@
 			"ML in CPU mode"
 		],
 		"scene": "DualCpu.blend",
-		"skip_config": [
+		"skip_on": [
             ["AMD Radeon VII"]
         ]
 	},
@@ -745,7 +745,7 @@
 			"ML in dual mode"
 		],
 		"scene": "DualCpu.blend",
-		"skip_config": [
+		"skip_on": [
             ["AMD Radeon VII"]
         ]
 	},
@@ -780,5 +780,115 @@
 			"dual mode"
 		],
 		"scene": "DualCpu.blend"
+	},
+	{
+		"case": "BL28_SM_047",
+		"status": "active",
+		"functions": [
+			"rpr_render(case)"
+		],
+		"script_info": [
+			"Complex 1"
+		],
+		"scene": "1_ComplexLighting.blend"
+	},
+	{
+		"case": "BL28_SM_048",
+		"status": "active",
+		"functions": [
+			"rpr_render(case)"
+		],
+		"script_info": [
+			"Complex 2"
+		],
+		"scene": "2_chevrolet_corvette_stingray_c7RPR.blend"
+	},
+	{
+		"case": "BL28_SM_049",
+		"status": "active",
+		"functions": [
+			"rpr_render(case)"
+		],
+		"script_info": [
+			"Complex 3"
+		],
+		"scene": "3_BridgeBooble.blend"
+	},
+	{
+		"case": "BL28_SM_050",
+		"status": "active",
+		"functions": [
+			"rpr_render(case)"
+		],
+		"script_info": [
+			"Complex 4"
+		],
+		"scene": "4_fsr_modes.blend"
+	},
+	{
+		"case": "BL28_SM_051",
+		"status": "active",
+		"functions": [
+			"rpr_render(case)"
+		],
+		"script_info": [
+			"Complex 5"
+		],
+		"scene": "5_EnvyScene.blend"
+	},
+	{
+		"case": "BL28_SM_052",
+		"status": "active",
+		"functions": [
+			"rpr_render(case)"
+		],
+		"script_info": [
+			"Complex 6"
+		],
+		"scene": "6_IvyColumn.blend"
+	},
+	{
+		"case": "BL28_SM_053",
+		"status": "active",
+		"functions": [
+			"rpr_render(case)"
+		],
+		"script_info": [
+			"Complex 7"
+		],
+		"scene": "7_render_passes.blend"
+	},
+	{
+		"case": "BL28_SM_054",
+		"status": "active",
+		"functions": [
+			"rpr_render(case)"
+		],
+		"script_info": [
+			"Complex 8"
+		],
+		"scene": "8_.blend"
+	},
+	{
+		"case": "BL28_SM_055",
+		"status": "active",
+		"functions": [
+			"rpr_render(case)"
+		],
+		"script_info": [
+			"Complex 9"
+		],
+		"scene": "9_sun_light.blend"
+	},
+	{
+		"case": "BL28_SM_056",
+		"status": "active",
+		"functions": [
+			"rpr_render(case)"
+		],
+		"script_info": [
+			"Complex 10"
+		],
+		"scene": "10_Barcelona_Pavillion.blend"
 	}
 ]
