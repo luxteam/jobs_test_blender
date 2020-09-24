@@ -23,6 +23,7 @@ RESOLUTION_Y = {resolution_y}
 SPU = {SPU}
 THRESHOLD = {threshold}
 ENGINE = r'{engine}'
+RETRIES = {retries}
 LOGS_DIR = path.join(WORK_DIR, 'render_tool_logs')
 
 
@@ -189,6 +190,8 @@ def prerender(case):
     set_value(scene.render, 'use_file_extension', True)
     set_value(scene.render, 'use_overwrite', True)
 
+    set_value(scene.rpr, 'log_min_level', 'DEBUG')
+
     for function in case['functions']:
         try:
             if re.match('((^\S+|^\S+ \S+) = |^print|^if|^for|^with)', function):
@@ -232,8 +235,7 @@ def case_function(case):
     if case['functions'][0] == 'check_test_cases_success_save':
         func = 'save_report'
 
-    # 2- retries count
-    if case['status'] == 'fail' or case.get('number_of_tries', 1) == 2:
+    if case['status'] == 'fail' or case.get('number_of_tries', 1) == RETRIES:
         case['status'] = 'error'
         func = 'save_report'
     elif case['status'] == 'skipped':

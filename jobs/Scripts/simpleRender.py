@@ -42,12 +42,42 @@ def createArgsParser():
     parser.add_argument('--error_count', required=False, default=0, type=int)
     parser.add_argument('--threshold', required=False,
                         default=0.05, type=float)
+    parser.add_argument('--retries', required=False, default=2, type=int)
 
     return parser
 
 
+def athena_disable(disable):
+    if (platform.system() == 'Windows'):
+        CONFIG_PATH = os.path.expandvars(
+            '%appdata%/Blender Foundation/Blender/2.83/scripts/addons/rprblender/config.py')
+        ATHENA_DIR = os.path.expandvars('%appdata%/../Local/Temp/rprblender/')
+    elif (platform.system() == 'Darwin'):
+        CONFIG_PATH = os.path.expanduser(
+            '~/Library/Application Support/Blender/2.83/scripts/addons/rprblender/config.py')
+        ATHENA_DIR = os.environ['TMPDIR'] + 'rprblender/'
+    else:
+        CONFIG_PATH = os.path.expanduser(
+            '~/.config/blender/2.83/scripts/addons/rprblender/config.py')
+        ATHENA_DIR = '/tmp/rprblender/'
+
+    config_file_new = ''
+
+    with open(CONFIG_PATH, 'r') as config_file:
+        config_file_new = config_file.read().replace('disable_athena_report = ' + str(not disable), 'disable_athena_report = ' + str(disable))
+    with open(CONFIG_PATH, 'w') as config_file:
+        config_file.write(config_file_new)
+
+    return ATHENA_DIR
+
+
 def main(args):
     perf_count.event_record(args.output, 'Prepare tests', True)
+
+    if args.testType in ['Athena']:
+        ATHENA_DIR = athena_disable(False)
+    else:
+        ATHENA_DIR = athena_disable(True)
 
     core_config.main_logger.info('Make "base_functions.py"')
 
@@ -57,6 +87,7 @@ def main(args):
     except Exception as e:
         core_config.logging.error("Can't load test_cases.json")
         core_config.main_logger.error(str(e))
+        group_failed(args)
         exit(-1)
 
     try:
@@ -70,11 +101,12 @@ def main(args):
         with open(os.path.join(os.path.dirname(__file__), 'extensions', args.testType + '.py')) as f:
             extension_script = f.read()
         script = script.split('# place for extension functions')
-        script = script[0] + extension_script + script[1]
+        script = script[0] + "ATHENA_DIR=\"{}\"\n".format(ATHENA_DIR.replace('\\', '\\\\')) + extension_script + script[1]
 
     work_dir = os.path.abspath(args.output)
     script = script.format(work_dir=work_dir, testType=args.testType, render_device=args.render_device, res_path=args.res_path, pass_limit=args.pass_limit,
-                           resolution_x=args.resolution_x, resolution_y=args.resolution_y, SPU=args.SPU, threshold=args.threshold, engine=args.engine)
+                           resolution_x=args.resolution_x, resolution_y=args.resolution_y, SPU=args.SPU, threshold=args.threshold, engine=args.engine,
+                           retries=args.retries)
 
     with open(os.path.join(args.output, 'base_functions.py'), 'w') as file:
         file.write(script)
@@ -103,6 +135,12 @@ def main(args):
     baseline_dir = 'rpr_blender_autotests_baselines'
     if args.engine == 'FULL2' and not 'NorthStar' in args.testType:
         baseline_dir = baseline_dir + '-NorthStar'
+    elif args.engine == 'LOW' and not 'Hybrid' in args.testType:
+        baseline_dir = baseline_dir + '-HybridLow'
+    elif args.engine == 'MEDIUM' and not 'Hybrid' in args.testType:
+        baseline_dir = baseline_dir + '-HybridMedium'
+    elif args.engine == 'HIGH' and not 'Hybrid' in args.testType:
+        baseline_dir = baseline_dir + '-HybridHigh'
 
     if system_pl == "Windows":
         baseline_path_tr = os.path.join(
@@ -220,17 +258,21 @@ def main(args):
 
 
 def group_failed(args):
+    core_config.main_logger.error('Group failed')
+    status = 'skipped'
     try:
         cases = json.load(open(os.path.realpath(
             os.path.join(os.path.abspath(args.output), 'test_cases.json'))))
     except Exception as e:
         core_config.logging.error("Can't load test_cases.json")
         core_config.main_logger.error(str(e))
-        exit(-1)
+        cases = json.load(open(os.path.realpath(os.path.join(os.path.dirname(
+            __file__), '..', 'Tests', args.testType, 'test_cases.json'))))
+        status = 'inprogress'
 
     for case in cases:
         if case['status'] == 'active':
-            case['status'] = 'skipped'
+            case['status'] = status
 
     with open(os.path.join(os.path.abspath(args.output), 'test_cases.json'), "w+") as f:
         json.dump(cases, f, indent=4)
@@ -283,6 +325,7 @@ def sync_time(work_dir):
 
             synchronization_time = sync_minutes * 60 + sync_seconds + sync_milisec / 1000
             case_json[0]['sync_time'] += synchronization_time
+            case_json[0]['render_time'] -= synchronization_time
 
             with open(case_report_path, 'w') as case_report:
                 case_report.write(json.dumps(case_json, indent=4))
@@ -346,7 +389,7 @@ if __name__ == "__main__":
             if case['status'] in ['active', 'fail', 'inprogress']:
                 active_cases += 1
 
-        if active_cases == 0 or iteration > len(cases) * 2:  # 2- retries count
+        if active_cases == 0 or iteration > len(cases) * args.retries:
             for case in cases:
                 error_message = ''
                 number_of_tries = case.get('number_of_tries', 0)

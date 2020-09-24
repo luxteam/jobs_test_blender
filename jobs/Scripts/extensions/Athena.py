@@ -1,16 +1,6 @@
 import platform
 import getpass
 
-if (platform.system() == 'Windows'):
-    CONFIG_PATH = os.path.expandvars(
-        '%appdata%/Blender Foundation/Blender/2.83/scripts/addons/rprblender/config.py')
-    ATHENA_DIR = os.path.expandvars('%appdata%/../Local/Temp/rprblender/')
-elif (platform.system() == 'Darwin'):
-    CONFIG_PATH = os.path.expandvars(
-        '~/Library/Application Support/Blender/2.83/scripts/addons/rprblender/config.py')
-    ATHENA_DIR = os.environ['TMPDIR'] + 'rprblender/'
-# TODO implement Ubuntu
-
 
 def validate_athena(case):
     athena_files = os.listdir(ATHENA_DIR)
