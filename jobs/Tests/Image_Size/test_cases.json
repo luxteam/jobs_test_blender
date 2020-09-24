@@ -93,6 +93,9 @@
             "set_value(scene.render, 'pixel_aspect_y', 1)",
             "set_value(scene.render, 'resolution_percentage', 100)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "MEDIUM"
         ]
     },
     {
@@ -125,6 +128,9 @@
             "set_value(scene.render, 'pixel_aspect_y', 3)",
             "set_value(scene.render, 'resolution_percentage', 100)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "MEDIUM"
         ]
     },
     {
@@ -141,6 +147,9 @@
             "set_value(scene.render, 'pixel_aspect_y', 3)",
             "set_value(scene.render, 'resolution_percentage', 100)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "MEDIUM"
         ]
     },
     {
@@ -157,6 +166,9 @@
             "set_value(scene.render, 'pixel_aspect_y', 3)",
             "set_value(scene.render, 'resolution_percentage', 100)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "MEDIUM"
         ]
     },
     {
@@ -269,6 +281,9 @@
             "set_value(scene.render, 'pixel_aspect_y', 1)",
             "set_value(scene.render, 'resolution_percentage', 100)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "HIGH"
         ]
     },
     {
