@@ -443,7 +443,7 @@
 			"Pass Limit: 50"
 		],
 		"scene": "DualCpu.blend",
-		"skip_on": [
+		"skip_config": [
             ["AMD Radeon VII"]
         ]
 	},
@@ -721,7 +721,7 @@
 			"ML in CPU mode"
 		],
 		"scene": "DualCpu.blend",
-		"skip_on": [
+		"skip_config": [
             ["AMD Radeon VII"]
         ]
 	},
@@ -745,7 +745,7 @@
 			"ML in dual mode"
 		],
 		"scene": "DualCpu.blend",
-		"skip_on": [
+		"skip_config": [
             ["AMD Radeon VII"]
         ]
 	},
