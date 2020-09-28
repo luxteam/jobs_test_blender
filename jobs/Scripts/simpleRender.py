@@ -133,13 +133,13 @@ def main(args):
     system_pl = platform.system()
 
     baseline_dir = 'rpr_blender_autotests_baselines'
-    if args.engine == 'FULL2' and not 'NorthStar' in args.testType:
+    if args.engine == 'FULL2':
         baseline_dir = baseline_dir + '-NorthStar'
-    elif args.engine == 'LOW' and not 'Hybrid' in args.testType:
+    elif args.engine == 'LOW':
         baseline_dir = baseline_dir + '-HybridLow'
-    elif args.engine == 'MEDIUM' and not 'Hybrid' in args.testType:
+    elif args.engine == 'MEDIUM':
         baseline_dir = baseline_dir + '-HybridMedium'
-    elif args.engine == 'HIGH' and not 'Hybrid' in args.testType:
+    elif args.engine == 'HIGH':
         baseline_dir = baseline_dir + '-HybridHigh'
 
     if system_pl == "Windows":
