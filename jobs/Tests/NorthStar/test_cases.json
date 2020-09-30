@@ -11,7 +11,7 @@
 			"Render RPR scene"
 		],
 		"scene": "rpr_default_upd.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -29,7 +29,7 @@
 			"IES"
 		],
 		"scene": "IES.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -50,7 +50,7 @@
 			"Uber"
 		],
 		"scene": "default.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -68,7 +68,7 @@
 			"Assign Princpled BSDF to object"
 		],
 		"scene": "default.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -84,7 +84,7 @@
 			"Sun & Sky"
 		],
 		"scene": "default.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -98,7 +98,7 @@
 			"IBL default"
 		],
 		"scene": "rpr_hybrid_shaderball.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -115,7 +115,7 @@
 			"HDR"
 		],
 		"scene": "default.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -132,7 +132,7 @@
 			"EXR"
 		],
 		"scene": "default.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -148,7 +148,7 @@
 			"Render 16 pass"
 		],
 		"scene": "rpr_hybrid_shaderball.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -164,7 +164,7 @@
 			"Render 100 passes"
 		],
 		"scene": "rpr_hybrid_shaderball.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -178,7 +178,7 @@
 			"Multimaterials"
 		],
 		"scene": "Multimaterials.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -194,7 +194,7 @@
 			"Tile rendering"
 		],
 		"scene": "rpr_hybrid_shaderball.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -210,7 +210,7 @@
 			"Render Stamp"
 		],
 		"scene": "rpr_hybrid_shaderball.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -226,7 +226,7 @@
 			"Change renderer in viewport render preview from default to RPR (IPR analog)"
 		],
 		"scene": "default.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -246,7 +246,7 @@
 			"Hair Render"
 		],
 		"scene": "default.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -264,7 +264,7 @@
 			"Denoiser EAW default"
 		],
 		"scene": "rpr_hybrid_shaderball.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -282,7 +282,7 @@
 			"Denoiser LWR default"
 		],
 		"scene": "rpr_hybrid_shaderball.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -300,7 +300,7 @@
 			"Denoiser Bilateral default"
 		],
 		"scene": "rpr_hybrid_shaderball.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -318,7 +318,7 @@
 			"Denoiser Machine Learning default"
 		],
 		"scene": "rpr_hybrid_shaderball.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -336,7 +336,7 @@
 			"Assign material from Mat. Library"
 		],
 		"scene": "default.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -352,7 +352,7 @@
 			"AOV - Geometric Normal"
 		],
 		"scene": "default.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -368,7 +368,7 @@
 			"Base Light = Area Light"
 		],
 		"scene": "rpr_hybrid_shaderball.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -383,7 +383,7 @@
 			"Instances"
 		],
 		"scene": "instances.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -397,7 +397,7 @@
 			"4-5 lights in one scene"
 		],
 		"scene": "5_lights.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -411,7 +411,7 @@
 			"AOV-SC"
 		],
 		"scene": "AOV_SC.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -425,7 +425,7 @@
 			"SSS"
 		],
 		"scene": "SSS_Test.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -439,7 +439,7 @@
 			"Displacement"
 		],
 		"scene": "Displacement.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -455,7 +455,7 @@
 			"Rays Quality"
 		],
 		"scene": "WaterInsideGlass.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -469,7 +469,7 @@
 			"Complex 1"
 		],
 		"scene": "1_ComplexLighting.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -483,7 +483,7 @@
 			"Complex 2"
 		],
 		"scene": "2_chevrolet_corvette_stingray_c7RPR.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -497,7 +497,7 @@
 			"Complex 3"
 		],
 		"scene": "3_BridgeBooble.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -511,7 +511,7 @@
 			"Complex 4"
 		],
 		"scene": "4_fsr_modes.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -525,7 +525,7 @@
 			"Complex 5"
 		],
 		"scene": "5_EnvyScene.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -539,7 +539,7 @@
 			"Complex 6"
 		],
 		"scene": "6_IvyColumn.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -553,7 +553,7 @@
 			"Complex 7"
 		],
 		"scene": "7_render_passes.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -567,7 +567,7 @@
 			"Complex 8"
 		],
 		"scene": "8_.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -581,7 +581,7 @@
 			"Complex 9"
 		],
 		"scene": "9_sun_light.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	},
@@ -595,7 +595,7 @@
 			"Complex 10"
 		],
 		"scene": "10_Barcelona_Pavillion.blend",
-        "skip_config":[
+        "skip":[
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
 	}

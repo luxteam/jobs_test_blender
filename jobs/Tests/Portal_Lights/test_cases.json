@@ -13,7 +13,7 @@
             "set_value(scene.world.rpr, 'mode', 'IBL')",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -31,7 +31,7 @@
             "set_value(scene.world.rpr, 'mode', 'IBL')",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -49,7 +49,7 @@
             "set_value(scene.world.rpr, 'mode', 'IBL')",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -67,7 +67,7 @@
             "set_value(scene.world.rpr, 'mode', 'IBL')",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -85,7 +85,7 @@
             "set_value(scene.world.rpr, 'mode', 'IBL')",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -103,7 +103,7 @@
             "set_value(scene.world.rpr, 'mode', 'IBL')",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -121,7 +121,7 @@
             "set_value(scene.world.rpr, 'mode', 'IBL')",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -139,7 +139,7 @@
             "set_value(scene.world.rpr, 'mode', 'IBL')",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -159,7 +159,7 @@
             "set_value(scene.world.rpr.ibl, 'image', bpy.data.images['Tropical_Beach_3k.hdr'])",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -179,7 +179,7 @@
             "set_value(scene.world.rpr.ibl, 'image', bpy.data.images['Tropical_Beach_3k.hdr'])",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -199,7 +199,7 @@
             "set_value(scene.world.rpr.ibl, 'image', bpy.data.images['Tropical_Beach_3k.hdr'])",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -219,7 +219,7 @@
             "set_value(scene.world.rpr.ibl, 'image', bpy.data.images['Tropical_Beach_3k.hdr'])",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -239,7 +239,7 @@
             "set_value(scene.world.rpr.ibl, 'image', bpy.data.images['Tropical_Beach_3k.hdr'])",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -259,7 +259,7 @@
             "set_value(scene.world.rpr.ibl, 'image', bpy.data.images['Tropical_Beach_3k.hdr'])",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -279,7 +279,7 @@
             "set_value(scene.world.rpr.ibl, 'image', bpy.data.images['Tropical_Beach_3k.hdr'])",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -299,7 +299,7 @@
             "set_value(scene.world.rpr.ibl, 'image', bpy.data.images['Tropical_Beach_3k.hdr'])",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -317,7 +317,7 @@
             "set_value(scene.world.rpr, 'mode', 'SUN_SKY')",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -335,7 +335,7 @@
             "set_value(scene.world.rpr, 'mode', 'SUN_SKY')",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -353,7 +353,7 @@
             "set_value(scene.world.rpr, 'mode', 'SUN_SKY')",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -371,7 +371,7 @@
             "set_value(scene.world.rpr, 'mode', 'SUN_SKY')",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -389,7 +389,7 @@
             "set_value(scene.world.rpr, 'mode', 'SUN_SKY')",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -407,7 +407,7 @@
             "set_value(scene.world.rpr, 'mode', 'SUN_SKY')",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -425,7 +425,7 @@
             "set_value(scene.world.rpr, 'mode', 'SUN_SKY')",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     },
@@ -443,7 +443,7 @@
             "set_value(scene.world.rpr, 'mode', 'SUN_SKY')",
             "rpr_render(case)"
         ],
-        "skip_engine": [
+        "skip": [
             "FULL2"
         ]
     }

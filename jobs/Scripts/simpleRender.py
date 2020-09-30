@@ -127,7 +127,6 @@ def main(args):
     gpu = get_gpu()
     if not gpu:
         core_config.main_logger.error("Can't get gpu name")
-    render_platform = {platform.system(), gpu}
     system_pl = platform.system()
 
     baseline_dir = 'rpr_blender_autotests_baselines'
@@ -154,15 +153,13 @@ def main(args):
         os.makedirs(baseline_path)
         os.makedirs(os.path.join(baseline_path, 'Color'))
 
+    render_platform = {platform.system(), gpu, args.engine}
     for case in cases:
-        if sum([render_platform & set(skip_conf) == set(skip_conf) for skip_conf in case.get('skip_config', '')]):
-            for i in case['skip_config']:
+        if sum([render_platform & set(skip_conf) == set(skip_conf) for skip_conf in case.get('skip', '')]):
+            for i in case['skip']:
                 skip_config = set(i)
                 if render_platform.intersection(skip_config) == skip_config:
                     case['status'] = 'skipped'
-
-        if sum([1 for engine in case.get('skip_engine', []) if engine == args.engine]):
-            case['status'] = 'skipped'
 
         if case['status'] != 'done':
             if case["status"] == 'inprogress':
