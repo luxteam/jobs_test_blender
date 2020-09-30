@@ -43,6 +43,7 @@ def createArgsParser():
     parser.add_argument('--threshold', required=False,
                         default=0.05, type=float)
     parser.add_argument('--retries', required=False, default=2, type=int)
+    parser.add_argument('--update_refs', required=True)
 
     return parser
 
@@ -68,14 +69,16 @@ def athena_disable(disable):
     with open(CONFIG_PATH, 'w') as config_file:
         config_file.write(config_file_new)
 
+    return ATHENA_DIR
+
 
 def main(args):
     perf_count.event_record(args.output, 'Prepare tests', True)
 
     if args.testType in ['Athena']:
-        athena_disable(False)
+        ATHENA_DIR = athena_disable(False)
     else:
-        athena_disable(True)
+        ATHENA_DIR = athena_disable(True)
 
     core_config.main_logger.info('Make "base_functions.py"')
 
@@ -99,7 +102,7 @@ def main(args):
         with open(os.path.join(os.path.dirname(__file__), 'extensions', args.testType + '.py')) as f:
             extension_script = f.read()
         script = script.split('# place for extension functions')
-        script = script[0] + extension_script + script[1]
+        script = script[0] + "ATHENA_DIR=\"{}\"\n".format(ATHENA_DIR.replace('\\', '\\\\')) + extension_script + script[1]
 
     work_dir = os.path.abspath(args.output)
     script = script.format(work_dir=work_dir, testType=args.testType, render_device=args.render_device, res_path=args.res_path, pass_limit=args.pass_limit,
@@ -109,13 +112,13 @@ def main(args):
     with open(os.path.join(args.output, 'base_functions.py'), 'w') as file:
         file.write(script)
 
-    if (os.path.exists(args.testCases) and '.json' in args.testCases):
-        with open(os.path.join(args.testCases)) as f:
-            tc = f.read()
-            test_cases = json.loads(tc)[args.testType]
-        necessary_cases = [
-            item for item in cases if item['case'] in test_cases]
-        cases = necessary_cases
+    if os.path.exists(args.testCases) and args.testCases:
+        with open(args.testCases) as f:
+            test_cases = json.load(f)['groups'][args.testType]
+            if test_cases:
+                necessary_cases = [
+                    item for item in cases if item['case'] in test_cases]
+                cases = necessary_cases
 
     core_config.main_logger.info('Create empty report files')
 
@@ -130,13 +133,13 @@ def main(args):
     system_pl = platform.system()
 
     baseline_dir = 'rpr_blender_autotests_baselines'
-    if args.engine == 'FULL2' and not 'NorthStar' in args.testType:
+    if args.engine == 'FULL2':
         baseline_dir = baseline_dir + '-NorthStar'
-    elif args.engine == 'LOW' and not 'Hybrid' in args.testType:
+    elif args.engine == 'LOW':
         baseline_dir = baseline_dir + '-HybridLow'
-    elif args.engine == 'MEDIUM' and not 'Hybrid' in args.testType:
+    elif args.engine == 'MEDIUM':
         baseline_dir = baseline_dir + '-HybridMedium'
-    elif args.engine == 'HIGH' and not 'Hybrid' in args.testType:
+    elif args.engine == 'HIGH':
         baseline_dir = baseline_dir + '-HybridHigh'
 
     if system_pl == "Windows":
@@ -183,20 +186,21 @@ def main(args):
             with open(os.path.join(work_dir, case['case'] + core_config.CASE_REPORT_SUFFIX), 'w') as f:
                 f.write(json.dumps([template], indent=4))
 
-        try:
-            copyfile(os.path.join(baseline_path_tr, case['case'] + core_config.CASE_REPORT_SUFFIX),
-                     os.path.join(baseline_path, case['case'] + core_config.CASE_REPORT_SUFFIX))
+        if 'Update' not in args.update_refs:
+            try:
+                copyfile(os.path.join(baseline_path_tr, case['case'] + core_config.CASE_REPORT_SUFFIX),
+                         os.path.join(baseline_path, case['case'] + core_config.CASE_REPORT_SUFFIX))
 
-            with open(os.path.join(baseline_path, case['case'] + core_config.CASE_REPORT_SUFFIX)) as baseline:
-                baseline_json = json.load(baseline)
+                with open(os.path.join(baseline_path, case['case'] + core_config.CASE_REPORT_SUFFIX)) as baseline:
+                    baseline_json = json.load(baseline)
 
-            for thumb in [''] + core_config.THUMBNAIL_PREFIXES:
-                if thumb + 'render_color_path' and os.path.exists(os.path.join(baseline_path_tr, baseline_json[thumb + 'render_color_path'])):
-                    copyfile(os.path.join(baseline_path_tr, baseline_json[thumb + 'render_color_path']),
-                             os.path.join(baseline_path, baseline_json[thumb + 'render_color_path']))
-        except:
-            core_config.main_logger.error('Failed to copy baseline ' +
-                                          os.path.join(baseline_path_tr, case['case'] + core_config.CASE_REPORT_SUFFIX))
+                for thumb in [''] + core_config.THUMBNAIL_PREFIXES:
+                    if thumb + 'render_color_path' and os.path.exists(os.path.join(baseline_path_tr, baseline_json[thumb + 'render_color_path'])):
+                        copyfile(os.path.join(baseline_path_tr, baseline_json[thumb + 'render_color_path']),
+                                 os.path.join(baseline_path, baseline_json[thumb + 'render_color_path']))
+            except:
+                core_config.main_logger.error('Failed to copy baseline ' +
+                                              os.path.join(baseline_path_tr, case['case'] + core_config.CASE_REPORT_SUFFIX))
 
     with open(os.path.join(work_dir, 'test_cases.json'), "w+") as f:
         json.dump(cases, f, indent=4)
