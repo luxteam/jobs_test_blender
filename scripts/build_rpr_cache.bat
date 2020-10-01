@@ -1,5 +1,5 @@
 set TOOL_VERSION=%1
-if not defined TOOL_VERSION set TOOL_VERSION=2.83
+if not defined TOOL_VERSION set TOOL_VERSION=2.90
 
 echo import os >> cache_build.py
 echo import bpy >> cache_build.py
