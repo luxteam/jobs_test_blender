@@ -414,6 +414,7 @@
             "if os.path.exists(aov_image): os.rename(aov_image, test_case_image)"
         ],
         "script_info": [
+            "Black image expected",
             "AOV: Velocity"
         ],
         "scene": "AOV_test_velocity.blend",
@@ -516,6 +517,7 @@
             "if os.path.exists(aov_image): os.rename(aov_image, test_case_image)"
         ],
         "script_info": [
+            "Black image expected",
             "AOV: Ambient Occlusion"
         ],
         "scene": "AOV_test.blend",
@@ -686,6 +688,7 @@
             "if os.path.exists(aov_image): os.rename(aov_image, test_case_image)"
         ],
         "script_info": [
+            "Black image expected",
             "AOV: Refraction"
         ],
         "scene": "AOV_test.blend",
@@ -720,6 +723,7 @@
             "if os.path.exists(aov_image): os.rename(aov_image, test_case_image)"
         ],
         "script_info": [
+            "Black image expected",
             "AOV: Volume"
         ],
         "scene": "AOV_test.blend",
@@ -791,6 +795,7 @@
             "if os.path.exists(aov_image): os.rename(aov_image, test_case_image)"
         ],
         "script_info": [
+            "Black image expected",
             "AOV: Light Group 1"
         ],
         "scene": "AOV_test.blend",
@@ -828,6 +833,7 @@
             "if os.path.exists(aov_image): os.rename(aov_image, test_case_image)"
         ],
         "script_info": [
+            "Black image expected",
             "AOV: Light group 2"
         ],
         "scene": "AOV_test.blend",
@@ -865,6 +871,7 @@
             "if os.path.exists(aov_image): os.rename(aov_image, test_case_image)"
         ],
         "script_info": [
+            "Black image expected",
             "AOV: Light group 3"
         ],
         "scene": "AOV_test.blend",
@@ -902,6 +909,7 @@
             "if os.path.exists(aov_image): os.rename(aov_image, test_case_image)"
         ],
         "script_info": [
+            "Black image expected",
             "AOV: Light group 4"
         ],
         "scene": "AOV_test.blend",
@@ -936,6 +944,7 @@
             "if os.path.exists(aov_image): os.rename(aov_image, test_case_image)"
         ],
         "script_info": [
+            "Black image expected",
             "AOV: Color Variance"
         ],
         "scene": "AOV_test.blend",
