@@ -3,8 +3,8 @@
         "case": "BL28_L_PL_001",
         "status": "active",
         "script_info": [
-            "Point light, int = 0",
-            "Expected Black Picture"
+            "Black image expected",
+            "Point light, int = 0"
         ],
         "scene": "Physical_Lights.blend",
         "functions": [
@@ -331,8 +331,8 @@
         "case": "BL28_L_PL_027",
         "status": "active",
         "script_info": [
-            "Sun light, int = 0",
-            "Expected Black Picture"
+            "Black image expected",
+            "Sun light, int = 0"
         ],
         "scene": "Physical_Lights.blend",
         "functions": [
@@ -560,8 +560,8 @@
         "case": "BL28_L_PL_047",
         "status": "active",
         "script_info": [
-            "Spot light, int = 0",
-            "Expected Black Picture"
+            "Black image expected",
+            "Spot light, int = 0"
         ],
         "scene": "Physical_Lights.blend",
         "functions": [
@@ -832,8 +832,8 @@
         "case": "BL28_L_PL_071",
         "status": "active",
         "script_info": [
-            "Area light, int = 0",
-            "Expected Black Picture"
+            "Black image expected",
+            "Area light, int = 0"
         ],
         "scene": "Physical_Lights.blend",
         "functions": [

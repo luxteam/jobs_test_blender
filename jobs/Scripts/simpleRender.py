@@ -42,12 +42,43 @@ def createArgsParser():
     parser.add_argument('--error_count', required=False, default=0, type=int)
     parser.add_argument('--threshold', required=False,
                         default=0.05, type=float)
+    parser.add_argument('--retries', required=False, default=2, type=int)
+    parser.add_argument('--update_refs', required=True)
 
     return parser
 
 
+def athena_disable(disable):
+    if (platform.system() == 'Windows'):
+        CONFIG_PATH = os.path.expandvars(
+            '%appdata%/Blender Foundation/Blender/2.83/scripts/addons/rprblender/config.py')
+        ATHENA_DIR = os.path.expandvars('%appdata%/../Local/Temp/rprblender/')
+    elif (platform.system() == 'Darwin'):
+        CONFIG_PATH = os.path.expanduser(
+            '~/Library/Application Support/Blender/2.83/scripts/addons/rprblender/config.py')
+        ATHENA_DIR = os.environ['TMPDIR'] + 'rprblender/'
+    else:
+        CONFIG_PATH = os.path.expanduser(
+            '~/.config/blender/2.83/scripts/addons/rprblender/config.py')
+        ATHENA_DIR = '/tmp/rprblender/'
+
+    config_file_new = ''
+
+    with open(CONFIG_PATH, 'r') as config_file:
+        config_file_new = config_file.read().replace('disable_athena_report = ' + str(not disable), 'disable_athena_report = ' + str(disable))
+    with open(CONFIG_PATH, 'w') as config_file:
+        config_file.write(config_file_new)
+
+    return ATHENA_DIR
+
+
 def main(args):
     perf_count.event_record(args.output, 'Prepare tests', True)
+
+    if args.testType in ['Athena']:
+        ATHENA_DIR = athena_disable(False)
+    else:
+        ATHENA_DIR = athena_disable(True)
 
     core_config.main_logger.info('Make "base_functions.py"')
 
@@ -57,6 +88,7 @@ def main(args):
     except Exception as e:
         core_config.logging.error("Can't load test_cases.json")
         core_config.main_logger.error(str(e))
+        group_failed(args)
         exit(-1)
 
     try:
@@ -70,22 +102,23 @@ def main(args):
         with open(os.path.join(os.path.dirname(__file__), 'extensions', args.testType + '.py')) as f:
             extension_script = f.read()
         script = script.split('# place for extension functions')
-        script = script[0] + extension_script + script[1]
+        script = script[0] + "ATHENA_DIR=\"{}\"\n".format(ATHENA_DIR.replace('\\', '\\\\')) + extension_script + script[1]
 
     work_dir = os.path.abspath(args.output)
     script = script.format(work_dir=work_dir, testType=args.testType, render_device=args.render_device, res_path=args.res_path, pass_limit=args.pass_limit,
-                           resolution_x=args.resolution_x, resolution_y=args.resolution_y, SPU=args.SPU, threshold=args.threshold, engine=args.engine)
+                           resolution_x=args.resolution_x, resolution_y=args.resolution_y, SPU=args.SPU, threshold=args.threshold, engine=args.engine,
+                           retries=args.retries)
 
     with open(os.path.join(args.output, 'base_functions.py'), 'w') as file:
         file.write(script)
 
-    if (os.path.exists(args.testCases) and '.json' in args.testCases):
-        with open(os.path.join(args.testCases)) as f:
-            tc = f.read()
-            test_cases = json.loads(tc)[args.testType]
-        necessary_cases = [
-            item for item in cases if item['case'] in test_cases]
-        cases = necessary_cases
+    if os.path.exists(args.testCases) and args.testCases:
+        with open(args.testCases) as f:
+            test_cases = json.load(f)['groups'][args.testType]
+            if test_cases:
+                necessary_cases = [
+                    item for item in cases if item['case'] in test_cases]
+                cases = necessary_cases
 
     core_config.main_logger.info('Create empty report files')
 
@@ -98,20 +131,48 @@ def main(args):
     if not gpu:
         core_config.main_logger.error("Can't get gpu name")
     render_platform = {platform.system(), gpu}
+    system_pl = platform.system()
+
+    baseline_dir = 'rpr_blender_autotests_baselines'
+    if args.engine == 'FULL2':
+        baseline_dir = baseline_dir + '-NorthStar'
+    elif args.engine == 'LOW':
+        baseline_dir = baseline_dir + '-HybridLow'
+    elif args.engine == 'MEDIUM':
+        baseline_dir = baseline_dir + '-HybridMedium'
+    elif args.engine == 'HIGH':
+        baseline_dir = baseline_dir + '-HybridHigh'
+
+    if system_pl == "Windows":
+        baseline_path_tr = os.path.join(
+            'c:/TestResources', baseline_dir, args.testType)
+    else:
+        baseline_path_tr = os.path.expandvars(os.path.join(
+            '$CIS_TOOLS/../TestResources', baseline_dir, args.testType))
+
+    baseline_path = os.path.join(
+        work_dir, os.path.pardir, os.path.pardir, os.path.pardir, 'Baseline', args.testType)
+
+    if not os.path.exists(baseline_path):
+        os.makedirs(baseline_path)
+        os.makedirs(os.path.join(baseline_path, 'Color'))
 
     for case in cases:
-        if sum([render_platform & set(skip_conf) == set(skip_conf) for skip_conf in case.get('skip_on', '')]):
-            for i in case['skip_on']:
-                skip_on = set(i)
-                if render_platform.intersection(skip_on) == skip_on:
+        if sum([render_platform & set(skip_conf) == set(skip_conf) for skip_conf in case.get('skip_config', '')]):
+            for i in case['skip_config']:
+                skip_config = set(i)
+                if render_platform.intersection(skip_config) == skip_config:
                     case['status'] = 'skipped'
+
+        if sum([1 for engine in case.get('skip_engine', []) if engine == args.engine]):
+            case['status'] = 'skipped'
 
         if case['status'] != 'done':
             if case["status"] == 'inprogress':
                 case['status'] = 'active'
                 case['number_of_tries'] = case.get('number_of_tries', 0) + 1
 
-            template = core_config.RENDER_REPORT_BASE
+            template = core_config.RENDER_REPORT_BASE.copy()
             template['test_case'] = case['case']
             template['render_device'] = get_gpu()
             template['test_status'] = 'error'
@@ -122,11 +183,27 @@ def main(args):
             template['test_group'] = args.testType
             template['date_time'] = datetime.now().strftime(
                 '%m/%d/%Y %H:%M:%S')
-            if case['status'] != 'skipped':
+            if case['status'] == 'skipped':
                 template['group_timeout_exceeded'] = False
 
             with open(os.path.join(work_dir, case['case'] + core_config.CASE_REPORT_SUFFIX), 'w') as f:
                 f.write(json.dumps([template], indent=4))
+
+        if 'Update' not in args.update_refs:
+            try:
+                copyfile(os.path.join(baseline_path_tr, case['case'] + core_config.CASE_REPORT_SUFFIX),
+                         os.path.join(baseline_path, case['case'] + core_config.CASE_REPORT_SUFFIX))
+
+                with open(os.path.join(baseline_path, case['case'] + core_config.CASE_REPORT_SUFFIX)) as baseline:
+                    baseline_json = json.load(baseline)
+
+                for thumb in [''] + core_config.THUMBNAIL_PREFIXES:
+                    if thumb + 'render_color_path' and os.path.exists(os.path.join(baseline_path_tr, baseline_json[thumb + 'render_color_path'])):
+                        copyfile(os.path.join(baseline_path_tr, baseline_json[thumb + 'render_color_path']),
+                                 os.path.join(baseline_path, baseline_json[thumb + 'render_color_path']))
+            except:
+                core_config.main_logger.error('Failed to copy baseline ' +
+                                              os.path.join(baseline_path_tr, case['case'] + core_config.CASE_REPORT_SUFFIX))
 
     with open(os.path.join(work_dir, 'test_cases.json'), "w+") as f:
         json.dump(cases, f, indent=4)
@@ -134,7 +211,6 @@ def main(args):
     cmdRun = '"{tool}" -b -P "{template}"\n'.format(
         tool=args.tool, template=os.path.join(args.output, 'base_functions.py'))
 
-    system_pl = platform.system()
     if system_pl == "Windows":
         cmdScriptPath = os.path.join(work_dir, 'script.bat')
         with open(cmdScriptPath, 'w') as f:
@@ -184,17 +260,21 @@ def main(args):
 
 
 def group_failed(args):
+    core_config.main_logger.error('Group failed')
+    status = 'skipped'
     try:
         cases = json.load(open(os.path.realpath(
             os.path.join(os.path.abspath(args.output), 'test_cases.json'))))
     except Exception as e:
         core_config.logging.error("Can't load test_cases.json")
         core_config.main_logger.error(str(e))
-        exit(-1)
+        cases = json.load(open(os.path.realpath(os.path.join(os.path.dirname(
+            __file__), '..', 'Tests', args.testType, 'test_cases.json'))))
+        status = 'inprogress'
 
     for case in cases:
         if case['status'] == 'active':
-            case['status'] = 'skipped'
+            case['status'] = status
 
     with open(os.path.join(os.path.abspath(args.output), 'test_cases.json'), "w+") as f:
         json.dump(cases, f, indent=4)
@@ -218,17 +298,21 @@ def sync_time(work_dir):
 
     log_path = ''
     case_report_name = ''
+    case_report_path = ''
     for line in logs.splitlines():
         if [l for l in ['Save report', 'Create log'] if l in line]:
             test_case = line.split().pop()
             case_report_name = test_case + core_config.CASE_REPORT_SUFFIX
             case_report_path = os.path.join(work_dir, case_report_name)
             log_path = os.path.join(work_dir, 'render_tool_logs', test_case + '.log')
+
         if os.path.exists(log_path):
-            with open(case_report_path, 'r') as case_report:
-                case_json = json.load(case_report)
             with open(log_path, 'a') as case_log:
                 case_log.write(line + '\n')
+
+        if os.path.exists(case_report_path):
+            with open(case_report_path, 'r') as case_report:
+                case_json = json.load(case_report)
 
             sync_minutes = re.findall(
                 'Scene synchronization time: (\d*)m', line)
@@ -242,7 +326,8 @@ def sync_time(work_dir):
             sync_milisec = float(next(iter(sync_milisec or []), 0))
 
             synchronization_time = sync_minutes * 60 + sync_seconds + sync_milisec / 1000
-            case_json[0]['sync_time'] = synchronization_time
+            case_json[0]['sync_time'] += synchronization_time
+            case_json[0]['render_time'] -= synchronization_time
 
             with open(case_report_path, 'w') as case_report:
                 case_report.write(json.dumps(case_json, indent=4))
@@ -306,7 +391,7 @@ if __name__ == "__main__":
             if case['status'] in ['active', 'fail', 'inprogress']:
                 active_cases += 1
 
-        if active_cases == 0 or iteration > len(cases) * 2:  # 2- retries count
+        if active_cases == 0 or iteration > len(cases) * args.retries:
             for case in cases:
                 error_message = ''
                 number_of_tries = case.get('number_of_tries', 0)

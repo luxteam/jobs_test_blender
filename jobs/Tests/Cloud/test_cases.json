@@ -66,7 +66,7 @@
             "Blender_2_77_Racing_Car"
         ],
         "scene": "Blender_2_77_Racing_Car.blend",
-        "skip_on": [
+        "skip_config": [
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -80,7 +80,7 @@
             "Blender_2_74_Fishy_Cat"
         ],
         "scene": "Blender_2_74_Fishy_Cat.blend",
-        "skip_on": [
+        "skip_config": [
             ["GeForce GTX 1080 Ti"]
         ]
     },
@@ -113,7 +113,7 @@
             "Tree_Creature"
         ],
         "scene": "Tree_Creature.blend",
-        "skip_on": [
+        "skip_config": [
             ["Radeon RX Vega"],
             ["AMD Radeon RX Vega 56 (Metal)"]
         ]
@@ -185,7 +185,10 @@
         "script_info": [
             "Mr_Elephant"
         ],
-        "scene": "Mr_Elephant.blend"
+        "scene": "Mr_Elephant.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_BCS_014",
@@ -358,7 +361,10 @@
         "script_info": [
             "volume_emission_27"
         ],
-        "scene": "volume_emission_27.blend"
+        "scene": "volume_emission_27.blend",
+        "skip_engine": [
+            "MEDIUM"
+        ]
     },
     {
         "case": "BL28_BCS_027",
@@ -385,7 +391,10 @@
         "script_info": [
             "Blender_2_83"
         ],
-        "scene": "Blender_2_83.blend"
+        "scene": "Blender_2_83.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_BCS_029",
@@ -411,7 +420,10 @@
         "script_info": [
             "color_vortex"
         ],
-        "scene": "color_vortex.blend"
+        "scene": "color_vortex.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_BCS_031",

@@ -10,6 +10,9 @@
             "volume_material, volume_node = get_material_and_node()",
             "volume_node.inputs['Color'].default_value = (0, 0, 0, 1)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -23,6 +26,9 @@
             "volume_material, volume_node = get_material_and_node()",
             "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -36,6 +42,9 @@
             "volume_material, volume_node = get_material_and_node()",
             "volume_node.inputs['Color'].default_value = (1, 1, 1, 1)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -49,6 +58,9 @@
             "volume_material, volume_node = get_material_and_node()",
             "volume_node.inputs['Color'].default_value = (0, 1, 0, 1)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -61,6 +73,9 @@
         "functions": [
             "create_checker_texture('Color')",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -74,6 +89,9 @@
             "create_imagemap('Color', 'diffuseColor.tga')",
             "rpr_render(case)",
             "delete_imagemap()"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -87,6 +105,9 @@
             "create_imagemap('Color', 'diffuseColor.png')",
             "rpr_render(case)",
             "delete_imagemap()"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -101,6 +122,9 @@
             "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
             "volume_node.inputs['Density'].default_value = 0",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -114,6 +138,9 @@
             "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
             "volume_node.inputs['Density'].default_value = 0.5",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -128,6 +155,9 @@
             "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
             "volume_node.inputs['Density'].default_value = 1",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -142,6 +172,9 @@
             "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
             "volume_node.inputs['Density'].default_value = 5",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -156,6 +189,9 @@
             "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
             "volume_node.inputs['Density'].default_value = 10",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -170,6 +206,9 @@
             "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
             "create_checker_texture('Density')",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -184,6 +223,9 @@
             "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
             "create_imagemap('Density', 'reflectionColor.tga')",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -198,6 +240,9 @@
             "volume_node.inputs['Color'].default_value = (0.5, 0.5, 0.5, 1)",
             "create_imagemap('Density', 'reflectionColor.png')",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -214,6 +259,9 @@
             "volume_node.inputs['Anisotropy'].default_value = -1",
             "volume_node.inputs['Absorption Color'].default_value = (0.5, 0, 0, 1.0)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -230,6 +278,9 @@
             "volume_node.inputs['Anisotropy'].default_value = 0",
             "volume_node.inputs['Absorption Color'].default_value = (0.5, 0, 0, 1.0)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -246,6 +297,9 @@
             "volume_node.inputs['Anisotropy'].default_value = 1",
             "volume_node.inputs['Absorption Color'].default_value = (0.5, 0, 0, 1.0)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -262,6 +316,9 @@
             "volume_node.inputs['Anisotropy'].default_value = 1",
             "volume_node.inputs['Absorption Color'].default_value = (0, 0.5, 0, 1.0)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -278,6 +335,9 @@
             "volume_node.inputs['Anisotropy'].default_value = 1",
             "volume_node.inputs['Absorption Color'].default_value = (0, 0, 0, 0.5)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -295,6 +355,9 @@
             "create_checker_texture('Anisotropy')",
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Volume.blend'))"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -312,6 +375,9 @@
             "create_checker_texture('Absorption Color')",
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Volume.blend'))"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -329,6 +395,9 @@
             "create_imagemap('Absorption Color', 'transmissionColor.tga')",
             "rpr_render(case)",
             "delete_imagemap()"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -346,6 +415,9 @@
             "create_imagemap('Absorption Color', 'transmissionColor.png')",
             "rpr_render(case)",
             "delete_imagemap()"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -364,6 +436,9 @@
             "volume_node.inputs['Emission Color'].default_value = (0, 0, 0.5, 1)",
             "volume_node.inputs['Emission Strength'].default_value = 0.5",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -382,6 +457,9 @@
             "volume_node.inputs['Emission Color'].default_value = (0, 0, 0.5, 1)",
             "volume_node.inputs['Emission Strength'].default_value = 1",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -400,6 +478,9 @@
             "volume_node.inputs['Emission Color'].default_value = (0, 0, 0.5, 1)",
             "volume_node.inputs['Emission Strength'].default_value = 5",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -419,6 +500,9 @@
             "volume_node.inputs['Emission Strength'].default_value = 10",
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Volume.blend'))"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -437,6 +521,9 @@
             "create_checker_texture('Emission Strength')",
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Volume.blend'))"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -456,6 +543,9 @@
             "create_checker_texture('Emission Color')",
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Volume.blend'))"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -474,6 +564,9 @@
             "create_imagemap('Emission Color', 'emissiveColor.tga')",
             "rpr_render(case)",
             "delete_imagemap()"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -492,6 +585,9 @@
             "create_imagemap('Emission Color', 'emissiveColor.png')",
             "rpr_render(case)",
             "delete_imagemap()"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -508,6 +604,9 @@
             "volume_node.inputs['Blackbody Intensity'].default_value = 0.5",
             "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -524,6 +623,9 @@
             "volume_node.inputs['Blackbody Intensity'].default_value = 1",
             "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -540,6 +642,9 @@
             "volume_node.inputs['Blackbody Intensity'].default_value = 5",
             "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -556,6 +661,9 @@
             "volume_node.inputs['Blackbody Intensity'].default_value = 10",
             "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -574,6 +682,9 @@
             "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Volume.blend'))"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -592,6 +703,9 @@
             "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Volume.blend'))"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -610,6 +724,9 @@
             "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
             "rpr_render(case)",
             "delete_imagemap()"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -628,6 +745,9 @@
             "volume_node.inputs['Blackbody Tint'].default_value = (0.5, 0.5, 0.5, 1)",
             "rpr_render(case)",
             "delete_imagemap()"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -646,6 +766,9 @@
             "volume_node.inputs['Blackbody Tint'].default_value = (1, 1, 1, 1)",
             "volume_node.inputs['Temperature'].default_value = 2400",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -664,6 +787,9 @@
             "volume_node.inputs['Blackbody Tint'].default_value = (1, 1, 1, 1)",
             "volume_node.inputs['Temperature'].default_value = 3600",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     },
     {
@@ -682,6 +808,9 @@
             "volume_node.inputs['Blackbody Tint'].default_value = (1, 1, 1, 1)",
             "volume_node.inputs['Temperature'].default_value = 9200",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "FULL2"
         ]
     }
 ]

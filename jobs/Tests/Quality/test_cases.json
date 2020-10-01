@@ -3,12 +3,16 @@
         "case": "BL28_RS_QL_001",
         "status": "active",
         "script_info": [
+            "Black image expected",
             "Ray Depth - 0"
         ],
         "scene": "Quality.blend",
         "functions": [
             "set_value(bpy.context.scene.rpr, 'max_ray_depth', 0)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "HIGH"
         ]
     },
     {
@@ -21,6 +25,9 @@
         "functions": [
             "set_value(bpy.context.scene.rpr, 'max_ray_depth', 1)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "HIGH"
         ]
     },
     {
@@ -33,6 +40,9 @@
         "functions": [
             "set_value(bpy.context.scene.rpr, 'max_ray_depth', 20)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "HIGH"
         ]
     },
     {
@@ -45,6 +55,9 @@
         "functions": [
             "set_value(bpy.context.scene.rpr, 'max_ray_depth', 50)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "HIGH"
         ]
     },
     {
@@ -93,6 +106,7 @@
         "case": "BL28_RS_QL_021",
         "status": "active",
         "script_info": [
+            "Black image expected",
             "Ray Depth - 50",
             "Glossy - 0"
         ],
@@ -239,6 +253,9 @@
             "set_value(bpy.context.scene.rpr, 'max_ray_depth', 50)",
             "set_value(bpy.context.scene.rpr, 'shadow_depth', 0)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "HIGH"
         ]
     },
     {
@@ -253,6 +270,9 @@
             "set_value(bpy.context.scene.rpr, 'max_ray_depth', 50)",
             "set_value(bpy.context.scene.rpr, 'shadow_depth', 1)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "HIGH"
         ]
     },
     {
@@ -267,6 +287,9 @@
             "set_value(bpy.context.scene.rpr, 'max_ray_depth', 50)",
             "set_value(bpy.context.scene.rpr, 'shadow_depth', 50)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "HIGH"
         ]
     },
     {
@@ -279,6 +302,9 @@
         "functions": [
             "set_value(bpy.context.scene.rpr, 'ray_cast_epsilon', 0)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "HIGH"
         ]
     },
     {
@@ -291,6 +317,9 @@
         "functions": [
             "set_value(bpy.context.scene.rpr, 'ray_cast_epsilon', 0.01)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "HIGH"
         ]
     },
     {
@@ -303,6 +332,9 @@
         "functions": [
             "set_value(bpy.context.scene.rpr, 'ray_cast_epsilon', 0.1)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "HIGH"
         ]
     },
     {
@@ -315,6 +347,9 @@
         "functions": [
             "set_value(bpy.context.scene.rpr, 'ray_cast_epsilon', 40)",
             "rpr_render(case)"
+        ],
+        "skip_engine": [
+            "HIGH"
         ]
     },
     {

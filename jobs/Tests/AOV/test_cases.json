@@ -214,7 +214,10 @@
         "script_info": [
             "AOV: Geometric Normal"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_008",
@@ -274,9 +277,13 @@
             "if os.path.exists(aov_image): os.rename(aov_image, test_case_image)"
         ],
         "script_info": [
+            "Black image expected",
             "AOV: Group Index"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_010",
@@ -307,7 +314,10 @@
         "script_info": [
             "AOV: Shadow Catcher"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_011",
@@ -338,7 +348,10 @@
         "script_info": [
             "AOV: Background"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_012",
@@ -369,7 +382,10 @@
         "script_info": [
             "AOV: Emission"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_013",
@@ -400,7 +416,10 @@
         "script_info": [
             "AOV: Velocity"
         ],
-        "scene": "AOV_test_velocity.blend"
+        "scene": "AOV_test_velocity.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_014",
@@ -431,7 +450,10 @@
         "script_info": [
             "AOV: Direct Illumination"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_015",
@@ -462,7 +484,10 @@
         "script_info": [
             "AOV: Indirect Illumination"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_016",
@@ -493,7 +518,10 @@
         "script_info": [
             "AOV: Ambient Occlusion"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_017",
@@ -524,7 +552,10 @@
         "script_info": [
             "AOV: Direct Diffuse"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_018",
@@ -555,7 +586,10 @@
         "script_info": [
             "AOV: Direct Reflection"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_019",
@@ -586,7 +620,10 @@
         "script_info": [
             "AOV: Indirect Diffuse"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_020",
@@ -617,7 +654,10 @@
         "script_info": [
             "AOV: Indirect Reflection"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_021",
@@ -648,7 +688,10 @@
         "script_info": [
             "AOV: Refraction"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_022",
@@ -679,7 +722,10 @@
         "script_info": [
             "AOV: Volume"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_023",
@@ -710,7 +756,10 @@
         "script_info": [
             "AOV: Opacity"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_024",
@@ -744,7 +793,10 @@
         "script_info": [
             "AOV: Light Group 1"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_025",
@@ -778,7 +830,10 @@
         "script_info": [
             "AOV: Light group 2"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_026",
@@ -812,7 +867,10 @@
         "script_info": [
             "AOV: Light group 3"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_027",
@@ -846,7 +904,10 @@
         "script_info": [
             "AOV: Light group 4"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_028",
@@ -877,7 +938,10 @@
         "script_info": [
             "AOV: Color Variance"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     },
     {
         "case": "BL28_RS_AOV_029",
@@ -939,6 +1003,9 @@
         "script_info": [
             "AOV: Reflection Catcher"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine": [
+            "LOW", "MEDIUM", "HIGH"
+        ]
     }
 ]
