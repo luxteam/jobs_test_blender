@@ -3,67 +3,15 @@
         "case": "BL28_RS_DUAL_001",
         "status": "active",
         "functions": [
-            "set_value(scene.rpr, 'render_quality', 'FULL')",
             "rpr_render(case)"
         ],
         "script_info": [
-            "Tahoe"
+            "Default Dual"
         ],
         "scene": "ComplexTestUber.blend"
     },
     {
         "case": "BL28_RS_DUAL_002",
-        "status": "active",
-        "functions": [
-            "set_value(scene.rpr, 'render_quality', 'FULL2')",
-            "rpr_render(case)"
-        ],
-        "script_info": [
-            "NorthStar"
-        ],
-        "scene": "ComplexTestUber.blend",
-        "skip_on":[
-            ["AMD Radeon RX Vega 56 (Metal)"]
-        ]
-    },
-    {
-        "case": "BL28_RS_DUAL_003",
-        "status": "active",
-        "functions": [
-            "set_value(scene.rpr, 'render_quality', 'LOW')",
-            "rpr_render(case)"
-        ],
-        "script_info": [
-            "Hybrid Low"
-        ],
-        "scene": "ComplexTestUber.blend"
-    },
-    {
-        "case": "BL28_RS_DUAL_004",
-        "status": "active",
-        "functions": [
-            "set_value(scene.rpr, 'render_quality', 'MEDIUM')",
-            "rpr_render(case)"
-        ],
-        "script_info": [
-            "Hybrid Medium"
-        ],
-        "scene": "ComplexTestUber.blend"
-    },
-    {
-        "case": "BL28_RS_DUAL_005",
-        "status": "active",
-        "functions": [
-            "set_value(scene.rpr, 'render_quality', 'HIGH')",
-            "rpr_render(case)"
-        ],
-        "script_info": [
-            "Hybrid High"
-        ],
-        "scene": "ComplexTestUber.blend"
-    },
-    {
-        "case": "BL28_RS_DUAL_006",
         "status": "active",
         "functions": [
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.1)",
@@ -76,7 +24,7 @@
         "scene": "ComplexTestUber.blend"
     },
     {
-        "case": "BL28_RS_DUAL_007",
+        "case": "BL28_RS_DUAL_003",
         "status": "active",
         "functions": [
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 1)",
@@ -89,7 +37,7 @@
         "scene": "ComplexTestUber.blend"
     },
     {
-        "case": "BL28_RS_DUAL_008",
+        "case": "BL28_RS_DUAL_004",
         "status": "active",
         "functions": [
             "set_value(scene.render, 'use_motion_blur', True)",
@@ -103,7 +51,7 @@
         "scene": "MotionBlur.blend"
     },
     {
-        "case": "BL28_RS_DUAL_009",
+        "case": "BL28_RS_DUAL_005",
         "status": "active",
         "functions": [
 			"bpy.context.scene.rpr.use_tile_render = True",
@@ -116,7 +64,7 @@
         "scene": "ComplexTestUber.blend"
     },
     {
-        "case": "BL28_RS_DUAL_010",
+        "case": "BL28_RS_DUAL_006",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
@@ -131,7 +79,7 @@
         "scene": "ComplexTestUber.blend"
     },
     {
-        "case": "BL28_RS_DUAL_011",
+        "case": "BL28_RS_DUAL_007",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
@@ -146,7 +94,7 @@
         "scene": "ComplexTestUber.blend"
     },
     {
-        "case": "BL28_RS_DUAL_012",
+        "case": "BL28_RS_DUAL_008",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
@@ -161,7 +109,7 @@
         "scene": "ComplexTestUber.blend"
     },
     {
-        "case": "BL28_RS_DUAL_013",
+        "case": "BL28_RS_DUAL_009",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
@@ -177,7 +125,7 @@
         "scene": "ComplexTestUber.blend"
     },
     {
-        "case": "BL28_RS_DUAL_014",
+        "case": "BL28_RS_DUAL_010",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
@@ -194,7 +142,7 @@
         "scene": "ComplexTestUber.blend"
     },
     {
-        "case": "BL28_RS_DUAL_015",
+        "case": "BL28_RS_DUAL_011",
         "status": "active",
         "functions": [
             "set_value(bpy.context.scene.rpr, 'pixel_filter', 'LANCZOS')",
@@ -209,7 +157,7 @@
         "scene": "ComplexTestUber.blend"
     },
     {
-        "case": "BL28_RS_DUAL_016",
+        "case": "BL28_RS_DUAL_012",
         "status": "skipped",
         "functions": [
             "rpr_render(case)"
@@ -220,7 +168,7 @@
         "scene": "AOV_test.blend"
     },
     {
-        "case": "BL28_RS_DUAL_017",
+        "case": "BL28_RS_DUAL_013",
         "status": "active",
         "functions": [
             "set_value(scene.rpr, 'use_render_stamp', True)",
@@ -235,7 +183,7 @@
         "scene": "ComplexTestUber.blend"
     },
     {
-        "case": "BL28_RS_DUAL_018",
+        "case": "BL28_RS_DUAL_014",
         "status": "active",
         "functions": [
             "set_value(bpy.context.scene.display_settings, 'display_device', 'XYZ')",
@@ -252,7 +200,7 @@
         "scene": "ComplexTestUber.blend"
     },
     {
-        "case": "BL28_RS_DUAL_019",
+        "case": "BL28_RS_DUAL_015",
         "status": "active",
         "functions": [
             "rpr_render(case)"
@@ -263,7 +211,7 @@
         "scene": "TestSunSky.blend"
     },
     {
-        "case": "BL28_RS_DUAL_020",
+        "case": "BL28_RS_DUAL_016",
         "status": "active",
         "functions": [
             "set_value(scene.render, 'resolution_x', 4096)",
@@ -278,7 +226,7 @@
         "scene": "ComplexTestUber.blend"
     },
     {
-        "case": "BL28_RS_DUAL_021",
+        "case": "BL28_RS_DUAL_017",
         "status": "active",
         "functions": [
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 5",
@@ -290,7 +238,7 @@
         "scene": "VDB_Material.blend"
     },
     {
-        "case": "BL28_RS_DUAL_022",
+        "case": "BL28_RS_DUAL_018",
         "status": "active",
         "functions": [
             "rpr_render(case)"
@@ -301,7 +249,7 @@
         "scene": "2_chevrolet_corvette_stingray_c7RPR.blend"
     },
     {
-        "case": "BL28_RS_DUAL_023",
+        "case": "BL28_RS_DUAL_019",
         "status": "active",
         "functions": [
             "rpr_render(case)"
@@ -312,7 +260,7 @@
         "scene": "3_BridgeBooble.blend"
     },
     {
-        "case": "BL28_RS_DUAL_024",
+        "case": "BL28_RS_DUAL_020",
         "status": "active",
         "functions": [
             "rpr_render(case)"
@@ -323,7 +271,7 @@
         "scene": "9_sun_light.blend"
     },
     {
-        "case": "BL28_RS_DUAL_025",
+        "case": "BL28_RS_DUAL_021",
         "status": "active",
         "functions": [
 			"bpy.context.scene.rpr.use_tile_render = True",
@@ -341,7 +289,7 @@
         "scene": "ComplexTestUber.blend"
     },
     {
-        "case": "BL28_RS_DUAL_026",
+        "case": "BL28_RS_DUAL_022",
         "status": "active",
         "functions": [
 			"bpy.context.scene.rpr.use_tile_render = True",
@@ -359,7 +307,7 @@
         "scene": "ComplexTestUber.blend"
     },
     {
-        "case": "BL28_RS_DUAL_027",
+        "case": "BL28_RS_DUAL_023",
         "status": "active",
         "functions": [
 			"bpy.context.scene.rpr.use_tile_render = True",
@@ -378,7 +326,7 @@
         "scene": "ComplexTestUber.blend"
     },
     {
-        "case": "BL28_RS_DUAL_028",
+        "case": "BL28_RS_DUAL_024",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
@@ -400,7 +348,7 @@
         "scene": "MotionBlur.blend"
     },
     {
-        "case": "BL28_RS_DUAL_029",
+        "case": "BL28_RS_DUAL_025",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
@@ -422,7 +370,7 @@
         "scene": "MotionBlur.blend"
     },
     {
-        "case": "BL28_RS_DUAL_030",
+        "case": "BL28_RS_DUAL_026",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
