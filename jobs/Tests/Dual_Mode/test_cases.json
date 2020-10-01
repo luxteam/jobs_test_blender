@@ -4,8 +4,7 @@
         "status": "active",
         "functions": [
             "set_value(scene.rpr, 'render_quality', 'FULL')",
-            "rpr_render(case)",
-            "set_value(scene.rpr, 'render_quality', ENGINE)"
+            "rpr_render(case)"
         ],
         "script_info": [
             "Tahoe"
@@ -17,8 +16,7 @@
         "status": "active",
         "functions": [
             "set_value(scene.rpr, 'render_quality', 'FULL2')",
-            "rpr_render(case)",
-            "set_value(scene.rpr, 'render_quality', ENGINE)"
+            "rpr_render(case)"
         ],
         "script_info": [
             "NorthStar"
@@ -33,8 +31,7 @@
         "status": "active",
         "functions": [
             "set_value(scene.rpr, 'render_quality', 'LOW')",
-            "rpr_render(case)",
-            "set_value(scene.rpr, 'render_quality', ENGINE)"
+            "rpr_render(case)"
         ],
         "script_info": [
             "Hybrid Low"
@@ -46,8 +43,7 @@
         "status": "active",
         "functions": [
             "set_value(scene.rpr, 'render_quality', 'MEDIUM')",
-            "rpr_render(case)",
-            "set_value(scene.rpr, 'render_quality', ENGINE)"
+            "rpr_render(case)"
         ],
         "script_info": [
             "Hybrid Medium"
@@ -59,8 +55,7 @@
         "status": "active",
         "functions": [
             "set_value(scene.rpr, 'render_quality', 'HIGH')",
-            "rpr_render(case)",
-            "set_value(scene.rpr, 'render_quality', ENGINE)"
+            "rpr_render(case)"
         ],
         "script_info": [
             "Hybrid High"
