@@ -48,18 +48,18 @@ def createArgsParser():
     return parser
 
 
-def athena_disable(disable):
+def athena_disable(disable, tool):
     if (platform.system() == 'Windows'):
         CONFIG_PATH = os.path.expandvars(
-            '%appdata%/Blender Foundation/Blender/2.83/scripts/addons/rprblender/config.py')
+            '%appdata%/Blender Foundation/Blender/{}/scripts/addons/rprblender/config.py'.format(tool))
         ATHENA_DIR = os.path.expandvars('%appdata%/../Local/Temp/rprblender/')
     elif (platform.system() == 'Darwin'):
         CONFIG_PATH = os.path.expanduser(
-            '~/Library/Application Support/Blender/2.83/scripts/addons/rprblender/config.py')
+            '~/Library/Application Support/Blender/{}/scripts/addons/rprblender/config.py'.format(tool))
         ATHENA_DIR = os.environ['TMPDIR'] + 'rprblender/'
     else:
         CONFIG_PATH = os.path.expanduser(
-            '~/.config/blender/2.83/scripts/addons/rprblender/config.py')
+            '~/.config/blender/{}/scripts/addons/rprblender/config.py'.format(tool))
         ATHENA_DIR = '/tmp/rprblender/'
 
     config_file_new = ''
@@ -76,9 +76,9 @@ def main(args):
     perf_count.event_record(args.output, 'Prepare tests', True)
 
     if args.testType in ['Athena']:
-        ATHENA_DIR = athena_disable(False)
+        ATHENA_DIR = athena_disable(False, args.tool)
     else:
-        ATHENA_DIR = athena_disable(True)
+        ATHENA_DIR = athena_disable(True, args.tool)
 
     core_config.main_logger.info('Make "base_functions.py"')
 
