@@ -214,21 +214,6 @@
         "case": "BL28_RS_DUAL_016",
         "status": "active",
         "functions": [
-            "set_value(scene.render, 'resolution_x', 4096)",
-            "set_value(scene.render, 'resolution_y', 3204)",
-            "rpr_render(case)",
-            "set_value(scene.render, 'resolution_x', 800)",
-            "set_value(scene.render, 'resolution_y', 600)"
-        ],
-        "script_info": [
-            "Image_Size 4k"
-        ],
-        "scene": "ComplexTestUber.blend"
-    },
-    {
-        "case": "BL28_RS_DUAL_017",
-        "status": "active",
-        "functions": [
             "bpy.data.materials['vdb_mat'].node_tree.nodes['Principled Volume'].inputs['Density'].default_value = 5",
             "rpr_render(case)"
         ],
@@ -238,7 +223,7 @@
         "scene": "VDB_Material.blend"
     },
     {
-        "case": "BL28_RS_DUAL_018",
+        "case": "BL28_RS_DUAL_017",
         "status": "active",
         "functions": [
             "rpr_render(case)"
@@ -249,7 +234,7 @@
         "scene": "2_chevrolet_corvette_stingray_c7RPR.blend"
     },
     {
-        "case": "BL28_RS_DUAL_019",
+        "case": "BL28_RS_DUAL_018",
         "status": "active",
         "functions": [
             "rpr_render(case)"
@@ -260,7 +245,7 @@
         "scene": "3_BridgeBooble.blend"
     },
     {
-        "case": "BL28_RS_DUAL_020",
+        "case": "BL28_RS_DUAL_019",
         "status": "active",
         "functions": [
             "rpr_render(case)"
@@ -271,7 +256,7 @@
         "scene": "9_sun_light.blend"
     },
     {
-        "case": "BL28_RS_DUAL_021",
+        "case": "BL28_RS_DUAL_020",
         "status": "active",
         "functions": [
 			"bpy.context.scene.rpr.use_tile_render = True",
@@ -289,7 +274,7 @@
         "scene": "ComplexTestUber.blend"
     },
     {
-        "case": "BL28_RS_DUAL_022",
+        "case": "BL28_RS_DUAL_021",
         "status": "active",
         "functions": [
 			"bpy.context.scene.rpr.use_tile_render = True",
@@ -307,7 +292,7 @@
         "scene": "ComplexTestUber.blend"
     },
     {
-        "case": "BL28_RS_DUAL_023",
+        "case": "BL28_RS_DUAL_022",
         "status": "active",
         "functions": [
 			"bpy.context.scene.rpr.use_tile_render = True",
@@ -326,7 +311,7 @@
         "scene": "ComplexTestUber.blend"
     },
     {
-        "case": "BL28_RS_DUAL_024",
+        "case": "BL28_RS_DUAL_023",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
@@ -348,7 +333,7 @@
         "scene": "MotionBlur.blend"
     },
     {
-        "case": "BL28_RS_DUAL_025",
+        "case": "BL28_RS_DUAL_024",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
@@ -370,7 +355,7 @@
         "scene": "MotionBlur.blend"
     },
     {
-        "case": "BL28_RS_DUAL_026",
+        "case": "BL28_RS_DUAL_025",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
