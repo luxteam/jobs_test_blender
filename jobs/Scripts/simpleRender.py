@@ -49,17 +49,24 @@ def createArgsParser():
 
 
 def athena_disable(disable, tool):
+    tool_version = None
+    for part in os.path.normpath(tool).split(os.sep):
+        if re.match(".*[\d.]+.*", part):
+            tool_version = re.search("[\d.]+", part).group(0)
+            break
+    if not tool_version:
+        main_logger.error("Can't get tool version!")
     if (platform.system() == 'Windows'):
         CONFIG_PATH = os.path.expandvars(
-            '%appdata%/Blender Foundation/Blender/{}/scripts/addons/rprblender/config.py'.format(tool))
+            '%appdata%/Blender Foundation/Blender/{}/scripts/addons/rprblender/config.py'.format(tool_version))
         ATHENA_DIR = os.path.expandvars('%appdata%/../Local/Temp/rprblender/')
     elif (platform.system() == 'Darwin'):
         CONFIG_PATH = os.path.expanduser(
-            '~/Library/Application Support/Blender/{}/scripts/addons/rprblender/config.py'.format(tool))
+            '~/Library/Application Support/Blender/{}/scripts/addons/rprblender/config.py'.format(tool_version))
         ATHENA_DIR = os.environ['TMPDIR'] + 'rprblender/'
     else:
         CONFIG_PATH = os.path.expanduser(
-            '~/.config/blender/{}/scripts/addons/rprblender/config.py'.format(tool))
+            '~/.config/blender/{}/scripts/addons/rprblender/config.py'.format(tool_version))
         ATHENA_DIR = '/tmp/rprblender/'
 
     config_file_new = ''
