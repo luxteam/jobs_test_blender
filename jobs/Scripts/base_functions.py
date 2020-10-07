@@ -55,8 +55,6 @@ def reportToJSON(case, render_time=0):
             case['case'], report['test_status']))
 
     report['file_name'] = case['case'] + case.get('extension', '.jpg')
-    # TODO: render device may be incorrect (if it changes in case)
-    report['render_device'] = set_render_device(RENDER_DEVICE)
     report['tool'] = 'Blender ' + bpy.app.version_string.split(' (')[0]
     report['date_time'] = datetime.datetime.now().strftime('%m/%d/%Y %H:%M:%S')
     report['render_version'] = get_addon_version()
