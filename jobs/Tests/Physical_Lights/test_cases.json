@@ -875,6 +875,7 @@
         "case": "BL28_L_PL_075",
         "status": "active",
         "script_info": [
+            "Black image expected",
             "Area light, int = 0, Deactivate Intencity Normalization"
         ],
         "scene": "Physical_Lights.blend",
@@ -1091,6 +1092,7 @@
         "case": "BL28_L_PL_093",
         "status": "active",
         "script_info": [
+            "Black image expected",
             "Area light, Units Luminance, int = 100"
         ],
         "scene": "Physical_Lights.blend",
@@ -1121,6 +1123,7 @@
         "case": "BL28_L_PL_096",
         "status": "active",
         "script_info": [
+            "Black image expected",
             "Area light, Rectangle, int = 100, Size X - 0, Size Y - 0"
         ],
         "scene": "Physical_Lights.blend",
@@ -1353,6 +1356,7 @@
         "case": "BL28_L_PL_109",
         "status": "active",
         "script_info": [
+            "Black image expected",
             "Area light, Square, int = 100, Size - 0"
         ],
         "scene": "Physical_Lights.blend",
@@ -1573,6 +1577,7 @@
         "case": "BL28_L_PL_122",
         "status": "active",
         "script_info": [
+            "Black image expected",
             "Area light, Disc, int = 100, Size - 0"
         ],
         "scene": "Physical_Lights.blend",
@@ -1793,6 +1798,7 @@
         "case": "BL28_L_PL_135",
         "status": "active",
         "script_info": [
+            "Black image expected",
             "Area light, Ellipse, int = 100, Size X - 0, Size Y - 0"
         ],
         "scene": "Physical_Lights.blend",
