@@ -116,16 +116,13 @@ def set_render_device(render_mode):
     if render_mode == 'dual':
         render_device_settings.gpu_states[0] = True
         set_value(render_device_settings, 'cpu_state', True)
-        device_name = pyrpr.Context.cpu_device['name'] + \
-            ' & ' + pyrpr.Context.gpu_devices[0]['name']
     elif render_mode == 'cpu':
         set_value(render_device_settings, 'cpu_state', True)
         render_device_settings.gpu_states[0] = False
-        device_name = pyrpr.Context.cpu_device['name']
     elif render_mode == 'gpu':
         set_value(render_device_settings, 'cpu_state', False)
         render_device_settings.gpu_states[0] = True
-        device_name = pyrpr.Context.gpu_devices[0]['name']
+    device_name = pyrpr.Context.gpu_devices[0]['name']
 
     return device_name
 
