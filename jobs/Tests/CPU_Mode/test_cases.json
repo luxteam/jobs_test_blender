@@ -54,9 +54,9 @@
         "case": "BL28_RS_CPU_005",
         "status": "active",
         "functions": [
-	    "bpy.context.scene.rpr.use_tile_render = True",
+            "bpy.context.scene.rpr.use_tile_render = True",
             "rpr_render(case)",
-	    "bpy.context.scene.rpr.use_tile_render = False"
+            "bpy.context.scene.rpr.use_tile_render = False"
         ],
         "script_info": [
             "Tile rendering"
@@ -295,7 +295,7 @@
         "case": "BL28_RS_CPU_022",
         "status": "active",
         "functions": [
-			"bpy.context.scene.rpr.use_tile_render = True",
+            "bpy.context.scene.rpr.use_tile_render = True",
             "set_value(bpy.context.scene.rpr, 'pixel_filter', 'LANCZOS')",
             "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 10)",
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 1)",
@@ -303,7 +303,7 @@
             "set_value(bpy.context.scene.rpr.limits, 'noise_threshold', 0.05)",
             "set_value(bpy.context.scene.rpr, 'pixel_filter', 'BLACKMANHARRIS')",
             "set_value(bpy.context.scene.rpr, 'pixel_filter_width', 1.5)",
-			"bpy.context.scene.rpr.use_tile_render = False"
+            "bpy.context.scene.rpr.use_tile_render = False"
         ],
         "script_info": [
             "Tile rendering + Anti Aliasing + Adaptive Sampling"
