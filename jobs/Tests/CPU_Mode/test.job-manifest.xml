@@ -5,13 +5,13 @@
 
     <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="1800">
         <argument>--tool "{Tool}"</argument>
-        <argument>--render_device "{RenderDevice}"</argument>
+        <argument>--render_device "cpu"</argument>
         <argument>--output "{OutputDir}"</argument>
-        <argument>--testType Color_Managment</argument>
+        <argument>--testType CPU_Mode</argument>
         <argument>--pass_limit {PassLimit}</argument>
         <argument>--resolution_x {rx}</argument>
         <argument>--resolution_y {ry}</argument>
-        <argument>--res_path "{ScenesDir}"/Render_Settings</argument>
+        <argument>--res_path "{ScenesDir}/Render_Settings"</argument>
         <argument>--testCases "{TestCases}"</argument>
         <argument>--SPU {SPU}</argument>
         <argument>--threshold {threshold}</argument>

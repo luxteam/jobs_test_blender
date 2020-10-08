@@ -5,7 +5,8 @@
         "Animation":"",
         "AOV":"",
         "Color_Managment":"",
-        "Denoiser":"",
+        "CPU_Mode":"",
+        "Dual_Mode":"",
         "Emissive_Light":"",
         "IBL":"",
         "Image_Formats":"",
@@ -25,7 +26,6 @@
         "Uber":"",
         "Camera":"",
         "Cloud":"",
-        "Athena":"",
         "IES_Intensity":"",
         "Mapping":""
     }
