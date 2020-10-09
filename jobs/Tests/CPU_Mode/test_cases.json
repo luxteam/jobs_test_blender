@@ -8,7 +8,10 @@
         "script_info": [
             "Default CPU"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "ComplexTestUber.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_002",
@@ -21,7 +24,10 @@
         "script_info": [
             "Adaptive sampling 0.1 Threshold"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "ComplexTestUber.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_003",
@@ -34,7 +40,10 @@
         "script_info": [
             "Adaptive sampling Threshold 1"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "ComplexTestUber.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_004",
@@ -48,7 +57,10 @@
         "script_info": [
             "Motion Blur"
         ],
-        "scene": "MotionBlur.blend"
+        "scene": "MotionBlur.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_005",
@@ -61,7 +73,10 @@
         "script_info": [
             "Tile rendering"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "ComplexTestUber.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_006",
@@ -76,7 +91,10 @@
         "script_info": [
             "Bileteral denoiser"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "ComplexTestUber.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_007",
@@ -91,7 +109,10 @@
         "script_info": [
             "LWR denoiser"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "ComplexTestUber.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_008",
@@ -106,7 +127,10 @@
         "script_info": [
             "EAW denoiser"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "ComplexTestUber.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_009",
@@ -122,7 +146,10 @@
         "script_info": [
             "ML denoiser (Color + AOV)"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "ComplexTestUber.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_010",
@@ -139,7 +166,10 @@
         "script_info": [
             "ML denoiser (Color only)"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "ComplexTestUber.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_011",
@@ -154,7 +184,10 @@
         "script_info": [
             "Anti Aliasing"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "ComplexTestUber.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_012",
@@ -165,7 +198,10 @@
         "script_info": [
             "UV AOV"
         ],
-        "scene": "AOV_test.blend"
+        "scene": "AOV_test.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_013",
@@ -180,7 +216,10 @@
             "Do not compare",
             "Render Stamp"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "ComplexTestUber.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_014",
@@ -197,7 +236,10 @@
         "script_info": [
             "Color Managment"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "ComplexTestUber.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_015",
@@ -208,7 +250,10 @@
         "script_info": [
             "Sun_Sky"
         ],
-        "scene": "TestSunSky.blend"
+        "scene": "TestSunSky.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_016",
@@ -220,7 +265,10 @@
         "script_info": [
             "VDB"
         ],
-        "scene": "VDB_Material.blend"
+        "scene": "VDB_Material.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_017",
@@ -231,7 +279,10 @@
         "script_info": [
             "Complex 1"
         ],
-        "scene": "2_chevrolet_corvette_stingray_c7RPR.blend"
+        "scene": "2_chevrolet_corvette_stingray_c7RPR.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_018",
@@ -242,7 +293,10 @@
         "script_info": [
             "Complex 2"
         ],
-        "scene": "3_BridgeBooble.blend"
+        "scene": "3_BridgeBooble.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_019",
@@ -253,7 +307,10 @@
         "script_info": [
             "Complex 3"
         ],
-        "scene": "9_sun_light.blend"
+        "scene": "9_sun_light.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_020",
@@ -271,7 +328,10 @@
         "script_info": [
             "Tile rendering + ML (Color + AOV)"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "ComplexTestUber.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_021",
@@ -289,7 +349,10 @@
         "script_info": [
             "Tile rendering + ML (Color only)"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "ComplexTestUber.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_022",
@@ -308,7 +371,10 @@
         "script_info": [
             "Tile rendering + Anti Aliasing + Adaptive Sampling"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "ComplexTestUber.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_023",
@@ -330,7 +396,10 @@
         "script_info": [
             "Motion Blur + ML (Color + AOV) + Color Managment"
         ],
-        "scene": "MotionBlur.blend"
+        "scene": "MotionBlur.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_024",
@@ -352,7 +421,10 @@
         "script_info": [
             "Motion Blur + ML (Color only) + Color Managment"
         ],
-        "scene": "MotionBlur.blend"
+        "scene": "MotionBlur.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     },
     {
         "case": "BL28_RS_CPU_025",
@@ -374,6 +446,9 @@
         "script_info": [
             "Anti Aliasing + ML (Color + AOV) + Time limit = 7 sec"
         ],
-        "scene": "ComplexTestUber.blend"
+        "scene": "ComplexTestUber.blend",
+        "skip_engine":[
+            "FULL2"
+        ]
     }
 ]
