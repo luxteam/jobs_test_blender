@@ -51,7 +51,7 @@
         "functions": [
             "set_value(scene.render, 'use_motion_blur', True)",
             "camera = bpy.data.cameras['Camera']",
-            "set_value(camera.rpr, 'motion_blur_exposure', 0)",
+            "set_value(camera.rpr, 'motion_blur_exposure', 5)",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -387,6 +387,7 @@
             "set_value(bpy.context.scene.display_settings, 'display_device', 'XYZ')",
             "set_value(bpy.context.scene.view_settings, 'gamma', 4)",
             "set_value(bpy.context.scene.view_settings, 'exposure', 0.2)",
+            "set_value(camera.rpr, 'motion_blur_exposure', 5)",
             "rpr_render(case)",
             "set_value(bpy.context.scene.display_settings, 'display_device', 'sRGB')",
             "set_value(bpy.context.scene.view_settings, 'gamma', 1)",
@@ -412,6 +413,7 @@
             "set_value(bpy.context.scene.display_settings, 'display_device', 'XYZ')",
             "set_value(bpy.context.scene.view_settings, 'gamma', 4)",
             "set_value(bpy.context.scene.view_settings, 'exposure', 0.2)",
+            "set_value(camera.rpr, 'motion_blur_exposure', 5)",
             "rpr_render(case)",
             "set_value(bpy.context.scene.display_settings, 'display_device', 'sRGB')",
             "set_value(bpy.context.scene.view_settings, 'gamma', 1)",
