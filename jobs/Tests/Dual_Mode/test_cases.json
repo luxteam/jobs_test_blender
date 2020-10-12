@@ -315,6 +315,7 @@
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
+            "camera = bpy.data.cameras['Camera']",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
             "set_value(view_layer.rpr.denoiser, 'ml_color_only', False)",
@@ -338,6 +339,7 @@
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
+            "camera = bpy.data.cameras['Camera']",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
             "set_value(view_layer.rpr.denoiser, 'ml_color_only', True)",
