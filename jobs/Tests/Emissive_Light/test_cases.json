@@ -10,7 +10,7 @@
             "rpr_render(case)"
         ],
         "skip_engine": [
-            "HIGH"
+            "HIGH", "FULL"
         ]
     }
 ]
