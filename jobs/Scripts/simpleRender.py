@@ -11,6 +11,8 @@ from shutil import copyfile, move, which
 import sys
 import re
 import time
+from queue import Queue
+from threading import Thread
 
 sys.path.append(os.path.abspath(os.path.join(
     os.path.dirname(__file__), os.path.pardir, os.path.pardir)))
@@ -46,6 +48,16 @@ def createArgsParser():
     parser.add_argument('--update_refs', required=True)
 
     return parser
+
+
+def read_output(pipe, functions):
+    try:
+        for line in iter(pipe.readline, ''):
+            for func in functions:
+                func(line.decode('utf-8'))
+        pipe.close()
+    except:
+        pass
 
 
 def athena_disable(disable, tool):
@@ -240,24 +252,66 @@ def main(args):
 
     p = subprocess.Popen(cmdScriptPath, shell=True,
                          stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    stdout, stderr = p.communicate()
 
-    with open(os.path.join(args.output, "renderTool.log"), 'a', encoding='utf-8') as file:
-        stdout = stdout.decode("utf-8")
-        file.write(stdout)
+    prev_done_test_cases = 0
 
-    with open(os.path.join(args.output, "renderTool.log"), 'a', encoding='utf-8') as file:
-        file.write("\n ----STEDERR---- \n")
-        stderr = stderr.decode("utf-8")
-        file.write(stderr)
+    stdout = []
+    stderr = []
+    queue = Queue()
 
-    try:
-        rc = p.wait(timeout=100)
-    except psutil.TimeoutExpired as err:
-        rc = -1
-        for child in reversed(p.children(recursive=True)):
-            child.terminate()
-        p.terminate()
+    stdout_thread = Thread(target=read_output, args=(p.stdout, [queue.put, stdout.append]))
+    stdout_thread.daemon = True
+    stdout_thread.start()
+
+    stderr_thread = Thread(target=read_output, args=(p.stderr, [queue.put, stderr.append]))
+    stderr_thread.daemon = True
+    stderr_thread.start()
+
+    while True:
+        try:
+            p.communicate(timeout=180)
+
+            stdout_thread.join()
+            stderr_thread.join()
+            queue.put(None)
+
+            with open(os.path.join(args.output, "renderTool.log"), 'a', encoding='utf-8') as file:
+                outs = ' '.join(str(x) for x in stdout)
+                file.write(outs)
+
+            with open(os.path.join(args.output, "renderTool.log"), 'a', encoding='utf-8') as file:
+                file.write("\n ----STEDERR---- \n")
+                errs = ' '.join(str(x) for x in stderr)
+                file.write(errs)
+            rc = 0
+            break
+        except (psutil.TimeoutExpired, subprocess.TimeoutExpired) as err:
+            with open(os.path.join(os.path.abspath(args.output), 'test_cases.json')) as file:
+                test_cases = json.load(file)
+                new_done_test_cases_num = len([case['status'] for case in test_cases if case['status'] == 'done'])
+                if prev_done_test_cases == new_done_test_cases_num:
+                    # if number of finished cases wasn't increased - Blender got stuck
+                    core_config.main_logger.error('Blender got stuck.')
+
+                    stdout_thread.join()
+                    stderr_thread.join()
+                    queue.put(None)
+
+                    with open(os.path.join(args.output, "renderTool.log"), 'a', encoding='utf-8') as file:
+                        outs = ' '.join(str(x) for x in stdout)
+                        file.write(outs)
+
+                    with open(os.path.join(args.output, "renderTool.log"), 'a', encoding='utf-8') as file:
+                        file.write("\n ----STEDERR---- \n")
+                        errs = ' '.join(str(x) for x in stderr)
+                        file.write(errs)
+                    rc = -1
+                    p.terminate()
+                    time.sleep(10)
+                    p.kill()
+                    break
+                else:
+                    prev_done_test_cases = new_done_test_cases_num
 
     perf_count.event_record(args.output, 'Close tool', False)
 
