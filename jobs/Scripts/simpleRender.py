@@ -274,7 +274,7 @@ def main(args):
 
     while rc is None:
         with open(os.path.join(args.output, "renderTool.log"), 'a', encoding='utf-8') as file:
-            timeout=180
+            timeout=420
             start_time = datetime.now()
             while (datetime.now() - start_time).total_seconds() <= timeout:
                 stdout = p.stdout.readline()
