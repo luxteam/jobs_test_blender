@@ -119,6 +119,7 @@
             "if os.path.exists(aov_image): os.rename(aov_image, test_case_image)"
         ],
         "script_info": [
+            "Black image expected",
             "AOV: Object Index"
         ],
         "scene": "AOV_test.blend"
