@@ -71,9 +71,15 @@ def rename_log(old_name, new_name):
 
 
 def get_finished_cases_number(output):
-    with open(os.path.join(os.path.abspath(output), 'test_cases.json')) as file:
-        test_cases = json.load(file)
-        return len([case['status'] for case in test_cases if case['status'] in ('skipped', 'error', 'done')])
+    for i in range(3):
+        try:
+            with open(os.path.join(os.path.abspath(output), 'test_cases.json')) as file:
+                test_cases = json.load(file)
+                return len([case['status'] for case in test_cases if case['status'] in ('skipped', 'error', 'done')])
+        except Exception as e:
+            core_config.main_logger.error('Failed to get number of finished cases (try #{}): Reason: {}'.format(i, str(e)))
+            time.sleep(5)
+    return -1
 
 
 def athena_disable(disable, tool):
@@ -286,7 +292,9 @@ def main(args):
                     break
             else:
                 new_done_test_cases_num = get_finished_cases_number(args.output)
-                if prev_done_test_cases == new_done_test_cases_num:
+                if new_done_test_cases_num == -1:
+                    core_config.main_logger.error('Failed to get number of finished cases. Try to do that on next iteration')
+                elif prev_done_test_cases == new_done_test_cases_num:
                     # if number of finished cases wasn't increased - Blender got stuck
                     core_config.main_logger.error('Blender got stuck.')
                     rc = -1
@@ -296,6 +304,7 @@ def main(args):
                     break
                 else:
                     prev_done_test_cases = new_done_test_cases_num
+                    current_restart_timeout = restart_timeout
     stop_threads = True
 
     perf_count.event_record(args.output, 'Close tool', False)
