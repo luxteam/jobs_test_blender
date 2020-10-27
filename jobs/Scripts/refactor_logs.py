@@ -76,7 +76,8 @@ Case\t\tStatus\tTime\tTries
 
 def performance_count(work_dir):
 	old_event = {'name': 'init', 'time': '', 'start': True}
-	time_diffs, time_diffs_summary = []
+	time_diffs = []
+	time_diffs_summary = []
 	work_dir = os.path.join(work_dir, 'events')
 	files = glob.glob(os.path.join(work_dir, '*.json'))
 	files.sort(key=lambda x: os.path.getmtime(x))
