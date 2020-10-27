@@ -11,6 +11,7 @@ from shutil import copyfile, move, which
 import sys
 import re
 import time
+from threading import Thread
 from utils import is_case_skipped
 
 sys.path.append(os.path.abspath(os.path.join(
@@ -24,6 +25,9 @@ from jobs_launcher.core.kill_process import kill_process
 ROOT_DIR = os.path.abspath(os.path.join(
     os.path.dirname(__file__), os.path.pardir, os.path.pardir))
 PROCESS = ['blender', 'blender.exe', 'Blender']
+
+
+stop_threads = False
 
 
 def createArgsParser():
@@ -47,6 +51,35 @@ def createArgsParser():
     parser.add_argument('--update_refs', required=True)
 
     return parser
+
+
+def start_error_logs_daemon(output_file, stderr):
+    with open(output_file, 'a', encoding='utf-8') as file:
+        file.write("\n ----STEDERR---- \n")
+        for line in iter(stderr.readline, b''):
+            if stop_threads: 
+                return
+            file.write(line.decode("utf-8"))
+
+
+def rename_log(old_name, new_name):
+    try:
+        move(os.path.join(os.path.abspath(args.output), old_name),
+             os.path.join(os.path.abspath(args.output), new_name))
+    except:
+        core_config.main_logger.error('No {}'.format(old_name))
+
+
+def get_finished_cases_number(output):
+    for i in range(3):
+        try:
+            with open(os.path.join(os.path.abspath(output), 'test_cases.json')) as file:
+                test_cases = json.load(file)
+                return len([case['status'] for case in test_cases if case['status'] in ('skipped', 'error', 'done')])
+        except Exception as e:
+            core_config.main_logger.error('Failed to get number of finished cases (try #{}): Reason: {}'.format(i, str(e)))
+            time.sleep(5)
+    return -1
 
 
 def athena_disable(disable, tool):
@@ -235,24 +268,44 @@ def main(args):
 
     p = subprocess.Popen(cmdScriptPath, shell=True,
                          stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    stdout, stderr = p.communicate()
 
-    with open(os.path.join(args.output, "renderTool.log"), 'a', encoding='utf-8') as file:
-        stdout = stdout.decode("utf-8")
-        file.write(stdout)
+    prev_done_test_cases = get_finished_cases_number(args.output)
 
-    with open(os.path.join(args.output, "renderTool.log"), 'a', encoding='utf-8') as file:
-        file.write("\n ----STEDERR---- \n")
-        stderr = stderr.decode("utf-8")
-        file.write(stderr)
+    stderr = []
+    stderr_thread = Thread(target=start_error_logs_daemon, args=(os.path.join(args.output, "renderToolErr.log"), p.stderr))
+    stderr_thread.daemon = True
+    stderr_thread.start()
 
-    try:
-        rc = p.wait(timeout=100)
-    except psutil.TimeoutExpired as err:
-        rc = -1
-        for child in reversed(p.children(recursive=True)):
-            child.terminate()
-        p.terminate()
+    rc = None
+
+    while rc is None:
+        with open(os.path.join(args.output, "renderTool.log"), 'a', encoding='utf-8') as file:
+            timeout=420
+            start_time = datetime.now()
+            while (datetime.now() - start_time).total_seconds() <= timeout:
+                stdout = p.stdout.readline()
+                if stdout:
+                    line = stdout.strip().decode("utf-8")
+                    file.write("{}\n".format(line))
+                if p.poll() is not None:
+                    rc = 0
+                    break
+            else:
+                new_done_test_cases_num = get_finished_cases_number(args.output)
+                if new_done_test_cases_num == -1:
+                    core_config.main_logger.error('Failed to get number of finished cases. Try to do that on next iteration')
+                elif prev_done_test_cases == new_done_test_cases_num:
+                    # if number of finished cases wasn't increased - Blender got stuck
+                    core_config.main_logger.error('Blender got stuck.')
+                    rc = -1
+                    p.terminate()
+                    time.sleep(10)
+                    p.kill()
+                    break
+                else:
+                    prev_done_test_cases = new_done_test_cases_num
+                    current_restart_timeout = restart_timeout
+    stop_threads = True
 
     perf_count.event_record(args.output, 'Close tool', False)
 
@@ -365,11 +418,8 @@ if __name__ == "__main__":
 
         rc = main(args)
 
-        try:
-            move(os.path.join(os.path.abspath(args.output), 'renderTool.log'),
-                 os.path.join(os.path.abspath(args.output), 'renderTool' + str(iteration) + '.log'))
-        except:
-            core_config.main_logger.error('No renderTool.log')
+        rename_log('renderTool.log', 'renderTool' + str(iteration) + '.log')
+        rename_log('renderToolErr.log', 'renderToolErr' + str(iteration) + '.log')
 
         try:
             cases = json.load(open(os.path.realpath(
