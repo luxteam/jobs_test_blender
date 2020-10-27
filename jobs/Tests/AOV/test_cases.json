@@ -459,7 +459,7 @@
     },
     {
         "case": "BL28_RS_AOV_015",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "bpy.context.scene.frame_set(40)",
             "view_layer = bpy.context.view_layer",
