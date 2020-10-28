@@ -304,7 +304,6 @@ def main(args):
                     break
                 else:
                     prev_done_test_cases = new_done_test_cases_num
-                    current_restart_timeout = restart_timeout
     stop_threads = True
 
     perf_count.event_record(args.output, 'Close tool', False)
