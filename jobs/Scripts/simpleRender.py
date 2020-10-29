@@ -222,7 +222,7 @@ def main(args):
                 template['group_timeout_exceeded'] = False
 
                 try:
-                    skipped_case_image_path = os.path.join(args.output, 'Color', report['file_name'])
+                    skipped_case_image_path = os.path.join(args.output, 'Color', template['file_name'])
                     if not os.path.exists(skipped_case_image_path):
                         copyfile(os.path.join(work_dir, '..', '..', '..', '..', 'jobs_launcher', 
                             'common', 'img', "skipped.png"), skipped_case_image_path)
