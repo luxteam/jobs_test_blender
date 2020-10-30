@@ -386,6 +386,9 @@
         "scene": "AOV_test.blend",
         "skip_engine": [
             "LOW", "MEDIUM", "HIGH"
+        ],
+        "skip_config":[
+            ["GeForce GTX 1080 Ti"]
         ]
     },
     {
@@ -455,6 +458,9 @@
         "scene": "AOV_test.blend",
         "skip_engine": [
             "LOW", "MEDIUM", "HIGH"
+        ],
+        "skip_config":[
+            ["GeForce GTX 1080 Ti"]
         ]
     },
     {
@@ -558,6 +564,9 @@
         "scene": "AOV_test.blend",
         "skip_engine": [
             "LOW", "MEDIUM", "HIGH"
+        ],
+        "skip_config":[
+            ["GeForce GTX 1080 Ti"]
         ]
     },
     {
@@ -592,6 +601,9 @@
         "scene": "AOV_test.blend",
         "skip_engine": [
             "LOW", "MEDIUM", "HIGH"
+        ],
+        "skip_config":[
+            ["GeForce GTX 1080 Ti"]
         ]
     },
     {
@@ -626,6 +638,9 @@
         "scene": "AOV_test.blend",
         "skip_engine": [
             "LOW", "MEDIUM", "HIGH"
+        ],
+        "skip_config":[
+            ["GeForce GTX 1080 Ti"]
         ]
     },
     {
@@ -660,6 +675,9 @@
         "scene": "AOV_test.blend",
         "skip_engine": [
             "LOW", "MEDIUM", "HIGH"
+        ],
+        "skip_config":[
+            ["GeForce GTX 1080 Ti"]
         ]
     },
     {
@@ -695,6 +713,9 @@
         "scene": "AOV_test.blend",
         "skip_engine": [
             "LOW", "MEDIUM", "HIGH"
+        ],
+        "skip_config":[
+            ["GeForce GTX 1080 Ti"]
         ]
     },
     {
@@ -1016,6 +1037,9 @@
         "scene": "AOV_test.blend",
         "skip_engine": [
             "LOW", "MEDIUM", "HIGH"
+        ],
+        "skip_config":[
+            ["GeForce GTX 1080 Ti"]
         ]
     }
 ]

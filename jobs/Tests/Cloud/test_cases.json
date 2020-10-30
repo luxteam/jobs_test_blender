@@ -394,6 +394,9 @@
         "scene": "Blender_2_83.blend",
         "skip_engine": [
             "LOW", "MEDIUM", "HIGH"
+        ],
+        "skip_config":[
+            ["GeForce GTX 1080 Ti"]
         ]
     },
     {
