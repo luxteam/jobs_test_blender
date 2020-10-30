@@ -54,12 +54,10 @@ def reportToJSON(case, render_time=0):
     logging('Create report json ({{}} {{}})'.format(
             case['case'], report['test_status']))
 
-    report['file_name'] = case['case'] + case.get('extension', '.jpg')
     report['tool'] = 'Blender ' + bpy.app.version_string.split(' (')[0]
     report['date_time'] = datetime.datetime.now().strftime('%m/%d/%Y %H:%M:%S')
     report['render_version'] = get_addon_version()
     report['core_version'] = get_core_version()
-    report['render_color_path'] = path.join('Color', report['file_name'])
     report['render_time'] = render_time
     report['test_group'] = TEST_TYPE
     report['test_case'] = case['case']
@@ -67,6 +65,9 @@ def reportToJSON(case, render_time=0):
     report['script_info'] = case['script_info']
     report['render_log'] = path.join('render_tool_logs', case['case'] + '.log')
     report['scene_name'] = case.get('scene', '')
+    if case['status'] != 'skipped':
+        report['file_name'] = case['case'] + case.get('extension', '.jpg')
+        report['render_color_path'] = path.join('Color', report['file_name'])
 
     with open(path_to_file, 'w') as file:
         file.write(json.dumps([report], indent=4))
@@ -210,7 +211,7 @@ def save_report(case):
 
     if case['status'] == 'inprogress':
         copyfile(path.join(source_dir, 'passed.jpg'), work_dir)
-    else:
+    elif case['status'] != 'skipped':
         copyfile(
             path.join(source_dir, case['status'] + '.jpg'), work_dir)
 
