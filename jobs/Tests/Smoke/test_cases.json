@@ -733,7 +733,7 @@
 	},
 	{
 		"case": "BL28_SM_044",
-		"status": "active",
+		"status": "skipped",
 		"functions": [
 			"view_layer = bpy.context.view_layer",
             "set_value(bpy.context.scene.rpr.limits, 'min_samples', 25)",
