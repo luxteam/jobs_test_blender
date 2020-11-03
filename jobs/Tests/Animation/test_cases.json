@@ -12,7 +12,7 @@
         ],
         "scene": "Keyed_Animation.blend",
         "skip_engine": [
-            "Northstar"
+            "FULL2"
         ]
     },
     {
@@ -28,7 +28,7 @@
         ],
         "scene": "Keyed_Animation.blend",
         "skip_engine": [
-            "Northstar"
+            "FULL2"
         ]
     },
     {
@@ -44,7 +44,7 @@
         ],
         "scene": "Keyed_Animation.blend",
         "skip_engine": [
-            "Northstar"
+            "FULL2"
         ]
     },
     {
