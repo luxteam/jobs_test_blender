@@ -397,6 +397,9 @@
         ],
         "skip_config":[
             ["GeForce GTX 1080 Ti"]
+        ],
+        "skip_on":[
+            ["Linux"]
         ]
     },
     {
