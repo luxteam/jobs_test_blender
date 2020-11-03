@@ -1,7 +1,7 @@
 [
     {
-        "case": "BL28_RS_AN_001",
-        "status": "skipped",
+        "case": "BL28_RS_AN_001",        
+        "status": "active",
         "functions": [
             "scene.frame_set(41)",
             "rpr_render(case)"
@@ -10,11 +10,14 @@
             "Frame: 41",
             "https://amdrender.atlassian.net/browse/RPRBLND-1533"
         ],
-        "scene": "Keyed_Animation.blend"
+        "scene": "Keyed_Animation.blend",
+        "skip_engine": [
+            "Northstar"
+        ]
     },
     {
         "case": "BL28_RS_AN_015",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "scene.frame_set(85)",
             "rpr_render(case)"
@@ -23,11 +26,14 @@
             "Frame: 85",
             "https://amdrender.atlassian.net/browse/RPRBLND-1533"
         ],
-        "scene": "Keyed_Animation.blend"
+        "scene": "Keyed_Animation.blend",
+        "skip_engine": [
+            "Northstar"
+        ]
     },
     {
         "case": "BL28_RS_AN_030",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "scene.frame_set(150)",
             "rpr_render(case)"
@@ -36,7 +42,10 @@
             "Frame: 150",
             "https://amdrender.atlassian.net/browse/RPRBLND-1533"
         ],
-        "scene": "Keyed_Animation.blend"
+        "scene": "Keyed_Animation.blend",
+        "skip_engine": [
+            "Northstar"
+        ]
     },
     {
         "case": "BL28_RS_AN_031",
