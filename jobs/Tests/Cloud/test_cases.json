@@ -129,7 +129,10 @@
         "script_info": [
             "Temple"
         ],
-        "scene": "Temple.blend"
+        "scene": "Temple.blend",
+        "skip_on":[
+            ["Linux"]
+        ]
     },
     {
         "case": "BL28_BCS_010",
