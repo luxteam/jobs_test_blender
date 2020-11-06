@@ -399,6 +399,7 @@
             "LOW", "MEDIUM", "HIGH"
         ],
         "skip_config":[
+            ["AMD Radeon VII"], 
             ["GeForce GTX 1080 Ti"], 
             ["AMD Radeon RX Vega 56 (Metal)"]
         ],
