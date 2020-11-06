@@ -17,13 +17,13 @@
         "case": "BL28_RS_SBD_002",
         "status": "active",
         "script_info": [
-            "Level 0.01",
+            "Level 0.1",
             "Crease Weight 1",
             "Edge and Corner"
         ],
         "scene": "SubDivision.blend",
         "functions": [
-            "setSubdivision(0.01, 1)",
+            "setSubdivision(0.1, 1)",
             "rpr_render(case)"
         ]
     },
@@ -129,13 +129,13 @@
         "case": "BL28_RS_SBD_010",
         "status": "active",
         "script_info": [
-            "Level 0.01",
+            "Level 0.1",
             "Crease Weight 100",
             "Edge and Corner"
         ],
         "scene": "SubDivision.blend",
         "functions": [
-            "setSubdivision(0.01, 100)",
+            "setSubdivision(0.1, 100)",
             "rpr_render(case)"
         ]
     },
@@ -157,13 +157,13 @@
         "case": "BL28_RS_SBD_012",
         "status": "active",
         "script_info": [
-            "Level 0.01",
+            "Level 0.1",
             "Crease Weight 1",
             "Edge only"
         ],
         "scene": "SubDivision.blend",
         "functions": [
-            "setSubdivision(0.01, 1, 'EDGE')",
+            "setSubdivision(0.1, 1, 'EDGE')",
             "rpr_render(case)"
         ]
     },
@@ -269,13 +269,13 @@
         "case": "BL28_RS_SBD_020",
         "status": "active",
         "script_info": [
-            "Level 0.01",
+            "Level 0.1",
             "Crease Weight 100",
             "Edge only"
         ],
         "scene": "SubDivision.blend",
         "functions": [
-            "setSubdivision(0.01, 100, 'EDGE')",
+            "setSubdivision(0.1, 100, 'EDGE')",
             "rpr_render(case)"
         ]
     }
