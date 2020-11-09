@@ -1,7 +1,7 @@
 [
     {
         "case": "BL28_RS_RM_001",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
             "Gloabl Illumination"
         ],
@@ -13,7 +13,7 @@
     },
     {
         "case": "BL28_RS_RM_002",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
             "Direct Illumination"
         ],
@@ -25,7 +25,7 @@
     },
     {
         "case": "BL28_RS_RM_003",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
             "Direct Illumination no Shadows"
         ],
@@ -37,7 +37,7 @@
     },
     {
         "case": "BL28_RS_RM_004",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
             "Wireframe"
         ],
@@ -49,7 +49,7 @@
     },
     {
         "case": "BL28_RS_RM_005",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
             "Material Index"
         ],
@@ -61,7 +61,7 @@
     },
     {
         "case": "BL28_RS_RM_006",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
             "World Position"
         ],
@@ -73,7 +73,7 @@
     },
     {
         "case": "BL28_RS_RM_007",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
             "Shading Normal"
         ],
@@ -85,7 +85,7 @@
     },
     {
         "case": "BL28_RS_RM_008",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
             "Texture Coordinate"
         ],
@@ -97,7 +97,7 @@
     },
     {
         "case": "BL28_RS_RM_009",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
             "Ambient Occlusion"
         ],
@@ -109,7 +109,7 @@
     },
     {
         "case": "BL28_RS_RM_010",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
             "Diffuse"
         ],
@@ -121,7 +121,7 @@
     },
     {
         "case": "BL28_RS_RM_011",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID -",
@@ -140,7 +140,7 @@
     },
     {
         "case": "BL28_RS_RM_012",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID +",
@@ -159,7 +159,7 @@
     },
     {
         "case": "BL28_RS_RM_013",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID -",
@@ -178,7 +178,7 @@
     },
     {
         "case": "BL28_RS_RM_014",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID +",
@@ -197,7 +197,7 @@
     },
     {
         "case": "BL28_RS_RM_015",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID -",
@@ -216,7 +216,7 @@
     },
     {
         "case": "BL28_RS_RM_016",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID +",
@@ -235,7 +235,7 @@
     },
     {
         "case": "BL28_RS_RM_017",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID -",
@@ -254,7 +254,7 @@
     },
     {
         "case": "BL28_RS_RM_018",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID +",
@@ -273,7 +273,7 @@
     },
     {
         "case": "BL28_RS_RM_019",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID +",
@@ -294,7 +294,7 @@
     },
     {
         "case": "BL28_RS_RM_020",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID +",
@@ -315,7 +315,7 @@
     },
     {
         "case": "BL28_RS_RM_021",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID +",
@@ -336,7 +336,7 @@
     },
     {
         "case": "BL28_RS_RM_022",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID -",
@@ -357,7 +357,7 @@
     },
     {
         "case": "BL28_RS_RM_023",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID -",
@@ -378,7 +378,7 @@
     },
     {
         "case": "BL28_RS_RM_024",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID -",
@@ -399,7 +399,7 @@
     },
     {
         "case": "BL28_RS_RM_025",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID -",
@@ -420,7 +420,7 @@
     },
     {
         "case": "BL28_RS_RM_026",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID -",
@@ -441,7 +441,7 @@
     },
     {
         "case": "BL28_RS_RM_027",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID -",
@@ -462,7 +462,7 @@
     },
     {
         "case": "BL28_RS_RM_028",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID -",
@@ -483,7 +483,7 @@
     },
     {
         "case": "BL28_RS_RM_029",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID -",
@@ -504,7 +504,7 @@
     },
     {
         "case": "BL28_RS_RM_030",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID -",
@@ -525,7 +525,7 @@
     },
     {
         "case": "BL28_RS_RM_031",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID -",
@@ -546,7 +546,7 @@
     },
     {
         "case": "BL28_RS_RM_032",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID +",
@@ -567,7 +567,7 @@
     },
     {
         "case": "BL28_RS_RM_033",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID +",
@@ -588,7 +588,7 @@
     },
     {
         "case": "BL28_RS_RM_034",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID +",
@@ -608,7 +608,7 @@
     },
     {
         "case": "BL28_RS_RM_035",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID +",
@@ -631,7 +631,7 @@
     },
     {
         "case": "BL28_RS_RM_036",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID +",
@@ -654,7 +654,7 @@
     },
     {
         "case": "BL28_RS_RM_037",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID +",
@@ -676,7 +676,7 @@
     },
     {
         "case": "BL28_RS_RM_038",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID +",
@@ -698,7 +698,7 @@
     },
     {
         "case": "BL28_RS_RM_039",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Contour",
             "Object ID +",
