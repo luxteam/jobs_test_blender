@@ -130,7 +130,7 @@
             "Temple"
         ],
         "scene": "Temple.blend",
-        "skip_on":[
+        "skip_config":[
             ["Linux"]
         ]
     },
