@@ -1,278 +1,158 @@
-[
+[    
     {
         "case": "BL28_RS_RM_001",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
-            "Gloabl Illumination"
+            "Contour",
+            "Object ID -",
+            "Material Index -",
+            "Shading Normal -"
         ],
         "scene": "9_sun_light.blend",
         "functions": [
-            "bpy.data.scenes['Scene'].rpr.render_mode = 'GLOBAL_ILLUMINATION'",
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = False",
             "rpr_render(case)"
         ]
     },
     {
         "case": "BL28_RS_RM_002",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
-            "Direct Illumination"
+            "Contour",
+            "Object ID +",
+            "Material Index -",
+            "Shading Normal -"
         ],
         "scene": "9_sun_light.blend",
         "functions": [
-            "bpy.data.scenes['Scene'].rpr.render_mode = 'DIRECT_ILLUMINATION'",
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = False",
             "rpr_render(case)"
         ]
     },
     {
         "case": "BL28_RS_RM_003",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
-            "Direct Illumination no Shadows"
+            "Contour",
+            "Object ID -",
+            "Material Index +",
+            "Shading Normal -"
         ],
         "scene": "9_sun_light.blend",
         "functions": [
-            "bpy.data.scenes['Scene'].rpr.render_mode = 'DIRECT_ILLUMINATION_NO_SHADOW'",
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = False",
             "rpr_render(case)"
         ]
     },
     {
         "case": "BL28_RS_RM_004",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
-            "Wireframe"
+            "Contour",
+            "Object ID +",
+            "Material Index +",
+            "Shading Normal -"
         ],
         "scene": "9_sun_light.blend",
         "functions": [
-            "bpy.data.scenes['Scene'].rpr.render_mode = 'WIREFRAME'",
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = False",
             "rpr_render(case)"
         ]
     },
     {
         "case": "BL28_RS_RM_005",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
-            "Material Index"
+            "Contour",
+            "Object ID -",
+            "Material Index -",
+            "Shading Normal +"
         ],
         "scene": "9_sun_light.blend",
         "functions": [
-            "bpy.data.scenes['Scene'].rpr.render_mode = 'MATERIAL_INDEX'",
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
             "rpr_render(case)"
         ]
     },
     {
         "case": "BL28_RS_RM_006",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
-            "World Position"
+            "Contour",
+            "Object ID +",
+            "Material Index -",
+            "Shading Normal +"
         ],
         "scene": "9_sun_light.blend",
         "functions": [
-            "bpy.data.scenes['Scene'].rpr.render_mode = 'POSITION'",
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
             "rpr_render(case)"
         ]
     },
     {
         "case": "BL28_RS_RM_007",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
-            "Shading Normal"
+            "Contour",
+            "Object ID -",
+            "Material Index +",
+            "Shading Normal +"
         ],
         "scene": "9_sun_light.blend",
         "functions": [
-            "bpy.data.scenes['Scene'].rpr.render_mode = 'NORMAL'",
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
             "rpr_render(case)"
         ]
     },
     {
         "case": "BL28_RS_RM_008",
-        "status": "skipped",
+        "status": "active",
         "script_info": [
-            "Texture Coordinate"
+            "Contour",
+            "Object ID +",
+            "Material Index +",
+            "Shading Normal +"
         ],
         "scene": "9_sun_light.blend",
         "functions": [
-            "bpy.data.scenes['Scene'].rpr.render_mode = 'TEXCOORD'",
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
             "rpr_render(case)"
         ]
     },
     {
         "case": "BL28_RS_RM_009",
-        "status": "skipped",
-        "script_info": [
-            "Ambient Occlusion"
-        ],
-        "scene": "9_sun_light.blend",
-        "functions": [
-            "bpy.data.scenes['Scene'].rpr.render_mode = 'AMBIENT_OCCLUSION'",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_RM_010",
-        "status": "skipped",
-        "script_info": [
-            "Diffuse"
-        ],
-        "scene": "9_sun_light.blend",
-        "functions": [
-            "bpy.data.scenes['Scene'].rpr.render_mode = 'DIFFUSE'",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_RM_011",
-        "status": "active",
-        "script_info": [
-            "Contour",
-            "Object ID -",
-            "Material Index -",
-            "Shading Normal -"
-        ],
-        "scene": "9_sun_light.blend",
-        "functions": [
-            "resetContour()",
-            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
-            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
-            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
-            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = False",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_RM_012",
-        "status": "active",
-        "script_info": [
-            "Contour",
-            "Object ID +",
-            "Material Index -",
-            "Shading Normal -"
-        ],
-        "scene": "9_sun_light.blend",
-        "functions": [
-            "resetContour()",
-            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
-            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
-            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
-            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = False",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_RM_013",
-        "status": "active",
-        "script_info": [
-            "Contour",
-            "Object ID -",
-            "Material Index +",
-            "Shading Normal -"
-        ],
-        "scene": "9_sun_light.blend",
-        "functions": [
-            "resetContour()",
-            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
-            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
-            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
-            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = False",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_RM_014",
-        "status": "active",
-        "script_info": [
-            "Contour",
-            "Object ID +",
-            "Material Index +",
-            "Shading Normal -"
-        ],
-        "scene": "9_sun_light.blend",
-        "functions": [
-            "resetContour()",
-            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
-            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
-            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
-            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = False",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_RM_015",
-        "status": "active",
-        "script_info": [
-            "Contour",
-            "Object ID -",
-            "Material Index -",
-            "Shading Normal +"
-        ],
-        "scene": "9_sun_light.blend",
-        "functions": [
-            "resetContour()",
-            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
-            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
-            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
-            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_RM_016",
-        "status": "active",
-        "script_info": [
-            "Contour",
-            "Object ID +",
-            "Material Index -",
-            "Shading Normal +"
-        ],
-        "scene": "9_sun_light.blend",
-        "functions": [
-            "resetContour()",
-            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
-            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
-            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
-            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_RM_017",
-        "status": "active",
-        "script_info": [
-            "Contour",
-            "Object ID -",
-            "Material Index +",
-            "Shading Normal +"
-        ],
-        "scene": "9_sun_light.blend",
-        "functions": [
-            "resetContour()",
-            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
-            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
-            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
-            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_RM_018",
-        "status": "active",
-        "script_info": [
-            "Contour",
-            "Object ID +",
-            "Material Index +",
-            "Shading Normal +"
-        ],
-        "scene": "9_sun_light.blend",
-        "functions": [
-            "resetContour()",
-            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
-            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
-            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
-            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
-            "rpr_render(case)"
-        ]
-    },
-    {
-        "case": "BL28_RS_RM_019",
         "status": "active",
         "script_info": [
             "Contour",
@@ -293,7 +173,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_020",
+        "case": "BL28_RS_RM_010",
         "status": "active",
         "script_info": [
             "Contour",
@@ -314,7 +194,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_021",
+        "case": "BL28_RS_RM_011",
         "status": "active",
         "script_info": [
             "Contour",
@@ -335,7 +215,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_022",
+        "case": "BL28_RS_RM_012",
         "status": "active",
         "script_info": [
             "Contour",
@@ -356,7 +236,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_023",
+        "case": "BL28_RS_RM_013",
         "status": "active",
         "script_info": [
             "Contour",
@@ -377,7 +257,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_024",
+        "case": "BL28_RS_RM_014",
         "status": "active",
         "script_info": [
             "Contour",
@@ -398,7 +278,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_025",
+        "case": "BL28_RS_RM_015",
         "status": "active",
         "script_info": [
             "Contour",
@@ -419,7 +299,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_026",
+        "case": "BL28_RS_RM_016",
         "status": "active",
         "script_info": [
             "Contour",
@@ -440,7 +320,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_027",
+        "case": "BL28_RS_RM_017",
         "status": "active",
         "script_info": [
             "Contour",
@@ -461,7 +341,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_028",
+        "case": "BL28_RS_RM_018",
         "status": "active",
         "script_info": [
             "Contour",
@@ -482,7 +362,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_029",
+        "case": "BL28_RS_RM_019",
         "status": "active",
         "script_info": [
             "Contour",
@@ -503,7 +383,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_030",
+        "case": "BL28_RS_RM_020",
         "status": "active",
         "script_info": [
             "Contour",
@@ -524,7 +404,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_031",
+        "case": "BL28_RS_RM_021",
         "status": "active",
         "script_info": [
             "Contour",
@@ -545,7 +425,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_032",
+        "case": "BL28_RS_RM_022",
         "status": "active",
         "script_info": [
             "Contour",
@@ -566,7 +446,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_033",
+        "case": "BL28_RS_RM_023",
         "status": "active",
         "script_info": [
             "Contour",
@@ -587,7 +467,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_034",
+        "case": "BL28_RS_RM_024",
         "status": "active",
         "script_info": [
             "Contour",
@@ -607,7 +487,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_035",
+        "case": "BL28_RS_RM_025",
         "status": "active",
         "script_info": [
             "Contour",
@@ -630,7 +510,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_036",
+        "case": "BL28_RS_RM_026",
         "status": "active",
         "script_info": [
             "Contour",
@@ -653,7 +533,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_037",
+        "case": "BL28_RS_RM_027",
         "status": "active",
         "script_info": [
             "Contour",
@@ -675,7 +555,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_038",
+        "case": "BL28_RS_RM_028",
         "status": "active",
         "script_info": [
             "Contour",
@@ -697,7 +577,7 @@
         ]
     },
     {
-        "case": "BL28_RS_RM_039",
+        "case": "BL28_RS_RM_029",
         "status": "active",
         "script_info": [
             "Contour",
