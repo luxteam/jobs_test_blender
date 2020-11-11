@@ -1540,7 +1540,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_094",
@@ -1558,7 +1558,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_095",
@@ -1576,7 +1576,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_096",
@@ -1594,7 +1594,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_097",
@@ -1612,7 +1612,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_098",
@@ -1630,7 +1630,7 @@
             "Rotation -90 0 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_099",
@@ -1648,7 +1648,7 @@
             "Rotation 0 270 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_100",
@@ -1666,7 +1666,7 @@
             "Rotation 0 0 450",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_101",
@@ -1684,7 +1684,7 @@
             "Rotation -90 270 450",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_102",
@@ -1702,7 +1702,7 @@
             "Rotation 0 0 0",
             "Scale 2 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_103",
@@ -1720,7 +1720,7 @@
             "Rotation 0 0 0",
             "Scale 1 0.5 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_104",
@@ -1738,7 +1738,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 1.5"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_105",
@@ -1756,7 +1756,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 -1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_106",
@@ -1774,7 +1774,7 @@
             "Rotation 0 0 0",
             "Scale 2 0.5 1.5"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_107",
@@ -1792,7 +1792,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_108",
@@ -1810,7 +1810,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_109",
@@ -1828,7 +1828,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_110",
@@ -1846,7 +1846,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_111",
@@ -1864,7 +1864,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_112",
@@ -1882,7 +1882,7 @@
             "Rotation -90 0 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_113",
@@ -1900,7 +1900,7 @@
             "Rotation 0 270 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_114",
@@ -1918,7 +1918,7 @@
             "Rotation 0 0 450",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_115",
@@ -1936,7 +1936,7 @@
             "Rotation -90 270 450",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_116",
@@ -1954,7 +1954,7 @@
             "Rotation 0 0 0",
             "Scale 2 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_117",
@@ -1972,7 +1972,7 @@
             "Rotation 0 0 0",
             "Scale 1 0.5 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_118",
@@ -1990,7 +1990,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 -1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_119",
@@ -2008,7 +2008,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 1.5"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_120",
@@ -2026,7 +2026,7 @@
             "Rotation 0 0 0",
             "Scale 2 0.5 1.5"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_121",
@@ -2044,7 +2044,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_122",
@@ -2062,7 +2062,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_123",
@@ -2080,7 +2080,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_124",
@@ -2098,7 +2098,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_125",
@@ -2116,7 +2116,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_126",
@@ -2134,7 +2134,7 @@
             "Rotation -90 0 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_127",
@@ -2152,7 +2152,7 @@
             "Rotation 0 270 0",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_128",
@@ -2170,7 +2170,7 @@
             "Rotation 0 0 450",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_129",
@@ -2188,7 +2188,7 @@
             "Rotation -90 270 450",
             "Scale 1 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_130",
@@ -2206,7 +2206,7 @@
             "Rotation 0 0 0",
             "Scale 2 1 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_131",
@@ -2224,7 +2224,7 @@
             "Rotation 0 0 0",
             "Scale 1 0.5 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_132",
@@ -2242,7 +2242,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 -1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_133",
@@ -2260,7 +2260,7 @@
             "Rotation 0 0 0",
             "Scale 1 1 1.5"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_134",
@@ -2278,7 +2278,7 @@
             "Rotation 0 0 0",
             "Scale 2 0.5 1.5"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_135",
@@ -2294,7 +2294,7 @@
             "Chosen camera - Camera",
             "Threshold - 999999"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_136",
@@ -2310,7 +2310,7 @@
             "Chosen camera - Camera",
             "Threshold - 1"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_137",
@@ -2326,7 +2326,7 @@
             "Chosen camera - Camera",
             "Threshold - 0"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_138",
@@ -2342,7 +2342,7 @@
             "Chosen camera - Camera",
             "Threshold - (-1)"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_139",
@@ -2358,7 +2358,7 @@
             "Chosen camera - Camera",
             "Threshold - 11.3"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_140",
@@ -2374,7 +2374,7 @@
             "Chosen camera - Camera.001",
             "Threshold - 999999"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_141",
@@ -2390,7 +2390,7 @@
             "Chosen camera - Camera.001",
             "Threshold - 0"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_142",
@@ -2406,7 +2406,7 @@
             "Chosen camera - Camera.001",
             "Threshold - 11.7"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_143",
@@ -2426,7 +2426,7 @@
             "Scale 1 1 1",
             "Blend Weight - 0"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_144",
@@ -2446,7 +2446,7 @@
             "Scale 1 1 1",
             "Blend Weight - 0"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_145",
@@ -2466,7 +2466,7 @@
             "Scale 1 1 1",
             "Blend Weight - 0"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_146",
@@ -2486,7 +2486,7 @@
             "Scale 1 1 1",
             "Blend Weight - 0"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_147",
@@ -2506,7 +2506,7 @@
             "Scale 1 1 1",
             "Blend Weight - 0"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_148",
@@ -2526,7 +2526,7 @@
             "Scale 1 1 1",
             "Blend Weight - 0"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_149",
@@ -2546,7 +2546,7 @@
             "Scale 1 1 1",
             "Blend Weight - 0"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_150",
@@ -2566,7 +2566,7 @@
             "Scale 1 1 1",
             "Blend Weight - 0"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_151",
@@ -2586,7 +2586,7 @@
             "Scale 1 1 1",
             "Blend Weight - 0"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_152",
@@ -2606,7 +2606,7 @@
             "Scale 2 1 1",
             "Blend Weight - 0"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_153",
@@ -2626,7 +2626,7 @@
             "Scale 1 0.5 1",
             "Blend Weight - 0"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_154",
@@ -2646,7 +2646,7 @@
             "Scale 1 1 -1",
             "Blend Weight - 0"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_155",
@@ -2666,7 +2666,7 @@
             "Scale 1 1 1.5",
             "Blend Weight - 0"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_156",
@@ -2686,7 +2686,7 @@
             "Scale 2 0.5 1.5",
             "Blend Weight - 0"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_157",
@@ -2706,7 +2706,7 @@
             "Scale 1 1 1",
             "Blend Weight - 10"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_158",
@@ -2726,7 +2726,7 @@
             "Scale 1 1 1",
             "Blend Weight - (-10)"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_159",
@@ -2746,7 +2746,7 @@
             "Scale 1 1 1",
             "Blend Weight - 5"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_160",
@@ -2766,7 +2766,7 @@
             "Scale 1 1 1",
             "Blend Weight - 30"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_161",
@@ -2786,7 +2786,7 @@
             "Scale 3 2 2",
             "Blend Weight - 100"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     },
     {
         "case": "BL28_MAT_MAP_162",
@@ -2806,6 +2806,6 @@
             "Scale 1 1 1",
             "Blend Weight - 3"
         ],
-        "scene": "BoxMappingMine.blend"
+        "scene": "BoxMapping.blend"
     }
 ]
