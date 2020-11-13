@@ -1547,14 +1547,14 @@
         "status": "active",
         "functions": [
             "UV_node().procedural_type = 'MATERIAL_NODE_UVTYPE_PLANAR'",
-            "UV_node().origin = (10, 0, 0)",
+            "UV_node().origin = (0.3, 0, 0)",
             "UV_node().rotation = (0, 0, 0)",
             "UV_node().scale = (1, 1, 1)",
             "rpr_render(case)"
         ],
         "script_info": [
             "Plane",
-            "Location 10 0 0",
+            "Location 0.3 0 0",
             "Rotation 0 0 0",
             "Scale 1 1 1"
         ],
@@ -1565,14 +1565,14 @@
         "status": "active",
         "functions": [
             "UV_node().procedural_type = 'MATERIAL_NODE_UVTYPE_PLANAR'",
-            "UV_node().origin = (0, -5, 0)",
+            "UV_node().origin = (0, -0.5, 0)",
             "UV_node().rotation = (0, 0, 0)",
             "UV_node().scale = (1, 1, 1)",
             "rpr_render(case)"
         ],
         "script_info": [
             "Plane",
-            "Location 0 -5 0",
+            "Location 0 -0.5 0",
             "Rotation 0 0 0",
             "Scale 1 1 1"
         ],
@@ -1583,14 +1583,14 @@
         "status": "active",
         "functions": [
             "UV_node().procedural_type = 'MATERIAL_NODE_UVTYPE_PLANAR'",
-            "UV_node().origin = (0, 0, 10)",
+            "UV_node().origin = (0, 0, 0.9)",
             "UV_node().rotation = (0, 0, 0)",
             "UV_node().scale = (1, 1, 1)",
             "rpr_render(case)"
         ],
         "script_info": [
             "Plane",
-            "Location 0 0 10",
+            "Location 0 0 0.9",
             "Rotation 0 0 0",
             "Scale 1 1 1"
         ],
@@ -1601,14 +1601,14 @@
         "status": "active",
         "functions": [
             "UV_node().procedural_type = 'MATERIAL_NODE_UVTYPE_PLANAR'",
-            "UV_node().origin = (10, -5, 10)",
+            "UV_node().origin = (0.3, -0.5, 0.9)",
             "UV_node().rotation = (0, 0, 0)",
             "UV_node().scale = (1, 1, 1)",
             "rpr_render(case)"
         ],
         "script_info": [
             "Plane",
-            "Location 10 -5 10",
+            "Location 0.3 -0.5 0.9",
             "Rotation 0 0 0",
             "Scale 1 1 1"
         ],
