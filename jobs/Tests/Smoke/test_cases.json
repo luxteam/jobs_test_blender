@@ -905,5 +905,16 @@
 			"Complex 10"
 		],
 		"scene": "10_Barcelona_Pavillion.blend"
+	},
+	{
+		"case": "BL28_SM_057",
+		"status": "active",
+		"functions": [
+			"rpr_render(case)"
+		],
+		"script_info": [
+			"Visibility"
+		],
+		"scene": "Visibility.blend"
 	}
 ]

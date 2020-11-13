@@ -252,7 +252,7 @@
             "connect_nodes('Color Balance', 'Image', 'Composite', 'Image')",
             "nodes()['Color Balance'].lift = (0.8, 1, 0.8)",
             "nodes()['Color Balance'].gamma = (0.8, 1, 0.8)",
-            "nodes()['Color Balance'].lift = (0, 1.5, 0)",
+            "nodes()['Color Balance'].gain = (0, 1.5, 0)",
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Compositor.blend'))"
         ],
@@ -465,14 +465,14 @@
         "status": "active",
         "functions": [
             "create_compositor_node('DistanceMatte')",
-            "connect_nodes('Render Layers', 'Image', 'Distatnce Key', 'Image')",
-            "connect_nodes('Distatnce Key', 'Image', 'Composite', 'Image')",
-            "nodes()['Distatnce Key'].tolerance = 1",
+            "connect_nodes('Render Layers', 'Image', 'Distance Key', 'Image')",
+            "connect_nodes('Distance Key', 'Image', 'Composite', 'Image')",
+            "nodes()['Distance Key'].tolerance = 1",
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Compositor.blend'))"
         ],
         "script_info": [
-            "Distatnce Key"
+            "Distance Key"
         ],
         "scene": "Compositor.blend"
     },

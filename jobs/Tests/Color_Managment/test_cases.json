@@ -612,5 +612,178 @@
             "XYZ Color Space"
         ],
         "scene": "ComplexTestUber.blend"
+    },
+    {
+        "case": "BL28_RS_CM_049",
+        "status": "active",
+        "functions": [
+            "bpy.data.scenes['Scene'].view_settings.use_curve_mapping = True",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.black_level = (1, 0, 0)",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.white_level = (1, 1, 1)",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Use Curves",
+            "Black Level - (1, 0, 0)",
+            "White Level - (1, 1, 1)"
+        ],
+        "scene": "UseCurvesCM.blend"
+    },
+    {
+        "case": "BL28_RS_CM_050",
+        "status": "active",
+        "functions": [
+            "bpy.data.scenes['Scene'].view_settings.use_curve_mapping = True",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.black_level = (0, 1, 0)",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.white_level = (1, 1, 1)",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Use Curves",
+            "Black Level - (0, 1, 0)",
+            "White Level - (1, 1, 1)"
+        ],
+        "scene": "UseCurvesCM.blend"
+    },
+    {
+        "case": "BL28_RS_CM_051",
+        "status": "active",
+        "functions": [
+            "bpy.data.scenes['Scene'].view_settings.use_curve_mapping = True",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.black_level = (0, 0, 1)",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.white_level = (1, 1, 1)",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Use Curves",
+            "Black Level - (0, 0, 1)",
+            "White Level - (1, 1, 1)"
+        ],
+        "scene": "UseCurvesCM.blend"
+    },
+    {
+        "case": "BL28_RS_CM_052",
+        "status": "active",
+        "functions": [
+            "bpy.data.scenes['Scene'].view_settings.use_curve_mapping = True",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.black_level = (0, 0, 0)",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.white_level = (0, 1, 1)",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Use Curves",
+            "Black Level - (0, 0, 0)",
+            "White Level - (0, 1, 1)"
+        ],
+        "scene": "UseCurvesCM.blend"
+    },
+    {
+        "case": "BL28_RS_CM_053",
+        "status": "active",
+        "functions": [
+            "bpy.data.scenes['Scene'].view_settings.use_curve_mapping = True",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.black_level = (0, 0, 0)",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.white_level = (1, 0, 1)",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Use Curves",
+            "Black Level - (0, 0, 0)",
+            "White Level - (1, 0, 1)"
+        ],
+        "scene": "UseCurvesCM.blend"
+    },
+    {
+        "case": "BL28_RS_CM_054",
+        "status": "active",
+        "functions": [
+            "bpy.data.scenes['Scene'].view_settings.use_curve_mapping = True",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.black_level = (0, 0, 0)",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.white_level = (1, 1, 0)",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Use Curves",
+            "Black Level - (0, 0, 0)",
+            "White Level - (1, 1, 0)"
+        ],
+        "scene": "UseCurvesCM.blend"
+    },
+    {
+        "case": "BL28_RS_CM_055",
+        "status": "active",
+        "functions": [
+            "bpy.data.scenes['Scene'].view_settings.use_curve_mapping = True",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.black_level = (1, 1, 1)",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.white_level = (1, 1, 1)",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Use Curves",
+            "Black Level - (1, 1, 1)",
+            "White Level - (1, 1, 1)"
+        ],
+        "scene": "UseCurvesCM.blend"
+    },
+    {
+        "case": "BL28_RS_CM_056",
+        "status": "active",
+        "functions": [
+            "bpy.data.scenes['Scene'].view_settings.use_curve_mapping = True",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.black_level = (2, 0, 0)",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.white_level = (1, 1, 1)",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Use Curves",
+            "Black Level - (2, 0, 0)",
+            "White Level - (1, 1, 1)"
+        ],
+        "scene": "UseCurvesCM.blend"
+    },
+    {
+        "case": "BL28_RS_CM_057",
+        "status": "active",
+        "functions": [
+            "bpy.data.scenes['Scene'].view_settings.use_curve_mapping = True",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.black_level = (-1, 0, 0)",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.white_level = (1, 1, 1)",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Use Curves",
+            "Black Level - (-1, 0, 0)",
+            "White Level - (1, 1, 1)"
+        ],
+        "scene": "UseCurvesCM.blend"
+    },
+    {
+        "case": "BL28_RS_CM_058",
+        "status": "active",
+        "functions": [
+            "bpy.data.scenes['Scene'].view_settings.use_curve_mapping = True",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.black_level = (0, 0, 0)",
+            "bpy.data.scenes['Scene'].view_settings.curve_mapping.white_level = (-1, 1, 1)",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Use Curves",
+            "Black Level - (0, 0, 0)",
+            "White Level - (-1, 1, 1)"
+        ],
+        "scene": "UseCurvesCM.blend"
+    },
+    {
+        "case": "BL28_RS_CM_059",
+        "status": "active",
+        "functions": [
+            "bpy.data.scenes['Scene'].view_settings.use_curve_mapping = True",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Use Curves",
+            "Custom Curve"
+        ],
+        "scene": "CustomCurve.blend"
     }
 ]
