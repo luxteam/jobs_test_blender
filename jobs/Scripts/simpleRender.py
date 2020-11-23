@@ -53,10 +53,11 @@ def createArgsParser():
     return parser
 
 
-def start_error_logs_daemon(output_file, stderr):
-    with open(output_file, 'a', encoding='utf-8') as file:
-        file.write("\n ----STEDERR---- \n")
-        for line in iter(stderr.readline, b''):
+def start_logs_daemon(output_file, std, is_stderr=False):
+    with open(output_file, 'w', encoding='utf-8') as file:
+        if is_stderr:
+            file.write("\n ----STEDERR---- \n")
+        for line in iter(std.readline, b''):
             if stop_threads: 
                 return
             file.write(line.decode("utf-8"))
@@ -66,8 +67,8 @@ def rename_log(old_name, new_name):
     try:
         move(os.path.join(os.path.abspath(args.output), old_name),
              os.path.join(os.path.abspath(args.output), new_name))
-    except:
-        core_config.main_logger.error('No {}'.format(old_name))
+    except Exception as e:
+        core_config.main_logger.warning('No {}'.format(old_name))
 
 
 def get_finished_cases_number(output):
@@ -127,7 +128,7 @@ def main(args):
         cases = json.load(open(os.path.realpath(
             os.path.join(os.path.abspath(args.output), 'test_cases.json'))))
     except Exception as e:
-        core_config.logging.error("Can't load test_cases.json")
+        core_config.main_logger.error("Can't load test_cases.json")
         core_config.main_logger.error(str(e))
         group_failed(args)
         exit(-1)
@@ -225,7 +226,7 @@ def main(args):
                     skipped_case_image_path = os.path.join(args.output, 'Color', template['file_name'])
                     if not os.path.exists(skipped_case_image_path):
                         copyfile(os.path.join(work_dir, '..', '..', '..', '..', 'jobs_launcher', 
-                            'common', 'img', "skipped.png"), skipped_case_image_path)
+                            'common', 'img', "skipped.jpg"), skipped_case_image_path)
                 except OSError or FileNotFoundError as err:
                     main_logger.error("Can't create img stub: {}".format(str(err)))
             else:
@@ -283,39 +284,40 @@ def main(args):
 
     prev_done_test_cases = get_finished_cases_number(args.output)
 
+    stdout = []
+    stdout_thread = Thread(target=start_logs_daemon, args=(os.path.join(args.output, "renderTool.log"), p.stdout))
+    stdout_thread.daemon = True
+    stdout_thread.start()
+
     stderr = []
-    stderr_thread = Thread(target=start_error_logs_daemon, args=(os.path.join(args.output, "renderToolErr.log"), p.stderr))
+    stderr_thread = Thread(target=start_logs_daemon, args=(os.path.join(args.output, "renderToolErr.log"), p.stderr, True))
     stderr_thread.daemon = True
     stderr_thread.start()
 
     rc = None
 
+    timeout=420
     while rc is None:
-        with open(os.path.join(args.output, "renderTool.log"), 'a', encoding='utf-8') as file:
-            timeout=420
-            start_time = datetime.now()
-            while (datetime.now() - start_time).total_seconds() <= timeout:
-                stdout = p.stdout.readline()
-                if stdout:
-                    line = stdout.strip().decode("utf-8")
-                    file.write("{}\n".format(line))
-                if p.poll() is not None:
-                    rc = 0
-                    break
+        start_time = datetime.now()
+        while (datetime.now() - start_time).total_seconds() <= timeout:
+            time.sleep(1)
+            if p.poll() is not None:
+                rc = 0
+                break
+        else:
+            new_done_test_cases_num = get_finished_cases_number(args.output)
+            if new_done_test_cases_num == -1:
+                core_config.main_logger.error('Failed to get number of finished cases. Try to do that on next iteration')
+            elif prev_done_test_cases == new_done_test_cases_num:
+                # if number of finished cases wasn't increased - Blender got stuck
+                core_config.main_logger.error('Blender got stuck.')
+                rc = -1
+                p.terminate()
+                time.sleep(10)
+                p.kill()
+                break
             else:
-                new_done_test_cases_num = get_finished_cases_number(args.output)
-                if new_done_test_cases_num == -1:
-                    core_config.main_logger.error('Failed to get number of finished cases. Try to do that on next iteration')
-                elif prev_done_test_cases == new_done_test_cases_num:
-                    # if number of finished cases wasn't increased - Blender got stuck
-                    core_config.main_logger.error('Blender got stuck.')
-                    rc = -1
-                    p.terminate()
-                    time.sleep(10)
-                    p.kill()
-                    break
-                else:
-                    prev_done_test_cases = new_done_test_cases_num
+                prev_done_test_cases = new_done_test_cases_num
     stop_threads = True
 
     perf_count.event_record(args.output, 'Close tool', False)
@@ -393,7 +395,8 @@ def sync_time(work_dir):
 
             synchronization_time = sync_minutes * 60 + sync_seconds + sync_milisec / 1000
             case_json[0]['sync_time'] += synchronization_time
-            case_json[0]['render_time'] -= synchronization_time
+            if case_json[0]['render_time'] != 0:
+                case_json[0]['render_time'] -= synchronization_time
 
             with open(case_report_path, 'w') as case_report:
                 case_report.write(json.dumps(case_json, indent=4))
