@@ -1,0 +1,42 @@
+[
+    {
+        "case": "BL28_MAT_IMAGE_001",
+        "status": "active",
+        "functions": [
+            "Im_node().interpolation = 'Linear'",
+            "Im_node().projection = 'TUBE'",
+            "Im_node().extension = 'REPEAT'",
+            "Im_node().source = 'GENERATED'",
+            "Im_node().colorspace_settings.name = 'Non-Color'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Linear",
+            "Projection: Tube",
+            "Extension: Repeat",
+            "Source: Generated",
+            "Color Space: Non-Color"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_002",
+        "status": "active",
+        "functions": [
+            "Im_node().interpolation = 'Linear'",
+            "Im_node().projection = 'SPHERE'",
+            "Im_node().extension = 'REPEAT'",
+            "Im_node().source = 'MOVIE'",
+            "Im_node().colorspace_settings.name = 'XYZ'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Linear",
+            "Projection: Sphere",
+            "Extension: Repeat",
+            "Source: Movie",
+            "Color Space: XYZ"
+        ],
+        "scene": "BoxMapping.blend"
+    }
+]
