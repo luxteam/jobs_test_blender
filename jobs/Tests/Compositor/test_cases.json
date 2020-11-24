@@ -310,7 +310,7 @@
     },
     {
         "case": "BL28_RS_CMP_020",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "create_compositor_node('HueSat')",
             "connect_nodes('Render Layers', 'Image', 'Hue Saturation Value', 'Image')",
