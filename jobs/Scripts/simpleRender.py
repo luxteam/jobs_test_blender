@@ -11,7 +11,7 @@ from shutil import copyfile, move, which
 import sys
 import re
 import time
-from threading import Thread
+from threading import Thread, Lock
 from utils import is_case_skipped
 
 sys.path.append(os.path.abspath(os.path.join(
@@ -28,6 +28,7 @@ PROCESS = ['blender', 'blender.exe', 'Blender']
 
 
 stop_threads = False
+render_log_lock = Lock()
 
 
 def createArgsParser():
@@ -53,14 +54,16 @@ def createArgsParser():
     return parser
 
 
-def start_logs_daemon(output_file, std, is_stderr=False):
-    with open(output_file, 'w', encoding='utf-8') as file:
-        if is_stderr:
-            file.write("\n ----STEDERR---- \n")
-        for line in iter(std.readline, b''):
-            if stop_threads: 
-                return
+def start_logs_daemon(output_file, std):
+    for line in iter(std.readline, b''):
+        if stop_threads: 
+            return
+        while render_log_lock.locked():
+            continue
+        render_log_lock.acquire()
+        with open(output_file, 'a', encoding='utf-8') as file:
             file.write(line.decode("utf-8"))
+        render_log_lock.release()
 
 
 def rename_log(old_name, new_name):
@@ -228,7 +231,7 @@ def main(args):
                         copyfile(os.path.join(work_dir, '..', '..', '..', '..', 'jobs_launcher', 
                             'common', 'img', "skipped.jpg"), skipped_case_image_path)
                 except OSError or FileNotFoundError as err:
-                    main_logger.error("Can't create img stub: {}".format(str(err)))
+                    core_config.main_logger.error("Can't create img stub: {}".format(str(err)))
             else:
                 template['test_status'] = 'error'
                 template['file_name'] = 'failed.jpg'
@@ -285,12 +288,12 @@ def main(args):
     prev_done_test_cases = get_finished_cases_number(args.output)
 
     stdout = []
-    stdout_thread = Thread(target=start_logs_daemon, args=(os.path.join(args.output, "renderTool.log"), p.stdout))
+    stdout_thread = Thread(target=start_logs_daemon, args=(os.path.join(args.output, "renderToolRaw.log"), p.stdout))
     stdout_thread.daemon = True
     stdout_thread.start()
 
     stderr = []
-    stderr_thread = Thread(target=start_logs_daemon, args=(os.path.join(args.output, "renderToolErr.log"), p.stderr, True))
+    stderr_thread = Thread(target=start_logs_daemon, args=(os.path.join(args.output, "renderToolRaw.log"), p.stderr))
     stderr_thread.daemon = True
     stderr_thread.start()
 
@@ -354,54 +357,6 @@ def group_failed(args):
     exit(rc)
 
 
-def sync_time(work_dir):
-    files = [f for f in os.listdir(
-        work_dir) if os.path.isfile(os.path.join(work_dir, f))if 'renderTool' in f]
-
-    logs = ''
-
-    for f in files:
-        with open(os.path.realpath(os.path.join(work_dir, f))) as log:
-            logs += log.read()
-
-    log_path = ''
-    case_report_name = ''
-    case_report_path = ''
-    for line in logs.splitlines():
-        if [l for l in ['Save report', 'Create log'] if l in line]:
-            test_case = line.split().pop()
-            case_report_name = test_case + core_config.CASE_REPORT_SUFFIX
-            case_report_path = os.path.join(work_dir, case_report_name)
-            log_path = os.path.join(work_dir, 'render_tool_logs', test_case + '.log')
-
-        if os.path.exists(log_path):
-            with open(log_path, 'a') as case_log:
-                case_log.write(line + '\n')
-
-        if os.path.exists(case_report_path):
-            with open(case_report_path, 'r') as case_report:
-                case_json = json.load(case_report)
-
-            sync_minutes = re.findall(
-                'Scene synchronization time: (\d*)m', line)
-            sync_seconds = re.findall(
-                'Scene synchronization time: .*?(\d*)s', line)
-            sync_milisec = re.findall(
-                'Scene synchronization time: .*?(\d*)ms', line)
-
-            sync_minutes = float(next(iter(sync_minutes or []), 0))
-            sync_seconds = float(next(iter(sync_seconds or []), 0))
-            sync_milisec = float(next(iter(sync_milisec or []), 0))
-
-            synchronization_time = sync_minutes * 60 + sync_seconds + sync_milisec / 1000
-            case_json[0]['sync_time'] += synchronization_time
-            if case_json[0]['render_time'] != 0:
-                case_json[0]['render_time'] -= synchronization_time
-
-            with open(case_report_path, 'w') as case_report:
-                case_report.write(json.dumps(case_json, indent=4))
-
-
 if __name__ == "__main__":
     core_config.main_logger.info("simpleRender start working...")
 
@@ -432,9 +387,6 @@ if __name__ == "__main__":
 
         rc = main(args)
 
-        rename_log('renderTool.log', 'renderTool' + str(iteration) + '.log')
-        rename_log('renderToolErr.log', 'renderToolErr' + str(iteration) + '.log')
-
         try:
             cases = json.load(open(os.path.realpath(
                 os.path.join(os.path.abspath(args.output), 'test_cases.json'))))
@@ -462,7 +414,4 @@ if __name__ == "__main__":
             kill_process(PROCESS)
             core_config.main_logger.info(
                 "Finish simpleRender with code: {}".format(rc))
-            perf_count.event_record(args.output, 'Sync time count', True)
-            sync_time(args.output)
-            perf_count.event_record(args.output, 'Sync time count', False)
             exit(rc)
