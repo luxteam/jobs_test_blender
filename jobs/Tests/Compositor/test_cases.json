@@ -37,10 +37,9 @@
             "create_compositor_node('BokehBlur')",
             "create_compositor_node('BokehImage')",
             "nodes()['Bokeh Image'].flaps = 3",
-            "nodes()['Bokeh Image'].shift = 1",
+            "connect_nodes('Bokeh Image', 'Image', 'Bokeh Blur', 'Bokeh')",
             "connect_nodes('Render Layers', 'Image', 'Bokeh Blur', 'Image')",
             "connect_nodes('Bokeh Blur', 'Image', 'Composite', 'Image')",
-            "connect_nodes('Bokeh Image', 'Image', 'Bokeh Blur', 'Bokeh')",
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Compositor.blend'))"
         ],
@@ -153,7 +152,7 @@
         "scene": "Compositor.blend"
     },
     {
-        "case": "BL28_RS_CMP_0101",
+        "case": "BL28_RS_CMP_010",
         "status": "skipped",
         "functions": [
             "rpr_render(case)",
@@ -316,7 +315,7 @@
             "create_compositor_node('HueSat')",
             "connect_nodes('Render Layers', 'Image', 'Hue Saturation Value', 'Image')",
             "connect_nodes('Hue Saturation Value', 'Image', 'Composite', 'Image')",
-            "nodes()['Hue Saturation Value'].inputs['Value'].default_value = 0.9",
+            "nodes()['Hue Saturation Value'].inputs[3].default_value = 0.9",
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Compositor.blend'))"
         ],
@@ -407,7 +406,7 @@
             "create_compositor_node('ChromaMatte')",
             "connect_nodes('Render Layers', 'Image', 'Chroma Key', 'Image')",
             "connect_nodes('Chroma Key', 'Image', 'Composite', 'Image')",
-            "nodes()['Chroma Key'].inputs['Key Color'].default_value = (0.304, 0.429, 0.498, 1)",
+            "nodes()['Chroma Key'].inputs[1].default_value = (0.304, 0.429, 0.498, 1)",
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Compositor.blend'))"
         ],
