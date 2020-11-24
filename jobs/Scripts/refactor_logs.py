@@ -29,7 +29,6 @@ def render_log(work_dir):
     logs = ''
 
     for f in files:
-        logs += '\n\n\n----------LOGS FROM FILE ' + f + '----------\n\n\n'
         with open(os.path.realpath(os.path.join(work_dir, f))) as log:
             logs += log.read()
         os.remove(os.path.realpath(os.path.join(work_dir, f)))

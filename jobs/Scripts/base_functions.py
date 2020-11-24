@@ -54,13 +54,22 @@ def reportToJSON(case, render_time=0):
     logging('Create report json ({{}} {{}})'.format(
             case['case'], report['test_status']))
 
+    if case['status'] == 'error':
+        number_of_tries = case.get('number_of_tries', 0)
+        if number_of_tries == RETRIES:
+            error_message = 'Testcase wasn\'t executed successfully (all attempts were used). Number of tries: {{}}'.format(str(number_of_tries))
+        else:
+            error_message = 'Testcase wasn\'t executed successfully. Number of tries: {{}}'.format(str(number_of_tries))
+        report['message'] = [error_message]
+    else:
+        report['message'] = []
+
     report['date_time'] = datetime.datetime.now().strftime('%m/%d/%Y %H:%M:%S')
     report['render_time'] = render_time
     report['test_group'] = TEST_TYPE
     report['test_case'] = case['case']
     report['difference_color'] = 0
     report['script_info'] = case['script_info']
-    report['render_log'] = path.join('render_tool_logs', case['case'] + '.log')
     report['scene_name'] = case.get('scene', '')
     if case['status'] != 'skipped':
         report['file_name'] = case['case'] + case.get('extension', '.jpg')
@@ -289,6 +298,15 @@ def main():
                     logging('Create log file for ' + case['case'])
 
             logging('In progress: ' + case['case'])
+
+            path_to_file = path.join(WORK_DIR, case['case'] + '_RPR.json')
+            with open(path_to_file, 'r') as file:
+                report = json.loads(file.read())[0]
+
+            report['render_log'] = path.join('render_tool_logs', case['case'] + '.log')
+
+            with open(path_to_file, 'w') as file:
+                file.write(json.dumps([report], indent=4))
 
             start_time = datetime.datetime.now()
             case_function(case)
