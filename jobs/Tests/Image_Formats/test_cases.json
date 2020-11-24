@@ -178,7 +178,8 @@
             "set_value(scene.render.image_settings, 'file_format', 'JPG')",
             "bpy.data.scenes['Scene'].render.image_settings.color_mode = 'BW'",
             "rpr_render(case)",
-            "bpy.data.scenes['Scene'].render.image_settings.color_mode = 'RGBA'"
+            "bpy.data.scenes['Scene'].render.image_settings.color_mode = 'RGBA'",
+            "setPass(case)"
         ]
     },
     {
@@ -192,7 +193,8 @@
             "set_value(scene.render.image_settings, 'file_format', 'JPG')",
             "bpy.data.scenes['Scene'].render.image_settings.color_mode = 'RGB'",
             "rpr_render(case)",
-            "bpy.data.scenes['Scene'].render.image_settings.color_mode = 'RGBA'"
+            "bpy.data.scenes['Scene'].render.image_settings.color_mode = 'RGBA'",
+            "setPass(case)"
         ]
     }
 ]
