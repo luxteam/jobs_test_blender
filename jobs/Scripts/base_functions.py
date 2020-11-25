@@ -70,7 +70,6 @@ def reportToJSON(case, render_time=0):
     report['test_case'] = case['case']
     report['difference_color'] = 0
     report['script_info'] = case['script_info']
-    report['render_log'] = path.join('render_tool_logs', case['case'] + '.log')
     report['scene_name'] = case.get('scene', '')
     if case['status'] != 'skipped':
         report['file_name'] = case['case'] + case.get('extension', '.jpg')
@@ -299,6 +298,15 @@ def main():
                     logging('Create log file for ' + case['case'])
 
             logging('In progress: ' + case['case'])
+
+            path_to_file = path.join(WORK_DIR, case['case'] + '_RPR.json')
+            with open(path_to_file, 'r') as file:
+                report = json.loads(file.read())[0]
+
+            report['render_log'] = path.join('render_tool_logs', case['case'] + '.log')
+
+            with open(path_to_file, 'w') as file:
+                file.write(json.dumps([report], indent=4))
 
             start_time = datetime.datetime.now()
             case_function(case)
