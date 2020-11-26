@@ -28,3 +28,6 @@ def set_default():
     set_vector('Material', 'Mapping', 'Location', (0, 0, 0))
     set_vector('Material', 'Mapping', 'Rotation', (0, 0, 0))
     set_vector('Material', 'Mapping', 'Scale', (1, 1, 1))
+
+def UV_node():
+    return bpy.data.materials["Material"].node_tree.nodes["RPR Procedural UV"]

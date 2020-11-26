@@ -82,5 +82,18 @@
             "Frame: 100"
         ],
         "scene": "NonKeyed_Animation.blend"
+    },
+    {
+        "case": "BL28_RS_AN_061",
+        "status": "active",
+        "functions": [
+            "scene.frame_set(100)",
+            "bpy.data.scenes['Scene'].render.frame_map_old = 50",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Frame mapping"
+        ],
+        "scene": "NonKeyed_Animation.blend"
     }
 ]
