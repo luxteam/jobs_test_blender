@@ -16,7 +16,7 @@
         ]
     },
     {
-        "case": "BL28_RS_AN_015",
+        "case": "BL28_RS_AN_002",
         "status": "active",
         "functions": [
             "scene.frame_set(85)",
@@ -32,7 +32,7 @@
         ]
     },
     {
-        "case": "BL28_RS_AN_030",
+        "case": "BL28_RS_AN_003",
         "status": "active",
         "functions": [
             "scene.frame_set(150)",
@@ -48,7 +48,7 @@
         ]
     },
     {
-        "case": "BL28_RS_AN_031",
+        "case": "BL28_RS_AN_004",
         "status": "active",
         "functions": [
             "scene.frame_set(30)",
@@ -60,7 +60,7 @@
         "scene": "NonKeyed_Animation.blend"
     },
     {
-        "case": "BL28_RS_AN_045",
+        "case": "BL28_RS_AN_005",
         "status": "active",
         "functions": [
             "scene.frame_set(75)",
@@ -72,7 +72,7 @@
         "scene": "NonKeyed_Animation.blend"
     },
     {
-        "case": "BL28_RS_AN_060",
+        "case": "BL28_RS_AN_006",
         "status": "active",
         "functions": [
             "scene.frame_set(100)",
@@ -84,7 +84,7 @@
         "scene": "NonKeyed_Animation.blend"
     },
     {
-        "case": "BL28_RS_AN_061",
+        "case": "BL28_RS_AN_007",
         "status": "active",
         "functions": [
             "scene.frame_set(100)",
