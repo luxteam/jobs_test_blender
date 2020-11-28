@@ -487,5 +487,84 @@
             "hair_comb"
         ],
         "scene": "hair_comb.blend"
+    },
+    {
+        "case": "BL28_BCS_035",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Rain Restaurant"
+        ],
+        "scene": "rain_restaurant.blend"
+    },
+    {
+        "case": "BL28_BCS_036",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Curve Bevel Profile"
+        ],
+        "scene": "curve_bevel_profile.blend"
+    },
+    {
+        "case": "BL28_BCS_037",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "UDIM Monster"
+        ],
+        "scene": "udim-monster.blend"
+    },
+    {
+        "case": "BL28_BCS_038",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Blender 2.90"
+        ],
+        "scene": "Blender2.90.blend"
+    },
+    {
+        "case": "BL28_BCS_039",
+        "status": "active",
+        "functions": [
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Blender 2.91"
+        ],
+        "scene": "Blender2.91.blend"
+    },
+    {
+        "case": "BL28_BCS_040",
+        "status": "active",
+        "functions": [
+            "bpy.context.scene.frame_set(20)",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Compound Collision Chain"
+        ],
+        "scene": "compound_collision_chain.blend"
+    },
+    {
+        "case": "BL28_BCS_041",
+        "status": "active",
+        "functions": [
+            "bpy.context.scene.world.rpr.mode = 'SUN_SKY'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Nishita Sky"
+        ],
+        "scene": "290skydemo_release.blend"
     }
 ]
