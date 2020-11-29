@@ -225,7 +225,7 @@ def main(args):
                     skipped_case_image_path = os.path.join(args.output, 'Color', template['file_name'])
                     if not os.path.exists(skipped_case_image_path):
                         copyfile(os.path.join(work_dir, '..', '..', '..', '..', 'jobs_launcher', 
-                            'common', 'img', "skipped.png"), skipped_case_image_path)
+                            'common', 'img', "skipped.jpg"), skipped_case_image_path)
                 except OSError or FileNotFoundError as err:
                     main_logger.error("Can't create img stub: {}".format(str(err)))
             else:
@@ -393,7 +393,8 @@ def sync_time(work_dir):
 
             synchronization_time = sync_minutes * 60 + sync_seconds + sync_milisec / 1000
             case_json[0]['sync_time'] += synchronization_time
-            case_json[0]['render_time'] -= synchronization_time
+            if case_json[0]['render_time'] != 0:
+                case_json[0]['render_time'] -= synchronization_time
 
             with open(case_report_path, 'w') as case_report:
                 case_report.write(json.dumps(case_json, indent=4))

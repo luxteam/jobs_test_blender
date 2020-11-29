@@ -294,6 +294,7 @@
             "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
             "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
             "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "bpy.data.scenes['Scene'].rpr.contour_normal_threshold = 0",
             "bpy.data.scenes['Scene'].rpr.contour_shading_normal_line_width = 0",
             "rpr_render(case)"
         ]
@@ -315,6 +316,7 @@
             "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
             "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
             "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "bpy.data.scenes['Scene'].rpr.contour_normal_threshold = 0",
             "bpy.data.scenes['Scene'].rpr.contour_shading_normal_line_width = 0.1",
             "rpr_render(case)"
         ]
@@ -336,6 +338,7 @@
             "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
             "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
             "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "bpy.data.scenes['Scene'].rpr.contour_normal_threshold = 0",
             "bpy.data.scenes['Scene'].rpr.contour_shading_normal_line_width = 10",
             "rpr_render(case)"
         ]
