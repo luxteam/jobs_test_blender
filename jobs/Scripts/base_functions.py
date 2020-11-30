@@ -54,21 +54,39 @@ def reportToJSON(case, render_time=0):
     logging('Create report json ({{}} {{}})'.format(
             case['case'], report['test_status']))
 
-    report['tool'] = 'Blender ' + bpy.app.version_string.split(' (')[0]
+    if case['status'] == 'error':
+        number_of_tries = case.get('number_of_tries', 0)
+        if number_of_tries == RETRIES:
+            error_message = 'Testcase wasn\'t executed successfully (all attempts were used). Number of tries: {{}}'.format(str(number_of_tries))
+        else:
+            error_message = 'Testcase wasn\'t executed successfully. Number of tries: {{}}'.format(str(number_of_tries))
+        report['message'] = [error_message]
+    else:
+        report['message'] = []
+
     report['date_time'] = datetime.datetime.now().strftime('%m/%d/%Y %H:%M:%S')
-    report['render_version'] = get_addon_version()
-    report['core_version'] = get_core_version()
     report['render_time'] = render_time
     report['test_group'] = TEST_TYPE
     report['test_case'] = case['case']
     report['difference_color'] = 0
     report['script_info'] = case['script_info']
-    report['render_log'] = path.join('render_tool_logs', case['case'] + '.log')
     report['scene_name'] = case.get('scene', '')
     if case['status'] != 'skipped':
         report['file_name'] = case['case'] + case.get('extension', '.jpg')
         report['render_color_path'] = path.join('Color', report['file_name'])
 
+    # save metrics which can be received witout call of functions of Blender
+    with open(path_to_file, 'w') as file:
+        file.write(json.dumps([report], indent=4))
+
+    try:
+        report['tool'] = 'Blender ' + bpy.app.version_string.split(' (')[0]
+    except Exception as e:
+        logging('Failed to get Blender version. Reason: {{}}'.format(str(e)))
+    report['render_version'] = get_addon_version()
+    report['core_version'] = get_core_version()
+
+    # save metrics which can't be received witout call of functions of Blender (additional measures to avoid stucking of Blender)
     with open(path_to_file, 'w') as file:
         file.write(json.dumps([report], indent=4))
 
@@ -80,11 +98,15 @@ def render_tool_log_path(name):
 
 
 def get_core_version():
-    import pyrprwrap
-    if hasattr(pyrprwrap, 'VERSION_MAJOR_MINOR_REVISION'):
-        return '{{}}.{{}}.{{}}'.format(pyrprwrap.VERSION_MAJOR,
-                                       pyrprwrap.VERSION_MINOR,
-                                       pyrprwrap.VERSION_REVISION)
+    try:
+        import pyrprwrap
+        if hasattr(pyrprwrap, 'VERSION_MAJOR_MINOR_REVISION'):
+            return '{{}}.{{}}.{{}}'.format(pyrprwrap.VERSION_MAJOR,
+                                           pyrprwrap.VERSION_MINOR,
+                                           pyrprwrap.VERSION_REVISION)
+    except Exception as e:
+        logging('Failed to get core version. Reason: {{}}'.format(str(e)))
+    return ""
 
 
 def enable_rpr(case):
@@ -97,10 +119,14 @@ def enable_rpr(case):
 
 
 def get_addon_version():
-    tuple_ver = sys.modules['rprblender'].bl_info['version']
-    version = str(tuple_ver[0]) + '.' + \
-        str(tuple_ver[1]) + '.' + str(tuple_ver[2])
-    return version
+    try:
+        tuple_ver = sys.modules['rprblender'].bl_info['version']
+        version = str(tuple_ver[0]) + '.' + \
+            str(tuple_ver[1]) + '.' + str(tuple_ver[2])
+        return version
+    except Exception as e:
+        logging('Failed to get plugin version. Reason: {{}}'.format(str(e)))
+    return ""
 
 
 def set_value(path, name, value):
@@ -272,6 +298,15 @@ def main():
                     logging('Create log file for ' + case['case'])
 
             logging('In progress: ' + case['case'])
+
+            path_to_file = path.join(WORK_DIR, case['case'] + '_RPR.json')
+            with open(path_to_file, 'r') as file:
+                report = json.loads(file.read())[0]
+
+            report['render_log'] = path.join('render_tool_logs', case['case'] + '.log')
+
+            with open(path_to_file, 'w') as file:
+                file.write(json.dumps([report], indent=4))
 
             start_time = datetime.datetime.now()
             case_function(case)
