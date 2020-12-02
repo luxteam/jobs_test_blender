@@ -3,7 +3,8 @@
         "case": "BL28_MAT_IMAGE_001",
         "status": "active",
         "functions": [
-            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "bpy.ops.image.open(filepath='//Materials/Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",
             "Im_node().interpolation = 'Linear'",
             "Im_node().projection = 'SPHERE'",
             "Im_node().extension = 'CLIP'",
@@ -45,7 +46,7 @@
         "case": "BL28_MAT_IMAGE_003",
         "status": "active",
         "functions": [
-            "bpy.ops.image.open(filepath='//Materials/Dice.1001.jpg', directory='C:/TestResources/Blender2.8Assets/Materials/', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
+            "bpy.ops.image.open(filepath='//Materials/Map/Dice.1001.jpg', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
             "Im_node().image = bpy.data.images['Dice.1001.jpg']",
             "Im_node().interpolation = 'Linear'",
             "Im_node().projection = 'FLAT'",
@@ -89,7 +90,7 @@
         "case": "BL28_MAT_IMAGE_005",
         "status": "active",
         "functions": [
-            "bpy.ops.image.open(filepath='//Materials/Dice.1001.jpg', directory='C:/TestResources/Blender2.8Assets/Materials/', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
+            "bpy.ops.image.open(filepath='//Materials/Map/Dice.1001.jpg', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
             "Im_node().image = bpy.data.images['Dice.1001.jpg']",
             "Im_node().interpolation = 'Closest'",
             "Im_node().projection = 'SPHERE'",
@@ -175,7 +176,8 @@
         "case": "BL28_MAT_IMAGE_009",
         "status": "active",
         "functions": [
-            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "bpy.ops.image.open(filepath='//Materials/Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",
             "Im_node().interpolation = 'Closest'",
             "Im_node().projection = 'FLAT'",
             "Im_node().extension = 'EXTEND'",
@@ -238,7 +240,8 @@
         "case": "BL28_MAT_IMAGE_012",
         "status": "active",
         "functions": [
-            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "bpy.ops.image.open(filepath='//Materials/Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",
             "Im_node().interpolation = 'Cubic'",
             "Im_node().projection = 'BOX'",
             "Im_node().projection_blend = 0.620455",
@@ -281,7 +284,7 @@
         "case": "BL28_MAT_IMAGE_014",
         "status": "active",
         "functions": [
-            "bpy.ops.image.open(filepath='//Materials/Dice.1001.jpg', directory='C:/TestResources/Blender2.8Assets/Materials/', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
+            "bpy.ops.image.open(filepath='//Materials/Map/Dice.1001.jpg', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
             "Im_node().image = bpy.data.images['Dice.1001.jpg']",
             "Im_node().interpolation = 'Cubic'",
             "Im_node().projection = 'FLAT'",
@@ -325,7 +328,8 @@
         "case": "BL28_MAT_IMAGE_016",
         "status": "active",
         "functions": [
-            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "bpy.ops.image.open(filepath='//Materials/Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",
             "Im_node().interpolation = 'Linear'",
             "Im_node().projection = 'TUBE'",
             "Im_node().extension = 'REPEAT'",
@@ -367,7 +371,7 @@
         "case": "BL28_MAT_IMAGE_018",
         "status": "active",
         "functions": [
-            "bpy.ops.image.open(filepath='//Materials/Dice.1001.jpg', directory='C:/TestResources/Blender2.8Assets/Materials/', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
+            "bpy.ops.image.open(filepath='//Materials/Map/Dice.1001.jpg', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
             "Im_node().image = bpy.data.images['Dice.1001.jpg']",
             "Im_node().interpolation = 'Linear'",
             "Im_node().projection = 'BOX'",
@@ -517,7 +521,8 @@
         "case": "BL28_MAT_IMAGE_025",
         "status": "active",
         "functions": [
-            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "bpy.ops.image.open(filepath='//Materials/Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",
             "Im_node().interpolation = 'Closest'",
             "Im_node().projection = 'BOX'",
             "Im_node().projection_blend = 0.620455",
@@ -560,7 +565,7 @@
         "case": "BL28_MAT_IMAGE_027",
         "status": "active",
         "functions": [
-            "bpy.ops.image.open(filepath='//Materials/Dice.1001.jpg', directory='C:/TestResources/Blender2.8Assets/Materials/', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
+            "bpy.ops.image.open(filepath='//Materials/Map/Dice.1001.jpg', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
             "Im_node().image = bpy.data.images['Dice.1001.jpg']",
             "Im_node().interpolation = 'Closest'",
             "Im_node().projection = 'TUBE'",
@@ -604,7 +609,8 @@
         "case": "BL28_MAT_IMAGE_029",
         "status": "active",
         "functions": [
-            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "bpy.ops.image.open(filepath='//Materials/Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",
             "Im_node().interpolation = 'Cubic'",
             "Im_node().projection = 'SPHERE'",
             "Im_node().extension = 'EXTEND'",
@@ -646,7 +652,7 @@
         "case": "BL28_MAT_IMAGE_031",
         "status": "active",
         "functions": [
-            "bpy.ops.image.open(filepath='//Materials/Dice.1001.jpg', directory='C:/TestResources/Blender2.8Assets/Materials/', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
+            "bpy.ops.image.open(filepath='//Materials/Map/Dice.1001.jpg', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
             "Im_node().image = bpy.data.images['Dice.1001.jpg']",
             "Im_node().interpolation = 'Cubic'",
             "Im_node().projection = 'BOX'",
@@ -732,7 +738,7 @@
         "case": "BL28_MAT_IMAGE_035",
         "status": "active",
         "functions": [
-            "bpy.ops.image.open(filepath='//Materials/Dice.1001.jpg', directory='C:/TestResources/Blender2.8Assets/Materials/', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
+            "bpy.ops.image.open(filepath='//Materials/Map/Dice.1001.jpg', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
             "Im_node().image = bpy.data.images['Dice.1001.jpg']",
             "Im_node().interpolation = 'Linear'",
             "Im_node().projection = 'SPHERE'",
@@ -839,7 +845,8 @@
         "case": "BL28_MAT_IMAGE_040",
         "status": "active",
         "functions": [
-            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "bpy.ops.image.open(filepath='//Materials/Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",
             "Im_node().interpolation = 'Linear'",
             "Im_node().projection = 'FLAT'",
             "Im_node().extension = 'REPEAT'",
