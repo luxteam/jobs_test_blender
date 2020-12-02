@@ -523,7 +523,7 @@
     },
     {
         "case": "BL28_BCS_038",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "rpr_render(case)"
         ],
