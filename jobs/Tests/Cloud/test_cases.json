@@ -512,7 +512,7 @@
     },
     {
         "case": "BL28_BCS_037",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "rpr_render(case)"
         ],
@@ -534,7 +534,7 @@
     },
     {
         "case": "BL28_BCS_039",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "rpr_render(case)"
         ],
@@ -559,7 +559,6 @@
         "case": "BL28_BCS_041",
         "status": "active",
         "functions": [
-            "bpy.context.scene.world.rpr.mode = 'SUN_SKY'",
             "rpr_render(case)"
         ],
         "script_info": [
