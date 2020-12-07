@@ -3,13 +3,13 @@
         "case": "BL28_MAT_IMAGE_001",
         "status": "active",
         "functions": [
-            "bpy.ops.image.open(filepath='//Materials/Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
-            "Im_node().image = bpy.data.images['sample-mov-file.mov']",
+            "bpy.ops.image.open(filepath='//Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",    
             "Im_node().interpolation = 'Linear'",
             "Im_node().projection = 'SPHERE'",
             "Im_node().extension = 'CLIP'",
-            "bpy.data.images['uv_grid_1024.png'].source = 'MOVIE'",
-            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Linear ACES'",
+            "bpy.data.images['sample-mov-file.mov'].source = 'MOVIE'",
+            "bpy.data.images['sample-mov-file.mov'].colorspace_settings.name = 'Linear ACES'",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -133,12 +133,15 @@
         "case": "BL28_MAT_IMAGE_007",
         "status": "active",
         "functions": [
-            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "bpy.ops.image.open(filepath='//Materials/Map/seq_1.png', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'seq_1.png'}, {'name':'seq_2.png'}], show_multiview=False)",
+            "Im_node().image = bpy.data.images['seq_1.png']",
+            "Im_node().image_user.frame_duration = 2",
+            "Im_node().image_user.frame_offset = 0",
             "Im_node().interpolation = 'Closest'",
             "Im_node().projection = 'FLAT'",
             "Im_node().extension = 'CLIP'",
-            "bpy.data.images['uv_grid_1024.png'].source = 'SEQUENCE'",
-            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Filmic Log'",
+            "bpy.data.images['seq_1.png'].source = 'SEQUENCE'",
+            "bpy.data.images['seq_1.png'].colorspace_settings.name = 'Filmic Log'",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -146,7 +149,8 @@
             "Projection: Flat",
             "Extension: Clip",
             "Source: Image Sequence",
-            "Color Space: Filmic Log"
+            "Color Space: Filmic Log",
+            "Sequence Frame - 1"
         ],
         "scene": "BoxMapping.blend"
     },
@@ -176,13 +180,13 @@
         "case": "BL28_MAT_IMAGE_009",
         "status": "active",
         "functions": [
-            "bpy.ops.image.open(filepath='//Materials/Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
-            "Im_node().image = bpy.data.images['sample-mov-file.mov']",
+            "bpy.ops.image.open(filepath='//Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",    
             "Im_node().interpolation = 'Closest'",
             "Im_node().projection = 'FLAT'",
             "Im_node().extension = 'EXTEND'",
-            "bpy.data.images['uv_grid_1024.png'].source = 'MOVIE'",
-            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Non-Color'",
+            "bpy.data.images['sample-mov-file.mov'].source = 'MOVIE'",
+            "bpy.data.images['sample-mov-file.mov'].colorspace_settings.name = 'Non-Color'",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -198,12 +202,15 @@
         "case": "BL28_MAT_IMAGE_010",
         "status": "active",
         "functions": [
-            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "bpy.ops.image.open(filepath='//Materials/Map/seq_1.png', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'seq_1.png'}, {'name':'seq_2.png'}], show_multiview=False)",
+            "Im_node().image = bpy.data.images['seq_1.png']",
+            "Im_node().image_user.frame_duration = 2",
+            "Im_node().image_user.frame_offset = 1",
             "Im_node().interpolation = 'Cubic'",
             "Im_node().projection = 'SPHERE'",
             "Im_node().extension = 'EXTEND'",
-            "bpy.data.images['uv_grid_1024.png'].source = 'SEQUENCE'",
-            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Linear'",
+            "bpy.data.images['seq_1.png'].source = 'SEQUENCE'",
+            "bpy.data.images['seq_1.png'].colorspace_settings.name = 'Linear'",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -211,7 +218,8 @@
             "Projection: Sphere",
             "Extension: Extend",
             "Source: Image Sequence",
-            "Color Space: Linear"
+            "Color Space: Linear",
+            "Sequence Frame - 2"
         ],
         "scene": "BoxMapping.blend"
     },
@@ -240,14 +248,14 @@
         "case": "BL28_MAT_IMAGE_012",
         "status": "active",
         "functions": [
-            "bpy.ops.image.open(filepath='//Materials/Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
-            "Im_node().image = bpy.data.images['sample-mov-file.mov']",
+            "bpy.ops.image.open(filepath='//Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",    
             "Im_node().interpolation = 'Cubic'",
             "Im_node().projection = 'BOX'",
             "Im_node().projection_blend = 0.620455",
             "Im_node().extension = 'REPEAT'",
-            "bpy.data.images['uv_grid_1024.png'].source = 'MOVIE'",
-            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Raw'",
+            "bpy.data.images['sample-mov-file.mov'].source = 'MOVIE'",
+            "bpy.data.images['sample-mov-file.mov'].colorspace_settings.name = 'Raw'",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -328,13 +336,13 @@
         "case": "BL28_MAT_IMAGE_016",
         "status": "active",
         "functions": [
-            "bpy.ops.image.open(filepath='//Materials/Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
-            "Im_node().image = bpy.data.images['sample-mov-file.mov']",
+            "bpy.ops.image.open(filepath='//Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",    
             "Im_node().interpolation = 'Linear'",
             "Im_node().projection = 'TUBE'",
             "Im_node().extension = 'REPEAT'",
-            "bpy.data.images['uv_grid_1024.png'].source = 'MOVIE'",
-            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'sRGB'",
+            "bpy.data.images['sample-mov-file.mov'].source = 'MOVIE'",
+            "bpy.data.images['sample-mov-file.mov].colorspace_settings.name = 'sRGB'",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -415,12 +423,15 @@
         "case": "BL28_MAT_IMAGE_020",
         "status": "active",
         "functions": [
-            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "bpy.ops.image.open(filepath='//Materials/Map/seq_1.png', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'seq_1.png'}, {'name':'seq_2.png'}], show_multiview=False)",
+            "Im_node().image = bpy.data.images['seq_1.png']",
+            "Im_node().image_user.frame_duration = 2",
+            "Im_node().image_user.frame_offset = 0",
             "Im_node().interpolation = 'Linear'",
             "Im_node().projection = 'FLAT'",
             "Im_node().extension = 'REPEAT'",
-            "bpy.data.images['uv_grid_1024.png'].source = 'SEQUENCE'",
-            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Linear ACES'",
+            "bpy.data.images['seq_1.png'].source = 'SEQUENCE'",
+            "bpy.data.images['seq_1.png'].colorspace_settings.name = 'Linear ACES'",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -428,7 +439,8 @@
             "Projection: Flat",
             "Extension: Repeat",
             "Source: Image Sequence",
-            "Color Space: Linear ACES"
+            "Color Space: Linear ACES",
+            "Sequence Frame - 1"
         ],
         "scene": "BoxMapping.blend"
     },
@@ -457,13 +469,16 @@
         "case": "BL28_MAT_IMAGE_022",
         "status": "active",
         "functions": [
-            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "bpy.ops.image.open(filepath='//Materials/Map/seq_1.png', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'seq_1.png'}, {'name':'seq_2.png'}], show_multiview=False)",
+            "Im_node().image = bpy.data.images['seq_1.png']",
+            "Im_node().image_user.frame_duration = 2",
+            "Im_node().image_user.frame_offset = 1",
             "Im_node().interpolation = 'Closest'",
             "Im_node().projection = 'BOX'",
             "Im_node().projection_blend = 0.620455",
             "Im_node().extension = 'CLIP'",
-            "bpy.data.images['uv_grid_1024.png'].source = 'SEQUENCE'",
-            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Non-Color'",
+            "bpy.data.images['seq_1.png'].source = 'SEQUENCE'",
+            "bpy.data.images['seq_1.png'].colorspace_settings.name = 'Non-Color'",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -471,7 +486,8 @@
             "Projection: Box",
             "Extension: Clip",
             "Source: Image Sequence",
-            "Color Space: Non-Color"
+            "Color Space: Non-Color",
+            "Sequence Frame - 2"
         ],
         "scene": "BoxMapping.blend"
     },
@@ -500,12 +516,15 @@
         "case": "BL28_MAT_IMAGE_024",
         "status": "active",
         "functions": [
-            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "bpy.ops.image.open(filepath='//Materials/Map/seq_1.png', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'seq_1.png'}, {'name':'seq_2.png'}], show_multiview=False)",
+            "Im_node().image = bpy.data.images['seq_1.png']",
+            "Im_node().image_user.frame_duration = 2",
+            "Im_node().image_user.frame_offset = 0",
             "Im_node().interpolation = 'Closest'",
             "Im_node().projection = 'FLAT'",
             "Im_node().extension = 'EXTEND'",
-            "bpy.data.images['uv_grid_1024.png'].source = 'SEQUENCE'",
-            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'sRGB'",
+            "bpy.data.images['seq_1.png'].source = 'SEQUENCE'",
+            "bpy.data.images['seq_1.png'].colorspace_settings.name = 'sRGB'",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -513,7 +532,8 @@
             "Projection: Flat",
             "Extension: Extend",
             "Source: Image Sequence",
-            "Color Space: sRGB"
+            "Color Space: sRGB",
+            "Sequence Frame - 1"
         ],
         "scene": "BoxMapping.blend"
     },
@@ -521,14 +541,14 @@
         "case": "BL28_MAT_IMAGE_025",
         "status": "active",
         "functions": [
-            "bpy.ops.image.open(filepath='//Materials/Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
-            "Im_node().image = bpy.data.images['sample-mov-file.mov']",
+            "bpy.ops.image.open(filepath='//Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",    
             "Im_node().interpolation = 'Closest'",
             "Im_node().projection = 'BOX'",
             "Im_node().projection_blend = 0.620455",
             "Im_node().extension = 'CLIP'",
-            "bpy.data.images['uv_grid_1024.png'].source = 'MOVIE'",
-            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'XYZ'",
+            "bpy.data.images['sample-mov-file.mov'].source = 'MOVIE'",
+            "bpy.data.images['sample-mov-file.mov'].colorspace_settings.name = 'XYZ'",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -587,13 +607,16 @@
         "case": "BL28_MAT_IMAGE_028",
         "status": "active",
         "functions": [
-            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "bpy.ops.image.open(filepath='//Materials/Map/seq_1.png', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'seq_1.png'}, {'name':'seq_2.png'}], show_multiview=False)",
+            "Im_node().image = bpy.data.images['seq_1.png']",
+            "Im_node().image_user.frame_duration = 2",
+            "Im_node().image_user.frame_offset = 1",
             "Im_node().interpolation = 'Cubic'",
             "Im_node().projection = 'BOX'",
             "Im_node().projection_blend = 0.620455",
             "Im_node().extension = 'REPEAT'",
-            "bpy.data.images['uv_grid_1024.png'].source = 'SEQUENCE'",
-            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'XYZ'",
+            "bpy.data.images['seq_1.png'].source = 'SEQUENCE'",
+            "bpy.data.images['seq_1.png'].colorspace_settings.name = 'XYZ'",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -601,7 +624,8 @@
             "Projection: Box",
             "Extension: Repeat",
             "Source: Image Sequence",
-            "Color Space: XYZ"
+            "Color Space: XYZ",
+            "Sequence Frame - 2"
         ],
         "scene": "BoxMapping.blend"
     },
@@ -609,13 +633,13 @@
         "case": "BL28_MAT_IMAGE_029",
         "status": "active",
         "functions": [
-            "bpy.ops.image.open(filepath='//Materials/Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
-            "Im_node().image = bpy.data.images['sample-mov-file.mov']",
+            "bpy.ops.image.open(filepath='//Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",    
             "Im_node().interpolation = 'Cubic'",
             "Im_node().projection = 'SPHERE'",
             "Im_node().extension = 'EXTEND'",
-            "bpy.data.images['uv_grid_1024.png'].source = 'MOVIE'",
-            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Filmic Log'",
+            "bpy.data.images['sample-mov-file.mov'].source = 'MOVIE'",
+            "bpy.data.images['sample-mov-file.mov'].colorspace_settings.name = 'Filmic Log'",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -696,12 +720,15 @@
         "case": "BL28_MAT_IMAGE_033",
         "status": "active",
         "functions": [
-            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "bpy.ops.image.open(filepath='//Materials/Map/seq_1.png', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'seq_1.png'}, {'name':'seq_2.png'}], show_multiview=False)",
+            "Im_node().image = bpy.data.images['seq_1.png']",
+            "Im_node().image_user.frame_duration = 2",
+            "Im_node().image_user.frame_offset = 0",
             "Im_node().interpolation = 'Cubic'",
             "Im_node().projection = 'TUBE'",
             "Im_node().extension = 'EXTEND'",
-            "bpy.data.images['uv_grid_1024.png'].source = 'SEQUENCE'",
-            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Raw'",
+            "bpy.data.images['seq_1.png'].source = 'SEQUENCE'",
+            "bpy.data.images['seq_1.png'].colorspace_settings.name = 'Raw'",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -709,7 +736,8 @@
             "Projection: Tube",
             "Extension: Extend",
             "Source: Image Sequence",
-            "Color Space: RAW"
+            "Color Space: RAW",
+            "Sequence Frame - 1"
         ],
         "scene": "BoxMapping.blend"
     },
@@ -781,13 +809,16 @@
         "case": "BL28_MAT_IMAGE_037",
         "status": "active",
         "functions": [
-            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "bpy.ops.image.open(filepath='//Materials/Map/seq_1.png', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'seq_1.png'}, {'name':'seq_2.png'}], show_multiview=False)",
+            "Im_node().image = bpy.data.images['seq_1.png']",
+            "Im_node().image_user.frame_duration = 2",
+            "Im_node().image_user.frame_offset = 1",
             "Im_node().interpolation = 'Linear'",
             "Im_node().projection = 'BOX'",
             "Im_node().projection_blend = 0.620455",
             "Im_node().extension = 'REPEAT'",
-            "bpy.data.images['uv_grid_1024.png'].source = 'SEQUENCE'",
-            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'sRGB'",
+            "bpy.data.images['seq_1.png'].source = 'SEQUENCE'",
+            "bpy.data.images['seq_1.png'].colorspace_settings.name = 'sRGB'",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -795,7 +826,8 @@
             "Projection: Box",
             "Extension: Repeat",
             "Source: Image Sequence",
-            "Color Space: sRGB"
+            "Color Space: sRGB",
+            "Sequence Frame - 2"
         ],
         "scene": "BoxMapping.blend"
     },
@@ -824,12 +856,15 @@
         "case": "BL28_MAT_IMAGE_039",
         "status": "active",
         "functions": [
-            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "bpy.ops.image.open(filepath='//Materials/Map/seq_1.png', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'seq_1.png'}, {'name':'seq_2.png'}], show_multiview=False)",
+            "Im_node().image = bpy.data.images['seq_1.png']",
+            "Im_node().image_user.frame_duration = 2",
+            "Im_node().image_user.frame_offset = 0",
             "Im_node().interpolation = 'Linear'",
             "Im_node().projection = 'TUBE'",
             "Im_node().extension = 'CLIP'",
-            "bpy.data.images['uv_grid_1024.png'].source = 'SEQUENCE'",
-            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Filmic Log'",
+            "bpy.data.images['seq_1.png'].source = 'SEQUENCE'",
+            "bpy.data.images['seq_1.png'].colorspace_settings.name = 'Filmic Log'",
             "rpr_render(case)"
         ],
         "script_info": [
@@ -837,7 +872,8 @@
             "Projection: Tube",
             "Extension: Clip",
             "Source: Image Sequence",
-            "Color Space: Filmic Log"
+            "Color Space: Filmic Log",
+            "Sequence Frame - 1"
         ],
         "scene": "BoxMapping.blend"
     },
@@ -845,13 +881,13 @@
         "case": "BL28_MAT_IMAGE_040",
         "status": "active",
         "functions": [
-            "bpy.ops.image.open(filepath='//Materials/Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
-            "Im_node().image = bpy.data.images['sample-mov-file.mov']",
+            "bpy.ops.image.open(filepath='//Map/sample-mov-file.mov', directory='C:/TestResources/Blender2.8Assets/Materials/Map/', files=[{'name':'sample-mov-file.mov', 'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",    
             "Im_node().interpolation = 'Linear'",
             "Im_node().projection = 'FLAT'",
             "Im_node().extension = 'REPEAT'",
-            "bpy.data.images['uv_grid_1024.png'].source = 'MOVIE'",
-            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Linear'",
+            "bpy.data.images['sample-mov-file.mov'].source = 'MOVIE'",
+            "bpy.data.images['sample-mov-file.mov'].colorspace_settings.name = 'Linear'",
             "rpr_render(case)"
         ],
         "script_info": [
