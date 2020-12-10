@@ -925,12 +925,13 @@
         "case": "BL28_MAT_IMAGE_042",
         "status": "active",
         "functions": [
-            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "bpy.ops.image.open(filepath='//Maps/sample-mov-file.mov', directory=RES_PATH + '//Maps//', files=[{'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",    
             "Im_node().interpolation = 'Linear'",
             "Im_node().projection = 'BOX'",
-            "Im_node().projection_blend = 0.1",
+            "Im_node().projection_blend = 0",
             "Im_node().extension = 'REPEAT'",
-            "bpy.data.images['uv_grid_1024.png'].source = 'FILE'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'MOVIE'",
             "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'sRGB'",
             "rpr_render(case)"
         ],
@@ -940,7 +941,7 @@
             "Extension: Repeat",
             "Source: Single Image",
             "Color Space: sRGB",
-            "Blend - 0.1"
+            "Blend - 0"
         ],
         "scene": "BoxMapping.blend"
     },
@@ -948,12 +949,13 @@
         "case": "BL28_MAT_IMAGE_043",
         "status": "active",
         "functions": [
-            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "bpy.ops.image.open(filepath='//Maps/sample-mov-file.mov', directory=RES_PATH + '//Maps//', files=[{'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",    
             "Im_node().interpolation = 'Linear'",
             "Im_node().projection = 'BOX'",
-            "Im_node().projection_blend = 0.9",
+            "Im_node().projection_blend = 1",
             "Im_node().extension = 'REPEAT'",
-            "bpy.data.images['uv_grid_1024.png'].source = 'FILE'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'MOVIE'",
             "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'sRGB'",
             "rpr_render(case)"
         ],
@@ -963,7 +965,7 @@
             "Extension: Repeat",
             "Source: Single Image",
             "Color Space: sRGB",
-            "Blend - 0.9"
+            "Blend - 1"
         ],
         "scene": "BoxMapping.blend"
     },
