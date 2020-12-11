@@ -379,5 +379,18 @@
             "Anti Aliasing + ML (Color + AOV) + Time limit = 7 sec"
         ],
         "scene": "ComplexTestUber.blend"
+    },
+    {
+        "case": "BL28_RS_CPU_026",
+        "status": "active",
+        "functions": [
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "rpr_render(case)",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = False"
+        ],
+        "script_info": [
+            "Contour"
+        ],
+        "scene": "ComplexTestUber.blend"
     }
 ]

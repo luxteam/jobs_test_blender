@@ -36,6 +36,7 @@
         "Hair_BSDF":"",
         "Athena":"",
         "IES_Intensity":"",
-        "Mapping":""
+        "Mapping":"",
+        "Image_Node":""
     }
 }

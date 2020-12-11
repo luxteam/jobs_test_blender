@@ -454,5 +454,18 @@
         "skip_engine":[
             "FULL2"
         ]
+    },
+    {
+        "case": "BL28_RS_CPU_026",
+        "status": "active",
+        "functions": [
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "rpr_render(case)",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = False"
+        ],
+        "script_info": [
+            "Contour"
+        ],
+        "scene": "ComplexTestUber.blend"
     }
 ]
