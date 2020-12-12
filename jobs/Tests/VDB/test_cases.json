@@ -1105,8 +1105,7 @@
         "scene": "VDB.blend",
         "functions": [
             "scene.frame_set(82)",
-            "vdb_path = os.path.join(RES_PATH, 'VDB', 'New_0082.VDB')",
-            "bpy.ops.object.volume_import(filepath=vdb_path)",
+            "bpy.ops.object.volume_import(filepath='C:/TestResources/Blender2.8Assets/Materials/VDB/New_0082.VDB')",
             "rpr_render(case)"
         ],
         "skip_config": [
