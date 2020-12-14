@@ -382,7 +382,7 @@
     },
     {
         "case": "BL28_RS_CPU_026",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
             "rpr_render(case)",
