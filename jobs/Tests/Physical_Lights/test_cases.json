@@ -108,8 +108,9 @@
     },
     {
         "case": "BL28_L_PL_011",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
+            "https://amdrender.atlassian.net/browse/RPRBLND-1585",
             "Point light with PNG, int = 100"
         ],
         "scene": "Physical_Lights.blend",
@@ -156,8 +157,9 @@
     },
     {
         "case": "BL28_L_PL_014",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
+            "https://amdrender.atlassian.net/browse/RPRBLND-1585",
             "Point light with GrayScale, int = 100"
         ],
         "scene": "Physical_Lights.blend",
