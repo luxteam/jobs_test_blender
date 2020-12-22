@@ -8,7 +8,7 @@ SPU=${6:-25}
 ITER=${7:-50}
 THRESHOLD=${8:-0.05}
 ENGINE=${9:-FULL}
-TOOL=${10:-2.90}
+TOOL=${10:-2.91}
 RETRIES=${11:-2}
 UPDATE_REFS=${12:-No}
 python -m pip install --user -r ../jobs_launcher/install/requirements.txt
