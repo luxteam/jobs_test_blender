@@ -28,5 +28,3 @@ if not defined UPDATE_REFS set UPDATE_REFS="No"
 python -m pip install -r requirements.txt
 
 python ..\jobs_launcher\executeTests.py --test_filter %TESTS_FILTER% --file_filter %FILE_FILTER% --tests_root ..\jobs --work_root ..\Work\Results --work_dir Blender28 --cmd_variables Tool "C:\Program Files\Blender Foundation\Blender %TOOL%\blender.exe" RenderDevice %RENDER_DEVICE% ResPath "C:\TestResources\Blender2.8Assets" PassLimit %ITER% rx %RX% ry %RY% SPU %SPU% threshold %THRESHOLD% engine %ENGINE% retries %RETRIES% UpdateRefs %UPDATE_REFS%
-
-TIMEOUT /t 1000
