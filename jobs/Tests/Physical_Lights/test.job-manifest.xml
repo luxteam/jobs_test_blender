@@ -3,7 +3,7 @@
 
     <outpath value="{OutputDir}"/>
 
-    <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="3000">
+    <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="4200">
         <argument>--tool "{Tool}"</argument>
         <argument>--render_device "{RenderDevice}"</argument>
         <argument>--output "{OutputDir}"</argument>
@@ -20,7 +20,11 @@
         <argument>--update_refs "{UpdateRefs}"</argument>
     </execute>
 
-    <execute command='python "{ResourcesDir}/makeReport.py"'>
+    <execute command='python "{ResourcesDir}/syncTime.py"'>
+        <argument>--work_dir "{OutputDir}"</argument>
+    </execute>
+
+    <execute command='python "{CommonDir}/scripts/makeReport.py"'>
         <argument>--work_dir "{OutputDir}"</argument>
     </execute>
 

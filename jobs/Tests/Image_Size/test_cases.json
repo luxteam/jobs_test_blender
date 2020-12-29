@@ -33,7 +33,7 @@
     },
     {
         "case": "BL28_RS_IS_003",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Preset: 4k UHDTV 2160p"
         ],
@@ -269,7 +269,7 @@
     },
     {
         "case": "BL28_RS_IS_017",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Resolution: 4000x4000"
         ],

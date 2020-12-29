@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TOOL=${1:-2020}
+TOOL=${1:-2.91}
 
 echo import os >> cache_build.py
 echo import bpy >> cache_build.py
