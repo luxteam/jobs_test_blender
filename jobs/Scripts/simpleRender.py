@@ -206,7 +206,7 @@ def main(args):
         if is_case_skipped(case, render_platform, args.engine):
             case['status'] = 'skipped'
 
-        if case['status'] != 'done' or case['status'] != 'error':
+        if case['status'] != 'done' and case['status'] != 'error':
             if case["status"] == 'inprogress':
                 case['status'] = 'active'
                 case['number_of_tries'] = case.get('number_of_tries', 0) + 1
