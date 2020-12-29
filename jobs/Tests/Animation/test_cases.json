@@ -95,5 +95,16 @@
             "Frame mapping"
         ],
         "scene": "NonKeyed_Animation.blend"
+    },
+    {
+        "case": "BL28_RS_AN_008",        
+        "status": "active",
+        "functions": [
+            "render_animation(case, 70, 80, '0075')"
+        ],
+        "script_info": [
+            "Render Animation"
+        ],
+        "scene": "NonKeyed_Animation.blend"
     }
 ]
