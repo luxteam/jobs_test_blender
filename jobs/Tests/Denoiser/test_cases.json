@@ -1,7 +1,7 @@
 [
     {
         "case": "BL28_RS_DEN_001",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -18,7 +18,7 @@
     },
     {
         "case": "BL28_RS_DEN_003",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -35,7 +35,7 @@
     },
     {
         "case": "BL28_RS_DEN_011",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -56,7 +56,7 @@
     },
     {
         "case": "BL28_RS_DEN_012",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -77,7 +77,7 @@
     },
     {
         "case": "BL28_RS_DEN_013",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -98,7 +98,7 @@
     },
     {
         "case": "BL28_RS_DEN_023",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -121,7 +121,7 @@
     },
     {
         "case": "BL28_RS_DEN_024",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -144,7 +144,7 @@
     },
     {
         "case": "BL28_RS_DEN_025",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -163,7 +163,7 @@
     },
     {
         "case": "BL28_RS_DEN_026",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -183,7 +183,7 @@
     },
     {
         "case": "BL28_RS_DEN_027",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -203,7 +203,7 @@
     },
     {
         "case": "BL28_RS_DEN_039",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -226,7 +226,7 @@
     },
     {
         "case": "BL28_RS_DEN_040",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -249,7 +249,7 @@
     },
     {
         "case": "BL28_RS_DEN_041",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -275,7 +275,7 @@
     },
     {
         "case": "BL28_RS_DEN_042",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -301,7 +301,7 @@
     },
     {
         "case": "BL28_RS_DEN_043",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -327,7 +327,7 @@
     },
     {
         "case": "BL28_RS_DEN_044",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -353,7 +353,7 @@
     },
     {
         "case": "BL28_RS_DEN_045",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -374,7 +374,7 @@
     },
     {
         "case": "BL28_RS_DEN_046",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -395,7 +395,7 @@
     },
     {
         "case": "BL28_RS_DEN_047",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -416,7 +416,7 @@
     },
     {
         "case": "BL28_RS_DEN_048",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -437,7 +437,7 @@
     },
     {
         "case": "BL28_RS_DEN_049",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -458,7 +458,7 @@
     },
     {
         "case": "BL28_RS_DEN_050",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -479,7 +479,7 @@
     },
     {
         "case": "BL28_RS_DEN_051",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -499,7 +499,7 @@
     },
     {
         "case": "BL28_RS_DEN_052",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -519,7 +519,7 @@
     },
     {
         "case": "BL28_RS_DEN_053",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -534,7 +534,7 @@
     },
     {
         "case": "BL28_RS_DEN_054",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -549,7 +549,7 @@
     },
     {
         "case": "BL28_RS_DEN_055",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -564,7 +564,7 @@
     },
     {
         "case": "BL28_RS_DEN_061",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -584,7 +584,7 @@
     },
     {
         "case": "BL28_RS_DEN_062",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -604,7 +604,7 @@
     },
     {
         "case": "BL28_RS_DEN_063",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -619,7 +619,7 @@
     },
     {
         "case": "BL28_RS_DEN_064",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -634,7 +634,7 @@
     },
     {
         "case": "BL28_RS_DEN_065",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -649,7 +649,7 @@
     },
     {
         "case": "BL28_RS_DEN_066",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -669,7 +669,7 @@
     },
     {
         "case": "BL28_RS_DEN_067",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -689,7 +689,7 @@
     },
     {
         "case": "BL28_RS_DEN_068",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -704,7 +704,7 @@
     },
     {
         "case": "BL28_RS_DEN_069",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -719,7 +719,7 @@
     },
     {
         "case": "BL28_RS_DEN_070",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -734,7 +734,7 @@
     },
     {
         "case": "BL28_RS_DEN_071",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -757,7 +757,7 @@
     },
     {
         "case": "BL28_RS_DEN_072",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -780,7 +780,7 @@
     },
     {
         "case": "BL28_RS_DEN_073",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -798,7 +798,7 @@
     },
     {
         "case": "BL28_RS_DEN_074",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -816,7 +816,7 @@
     },
     {
         "case": "BL28_RS_DEN_075",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -834,7 +834,7 @@
     },
     {
         "case": "BL28_RS_DEN_076",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -857,7 +857,7 @@
     },
     {
         "case": "BL28_RS_DEN_077",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -880,7 +880,7 @@
     },
     {
         "case": "BL28_RS_DEN_078",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -898,7 +898,7 @@
     },
     {
         "case": "BL28_RS_DEN_079",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -916,7 +916,7 @@
     },
     {
         "case": "BL28_RS_DEN_080",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -934,7 +934,7 @@
     },
     {
         "case": "BL28_RS_DEN_081",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -957,7 +957,7 @@
     },
     {
         "case": "BL28_RS_DEN_082",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -980,7 +980,7 @@
     },
     {
         "case": "BL28_RS_DEN_083",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -998,7 +998,7 @@
     },
     {
         "case": "BL28_RS_DEN_084",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -1016,7 +1016,7 @@
     },
     {
         "case": "BL28_RS_DEN_085",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -1034,7 +1034,7 @@
     },
     {
         "case": "BL28_RS_DEN_086",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -1057,7 +1057,7 @@
     },
     {
         "case": "BL28_RS_DEN_087",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -1080,7 +1080,7 @@
     },
     {
         "case": "BL28_RS_DEN_088",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -1098,7 +1098,7 @@
     },
     {
         "case": "BL28_RS_DEN_089",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -1116,7 +1116,7 @@
     },
     {
         "case": "BL28_RS_DEN_090",
-        "status": "active",
+        "status": "skipped",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
@@ -1131,5 +1131,334 @@
             "Denoiser type: Bilateral"
         ],
         "scene": "DenoiserMaterials.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_101",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Donoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 0.75",
+            "Normal Sigma = 0.01",
+            "Depth Sigma = 0.01",
+            "ID Sigma = 0.01"
+        ],
+        "scene": "DualCpu.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_102",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Donoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 0.01",
+            "Normal Sigma = 0.01",
+            "Depth Sigma = 0.01",
+            "ID Sigma = 0.01"
+        ],
+        "scene": "DualCpu.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_104",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Donoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 0",
+            "Normal Sigma = 0",
+            "Depth Sigma = 0",
+            "ID Sigma = 0"
+        ],
+        "scene": "DualCpu.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_105",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.75)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Donoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 0.75",
+            "Normal Sigma = 0",
+            "Depth Sigma = 0",
+            "ID Sigma = 0"
+        ],
+        "scene": "DualCpu.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_106",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.75)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Donoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 0.75",
+            "Normal Sigma = 1",
+            "Depth Sigma = 1",
+            "ID Sigma = 1"
+        ],
+        "scene": "DualCpu.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_107",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Donoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 1",
+            "Normal Sigma = 1",
+            "Depth Sigma = 1",
+            "ID Sigma = 1"
+        ],
+        "scene": "DualCpu.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_108",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.5)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.5)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0.5)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.5)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Donoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 0.5",
+            "Normal Sigma = 0.5",
+            "Depth Sigma = 0.5",
+            "ID Sigma = 0.5"
+        ],
+        "scene": "DualCpu.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_109",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Donoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 1",
+            "Normal Sigma = 0",
+            "Depth Sigma = 0",
+            "ID Sigma = 0"
+        ],
+        "scene": "DualCpu.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_110",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Donoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 0",
+            "Normal Sigma = 1",
+            "Depth Sigma = 0",
+            "ID Sigma = 0"
+        ],
+        "scene": "DualCpu.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_111",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Donoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 0",
+            "Normal Sigma = 0",
+            "Depth Sigma = 1",
+            "ID Sigma = 0"
+        ],
+        "scene": "DualCpu.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_112",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Donoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 0",
+            "Normal Sigma = 0",
+            "Depth Sigma = 0",
+            "ID Sigma = 1"
+        ],
+        "scene": "DualCpu.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_113",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 2)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Donoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 2",
+            "Normal Sigma = 0",
+            "Depth Sigma = 0",
+            "ID Sigma = 0"
+        ],
+        "scene": "DualCpu.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_114",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 10)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Donoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 10",
+            "Normal Sigma = 0",
+            "Depth Sigma = 0",
+            "ID Sigma = 0"
+        ],
+        "scene": "DualCpu.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_113",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Donoiser type: Bilaterial",
+            "Radius: 1",
+            "Color Sigma = 0.75",
+            "Normal Sigma = 0.01",
+            "Position Sigma = 0.1",
+            "ID Sigma = 0.01"
+        ],
+        "scene": "DualCpu.blend"
     }
 ]
