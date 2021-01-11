@@ -770,7 +770,7 @@
             "rpr_render(case)"
 		],
 		"script_info": [
-			"cpu mode"
+			"CPU mode"
 		],
 		"scene": "DualCpu.blend",
         "skip_engine": [
@@ -789,7 +789,7 @@
 			"rpr_render(case)"
 		],
 		"script_info": [
-			"dual mode"
+			"Dual mode"
 		],
 		"scene": "DualCpu.blend",
         "skip_engine": [

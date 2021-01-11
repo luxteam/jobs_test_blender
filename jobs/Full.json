@@ -37,6 +37,7 @@
         "Athena":"",
         "IES_Intensity":"",
         "Mapping":"",
-        "Image_Node":""
+        "Image_Node":"",
+        "Particles":""
     }
 }

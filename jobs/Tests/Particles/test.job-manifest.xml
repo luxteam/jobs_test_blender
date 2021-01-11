@@ -7,11 +7,11 @@
         <argument>--tool "{Tool}"</argument>
         <argument>--render_device "{RenderDevice}"</argument>
         <argument>--output "{OutputDir}"</argument>
-        <argument>--testType Image_Formats</argument>
+        <argument>--testType Particles</argument>
         <argument>--pass_limit {PassLimit}</argument>
         <argument>--resolution_x {rx}</argument>
         <argument>--resolution_y {ry}</argument>
-        <argument>--res_path "{ScenesDir}/Render_Settings"</argument>
+        <argument>--res_path "{ScenesDir}/Materials"</argument>
         <argument>--testCases "{TestCases}"</argument>
         <argument>--SPU {SPU}</argument>
         <argument>--threshold {threshold}</argument>
