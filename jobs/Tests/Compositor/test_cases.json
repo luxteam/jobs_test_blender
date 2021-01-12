@@ -370,7 +370,10 @@
         "script_info": [
             "Tonemap"
         ],
-        "scene": "Compositor.blend"
+        "scene": "Compositor.blend",
+        "skip_config": [
+            ["AMD Radeon RX Vega 56 (Metal)"]
+        ]
     },
     {
         "case": "BL28_RS_CMP_024",
