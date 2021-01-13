@@ -125,7 +125,7 @@
     },
     {
         "case": "BL28_L_PL_012",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Point light with TIFF, int = 100"
         ],
@@ -141,7 +141,7 @@
     },
     {
         "case": "BL28_L_PL_013",
-        "status": "active",
+        "status": "skipped",
         "script_info": [
             "Point light with JPG, int = 100"
         ],
