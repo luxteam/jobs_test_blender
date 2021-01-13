@@ -432,7 +432,7 @@
     },
     {
         "case": "BL28_RS_CMP_028",
-        "status": "skipped",
+        "status": "active",
         "functions": [
             "rpr_render(case)",
             "bpy.ops.wm.open_mainfile(filepath=os.path.join(RES_PATH, 'Compositor.blend'))"
@@ -440,7 +440,7 @@
         "script_info": [
             "Cryptomatte"
         ],
-        "scene": "Compositor.blend"
+        "scene": "CompositorCryptomatte.blend"
     },
     {
         "case": "BL28_RS_CMP_029",
