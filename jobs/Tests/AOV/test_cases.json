@@ -1066,7 +1066,10 @@
         "script_info": [
             "AOV: Cryptomatte Material 0"
         ],
-        "scene": "AOV_testC.blend"
+        "scene": "AOV_testC.blend",
+        "skip_config": [
+            ["AMD Radeon RX Vega 56 (Metal)"]
+        ]
     },
     {
         "case": "BL28_RS_AOV_032",
@@ -1076,9 +1079,13 @@
             "rpr_render(case)"
         ],
         "script_info": [
+            "Black image expected",
             "AOV: Cryptomatte Material 1"
         ],
-        "scene": "AOV_testC.blend"
+        "scene": "AOV_testC.blend",
+        "skip_config": [
+            ["AMD Radeon RX Vega 56 (Metal)"]
+        ]
     },
     {
         "case": "BL28_RS_AOV_033",
@@ -1088,9 +1095,13 @@
             "rpr_render(case)"
         ],
         "script_info": [
+            "Black image expected",
             "AOV: Cryptomatte Material 2"
         ],
-        "scene": "AOV_testC.blend"
+        "scene": "AOV_testC.blend",
+        "skip_config": [
+            ["AMD Radeon RX Vega 56 (Metal)"]
+        ]
     },
     {
         "case": "BL28_RS_AOV_034",
@@ -1102,7 +1113,10 @@
         "script_info": [
             "AOV: Cryptomatte Object 0"
         ],
-        "scene": "AOV_testC.blend"
+        "scene": "AOV_testC.blend",
+        "skip_config": [
+            ["AMD Radeon RX Vega 56 (Metal)"]
+        ]
     },
     {
         "case": "BL28_RS_AOV_035",
@@ -1112,9 +1126,13 @@
             "rpr_render(case)"
         ],
         "script_info": [
+            "Black image expected",
             "AOV: Cryptomatte Object 1"
         ],
-        "scene": "AOV_testC.blend"
+        "scene": "AOV_testC.blend",
+        "skip_config": [
+            ["AMD Radeon RX Vega 56 (Metal)"]
+        ]
     },
     {
         "case": "BL28_RS_AOV_036",
@@ -1124,8 +1142,12 @@
             "rpr_render(case)"
         ],
         "script_info": [
+            "Black image expected",
             "AOV: Cryptomatte Object 2"
         ],
-        "scene": "AOV_testC.blend"
+        "scene": "AOV_testC.blend",
+        "skip_config": [
+            ["AMD Radeon RX Vega 56 (Metal)"]
+        ]
     }
 ]

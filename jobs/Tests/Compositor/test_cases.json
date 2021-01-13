@@ -440,7 +440,10 @@
         "script_info": [
             "Cryptomatte"
         ],
-        "scene": "CompositorCryptomatte.blend"
+        "scene": "CompositorCryptomatte.blend",
+        "skip_config": [
+            ["AMD Radeon RX Vega 56 (Metal)"]
+        ]
     },
     {
         "case": "BL28_RS_CMP_029",
