@@ -69,6 +69,7 @@ def reportToJSON(case, render_time=0):
     report['render_time'] = render_time
     report['test_group'] = TEST_TYPE
     report['test_case'] = case['case']
+    report['case_functions'] = case['functions']
     report['difference_color'] = 0
     report['script_info'] = case['script_info']
     report['scene_name'] = case.get('scene', '')
