@@ -1159,126 +1159,6 @@
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
-            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
-            "rpr_render(case)",
-            "resetSceneAttributes()"
-        ],
-        "script_info": [
-            "Denoiser Sigma test",
-            "Denoiser type: Edge Avoiding Wavelets",
-            "Color Sigma = 0.01",
-            "Normal Sigma = 0.01",
-            "Depth Sigma = 0.01",
-            "ID Sigma = 0.01"
-        ],
-        "scene": "Car_Demo.blend"
-    },
-    {
-        "case": "BL28_RS_DEN_103",
-        "status": "active",
-        "functions": [
-            "view_layer = bpy.context.view_layer",
-            "set_value(view_layer.rpr.denoiser, 'enable', True)",
-            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
-            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
-            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
-            "rpr_render(case)",
-            "resetSceneAttributes()"
-        ],
-        "script_info": [
-            "Denoiser Sigma test",
-            "Denoiser type: Edge Avoiding Wavelets",
-            "Color Sigma = 0.01",
-            "Normal Sigma = 0.01",
-            "Depth Sigma = 0",
-            "ID Sigma = 0.01"
-        ],
-        "scene": "Car_Demo.blend"
-    },
-    {
-        "case": "BL28_RS_DEN_104",
-        "status": "active",
-        "functions": [
-            "view_layer = bpy.context.view_layer",
-            "set_value(view_layer.rpr.denoiser, 'enable', True)",
-            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
-            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.75)",
-            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
-            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
-            "rpr_render(case)",
-            "resetSceneAttributes()"
-        ],
-        "script_info": [
-            "Denoiser Sigma test",
-            "Denoiser type: Edge Avoiding Wavelets",
-            "Color Sigma = 0.75",
-            "Normal Sigma = 0.01",
-            "Depth Sigma = 0",
-            "ID Sigma = 0.01"
-        ],
-        "scene": "Car_Demo.blend"
-    },
-    {
-        "case": "BL28_RS_DEN_105",
-        "status": "active",
-        "functions": [
-            "view_layer = bpy.context.view_layer",
-            "set_value(view_layer.rpr.denoiser, 'enable', True)",
-            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
-            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.75)",
-            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
-            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 1)",
-            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
-            "rpr_render(case)",
-            "resetSceneAttributes()"
-        ],
-        "script_info": [
-            "Denoiser Sigma test",
-            "Denoiser type: Edge Avoiding Wavelets",
-            "Color Sigma = 0.75",
-            "Normal Sigma = 1",
-            "Depth Sigma = 1",
-            "ID Sigma = 1"
-        ],
-        "scene": "Car_Demo.blend"
-    },
-    {
-        "case": "BL28_RS_DEN_106",
-        "status": "active",
-        "functions": [
-            "view_layer = bpy.context.view_layer",
-            "set_value(view_layer.rpr.denoiser, 'enable', True)",
-            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
-            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
-            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
-            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 1)",
-            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
-            "rpr_render(case)",
-            "resetSceneAttributes()"
-        ],
-        "script_info": [
-            "Denoiser Sigma test",
-            "Denoiser type: Edge Avoiding Wavelets",
-            "Color Sigma = 1",
-            "Normal Sigma = 1",
-            "Depth Sigma = 1",
-            "ID Sigma = 1"
-        ],
-        "scene": "Car_Demo.blend"
-    },
-    {
-        "case": "BL28_RS_DEN_107",
-        "status": "active",
-        "functions": [
-            "view_layer = bpy.context.view_layer",
-            "set_value(view_layer.rpr.denoiser, 'enable', True)",
-            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
             "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.5)",
             "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.5)",
             "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0.5)",
@@ -1297,13 +1177,13 @@
         "scene": "Car_Demo.blend"
     },
     {
-        "case": "BL28_RS_DEN_108",
+        "case": "BL28_RS_DEN_103",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
-            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 10)",
             "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
             "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
             "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
@@ -1313,7 +1193,127 @@
         "script_info": [
             "Denoiser Sigma test",
             "Denoiser type: Edge Avoiding Wavelets",
-            "Color Sigma = 1",
+            "Color Sigma = 10",
+            "Normal Sigma = 0.01",
+            "Depth Sigma = 0",
+            "ID Sigma = 0.01"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_104",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 10)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 0.01",
+            "Normal Sigma = 10",
+            "Depth Sigma = 0",
+            "ID Sigma = 0.01"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_105",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 10)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 0.01",
+            "Normal Sigma = 0.01",
+            "Depth Sigma = 10",
+            "ID Sigma = 0.01"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_106",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 0.01",
+            "Normal Sigma = 0.01",
+            "Depth Sigma = 0",
+            "ID Sigma = 10"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_107",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 11)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 11)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 11)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 11)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 11",
+            "Normal Sigma = 11",
+            "Depth Sigma = 11",
+            "ID Sigma = 11"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_108",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 0.01",
             "Normal Sigma = 0.01",
             "Depth Sigma = 0",
             "ID Sigma = 0.01"
@@ -1328,9 +1328,9 @@
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
             "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
             "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
-            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
             "rpr_render(case)",
             "resetSceneAttributes()"
         ],
@@ -1338,9 +1338,9 @@
             "Denoiser Sigma test",
             "Denoiser type: Edge Avoiding Wavelets",
             "Color Sigma = 0.01",
-            "Normal Sigma = 1",
+            "Normal Sigma = 0.01",
             "Depth Sigma = 0",
-            "ID Sigma = 0.01"
+            "ID Sigma = 1"
         ],
         "scene": "Car_Demo.blend"
     },
@@ -1377,7 +1377,7 @@
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
             "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
             "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 1)",
             "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
             "rpr_render(case)",
             "resetSceneAttributes()"
@@ -1387,7 +1387,7 @@
             "Denoiser type: Edge Avoiding Wavelets",
             "Color Sigma = 0.01",
             "Normal Sigma = 0.01",
-            "Depth Sigma = 0",
+            "Depth Sigma = 1",
             "ID Sigma = 1"
         ],
         "scene": "Car_Demo.blend"
@@ -1399,8 +1399,8 @@
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
-            "set_value(view_layer.rpr.denoiser, 'color_sigma', 2)",
-            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
             "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
             "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
             "rpr_render(case)",
@@ -1409,8 +1409,8 @@
         "script_info": [
             "Denoiser Sigma test",
             "Denoiser type: Edge Avoiding Wavelets",
-            "Color Sigma = 2",
-            "Normal Sigma = 0.01",
+            "Color Sigma = 0.01",
+            "Normal Sigma = 1",
             "Depth Sigma = 0",
             "ID Sigma = 0.01"
         ],
@@ -1423,7 +1423,79 @@
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
-            "set_value(view_layer.rpr.denoiser, 'color_sigma', 10)",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 0.01",
+            "Normal Sigma = 1",
+            "Depth Sigma = 0",
+            "ID Sigma = 1"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_114",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 0.01",
+            "Normal Sigma = 1",
+            "Depth Sigma = 1",
+            "ID Sigma = 0.01"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_115",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 0.01",
+            "Normal Sigma = 1",
+            "Depth Sigma = 1",
+            "ID Sigma = 1"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_116",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
             "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
             "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
             "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
@@ -1433,7 +1505,7 @@
         "script_info": [
             "Denoiser Sigma test",
             "Denoiser type: Edge Avoiding Wavelets",
-            "Color Sigma = 10",
+            "Color Sigma = 1",
             "Normal Sigma = 0.01",
             "Depth Sigma = 0",
             "ID Sigma = 0.01"
@@ -1441,7 +1513,175 @@
         "scene": "Car_Demo.blend"
     },
     {
-        "case": "BL28_RS_DEN_114",
+        "case": "BL28_RS_DEN_117",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 1",
+            "Normal Sigma = 0.01",
+            "Depth Sigma = 0",
+            "ID Sigma = 1"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_118",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 1",
+            "Normal Sigma = 0.01",
+            "Depth Sigma = 1",
+            "ID Sigma = 0.01"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_119",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 1",
+            "Normal Sigma = 0.01",
+            "Depth Sigma = 1",
+            "ID Sigma = 1"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_120",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 1",
+            "Normal Sigma = 1",
+            "Depth Sigma = 0",
+            "ID Sigma = 0.01"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_121",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 0)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 1",
+            "Normal Sigma = 1",
+            "Depth Sigma = 0",
+            "ID Sigma = 1"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_122",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 1",
+            "Normal Sigma = 1",
+            "Depth Sigma = 1",
+            "ID Sigma = 0.01"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_123",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'EAW')",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'depth_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Edge Avoiding Wavelets",
+            "Color Sigma = 1",
+            "Normal Sigma = 1",
+            "Depth Sigma = 1",
+            "ID Sigma = 1"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_124",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
@@ -1462,137 +1702,7 @@
         "scene": "Car_Demo.blend"
     },
     {
-        "case": "BL28_RS_DEN_115",
-        "status": "active",
-        "functions": [
-            "view_layer = bpy.context.view_layer",
-            "set_value(view_layer.rpr.denoiser, 'enable', True)",
-            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
-            "set_value(view_layer.rpr.denoiser, 'radius', 1)",
-            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'p_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
-            "rpr_render(case)",
-            "resetSceneAttributes()"
-        ],
-        "script_info": [
-            "Denoiser Sigma test",
-            "Denoiser type: Bilaterial",
-            "Radius: 1",
-            "Color Sigma = 0.01",
-            "Normal Sigma = 0.01",
-            "Position Sigma = 0.01",
-            "ID Sigma = 0.01"
-        ],
-        "scene": "Car_Demo.blend"
-    },
-    {
-        "case": "BL28_RS_DEN_116",
-        "status": "active",
-        "functions": [
-            "view_layer = bpy.context.view_layer",
-            "set_value(view_layer.rpr.denoiser, 'enable', True)",
-            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
-            "set_value(view_layer.rpr.denoiser, 'radius', 10)",
-            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'p_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
-            "rpr_render(case)",
-            "resetSceneAttributes()"
-        ],
-        "script_info": [
-            "Denoiser Sigma test",
-            "Denoiser type: Bilaterial",
-            "Radius: 10",
-            "Color Sigma = 0.01",
-            "Normal Sigma = 0.01",
-            "Position Sigma = 0.01",
-            "ID Sigma = 0.01"
-        ],
-        "scene": "Car_Demo.blend"
-    },
-    {
-        "case": "BL28_RS_DEN_117",
-        "status": "active",
-        "functions": [
-            "view_layer = bpy.context.view_layer",
-            "set_value(view_layer.rpr.denoiser, 'enable', True)",
-            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
-            "set_value(view_layer.rpr.denoiser, 'radius', 1)",
-            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
-            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'p_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
-            "rpr_render(case)",
-            "resetSceneAttributes()"
-        ],
-        "script_info": [
-            "Denoiser Sigma test",
-            "Denoiser type: Bilaterial",
-            "Radius: 1",
-            "Color Sigma = 1",
-            "Normal Sigma = 0.01",
-            "Position Sigma = 0.01",
-            "ID Sigma = 0.01"
-        ],
-        "scene": "Car_Demo.blend"
-    },
-    {
-        "case": "BL28_RS_DEN_118",
-        "status": "active",
-        "functions": [
-            "view_layer = bpy.context.view_layer",
-            "set_value(view_layer.rpr.denoiser, 'enable', True)",
-            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
-            "set_value(view_layer.rpr.denoiser, 'radius', 1)",
-            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.75)",
-            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
-            "set_value(view_layer.rpr.denoiser, 'p_sigma', 1)",
-            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
-            "rpr_render(case)",
-            "resetSceneAttributes()"
-        ],
-        "script_info": [
-            "Denoiser Sigma test",
-            "Denoiser type: Bilaterial",
-            "Radius: 1",
-            "Color Sigma = 0.75",
-            "Normal Sigma = 1",
-            "Position Sigma = 1",
-            "ID Sigma = 1"
-        ],
-        "scene": "Car_Demo.blend"
-    },
-    {
-        "case": "BL28_RS_DEN_119",
-        "status": "active",
-        "functions": [
-            "view_layer = bpy.context.view_layer",
-            "set_value(view_layer.rpr.denoiser, 'enable', True)",
-            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
-            "set_value(view_layer.rpr.denoiser, 'radius', 1)",
-            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
-            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
-            "set_value(view_layer.rpr.denoiser, 'p_sigma', 1)",
-            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
-            "rpr_render(case)",
-            "resetSceneAttributes()"
-        ],
-        "script_info": [
-            "Denoiser Sigma test",
-            "Denoiser type: Bilaterial",
-            "Radius: 1",
-            "Color Sigma = 1",
-            "Normal Sigma = 1",
-            "Position Sigma = 1",
-            "ID Sigma = 1"
-        ],
-        "scene": "Car_Demo.blend"
-    },
-    {
-        "case": "BL28_RS_DEN_120",
+        "case": "BL28_RS_DEN_125",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
@@ -1618,14 +1728,14 @@
         "scene": "Car_Demo.blend"
     },
     {
-        "case": "BL28_RS_DEN_121",
+        "case": "BL28_RS_DEN_126",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
             "set_value(view_layer.rpr.denoiser, 'radius', 1)",
-            "set_value(view_layer.rpr.denoiser, 'color_sigma', 2)",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 10)",
             "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
             "set_value(view_layer.rpr.denoiser, 'p_sigma', 0.01)",
             "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
@@ -1636,7 +1746,7 @@
             "Denoiser Sigma test",
             "Denoiser type: Bilaterial",
             "Radius: 1",
-            "Color Sigma = 2",
+            "Color Sigma = 10",
             "Normal Sigma = 0.01",
             "Position Sigma = 0.01",
             "ID Sigma = 0.01"
@@ -1644,7 +1754,7 @@
         "scene": "Car_Demo.blend"
     },
     {
-        "case": "BL28_RS_DEN_122",
+        "case": "BL28_RS_DEN_127",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
@@ -1652,7 +1762,7 @@
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
             "set_value(view_layer.rpr.denoiser, 'radius', 1)",
             "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 10)",
             "set_value(view_layer.rpr.denoiser, 'p_sigma', 0.01)",
             "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
             "rpr_render(case)",
@@ -1663,14 +1773,14 @@
             "Denoiser type: Bilaterial",
             "Radius: 1",
             "Color Sigma = 0.01",
-            "Normal Sigma = 1",
+            "Normal Sigma = 10",
             "Position Sigma = 0.01",
             "ID Sigma = 0.01"
         ],
         "scene": "Car_Demo.blend"
     },
     {
-        "case": "BL28_RS_DEN_123",
+        "case": "BL28_RS_DEN_128",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
@@ -1679,7 +1789,7 @@
             "set_value(view_layer.rpr.denoiser, 'radius', 1)",
             "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
             "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'p_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'p_sigma', 10)",
             "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
             "rpr_render(case)",
             "resetSceneAttributes()"
@@ -1690,13 +1800,91 @@
             "Radius: 1",
             "Color Sigma = 0.01",
             "Normal Sigma = 0.01",
-            "Position Sigma = 1",
+            "Position Sigma = 10",
             "ID Sigma = 0.01"
         ],
         "scene": "Car_Demo.blend"
     },
     {
-        "case": "BL28_RS_DEN_124",
+        "case": "BL28_RS_DEN_129",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
+            "set_value(view_layer.rpr.denoiser, 'radius', 1)",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'p_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 10)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Bilaterial",
+            "Radius: 1",
+            "Color Sigma = 0.01",
+            "Normal Sigma = 0.01",
+            "Position Sigma = 0.01",
+            "ID Sigma = 10"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_130",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
+            "set_value(view_layer.rpr.denoiser, 'radius', 1)",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 11)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 11)",
+            "set_value(view_layer.rpr.denoiser, 'p_sigma', 11)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 11)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Bilaterial",
+            "Radius: 1",
+            "Color Sigma = 11",
+            "Normal Sigma = 11",
+            "Position Sigma = 11",
+            "ID Sigma = 11"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_131",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
+            "set_value(view_layer.rpr.denoiser, 'radius', 1)",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'p_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Bilaterial",
+            "Radius: 1",
+            "Color Sigma = 0.01",
+            "Normal Sigma = 0.01",
+            "Position Sigma = 0.01",
+            "ID Sigma = 0.01"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_132",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
@@ -1722,7 +1910,59 @@
         "scene": "Car_Demo.blend"
     },
     {
-        "case": "BL28_RS_DEN_125",
+        "case": "BL28_RS_DEN_133",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
+            "set_value(view_layer.rpr.denoiser, 'radius', 1)",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'p_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Bilaterial",
+            "Radius: 1",
+            "Color Sigma = 0.01",
+            "Normal Sigma = 0.01",
+            "Position Sigma = 1",
+            "ID Sigma = 0.01"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_134",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
+            "set_value(view_layer.rpr.denoiser, 'radius', 1)",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'p_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Bilaterial",
+            "Radius: 1",
+            "Color Sigma = 0.01",
+            "Normal Sigma = 0.01",
+            "Position Sigma = 1",
+            "ID Sigma = 1"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_135",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
@@ -1730,7 +1970,7 @@
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
             "set_value(view_layer.rpr.denoiser, 'radius', 1)",
             "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01",
-            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 2)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
             "set_value(view_layer.rpr.denoiser, 'p_sigma', 0.01)",
             "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
             "rpr_render(case)",
@@ -1741,14 +1981,14 @@
             "Denoiser type: Bilaterial",
             "Radius: 1",
             "Color Sigma = 0.01",
-            "Normal Sigma = 2",
+            "Normal Sigma = 1",
             "Position Sigma = 0.01",
             "ID Sigma = 0.01"
         ],
         "scene": "Car_Demo.blend"
     },
     {
-        "case": "BL28_RS_DEN_126",
+        "case": "BL28_RS_DEN_136",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
@@ -1756,8 +1996,34 @@
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
             "set_value(view_layer.rpr.denoiser, 'radius', 1)",
             "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'p_sigma', 5)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'p_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Bilaterial",
+            "Radius: 1",
+            "Color Sigma = 0.01",
+            "Normal Sigma = 1",
+            "Position Sigma = 0.01",
+            "ID Sigma = 1"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_137",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
+            "set_value(view_layer.rpr.denoiser, 'radius', 1)",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'p_sigma', 1)",
             "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
             "rpr_render(case)",
             "resetSceneAttributes()"
@@ -1767,23 +2033,49 @@
             "Denoiser type: Bilaterial",
             "Radius: 1",
             "Color Sigma = 0.01",
-            "Normal Sigma = 0.01",
-            "Position Sigma = 5",
+            "Normal Sigma = 1",
+            "Position Sigma = 1",
             "ID Sigma = 0.01"
         ],
         "scene": "Car_Demo.blend"
     },
     {
-        "case": "BL28_RS_DEN_127",
+        "case": "BL28_RS_DEN_138",
         "status": "active",
         "functions": [
             "view_layer = bpy.context.view_layer",
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
-            "set_value(view_layer.rpr.denoiser, 'radius', 4)",
-            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.75)",
+            "set_value(view_layer.rpr.denoiser, 'radius', 1)",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'p_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Bilaterial",
+            "Radius: 1",
+            "Color Sigma = 0.01",
+            "Normal Sigma = 1",
+            "Position Sigma = 1",
+            "ID Sigma = 1"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_139",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
+            "set_value(view_layer.rpr.denoiser, 'radius', 1)",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
             "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
-            "set_value(view_layer.rpr.denoiser, 'p_sigma', 0.1)",
+            "set_value(view_layer.rpr.denoiser, 'p_sigma', 0.01)",
             "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
             "rpr_render(case)",
             "resetSceneAttributes()"
@@ -1791,11 +2083,193 @@
         "script_info": [
             "Denoiser Sigma test",
             "Denoiser type: Bilaterial",
-            "Radius: 4",
-            "Color Sigma = 0.75",
+            "Radius: 1",
+            "Color Sigma = 1",
             "Normal Sigma = 0.01",
-            "Position Sigma = 0.1",
+            "Position Sigma = 0.01",
             "ID Sigma = 0.01"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_140",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
+            "set_value(view_layer.rpr.denoiser, 'radius', 1)",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'p_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Bilaterial",
+            "Radius: 1",
+            "Color Sigma = 1",
+            "Normal Sigma = 0.01",
+            "Position Sigma = 0.01",
+            "ID Sigma = 1"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_141",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
+            "set_value(view_layer.rpr.denoiser, 'radius', 1)",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'p_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Bilaterial",
+            "Radius: 1",
+            "Color Sigma = 1",
+            "Normal Sigma = 0.01",
+            "Position Sigma = 1",
+            "ID Sigma = 0.01"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_142",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
+            "set_value(view_layer.rpr.denoiser, 'radius', 1)",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'p_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Bilaterial",
+            "Radius: 1",
+            "Color Sigma = 1",
+            "Normal Sigma = 0.01",
+            "Position Sigma = 1",
+            "ID Sigma = 1"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_143",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
+            "set_value(view_layer.rpr.denoiser, 'radius', 1)",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'p_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Bilaterial",
+            "Radius: 1",
+            "Color Sigma = 1",
+            "Normal Sigma = 1",
+            "Position Sigma = 0.01",
+            "ID Sigma = 0.01"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_144",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
+            "set_value(view_layer.rpr.denoiser, 'radius', 1)",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'p_sigma', 0.01)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Bilaterial",
+            "Radius: 1",
+            "Color Sigma = 1",
+            "Normal Sigma = 1",
+            "Position Sigma = 0.01",
+            "ID Sigma = 1"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_145",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
+            "set_value(view_layer.rpr.denoiser, 'radius', 1)",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'p_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 0.01)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Bilaterial",
+            "Radius: 1",
+            "Color Sigma = 1",
+            "Normal Sigma = 1",
+            "Position Sigma = 1",
+            "ID Sigma = 0.01"
+        ],
+        "scene": "Car_Demo.blend"
+    },
+    {
+        "case": "BL28_RS_DEN_146",
+        "status": "active",
+        "functions": [
+            "view_layer = bpy.context.view_layer",
+            "set_value(view_layer.rpr.denoiser, 'enable', True)",
+            "set_value(view_layer.rpr.denoiser, 'filter_type', 'BILATERIAL')",
+            "set_value(view_layer.rpr.denoiser, 'radius', 1)",
+            "set_value(view_layer.rpr.denoiser, 'color_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'normal_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'p_sigma', 1)",
+            "set_value(view_layer.rpr.denoiser, 'trans_sigma', 1)",
+            "rpr_render(case)",
+            "resetSceneAttributes()"
+        ],
+        "script_info": [
+            "Denoiser Sigma test",
+            "Denoiser type: Bilaterial",
+            "Radius: 1",
+            "Color Sigma = 1",
+            "Normal Sigma = 1",
+            "Position Sigma = 1",
+            "ID Sigma = 1"
         ],
         "scene": "Car_Demo.blend"
     }
