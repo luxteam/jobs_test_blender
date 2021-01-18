@@ -1055,5 +1055,99 @@
         "skip_config":[
             ["GeForce GTX 1080 Ti"]
         ]
+    },
+    {
+        "case": "BL28_RS_AOV_031",
+        "status": "active",
+        "functions": [
+            "connect_nodes('Render Layers', 'Cryptomatte Mat0', 'Composite', 'Image')",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "AOV: Cryptomatte Material 0"
+        ],
+        "scene": "AOV_testC.blend",
+        "skip_config": [
+            ["AMD Radeon RX Vega 56 (Metal)"]
+        ]
+    },
+    {
+        "case": "BL28_RS_AOV_032",
+        "status": "active",
+        "functions": [
+            "connect_nodes('Render Layers', 'Cryptomatte Mat1', 'Composite', 'Image')",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Black image expected",
+            "AOV: Cryptomatte Material 1"
+        ],
+        "scene": "AOV_testC.blend",
+        "skip_config": [
+            ["AMD Radeon RX Vega 56 (Metal)"]
+        ]
+    },
+    {
+        "case": "BL28_RS_AOV_033",
+        "status": "active",
+        "functions": [
+            "connect_nodes('Render Layers', 'Cryptomatte Mat2', 'Composite', 'Image')",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Black image expected",
+            "AOV: Cryptomatte Material 2"
+        ],
+        "scene": "AOV_testC.blend",
+        "skip_config": [
+            ["AMD Radeon RX Vega 56 (Metal)"]
+        ]
+    },
+    {
+        "case": "BL28_RS_AOV_034",
+        "status": "active",
+        "functions": [
+            "connect_nodes('Render Layers', 'Cryptomatte Obj0', 'Composite', 'Image')",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "AOV: Cryptomatte Object 0"
+        ],
+        "scene": "AOV_testC.blend",
+        "skip_config": [
+            ["AMD Radeon RX Vega 56 (Metal)"]
+        ]
+    },
+    {
+        "case": "BL28_RS_AOV_035",
+        "status": "active",
+        "functions": [
+            "connect_nodes('Render Layers', 'Cryptomatte Obj1', 'Composite', 'Image')",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Black image expected",
+            "AOV: Cryptomatte Object 1"
+        ],
+        "scene": "AOV_testC.blend",
+        "skip_config": [
+            ["AMD Radeon RX Vega 56 (Metal)"]
+        ]
+    },
+    {
+        "case": "BL28_RS_AOV_036",
+        "status": "active",
+        "functions": [
+            "connect_nodes('Render Layers', 'Cryptomatte Obj2', 'Composite', 'Image')",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Black image expected",
+            "AOV: Cryptomatte Object 2"
+        ],
+        "scene": "AOV_testC.blend",
+        "skip_config": [
+            ["AMD Radeon RX Vega 56 (Metal)"]
+        ]
     }
 ]
