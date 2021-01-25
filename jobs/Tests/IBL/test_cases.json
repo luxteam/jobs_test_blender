@@ -544,5 +544,529 @@
         "skip_engine": [
             "MEDIUM"
         ]
+    },
+    {
+        "case": "BL28_RS_IBL_035",
+        "status": "active",
+        "script_info": [
+            "Gizmo (1,1,1)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "bpy.data.worlds['World'].rpr.world_rotation = (1, 1, 1)",
+            "set_value(bpy.data.worlds['World'].rpr, 'intensity', 1)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.world_rotation = (0, 0, 0)"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_036",
+        "status": "active",
+        "script_info": [
+            "Gizmo (-1,-1,-1)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "bpy.data.worlds['World'].rpr.world_rotation = (-1, -1, -1)",
+            "set_value(bpy.data.worlds['World'].rpr, 'intensity', 1)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.world_rotation = (0, 0, 0)"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_037",
+        "status": "active",
+        "script_info": [
+            "Gizmo (10,10,10)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "bpy.data.worlds['World'].rpr.world_rotation = (10, 10, 10)",
+            "set_value(bpy.data.worlds['World'].rpr, 'intensity', 1)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.world_rotation = (0, 0, 0)"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_038",
+        "status": "active",
+        "script_info": [
+            "Gizmo (-10,0,10)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "bpy.data.worlds['World'].rpr.world_rotation = (-10, 0, 10)",
+            "set_value(bpy.data.worlds['World'].rpr, 'intensity', 1)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.world_rotation = (0, 0, 0)"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_039",
+        "status": "active",
+        "script_info": [
+            "Override Background Rotation (1,1,1)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_image_type', 'SPHERE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.background_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.background_rotation = (1, 1, 1)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.background_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_040",
+        "status": "active",
+        "script_info": [
+            "Override Background Rotation (-1,-1,-1)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_image_type', 'SPHERE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.background_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.background_rotation = (-1, -1, -1)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.background_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_041",
+        "status": "active",
+        "script_info": [
+            "Override Background Rotation (10,10,10)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_image_type', 'SPHERE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.background_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.background_rotation = (10, 10, 10)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.background_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_042",
+        "status": "active",
+        "script_info": [
+            "Override Background Rotation (-10,10,0)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_image_type', 'SPHERE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.background_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.background_rotation = (-10, 10, 0)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.background_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_043",
+        "status": "active",
+        "script_info": [
+            "Override reflection Rotation (1,1,1)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'reflection_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'reflection_image_type', 'SPHERE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'reflection_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'reflection_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.reflection_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.reflection_rotation = (1, 1, 1)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.reflection_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_044",
+        "status": "active",
+        "script_info": [
+            "Override reflection Rotation (-1,-1,-1)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'reflection_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'reflection_image_type', 'SPHERE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'reflection_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'reflection_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.reflection_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.reflection_rotation = (-1, -1, -1)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.reflection_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_045",
+        "status": "active",
+        "script_info": [
+            "Override reflection Rotation (10,10,10)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'reflection_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'reflection_image_type', 'SPHERE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'reflection_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'reflection_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.reflection_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.reflection_rotation = (10, 10, 10)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.reflection_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_046",
+        "status": "active",
+        "script_info": [
+            "Override reflection Rotation (-10,10,0)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'reflection_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'reflection_image_type', 'SPHERE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'reflection_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'reflection_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.reflection_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.reflection_rotation = (-10, 10, 0)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.reflection_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_047",
+        "status": "active",
+        "script_info": [
+            "Override refraction Rotation (1,1,1)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'refraction_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'refraction_image_type', 'SPHERE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'refraction_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'refraction_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.refraction_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.refraction_rotation = (1, 1, 1)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.refraction_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_048",
+        "status": "active",
+        "script_info": [
+            "Override refraction Rotation (-1,-1,-1)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'refraction_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'refraction_image_type', 'SPHERE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'refraction_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'refraction_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.refraction_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.refraction_rotation = (-1, -1, -1)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.refraction_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_049",
+        "status": "active",
+        "script_info": [
+            "Override refraction Rotation (10,10,10)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'refraction_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'refraction_image_type', 'SPHERE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'refraction_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'refraction_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.refraction_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.refraction_rotation = (10, 10, 10)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.refraction_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_050",
+        "status": "active",
+        "script_info": [
+            "Override refraction Rotation (-10,10,0)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'refraction_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'refraction_image_type', 'SPHERE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'refraction_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'refraction_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.refraction_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.refraction_rotation = (-10, 10, 0)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.refraction_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_051",
+        "status": "active",
+        "script_info": [
+            "Override transparency Rotation (1,1,1)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'transparency_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'transparency_image_type', 'SPHERE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'transparency_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'transparency_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.transparency_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.transparency_rotation = (1, 1, 1)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.transparency_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_052",
+        "status": "active",
+        "script_info": [
+            "Override transparency Rotation (-1,-1,-1)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'transparency_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'transparency_image_type', 'SPHERE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'transparency_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'transparency_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.transparency_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.transparency_rotation = (-1, -1, -1)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.transparency_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_053",
+        "status": "active",
+        "script_info": [
+            "Override transparency Rotation (10,10,10)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'transparency_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'transparency_image_type', 'SPHERE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'transparency_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'transparency_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.transparency_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.transparency_rotation = (10, 10, 10)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.transparency_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_054",
+        "status": "active",
+        "script_info": [
+            "Override transparency Rotation (-10,10,0)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'transparency_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'transparency_image_type', 'SPHERE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'transparency_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'transparency_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.transparency_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.transparency_rotation = (-10, 10, 0)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.transparency_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_055",
+        "status": "active",
+        "script_info": [
+            "Override background Rotation (1,1,1)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_image_type', 'BACKPLATE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.background_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.background_rotation = (1, 1, 1)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.background_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_056",
+        "status": "active",
+        "script_info": [
+            "Override background Rotation (-1,-1,-1)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_image_type', 'BACKPLATE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.background_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.background_rotation = (-1, -1, -1)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.background_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_057",
+        "status": "active",
+        "script_info": [
+            "Override background Rotation (10,10,10)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_image_type', 'BACKPLATE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.background_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.background_rotation = (10, 10, 10)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.background_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
+    },
+    {
+        "case": "BL28_RS_IBL_058",
+        "status": "active",
+        "script_info": [
+            "Override background Rotation (-10,10,0)"
+        ],
+        "scene": "ComplexTestUber.blend",
+        "functions": [
+            "resetSceneAttributes()",
+            "set_value(bpy.data.worlds['World'].rpr.ibl, 'image', bpy.data.images['over_the_clouds.exr'])",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_override', True)",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_image_type', 'BACKPLATE')",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_color', (0, 0.4, 0))",
+            "set_value(bpy.data.worlds['World'].rpr, 'background_image', bpy.data.images['Testscene02_RPRUberMaterial1_BaseColor.png'])",
+            "bpy.data.worlds['World'].rpr.background_rotation_override = True",
+            "bpy.data.worlds['World'].rpr.background_rotation = (-10, 10, 0)",
+            "rpr_render(case)",
+            "bpy.data.worlds['World'].rpr.background_rotation_override = False"
+        ],
+        "skip_engine": [
+            "MEDIUM"
+        ]
     }
 ]
