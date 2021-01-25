@@ -978,7 +978,7 @@
         ]
     },
     {
-        "case": "BL28_RS_IBL_022",
+        "case": "BL28_RS_IBL_055",
         "status": "active",
         "script_info": [
             "Override background Rotation (1,1,1)"
@@ -1001,7 +1001,7 @@
         ]
     },
     {
-        "case": "BL28_RS_IBL_022",
+        "case": "BL28_RS_IBL_056",
         "status": "active",
         "script_info": [
             "Override background Rotation (-1,-1,-1)"
@@ -1024,7 +1024,7 @@
         ]
     },
     {
-        "case": "BL28_RS_IBL_022",
+        "case": "BL28_RS_IBL_057",
         "status": "active",
         "script_info": [
             "Override background Rotation (10,10,10)"
@@ -1047,7 +1047,7 @@
         ]
     },
     {
-        "case": "BL28_RS_IBL_022",
+        "case": "BL28_RS_IBL_058",
         "status": "active",
         "script_info": [
             "Override background Rotation (-10,10,0)"
