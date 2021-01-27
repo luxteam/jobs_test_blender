@@ -26,6 +26,11 @@ ENGINE = r'{engine}'
 RETRIES = {retries}
 LOGS_DIR = path.join(WORK_DIR, 'render_tool_logs')
 
+if TEST_TYPE == "Export":
+    RPR_EXPORT_DIR = os.path.abspath("").rsplit("\\", 1)[0] + "\\Work\\Results\\Blender28\\Export\\rpr_export"
+    if os.path.exists(RPR_EXPORT_DIR) == False:
+        os.mkdir(RPR_EXPORT_DIR)
+
 
 def event(name, start, case):
     pathEvents = path.join(os.path.dirname(os.path.realpath(__file__)), 'events')
@@ -285,6 +290,21 @@ def main():
         case['case'] for case in cases if case['status'] in ['active', 'fail', 'skipped']))
 
     total_time = 0
+    print(cases)
+    if not cases:
+        set_value(bpy.context.scene.render, 'engine', 'RPR')
+        # Exporting
+        bpy.ops.rpr.export_scene_rpr(filepath="out.rpr",
+                                check_existing=True,
+                                filter_glob="*.rpr",
+                                export_animation=False,
+                                export_as_single_file=False,
+                                compression='LOW',
+                                start_frame=0,
+                                end_frame=0)
+
+        # Quit Blender without rendering
+        return
 
     for case in cases:
         if case['status'] in ['active', 'fail', 'skipped']:
