@@ -169,6 +169,7 @@
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
             "set_value(view_layer.rpr.denoiser, 'ml_color_only', True)",
+            "view_layer.rpr.denoiser.ml_use_fp16_compute_type = True",
             "rpr_render(case)",
             "resetSceneAttributes()"
         ],
@@ -259,6 +260,8 @@
             "set_value(physical_light_data.rpr, 'intensity', 0)",
             "ies_light_data = bpy.data.lights['Point.001']",
             "set_value(ies_light_data.rpr, 'intensity', 3)",
+            "set_value(view_layer.rpr.denoiser, 'ml_use_fp16_compute_type', True)",
+            "view_layer.rpr.denoiser.ml_use_fp16_compute_type = True",
             "rpr_render(case)",
             "resetSceneAttributes()"
         ],
@@ -311,6 +314,7 @@
             "set_value(physical_light_data.rpr, 'intensity', 3)",
             "ies_light_data = bpy.data.lights['Point.001']",
             "set_value(ies_light_data.rpr, 'intensity', 3)",
+            "view_layer.rpr.denoiser.ml_use_fp16_compute_type = True",
             "rpr_render(case)",
             "resetSceneAttributes()"
         ],
@@ -485,6 +489,7 @@
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
             "set_value(view_layer.rpr.denoiser, 'ml_color_only', True)",
+            "view_layer.rpr.denoiser.ml_use_fp16_compute_type = True",
             "rpr_render(case)",
             "resetSceneAttributes()"
         ],
@@ -570,6 +575,7 @@
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
             "set_value(view_layer.rpr.denoiser, 'ml_color_only', True)",
+            "view_layer.rpr.denoiser.ml_use_fp16_compute_type = True",
             "rpr_render(case)",
             "resetSceneAttributes()"
         ],
@@ -655,6 +661,7 @@
             "set_value(view_layer.rpr.denoiser, 'enable', True)",
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
             "set_value(view_layer.rpr.denoiser, 'ml_color_only', True)",
+            "view_layer.rpr.denoiser.ml_use_fp16_compute_type = True",
             "rpr_render(case)",
             "resetSceneAttributes()"
         ],
@@ -741,6 +748,7 @@
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
             "set_value(view_layer.rpr.denoiser, 'ml_color_only', True)",
             "set_value(bpy.data.objects['Plane01'].rpr, 'shadowcatcher', True)",
+            "view_layer.rpr.denoiser.ml_use_fp16_compute_type = True",
             "rpr_render(case)",
             "set_value(bpy.data.objects['Plane01'].rpr, 'shadowcatcher', False)",
             "resetSceneAttributes()"
@@ -841,6 +849,7 @@
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
             "set_value(view_layer.rpr.denoiser, 'ml_color_only', True)",
             "set_value(bpy.data.objects['Plane01'].rpr, 'reflection_catcher', True)",
+            "view_layer.rpr.denoiser.ml_use_fp16_compute_type = True",
             "rpr_render(case)",
             "set_value(bpy.data.objects['Plane01'].rpr, 'reflection_catcher', False)",
             "resetSceneAttributes()"
@@ -941,6 +950,7 @@
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
             "set_value(view_layer.rpr.denoiser, 'ml_color_only', True)",
             "set_value(bpy.context.scene.render, 'film_transparent', True)",
+            "view_layer.rpr.denoiser.ml_use_fp16_compute_type = True",
             "rpr_render(case)",
             "set_value(bpy.context.scene.render, 'film_transparent', False)",
             "resetSceneAttributes()"
@@ -1041,6 +1051,7 @@
             "set_value(view_layer.rpr.denoiser, 'filter_type', 'ML')",
             "set_value(view_layer.rpr.denoiser, 'ml_color_only', True)",
             "set_value(bpy.context.scene.rpr, 'use_tile_render', True)",
+            "view_layer.rpr.denoiser.ml_use_fp16_compute_type = True",
             "rpr_render(case)",
             "set_value(bpy.context.scene.rpr, 'use_tile_render', False)",
             "resetSceneAttributes()"
